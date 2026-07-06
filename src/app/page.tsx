@@ -268,7 +268,7 @@ export default function Home() {
 
         {/* Journey cards — full-bleed, dark-to-light gradient panels */}
         <div ref={s3cards.ref} style={{ position: "relative", overflow: "hidden", display: "flex", marginBottom: 56 }}>
-          <img src="/images/Dark-Mountains.png" alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.5 }} />
+          <img src="/images/Dark-Mountains.webp" alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.5 }} />
           {journeyStages.map(({ stage, body }, i) => {
             const overlays = ["rgba(8,8,8,0.95)", "rgba(38,36,34,0.92)", "rgba(90,84,76,0.88)", "rgba(180,170,156,0.82)", "rgba(245,240,232,0.94)"];
             const textColor = i < 3 ? "#FFFFFF" : "#1a1a1a";
@@ -338,7 +338,7 @@ export default function Home() {
       {/* ── S3C: PROBLEM CARDS ───────────────────────────── */}
       <section style={{ position: "relative", overflow: "hidden", padding: "80px 40px", backgroundImage: "url('/images/bg-saddle-rope.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
         <div style={{ position: "absolute", inset: 0, background: "rgba(245,240,232,0.93)" }} />
-        <div style={{ position: "absolute", inset: 0, backgroundImage: "url('/images/Dark-Mountains.png')", backgroundSize: "60% auto", backgroundPosition: "center bottom", backgroundRepeat: "no-repeat", opacity: 0.06 }} />
+        <div style={{ position: "absolute", inset: 0, backgroundImage: "url('/images/Dark-Mountains.webp')", backgroundSize: "60% auto", backgroundPosition: "center bottom", backgroundRepeat: "no-repeat", opacity: 0.06 }} />
         <div ref={s3.ref} style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto" }}>
           <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 12, textAlign: "center" }}>Common Growth Challenges</p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 20 }}>
@@ -388,7 +388,7 @@ export default function Home() {
 
         {/* Cards on cream bg with mountain watermark */}
         <div style={{ position: "relative", background: "#F5F0E8", padding: "72px 40px" }}>
-          <div style={{ position: "absolute", inset: 0, backgroundImage: "url('/images/Dark-Mountains.png')", backgroundSize: "55% auto", backgroundPosition: "center center", backgroundRepeat: "no-repeat", opacity: 0.07 }} />
+          <div style={{ position: "absolute", inset: 0, backgroundImage: "url('/images/Dark-Mountains.webp')", backgroundSize: "55% auto", backgroundPosition: "center center", backgroundRepeat: "no-repeat", opacity: 0.07 }} />
           <div ref={s4.ref} style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto" }}>
 
             <div style={{ textAlign: "center", marginBottom: 48 }}>
