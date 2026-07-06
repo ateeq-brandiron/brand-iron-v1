@@ -33,15 +33,8 @@ export default function Navbar() {
       <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 32px", display: "flex", alignItems: "center", justifyContent: "space-between", height: 72 }}>
 
         {/* Logo */}
-        <Link href="/" style={{ display: "flex", alignItems: "center", gap: 12 }}>
-          <img src="/images/brand-iron-mark-orange.png" alt="" style={{ height: 40, width: "auto" }} />
-          <span style={{
-            fontFamily: "'Burford Rustic Black', sans-serif", fontWeight: 900,
-            fontSize: 20, textTransform: "uppercase", letterSpacing: "0.04em",
-            color: "#FFFFFF", lineHeight: 1,
-          }}>
-            Brand Iron
-          </span>
+        <Link href="/" style={{ display: "flex", alignItems: "center" }}>
+          <img src="/images/brand-iron-logo-white.png" alt="Brand Iron" style={{ height: 48, width: "auto" }} />
         </Link>
 
         {/* Desktop nav — pipe separated */}
