@@ -328,7 +328,6 @@ export default function Home() {
             <div style={{ position: "absolute", top: 14, right: 14, width: 20, height: 20, borderTop: "2px solid #d87307", borderRight: "2px solid #d87307" }} />
             <div style={{ position: "absolute", bottom: 14, left: 14, width: 20, height: 20, borderBottom: "2px solid #d87307", borderLeft: "2px solid #d87307" }} />
 
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, color: "#555", marginBottom: 8 }}>Why Modern Growth Breaks Down,</p>
             <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(22px, 3vw, 36px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.1, marginBottom: 20 }}>
               Why Great Companies<br />Still Struggle to Grow
             </h2>
