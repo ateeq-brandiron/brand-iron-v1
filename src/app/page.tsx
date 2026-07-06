@@ -99,12 +99,32 @@ const journeyStages = [
   { stage: "Choose", body: "Winning new business isn't about being the loudest voice in the market. It's about becoming the most discoverable, credible, and trusted choice when buyers are ready to decide." },
 ];
 
+const testimonials = [
+  {
+    quote: "The AI automation work Brand Iron did for us saved our team 20+ hours a week. More importantly, it gave us visibility into our pipeline that we never had before. I can't imagine operating without the systems they built.",
+    name: "James Hartwell",
+    title: "Founder, Hartwell Capital Group",
+  },
+  {
+    quote: "Brand Iron's work has resulted in growth in the client's email list and an increase in their generated consignment leads. The team leads a seamless workflow by leading regular meetings and providing reliable, timely support. The client appreciates having their extensive knowledge at their disposal.",
+    name: "Britt Douglas",
+    title: "CEO, Worldwide Vintage Autos",
+  },
+  {
+    quote: "Working with Brand Iron transformed how we think about revenue generation. They didn't just run campaigns — they built us a complete system that connects every part of our go-to-market motion. Pipeline is up 3X in six months.",
+    name: "Sarah T.",
+    title: "VP Marketing, TechScale Inc.",
+  },
+];
+
 export default function Home() {
   const s2 = useInView();
   const s3 = useInView();
   const s4 = useInView();
   const s5 = useInView();
   const s6 = useInView();
+  const s7 = useInView();
+  const [testimonialIndex, setTestimonialIndex] = useState(0);
   const s8 = useInView();
 
   return (
@@ -500,6 +520,71 @@ export default function Home() {
             onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
             onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
             >Book a Strategy Session</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── S7: TESTIMONIALS ─────────────────────────────── */}
+      <section style={{ background: "#FFFFFF", padding: "88px 40px" }}>
+        <div ref={s7.ref} style={{ maxWidth: 720, margin: "0 auto", textAlign: "center" }}>
+          <p className={`reveal${s7.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 10 }}>
+            What Our Clients Say
+          </p>
+          <p className={`reveal${s7.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 600, fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase", color: "#999", marginBottom: 24 }}>
+            {testimonials[testimonialIndex].title}
+          </p>
+          <h3 className={`reveal${s7.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: "clamp(22px, 3vw, 30px)", letterSpacing: "0.06em", textTransform: "uppercase", color: "#1a1a1a", marginBottom: 16 }}>
+            {testimonials[testimonialIndex].name}
+          </h3>
+          <div className={`reveal${s7.inView ? " visible" : ""}`} style={{ display: "flex", justifyContent: "center", gap: 4, marginBottom: 28, color: "#d87307", fontSize: 22 }}>
+            {Array.from({ length: 5 }).map((_, i) => <span key={i}>★</span>)}
+          </div>
+          <p className={`reveal${s7.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 17, lineHeight: 1.8, color: "#444", marginBottom: 40 }}>
+            &ldquo;{testimonials[testimonialIndex].quote}&rdquo;
+          </p>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16 }}>
+            <button
+              aria-label="Previous testimonial"
+              onClick={() => setTestimonialIndex(i => (i - 1 + testimonials.length) % testimonials.length)}
+              style={{
+                width: 40, height: 40, borderRadius: "50%", background: "#FFFFFF",
+                border: "1px solid #ddd", cursor: "pointer",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                transition: "border-color 0.2s",
+              }}
+              onMouseEnter={e => ((e.currentTarget as HTMLButtonElement).style.borderColor = "#d87307")}
+              onMouseLeave={e => ((e.currentTarget as HTMLButtonElement).style.borderColor = "#ddd")}
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </button>
+            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+              {testimonials.map((_, i) => (
+                <button
+                  key={i}
+                  aria-label={`Go to testimonial ${i + 1}`}
+                  onClick={() => setTestimonialIndex(i)}
+                  style={{
+                    width: i === testimonialIndex ? 24 : 8, height: 8, borderRadius: 4,
+                    background: i === testimonialIndex ? "#d87307" : "#ddd",
+                    border: "none", cursor: "pointer", transition: "width 0.2s, background 0.2s", padding: 0,
+                  }}
+                />
+              ))}
+            </div>
+            <button
+              aria-label="Next testimonial"
+              onClick={() => setTestimonialIndex(i => (i + 1) % testimonials.length)}
+              style={{
+                width: 40, height: 40, borderRadius: "50%", background: "#FFFFFF",
+                border: "1px solid #ddd", cursor: "pointer",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                transition: "border-color 0.2s",
+              }}
+              onMouseEnter={e => ((e.currentTarget as HTMLButtonElement).style.borderColor = "#d87307")}
+              onMouseLeave={e => ((e.currentTarget as HTMLButtonElement).style.borderColor = "#ddd")}
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </button>
           </div>
         </div>
       </section>
