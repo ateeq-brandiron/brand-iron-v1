@@ -44,18 +44,12 @@ export default function Footer() {
       {/* Main footer body */}
       <div style={{ position: "relative", display: "flex", minHeight: 340 }}>
 
-        {/* LEFT — leather bg with logo */}
-        <div style={{
+        {/* LEFT — leather bg with embossed logo */}
+        <Link href="/" aria-label="Brand Iron — Home" style={{
           width: "38%", flexShrink: 0,
           backgroundImage: "url('/images/bi-footer-logo.jpeg')",
           backgroundSize: "cover", backgroundPosition: "center",
-          display: "flex", alignItems: "center", justifyContent: "center",
-          padding: "48px 32px",
-        }}>
-          <Link href="/" style={{ display: "block", textAlign: "center" }}>
-            <img src="/logo.png" alt="Brand Iron Marketing" style={{ height: 100, width: "auto", filter: "drop-shadow(0 4px 20px rgba(0,0,0,0.6))" }} />
-          </Link>
-        </div>
+        }} />
 
         {/* RIGHT — misty forest bg */}
         <div style={{
