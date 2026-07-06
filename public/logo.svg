@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160" fill="none">
+  <!-- Circular B mark -->
+  <circle cx="80" cy="80" r="68" fill="none" stroke="white" stroke-width="5"/>
+  <!-- Partial arc break at bottom-left (like the logo) -->
+  <path d="M80 12 A68 68 0 1 1 26.5 120" stroke="white" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <line x1="17" y1="136" x2="38" y2="115" stroke="white" stroke-width="5" stroke-linecap="round"/>
+  <!-- B letterform -->
+  <path d="M52 42 L52 118 L84 118 Q104 118 104 103 Q104 91 92 87.5 Q103 84 103 69 Q103 42 82 42 Z
+           M64 52 L80 52 Q91 52 91 63 Q91 74 80 74 L64 74 Z
+           M64 84 L82 84 Q94 84 94 101 Q94 108 82 108 L64 108 Z"
+    fill="white"/>
+  <!-- BRAND IRON text -->
+  <text x="162" y="86" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="800" font-style="italic" font-size="42" fill="white" letter-spacing="2">BRAND IRON</text>
+  <!-- MARKETING text -->
+  <text x="163" y="112" font-family="'Montserrat', Arial, sans-serif" font-weight="500" font-size="22" fill="white" letter-spacing="6">MARKETING</text>
+</svg>
