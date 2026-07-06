@@ -346,15 +346,14 @@ export default function Home() {
           <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 12, textAlign: "center" }}>Common Growth Challenges</p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 20 }}>
             {problems.map(({ heading, body }, i) => (
-              <div key={i} style={{
-                background: "#FFFFFF", padding: "28px 24px", position: "relative",
+              <div key={i} className="growth-card" style={{
+                background: "#FFFFFF", padding: "34px 24px 28px", position: "relative",
                 boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
-                transition: "transform 0.2s, box-shadow 0.2s",
+                borderBottom: "4px solid transparent",
               }}
-              onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(-4px)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 8px 32px rgba(0,0,0,0.12)"; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 2px 12px rgba(0,0,0,0.06)"; }}
               >
-                <div style={{ width: "100%", height: 3, background: "#d87307", marginBottom: 16 }} />
+                <div className="corner-tr" style={{ position: "absolute", top: 14, right: 14, width: 16, height: 16, borderTop: "1.5px solid rgba(0,0,0,0.25)", borderRight: "1.5px solid rgba(0,0,0,0.25)" }} />
+                <div className="corner-bl" style={{ position: "absolute", bottom: 14, left: 14, width: 16, height: 16, borderBottom: "1.5px solid rgba(0,0,0,0.18)", borderLeft: "1.5px solid rgba(0,0,0,0.18)" }} />
                 <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: 13, color: "#1a1a1a", marginBottom: 10, lineHeight: 1.4 }}>{heading}</h3>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, lineHeight: 1.75, color: "#666" }}>{body}</p>
               </div>

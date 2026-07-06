@@ -413,6 +413,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 .value-card:hover h3 { color: #FFFFFF !important; transition: color 0.25s ease; }
 
+/* ── Growth challenge cards (corner brackets, copper edge) ── */
+.growth-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.growth-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.14) !important;
+  border-bottom-color: #d87307 !important;
+}
+.growth-card .corner-tr, .growth-card .corner-bl {
+  transition: border-color 0.25s ease;
+}
+.growth-card:hover .corner-tr, .growth-card:hover .corner-bl {
+  border-color: #d87307 !important;
+}
+
 /* ── Team cards ──────────────────────────────────────────── */
 .team-card {
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
