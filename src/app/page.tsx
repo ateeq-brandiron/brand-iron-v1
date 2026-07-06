@@ -192,8 +192,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── S2: MAKE YOUR MARK ───────────────────────────── */}
-      <section style={{ background: "#FFFFFF", padding: "80px 40px" }}>
+      {/* ── S2: TRUST BAR ────────────────────────────────── */}
+      <section style={{ background: "#FFFFFF", padding: "64px 40px 80px" }}>
         <div ref={s2.ref} style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "auto 1fr", gap: 64, alignItems: "center" }}>
 
           {/* B-icon logo mask */}
@@ -209,20 +209,34 @@ export default function Home() {
             <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(28px, 4vw, 52px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.05, marginBottom: 16 }}>
               Forging Brands.<br />Driving Revenue.
             </h2>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.75, color: "#555", marginBottom: 36, maxWidth: 520 }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.75, color: "#555", marginBottom: 40, maxWidth: 520 }}>
               Helping organizations become discoverable, trusted, and chosen in today&apos;s AI-driven buying landscape.
             </p>
 
             {/* Stats */}
-            <div style={{ display: "flex", gap: 40, flexWrap: "wrap" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20, maxWidth: 480 }}>
               {[
-                { num: "50+", label: "Brands Supported" },
-                { num: "150,000+", label: "Investor Network" },
-                { num: "AI-First", label: "Growth Strategies" },
-              ].map(({ num, label }) => (
-                <div key={label}>
-                  <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 28, fontWeight: 900, color: "#1a1a1a", letterSpacing: "0.03em", lineHeight: 1 }}>{num}</p>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, color: "#d87307", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginTop: 4 }}>{label}</p>
+                { icon: "/images/icons/icon-briefcase.svg", num: "50+", label: "Brands Supported" },
+                { icon: "/images/icons/icon-trending.svg", num: "150,000+", label: "Investor Network" },
+                { icon: "/images/icons/icon-lightbulb.svg", num: "AI-First", label: "Growth Strategies" },
+                { icon: "/images/icons/icon-gear.svg", num: "Brand Strategy", label: "GTM • Revenue Engineering" },
+              ].map(({ icon, num, label }, i) => (
+                <div key={label} className={`reveal${s2.inView ? " visible" : ""}`} style={{
+                  display: "flex", alignItems: "flex-start", gap: 14,
+                  minWidth: 168, padding: "14px 16px", borderRadius: 10,
+                  transition: "transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease",
+                  transitionDelay: `${i * 0.08}s`,
+                }}
+                onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-4px)"; el.style.boxShadow = "0 12px 32px rgba(216,115,7,0.15)"; el.style.background = "#FBF7F1"; }}
+                onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "none"; el.style.background = "transparent"; }}
+                >
+                  <div style={{ width: 44, height: 44, borderRadius: "50%", background: "#FBF3E9", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                    <img src={icon} alt="" style={{ width: 22, height: 22 }} />
+                  </div>
+                  <div>
+                    <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 20, fontWeight: 900, color: "#1a1a1a", letterSpacing: "0.02em", lineHeight: 1.15 }}>{num}</p>
+                    <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11.5, color: "#d87307", fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", marginTop: 4 }}>{label}</p>
+                  </div>
                 </div>
               ))}
             </div>
