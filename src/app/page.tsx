@@ -137,7 +137,7 @@ export default function Home() {
         {/* Centered headline */}
         <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "0 24px" }}>
           <h1 style={{
-            fontFamily: "'Burford Rustic Inline', sans-serif",
+            fontFamily: "'Burford Rustic Type 1', sans-serif",
             fontSize: "clamp(42px, 7vw, 96px)", fontWeight: 400,
             textTransform: "uppercase", letterSpacing: "0.04em",
             color: "#FFFFFF", lineHeight: 1.0, marginBottom: 16,
