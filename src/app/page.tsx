@@ -16,12 +16,13 @@ function useInView(threshold = 0.15) {
 }
 
 const services = [
-  { label: "Automation" },
-  { label: "Branding" },
-  { label: "Capital Raise Deck" },
+  { label: "Brand Strategy" },
+  { label: "AI Visibility" },
   { label: "GTM Strategy" },
-  { label: "Investor Outreach Campaign" },
+  { label: "Revenue Engineering" },
+  { label: "Outbound Growth" },
   { label: "Website Development" },
+  { label: "Capital Raise Support" },
 ];
 
 const stats = [
@@ -48,7 +49,7 @@ const differentiators = [
 const coreServices = [
   {
     title: "Brand Strategy", sub: "Build a Brand Buyers Remember",
-    body: "Whether you're building a brand from the ground up or repositioning an established business, we help create brands that are clear, differentiated, and built for growth.",
+    body: "Whether you're building a brand from the ground up or repositioning an established business, we help create brands that are clear, differentiated, and built for growth — from strategy and messaging to visual identity and brand systems.",
     solutions: ["Brand Strategy & Positioning", "Brand Identity & Rebranding", "Messaging Framework", "Visual Identity Systems"],
     cta: "Explore Brand Strategy", href: "/services/brand-strategy",
   },
@@ -130,7 +131,7 @@ export default function Home() {
             textTransform: "uppercase", color: "rgba(255,255,255,0.9)",
             marginBottom: 40, textShadow: "0 1px 8px rgba(0,0,0,0.5)",
           }}>
-            Helping organizations become discoverable, trusted, and chosen
+            Helping organizations become discoverable, trusted, and chosen in today&apos;s AI-driven buying landscape.
           </p>
           <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
             <Link href="/contact" style={{
@@ -275,7 +276,7 @@ export default function Home() {
               Why Great Companies<br />Still Struggle to Grow
             </h2>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.8, color: "#444" }}>
-              Many organizations don&apos;t have a product problem. They have an alignment problem. Brand strategy, marketing, sales, technology, and operations often evolve independently — while the customer experiences a disconnected journey.
+              Many organizations don&apos;t have a product problem. They don&apos;t have a talent problem. They don&apos;t even have a marketing problem. They have an alignment problem. Brand strategy, marketing, sales, technology, and operations often evolve independently — each with its own goals, tools, and priorities. While every team works hard, the customer experiences a disconnected journey. The result is slower growth, missed opportunities, and increasing costs to acquire and retain customers.
             </p>
           </div>
         </div>
@@ -342,8 +343,11 @@ export default function Home() {
               <p className={`reveal${s4.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#444", maxWidth: 680, margin: "0 auto 12px" }}>
                 AI is transforming how businesses grow — but technology alone has never been a strategy.
               </p>
-              <p className={`reveal${s4.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#555", maxWidth: 680, margin: "0 auto" }}>
-                At Brand Iron, we combine human expertise with AI-assisted intelligence to help organizations make better decisions, move faster, and execute with greater precision.
+              <p className={`reveal${s4.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#555", maxWidth: 680, margin: "0 auto 12px" }}>
+                At Brand Iron, we combine human expertise with AI-assisted intelligence to help organizations make better decisions, move faster, and execute with greater precision. AI accelerates the work; experienced strategists provide the judgment, creativity, and business insight that drive meaningful outcomes.
+              </p>
+              <p className={`reveal${s4.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#1a1a1a", fontWeight: 600, maxWidth: 680, margin: "0 auto" }}>
+                Because sustainable growth isn&apos;t automated. It&apos;s engineered.
               </p>
             </div>
 
@@ -387,6 +391,19 @@ export default function Home() {
                 </p>
               </div>
             </div>
+
+            {/* Closing */}
+            <div className={`reveal${s4.inView ? " visible" : ""}`} style={{ textAlign: "center", marginTop: 48 }}>
+              <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(16px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#1a1a1a" }}>
+                Modern growth requires more than marketing.
+              </p>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#555", maxWidth: 700, margin: "10px auto 0" }}>
+                It requires a partner who understands how brand strategy, discoverability, demand generation, technology, and revenue operations work together to create competitive advantage.
+              </p>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, color: "#cb772d", fontWeight: 600, marginTop: 6 }}>
+                That&apos;s the role Brand Iron was built to play.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -399,7 +416,7 @@ export default function Home() {
               Solutions That Move Businesses Forward
             </h2>
             <p className={`reveal${s5.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#555", maxWidth: 680, margin: "0 auto 10px" }}>
-              Every business faces unique growth challenges. Rather than delivering disconnected services, Brand Iron brings these capabilities together into one connected growth system.
+              Every business faces unique growth challenges — from strengthening its brand and increasing visibility to generating demand, optimizing revenue, or raising capital. Rather than delivering disconnected services, Brand Iron brings these capabilities together into one connected growth system designed to help organizations become discoverable, trusted, and chosen.
             </p>
           </div>
 
@@ -441,8 +458,11 @@ export default function Home() {
 
           {/* Closing */}
           <div className={`reveal${s5.inView ? " visible" : ""}`} style={{ textAlign: "center", padding: "32px 40px", background: "#F5F0E8", borderLeft: "4px solid #cb772d" }}>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#444", maxWidth: 760, margin: "0 auto" }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#444", maxWidth: 760, margin: "0 auto 10px" }}>
               Each solution delivers value on its own, but the greatest impact comes when they&apos;re connected through a unified growth strategy.
+            </p>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", maxWidth: 760, margin: "0 auto" }}>
+              Whether you&apos;re building your brand, increasing visibility, generating demand, or preparing for investment, Brand Iron helps ensure every initiative contributes to measurable business growth.
             </p>
           </div>
         </div>
@@ -453,16 +473,22 @@ export default function Home() {
         <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.72)" }} />
         <div ref={s6.ref} style={{ position: "relative", zIndex: 1, maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
           <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase", color: "#cb772d", marginBottom: 16 }}>
-            More Than a Service Provider
+            More Than a Service Provider. A Strategic Growth Partner.
           </p>
-          <h2 className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(26px, 4vw, 52px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.05, marginBottom: 24 }}>
+          <h2 className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(26px, 4vw, 52px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.05, marginBottom: 12 }}>
             Growth Is a Journey.<br />You Shouldn&apos;t Have to Navigate It Alone.
           </h2>
-          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.85, color: "rgba(255,255,255,0.82)", marginBottom: 14, maxWidth: 760, margin: "0 auto 14px" }}>
-            Growth is a team effort. That&apos;s why we work as an extension of your leadership team — helping you make smarter decisions, focus on the right opportunities, and build systems that drive long-term growth.
+          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.08em", textTransform: "uppercase", color: "rgba(255,255,255,0.6)", marginBottom: 24 }}>
+            We Build Alongside Your Team
           </p>
-          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.85, color: "rgba(255,255,255,0.75)", maxWidth: 760, margin: "0 auto 40px" }}>
+          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.85, color: "rgba(255,255,255,0.82)", marginBottom: 14, maxWidth: 760, margin: "0 auto 14px" }}>
+            Growth is a team effort. That&apos;s why we work as an extension of your leadership team — helping you make smarter decisions, focus on the right opportunities, and build systems that drive long-term growth. Our success is measured by yours. We&apos;re here to help you build what&apos;s next.
+          </p>
+          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.85, color: "rgba(255,255,255,0.75)", maxWidth: 760, margin: "0 auto 14px" }}>
             Whether you&apos;re defining your brand, entering a new market, improving AI visibility, scaling revenue operations, or preparing for your next stage of growth, Brand Iron is ready to help you move forward with clarity, confidence, and purpose.
+          </p>
+          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.85, color: "#FFFFFF", fontWeight: 600, fontStyle: "italic", maxWidth: 760, margin: "0 auto 40px" }}>
+            Every successful growth story begins with a conversation. Let&apos;s start yours.
           </p>
           <div className={`reveal${s6.inView ? " visible" : ""}`} style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
             <Link href="/contact" style={{
@@ -485,29 +511,42 @@ export default function Home() {
           <h2 className={`reveal${s8.inView ? " visible" : ""}`} style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(32px, 5.5vw, 72px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.0, marginBottom: 20 }}>
             Get Found.<br />Get Trusted.<br />Generate Revenue.
           </h2>
-          <p className={`reveal${s8.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", fontStyle: "italic", marginBottom: 40 }}>
+          <p className={`reveal${s8.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", fontStyle: "italic", marginBottom: 48 }}>
             The strongest brands don&apos;t leave growth to chance. They build it with intention.
           </p>
-          <div className={`reveal${s8.inView ? " visible" : ""}`} style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap", marginBottom: 56 }}>
-            <Link href="/contact" style={{
-              fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 14,
-              letterSpacing: "0.14em", textTransform: "uppercase",
-              background: "#cb772d", color: "#FFFFFF", padding: "16px 40px", borderRadius: 2,
-              transition: "background 0.2s",
-            }}
-            onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#b8661f")}
-            onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#cb772d")}
-            >Book a Strategy Session</Link>
-            <Link href="/services" style={{
-              fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 14,
-              letterSpacing: "0.14em", textTransform: "uppercase",
-              background: "transparent", color: "#FFFFFF",
-              padding: "16px 40px", border: "2px solid rgba(255,255,255,0.6)", borderRadius: 2,
-              transition: "border-color 0.2s",
-            }}
-            onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.borderColor = "#cb772d")}
-            onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,255,255,0.6)")}
-            >Explore Our Solutions</Link>
+          <p className={`reveal${s8.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: "0.2em", textTransform: "uppercase", color: "#cb772d", marginBottom: 28 }}>
+            Choose Your Next Step
+          </p>
+          <div className={`reveal${s8.inView ? " visible" : ""}`} style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 32, marginBottom: 56, textAlign: "left" }}>
+            <div>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(255,255,255,0.75)", marginBottom: 20 }}>
+                Let&apos;s discuss your business goals, current challenges, and opportunities for growth. Together, we&apos;ll identify where your greatest opportunities lie and outline practical next steps.
+              </p>
+              <Link href="/contact" style={{
+                fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 14,
+                letterSpacing: "0.14em", textTransform: "uppercase",
+                background: "#cb772d", color: "#FFFFFF", padding: "16px 40px", borderRadius: 2,
+                display: "inline-block", transition: "background 0.2s",
+              }}
+              onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#b8661f")}
+              onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#cb772d")}
+              >Book a Strategy Session</Link>
+            </div>
+            <div>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(255,255,255,0.75)", marginBottom: 20 }}>
+                Learn how Brand Strategy, AI Visibility, Go-to-Market Strategy, Revenue Engineering, Outbound Growth, Website Development, and Capital Raise Support work together to create measurable business outcomes.
+              </p>
+              <Link href="/services" style={{
+                fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 14,
+                letterSpacing: "0.14em", textTransform: "uppercase",
+                background: "transparent", color: "#FFFFFF",
+                padding: "16px 40px", border: "2px solid rgba(255,255,255,0.6)", borderRadius: 2,
+                display: "inline-block", transition: "border-color 0.2s",
+              }}
+              onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.borderColor = "#cb772d")}
+              onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,255,255,0.6)")}
+              >Explore Our Solutions</Link>
+            </div>
           </div>
           <div className={`reveal${s8.inView ? " visible" : ""}`} style={{ borderTop: "1px solid rgba(203,119,45,0.3)", paddingTop: 36 }}>
             <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(20px, 2.5vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#FFFFFF", marginBottom: 10 }}>
