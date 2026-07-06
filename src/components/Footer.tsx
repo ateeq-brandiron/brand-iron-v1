@@ -30,7 +30,7 @@ export default function Footer() {
           fontFamily: "'Burford Rustic Black', sans-serif",
           fontSize: "clamp(28px, 4vw, 52px)", fontWeight: 900,
           textTransform: "uppercase", letterSpacing: "0.03em",
-          color: "#8B5E24", lineHeight: 1,
+          color: "#945B06", lineHeight: 1,
         }}>
           Forging Brands. Driving Revenue.™
         </p>
@@ -71,7 +71,7 @@ export default function Footer() {
                     textDecoration: "underline", textUnderlineOffset: 3,
                     transition: "color 0.2s",
                   }}
-                  onMouseEnter={e => (e.currentTarget.style.color = "#cb772d")}
+                  onMouseEnter={e => (e.currentTarget.style.color = "#d87307")}
                   onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.85)")}
                   >{label}</Link>
                   {i < navLinks.length - 1 && <span style={{ color: "rgba(255,255,255,0.25)", fontSize: 11 }}>|</span>}
@@ -96,7 +96,7 @@ export default function Footer() {
                       display: "flex", alignItems: "center", justifyContent: "center",
                       transition: "background 0.2s",
                     }}
-                    onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "rgba(203,119,45,0.5)")}
+                    onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "rgba(216,115,7,0.5)")}
                     onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "rgba(255,255,255,0.12)")}
                     >{icon}</a>
                   ))}
@@ -127,7 +127,7 @@ export default function Footer() {
                     display: "flex", alignItems: "center", justifyContent: "center",
                     cursor: "pointer", transition: "background 0.2s",
                   }}
-                  onMouseEnter={e => ((e.currentTarget as HTMLButtonElement).style.background = "rgba(203,119,45,0.55)")}
+                  onMouseEnter={e => ((e.currentTarget as HTMLButtonElement).style.background = "rgba(216,115,7,0.55)")}
                   onMouseLeave={e => ((e.currentTarget as HTMLButtonElement).style.background = "rgba(255,255,255,0.15)")}
                   >
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
@@ -162,12 +162,12 @@ export default function Footer() {
       <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} aria-label="Scroll to top" style={{
         position: "absolute", bottom: 60, right: 28, zIndex: 10,
         width: 46, height: 46, borderRadius: "50%",
-        background: "#cb772d", border: "none", cursor: "pointer",
+        background: "#d87307", border: "none", cursor: "pointer",
         display: "flex", alignItems: "center", justifyContent: "center",
-        boxShadow: "0 4px 16px rgba(203,119,45,0.5)", transition: "background 0.2s, transform 0.2s",
+        boxShadow: "0 4px 16px rgba(216,115,7,0.5)", transition: "background 0.2s, transform 0.2s",
       }}
-      onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.background = "#b8661f"; (e.currentTarget as HTMLButtonElement).style.transform = "translateY(-3px)"; }}
-      onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.background = "#cb772d"; (e.currentTarget as HTMLButtonElement).style.transform = "translateY(0)"; }}
+      onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.background = "#c46305"; (e.currentTarget as HTMLButtonElement).style.transform = "translateY(-3px)"; }}
+      onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.background = "#d87307"; (e.currentTarget as HTMLButtonElement).style.transform = "translateY(0)"; }}
       >
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
           <path d="M12 19V5M5 12l7-7 7 7" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>

@@ -117,8 +117,8 @@ export default function Home() {
         {/* Centered headline */}
         <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "0 24px" }}>
           <h1 style={{
-            fontFamily: "'Burford Rustic Black', sans-serif",
-            fontSize: "clamp(42px, 7vw, 96px)", fontWeight: 900,
+            fontFamily: "'Burford Rustic Inline', sans-serif",
+            fontSize: "clamp(42px, 7vw, 96px)", fontWeight: 400,
             textTransform: "uppercase", letterSpacing: "0.04em",
             color: "#FFFFFF", lineHeight: 1.0, marginBottom: 16,
             textShadow: "0 2px 24px rgba(0,0,0,0.4)",
@@ -137,12 +137,12 @@ export default function Home() {
             <Link href="/contact" style={{
               fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
-              background: "#cb772d", color: "#FFFFFF",
+              background: "#d87307", color: "#FFFFFF",
               padding: "14px 36px", borderRadius: 2,
               transition: "background 0.2s",
             }}
-            onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#b8661f")}
-            onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#cb772d")}
+            onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
+            onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
             >Book a Strategy Session</Link>
             <Link href="/services" style={{
               fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
@@ -151,7 +151,7 @@ export default function Home() {
               padding: "14px 36px", border: "2px solid rgba(255,255,255,0.7)", borderRadius: 2,
               transition: "border-color 0.2s, background 0.2s",
             }}
-            onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = "#cb772d"; (e.currentTarget as HTMLAnchorElement).style.background = "rgba(203,119,45,0.15)"; }}
+            onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = "#d87307"; (e.currentTarget as HTMLAnchorElement).style.background = "rgba(216,115,7,0.15)"; }}
             onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,255,255,0.7)"; (e.currentTarget as HTMLAnchorElement).style.background = "transparent"; }}
             >Explore Our Services</Link>
           </div>
@@ -183,7 +183,7 @@ export default function Home() {
 
           {/* Text */}
           <div className={`reveal${s2.inView ? " visible" : ""}`}>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.16em", textTransform: "uppercase", color: "#cb772d", marginBottom: 12 }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.16em", textTransform: "uppercase", color: "#d87307", marginBottom: 12 }}>
               Trusted by founders, executives, and growth-focused organizations.
             </p>
             <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(28px, 4vw, 52px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.05, marginBottom: 16 }}>
@@ -202,7 +202,7 @@ export default function Home() {
               ].map(({ num, label }) => (
                 <div key={label}>
                   <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 28, fontWeight: 900, color: "#1a1a1a", letterSpacing: "0.03em", lineHeight: 1 }}>{num}</p>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, color: "#cb772d", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginTop: 4 }}>{label}</p>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, color: "#d87307", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginTop: 4 }}>{label}</p>
                 </div>
               ))}
             </div>
@@ -235,11 +235,11 @@ export default function Home() {
           <div style={{ display: "flex", alignItems: "flex-start", gap: 0, marginBottom: 56 }}>
             {journeyStages.map(({ stage, body }, i) => (
               <div key={stage} className={`reveal${s3.inView ? " visible" : ""}`} style={{
-                flex: 1, borderTop: `3px solid ${i === 2 ? "#cb772d" : "#e0d8cc"}`,
+                flex: 1, borderTop: `3px solid ${i === 2 ? "#d87307" : "#e0d8cc"}`,
                 paddingTop: 20, paddingRight: i < journeyStages.length - 1 ? 24 : 0,
                 transitionDelay: `${i * 0.08}s`,
               }}>
-                <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 16, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.08em", color: "#cb772d", marginBottom: 10 }}>{stage}</p>
+                <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 16, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.08em", color: "#d87307", marginBottom: 10 }}>{stage}</p>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "#555" }}>{body}</p>
               </div>
             ))}
@@ -250,7 +250,7 @@ export default function Home() {
             <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2.5vw, 28px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#1a1a1a", marginBottom: 8 }}>
               Organizations that win today aren&apos;t simply louder.
             </p>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, color: "#cb772d", fontWeight: 600 }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, color: "#d87307", fontWeight: 600 }}>
               They&apos;re easier to find, easier to trust, and easier to choose.
             </p>
           </div>
@@ -268,8 +268,8 @@ export default function Home() {
             padding: "48px 48px", position: "relative",
           }}>
             {/* Corner brackets */}
-            <div style={{ position: "absolute", top: 14, right: 14, width: 20, height: 20, borderTop: "2px solid #cb772d", borderRight: "2px solid #cb772d" }} />
-            <div style={{ position: "absolute", bottom: 14, left: 14, width: 20, height: 20, borderBottom: "2px solid #cb772d", borderLeft: "2px solid #cb772d" }} />
+            <div style={{ position: "absolute", top: 14, right: 14, width: 20, height: 20, borderTop: "2px solid #d87307", borderRight: "2px solid #d87307" }} />
+            <div style={{ position: "absolute", bottom: 14, left: 14, width: 20, height: 20, borderBottom: "2px solid #d87307", borderLeft: "2px solid #d87307" }} />
 
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, color: "#555", marginBottom: 8 }}>Why Modern Growth Breaks Down,</p>
             <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(22px, 3vw, 36px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.1, marginBottom: 20 }}>
@@ -287,7 +287,7 @@ export default function Home() {
         <div style={{ position: "absolute", inset: 0, background: "rgba(245,240,232,0.93)" }} />
         <div style={{ position: "absolute", inset: 0, backgroundImage: "url('/images/Dark-Mountains.png')", backgroundSize: "60% auto", backgroundPosition: "center bottom", backgroundRepeat: "no-repeat", opacity: 0.06 }} />
         <div ref={s3.ref} style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto" }}>
-          <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase", color: "#cb772d", marginBottom: 12, textAlign: "center" }}>Common Growth Challenges</p>
+          <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 12, textAlign: "center" }}>Common Growth Challenges</p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 20 }}>
             {problems.map(({ heading, body }, i) => (
               <div key={i} style={{
@@ -298,7 +298,7 @@ export default function Home() {
               onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(-4px)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 8px 32px rgba(0,0,0,0.12)"; }}
               onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 2px 12px rgba(0,0,0,0.06)"; }}
               >
-                <div style={{ width: "100%", height: 3, background: "#cb772d", marginBottom: 16 }} />
+                <div style={{ width: "100%", height: 3, background: "#d87307", marginBottom: 16 }} />
                 <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: 13, color: "#1a1a1a", marginBottom: 10, lineHeight: 1.4 }}>{heading}</h3>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, lineHeight: 1.75, color: "#666" }}>{body}</p>
               </div>
@@ -310,7 +310,7 @@ export default function Home() {
             <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(16px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#1a1a1a" }}>
               Growth shouldn&apos;t depend on disconnected tactics.
             </p>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, color: "#cb772d", fontWeight: 600, marginTop: 6 }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, color: "#d87307", fontWeight: 600, marginTop: 6 }}>
               It should be built on connected strategy.
             </p>
           </div>
@@ -339,7 +339,7 @@ export default function Home() {
           <div ref={s4.ref} style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto" }}>
 
             <div style={{ textAlign: "center", marginBottom: 48 }}>
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase", color: "#cb772d", marginBottom: 12 }}>What Makes Brand Iron Different</p>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 12 }}>What Makes Brand Iron Different</p>
               <p className={`reveal${s4.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#444", maxWidth: 680, margin: "0 auto 12px" }}>
                 AI is transforming how businesses grow — but technology alone has never been a strategy.
               </p>
@@ -357,14 +357,14 @@ export default function Home() {
                 <div key={num} className={`reveal${s4.inView ? " visible" : ""}`} style={{
                   background: "#FFFFFF", padding: "32px 24px", position: "relative",
                   transitionDelay: `${i * 0.07}s`,
-                  ...(i === 2 ? { outline: "2px solid #cb772d" } : {}),
+                  ...(i === 2 ? { outline: "2px solid #d87307" } : {}),
                 }}>
                   {i === 2 && <>
-                    <div style={{ position: "absolute", top: 10, right: 10, width: 18, height: 18, borderTop: "2px solid #cb772d", borderRight: "2px solid #cb772d" }} />
-                    <div style={{ position: "absolute", bottom: 10, left: 10, width: 18, height: 18, borderBottom: "2px solid #cb772d", borderLeft: "2px solid #cb772d" }} />
+                    <div style={{ position: "absolute", top: 10, right: 10, width: 18, height: 18, borderTop: "2px solid #d87307", borderRight: "2px solid #d87307" }} />
+                    <div style={{ position: "absolute", bottom: 10, left: 10, width: 18, height: 18, borderBottom: "2px solid #d87307", borderLeft: "2px solid #d87307" }} />
                   </>}
-                  <div style={{ width: "100%", height: 3, background: "#cb772d", marginBottom: 16 }} />
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", color: "#cb772d", marginBottom: 8 }}>{num}</p>
+                  <div style={{ width: "100%", height: 3, background: "#d87307", marginBottom: 16 }} />
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", color: "#d87307", marginBottom: 8 }}>{num}</p>
                   <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 12, lineHeight: 1.4 }}>{title}</h3>
                   <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "#666" }}>{body}</p>
                 </div>
@@ -372,13 +372,13 @@ export default function Home() {
             </div>
 
             {/* Our Commitment */}
-            <div className={`reveal${s4.inView ? " visible" : ""}`} style={{ background: "#FFFFFF", padding: "40px 48px", borderLeft: "4px solid #cb772d", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "center" }}>
+            <div className={`reveal${s4.inView ? " visible" : ""}`} style={{ background: "#FFFFFF", padding: "40px 48px", borderLeft: "4px solid #d87307", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "center" }}>
               <div>
-                <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", color: "#cb772d", marginBottom: 12 }}>Our Commitment</p>
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 12 }}>Our Commitment</p>
                 <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#1a1a1a", lineHeight: 1.2, marginBottom: 12 }}>
                   Every recommendation is guided by one question:
                 </h3>
-                <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(16px, 1.8vw, 22px)", color: "#cb772d", fontWeight: 900, textTransform: "uppercase" }}>
+                <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(16px, 1.8vw, 22px)", color: "#d87307", fontWeight: 900, textTransform: "uppercase" }}>
                   Will this create measurable value for your business?
                 </p>
               </div>
@@ -400,7 +400,7 @@ export default function Home() {
               <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#555", maxWidth: 700, margin: "10px auto 0" }}>
                 It requires a partner who understands how brand strategy, discoverability, demand generation, technology, and revenue operations work together to create competitive advantage.
               </p>
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, color: "#cb772d", fontWeight: 600, marginTop: 6 }}>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, color: "#d87307", fontWeight: 600, marginTop: 6 }}>
                 That&apos;s the role Brand Iron was built to play.
               </p>
             </div>
@@ -431,14 +431,14 @@ export default function Home() {
               onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(-4px)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 8px 32px rgba(0,0,0,0.1)"; }}
               onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "none"; }}
               >
-                <div style={{ width: "100%", height: 3, background: "#cb772d", marginBottom: 20 }} />
+                <div style={{ width: "100%", height: 3, background: "#d87307", marginBottom: 20 }} />
                 <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 18, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 6 }}>{title}</h3>
-                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, fontWeight: 700, color: "#cb772d", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 14 }}>{sub}</p>
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, fontWeight: 700, color: "#d87307", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 14 }}>{sub}</p>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "#555", marginBottom: 16 }}>{body}</p>
                 <ul style={{ listStyle: "none", marginBottom: 24 }}>
                   {solutions.map(s => (
                     <li key={s} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, color: "#444", padding: "4px 0", paddingLeft: 16, position: "relative" }}>
-                      <span style={{ position: "absolute", left: 0, color: "#cb772d", fontWeight: 700 }}>›</span>
+                      <span style={{ position: "absolute", left: 0, color: "#d87307", fontWeight: 700 }}>›</span>
                       {s}
                     </li>
                   ))}
@@ -446,18 +446,18 @@ export default function Home() {
                 <Link href={href} style={{
                   fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 12,
                   letterSpacing: "0.12em", textTransform: "uppercase",
-                  color: "#cb772d", borderBottom: "1px solid #cb772d",
+                  color: "#d87307", borderBottom: "1px solid #d87307",
                   paddingBottom: 2, transition: "color 0.2s",
                 }}
-                onMouseEnter={e => (e.currentTarget.style.color = "#8B5E24")}
-                onMouseLeave={e => (e.currentTarget.style.color = "#cb772d")}
+                onMouseEnter={e => (e.currentTarget.style.color = "#945B06")}
+                onMouseLeave={e => (e.currentTarget.style.color = "#d87307")}
                 >{cta} →</Link>
               </div>
             ))}
           </div>
 
           {/* Closing */}
-          <div className={`reveal${s5.inView ? " visible" : ""}`} style={{ textAlign: "center", padding: "32px 40px", background: "#F5F0E8", borderLeft: "4px solid #cb772d" }}>
+          <div className={`reveal${s5.inView ? " visible" : ""}`} style={{ textAlign: "center", padding: "32px 40px", background: "#F5F0E8", borderLeft: "4px solid #d87307" }}>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#444", maxWidth: 760, margin: "0 auto 10px" }}>
               Each solution delivers value on its own, but the greatest impact comes when they&apos;re connected through a unified growth strategy.
             </p>
@@ -472,7 +472,7 @@ export default function Home() {
       <section style={{ position: "relative", overflow: "hidden", padding: "100px 40px", backgroundImage: "url('/images/bg-peaks.png')", backgroundSize: "cover", backgroundPosition: "center 40%" }}>
         <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.72)" }} />
         <div ref={s6.ref} style={{ position: "relative", zIndex: 1, maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
-          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase", color: "#cb772d", marginBottom: 16 }}>
+          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
             More Than a Service Provider. A Strategic Growth Partner.
           </p>
           <h2 className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(26px, 4vw, 52px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.05, marginBottom: 12 }}>
@@ -494,11 +494,11 @@ export default function Home() {
             <Link href="/contact" style={{
               fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
-              background: "#cb772d", color: "#FFFFFF",
+              background: "#d87307", color: "#FFFFFF",
               padding: "14px 36px", borderRadius: 2, transition: "background 0.2s",
             }}
-            onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#b8661f")}
-            onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#cb772d")}
+            onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
+            onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
             >Book a Strategy Session</Link>
           </div>
         </div>
@@ -514,7 +514,7 @@ export default function Home() {
           <p className={`reveal${s8.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", fontStyle: "italic", marginBottom: 48 }}>
             The strongest brands don&apos;t leave growth to chance. They build it with intention.
           </p>
-          <p className={`reveal${s8.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: "0.2em", textTransform: "uppercase", color: "#cb772d", marginBottom: 28 }}>
+          <p className={`reveal${s8.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 28 }}>
             Choose Your Next Step
           </p>
           <div className={`reveal${s8.inView ? " visible" : ""}`} style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 32, marginBottom: 56, textAlign: "left" }}>
@@ -525,11 +525,11 @@ export default function Home() {
               <Link href="/contact" style={{
                 fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 14,
                 letterSpacing: "0.14em", textTransform: "uppercase",
-                background: "#cb772d", color: "#FFFFFF", padding: "16px 40px", borderRadius: 2,
+                background: "#d87307", color: "#FFFFFF", padding: "16px 40px", borderRadius: 2,
                 display: "inline-block", transition: "background 0.2s",
               }}
-              onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#b8661f")}
-              onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#cb772d")}
+              onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
+              onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
               >Book a Strategy Session</Link>
             </div>
             <div>
@@ -543,12 +543,12 @@ export default function Home() {
                 padding: "16px 40px", border: "2px solid rgba(255,255,255,0.6)", borderRadius: 2,
                 display: "inline-block", transition: "border-color 0.2s",
               }}
-              onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.borderColor = "#cb772d")}
+              onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.borderColor = "#d87307")}
               onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,255,255,0.6)")}
               >Explore Our Solutions</Link>
             </div>
           </div>
-          <div className={`reveal${s8.inView ? " visible" : ""}`} style={{ borderTop: "1px solid rgba(203,119,45,0.3)", paddingTop: 36 }}>
+          <div className={`reveal${s8.inView ? " visible" : ""}`} style={{ borderTop: "1px solid rgba(216,115,7,0.3)", paddingTop: 36 }}>
             <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(20px, 2.5vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#FFFFFF", marginBottom: 10 }}>
               Forging Brands. Driving Revenue.
             </p>

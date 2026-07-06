@@ -8,6 +8,15 @@
 }
 
 @font-face {
+  font-family: 'Burford Rustic Inline';
+  src: url('/fonts/BurfordRusticLineMedium.woff') format('woff'),
+       url('/fonts/BurfordRusticLineMedium.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Montserrat';
   src: url('/fonts/Montserrat-variable.woff2') format('woff2-variations'),
        url('/fonts/Montserrat-variable.woff2') format('woff2');
@@ -29,8 +38,8 @@ img { max-width: 100%; display: block; }
 button { font-family: inherit; }
 
 :root {
-  --copper: #cb772d;
-  --copper-dark: #8B5E24;
+  --copper: #d87307;
+  --copper-dark: #945B06;
   --navy: #0F1B2D;
   --cream: #F5F0E8;
 }
