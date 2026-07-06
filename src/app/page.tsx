@@ -178,16 +178,15 @@ export default function Home() {
         </div>
 
         {/* Service labels at bottom */}
-        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, display: "flex", justifyContent: "space-between", padding: "0 0 20px", overflowX: "auto" }}>
+        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, display: "flex", flexWrap: "nowrap", justifyContent: "space-between", alignItems: "center", gap: 28, padding: "0 32px 20px", overflowX: "auto" }}>
           {services.map(s => (
-            <div key={s.label} style={{ flex: 1, textAlign: "center", padding: "0 8px" }}>
-              <p style={{
-                fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 11,
-                letterSpacing: "0.16em", textTransform: "uppercase",
-                color: "#FFFFFF", textShadow: "0 1px 8px rgba(0,0,0,0.8)",
-                whiteSpace: "nowrap",
-              }}>{s.label}</p>
-            </div>
+            <p key={s.label} style={{
+              flex: "0 0 auto",
+              fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 11,
+              letterSpacing: "0.16em", textTransform: "uppercase",
+              color: "#FFFFFF", textShadow: "0 1px 8px rgba(0,0,0,0.8)",
+              whiteSpace: "nowrap",
+            }}>{s.label}</p>
           ))}
         </div>
       </section>
