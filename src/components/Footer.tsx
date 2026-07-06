@@ -5,10 +5,13 @@ import { useState } from "react";
 const navLinks = [
   ["Services", "/services"],
   ["About", "/about"],
-  ["Results", "/case-studies"],
-  ["Contact", "/contact"],
+  ["Industries", "/industries"],
+  ["Case Studies", "/case-studies"],
   ["Blog", "/blog"],
-  ["Testimonials", "/testimonials"],
+  ["Resources", "/resources"],
+  ["Pricing", "/pricing"],
+  ["Contact", "/contact"],
+  ["Client Portal", "/client-portal"],
 ];
 
 const socialLinks = [
