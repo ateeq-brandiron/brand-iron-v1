@@ -94,7 +94,7 @@ const coreServices = [
 const journeyStages = [
   { stage: "Discover", body: "Buyers begin by searching for answers, not vendors. Whether they're using search engines, AI assistants, industry publications, social platforms, or peer communities, your business needs to be present where discovery starts. If buyers can't find you, your growth never begins." },
   { stage: "Evaluate", body: "Once discovered, buyers compare their options. They assess your expertise, messaging, services, reputation, website, and how clearly you communicate the value you bring. Every interaction either reinforces confidence or creates doubt." },
-  { stage: "Trust", body: "Trust is earned long before the first meeting. Thought leadership, customer success stories, reviews, strategic content, and a consistent brand presence all shape buying decisions. Organizations that invest in authority become the ones buyers remember — and recommend." },
+  { stage: "Trust", body: "Trust is earned long before the first meeting. Thought leadership, customer success stories, reviews, strategic content, and a consistent brand presence all shape buying decisions. Organizations that invest in authority become the ones buyers remember, and recommend." },
   { stage: "Engage", body: "When buyers are ready to take the next step, the experience should feel effortless. Clear messaging, intuitive websites, effective outreach, and connected customer journeys help transform interest into meaningful conversations." },
   { stage: "Choose", body: "Winning new business isn't about being the loudest voice in the market. It's about becoming the most discoverable, credible, and trusted choice when buyers are ready to decide." },
 ];
