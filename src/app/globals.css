@@ -44,9 +44,711 @@ button { font-family: inherit; }
   --cream: #F5F0E8;
 }
 
+/* All headings: Burford Rustic Book Black */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Burford Rustic Black', Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+}
+
+/* Hero H1 — Burford Rustic Black outline stroke, matches inner pages */
+.hero-heading {
+  font-family: 'Burford Rustic Black', Helvetica, Arial, Lucida, sans-serif !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(44px, 6vw, 72px);
+  color: transparent !important;
+  -webkit-text-stroke: 2px #FFFFFF;
+  line-height: 1.0;
+  letter-spacing: 0.03em;
+  max-width: 800px;
+}
+
+/* ── Buttons ─────────────────────────────────────────────── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #d87307;
+  color: #FFFFFF;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.1s ease;
+  white-space: nowrap;
+}
+.btn-primary:hover { background: #9c5305; transform: translateY(-1px); }
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #FFFFFF;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 13px 28px;
+  border-radius: 6px;
+  border: 2px solid rgba(255,255,255,0.85);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+.btn-secondary:hover { background: #FFFFFF; color: #1c3652; }
+
+/* ════════════════════════════════════════════════════════════
+   GLOBAL HOVER SYSTEM
+   Philosophy: no solid fills — use glow rings, lift, border
+   light-up, underline slides, and subtle scale
+   ════════════════════════════════════════════════════════════ */
+
+/* ── Stats Section — progress bars ──────────────────────── */
+.progress-bar {
+  transition: background-position 0.6s ease, transform 0.3s ease;
+  background-size: 200% 100%;
+  background-position: right center;
+}
+.stat-block:hover .progress-bar {
+  background-position: left center;
+  transform: scaleX(1.02);
+  transform-origin: left;
+}
+.stat-block {
+  transition: transform 0.25s ease;
+}
+.stat-block:hover {
+  transform: translateY(-4px);
+}
+
+/* ── Section 2 — Problem cards ──────────────────────────── */
+.problem-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.problem-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 36px rgba(216,115,7,0.18) !important;
+  border-left-color: #0F1B2D !important;
+}
+
+/* ── Section 3 — AI Growth Engine icon boxes & arrows ───── */
+.engine-icon-box {
+  cursor: default;
+}
+.engine-icon-box:hover {
+  border-color: #d87307 !important;
+  box-shadow: 0 0 0 4px rgba(216,115,7,0.22), 0 8px 28px rgba(216,115,7,0.18) !important;
+  transform: translateY(-5px) scale(1.04);
+}
+.engine-arrow:hover {
+  transform: translateX(6px);
+}
+
+/* ── Section 4 — Process Steps ──────────────────────────── */
+.process-step {
+  cursor: default;
+  transition: transform 0.3s ease;
+}
+.process-circle {
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+.process-step:hover .process-circle {
+  box-shadow: 0 0 0 6px rgba(216,115,7,0.22), 0 0 40px rgba(216,115,7,0.28);
+  transform: translateY(-6px) scale(1.06);
+  border-color: #FFFFFF;
+}
+.process-step:hover h3 {
+  color: #FFFFFF;
+  transition: color 0.3s ease;
+}
+.process-step:hover p {
+  color: rgba(255,255,255,1) !important;
+  transition: color 0.3s ease;
+}
+
+/* ── Section 5 — Service cards (What We Build) ───────────── */
+.service-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12) !important;
+}
+.service-card:hover .service-underline {
+  width: 100% !important;
+  background: #d87307 !important;
+  transition: width 0.35s ease, background 0.25s ease;
+}
+.service-underline {
+  transition: width 0.35s ease, background 0.25s ease;
+}
+.service-card:hover h3 {
+  color: #d87307;
+  transition: color 0.25s ease;
+}
+
+/* ── Section 5 — Feature cards (What You Get) ────────────── */
+.feature-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-left-color 0.25s ease;
+}
+.feature-card:hover {
+  transform: translateY(-5px) translateX(3px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.1) !important;
+  border-left-color: #0F1B2D !important;
+}
+.feature-card:hover h3 {
+  color: #d87307 !important;
+  transition: color 0.25s ease;
+}
+
+/* ── Section 6 — Comparison cards ───────────────────────── */
+.compare-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.compare-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 0 2px #d87307, 0 16px 40px rgba(216,115,7,0.2) !important;
+}
+
+/* ── Comparison table rows ───────────────────────────────── */
+.table-row {
+  transition: background 0.2s ease;
+  cursor: default;
+}
+.table-row:hover {
+  background: rgba(216,115,7,0.08) !important;
+}
+
+/* ── Section 8 — Form inputs ─────────────────────────────── */
+.form-input {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.form-input:focus {
+  border-color: #d87307 !important;
+  box-shadow: 0 0 0 3px rgba(216,115,7,0.15) !important;
+  outline: none !important;
+}
+
+/* ── Submit button ───────────────────────────────────────── */
+.submit-btn {
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+.submit-btn:hover {
+  background: #9c5305 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(216,115,7,0.4);
+}
+
+/* ── Navbar CTA ──────────────────────────────────────────── */
+.nav-cta:hover {
+  background: #9c5305 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(216,115,7,0.35);
+}
+.nav-cta {
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+/* ── Section Heading (H2) ───────────────────────────────── */
+.section-heading {
+  font-family: 'Burford Rustic Black', Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: clamp(36px, 5vw, 70px);
+  letter-spacing: 1.44px;
+  line-height: 1.05;
+  text-align: center;
+}
+
+/* ── Hero Buttons ───────────────────────────────────────── */
+/* ── Hero buttons — glass / premium ── */
+@keyframes btnShimmer {
+  from { left: -60%; }
+  to   { left: 130%; }
+}
+
+.hero-btn-primary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  background: rgba(156,83,5,0.55);
+  color: #FFFFFF;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 15px 38px;
+  border-radius: 8px;
+  border: 1px solid rgba(216,115,7,0.9);
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.14), 0 2px 12px rgba(130,70,15,0.35);
+  transition: background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease, transform 0.25s ease, letter-spacing 0.3s ease;
+}
+.hero-btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -60%;
+  width: 45%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+  transform: skewX(-18deg);
+  transition: none;
+  pointer-events: none;
+}
+.hero-btn-primary:hover {
+  background: rgba(156,83,5,0.75);
+  border-color: #d87307;
+  box-shadow: 0 0 28px rgba(216,115,7,0.55), 0 4px 20px rgba(130,70,15,0.45), inset 0 1px 0 rgba(255,255,255,0.18);
+  transform: translateY(-3px);
+  letter-spacing: 0.13em;
+}
+.hero-btn-primary:hover::before {
+  animation: btnShimmer 0.55s ease forwards;
+}
+
+.hero-btn-outline {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  background: rgba(15,27,45,0.55);
+  color: rgba(255,255,255,0.92);
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 15px 38px;
+  border-radius: 8px;
+  border: 1px solid rgba(216,115,7,0.5);
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 2px 12px rgba(0,0,0,0.3);
+  transition: background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease, transform 0.25s ease, color 0.25s ease, letter-spacing 0.3s ease;
+}
+.hero-btn-outline::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -60%;
+  width: 45%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+  transform: skewX(-18deg);
+  transition: none;
+  pointer-events: none;
+}
+.hero-btn-outline:hover {
+  background: rgba(255,255,255,0.12);
+  background: rgba(15,27,45,0.75);
+  border-color: rgba(216,115,7,0.85);
+  color: #FFFFFF;
+  box-shadow: 0 0 24px rgba(216,115,7,0.25), 0 4px 20px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.14);
+  transform: translateY(-3px);
+  letter-spacing: 0.13em;
+}
+.hero-btn-outline:hover::before {
+  animation: btnShimmer 0.55s ease forwards;
+}
+
+.section-label {
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #d87307;
+}
+
+/* ── Tagline banner — word hover & dot blink ────────────── */
+@keyframes dot-blink {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.25; transform: scale(0.6); }
+}
+.tagline-dot {
+  width: 10px; height: 10px; border-radius: 50%; background: #d87307;
+  animation: dot-blink 1.8s ease-in-out infinite;
+  display: inline-block; flex-shrink: 0;
+}
+.tagline-dot:nth-of-type(1) { animation-delay: 0s; }
+.tagline-dot:nth-of-type(2) { animation-delay: 0.6s; }
+.tagline-dot:nth-of-type(3) { animation-delay: 1.2s; }
+
+.tagline-word {
+  transition: color 0.2s ease, letter-spacing 0.2s ease;
+  cursor: default;
+}
+.tagline-word:hover {
+  color: #FFFFFF !important;
+  letter-spacing: 0.26em !important;
+}
+
+/* ══════════════════════════════════════════════════════════
+   INNER PAGE HOVER SYSTEM
+   ══════════════════════════════════════════════════════════ */
+
+/* ── Value / feature cards (dark bg, left copper border) ─── */
+.value-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-left-color 0.25s ease;
+}
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(216,115,7,0.22) !important;
+  border-left-color: #FFFFFF !important;
+}
+.value-card:hover h3 { color: #FFFFFF !important; transition: color 0.25s ease; }
+
+/* ── Team cards ──────────────────────────────────────────── */
+.team-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(216,115,7,0.28) !important;
+  border-color: rgba(216,115,7,0.6) !important;
+}
+
+/* ── Approach steps circle glow (about page) ─────────────── */
+.approach-step { transition: transform 0.25s ease; cursor: default; }
+.approach-circle {
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+.approach-step:hover .approach-circle {
+  box-shadow: 0 0 0 6px rgba(216,115,7,0.22), 0 0 32px rgba(216,115,7,0.28);
+  transform: scale(1.08);
+  border-color: #FFFFFF;
+}
+.approach-step:hover h3 { color: #d87307 !important; transition: color 0.25s ease; }
+
+/* ── Stat grid cells ─────────────────────────────────────── */
+.stat-cell {
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+.stat-cell:hover { transform: scale(1.04); background: rgba(216,115,7,0.18) !important; }
+
+/* ── Channel / tactic cards (light bg, border-top copper) ── */
+.channel-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-top-color 0.25s ease;
+}
+.channel-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.1) !important;
+  border-top-color: #0F1B2D !important;
+}
+.channel-card:hover h3 { color: #d87307 !important; transition: color 0.25s ease; }
+
+/* ── Channel / tactic cards (light bg, border-left copper) ── */
+.channel-card-left {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-left-color 0.25s ease;
+}
+.channel-card-left:hover {
+  transform: translateY(-6px) translateX(3px);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.1) !important;
+  border-left-color: #0F1B2D !important;
+}
+.channel-card-left:hover h3 { color: #d87307 !important; transition: color 0.25s ease; }
+
+/* ── Dark bg cards ───────────────────────────────────────── */
+.dark-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+.dark-card:hover {
+  transform: translateY(-5px);
+  background: rgba(216,115,7,0.09) !important;
+  border-color: rgba(216,115,7,0.4) !important;
+  box-shadow: 0 0 0 1px rgba(216,115,7,0.25), 0 14px 36px rgba(216,115,7,0.15) !important;
+}
+.dark-card:hover h3 { color: #d87307 !important; transition: color 0.25s ease; }
+
+/* ── Process / numbered step cards ──────────────────────── */
+.process-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.process-card:hover { transform: translateY(-5px); box-shadow: 0 12px 32px rgba(0,0,0,0.1) !important; }
+.process-card:hover h3 { color: #d87307 !important; transition: color 0.25s ease; }
+
+/* ── Stat number blocks (small) ─────────────────────────── */
+.stat-block-sm {
+  transition: transform 0.25s ease;
+  cursor: default;
+}
+.stat-block-sm:hover { transform: translateY(-4px); }
+
+/* ── Technology / tool chips ─────────────────────────────── */
+.tool-chip {
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+  cursor: default;
+}
+.tool-chip:hover {
+  background: #d87307 !important;
+  border-color: #d87307 !important;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+}
+
+/* ── Contact option cards ────────────────────────────────── */
+.contact-opt {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-top-color 0.25s ease;
+}
+.contact-opt:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(216,115,7,0.22) !important;
+  border-top-color: #FFFFFF !important;
+}
+
+/* ── Info rows (contact sidebar) ─────────────────────────── */
+.info-row {
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.info-row:hover {
+  background: rgba(216,115,7,0.12) !important;
+  border-color: rgba(216,115,7,0.4) !important;
+}
+
+/* ── CTA link buttons on copper sections ─────────────────── */
+.cta-link-btn {
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+.cta-link-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25) !important;
+}
+
+/* ── Outcome deliverable items (light bg) ───────────────── */
+.outcome-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.outcome-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.1) !important;
+}
+.outcome-card:hover h3 { color: #d87307 !important; transition: color 0.25s ease; }
+
+/* ── Contrast & Legibility ──────────────────────────────── */
+/* Body text must never fall below 0.6 opacity — enforce readable contrast */
+p, li, span, label, td, th, blockquote, figcaption {
+  color: inherit;
+}
+/* Prevent accidental washed-out body copy on light backgrounds */
+section p, main p, article p {
+  color: #444746;
+}
+/* On dark backgrounds, override to full-opacity white (set via inline or utility) */
+[data-theme="dark"] p,
+.dark-section p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ══════════════════════════════════════════════════════════
+   MICRO-INTERACTIONS & SCROLL ANIMATIONS
+   ══════════════════════════════════════════════════════════ */
+
+/* ── Keyframes ─────────────────────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.88); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes progressFill {
+  from { width: 0%; }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes copperPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(216,115,7,0); }
+  50%       { box-shadow: 0 0 0 8px rgba(216,115,7,0.18); }
+}
+@keyframes heroSlideUp {
+  from { opacity: 0; transform: translateY(48px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+
+/* ── Scroll-reveal base state ──────────────────────────── */
 .reveal {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.55s ease, transform 0.55s ease;
+  transform: translateY(28px);
+  transition: opacity 0.65s cubic-bezier(0.22,1,0.36,1),
+              transform 0.65s cubic-bezier(0.22,1,0.36,1);
 }
-.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays for child groups */
+.reveal-group > *:nth-child(1) { transition-delay: 0s; }
+.reveal-group > *:nth-child(2) { transition-delay: 0.08s; }
+.reveal-group > *:nth-child(3) { transition-delay: 0.16s; }
+.reveal-group > *:nth-child(4) { transition-delay: 0.24s; }
+.reveal-group > *:nth-child(5) { transition-delay: 0.32s; }
+.reveal-group > *:nth-child(6) { transition-delay: 0.40s; }
+
+/* ── Hero entrance animations ──────────────────────────── */
+.hero-h1-anim {
+  animation: heroSlideUp 0.9s cubic-bezier(0.22,1,0.36,1) 0.15s both;
+}
+.hero-body-anim {
+  animation: heroSlideUp 0.9s cubic-bezier(0.22,1,0.36,1) 0.3s both;
+}
+.hero-stats-anim {
+  animation: heroSlideUp 0.9s cubic-bezier(0.22,1,0.36,1) 0.42s both;
+}
+.hero-btns-anim {
+  animation: heroSlideUp 0.9s cubic-bezier(0.22,1,0.36,1) 0.54s both;
+}
+
+/* ── Scroll progress bar animate on visible ────────────── */
+.progress-bar-animate {
+  width: 0%;
+  transition: width 1.4s cubic-bezier(0.22,1,0.36,1);
+}
+
+/* ── Copper glow on process circles (already hover, now also pulse on reveal) */
+.circle-revealed {
+  animation: copperPulse 2.4s ease-in-out 0.8s 2;
+}
+
+/* ── Floating icon animation (subtle, used on stat icons) ── */
+.icon-float {
+  animation: float 4s ease-in-out infinite;
+}
+.icon-float:nth-child(2) { animation-delay: 0.6s; }
+.icon-float:nth-child(3) { animation-delay: 1.2s; }
+
+/* ── Slide from sides (comparison cards) ──────────────── */
+.slide-left {
+  opacity: 0;
+  transform: translateX(-36px);
+  transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1),
+              transform 0.7s cubic-bezier(0.22,1,0.36,1);
+}
+.slide-right {
+  opacity: 0;
+  transform: translateX(36px);
+  transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1) 0.1s,
+              transform 0.7s cubic-bezier(0.22,1,0.36,1) 0.1s;
+}
+.slide-left.visible, .slide-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── Scale in (stats, logo) ────────────────────────────── */
+.scale-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s cubic-bezier(0.22,1,0.36,1),
+              transform 0.6s cubic-bezier(0.22,1,0.36,1);
+}
+.scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ── Copper underline link hover (nav-style) ───────────── */
+.copper-link {
+  position: relative;
+  display: inline-block;
+}
+.copper-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0;
+  width: 0%; height: 2px;
+  background: #d87307;
+  transition: width 0.3s ease;
+}
+.copper-link:hover::after { width: 100%; }
+
+
+/* ── Dark leather CTA section ── */
+.cta-leather {
+  position: relative;
+  background-color: #2A0E04;
+  background-image:
+    /* fine diagonal grain lines */
+    repeating-linear-gradient(
+      128deg,
+      transparent 0px,
+      transparent 3px,
+      rgba(0,0,0,0.13) 3px,
+      rgba(0,0,0,0.13) 4px,
+      transparent 4px,
+      transparent 8px
+    ),
+    repeating-linear-gradient(
+      38deg,
+      transparent 0px,
+      transparent 4px,
+      rgba(0,0,0,0.08) 4px,
+      rgba(0,0,0,0.08) 5px,
+      transparent 5px,
+      transparent 10px
+    ),
+    /* coarse wrinkle / hide variation */
+    repeating-linear-gradient(
+      90deg,
+      rgba(80,28,8,0.35) 0px,
+      rgba(45,14,4,0.35) 18px,
+      rgba(70,24,8,0.35) 36px,
+      rgba(35,10,2,0.35) 54px,
+      rgba(80,28,8,0.35) 72px
+    ),
+    repeating-linear-gradient(
+      170deg,
+      rgba(60,20,6,0.4) 0px,
+      rgba(30,8,2,0.4) 24px,
+      rgba(55,18,6,0.4) 48px,
+      rgba(25,7,1,0.4) 72px,
+      rgba(60,20,6,0.4) 96px
+    ),
+    /* base dark brown */
+    linear-gradient(
+      145deg,
+      #3D1508 0%,
+      #2A0D04 28%,
+      #4A1C09 52%,
+      #200A02 76%,
+      #3A1207 100%
+    );
+  overflow: hidden;
+  padding: 100px 40px;
+}
+
+

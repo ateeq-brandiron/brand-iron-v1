@@ -1,0 +1,823 @@
+"use client";
+import Link from "next/link";
+import { useState, useEffect, useRef } from "react";
+import CircuitOverlay from "@/components/CircuitOverlay";
+
+function useInView(threshold = 0.1) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [inView, setInView] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(([e]) => {
+      if (e.isIntersecting) { setInView(true); obs.disconnect(); }
+    }, { threshold });
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [threshold]);
+  return { ref, inView };
+}
+
+export default function GTMPage() {
+  const s2View = useInView();
+  const s3View = useInView();
+  const s4View = useInView();
+  const s5View = useInView();
+  const s6View = useInView();
+  const s7View = useInView();
+  const ctaView = useInView();
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  const faqs = [
+    {
+      q: "What is a Go-to-Market (GTM) strategy?",
+      a: "A Go-to-Market strategy is a structured plan for bringing your products or services to the right market with the right messaging, channels, and customer experience. At Brand Iron, we expand the traditional GTM approach by integrating strategy, AI Visibility, demand generation, sales enablement, analytics, and automation into one connected growth system. The objective isn't simply to launch campaigns—it's to create sustainable, measurable business growth.",
+    },
+    {
+      q: "How is Brand Iron's GTM approach different from traditional marketing services?",
+      a: "Traditional marketing engagements often focus on individual tactics such as SEO, advertising, content, or social media. Brand Iron begins with business strategy and connects every initiative—including visibility, authority, demand generation, sales, analytics, and automation—into a unified Go-to-Market framework. This holistic approach helps organizations create alignment across departments rather than optimizing isolated marketing activities.",
+    },
+    {
+      q: "Why does AI Visibility matter in a Go-to-Market strategy?",
+      a: "Today's buyers don't rely solely on search engines. They ask AI platforms, compare competitors, read reviews, explore thought leadership, and validate organizations before reaching out. AI Visibility helps your organization become discoverable across this modern buying journey by strengthening semantic search, entity optimization, structured data, knowledge graph signals, and answer-ready content. As AI continues to influence purchasing decisions, discoverability extends far beyond traditional SEO.",
+    },
+    {
+      q: "Which Go-to-Market tier is right for my organization?",
+      a: "The right engagement depends on your current stage of growth. Foundation is ideal for organizations building strategic clarity, visibility, and core marketing systems. Growth Engine is designed for companies seeking to expand authority, accelerate demand generation, and create predictable pipeline growth. Revenue Accelerator supports mature organizations that require enterprise-level automation, advanced AI Visibility, executive thought leadership, and scalable revenue systems. During a strategy session, we'll evaluate your current Go-to-Market maturity and recommend the level of execution best aligned with your business objectives.",
+    },
+    {
+      q: "How long does a Go-to-Market engagement typically last?",
+      a: "Most organizations see the greatest value through a structured, phased engagement. The Foundation engagement establishes strategic direction and core capabilities. As the business grows, organizations often expand into Growth Engine and Revenue Accelerator to strengthen demand generation, authority building, revenue intelligence, and automation. Our roadmap is designed to evolve with your business rather than forcing every initiative into a single implementation phase.",
+    },
+    {
+      q: "When should an organization invest in a Go-to-Market strategy?",
+      a: "Organizations often benefit from a GTM strategy when they are launching a new company, product, or service; entering a new market; repositioning their brand; experiencing inconsistent pipeline growth; expanding into new geographic regions; preparing to scale revenue operations; or looking to improve alignment between marketing and sales. The earlier strategic alignment is established, the easier it becomes to build sustainable growth.",
+    },
+    {
+      q: "How do you measure success?",
+      a: "Success isn't measured by marketing activity alone. We evaluate progress using business-focused metrics such as qualified pipeline growth, AI Visibility improvements, organic search performance, brand authority signals, conversion rates, revenue attribution, sales and marketing alignment, operational efficiency, and executive KPI dashboards. These metrics provide a more complete view of how your Go-to-Market strategy contributes to long-term business performance.",
+    },
+    {
+      q: "Do I need to replace my existing marketing team?",
+      a: "No. Brand Iron is designed to complement your existing team, not replace it. We frequently work alongside internal marketing, sales, executive leadership, and external partners to provide strategic direction, specialized expertise, and integrated execution. Our role is to strengthen the systems that support growth while helping your existing resources operate more effectively.",
+    },
+    {
+      q: "Can Brand Iron work with organizations that already have marketing initiatives in place?",
+      a: "Absolutely. Many organizations come to us with existing websites, SEO campaigns, content marketing, paid advertising, CRM platforms, or sales processes already in place. Rather than starting from scratch, we evaluate what's working, identify gaps, strengthen alignment, and build upon your existing investments to create a more connected and effective Go-to-Market system.",
+    },
+    {
+      q: "What happens after the strategy session?",
+      a: "Every engagement begins with understanding your business, not prescribing a solution. During the strategy session, we'll evaluate your market position, current Go-to-Market maturity, business objectives, and growth opportunities. Based on those insights, we'll recommend the level of execution that best supports your organization's goals and outline a phased roadmap for implementation.",
+    },
+  ];
+
+  return (
+    <main style={{ fontFamily: "'Montserrat', sans-serif" }}>
+
+      {/* ── HERO ───────────────────────────────────────────── */}
+      <section style={{
+        position: "relative", minHeight: "92vh", display: "flex", alignItems: "center", overflow: "hidden",
+        backgroundImage: "url('/images/bg-hero-lake.png')",
+        backgroundSize: "cover", backgroundPosition: "center 40%",
+      }}>
+        <div style={{ position: "absolute", inset: 0, background: "rgba(8,16,36,0.72)" }} />
+        <CircuitOverlay />
+        <div style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto", padding: "160px 40px 100px", width: "100%" }}>
+          <p className="hero-body-anim" style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 20 }}>
+            Go-to-Market Strategy Services
+          </p>
+          <h1 className="hero-h1-anim" style={{
+            fontFamily: "'Burford Rustic Black', Helvetica, Arial, Lucida, sans-serif",
+            fontWeight: 700, fontSize: "clamp(38px, 5vw, 72px)",
+            textTransform: "uppercase", letterSpacing: "0.03em", lineHeight: 1.0,
+            color: "transparent", WebkitTextStroke: "2px #FFFFFF",
+            maxWidth: 920, marginBottom: 36,
+          }}>
+            Go-to-Market Strategies Built for How Buyers Make Decisions Today
+          </h1>
+
+          <p className="hero-body-anim" style={{ fontSize: 18, lineHeight: 1.8, color: "rgba(255,255,255,0.9)", maxWidth: 700, marginBottom: 16 }}>
+            The path to purchase has changed.
+          </p>
+          <p className="hero-body-anim" style={{ fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.8)", maxWidth: 720, marginBottom: 16 }}>
+            Buyers no longer rely on a single search engine or a sales conversation to evaluate their options. They ask AI platforms, compare competitors, read reviews, validate expertise on LinkedIn, and seek recommendations from trusted sources before they&apos;re ready to engage.
+          </p>
+          <p className="hero-body-anim" style={{ fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.75)", maxWidth: 720, marginBottom: 40 }}>
+            Many organizations are still executing go-to-market strategies designed for a different buying landscape. Sustainable growth now requires more than marketing campaigns — it demands an integrated system that connects strategy, visibility, authority, demand generation, sales, automation, and revenue into one cohesive growth engine.
+          </p>
+
+          <div className="hero-btns-anim" style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
+            <Link href="/contact" className="hero-btn-primary" style={{ fontSize: 15, padding: "18px 40px" }}>
+              Schedule a GTM Strategy Session
+            </Link>
+            <Link href="#framework" className="hero-btn-outline" style={{ fontSize: 15, padding: "18px 40px" }}>
+              Explore the GTM Framework
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── S2: BUYING JOURNEY EVOLVED ─────────────────────── */}
+      <section style={{ background: "#FFFFFF", padding: "120px 40px" }}>
+        <div ref={s2View.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16, textAlign: "center" }}>
+            The Shift in Buyer Behavior
+          </p>
+          <h2 className={`section-heading reveal${s2View.inView ? ' visible' : ''}`} style={{ color: "#0F1B2D", marginBottom: 24 }}>
+            The Buying Journey Has Evolved. Your Go-to-Market Strategy Should Too.
+          </h2>
+
+          <div style={{ maxWidth: 800, margin: "0 auto 72px" }}>
+            <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 16, textAlign: "center" }}>
+              For years, go-to-market strategies centered on a familiar formula: define your target audience, position your offering, generate awareness, enable sales, and measure performance. That foundation still matters — but the environment surrounding it has fundamentally changed.
+            </p>
+            <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 16, textAlign: "center" }}>
+              Today&apos;s buyers don&apos;t follow a linear path to purchase. They move between search engines, AI platforms, social networks, peer recommendations, industry publications, and company websites before making a decision.
+            </p>
+            <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 16, textAlign: "center" }}>
+              The organizations gaining market share aren&apos;t necessarily those with the largest marketing budgets. They&apos;re the ones that have built connected systems where strategy, visibility, authority, demand generation, sales, automation, and analytics work as one.
+            </p>
+            <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#444", fontWeight: 600, textAlign: "center" }}>
+              That is where a modern Go-to-Market strategy creates its greatest advantage.
+            </p>
+          </div>
+
+          {/* Comparison table */}
+          <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ marginBottom: 56 }}>
+            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#0F1B2D", marginBottom: 28, textAlign: "center" }}>
+              Traditional GTM vs. Today&apos;s Buying Reality
+            </h3>
+            <div style={{ overflowX: "auto" }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "'Montserrat', sans-serif", fontSize: 15 }}>
+                <thead>
+                  <tr>
+                    <th style={{ background: "#0F1B2D", color: "rgba(255,255,255,0.6)", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 12, padding: "18px 28px", textAlign: "left", width: "50%" }}>Traditional GTM</th>
+                    <th style={{ background: "#d87307", color: "#FFFFFF", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 12, padding: "18px 28px", textAlign: "left", width: "50%" }}>Today&apos;s Buying Reality</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    ["Buyers relied primarily on search engines and sales conversations.", "Buyers research across AI platforms, search engines, LinkedIn, reviews, communities, and industry content before engaging."],
+                    ["Marketing and sales often operated as separate functions.", "Marketing, sales, customer experience, and operations must work together to build trust."],
+                    ["Search visibility focused largely on SEO.", "Organizations need visibility across SEO, AI search, conversational search, semantic search, and entity-based discovery."],
+                    ["Success was measured by traffic and lead volume.", "Success is measured by qualified pipeline, trust, authority, and sustainable revenue growth."],
+                    ["Growth initiatives were executed in silos.", "Growth requires an integrated system where every initiative supports the next."],
+                  ].map(([then, now], i) => (
+                    <tr key={i} style={{ background: i % 2 === 0 ? "#F9F8F6" : "#FFFFFF" }}>
+                      <td style={{ padding: "20px 28px", color: "#666", lineHeight: 1.65, borderBottom: "1px solid #EEEBE7" }}>{then}</td>
+                      <td style={{ padding: "20px 28px", color: "#0F1B2D", fontWeight: 500, lineHeight: 1.65, borderBottom: "1px solid #EEEBE7" }}>{now}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* Key insight */}
+          <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ position: "relative", background: "#0F1B2D", borderRadius: 16, padding: "48px 64px", overflow: "hidden" }}>
+            <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, transparent, #d87307, transparent)" }} />
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16, textAlign: "center" }}>Key Insight</p>
+            <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.05em", color: "#FFFFFF", textAlign: "center", lineHeight: 1.4, margin: 0 }}>
+              Modern Go-to-Market success isn&apos;t about doing more marketing. It&apos;s about creating alignment between strategy, visibility, authority, demand generation, revenue operations, and customer experience so buyers encounter a consistent, trustworthy brand at every stage of their journey.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── S3: THE BRAND IRON GTM FRAMEWORK ───────────────── */}
+      <section id="framework" style={{
+        position: "relative", overflow: "hidden", padding: "120px 40px",
+        backgroundImage: "url('/images/techy sagebrush.png')",
+        backgroundSize: "cover", backgroundPosition: "center",
+      }}>
+        <div style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.68)" }} />
+        <CircuitOverlay />
+        <div ref={s3View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: 72 }}>
+            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
+              The Brand Iron Go-to-Market Framework
+            </p>
+            <h2 className={`section-heading reveal${s3View.inView ? ' visible' : ''}`} style={{ color: "#0F1B2D", marginBottom: 20 }}>
+              Growth Doesn&apos;t Come from More Marketing. It Comes from Better Alignment.
+            </h2>
+            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 760, margin: "0 auto 16px" }}>
+              A modern Go-to-Market strategy isn&apos;t a collection of independent tactics. It&apos;s a connected system where every part of the business supports the next.
+            </p>
+            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 760, margin: "0 auto" }}>
+              Strategy informs visibility. Visibility builds authority. Authority generates demand. Demand fuels revenue. Revenue is sustained through operational excellence and continuous optimization.
+            </p>
+          </div>
+
+          {/* 6 Pillars */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24, marginBottom: 56 }}>
+            {[
+              {
+                num: "01", title: "Strategy", color: "#0F1B2D",
+                lead: "Every successful Go-to-Market initiative begins with clarity.",
+                body: "Understanding your market, ideal customers, competitive landscape, and value proposition creates the foundation for every decision that follows.",
+                focuses: ["Market Strategy", "Ideal Customer Profile (ICP)", "Buyer Personas", "Competitive Intelligence", "Positioning & Messaging", "Go-to-Market Roadmap"],
+                icon: (<img src="/images/icons/icon-briefcase.svg" alt="" style={{ width: 28, height: 28 }} />),
+              },
+              {
+                num: "02", title: "Visibility", color: "#1c3652",
+                lead: "Buyers can't evaluate a business they never discover.",
+                body: "Modern visibility extends beyond traditional search rankings to include AI search platforms, semantic search, entity optimization, and structured digital signals that help organizations appear wherever decisions begin.",
+                focuses: ["Technical SEO", "AI Visibility", "AEO & GEO", "Entity Optimization", "Schema & Structured Data", "Knowledge Graph Readiness"],
+                icon: (<img src="/images/icons/icon-lightbulb.svg" alt="" style={{ width: 28, height: 28 }} />),
+              },
+              {
+                num: "03", title: "Authority", color: "#2d4f72",
+                lead: "Visibility creates awareness. Authority creates confidence.",
+                body: "Trust is built through expertise, credibility, and consistent digital signals that influence both people and AI systems evaluating your organization.",
+                focuses: ["Thought Leadership", "Executive Branding", "Reviews & Reputation", "Digital PR", "Media Coverage", "Industry Recognition"],
+                icon: (<img src="/images/icons/icon-chat.svg" alt="" style={{ width: 28, height: 28 }} />),
+              },
+              {
+                num: "04", title: "Demand", color: "#0F1B2D",
+                lead: "Once trust is established, organizations need a consistent system for attracting qualified prospects.",
+                body: "Valuable content, meaningful engagement, and strategic campaigns attract and nurture prospects through the decision-making journey.",
+                focuses: ["Content Strategy", "SEO Content", "Social Media", "Video Content", "Paid Media", "Campaign Execution"],
+                icon: (<img src="/images/icons/icon-lightning.svg" alt="" style={{ width: 28, height: 28 }} />),
+              },
+              {
+                num: "05", title: "Revenue", color: "#1c3652",
+                lead: "Demand alone doesn't create growth.",
+                body: "Revenue comes from converting interest into meaningful business opportunities through coordinated outreach, optimized customer journeys, and sales enablement.",
+                focuses: ["Outbound Campaigns", "LinkedIn Outreach", "Email Outreach", "Conversion Optimization", "Sales Funnels", "Partnership Development"],
+                icon: (<img src="/images/icons/icon-trending.svg" alt="" style={{ width: 28, height: 28 }} />),
+              },
+              {
+                num: "06", title: "Operations", color: "#2d4f72",
+                lead: "As organizations grow, complexity grows with them.",
+                body: "Connected systems, automation, analytics, and performance measurement ensure growth remains scalable, measurable, and repeatable.",
+                focuses: ["Revenue Intelligence", "KPI Dashboards", "CRM & Marketing Automation", "Workflow Automation", "AI Assistants", "Executive Reporting"],
+                icon: (<img src="/images/icons/icon-gear.svg" alt="" style={{ width: 28, height: 28 }} />),
+              },
+            ].map(({ num, title, color, lead, body, focuses, icon }, i) => (
+              <div key={num}
+                className={`reveal stagger-${(i % 3) + 1}${s3View.inView ? ' visible' : ''}`}
+                style={{ position: "relative", background: color, borderRadius: 14, padding: "36px 28px 32px", overflow: "hidden", transition: "transform 0.25s, box-shadow 0.25s" }}
+                onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-5px)"; el.style.boxShadow = "0 16px 48px rgba(15,27,45,0.2)"; }}
+                onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "none"; }}
+              >
+                <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 20 }}>
+                  <div style={{ width: 48, height: 48, borderRadius: 10, background: "rgba(216,115,7,0.12)", border: "1px solid rgba(216,115,7,0.2)", display: "flex", alignItems: "center", justifyContent: "center" }}>{icon}</div>
+                  <span style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 40, color: "rgba(216,115,7,0.12)", lineHeight: 1 }}>{num}</span>
+                </div>
+                <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 18, fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.08em", color: "#FFFFFF", marginBottom: 10, lineHeight: 1.2 }}>{title}</h3>
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "rgba(255,255,255,0.85)", fontWeight: 600, marginBottom: 10 }}>{lead}</p>
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "rgba(255,255,255,0.6)", marginBottom: 20 }}>{body}</p>
+                <div style={{ borderTop: "1px solid rgba(255,255,255,0.1)", paddingTop: 16 }}>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)", marginBottom: 10 }}>Focus Areas</p>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+                    {focuses.map(f => (
+                      <span key={f} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.7)", background: "rgba(255,255,255,0.06)", borderRadius: 4, padding: "3px 8px" }}>{f}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Philosophy statement */}
+          <div className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ background: "rgba(255,255,255,0.88)", backdropFilter: "blur(12px)", borderRadius: 16, padding: "40px 56px", borderLeft: "4px solid #d87307" }}>
+            <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.06em", color: "#0F1B2D", marginBottom: 16, lineHeight: 1.3 }}>
+              At Brand Iron, we believe sustainable growth is engineered by connecting these systems into one unified Go-to-Market framework.
+            </p>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.85, color: "#555", margin: 0 }}>
+              This holistic approach ensures every initiative contributes to a larger business objective rather than operating in isolation. The result isn&apos;t simply more activity — it&apos;s a stronger foundation for long-term growth, supported by measurable outcomes and a framework that evolves as your organization grows.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── S4: HOW THE FRAMEWORK BECOMES EXECUTION ─────────── */}
+      <section style={{
+        position: "relative", overflow: "hidden", padding: "120px 40px",
+        backgroundImage: "url('/images/bg-barn.jpg')",
+        backgroundSize: "cover", backgroundPosition: "center",
+      }}>
+        <div style={{ position: "absolute", inset: 0, background: "rgba(8,15,32,0.92)" }} />
+        <CircuitOverlay />
+        <div ref={s4View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: 72 }}>
+            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
+              How the Framework Becomes Execution
+            </p>
+            <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "transparent", WebkitTextStroke: "2px #FFFFFF", marginBottom: 20 }}>
+              A Framework Is Only Valuable If It Can Be Executed.
+            </h2>
+            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "rgba(255,255,255,0.75)", maxWidth: 720, margin: "0 auto 12px" }}>
+              A strong strategy creates direction, but sustainable growth comes from disciplined execution.
+            </p>
+            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.6)", maxWidth: 720, margin: "0 auto" }}>
+              Each component of our Go-to-Market methodology strengthens the next, creating an integrated system that helps organizations become more discoverable, build greater authority, generate qualified demand, improve conversion, and create measurable revenue growth.
+            </p>
+          </div>
+
+          {/* 8 execution components */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20 }}>
+            {[
+              {
+                num: "01", title: "Strategy & Market Intelligence",
+                lead: "Every successful Go-to-Market initiative begins with understanding the market before entering it.",
+                body: "We identify your ideal customers, evaluate competitors, refine positioning, strengthen messaging, and develop a strategic roadmap that aligns every future initiative around clear business objectives.",
+                activities: ["GTM Strategy & Roadmap", "Ideal Customer Profile (ICP)", "Buyer Personas", "Competitive Analysis", "Messaging Framework", "Offer Positioning"],
+              },
+              {
+                num: "02", title: "Visibility & Discoverability",
+                lead: "Being the best solution has little value if buyers and AI platforms can't find you.",
+                body: "We strengthen your digital foundation through technical optimization, AI Visibility, semantic search, structured data, and entity optimization so your organization is discoverable wherever modern buying journeys begin.",
+                activities: ["Technical SEO", "AI Visibility", "AEO & GEO", "Entity Optimization", "Schema Markup", "AI Recommendation Testing"],
+              },
+              {
+                num: "03", title: "Authority & Trust Building",
+                lead: "Visibility creates awareness. Authority creates confidence.",
+                body: "Modern buyers—and increasingly AI systems—look for signals that demonstrate expertise, credibility, and trust. We help establish those signals through strategic content, executive positioning, reviews, digital PR, and industry recognition.",
+                activities: ["Authority Content", "Executive Branding", "Review Strategy", "Thought Leadership", "Guest Posting", "Digital PR"],
+              },
+              {
+                num: "04", title: "Demand Generation",
+                lead: "Once trust is established, organizations need a consistent system for attracting qualified opportunities.",
+                body: "Our demand generation initiatives combine educational content, social media, search visibility, paid campaigns, and targeted marketing efforts to engage buyers throughout their decision-making journey.",
+                activities: ["Content Strategy", "SEO Content", "Industry Pages", "Social Media", "Video Content", "Paid Campaigns"],
+              },
+              {
+                num: "05", title: "Outbound & Business Development",
+                lead: "Not every opportunity should wait to discover you.",
+                body: "We help organizations proactively build relationships through strategic outreach, business development initiatives, partnerships, and referral programs that complement inbound demand generation.",
+                activities: ["Prospect Research", "Lead Enrichment", "LinkedIn Outreach", "Email Outreach", "Appointment Setting", "Partnership Development"],
+              },
+              {
+                num: "06", title: "Conversion Optimization",
+                lead: "Generating interest is only valuable when it leads to meaningful business outcomes.",
+                body: "We evaluate every stage of the customer journey to remove friction, improve user experience, strengthen offers, and increase the percentage of visitors who become qualified opportunities.",
+                activities: ["Landing Page Optimization", "Conversion Reviews", "Lead Magnets", "Funnel Development", "CRO", "A/B Testing"],
+              },
+              {
+                num: "07", title: "Analytics & Revenue Intelligence",
+                lead: "Growth decisions should be informed by evidence — not assumptions.",
+                body: "Our reporting framework connects marketing performance, sales activity, and revenue insights into executive-level dashboards that support better planning, forecasting, and continuous improvement.",
+                activities: ["GA4 & Measurement", "KPI Dashboards", "Revenue Attribution", "Executive Reporting", "AI Visibility Reporting", "Revenue Forecasting"],
+              },
+              {
+                num: "08", title: "Automation & Scaling",
+                lead: "As organizations grow, manual processes become barriers to growth.",
+                body: "Automation creates consistency, improves operational efficiency, and allows your team to scale without increasing complexity at the same pace.",
+                activities: ["CRM Optimization", "Email Automation", "Workflow Automation", "Lead Routing", "Marketing Automation", "AI Assistants"],
+              },
+            ].map(({ num, title, lead, body, activities }, i) => (
+              <div key={num}
+                className={`reveal stagger-${(i % 2) + 1}${s4View.inView ? ' visible' : ''}`}
+                style={{ position: "relative", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 14, padding: "36px 32px", overflow: "hidden", transition: "background 0.25s, border-color 0.25s" }}
+                onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.background = "rgba(216,115,7,0.07)"; el.style.borderColor = "rgba(216,115,7,0.2)"; }}
+                onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.background = "rgba(255,255,255,0.04)"; el.style.borderColor = "rgba(255,255,255,0.08)"; }}
+              >
+                <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.2))" }} />
+                <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 18 }}>
+                  <div style={{ width: 40, height: 40, borderRadius: "50%", background: "rgba(216,115,7,0.15)", border: "1px solid rgba(216,115,7,0.3)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                    <span style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 14, color: "#d87307" }}>{num}</span>
+                  </div>
+                  <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 16, fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#FFFFFF", margin: 0, lineHeight: 1.3 }}>{title}</h3>
+                </div>
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(255,255,255,0.85)", fontWeight: 600, marginBottom: 10 }}>{lead}</p>
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "rgba(255,255,255,0.6)", marginBottom: 20 }}>{body}</p>
+                <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", paddingTop: 16 }}>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(255,255,255,0.3)", marginBottom: 10 }}>Typical Activities</p>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+                    {activities.map(a => (
+                      <span key={a} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.65)", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 4, padding: "3px 8px" }}>{a}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── S5: THREE TIERS ────────────────────────────────── */}
+      <section style={{ background: "linear-gradient(180deg, #FFFFFF 0%, #F6F3EF 100%)", padding: "120px 40px", position: "relative", overflow: "hidden" }}>
+        <div style={{ position: "absolute", inset: 0, backgroundImage: "radial-gradient(circle at 20% 50%, rgba(216,115,7,0.04) 0%, transparent 60%), radial-gradient(circle at 80% 20%, rgba(15,27,45,0.04) 0%, transparent 50%)", pointerEvents: "none" }} />
+        <div ref={s5View.ref} style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>
+          <div style={{ textAlign: "center", marginBottom: 72 }}>
+            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
+              Choose the Right Level of Go-to-Market Execution
+            </p>
+            <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#0F1B2D", marginBottom: 20 }}>
+              Every Organization Starts from a Different Place
+            </h2>
+            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 720, margin: "0 auto 16px" }}>
+              No two organizations face the same growth challenges. Rather than forcing every client into the same engagement, Brand Iron offers three progressive Go-to-Market solutions designed to meet your organization where it is today — while creating a clear path for where it wants to go tomorrow.
+            </p>
+            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 720, margin: "0 auto" }}>
+              Each tier builds upon the previous one, expanding capabilities as your business grows in complexity, market presence, and revenue objectives.
+            </p>
+          </div>
+
+          {/* Three tier cards */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24, marginBottom: 56 }}>
+            {[
+              {
+                tier: "Tier 1", name: "Foundation", tagline: "Build the strategic foundation for sustainable growth.",
+                desc: "Designed for organizations establishing market positioning, improving discoverability, and creating the systems needed to generate consistent opportunities.",
+                bestFor: ["Early-stage companies", "Local and regional businesses", "Organizations formalizing their GTM strategy", "Teams building marketing and sales alignment"],
+                outcome: "Create a strong foundation for visibility, credibility, and predictable growth.",
+                href: "/services/gtm/tier-1",
+                highlight: false,
+              },
+              {
+                tier: "Tier 2", name: "Growth Engine", tagline: "Expand authority, accelerate demand, and create a scalable revenue engine.",
+                desc: "Designed for organizations ready to strengthen market presence, generate qualified pipeline, and connect marketing, sales, and operations through more advanced execution.",
+                bestFor: ["Growing B2B organizations", "Companies entering new markets", "Businesses seeking predictable pipeline growth", "Teams ready to scale beyond foundational marketing"],
+                outcome: "Increase qualified demand, strengthen authority, and improve revenue performance.",
+                href: "/services/gtm/tier-2",
+                highlight: true,
+              },
+              {
+                tier: "Tier 3", name: "Revenue Accelerator", tagline: "Scale growth through enterprise-level strategy, automation, and revenue optimization.",
+                desc: "Designed for organizations with mature Go-to-Market operations that require advanced automation, executive thought leadership, AI visibility leadership, and multi-channel growth initiatives.",
+                bestFor: ["Established organizations", "Multi-location businesses", "Enterprise teams", "Companies pursuing aggressive growth initiatives"],
+                outcome: "Scale market leadership while improving operational efficiency and revenue performance.",
+                href: "/services/gtm/tier-3",
+                highlight: false,
+              },
+            ].map(({ tier, name, tagline, desc, bestFor, outcome, href, highlight }, i) => (
+              <div key={tier}
+                className={`reveal stagger-${i + 1}${s5View.inView ? ' visible' : ''}`}
+                style={{ position: "relative", background: highlight ? "#0F1B2D" : "#FFFFFF", border: highlight ? "none" : "1px solid rgba(15,27,45,0.08)", borderRadius: 14, overflow: "hidden", boxShadow: highlight ? "0 20px 60px rgba(15,27,45,0.2)" : "0 4px 20px rgba(0,0,0,0.06)", transition: "transform 0.25s, box-shadow 0.25s", display: "flex", flexDirection: "column" }}
+                onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-6px)"; el.style.boxShadow = highlight ? "0 28px 72px rgba(15,27,45,0.3)" : "0 12px 40px rgba(0,0,0,0.12)"; }}
+                onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = highlight ? "0 20px 60px rgba(15,27,45,0.2)" : "0 4px 20px rgba(0,0,0,0.06)"; }}
+              >
+                <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
+                {highlight && <div style={{ position: "absolute", top: 16, right: 16, background: "#d87307", color: "#FFFFFF", fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", padding: "4px 10px", borderRadius: 20 }}>Most Popular</div>}
+                <div style={{ padding: "36px 32px 28px", flex: 1 }}>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#d87307", marginBottom: 8 }}>{tier}</p>
+                  <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 22, fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: highlight ? "#FFFFFF" : "#0F1B2D", marginBottom: 12, lineHeight: 1.2 }}>{name}</h3>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.7, color: highlight ? "rgba(255,255,255,0.85)" : "#444", fontWeight: 600, marginBottom: 14 }}>{tagline}</p>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: highlight ? "rgba(255,255,255,0.65)" : "#666", marginBottom: 24 }}>{desc}</p>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: highlight ? "rgba(255,255,255,0.35)" : "#aaa", marginBottom: 10 }}>Best For</p>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 24 }}>
+                    {bestFor.map(b => (
+                      <div key={b} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
+                        <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#d87307", flexShrink: 0, marginTop: 5 }} />
+                        <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, color: highlight ? "rgba(255,255,255,0.7)" : "#555", lineHeight: 1.5 }}>{b}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div style={{ padding: "20px 32px 28px", borderTop: highlight ? "1px solid rgba(255,255,255,0.08)" : "1px solid rgba(0,0,0,0.06)" }}>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#d87307", marginBottom: 8 }}>Primary Outcome</p>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.65, color: highlight ? "rgba(255,255,255,0.8)" : "#444", marginBottom: 20, fontStyle: "italic" }}>{outcome}</p>
+                  <Link href={href} style={{ display: "inline-flex", alignItems: "center", gap: 8, background: highlight ? "#d87307" : "transparent", color: highlight ? "#FFFFFF" : "#d87307", fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.1em", textTransform: "uppercase", padding: highlight ? "12px 24px" : "0", borderRadius: 8, textDecoration: "none", border: highlight ? "none" : "none" }}>
+                    Learn More →
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* At a Glance comparison table */}
+          <div className={`reveal${s5View.inView ? ' visible' : ''}`}>
+            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#0F1B2D", marginBottom: 24, textAlign: "center" }}>
+              At a Glance
+            </h3>
+            <div style={{ overflowX: "auto" }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "'Montserrat', sans-serif", fontSize: 14 }}>
+                <thead>
+                  <tr>
+                    <th style={{ background: "#F3F0EC", color: "#0F1B2D", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", fontSize: 11, padding: "16px 24px", textAlign: "left" }}>Capability</th>
+                    <th style={{ background: "#0F1B2D", color: "rgba(255,255,255,0.7)", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 11, padding: "16px 24px", textAlign: "center" }}>Foundation</th>
+                    <th style={{ background: "#d87307", color: "#FFFFFF", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 11, padding: "16px 24px", textAlign: "center" }}>Growth Engine</th>
+                    <th style={{ background: "#1c3652", color: "rgba(255,255,255,0.7)", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 11, padding: "16px 24px", textAlign: "center" }}>Revenue Accelerator</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    ["Ideal Stage", "Early Growth", "Scaling", "Mature Growth"],
+                    ["Primary Focus", "Visibility & Credibility", "Demand & Authority", "Revenue Scale & Market Leadership"],
+                    ["Strategic Depth", "Essential", "Advanced", "Comprehensive"],
+                    ["AI Visibility", "Foundation", "Expanded", "Enterprise"],
+                    ["Demand Generation", "Core", "Multi-Channel", "Omnichannel"],
+                    ["Automation", "Essential", "Advanced", "Enterprise"],
+                    ["Executive Support", "Strategic Guidance", "Quarterly Planning", "Executive Revenue Strategy"],
+                  ].map(([cap, f, g, r], i) => (
+                    <tr key={cap} style={{ background: i % 2 === 0 ? "#F9F8F6" : "#FFFFFF" }}>
+                      <td style={{ padding: "16px 24px", color: "#0F1B2D", fontWeight: 600, fontSize: 13, borderBottom: "1px solid #EEEBE7" }}>{cap}</td>
+                      <td style={{ padding: "16px 24px", color: "#555", textAlign: "center", borderBottom: "1px solid #EEEBE7" }}>{f}</td>
+                      <td style={{ padding: "16px 24px", color: "#0F1B2D", fontWeight: 500, textAlign: "center", borderBottom: "1px solid #EEEBE7", background: "rgba(216,115,7,0.04)" }}>{g}</td>
+                      <td style={{ padding: "16px 24px", color: "#555", textAlign: "center", borderBottom: "1px solid #EEEBE7" }}>{r}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── S6: CAPABILITY COMPARISON ──────────────────────── */}
+      <section style={{
+        position: "relative", overflow: "hidden", padding: "120px 40px",
+        backgroundImage: "url('/images/bg-horse.jpg')",
+        backgroundSize: "cover", backgroundPosition: "center 30%",
+      }}>
+        <div style={{ position: "absolute", inset: 0, background: "rgba(8,16,36,0.93)" }} />
+        <CircuitOverlay />
+        <div ref={s6View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: 64 }}>
+            <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
+              Compare Go-to-Market Capabilities
+            </p>
+            <h2 className={`section-heading reveal${s6View.inView ? ' visible' : ''}`} style={{ color: "transparent", WebkitTextStroke: "2px #FFFFFF", marginBottom: 20 }}>
+              The Right Strategy Isn&apos;t About More Services. It&apos;s About the Right Capabilities.
+            </h2>
+            <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.65)", maxWidth: 720, margin: "0 auto" }}>
+              Rather than overwhelming you with a list of deliverables, this comparison highlights how each engagement expands your organization&apos;s capabilities as it grows. Each tier builds upon the previous one, creating a scalable Go-to-Market system that evolves alongside your business.
+            </p>
+          </div>
+
+          {/* Capability table */}
+          <div className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ overflowX: "auto", marginBottom: 64 }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "'Montserrat', sans-serif", fontSize: 13 }}>
+              <thead>
+                <tr>
+                  <th style={{ background: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.5)", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 11, padding: "18px 24px", textAlign: "left", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>Capability</th>
+                  <th style={{ background: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.7)", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 11, padding: "18px 24px", textAlign: "center", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>Foundation</th>
+                  <th style={{ background: "rgba(216,115,7,0.15)", color: "#d87307", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 11, padding: "18px 24px", textAlign: "center", borderBottom: "1px solid rgba(216,115,7,0.3)" }}>Growth Engine</th>
+                  <th style={{ background: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.7)", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 11, padding: "18px 24px", textAlign: "center", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>Revenue Accelerator</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ["Strategic Planning", "✓", "✓", "✓"],
+                  ["Quarterly Strategy Reviews", "—", "✓", "✓"],
+                  ["Revenue Forecast Modeling", "—", "✓", "✓"],
+                  ["AI Visibility Foundation", "✓", "✓", "✓"],
+                  ["Knowledge Graph Optimization", "—", "✓", "✓"],
+                  ["AI Recommendation Monitoring", "Basic", "Advanced", "Enterprise"],
+                  ["Authority Development", "Core", "Expanded", "Enterprise"],
+                  ["Executive Thought Leadership", "—", "✓", "✓"],
+                  ["Digital PR & Podcast Outreach", "—", "✓", "✓"],
+                  ["Media Placements", "—", "—", "✓"],
+                  ["Demand Generation", "Core", "Multi-Channel", "Omnichannel"],
+                  ["Paid Advertising", "—", "✓", "✓"],
+                  ["LinkedIn & Email Outreach", "✓", "✓", "✓"],
+                  ["Partnership Development", "—", "✓", "✓"],
+                  ["Conversion Optimization", "Foundation", "Advanced", "Enterprise"],
+                  ["Revenue Intelligence", "Core", "Advanced", "Executive-Level"],
+                  ["CRM & Marketing Automation", "Essential", "Advanced", "Enterprise"],
+                  ["AI Assistants & Sales Automation", "—", "—", "✓"],
+                  ["Executive Reporting", "Standard", "Advanced", "Strategic"],
+                ].map(([cap, f, g, r], i) => (
+                  <tr key={cap} style={{ background: i % 2 === 0 ? "rgba(255,255,255,0.02)" : "transparent" }}>
+                    <td style={{ padding: "14px 24px", color: "rgba(255,255,255,0.8)", fontWeight: 500, borderBottom: "1px solid rgba(255,255,255,0.05)" }}>{cap}</td>
+                    <td style={{ padding: "14px 24px", color: f === "—" ? "rgba(255,255,255,0.2)" : "rgba(255,255,255,0.6)", textAlign: "center", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>{f}</td>
+                    <td style={{ padding: "14px 24px", color: g === "—" ? "rgba(216,115,7,0.3)" : "#d87307", textAlign: "center", fontWeight: 500, borderBottom: "1px solid rgba(216,115,7,0.1)", background: "rgba(216,115,7,0.04)" }}>{g}</td>
+                    <td style={{ padding: "14px 24px", color: r === "—" ? "rgba(255,255,255,0.2)" : "rgba(255,255,255,0.6)", textAlign: "center", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>{r}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          {/* Capability progression */}
+          <div className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ display: "grid", gridTemplateColumns: "1fr auto 1fr auto 1fr", gap: 0, alignItems: "center", marginBottom: 56 }}>
+            {[
+              { tier: "Foundation", body: "Establish the strategic, technical, and operational systems required to build market visibility and generate consistent opportunities." },
+              { tier: "Growth Engine", body: "Expand authority, accelerate demand generation, strengthen revenue intelligence, and improve operational efficiency." },
+              { tier: "Revenue Accelerator", body: "Scale every aspect of the Go-to-Market system through executive strategy, enterprise automation, advanced AI visibility, and multi-channel growth initiatives." },
+            ].map(({ tier, body }, i) => (
+              <>
+                <div key={tier} style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 12, padding: "28px 28px", textAlign: "center" }}>
+                  <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 15, fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.08em", color: "#d87307", marginBottom: 10 }}>{tier}</p>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.7, color: "rgba(255,255,255,0.6)", margin: 0 }}>{body}</p>
+                </div>
+                {i < 2 && <div key={`arrow-${i}`} style={{ padding: "0 16px", textAlign: "center" }}><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M14 7l5 5-5 5" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg></div>}
+              </>
+            ))}
+          </div>
+
+          {/* What's included */}
+          <div className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ position: "relative", background: "rgba(216,115,7,0.08)", border: "1px solid rgba(216,115,7,0.2)", borderRadius: 16, padding: "48px 56px", overflow: "hidden" }}>
+            <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, transparent, #d87307, transparent)" }} />
+            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#FFFFFF", marginBottom: 16, textAlign: "center" }}>
+              What&apos;s Included Across Every Engagement
+            </h3>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "rgba(255,255,255,0.7)", textAlign: "center", maxWidth: 640, margin: "0 auto 32px" }}>
+              Regardless of the tier you choose, every engagement begins with a commitment to creating a connected growth system — not disconnected marketing activities.
+            </p>
+            <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 12 }}>
+              {["Strategic consulting", "Executive collaboration", "Performance measurement", "AI Visibility best practices", "Cross-functional alignment", "Business-focused recommendations", "A roadmap for long-term growth"].map(item => (
+                <div key={item} style={{ display: "flex", alignItems: "center", gap: 8, background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 24, padding: "8px 16px" }}>
+                  <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#d87307", flexShrink: 0 }} />
+                  <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, color: "rgba(255,255,255,0.8)", fontWeight: 500 }}>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── S7: OUTCOMES ───────────────────────────────────── */}
+      <section style={{
+        position: "relative", overflow: "hidden", padding: "120px 40px",
+        backgroundImage: "url('/images/bg-wood.jpg')",
+        backgroundSize: "cover", backgroundPosition: "center",
+      }}>
+        <div style={{ position: "absolute", inset: 0, background: "rgba(248,242,232,0.91)" }} />
+        <div ref={s7View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: 72 }}>
+            <p className={`reveal${s7View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
+              What Success Looks Like
+            </p>
+            <h2 className={`section-heading reveal${s7View.inView ? ' visible' : ''}`} style={{ color: "#0F1B2D", marginBottom: 20 }}>
+              A Go-to-Market Strategy Should Create Measurable Business Momentum.
+            </h2>
+            <p className={`reveal${s7View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 720, margin: "0 auto" }}>
+              Every initiative within the Brand Iron framework is designed to move your business toward these outcomes.
+            </p>
+          </div>
+
+          {/* 5 outcome cards */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20, marginBottom: 20 }}>
+            {[
+              {
+                title: "Become Easier to Discover",
+                body: "Modern buyers and AI platforms can't evaluate businesses they never find. Strengthening your visibility across search engines, AI search, semantic search, and digital knowledge sources increases the likelihood that your organization is discovered at the moments that matter.",
+                impacts: ["Greater digital discoverability", "Improved AI search presence", "Increased qualified website traffic", "Stronger search visibility"],
+              },
+              {
+                title: "Build Lasting Trust and Authority",
+                body: "Visibility creates awareness. Authority creates preference. Organizations that consistently demonstrate expertise across content, thought leadership, reviews, media, and industry recognition earn greater trust from both buyers and AI systems.",
+                impacts: ["Increased brand credibility", "Stronger executive positioning", "More third-party trust signals", "Greater influence during buying decisions"],
+              },
+              {
+                title: "Generate Higher-Quality Demand",
+                body: "Not all leads create revenue. A connected Go-to-Market strategy attracts organizations that align with your expertise, resulting in stronger conversations, better-qualified opportunities, and healthier pipeline growth.",
+                impacts: ["Higher-quality pipeline", "Better lead qualification", "Improved sales conversations", "Increased opportunity creation"],
+              },
+            ].map(({ title, body, impacts }, i) => (
+              <div key={title}
+                className={`reveal stagger-${i + 1}${s7View.inView ? ' visible' : ''}`}
+                style={{ position: "relative", background: "rgba(255,255,255,0.92)", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 14, padding: "32px 28px", overflow: "hidden", transition: "transform 0.25s, box-shadow 0.25s" }}
+                onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-4px)"; el.style.boxShadow = "0 14px 40px rgba(0,0,0,0.1)"; }}
+                onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "none"; }}
+              >
+                <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
+                <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 16, fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#0F1B2D", marginBottom: 12, lineHeight: 1.3 }}>{title}</h3>
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "#555", marginBottom: 20 }}>{body}</p>
+                <div style={{ borderTop: "1px solid rgba(216,115,7,0.2)", paddingTop: 16 }}>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#d87307", marginBottom: 10 }}>Business Impact</p>
+                  {impacts.map(im => (
+                    <div key={im} style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 6 }}>
+                      <div style={{ width: 5, height: 5, borderRadius: "50%", background: "#d87307", flexShrink: 0 }} />
+                      <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, color: "#444" }}>{im}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div style={{ display: "flex", gap: 20, marginBottom: 56 }}>
+            {[
+              {
+                title: "Improve Revenue Performance",
+                body: "Revenue growth isn't driven by marketing alone. When strategy, marketing, sales, and operations work together, organizations reduce friction throughout the customer journey and create more predictable commercial outcomes.",
+                impacts: ["Higher conversion rates", "Improved sales efficiency", "Better revenue forecasting", "More predictable growth"],
+              },
+              {
+                title: "Create a Scalable Growth System",
+                body: "As organizations grow, disconnected processes become increasingly difficult to manage. Integrated reporting, automation, CRM optimization, and revenue intelligence provide the operational foundation needed to scale without unnecessary complexity.",
+                impacts: ["Greater operational efficiency", "Faster decision-making", "Reduced manual effort", "Sustainable long-term growth"],
+              },
+            ].map(({ title, body, impacts }, i) => (
+              <div key={title}
+                className={`reveal stagger-${i + 1}${s7View.inView ? ' visible' : ''}`}
+                style={{ position: "relative", background: "rgba(255,255,255,0.92)", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 14, padding: "32px 28px", flex: 1, overflow: "hidden", transition: "transform 0.25s, box-shadow 0.25s" }}
+                onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-4px)"; el.style.boxShadow = "0 14px 40px rgba(0,0,0,0.1)"; }}
+                onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "none"; }}
+              >
+                <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
+                <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 16, fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#0F1B2D", marginBottom: 12, lineHeight: 1.3 }}>{title}</h3>
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "#555", marginBottom: 20 }}>{body}</p>
+                <div style={{ borderTop: "1px solid rgba(216,115,7,0.2)", paddingTop: 16 }}>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#d87307", marginBottom: 10 }}>Business Impact</p>
+                  {impacts.map(im => (
+                    <div key={im} style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 6 }}>
+                      <div style={{ width: 5, height: 5, borderRadius: "50%", background: "#d87307", flexShrink: 0 }} />
+                      <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, color: "#444" }}>{im}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Growth is built in phases */}
+          <div className={`reveal${s7View.inView ? ' visible' : ''}`} style={{ position: "relative", background: "#0F1B2D", borderRadius: 16, padding: "48px 56px", marginBottom: 56, overflow: "hidden" }}>
+            <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, transparent, #d87307, transparent)" }} />
+            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#FFFFFF", marginBottom: 16, textAlign: "center" }}>
+              Growth Is Built in Phases
+            </h3>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "rgba(255,255,255,0.65)", textAlign: "center", maxWidth: 620, margin: "0 auto 36px" }}>
+              Meaningful growth doesn&apos;t happen through isolated campaigns. It develops through a structured progression, where each phase strengthens the next and builds long-term momentum.
+            </p>
+            <div style={{ overflowX: "auto" }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "'Montserrat', sans-serif", fontSize: 14 }}>
+                <thead>
+                  <tr>
+                    {["Phase", "Primary Objective", "Business Outcome"].map(h => (
+                      <th key={h} style={{ background: "rgba(255,255,255,0.06)", color: "rgba(255,255,255,0.5)", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 11, padding: "14px 20px", textAlign: "left", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>{h}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    ["Foundation", "Build strategic clarity and digital visibility", "Stronger positioning and discoverability"],
+                    ["Growth", "Expand authority and generate qualified demand", "Increased pipeline and market presence"],
+                    ["Acceleration", "Optimize revenue systems and operational efficiency", "Scalable, predictable business growth"],
+                  ].map(([phase, obj, outcome], i) => (
+                    <tr key={phase}>
+                      <td style={{ padding: "16px 20px", color: "#d87307", fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 14, fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.08em", borderBottom: "1px solid rgba(255,255,255,0.05)", background: i % 2 === 0 ? "rgba(255,255,255,0.02)" : "transparent" }}>{phase}</td>
+                      <td style={{ padding: "16px 20px", color: "rgba(255,255,255,0.75)", lineHeight: 1.6, borderBottom: "1px solid rgba(255,255,255,0.05)", background: i % 2 === 0 ? "rgba(255,255,255,0.02)" : "transparent" }}>{obj}</td>
+                      <td style={{ padding: "16px 20px", color: "rgba(255,255,255,0.6)", lineHeight: 1.6, borderBottom: "1px solid rgba(255,255,255,0.05)", background: i % 2 === 0 ? "rgba(255,255,255,0.02)" : "transparent" }}>{outcome}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* FAQ Accordion */}
+          <div className={`reveal${s7View.inView ? ' visible' : ''}`}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16, textAlign: "center" }}>
+              Frequently Asked Questions
+            </p>
+            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#0F1B2D", marginBottom: 8, textAlign: "center" }}>
+              Common Questions About Our Go-to-Market Strategy Services
+            </h3>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", textAlign: "center", maxWidth: 640, margin: "0 auto 40px" }}>
+              Every organization approaches Go-to-Market strategy from a different starting point. Below are some of the most common questions we receive from leadership teams.
+            </p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+              {faqs.map(({ q, a }, i) => (
+                <div key={i} style={{ background: "rgba(255,255,255,0.88)", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 10, overflow: "hidden", transition: "box-shadow 0.2s" }}>
+                  <button
+                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                    style={{ width: "100%", background: "none", border: "none", cursor: "pointer", padding: "20px 24px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16, textAlign: "left" }}
+                  >
+                    <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, fontWeight: 600, color: "#0F1B2D", lineHeight: 1.5 }}>{q}</span>
+                    <div style={{ width: 28, height: 28, borderRadius: "50%", background: openFaq === i ? "#d87307" : "rgba(216,115,7,0.1)", border: "1px solid rgba(216,115,7,0.3)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, transition: "background 0.2s, transform 0.2s", transform: openFaq === i ? "rotate(45deg)" : "rotate(0)" }}>
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke={openFaq === i ? "#FFFFFF" : "#d87307"} strokeWidth="2" strokeLinecap="round"/></svg>
+                    </div>
+                  </button>
+                  {openFaq === i && (
+                    <div style={{ padding: "0 24px 20px" }}>
+                      <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.8, color: "#555", margin: 0 }}>{a}</p>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA ────────────────────────────────────────────── */}
+      <section style={{
+        position: "relative", overflow: "hidden", padding: "140px 40px",
+        backgroundImage: "url('/images/hero-saddle.jpg')",
+        backgroundSize: "cover", backgroundPosition: "center 30%",
+      }}>
+        <div style={{ position: "absolute", inset: 0, background: "rgba(10,20,35,0.90)" }} />
+        <div ref={ctaView.ref} style={{ position: "relative", zIndex: 2, maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
+          <div className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 40, justifyContent: "center" }}>
+            <div style={{ flex: 1, maxWidth: 200, height: 1, background: "rgba(216,115,7,0.35)" }} />
+            <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#d87307" }} />
+            <div style={{ flex: 1, maxWidth: 200, height: 1, background: "rgba(216,115,7,0.35)" }} />
+          </div>
+          <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 20 }}>
+            Ready to Build a Smarter Go-to-Market Strategy?
+          </p>
+          <h2 className={`reveal${ctaView.inView ? ' visible' : ''} section-heading`} style={{ color: "transparent", WebkitTextStroke: "2px #FFFFFF", marginBottom: 24 }}>
+            Let&apos;s Build Your Growth Engine.
+          </h2>
+          <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 17, lineHeight: 1.85, color: "rgba(255,255,255,0.75)", maxWidth: 680, margin: "0 auto 48px" }}>
+            Every successful Go-to-Market strategy begins with a conversation. Schedule a strategy session to evaluate your current market position, identify growth opportunities, and explore the right level of engagement for your organization.
+          </p>
+          <div className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
+            <Link href="/contact" className="hero-btn-primary" style={{ fontSize: 15, padding: "18px 44px" }}>
+              Schedule a GTM Strategy Session
+            </Link>
+            <Link href="/services" className="hero-btn-outline" style={{ fontSize: 15, padding: "18px 44px" }}>
+              Explore All Solutions
+            </Link>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  );
+}
