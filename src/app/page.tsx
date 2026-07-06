@@ -147,29 +147,27 @@ export default function Home() {
             Forging Brands.<br />Driving Revenue.
           </h1>
           <p style={{
-            fontFamily: "'Montserrat', sans-serif", fontWeight: 700,
-            fontSize: "clamp(13px, 1.5vw, 17px)", letterSpacing: "0.18em",
-            textTransform: "uppercase", color: "rgba(255,255,255,0.9)",
-            marginBottom: 40, textShadow: "0 1px 8px rgba(0,0,0,0.5)",
+            fontFamily: "'Montserrat', sans-serif", fontWeight: 500,
+            fontSize: "clamp(16px, 2vw, 20px)", letterSpacing: "0.01em",
+            lineHeight: 1.6, color: "rgba(255,255,255,0.92)",
+            maxWidth: 640, marginBottom: 40, textShadow: "0 1px 8px rgba(0,0,0,0.5)",
           }}>
             Helping organizations become discoverable, trusted, and chosen in today&apos;s AI-driven buying landscape.
           </p>
           <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
             <Link href="/contact" style={{
-              fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
-              letterSpacing: "0.14em", textTransform: "uppercase",
+              fontFamily: "'Montserrat', sans-serif", fontWeight: 600, fontSize: 15,
               background: "#d87307", color: "#FFFFFF",
-              padding: "14px 36px", borderRadius: 2,
+              padding: "15px 32px", borderRadius: 6,
               transition: "background 0.2s",
             }}
             onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
             onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
             >Book a Strategy Session</Link>
             <Link href="/services" style={{
-              fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
-              letterSpacing: "0.14em", textTransform: "uppercase",
+              fontFamily: "'Montserrat', sans-serif", fontWeight: 600, fontSize: 15,
               background: "transparent", color: "#FFFFFF",
-              padding: "14px 36px", border: "2px solid rgba(255,255,255,0.7)", borderRadius: 2,
+              padding: "15px 32px", border: "2px solid rgba(255,255,255,0.7)", borderRadius: 6,
               transition: "border-color 0.2s, background 0.2s",
             }}
             onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = "#d87307"; (e.currentTarget as HTMLAnchorElement).style.background = "rgba(216,115,7,0.15)"; }}
