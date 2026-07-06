@@ -134,13 +134,14 @@ export default function Home() {
         <img src="/images/home-hero.jpg" alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.15) 50%, rgba(0,0,0,0.55) 100%)" }} />
 
-        {/* Right-aligned headline */}
-        <div className="hero-content-wrap" style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "flex-end", justifyContent: "center", textAlign: "right", padding: "0 5vw" }}>
-          <h1 className="hero-main-heading" style={{
+        {/* Centered headline */}
+        <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "0 24px" }}>
+          <h1 style={{
             fontFamily: "'Burford Rustic Inline', sans-serif",
-            fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.04em",
-            color: "#FFFFFF", lineHeight: 1.2, marginBottom: 16,
-            textShadow: "2px 2px 2px rgba(0,0,0,0.28)", textAlign: "right",
+            fontSize: "clamp(42px, 7vw, 96px)", fontWeight: 400,
+            textTransform: "uppercase", letterSpacing: "0.04em",
+            color: "#FFFFFF", lineHeight: 1.0, marginBottom: 16,
+            textShadow: "0 2px 24px rgba(0,0,0,0.4)",
           }}>
             Forging Brands.<br />Driving Revenue.
           </h1>
@@ -149,11 +150,10 @@ export default function Home() {
             fontSize: "clamp(13px, 1.5vw, 17px)", letterSpacing: "0.18em",
             textTransform: "uppercase", color: "rgba(255,255,255,0.9)",
             marginBottom: 40, textShadow: "0 1px 8px rgba(0,0,0,0.5)",
-            maxWidth: 560,
           }}>
             Helping organizations become discoverable, trusted, and chosen in today&apos;s AI-driven buying landscape.
           </p>
-          <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "flex-end" }}>
+          <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
             <Link href="/contact" style={{
               fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
@@ -190,16 +190,6 @@ export default function Home() {
             </div>
           ))}
         </div>
-
-        <style>{`
-          .hero-main-heading { font-size: 105px; padding-top: 295px; }
-          @media screen and (max-width: 1699px) { .hero-main-heading { font-size: 84px; padding-top: 200px; } }
-          @media screen and (max-width: 991px) { .hero-main-heading { font-size: 48px; padding-top: 80px; } }
-          @media screen and (max-width: 576px) {
-            .hero-main-heading { font-size: 32px; padding-top: 40px; text-align: center !important; }
-            .hero-content-wrap { align-items: center !important; text-align: center !important; }
-          }
-        `}</style>
       </section>
 
       {/* ── S2: MAKE YOUR MARK ───────────────────────────── */}
