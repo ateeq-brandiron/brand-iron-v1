@@ -121,6 +121,7 @@ export default function Home() {
   const s2 = useInView();
   const s3 = useInView();
   const s3cards = useInView();
+  const s3problems = useInView();
   const s4 = useInView();
   const s5 = useInView();
   const s6 = useInView();
@@ -247,21 +248,24 @@ export default function Home() {
       <section style={{ background: "#FFFFFF", padding: "80px 0 100px" }}>
         <div ref={s3.ref} style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ textAlign: "center", marginBottom: 56 }}>
-            <h2 className={`reveal${s3.inView ? " visible" : ""}`} style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 20 }}>
+            <h2 className={`reveal${s3.inView ? " visible" : ""}`} style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 28 }}>
               The Buying Journey Has Changed.<br />Has Your Business?
             </h2>
-            <p className={`reveal${s3.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#555", maxWidth: 700, margin: "0 auto 12px" }}>
+            <p className={`reveal${s3.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 19, fontWeight: 500, lineHeight: 1.65, color: "#333", maxWidth: 620, margin: "0 auto 22px" }}>
               Today&apos;s buyers complete much of their decision-making before ever speaking with your team.
             </p>
-            <p className={`reveal${s3.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", maxWidth: 700, margin: "0 auto 12px" }}>
+            <p className={`reveal${s3.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.85, color: "#767676", maxWidth: 600, margin: "0 auto 18px" }}>
               They search Google, ask AI assistants, compare competitors, read reviews, visit websites, explore LinkedIn, and look for proof that your organization is the right choice.
             </p>
-            <p className={`reveal${s3.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", maxWidth: 700, margin: "0 auto 12px" }}>
+            <p className={`reveal${s3.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.85, color: "#767676", maxWidth: 600, margin: "0 auto 36px" }}>
               If your business isn&apos;t visible, credible, and consistent throughout that journey, you&apos;re often eliminated before the first conversation begins.
             </p>
-            <p className={`reveal${s3.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#1a1a1a", fontWeight: 600, maxWidth: 700, margin: "12px auto 0" }}>
-              Modern growth isn&apos;t about showing up in one place. It&apos;s about showing up everywhere trust is built.
-            </p>
+            <div className={`reveal${s3.inView ? " visible" : ""}`} style={{ maxWidth: 640, margin: "0 auto", paddingTop: 28, borderTop: "2px solid #f0ece4" }}>
+              <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(19px, 2.4vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", lineHeight: 1.35, color: "#1a1a1a" }}>
+                Modern growth isn&apos;t about showing up in one place.<br />
+                <span style={{ color: "#d87307" }}>It&apos;s about showing up everywhere trust is built.</span>
+              </p>
+            </div>
           </div>
 
         </div>
@@ -339,7 +343,7 @@ export default function Home() {
       <section style={{ position: "relative", overflow: "hidden", padding: "80px 40px", backgroundImage: "url('/images/bg-saddle-rope.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
         <div style={{ position: "absolute", inset: 0, background: "rgba(245,240,232,0.93)" }} />
         <div style={{ position: "absolute", inset: 0, backgroundImage: "url('/images/Dark-Mountains.webp')", backgroundSize: "60% auto", backgroundPosition: "center bottom", backgroundRepeat: "no-repeat", opacity: 0.06 }} />
-        <div ref={s3.ref} style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto" }}>
+        <div ref={s3problems.ref} style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto" }}>
           <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 12, textAlign: "center" }}>Common Growth Challenges</p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 20 }}>
             {problems.map(({ heading, body }, i) => (
