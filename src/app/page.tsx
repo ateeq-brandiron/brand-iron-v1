@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 
 function useInView(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);
@@ -120,6 +120,7 @@ const testimonials = [
 export default function Home() {
   const s2 = useInView();
   const s3 = useInView();
+  const s3cards = useInView();
   const s4 = useInView();
   const s5 = useInView();
   const s6 = useInView();
@@ -243,8 +244,8 @@ export default function Home() {
       </section>
 
       {/* ── S3: BUYING JOURNEY ───────────────────────────── */}
-      <section style={{ background: "#FFFFFF", padding: "80px 40px 100px" }}>
-        <div ref={s3.ref} style={{ maxWidth: 1100, margin: "0 auto" }}>
+      <section style={{ background: "#FFFFFF", padding: "80px 0 100px" }}>
+        <div ref={s3.ref} style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ textAlign: "center", marginBottom: 56 }}>
             <h2 className={`reveal${s3.inView ? " visible" : ""}`} style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 20 }}>
               The Buying Journey Has Changed.<br />Has Your Business?
@@ -263,22 +264,42 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Journey timeline */}
-          <div style={{ display: "flex", alignItems: "flex-start", gap: 0, marginBottom: 56 }}>
-            {journeyStages.map(({ stage, body }, i) => (
-              <div key={stage} className={`reveal${s3.inView ? " visible" : ""}`} style={{
-                flex: 1, borderTop: `3px solid ${i === 2 ? "#d87307" : "#e0d8cc"}`,
-                paddingTop: 20, paddingRight: i < journeyStages.length - 1 ? 24 : 0,
+        </div>
+
+        {/* Journey cards — full-bleed, dark-to-light gradient panels */}
+        <div ref={s3cards.ref} style={{ position: "relative", overflow: "hidden", display: "flex", marginBottom: 56 }}>
+          <img src="/images/Dark-Mountains.png" alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.5 }} />
+          {journeyStages.map(({ stage, body }, i) => {
+            const overlays = ["rgba(8,8,8,0.95)", "rgba(38,36,34,0.92)", "rgba(90,84,76,0.88)", "rgba(180,170,156,0.82)", "rgba(245,240,232,0.94)"];
+            const textColor = i < 3 ? "#FFFFFF" : "#1a1a1a";
+            const bodyColor = i < 3 ? "rgba(255,255,255,0.8)" : "#4a4a4a";
+            const icons: Record<string, ReactNode> = {
+              Discover: <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#FFFFFF" strokeWidth="2"/><path d="M21 21l-4.5-4.5" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round"/></svg>,
+              Evaluate: <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 20V10M12 20V4M20 20v-7" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>,
+              Trust: <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="#FFFFFF" strokeWidth="2" strokeLinejoin="round"/><path d="M9 12l2 2 4-4" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>,
+              Engage: <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5 8.4 8.4 0 0 1-4-1L3 20l1.2-4.2a8.4 8.4 0 0 1-1-4A8.5 8.5 0 1 1 21 11.5z" stroke="#FFFFFF" strokeWidth="2" strokeLinejoin="round"/></svg>,
+              Choose: <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#FFFFFF" strokeWidth="2"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>,
+            };
+            return (
+              <div key={stage} className={`reveal${s3cards.inView ? " visible" : ""}`} style={{
+                position: "relative", flex: 1, background: overlays[i],
+                padding: "48px 28px 64px", minHeight: 260,
+                borderRight: i < journeyStages.length - 1 ? "1px solid rgba(255,255,255,0.12)" : "none",
                 transitionDelay: `${i * 0.08}s`,
               }}>
-                <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 16, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.08em", color: "#d87307", marginBottom: 10 }}>{stage}</p>
-                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "#555" }}>{body}</p>
+                <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 19, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: textColor, marginBottom: 14 }}>{stage}</p>
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13.5, lineHeight: 1.7, color: bodyColor }}>{body}</p>
+                <div style={{ position: "absolute", bottom: 24, left: 28, width: 40, height: 40, borderRadius: "50%", background: "#d87307", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  {icons[stage]}
+                </div>
               </div>
-            ))}
-          </div>
+            );
+          })}
+        </div>
 
+        <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px" }}>
           {/* Closing statement */}
-          <div className={`reveal${s3.inView ? " visible" : ""}`} style={{ textAlign: "center", borderTop: "1px solid #e8e0d4", paddingTop: 32 }}>
+          <div className={`reveal${s3cards.inView ? " visible" : ""}`} style={{ textAlign: "center", borderTop: "1px solid #e8e0d4", paddingTop: 32 }}>
             <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2.5vw, 28px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#1a1a1a", marginBottom: 8 }}>
               Organizations that win today aren&apos;t simply louder.
             </p>
