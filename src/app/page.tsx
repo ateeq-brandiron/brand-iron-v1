@@ -300,10 +300,10 @@ export default function Home() {
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px" }}>
           {/* Closing statement */}
           <div className={`reveal${s3cards.inView ? " visible" : ""}`} style={{ textAlign: "center", borderTop: "1px solid #e8e0d4", paddingTop: 32 }}>
-            <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2.5vw, 28px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#1a1a1a", marginBottom: 8 }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(14px, 1.6vw, 17px)", fontWeight: 500, color: "#777", marginBottom: 10 }}>
               Organizations that win today aren&apos;t simply louder.
             </p>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, color: "#d87307", fontWeight: 600 }}>
+            <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(22px, 3.2vw, 36px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.2 }}>
               They&apos;re easier to find, easier to trust, and easier to choose.
             </p>
           </div>
