@@ -40,10 +40,10 @@ const problems = [
 ];
 
 const differentiators = [
-  { num: "01", title: "Strategy Before Tactics", body: "Every engagement begins with understanding your business, market, and goals before recommending solutions. Strong execution starts with a clear strategy." },
-  { num: "02", title: "Connected Growth Systems", body: "Brand strategy, AI visibility, marketing, sales, technology, and revenue operations work best as one integrated system — not as disconnected initiatives." },
-  { num: "03", title: "Human Expertise + AI Intelligence", body: "We use AI to accelerate research, uncover insights, and improve efficiency, while experienced strategists provide the critical thinking, creativity, and direction technology can't replace." },
-  { num: "04", title: "Outcomes Over Activity", body: "We don't measure success by campaigns launched or content published. We measure it by stronger positioning, better opportunities, and measurable business growth." },
+  { num: "01", title: "Strategy Before Tactics", body: "Every engagement begins with understanding your business, market, and goals before recommending solutions. Strong execution starts with a clear strategy.", icon: "/images/icons/icon-lightbulb.svg" },
+  { num: "02", title: "Connected Growth Systems", body: "Brand strategy, AI visibility, marketing, sales, technology, and revenue operations work best as one integrated system — not as disconnected initiatives.", icon: "/images/icons/icon-gear.svg" },
+  { num: "03", title: "Human Expertise + AI Intelligence", body: "We use AI to accelerate research, uncover insights, and improve efficiency, while experienced strategists provide the critical thinking, creativity, and direction technology can't replace.", icon: "/images/icons/icon-lightning.svg" },
+  { num: "04", title: "Outcomes Over Activity", body: "We don't measure success by campaigns launched or content published. We measure it by stronger positioning, better opportunities, and measurable business growth.", icon: "/images/icons/icon-trending.svg" },
 ];
 
 const coreServices = [
@@ -393,32 +393,38 @@ export default function Home() {
           <div style={{ position: "absolute", inset: 0, backgroundImage: "url('/images/Dark-Mountains.webp')", backgroundSize: "55% auto", backgroundPosition: "center center", backgroundRepeat: "no-repeat", opacity: 0.07 }} />
           <div ref={s4.ref} style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto" }}>
 
-            <div style={{ textAlign: "center", marginBottom: 48 }}>
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 12 }}>What Makes Brand Iron Different</p>
-              <p className={`reveal${s4.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#444", maxWidth: 680, margin: "0 auto 12px" }}>
+            <div style={{ textAlign: "center", marginBottom: 56 }}>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 18 }}>What Makes Brand Iron Different</p>
+              <p className={`reveal${s4.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 19, fontWeight: 500, lineHeight: 1.65, color: "#333", maxWidth: 640, margin: "0 auto 22px" }}>
                 AI is transforming how businesses grow — but technology alone has never been a strategy.
               </p>
-              <p className={`reveal${s4.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#555", maxWidth: 680, margin: "0 auto 12px" }}>
+              <p className={`reveal${s4.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.85, color: "#767676", maxWidth: 600, margin: "0 auto 36px" }}>
                 At Brand Iron, we combine human expertise with AI-assisted intelligence to help organizations make better decisions, move faster, and execute with greater precision. AI accelerates the work; experienced strategists provide the judgment, creativity, and business insight that drive meaningful outcomes.
               </p>
-              <p className={`reveal${s4.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#1a1a1a", fontWeight: 600, maxWidth: 680, margin: "0 auto" }}>
-                Because sustainable growth isn&apos;t automated. It&apos;s engineered.
-              </p>
+              <div className={`reveal${s4.inView ? " visible" : ""}`} style={{ maxWidth: 640, margin: "0 auto", paddingTop: 28, borderTop: "2px solid #e5ded0" }}>
+                <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(19px, 2.4vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", lineHeight: 1.35, color: "#1a1a1a" }}>
+                  Because sustainable growth isn&apos;t automated.<br />
+                  <span style={{ color: "#d87307" }}>It&apos;s engineered.</span>
+                </p>
+              </div>
             </div>
 
-            {/* 4 cards — matching live site flat white style */}
+            {/* 4 cards — icon + hover lift */}
             <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20, marginBottom: 40 }}>
-              {differentiators.map(({ num, title, body }, i) => (
+              {differentiators.map(({ num, title, body, icon }, i) => (
                 <div key={num} className={`reveal${s4.inView ? " visible" : ""}`} style={{
                   background: "#FFFFFF", padding: "32px 24px", position: "relative",
-                  transitionDelay: `${i * 0.07}s`,
-                  ...(i === 2 ? { outline: "2px solid #d87307" } : {}),
-                }}>
+                  border: i === 2 ? "2px solid #d87307" : "1px solid #ece5d8",
+                  transitionDelay: `${i * 0.07}s`, transition: "transform 0.25s, box-shadow 0.25s",
+                }}
+                onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(-6px)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 14px 36px rgba(0,0,0,0.1)"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "none"; }}
+                >
                   {i === 2 && <>
                     <div style={{ position: "absolute", top: 10, right: 10, width: 18, height: 18, borderTop: "2px solid #d87307", borderRight: "2px solid #d87307" }} />
                     <div style={{ position: "absolute", bottom: 10, left: 10, width: 18, height: 18, borderBottom: "2px solid #d87307", borderLeft: "2px solid #d87307" }} />
                   </>}
-                  <div style={{ width: "100%", height: 3, background: "#d87307", marginBottom: 16 }} />
+                  <img src={icon} alt="" style={{ width: 34, height: 34, marginBottom: 18 }} />
                   <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", color: "#d87307", marginBottom: 8 }}>{num}</p>
                   <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 12, lineHeight: 1.4 }}>{title}</h3>
                   <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "#666" }}>{body}</p>
@@ -448,14 +454,14 @@ export default function Home() {
             </div>
 
             {/* Closing */}
-            <div className={`reveal${s4.inView ? " visible" : ""}`} style={{ textAlign: "center", marginTop: 48 }}>
-              <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(16px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#1a1a1a" }}>
+            <div className={`reveal${s4.inView ? " visible" : ""}`} style={{ textAlign: "center", borderTop: "1px solid #e8e0d4", paddingTop: 32, marginTop: 48 }}>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(14px, 1.6vw, 17px)", fontWeight: 500, color: "#777", marginBottom: 10 }}>
                 Modern growth requires more than marketing.
               </p>
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#555", maxWidth: 700, margin: "10px auto 0" }}>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#555", maxWidth: 700, margin: "0 auto 16px" }}>
                 It requires a partner who understands how brand strategy, discoverability, demand generation, technology, and revenue operations work together to create competitive advantage.
               </p>
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, color: "#d87307", fontWeight: 600, marginTop: 6 }}>
+              <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(22px, 3.2vw, 36px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#d87307", lineHeight: 1.2 }}>
                 That&apos;s the role Brand Iron was built to play.
               </p>
             </div>
