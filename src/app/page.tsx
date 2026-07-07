@@ -518,11 +518,14 @@ export default function Home() {
           </div>
 
           {/* Closing */}
-          <div className={`reveal${s5.inView ? " visible" : ""}`} style={{ textAlign: "center", padding: "32px 40px", background: "#F5F0E8", borderLeft: "4px solid #d87307" }}>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#444", maxWidth: 760, margin: "0 auto 10px" }}>
-              Each solution delivers value on its own, but the greatest impact comes when they&apos;re connected through a unified growth strategy.
+          <div className={`reveal${s5.inView ? " visible" : ""}`} style={{ textAlign: "center", padding: "40px 48px", background: "#F5F0E8", borderLeft: "4px solid #d87307" }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(14px, 1.6vw, 17px)", fontWeight: 500, color: "#8a7a5c", marginBottom: 10 }}>
+              Each solution delivers value on its own,
             </p>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", maxWidth: 760, margin: "0 auto" }}>
+            <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(19px, 2.4vw, 28px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", lineHeight: 1.35, color: "#1a1a1a", maxWidth: 760, margin: "0 auto 22px" }}>
+              but the greatest impact comes when they&apos;re <span style={{ color: "#d87307" }}>connected through a unified growth strategy.</span>
+            </p>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", maxWidth: 700, margin: "0 auto" }}>
               Whether you&apos;re building your brand, increasing visibility, generating demand, or preparing for investment, Brand Iron helps ensure every initiative contributes to measurable business growth.
             </p>
           </div>
