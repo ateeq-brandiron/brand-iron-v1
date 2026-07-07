@@ -28,7 +28,7 @@ export default function Footer() {
     <footer style={{ position: "relative", color: "#FFFFFF", overflow: "hidden" }}>
 
       {/* "Forging Brands. Driving Revenue." bar above footer */}
-      <div style={{ background: "#F5F0E8", padding: "28px 48px", textAlign: "left" }}>
+      <div style={{ background: "#F5F0E8", padding: "28px 48px", textAlign: "center" }}>
         <p style={{
           fontFamily: "'Burford Rustic Black', sans-serif",
           fontSize: "clamp(28px, 4vw, 52px)", fontWeight: 900,
@@ -39,7 +39,7 @@ export default function Footer() {
         </p>
         <p style={{
           fontFamily: "'Montserrat', sans-serif", fontSize: 15,
-          lineHeight: 1.7, color: "#6b5a3e", maxWidth: 620,
+          lineHeight: 1.7, color: "#6b5a3e", maxWidth: 900, margin: "0 auto",
         }}>
           Helping organizations become discoverable, trusted, and chosen through strategic positioning, AI visibility, revenue engineering, and connected growth systems.
         </p>
