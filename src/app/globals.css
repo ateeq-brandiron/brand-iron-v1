@@ -17,6 +17,14 @@
 }
 
 @font-face {
+  font-family: 'Burford Rustic Inline';
+  src: url('/fonts/BurfordRusticInline.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Montserrat';
   src: url('/fonts/Montserrat-variable.woff2') format('woff2-variations'),
        url('/fonts/Montserrat-variable.woff2') format('woff2');

@@ -145,18 +145,19 @@ export default function Home() {
         {/* Centered headline */}
         <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "0 24px" }}>
           <h1 style={{
-            fontFamily: "'Burford Rustic Black', sans-serif",
-            fontSize: "clamp(42px, 7vw, 96px)", fontWeight: 700,
-            textTransform: "uppercase", letterSpacing: "0.04em",
-            color: "transparent", WebkitTextStroke: "2px #FFFFFF",
+            fontFamily: "'Burford Rustic Inline', sans-serif",
+            fontSize: "clamp(42px, 7vw, 96px)", fontWeight: 400,
+            textTransform: "uppercase", letterSpacing: "0.03em",
+            color: "#FFFFFF",
             lineHeight: 1.0, marginBottom: 16,
             filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))",
           }}>
             Forging Brands.<br />Driving Revenue.
           </h1>
           <p style={{
-            fontFamily: "'Montserrat', sans-serif", fontWeight: 500,
-            fontSize: "clamp(16px, 2vw, 20px)", letterSpacing: "0.01em",
+            fontFamily: "'Burford Rustic Inline', sans-serif", fontWeight: 400,
+            fontSize: "clamp(14px, 1.7vw, 19px)", letterSpacing: "0.05em",
+            textTransform: "uppercase",
             lineHeight: 1.6, color: "rgba(255,255,255,0.92)",
             maxWidth: 640, marginBottom: 40, textShadow: "0 1px 8px rgba(0,0,0,0.5)",
           }}>
