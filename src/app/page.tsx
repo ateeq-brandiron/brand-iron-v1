@@ -583,24 +583,29 @@ export default function Home() {
       </section>
 
       {/* ── S7: TESTIMONIALS ─────────────────────────────── */}
-      <section style={{ background: "#FFFFFF", padding: "88px 40px" }}>
+      <section style={{ background: "#F7F4EE", padding: "88px 40px" }}>
         <div ref={s7.ref} style={{ maxWidth: 720, margin: "0 auto", textAlign: "center" }}>
-          <p className={`reveal${s7.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 10 }}>
+          <p className={`reveal${s7.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 32 }}>
             What Our Clients Say
           </p>
-          <p className={`reveal${s7.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 600, fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase", color: "#999", marginBottom: 24 }}>
-            {testimonials[testimonialIndex].title}
-          </p>
-          <h3 className={`reveal${s7.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: "clamp(22px, 3vw, 30px)", letterSpacing: "0.06em", textTransform: "uppercase", color: "#1a1a1a", marginBottom: 16 }}>
-            {testimonials[testimonialIndex].name}
-          </h3>
-          <div className={`reveal${s7.inView ? " visible" : ""}`} style={{ display: "flex", justifyContent: "center", gap: 4, marginBottom: 28, color: "#d87307", fontSize: 22 }}>
-            {Array.from({ length: 5 }).map((_, i) => <span key={i}>★</span>)}
+          <div className={`reveal${s7.inView ? " visible" : ""}`} style={{
+            background: "#FFFFFF", borderRadius: 20, padding: "52px 56px",
+            boxShadow: "0 24px 60px rgba(26,20,10,0.08)", border: "1px solid rgba(26,20,10,0.04)",
+          }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 600, fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase", color: "#999", marginBottom: 24 }}>
+              {testimonials[testimonialIndex].title}
+            </p>
+            <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: "clamp(22px, 3vw, 30px)", letterSpacing: "0.06em", textTransform: "uppercase", color: "#1a1a1a", marginBottom: 16 }}>
+              {testimonials[testimonialIndex].name}
+            </h3>
+            <div style={{ display: "flex", justifyContent: "center", gap: 4, marginBottom: 28, color: "#d87307", fontSize: 22 }}>
+              {Array.from({ length: 5 }).map((_, i) => <span key={i}>★</span>)}
+            </div>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 17, lineHeight: 1.8, color: "#444" }}>
+              &ldquo;{testimonials[testimonialIndex].quote}&rdquo;
+            </p>
           </div>
-          <p className={`reveal${s7.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 17, lineHeight: 1.8, color: "#444", marginBottom: 40 }}>
-            &ldquo;{testimonials[testimonialIndex].quote}&rdquo;
-          </p>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16 }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, marginTop: 36 }}>
             <button
               aria-label="Previous testimonial"
               onClick={() => setTestimonialIndex(i => (i - 1 + testimonials.length) % testimonials.length)}
