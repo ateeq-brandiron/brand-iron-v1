@@ -117,7 +117,7 @@ const testimonials = [
   },
 ];
 
-const heroImages = ["/images/home-hero.jpg"];
+const heroImages = ["/images/home-hero.jpg", "/images/hero-barn.webp", "/images/hero-haybales.webp"];
 
 export default function Home() {
   const [heroImg, setHeroImg] = useState(heroImages[0]);
