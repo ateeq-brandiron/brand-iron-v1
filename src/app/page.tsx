@@ -205,7 +205,15 @@ export default function Home() {
 
       {/* ── S2: TRUST BAR ────────────────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "64px 40px 80px" }}>
-        <div ref={s2.ref} style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: 64, alignItems: "center" }}>
+        <div ref={s2.ref} style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "auto 1fr", gap: 64, alignItems: "center" }}>
+
+          {/* B-icon logo mask — overlaps the hero seam above */}
+          <div className={`reveal${s2.inView ? " visible" : ""}`} style={{ position: "relative", top: -128 }}>
+            <img src="/images/BI-Logo-Mask-1-e1723263913795 (1).png" alt="Brand Iron" style={{ width: 340, height: "auto", display: "block", transition: "transform 0.35s ease" }}
+              onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.05) rotate(-3deg)")}
+              onMouseLeave={e => (e.currentTarget.style.transform = "scale(1) rotate(0deg)")}
+            />
+          </div>
 
           {/* Text */}
           <div className={`reveal${s2.inView ? " visible" : ""}`}>
@@ -265,38 +273,40 @@ export default function Home() {
               })}
             </div>
           </div>
-
-          {/* B-icon logo mask — overlaps the hero seam above */}
-          <div className={`reveal${s2.inView ? " visible" : ""}`} style={{ position: "relative", top: -128 }}>
-            <img src="/images/BI-Logo-Mask-1-e1723263913795 (1).png" alt="Brand Iron" style={{ width: 340, height: "auto", display: "block", transition: "transform 0.35s ease" }}
-              onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.05) rotate(-3deg)")}
-              onMouseLeave={e => (e.currentTarget.style.transform = "scale(1) rotate(0deg)")}
-            />
-          </div>
         </div>
       </section>
 
       {/* ── S3: BUYING JOURNEY ───────────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "80px 0 100px" }}>
         <div ref={s3.ref} style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px" }}>
-          <div style={{ textAlign: "center", marginBottom: 56 }}>
-            <h2 className={`reveal${s3.inView ? " visible" : ""}`} style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 28 }}>
-              The Buying Journey Has Changed.<br />Has Your Business?
-            </h2>
-            <p className={`reveal${s3.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 19, fontWeight: 500, lineHeight: 1.65, color: "#333", maxWidth: 620, margin: "0 auto 22px" }}>
-              Today&apos;s buyers complete much of their decision-making before ever speaking with your team.
-            </p>
-            <p className={`reveal${s3.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.85, color: "#767676", maxWidth: 600, margin: "0 auto 18px" }}>
-              They search Google, ask AI assistants, compare competitors, read reviews, visit websites, explore LinkedIn, and look for proof that your organization is the right choice.
-            </p>
-            <p className={`reveal${s3.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.85, color: "#767676", maxWidth: 600, margin: "0 auto 36px" }}>
-              If your business isn&apos;t visible, credible, and consistent throughout that journey, you&apos;re often eliminated before the first conversation begins.
-            </p>
-            <div className={`reveal${s3.inView ? " visible" : ""}`} style={{ maxWidth: 640, margin: "0 auto", paddingTop: 28, borderTop: "2px solid #f0ece4" }}>
-              <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(19px, 2.4vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", lineHeight: 1.35, color: "#1a1a1a" }}>
-                Modern growth isn&apos;t about showing up in one place.<br />
-                <span style={{ color: "#d87307" }}>It&apos;s about showing up everywhere trust is built.</span>
+          <div style={{ display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 64, alignItems: "center", marginBottom: 56 }}>
+            {/* Text — left */}
+            <div>
+              <h2 className={`reveal${s3.inView ? " visible" : ""}`} style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 28 }}>
+                The Buying Journey Has Changed.<br />Has Your Business?
+              </h2>
+              <p className={`reveal${s3.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 19, fontWeight: 500, lineHeight: 1.65, color: "#333", marginBottom: 22 }}>
+                Today&apos;s buyers complete much of their decision-making before ever speaking with your team.
               </p>
+              <p className={`reveal${s3.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.85, color: "#767676", marginBottom: 18 }}>
+                They search Google, ask AI assistants, compare competitors, read reviews, visit websites, explore LinkedIn, and look for proof that your organization is the right choice.
+              </p>
+              <p className={`reveal${s3.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.85, color: "#767676", marginBottom: 36 }}>
+                If your business isn&apos;t visible, credible, and consistent throughout that journey, you&apos;re often eliminated before the first conversation begins.
+              </p>
+              <div className={`reveal${s3.inView ? " visible" : ""}`} style={{ paddingTop: 28, borderTop: "2px solid #f0ece4" }}>
+                <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(19px, 2.4vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", lineHeight: 1.35, color: "#1a1a1a" }}>
+                  Modern growth isn&apos;t about showing up in one place.<br />
+                  <span style={{ color: "#d87307" }}>It&apos;s about showing up everywhere trust is built.</span>
+                </p>
+              </div>
+            </div>
+
+            {/* Image — right */}
+            <div className={`reveal${s3.inView ? " visible" : ""}`} style={{ position: "relative" }}>
+              <img src="/images/techy-sagebrush.webp" alt="" style={{ width: "100%", height: "auto", display: "block", boxShadow: "0 24px 60px rgba(0,0,0,0.18)" }} />
+              <div style={{ position: "absolute", top: 16, left: 16, width: 28, height: 28, borderTop: "3px solid #d87307", borderLeft: "3px solid #d87307" }} />
+              <div style={{ position: "absolute", bottom: 16, right: 16, width: 28, height: 28, borderBottom: "3px solid #d87307", borderRight: "3px solid #d87307" }} />
             </div>
           </div>
 
