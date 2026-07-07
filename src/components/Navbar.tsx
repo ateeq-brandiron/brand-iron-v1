@@ -28,10 +28,8 @@ export default function Navbar() {
 
   return (
     <nav style={{
-      position: "relative", zIndex: 1000,
-      background: "rgba(15,10,5,0.95)",
-      backdropFilter: "blur(12px)",
-      borderBottom: "1px solid rgba(216,115,7,0.2)",
+      position: "absolute", top: 0, left: 0, right: 0, zIndex: 1000,
+      background: "transparent",
     }}>
       <div style={{ maxWidth: 1360, margin: "0 auto", padding: "0 32px", display: "flex", alignItems: "center", justifyContent: "space-between", height: 72 }}>
 
