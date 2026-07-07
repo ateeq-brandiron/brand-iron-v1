@@ -33,9 +33,15 @@ export default function Footer() {
           fontFamily: "'Burford Rustic Black', sans-serif",
           fontSize: "clamp(28px, 4vw, 52px)", fontWeight: 900,
           textTransform: "uppercase", letterSpacing: "0.03em",
-          color: "#945B06", lineHeight: 1,
+          color: "#945B06", lineHeight: 1, marginBottom: 12,
         }}>
           Forging Brands. Driving Revenue.™
+        </p>
+        <p style={{
+          fontFamily: "'Montserrat', sans-serif", fontSize: 15,
+          lineHeight: 1.7, color: "#6b5a3e", maxWidth: 620,
+        }}>
+          Helping organizations become discoverable, trusted, and chosen through strategic positioning, AI visibility, revenue engineering, and connected growth systems.
         </p>
       </div>
 

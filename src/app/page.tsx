@@ -674,14 +674,6 @@ export default function Home() {
               >Explore Our Solutions</Link>
             </div>
           </div>
-          <div className={`reveal${s8.inView ? " visible" : ""}`} style={{ borderTop: "1px solid rgba(216,115,7,0.3)", paddingTop: 36 }}>
-            <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(20px, 2.5vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#FFFFFF", marginBottom: 10 }}>
-              Forging Brands. Driving Revenue.
-            </p>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.8, color: "rgba(255,255,255,0.65)", maxWidth: 620, margin: "0 auto" }}>
-              Helping organizations become discoverable, trusted, and chosen through strategic positioning, AI visibility, revenue engineering, and connected growth systems.
-            </p>
-          </div>
         </div>
       </section>
     </>
