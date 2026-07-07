@@ -205,15 +205,7 @@ export default function Home() {
 
       {/* ── S2: TRUST BAR ────────────────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "64px 40px 80px" }}>
-        <div ref={s2.ref} style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "auto 1fr", gap: 64, alignItems: "center" }}>
-
-          {/* B-icon logo mask — overlaps the hero seam above */}
-          <div className={`reveal${s2.inView ? " visible" : ""}`} style={{ position: "relative", top: -84 }}>
-            <img src="/images/BI-Logo-Mask-1-e1723263913795 (1).png" alt="Brand Iron" style={{ width: 240, height: "auto", display: "block", transition: "transform 0.35s ease" }}
-              onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.05) rotate(-3deg)")}
-              onMouseLeave={e => (e.currentTarget.style.transform = "scale(1) rotate(0deg)")}
-            />
-          </div>
+        <div ref={s2.ref} style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: 64, alignItems: "center" }}>
 
           {/* Text */}
           <div className={`reveal${s2.inView ? " visible" : ""}`}>
@@ -272,6 +264,14 @@ export default function Home() {
                 );
               })}
             </div>
+          </div>
+
+          {/* B-icon logo mask — overlaps the hero seam above */}
+          <div className={`reveal${s2.inView ? " visible" : ""}`} style={{ position: "relative", top: -128 }}>
+            <img src="/images/BI-Logo-Mask-1-e1723263913795 (1).png" alt="Brand Iron" style={{ width: 340, height: "auto", display: "block", transition: "transform 0.35s ease" }}
+              onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.05) rotate(-3deg)")}
+              onMouseLeave={e => (e.currentTarget.style.transform = "scale(1) rotate(0deg)")}
+            />
           </div>
         </div>
       </section>
