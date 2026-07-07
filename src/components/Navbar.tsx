@@ -39,7 +39,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop nav */}
-        <div style={{ display: "flex", alignItems: "center", gap: 22 }} className="desktop-nav">
+        <div style={{ display: "flex", alignItems: "center", gap: 18 }} className="desktop-nav">
 
           {/* Services dropdown */}
           <div
@@ -89,16 +89,21 @@ export default function Navbar() {
             )}
           </div>
 
+          <span style={{ color: "rgba(255,255,255,0.3)", fontSize: 12 }}>|</span>
+
           {navLinks.map(l => (
-            <Link key={l.href} href={l.href} style={{
-              fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
-              letterSpacing: "0.1em", textTransform: "uppercase",
-              color: "#FFFFFF",
-              transition: "color 0.2s",
-            }}
-            onMouseEnter={e => (e.currentTarget.style.color = "#d87307")}
-            onMouseLeave={e => (e.currentTarget.style.color = "#FFFFFF")}
-            >{l.label}</Link>
+            <span key={l.href} style={{ display: "flex", alignItems: "center", gap: 18 }}>
+              <Link href={l.href} style={{
+                fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
+                letterSpacing: "0.1em", textTransform: "uppercase",
+                color: "#FFFFFF",
+                transition: "color 0.2s",
+              }}
+              onMouseEnter={e => (e.currentTarget.style.color = "#d87307")}
+              onMouseLeave={e => (e.currentTarget.style.color = "#FFFFFF")}
+              >{l.label}</Link>
+              <span style={{ color: "rgba(255,255,255,0.3)", fontSize: 12 }}>|</span>
+            </span>
           ))}
 
           <Link href="/client-portal" style={{
