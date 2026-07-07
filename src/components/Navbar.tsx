@@ -35,7 +35,10 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link href="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
-          <img src="/images/brand-iron-logo-white.png" alt="Brand Iron" style={{ height: 48, width: "auto" }} />
+          <img src="/images/brand-iron-logo-white.png" alt="Brand Iron" style={{ height: 48, width: "auto", transition: "transform 0.25s ease, opacity 0.25s ease" }}
+            onMouseEnter={e => { e.currentTarget.style.transform = "scale(1.05)"; e.currentTarget.style.opacity = "0.85"; }}
+            onMouseLeave={e => { e.currentTarget.style.transform = "scale(1)"; e.currentTarget.style.opacity = "1"; }}
+          />
         </Link>
 
         {/* Desktop nav */}
@@ -129,7 +132,10 @@ export default function Navbar() {
         </div>
 
         {/* Mobile hamburger */}
-        <button onClick={() => setOpen(!open)} className="mobile-menu-btn" style={{ display: "none", background: "none", border: "none", cursor: "pointer" }} aria-label="Menu">
+        <button onClick={() => setOpen(!open)} className="mobile-menu-btn" style={{ display: "none", background: "none", border: "none", cursor: "pointer", transition: "opacity 0.2s" }} aria-label="Menu"
+          onMouseEnter={e => (e.currentTarget.style.opacity = "0.7")}
+          onMouseLeave={e => (e.currentTarget.style.opacity = "1")}
+        >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             {open
               ? <path d="M6 6l12 12M6 18L18 6" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round"/>

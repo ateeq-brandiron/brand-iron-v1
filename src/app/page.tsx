@@ -192,8 +192,12 @@ export default function Home() {
               fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 11,
               letterSpacing: "0.16em", textTransform: "uppercase",
               color: "#FFFFFF", textShadow: "0 1px 8px rgba(0,0,0,0.8)",
-              whiteSpace: "nowrap",
-            }}>{s.label}</p>
+              whiteSpace: "nowrap", cursor: "default",
+              transition: "color 0.2s",
+            }}
+            onMouseEnter={e => (e.currentTarget.style.color = "#d87307")}
+            onMouseLeave={e => (e.currentTarget.style.color = "#FFFFFF")}
+            >{s.label}</p>
           ))}
         </div>
       </section>
@@ -204,7 +208,10 @@ export default function Home() {
 
           {/* B-icon logo mask — overlaps the hero seam above */}
           <div className={`reveal${s2.inView ? " visible" : ""}`} style={{ position: "relative", top: -84 }}>
-            <img src="/images/BI-Logo-Mask-1-e1723263913795 (1).png" alt="Brand Iron" style={{ width: 240, height: "auto", display: "block" }} />
+            <img src="/images/BI-Logo-Mask-1-e1723263913795 (1).png" alt="Brand Iron" style={{ width: 240, height: "auto", display: "block", transition: "transform 0.35s ease" }}
+              onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.05) rotate(-3deg)")}
+              onMouseLeave={e => (e.currentTarget.style.transform = "scale(1) rotate(0deg)")}
+            />
           </div>
 
           {/* Text */}
@@ -236,13 +243,28 @@ export default function Home() {
                 return (
                 <div key={label} className={`reveal${s2.inView ? " visible" : ""}`} style={{
                   display: "flex", alignItems: "flex-start", gap: 12,
-                  transitionDelay: `${i * 0.08}s`,
-                }}>
-                  <div style={{ width: 44, height: 44, borderRadius: "50%", background: "#EFEDE7", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  transitionDelay: `${i * 0.08}s`, cursor: "default",
+                }}
+                onMouseEnter={e => {
+                  const el = e.currentTarget as HTMLDivElement;
+                  (el.firstElementChild as HTMLDivElement).style.background = "#d87307";
+                  (el.firstElementChild as HTMLDivElement).style.transform = "scale(1.08)";
+                  (el.querySelectorAll("svg path") as NodeListOf<SVGPathElement>).forEach(p => p.setAttribute("stroke", "#FFFFFF"));
+                  (el.lastElementChild!.firstElementChild as HTMLElement).style.color = "#d87307";
+                }}
+                onMouseLeave={e => {
+                  const el = e.currentTarget as HTMLDivElement;
+                  (el.firstElementChild as HTMLDivElement).style.background = "#EFEDE7";
+                  (el.firstElementChild as HTMLDivElement).style.transform = "scale(1)";
+                  (el.querySelectorAll("svg path") as NodeListOf<SVGPathElement>).forEach(p => p.setAttribute("stroke", "#D87307"));
+                  (el.lastElementChild!.firstElementChild as HTMLElement).style.color = "#1a1a1a";
+                }}
+                >
+                  <div style={{ width: 44, height: 44, borderRadius: "50%", background: "#EFEDE7", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, transition: "background 0.25s ease, transform 0.25s ease" }}>
                     {statIcons[key]}
                   </div>
                   <div>
-                    <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 19, fontWeight: 900, color: "#1a1a1a", letterSpacing: "0.02em", lineHeight: 1.15 }}>{num}</p>
+                    <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 19, fontWeight: 900, color: "#1a1a1a", letterSpacing: "0.02em", lineHeight: 1.15, transition: "color 0.25s ease" }}>{num}</p>
                     <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, color: "#767676", fontWeight: 500, marginTop: 4 }}>{label}</p>
                   </div>
                 </div>
@@ -298,11 +320,24 @@ export default function Home() {
                 position: "relative", flex: 1, background: overlays[i],
                 padding: "48px 28px 64px", minHeight: 260,
                 borderRight: i < journeyStages.length - 1 ? "1px solid rgba(255,255,255,0.12)" : "none",
+                borderTop: "3px solid transparent",
                 transitionDelay: `${i * 0.08}s`,
-              }}>
+                transition: "border-color 0.3s ease, background 0.3s ease",
+              }}
+              onMouseEnter={e => {
+                (e.currentTarget as HTMLDivElement).style.borderTopColor = "#d87307";
+                const badge = e.currentTarget.querySelector(".journey-badge") as HTMLDivElement;
+                if (badge) badge.style.transform = "scale(1.15)";
+              }}
+              onMouseLeave={e => {
+                (e.currentTarget as HTMLDivElement).style.borderTopColor = "transparent";
+                const badge = e.currentTarget.querySelector(".journey-badge") as HTMLDivElement;
+                if (badge) badge.style.transform = "scale(1)";
+              }}
+              >
                 <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 19, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: textColor, marginBottom: 14 }}>{stage}</p>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13.5, lineHeight: 1.7, color: bodyColor }}>{body}</p>
-                <div style={{ position: "absolute", bottom: 24, left: 28, width: 40, height: 40, borderRadius: "50%", background: "#d87307", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <div className="journey-badge" style={{ position: "absolute", bottom: 24, left: 28, width: 40, height: 40, borderRadius: "50%", background: "#d87307", display: "flex", alignItems: "center", justifyContent: "center", transition: "transform 0.3s ease" }}>
                   {icons[stage]}
                 </div>
               </div>
@@ -332,7 +367,12 @@ export default function Home() {
           <div style={{
             background: "#FFFFFF", maxWidth: 520, width: "100%",
             padding: "48px 48px", position: "relative",
-          }}>
+            boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
+            transition: "transform 0.3s ease, box-shadow 0.3s ease",
+          }}
+          onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(-6px)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 20px 48px rgba(0,0,0,0.18)"; }}
+          onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 4px 20px rgba(0,0,0,0.08)"; }}
+          >
             {/* Corner brackets */}
             <div style={{ position: "absolute", top: 14, right: 14, width: 20, height: 20, borderTop: "2px solid #d87307", borderRight: "2px solid #d87307" }} />
             <div style={{ position: "absolute", bottom: 14, left: 14, width: 20, height: 20, borderBottom: "2px solid #d87307", borderLeft: "2px solid #d87307" }} />
@@ -426,14 +466,22 @@ export default function Home() {
                   border: i === 2 ? "2px solid #d87307" : "1px solid #ece5d8",
                   transitionDelay: `${i * 0.07}s`, transition: "transform 0.25s, box-shadow 0.25s",
                 }}
-                onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(-6px)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 14px 36px rgba(0,0,0,0.1)"; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "none"; }}
+                onMouseEnter={e => {
+                  (e.currentTarget as HTMLDivElement).style.transform = "translateY(-6px)";
+                  (e.currentTarget as HTMLDivElement).style.boxShadow = "0 14px 36px rgba(0,0,0,0.1)";
+                  (e.currentTarget.querySelector("img") as HTMLImageElement).style.transform = "scale(1.15)";
+                }}
+                onMouseLeave={e => {
+                  (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
+                  (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
+                  (e.currentTarget.querySelector("img") as HTMLImageElement).style.transform = "scale(1)";
+                }}
                 >
                   {i === 2 && <>
                     <div style={{ position: "absolute", top: 10, right: 10, width: 18, height: 18, borderTop: "2px solid #d87307", borderRight: "2px solid #d87307" }} />
                     <div style={{ position: "absolute", bottom: 10, left: 10, width: 18, height: 18, borderBottom: "2px solid #d87307", borderLeft: "2px solid #d87307" }} />
                   </>}
-                  <img src={icon} alt="" style={{ width: 34, height: 34, marginBottom: 18 }} />
+                  <img src={icon} alt="" style={{ width: 34, height: 34, marginBottom: 18, transition: "transform 0.3s ease" }} />
                   <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", color: "#d87307", marginBottom: 8 }}>{num}</p>
                   <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 12, lineHeight: 1.4 }}>{title}</h3>
                   <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "#666" }}>{body}</p>
@@ -442,7 +490,15 @@ export default function Home() {
             </div>
 
             {/* Our Commitment */}
-            <div className={`reveal${s4.inView ? " visible" : ""}`} style={{ background: "#FFFFFF", padding: "40px 48px", borderLeft: "4px solid #d87307", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "center" }}>
+            <div className={`reveal${s4.inView ? " visible" : ""}`} style={{
+              background: "#FFFFFF", padding: "40px 48px", borderLeft: "4px solid #d87307",
+              display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "center",
+              boxShadow: "0 2px 12px rgba(0,0,0,0.04)",
+              transition: "box-shadow 0.3s ease, border-left-color 0.3s ease",
+            }}
+            onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = "0 16px 40px rgba(216,115,7,0.14)"; (e.currentTarget as HTMLDivElement).style.borderLeftColor = "#945B06"; }}
+            onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = "0 2px 12px rgba(0,0,0,0.04)"; (e.currentTarget as HTMLDivElement).style.borderLeftColor = "#d87307"; }}
+            >
               <div>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 12 }}>Our Commitment</p>
                 <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#1a1a1a", lineHeight: 1.2, marginBottom: 12 }}>
@@ -586,7 +642,11 @@ export default function Home() {
           <div className={`reveal${s7.inView ? " visible" : ""}`} style={{
             background: "#FFFFFF", borderRadius: 20, padding: "52px 56px",
             boxShadow: "0 24px 60px rgba(26,20,10,0.08)", border: "1px solid rgba(26,20,10,0.04)",
-          }}>
+            transition: "transform 0.35s ease, box-shadow 0.35s ease",
+          }}
+          onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(-6px)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 32px 72px rgba(26,20,10,0.14)"; }}
+          onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 24px 60px rgba(26,20,10,0.08)"; }}
+          >
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 600, fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase", color: "#999", marginBottom: 24 }}>
               {testimonials[testimonialIndex].title}
             </p>
@@ -626,6 +686,8 @@ export default function Home() {
                     background: i === testimonialIndex ? "#d87307" : "#ddd",
                     border: "none", cursor: "pointer", transition: "width 0.2s, background 0.2s", padding: 0,
                   }}
+                  onMouseEnter={e => { if (i !== testimonialIndex) (e.currentTarget as HTMLButtonElement).style.background = "#d87307"; }}
+                  onMouseLeave={e => { if (i !== testimonialIndex) (e.currentTarget as HTMLButtonElement).style.background = "#ddd"; }}
                 />
               ))}
             </div>

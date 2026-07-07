@@ -58,7 +58,12 @@ export default function Footer() {
           width: "38%", flexShrink: 0,
           backgroundImage: "url('/images/bi-footer-logo.jpeg')",
           backgroundSize: "cover", backgroundPosition: "center",
-        }} />
+          filter: "brightness(1)",
+          transition: "filter 0.3s ease",
+        }}
+        onMouseEnter={e => (e.currentTarget.style.filter = "brightness(1.12)")}
+        onMouseLeave={e => (e.currentTarget.style.filter = "brightness(1)")}
+        />
 
         {/* RIGHT — misty forest bg */}
         <div style={{
@@ -127,7 +132,10 @@ export default function Footer() {
                       background: "rgba(255,255,255,0.08)",
                       border: "1px solid rgba(255,255,255,0.35)", borderRight: "none",
                       borderRadius: "40px 0 0 40px", color: "#FFFFFF", outline: "none",
+                      transition: "border-color 0.2s, background 0.2s",
                     }}
+                    onFocus={e => { e.currentTarget.style.borderColor = "#d87307"; e.currentTarget.style.background = "rgba(216,115,7,0.1)"; }}
+                    onBlur={e => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.35)"; e.currentTarget.style.background = "rgba(255,255,255,0.08)"; }}
                   />
                   <button type="submit" style={{
                     width: 48, height: 48, borderRadius: "0 40px 40px 0",
