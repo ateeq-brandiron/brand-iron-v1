@@ -294,19 +294,15 @@ export default function Home() {
               <p className={`reveal${s3.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", marginBottom: 36 }}>
                 If your business isn&apos;t visible, credible, and consistent throughout that journey, you&apos;re often eliminated before the first conversation begins.
               </p>
-              <div className={`reveal${s3.inView ? " visible" : ""}`} style={{ paddingTop: 28, borderTop: "2px solid #f0ece4" }}>
-                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a" }}>
-                  Modern growth isn&apos;t about showing up in one place.<br />
-                  It&apos;s about showing up everywhere trust is built.
-                </p>
-              </div>
+              <p className={`reveal${s3.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a" }}>
+                Modern growth isn&apos;t about showing up in one place.<br />
+                It&apos;s about showing up everywhere trust is built.
+              </p>
             </div>
 
             {/* Image — right */}
-            <div className={`reveal${s3.inView ? " visible" : ""}`} style={{ position: "relative" }}>
+            <div className={`reveal${s3.inView ? " visible" : ""}`}>
               <img src="/images/BIRepresentationImage1Scale.jpeg" alt="" style={{ width: "100%", height: "auto", display: "block", boxShadow: "0 24px 60px rgba(0,0,0,0.18)" }} />
-              <div style={{ position: "absolute", top: 16, left: 16, width: 28, height: 28, borderTop: "3px solid #d87307", borderLeft: "3px solid #d87307" }} />
-              <div style={{ position: "absolute", bottom: 16, right: 16, width: 28, height: 28, borderBottom: "3px solid #d87307", borderRight: "3px solid #d87307" }} />
             </div>
           </div>
 
