@@ -156,10 +156,10 @@ export default function Home() {
           </h1>
           <p style={{
             fontFamily: "'Burford Rustic Inline', sans-serif", fontWeight: 400,
-            fontSize: "clamp(14px, 1.7vw, 19px)", letterSpacing: "0.05em",
-            textTransform: "uppercase",
+            fontSize: "clamp(11px, 1.35vw, 16px)", letterSpacing: "0.04em",
+            textTransform: "uppercase", whiteSpace: "nowrap",
             lineHeight: 1.6, color: "rgba(255,255,255,0.92)",
-            maxWidth: 640, marginBottom: 40, textShadow: "0 1px 8px rgba(0,0,0,0.5)",
+            maxWidth: "92vw", marginBottom: 28, textShadow: "0 1px 8px rgba(0,0,0,0.5)",
           }}>
             Helping organizations become discoverable, trusted, and chosen in today&apos;s AI-driven buying landscape.
           </p>
@@ -186,7 +186,7 @@ export default function Home() {
         </div>
 
         {/* Service labels at bottom */}
-        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, display: "flex", flexWrap: "nowrap", justifyContent: "space-between", alignItems: "center", gap: 28, padding: "0 32px 20px", overflowX: "auto" }}>
+        <div style={{ position: "absolute", bottom: 36, left: 0, right: 0, display: "flex", flexWrap: "nowrap", justifyContent: "space-between", alignItems: "center", gap: 28, padding: "0 32px 20px", overflowX: "auto" }}>
           {services.map(s => (
             <p key={s.label} style={{
               flex: "0 0 auto",
