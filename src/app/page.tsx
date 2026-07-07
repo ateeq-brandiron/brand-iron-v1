@@ -304,7 +304,7 @@ export default function Home() {
 
             {/* Image — right */}
             <div className={`reveal${s3.inView ? " visible" : ""}`} style={{ position: "relative" }}>
-              <img src="/images/techy-sagebrush.webp" alt="" style={{ width: "100%", height: "auto", display: "block", boxShadow: "0 24px 60px rgba(0,0,0,0.18)" }} />
+              <img src="/images/BIRepresentationImage1Scale.jpeg" alt="" style={{ width: "100%", height: "auto", display: "block", boxShadow: "0 24px 60px rgba(0,0,0,0.18)" }} />
               <div style={{ position: "absolute", top: 16, left: 16, width: 28, height: 28, borderTop: "3px solid #d87307", borderLeft: "3px solid #d87307" }} />
               <div style={{ position: "absolute", bottom: 16, right: 16, width: 28, height: 28, borderBottom: "3px solid #d87307", borderRight: "3px solid #d87307" }} />
             </div>
