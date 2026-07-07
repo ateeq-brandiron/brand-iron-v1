@@ -354,7 +354,7 @@ export default function Home() {
 
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px" }}>
           {/* Closing statement */}
-          <div className={`reveal${s3cards.inView ? " visible" : ""}`} style={{ textAlign: "center", borderTop: "1px solid #e8e0d4", paddingTop: 32 }}>
+          <div className={`reveal${s3cards.inView ? " visible" : ""}`} style={{ textAlign: "center", paddingTop: 32 }}>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(14px, 1.6vw, 17px)", fontWeight: 500, color: "#777", marginBottom: 10 }}>
               Organizations that win today aren&apos;t simply louder.
             </p>
