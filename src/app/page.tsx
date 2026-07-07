@@ -202,9 +202,9 @@ export default function Home() {
       <section style={{ background: "#FFFFFF", padding: "64px 40px 80px" }}>
         <div ref={s2.ref} style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "auto 1fr", gap: 64, alignItems: "center" }}>
 
-          {/* B-icon logo mask */}
-          <div className={`reveal${s2.inView ? " visible" : ""}`}>
-            <img src="/images/BI-Logo-Mask-1-e1723263913795 (1).png" alt="Brand Iron" style={{ width: 240, height: "auto" }} />
+          {/* B-icon logo mask — overlaps the hero seam above */}
+          <div className={`reveal${s2.inView ? " visible" : ""}`} style={{ position: "relative", top: -84 }}>
+            <img src="/images/BI-Logo-Mask-1-e1723263913795 (1).png" alt="Brand Iron" style={{ width: 240, height: "auto", display: "block" }} />
           </div>
 
           {/* Text */}
@@ -220,7 +220,7 @@ export default function Home() {
             </p>
 
             {/* Stats */}
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20, maxWidth: 480 }}>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "28px 40px" }}>
               {[
                 { key: "briefcase", num: "50+", label: "Brands Supported" },
                 { key: "trending", num: "150,000+", label: "Investor Network" },
@@ -235,20 +235,15 @@ export default function Home() {
                 };
                 return (
                 <div key={label} className={`reveal${s2.inView ? " visible" : ""}`} style={{
-                  display: "flex", alignItems: "flex-start", gap: 14,
-                  minWidth: 168, padding: "14px 16px", borderRadius: 10,
-                  transition: "transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease",
+                  display: "flex", alignItems: "flex-start", gap: 12,
                   transitionDelay: `${i * 0.08}s`,
-                }}
-                onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-4px)"; el.style.boxShadow = "0 12px 32px rgba(216,115,7,0.15)"; el.style.background = "#FBF7F1"; }}
-                onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "none"; el.style.background = "transparent"; }}
-                >
-                  <div style={{ width: 48, height: 48, borderRadius: "50%", background: "#EFEDE7", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                }}>
+                  <div style={{ width: 44, height: 44, borderRadius: "50%", background: "#EFEDE7", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                     {statIcons[key]}
                   </div>
                   <div>
-                    <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 20, fontWeight: 900, color: "#1a1a1a", letterSpacing: "0.02em", lineHeight: 1.15 }}>{num}</p>
-                    <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11.5, color: "#d87307", fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", marginTop: 4 }}>{label}</p>
+                    <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 19, fontWeight: 900, color: "#1a1a1a", letterSpacing: "0.02em", lineHeight: 1.15 }}>{num}</p>
+                    <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, color: "#767676", fontWeight: 500, marginTop: 4 }}>{label}</p>
                   </div>
                 </div>
                 );
