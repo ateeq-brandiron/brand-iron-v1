@@ -117,7 +117,13 @@ const testimonials = [
   },
 ];
 
+const heroImages = ["/images/home-hero.jpg", "/images/hero-lake.webp"];
+
 export default function Home() {
+  const [heroImg, setHeroImg] = useState(heroImages[0]);
+  useEffect(() => {
+    setHeroImg(heroImages[Math.floor(Math.random() * heroImages.length)]);
+  }, []);
   const s2 = useInView();
   const s3 = useInView();
   const s3cards = useInView();
@@ -133,7 +139,7 @@ export default function Home() {
     <>
       {/* ── S1: HERO ─────────────────────────────────────── */}
       <section style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
-        <img src="/images/home-hero.jpg" alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }} />
+        <img src={heroImg} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.15) 50%, rgba(0,0,0,0.55) 100%)" }} />
 
         {/* Centered headline */}
