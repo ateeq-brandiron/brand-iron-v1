@@ -130,7 +130,7 @@ export default function Home() {
   const s3problems = useInView();
   const s4 = useInView();
   const s5 = useInView();
-  const [activeService, setActiveService] = useState(0);
+  const [activeService, setActiveService] = useState(1);
   const serviceCardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const carouselRef = useRef<HTMLDivElement>(null);
   const selectService = (i: number, behavior: ScrollBehavior = "smooth") => {
@@ -142,7 +142,7 @@ export default function Home() {
     }
   };
   useEffect(() => {
-    selectService(0, "instant");
+    selectService(1, "instant");
   }, []);
   const s6 = useInView();
   const s7 = useInView();

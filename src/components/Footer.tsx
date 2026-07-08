@@ -28,21 +28,23 @@ export default function Footer() {
     <footer style={{ position: "relative", color: "#FFFFFF", overflow: "hidden" }}>
 
       {/* "Forging Brands. Driving Revenue." bar above footer */}
-      <div style={{ background: "#F5F0E8", padding: "28px 32px", textAlign: "center" }}>
-        <p style={{
-          fontFamily: "'Burford Rustic Black', sans-serif",
-          fontSize: "clamp(28px, 4vw, 52px)", fontWeight: 900,
-          textTransform: "uppercase", letterSpacing: "0.03em",
-          color: "#945B06", lineHeight: 1, marginBottom: 12,
-        }}>
-          Forging Brands. Driving Revenue.™
-        </p>
-        <p style={{
-          fontFamily: "'Montserrat', sans-serif", fontSize: 15,
-          lineHeight: 1.7, color: "#6b5a3e", maxWidth: 900, margin: "0 auto",
-        }}>
-          Helping organizations become discoverable, trusted, and chosen through strategic positioning, AI visibility, revenue engineering, and connected growth systems.
-        </p>
+      <div style={{ background: "#F5F0E8", padding: "28px 32px" }}>
+        <div style={{ maxWidth: 1100, margin: "0 auto", textAlign: "left" }}>
+          <p style={{
+            fontFamily: "'Burford Rustic Black', sans-serif",
+            fontSize: "clamp(28px, 4vw, 52px)", fontWeight: 900,
+            textTransform: "uppercase", letterSpacing: "0.03em",
+            color: "#945B06", lineHeight: 1, marginBottom: 12,
+          }}>
+            Forging Brands. Driving Revenue.™
+          </p>
+          <p style={{
+            fontFamily: "'Montserrat', sans-serif", fontSize: 15,
+            lineHeight: 1.7, color: "#6b5a3e", maxWidth: 700,
+          }}>
+            Helping organizations become discoverable, trusted, and chosen through strategic positioning, AI visibility, revenue engineering, and connected growth systems.
+          </p>
+        </div>
       </div>
 
       {/* Split background */}
@@ -118,7 +120,8 @@ export default function Footer() {
               </div>
 
               {/* Newsletter */}
-              <div className="footer-newsletter" style={{ flex: 1, maxWidth: 340 }}>
+              <div className="footer-newsletter-wrap" style={{ flex: 1, display: "flex", justifyContent: "center" }}>
+              <div className="footer-newsletter" style={{ maxWidth: 340, width: "100%" }}>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, fontWeight: 700, color: "#FFFFFF", marginBottom: 16, lineHeight: 1.3 }}>
                   Subscribe To Our<br />Newsletter
                 </p>
@@ -153,6 +156,7 @@ export default function Footer() {
                     </svg>
                   </button>
                 </form>
+              </div>
               </div>
             </div>
 
@@ -197,6 +201,7 @@ export default function Footer() {
           .footer-logo-panel { width: 100% !important; height: 160px; }
           .footer-nav { justify-content: flex-start !important; flex-wrap: wrap !important; overflow-x: visible !important; }
           .footer-info-row { flex-direction: column !important; justify-content: flex-start !important; gap: 28px !important; }
+          .footer-newsletter-wrap { justify-content: flex-start !important; width: 100%; }
           .footer-address, .footer-newsletter { max-width: none !important; width: 100%; }
         }
       `}</style>
