@@ -476,18 +476,20 @@ export default function Home() {
               {differentiators.map(({ num, title, body, icon }, i) => (
                 <div key={num} className={`reveal${s4.inView ? " visible" : ""}`} style={{
                   background: "#FFFFFF", padding: "32px 24px", position: "relative",
-                  border: i === 2 ? "2px solid #d87307" : "1px solid #ece5d8",
-                  transitionDelay: `${i * 0.07}s`, transition: "transform 0.25s, box-shadow 0.25s",
+                  border: "1px solid #ece5d8",
+                  transitionDelay: `${i * 0.07}s`, transition: "transform 0.25s, box-shadow 0.25s, border-color 0.25s",
                 }}
                 onMouseEnter={e => {
                   (e.currentTarget as HTMLDivElement).style.transform = "translateY(-6px)";
                   (e.currentTarget as HTMLDivElement).style.boxShadow = "0 14px 36px rgba(0,0,0,0.1)";
+                  (e.currentTarget as HTMLDivElement).style.borderColor = "#d87307";
                   (e.currentTarget.querySelector(".diff-icon") as HTMLImageElement).style.transform = "scale(1.15)";
                   e.currentTarget.querySelectorAll<HTMLImageElement>(".corner-bracket").forEach(img => (img.style.opacity = "1"));
                 }}
                 onMouseLeave={e => {
                   (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
                   (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
+                  (e.currentTarget as HTMLDivElement).style.borderColor = "#ece5d8";
                   (e.currentTarget.querySelector(".diff-icon") as HTMLImageElement).style.transform = "scale(1)";
                   e.currentTarget.querySelectorAll<HTMLImageElement>(".corner-bracket").forEach(img => (img.style.opacity = "0"));
                 }}
