@@ -683,8 +683,8 @@ export default function Home() {
       </section>
 
       {/* ── S6: STRATEGIC PARTNER ────────────────────────── */}
-      <section style={{ position: "relative", overflow: "hidden", padding: "72px 24px", backgroundImage: "url('/images/bg-peaks.png')", backgroundSize: "cover", backgroundPosition: "center 40%" }}>
-        <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.42)" }} />
+      <section style={{ position: "relative", overflow: "hidden", padding: "72px 24px", backgroundImage: "url('/images/Brand Iron Tech River.png')", backgroundSize: "cover", backgroundPosition: "center 55%" }}>
+        <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.55)" }} />
         <div ref={s6.ref} style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto", textAlign: "left" }}>
           <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
             More Than a Service Provider. A Strategic Growth Partner.
