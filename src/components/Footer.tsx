@@ -28,7 +28,7 @@ export default function Footer() {
     <footer style={{ position: "relative", color: "#FFFFFF", overflow: "hidden" }}>
 
       {/* "Forging Brands. Driving Revenue." bar above footer */}
-      <div style={{ background: "#F5F0E8", padding: "28px 48px", textAlign: "center" }}>
+      <div style={{ background: "#F5F0E8", padding: "28px 32px", textAlign: "center" }}>
         <p style={{
           fontFamily: "'Burford Rustic Black', sans-serif",
           fontSize: "clamp(28px, 4vw, 52px)", fontWeight: 900,
@@ -55,7 +55,7 @@ export default function Footer() {
 
         {/* LEFT — leather bg with embossed logo */}
         <Link href="/" aria-label="Brand Iron — Home" style={{
-          width: "38%", flexShrink: 0,
+          width: "22%", flexShrink: 0,
           backgroundImage: "url('/images/bi-footer-logo.jpeg')",
           backgroundSize: "cover", backgroundPosition: "center",
           filter: "brightness(1)",
@@ -72,16 +72,16 @@ export default function Footer() {
           backgroundSize: "cover", backgroundPosition: "center 30%",
         }}>
           <div style={{ position: "absolute", inset: 0, background: "rgba(8,16,30,0.68)" }} />
-          <div style={{ position: "relative", zIndex: 1, padding: "40px 48px 40px 48px", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+          <div style={{ position: "relative", zIndex: 1, padding: "40px 32px 40px 32px", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
 
             {/* Nav links */}
-            <nav style={{ display: "flex", flexWrap: "wrap", gap: "0 4px", marginBottom: 28 }}>
+            <nav style={{ display: "flex", flexWrap: "nowrap", gap: "0 2px", marginBottom: 28, overflowX: "auto" }}>
               {navLinks.map(([label, href], i) => (
-                <span key={label} style={{ display: "flex", alignItems: "center" }}>
+                <span key={label} style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
                   <Link href={href} style={{
                     fontFamily: "'Montserrat', sans-serif", fontSize: 12, fontWeight: 700,
-                    letterSpacing: "0.14em", textTransform: "uppercase",
-                    color: "rgba(255,255,255,0.85)", padding: "2px 10px",
+                    letterSpacing: "0.06em", textTransform: "uppercase", whiteSpace: "nowrap",
+                    color: "rgba(255,255,255,0.85)", padding: "2px 6px",
                     textDecoration: "underline", textUnderlineOffset: 3,
                     transition: "color 0.2s",
                   }}
@@ -161,7 +161,7 @@ export default function Footer() {
       </div>
 
       {/* Copyright */}
-      <div style={{ background: "rgba(5,5,5,0.95)", padding: "14px 48px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
+      <div style={{ background: "rgba(5,5,5,0.95)", padding: "14px 32px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
         <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.35)" }}>
           © {new Date().getFullYear()} Brand Iron Marketing. All rights reserved.
         </p>

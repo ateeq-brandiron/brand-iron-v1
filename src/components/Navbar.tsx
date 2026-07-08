@@ -31,7 +31,7 @@ export default function Navbar() {
       position: "absolute", top: 0, left: 0, right: 0, zIndex: 1000,
       background: "transparent",
     }}>
-      <div style={{ maxWidth: 1360, margin: "0 auto", padding: "0 32px", display: "flex", alignItems: "center", justifyContent: "space-between", height: 72 }}>
+      <div style={{ maxWidth: 1360, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between", height: 72 }}>
 
         {/* Logo */}
         <Link href="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>

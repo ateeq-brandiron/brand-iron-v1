@@ -215,15 +215,17 @@ export default function Home() {
       </section>
 
       {/* ── S2: TRUST BAR ────────────────────────────────── */}
-      <section style={{ background: "#FFFFFF", padding: "24px 40px 40px" }}>
+      <section style={{ background: "#FFFFFF", padding: "24px 24px 40px" }}>
         <div ref={s2.ref} style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "auto 1fr", gap: 64, alignItems: "start" }}>
 
           {/* B-icon logo mask — overlaps the hero seam above */}
-          <div className={`reveal${s2.inView ? " visible" : ""}`} style={{ marginTop: -70, marginBottom: -70 }}>
-            <img src="/images/BI-Logo-Mask-1-e1723263913795 (1).png" alt="Brand Iron" style={{ width: 340, height: "auto", display: "block", transition: "transform 0.35s ease" }}
-              onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.05) rotate(-3deg)")}
-              onMouseLeave={e => (e.currentTarget.style.transform = "scale(1) rotate(0deg)")}
-            />
+          <div className={`reveal${s2.inView ? " visible" : ""}`} style={{ marginTop: -70, marginBottom: -70, perspective: 1200 }}>
+            <div className="logo-3d-float">
+              <img src="/images/BI-Logo-Mask-1-e1723263913795 (1).png" alt="Brand Iron" style={{ width: 340, height: "auto", display: "block", transition: "transform 0.35s ease" }}
+                onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.05) rotate(-3deg)")}
+                onMouseLeave={e => (e.currentTarget.style.transform = "scale(1) rotate(0deg)")}
+              />
+            </div>
           </div>
 
           {/* Text */}
@@ -283,7 +285,7 @@ export default function Home() {
 
       {/* ── S3: BUYING JOURNEY ───────────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "48px 0 56px" }}>
-        <div ref={s3.ref} style={{ maxWidth: 1180, margin: "0 auto", padding: "0 40px" }}>
+        <div ref={s3.ref} style={{ maxWidth: 1148, margin: "0 auto", padding: "0 24px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 64, alignItems: "start", marginBottom: 56 }}>
             {/* Text — left */}
             <div>
@@ -357,7 +359,7 @@ export default function Home() {
           })}
         </div>
 
-        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 40px" }}>
+        <div style={{ maxWidth: 1148, margin: "0 auto", padding: "0 24px" }}>
           {/* Closing statement */}
           <div className={`reveal${s3cards.inView ? " visible" : ""}`} style={{ textAlign: "left", paddingTop: 32 }}>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(14px, 1.6vw, 17px)", fontWeight: 500, color: "#777", marginBottom: 10 }}>
@@ -374,7 +376,7 @@ export default function Home() {
       <section style={{ position: "relative", overflow: "hidden", minHeight: 340 }}>
         <img src="/images/You-are-the-competition-bg-png.png" alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
         <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.18)" }} />
-        <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "center", justifyContent: "center", minHeight: 340, padding: "44px 40px" }}>
+        <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "center", justifyContent: "center", minHeight: 340, padding: "44px 24px" }}>
           {/* White card with corner brackets */}
           <div style={{
             background: "#FFFFFF", maxWidth: 520, width: "100%",
@@ -406,7 +408,7 @@ export default function Home() {
       </section>
 
       {/* ── S3C: PROBLEM CARDS ───────────────────────────── */}
-      <section style={{ position: "relative", overflow: "hidden", padding: "80px 40px", backgroundImage: "url('/images/bg-saddle-rope.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
+      <section style={{ position: "relative", overflow: "hidden", padding: "80px 24px", backgroundImage: "url('/images/bg-saddle-rope.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
         <div style={{ position: "absolute", inset: 0, background: "rgba(245,240,232,0.93)" }} />
         <div style={{ position: "absolute", inset: 0, backgroundImage: "url('/images/Dark-Mountains.webp')", backgroundSize: "60% auto", backgroundPosition: "center bottom", backgroundRepeat: "no-repeat", opacity: 0.06 }} />
         <div ref={s3problems.ref} style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto" }}>
@@ -445,7 +447,7 @@ export default function Home() {
         <div style={{ position: "relative", height: 180, overflow: "hidden" }}>
           <img src="/images/Grit-and-Gumption-Banner.png" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 30%" }} />
           <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.35)" }} />
-          <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "center", textAlign: "left", padding: "0 40px", maxWidth: 1100, margin: "0 auto" }}>
+          <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "center", textAlign: "left", padding: "0 24px", maxWidth: 1132, margin: "0 auto" }}>
             <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(32px, 6vw, 80px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#FFFFFF", lineHeight: 1, marginBottom: 8 }}>
               Brand Iron
             </h2>
@@ -456,7 +458,7 @@ export default function Home() {
         </div>
 
         {/* Cards on cream bg with mountain watermark */}
-        <div style={{ position: "relative", background: "#F5F0E8", padding: "56px 40px" }}>
+        <div style={{ position: "relative", background: "#F5F0E8", padding: "56px 24px" }}>
           <div style={{ position: "absolute", inset: 0, backgroundImage: "url('/images/Dark-Mountains.webp')", backgroundSize: "55% auto", backgroundPosition: "center center", backgroundRepeat: "no-repeat", opacity: 0.07 }} />
           <div ref={s4.ref} style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto" }}>
 
@@ -538,7 +540,7 @@ export default function Home() {
       </section>
 
       {/* ── S5: SERVICES ─────────────────────────────────── */}
-      <section style={{ background: "#FFFFFF", padding: "56px 40px" }}>
+      <section style={{ background: "#FFFFFF", padding: "56px 24px" }}>
         <div ref={s5.ref} style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ textAlign: "left", marginBottom: 56 }}>
             <h2 className={`reveal${s5.inView ? " visible" : ""}`} style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(26px, 4vw, 48px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 16 }}>
@@ -668,7 +670,7 @@ export default function Home() {
       </section>
 
       {/* ── S6: STRATEGIC PARTNER ────────────────────────── */}
-      <section style={{ position: "relative", overflow: "hidden", padding: "72px 40px", backgroundImage: "url('/images/bg-peaks.png')", backgroundSize: "cover", backgroundPosition: "center 40%" }}>
+      <section style={{ position: "relative", overflow: "hidden", padding: "72px 24px", backgroundImage: "url('/images/bg-peaks.png')", backgroundSize: "cover", backgroundPosition: "center 40%" }}>
         <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.72)" }} />
         <div ref={s6.ref} style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto", textAlign: "left" }}>
           <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
@@ -704,9 +706,9 @@ export default function Home() {
       </section>
 
       {/* ── S7: TESTIMONIALS ─────────────────────────────── */}
-      <section style={{ background: "#F7F4EE", padding: "88px 40px" }}>
-        <div ref={s7.ref} style={{ maxWidth: 1100, margin: "0 auto", textAlign: "left" }}>
-        <div style={{ maxWidth: 720 }}>
+      <section style={{ background: "#F7F4EE", padding: "88px 24px" }}>
+        <div ref={s7.ref} style={{ maxWidth: 1100, margin: "0 auto", textAlign: "center" }}>
+        <div style={{ maxWidth: 720, margin: "0 auto" }}>
           <p className={`reveal${s7.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 32 }}>
             What Our Clients Say
           </p>
@@ -734,7 +736,7 @@ export default function Home() {
             <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: "clamp(22px, 3vw, 30px)", letterSpacing: "0.06em", textTransform: "uppercase", color: "#1a1a1a", marginBottom: 16 }}>
               {testimonials[testimonialIndex].name}
             </h3>
-            <div style={{ display: "flex", justifyContent: "flex-start", gap: 4, marginBottom: 28, color: "#d87307", fontSize: 22 }}>
+            <div style={{ display: "flex", justifyContent: "center", gap: 4, marginBottom: 28, color: "#d87307", fontSize: 22 }}>
               {Array.from({ length: 5 }).map((_, i) => <span key={i}>★</span>)}
             </div>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 17, lineHeight: 1.8, color: "#444" }}>
@@ -792,7 +794,7 @@ export default function Home() {
       </section>
 
       {/* ── S8: FINAL CTA ────────────────────────────────── */}
-      <section style={{ position: "relative", overflow: "hidden", padding: "100px 40px", backgroundImage: "url('/images/shutterstock_2489980613-scaled.jpg')", backgroundSize: "cover", backgroundPosition: "center 40%" }}>
+      <section style={{ position: "relative", overflow: "hidden", padding: "100px 24px", backgroundImage: "url('/images/shutterstock_2489980613-scaled.jpg')", backgroundSize: "cover", backgroundPosition: "center 40%" }}>
         <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.82)" }} />
         <div ref={s8.ref} style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto", textAlign: "left" }}>
           <h2 className={`reveal${s8.inView ? " visible" : ""}`} style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(32px, 5.5vw, 72px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.0, marginBottom: 20 }}>
