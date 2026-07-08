@@ -674,7 +674,7 @@ export default function Home() {
               <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(19px, 2.4vw, 28px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", lineHeight: 1.35, color: "#1a1a1a", margin: "0 0 22px" }}>
                 but the greatest impact comes when they&apos;re connected through a unified growth strategy.
               </p>
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#1a1a1a", margin: "0" }}>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", margin: "0" }}>
                 Whether you&apos;re building your brand, increasing visibility, generating demand, or preparing for investment, Brand Iron helps ensure every initiative contributes to measurable business growth.
               </p>
             </div>
@@ -810,46 +810,48 @@ export default function Home() {
             position: "relative", overflow: "hidden", borderRadius: 20,
             backgroundImage: "url('/images/shutterstock_2489980613-scaled.jpg')", backgroundSize: "cover", backgroundPosition: "center 40%",
           }}>
-            <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.82)" }} />
-            <div style={{ position: "relative", zIndex: 1, padding: "72px 48px", textAlign: "center" }}>
+            <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.5)" }} />
+            <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>
               <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(32px, 5.5vw, 72px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.0, marginBottom: 20 }}>
                 Get Found.<br />Get Trusted.<br />Generate Revenue.
               </h2>
               <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", fontStyle: "italic", maxWidth: 640, margin: "0 auto 48px" }}>
                 The strongest brands don&apos;t leave growth to chance. They build it with intention.
               </p>
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 28 }}>
-                Choose Your Next Step
-              </p>
-              <div style={{ display: "flex", justifyContent: "center", gap: 40, marginBottom: 8, flexWrap: "wrap", textAlign: "center" }}>
-                <div style={{ flex: "1 1 320px", maxWidth: 400 }}>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(255,255,255,0.75)", marginBottom: 20 }}>
-                    Let&apos;s discuss your business goals, current challenges, and opportunities for growth. Together, we&apos;ll identify where your greatest opportunities lie and outline practical next steps.
-                  </p>
-                  <Link href="/contact" style={{
-                    fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 14,
-                    letterSpacing: "0.14em", textTransform: "uppercase",
-                    background: "#d87307", color: "#FFFFFF", padding: "16px 40px", borderRadius: 40,
-                    display: "inline-block", transition: "background 0.2s",
-                  }}
-                  onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
-                  onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
-                  >Book a Strategy Session</Link>
-                </div>
-                <div style={{ flex: "1 1 320px", maxWidth: 400 }}>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(255,255,255,0.75)", marginBottom: 20 }}>
-                    Learn how Brand Strategy, AI Visibility, Go-to-Market Strategy, Revenue Engineering, Outbound Growth, Website Development, and Capital Raise Support work together to create measurable business outcomes.
-                  </p>
-                  <Link href="/services" style={{
-                    fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 14,
-                    letterSpacing: "0.14em", textTransform: "uppercase",
-                    background: "transparent", color: "#FFFFFF",
-                    padding: "16px 40px", border: "2px solid rgba(255,255,255,0.6)", borderRadius: 40,
-                    display: "inline-block", transition: "border-color 0.2s",
-                  }}
-                  onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.borderColor = "#d87307")}
-                  onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,255,255,0.6)")}
-                  >Explore Our Solutions</Link>
+              <div style={{ textAlign: "left" }}>
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 28 }}>
+                  Choose Your Next Step
+                </p>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 32 }}>
+                  <div>
+                    <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(255,255,255,0.85)", marginBottom: 20 }}>
+                      Let&apos;s discuss your business goals, current challenges, and opportunities for growth. Together, we&apos;ll identify where your greatest opportunities lie and outline practical next steps.
+                    </p>
+                    <Link href="/contact" style={{
+                      fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 14,
+                      letterSpacing: "0.14em", textTransform: "uppercase",
+                      background: "#d87307", color: "#FFFFFF", padding: "16px 40px", borderRadius: 2,
+                      display: "inline-block", transition: "background 0.2s",
+                    }}
+                    onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
+                    onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
+                    >Book a Strategy Session</Link>
+                  </div>
+                  <div>
+                    <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(255,255,255,0.85)", marginBottom: 20 }}>
+                      Learn how Brand Strategy, AI Visibility, Go-to-Market Strategy, Revenue Engineering, Outbound Growth, Website Development, and Capital Raise Support work together to create measurable business outcomes.
+                    </p>
+                    <Link href="/services" style={{
+                      fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 14,
+                      letterSpacing: "0.14em", textTransform: "uppercase",
+                      background: "transparent", color: "#FFFFFF",
+                      padding: "16px 40px", border: "2px solid rgba(255,255,255,0.6)", borderRadius: 2,
+                      display: "inline-block", transition: "border-color 0.2s",
+                    }}
+                    onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.borderColor = "#d87307")}
+                    onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,255,255,0.6)")}
+                    >Explore Our Solutions</Link>
+                  </div>
                 </div>
               </div>
             </div>
