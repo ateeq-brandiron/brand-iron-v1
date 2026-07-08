@@ -436,6 +436,12 @@ h1, h2, h3, h4, h5, h6 {
 .growth-card:hover .corner-tr, .growth-card:hover .corner-bl {
   border-color: #d87307 !important;
 }
+.growth-card .corner-bracket {
+  transition: opacity 0.25s ease;
+}
+.growth-card:hover .corner-bracket {
+  opacity: 1 !important;
+}
 
 /* ── Team cards ──────────────────────────────────────────── */
 .team-card {
