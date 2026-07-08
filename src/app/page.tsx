@@ -381,8 +381,8 @@ export default function Home() {
           onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 4px 20px rgba(0,0,0,0.08)"; }}
           >
             {/* Corner brackets */}
-            <img src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 10, right: 10, width: 24, height: 24 }} />
-            <img src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 10, left: 10, width: 24, height: 24 }} />
+            <img src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 8, right: 8, width: 42, height: 42 }} />
+            <img src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 8, left: 8, width: 42, height: 42 }} />
 
             <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(22px, 3vw, 36px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.1, marginBottom: 20 }}>
               Why Great Companies<br />Still Struggle to Grow
@@ -408,8 +408,8 @@ export default function Home() {
                 borderBottom: "4px solid transparent",
               }}
               >
-                <img src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 10, right: 10, width: 20, height: 20 }} />
-                <img src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 10, left: 10, width: 20, height: 20 }} />
+                <img src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 6, right: 6, width: 28, height: 28 }} />
+                <img src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 6, left: 6, width: 28, height: 28 }} />
                 <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: 13, color: "#1a1a1a", marginBottom: 10, lineHeight: 1.4 }}>{heading}</h3>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, lineHeight: 1.75, color: "#666" }}>{body}</p>
               </div>
@@ -484,8 +484,8 @@ export default function Home() {
                   (e.currentTarget.querySelector(".diff-icon") as HTMLImageElement).style.transform = "scale(1)";
                 }}
                 >
-                  <img src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 8, right: 8, width: 18, height: 18 }} />
-                  <img src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 8, left: 8, width: 18, height: 18 }} />
+                  <img src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 6, right: 6, width: 26, height: 26 }} />
+                  <img src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 6, left: 6, width: 26, height: 26 }} />
                   <img className="diff-icon" src={icon} alt="" style={{ width: 34, height: 34, marginBottom: 18, transition: "transform 0.3s ease" }} />
                   <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", color: "#d87307", marginBottom: 8 }}>{num}</p>
                   <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 12, lineHeight: 1.4 }}>{title}</h3>
@@ -504,8 +504,8 @@ export default function Home() {
             onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = "0 16px 40px rgba(216,115,7,0.14)"; (e.currentTarget as HTMLDivElement).style.borderLeftColor = "#945B06"; }}
             onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = "0 2px 12px rgba(0,0,0,0.04)"; (e.currentTarget as HTMLDivElement).style.borderLeftColor = "#d87307"; }}
             >
-              <img src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 10, right: 12, width: 22, height: 22 }} />
-              <img src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 10, left: 16, width: 22, height: 22 }} />
+              <img src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 8, right: 10, width: 38, height: 38 }} />
+              <img src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 8, left: 14, width: 38, height: 38 }} />
               <div>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 12 }}>Our Commitment</p>
                 <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#1a1a1a", lineHeight: 1.2, marginBottom: 12 }}>
@@ -564,8 +564,8 @@ export default function Home() {
               onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(-4px)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 8px 32px rgba(0,0,0,0.1)"; }}
               onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "none"; }}
               >
-                <img src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 8, right: 8, width: 20, height: 20 }} />
-                <img src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 8, left: 8, width: 20, height: 20 }} />
+                <img src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 6, right: 6, width: 30, height: 30 }} />
+                <img src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 6, left: 6, width: 30, height: 30 }} />
                 <div style={{ width: "100%", height: 3, background: "#d87307", marginBottom: 20 }} />
                 <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 18, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 6 }}>{title}</h3>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, fontWeight: 700, color: "#d87307", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 14 }}>{sub}</p>
@@ -656,8 +656,8 @@ export default function Home() {
           onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(-6px)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 32px 72px rgba(26,20,10,0.14)"; }}
           onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 24px 60px rgba(26,20,10,0.08)"; }}
           >
-            <img src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 20, right: 20, width: 24, height: 24 }} />
-            <img src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 20, left: 20, width: 24, height: 24 }} />
+            <img src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 18, right: 18, width: 40, height: 40 }} />
+            <img src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 18, left: 18, width: 40, height: 40 }} />
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 600, fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase", color: "#999", marginBottom: 24 }}>
               {testimonials[testimonialIndex].title}
             </p>
