@@ -348,7 +348,7 @@ export default function Home() {
 
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px" }}>
           {/* Closing statement */}
-          <div className={`reveal${s3cards.inView ? " visible" : ""}`} style={{ textAlign: "center", paddingTop: 32 }}>
+          <div className={`reveal${s3cards.inView ? " visible" : ""}`} style={{ textAlign: "left", paddingTop: 32 }}>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(14px, 1.6vw, 17px)", fontWeight: 500, color: "#777", marginBottom: 10 }}>
               Organizations that win today aren&apos;t simply louder.
             </p>
@@ -399,7 +399,7 @@ export default function Home() {
         <div style={{ position: "absolute", inset: 0, background: "rgba(245,240,232,0.93)" }} />
         <div style={{ position: "absolute", inset: 0, backgroundImage: "url('/images/Dark-Mountains.webp')", backgroundSize: "60% auto", backgroundPosition: "center bottom", backgroundRepeat: "no-repeat", opacity: 0.06 }} />
         <div ref={s3problems.ref} style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto" }}>
-          <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(20px, 2.4vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 32, textAlign: "center" }}>Common Growth Challenges</h2>
+          <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(20px, 2.4vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 32, textAlign: "left" }}>Common Growth Challenges</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 20 }}>
             {problems.map(({ heading, body }, i) => (
               <div key={i} className="growth-card" style={{
@@ -417,7 +417,7 @@ export default function Home() {
           </div>
 
           {/* Closing */}
-          <div style={{ textAlign: "center", marginTop: 48 }}>
+          <div style={{ textAlign: "left", marginTop: 48 }}>
             <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(16px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#1a1a1a" }}>
               Growth shouldn&apos;t depend on disconnected tactics.
             </p>
@@ -434,7 +434,7 @@ export default function Home() {
         <div style={{ position: "relative", height: 180, overflow: "hidden" }}>
           <img src="/images/Grit-and-Gumption-Banner.png" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 30%" }} />
           <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.35)" }} />
-          <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center" }}>
+          <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "center", textAlign: "left", padding: "0 40px", maxWidth: 1100, margin: "0 auto" }}>
             <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(32px, 6vw, 80px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#FFFFFF", lineHeight: 1, marginBottom: 8 }}>
               Brand Iron
             </h2>
@@ -505,17 +505,17 @@ export default function Home() {
             </div>
 
             {/* Commitment + closing */}
-            <div className={`reveal${s4.inView ? " visible" : ""}`} style={{ textAlign: "center", margin: "48px auto 0" }}>
+            <div className={`reveal${s4.inView ? " visible" : ""}`} style={{ textAlign: "left", margin: "48px 0 0" }}>
               <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(16px, 2.2vw, 28px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", lineHeight: 1.3, marginBottom: 20 }}>
                 Every recommendation is guided by one question: will this create measurable value for your business?
               </h3>
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", maxWidth: 760, margin: "0 auto 32px" }}>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", maxWidth: 760, margin: "0 0 32px" }}>
                 If the answer is no, we won&apos;t recommend it. That means no unnecessary complexity, no one-size-fits-all playbooks, and no chasing vanity metrics. Just practical strategies designed to help your organization grow with confidence.
               </p>
               <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(16px, 2.2vw, 28px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", lineHeight: 1.3, marginBottom: 18 }}>
                 Modern growth requires more than marketing.
               </h3>
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", maxWidth: 760, margin: "0 auto 18px" }}>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", maxWidth: 760, margin: "0 0 18px" }}>
                 It requires a partner who understands how brand strategy, discoverability, demand generation, technology, and revenue operations work together to create competitive advantage.
               </p>
               <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a" }}>
@@ -529,11 +529,11 @@ export default function Home() {
       {/* ── S5: SERVICES ─────────────────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "56px 40px" }}>
         <div ref={s5.ref} style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 56 }}>
+          <div style={{ textAlign: "left", marginBottom: 56 }}>
             <h2 className={`reveal${s5.inView ? " visible" : ""}`} style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(26px, 4vw, 48px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 16 }}>
               Solutions That Move Businesses Forward
             </h2>
-            <p className={`reveal${s5.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#555", maxWidth: 680, margin: "0 auto 10px" }}>
+            <p className={`reveal${s5.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#555", maxWidth: 680, margin: "0 0 10px" }}>
               Every business faces unique growth challenges — from strengthening its brand and increasing visibility to generating demand, optimizing revenue, or raising capital. Rather than delivering disconnected services, Brand Iron brings these capabilities together into one connected growth system designed to help organizations become discoverable, trusted, and chosen.
             </p>
           </div>
@@ -587,7 +587,7 @@ export default function Home() {
 
           {/* Closing */}
           <div className={`reveal${s5.inView ? " visible" : ""}`} style={{
-            textAlign: "center", padding: "40px 48px", position: "relative", overflow: "hidden",
+            textAlign: "left", padding: "40px 48px", position: "relative", overflow: "hidden",
             borderLeft: "4px solid #d87307",
             backgroundImage: "url('/images/bg-outcomes.png')", backgroundSize: "cover", backgroundPosition: "center",
           }}>
@@ -596,10 +596,10 @@ export default function Home() {
               <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(14px, 1.6vw, 17px)", fontWeight: 500, color: "#1a1a1a", marginBottom: 10 }}>
                 Each solution delivers value on its own,
               </p>
-              <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(19px, 2.4vw, 28px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", lineHeight: 1.35, color: "#1a1a1a", maxWidth: 760, margin: "0 auto 22px" }}>
+              <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(19px, 2.4vw, 28px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", lineHeight: 1.35, color: "#1a1a1a", maxWidth: 760, margin: "0 0 22px" }}>
                 but the greatest impact comes when they&apos;re connected through a unified growth strategy.
               </p>
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#1a1a1a", maxWidth: 700, margin: "0 auto" }}>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#1a1a1a", maxWidth: 700, margin: "0" }}>
                 Whether you&apos;re building your brand, increasing visibility, generating demand, or preparing for investment, Brand Iron helps ensure every initiative contributes to measurable business growth.
               </p>
             </div>
@@ -610,7 +610,7 @@ export default function Home() {
       {/* ── S6: STRATEGIC PARTNER ────────────────────────── */}
       <section style={{ position: "relative", overflow: "hidden", padding: "72px 40px", backgroundImage: "url('/images/bg-peaks.png')", backgroundSize: "cover", backgroundPosition: "center 40%" }}>
         <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.72)" }} />
-        <div ref={s6.ref} style={{ position: "relative", zIndex: 1, maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
+        <div ref={s6.ref} style={{ position: "relative", zIndex: 1, maxWidth: 900, margin: "0 auto", textAlign: "left" }}>
           <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
             More Than a Service Provider. A Strategic Growth Partner.
           </p>
@@ -620,16 +620,16 @@ export default function Home() {
           <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.08em", textTransform: "uppercase", color: "rgba(255,255,255,0.6)", marginBottom: 24 }}>
             We Build Alongside Your Team
           </p>
-          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.85, color: "rgba(255,255,255,0.82)", marginBottom: 14, maxWidth: 760, margin: "0 auto 14px" }}>
+          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.85, color: "rgba(255,255,255,0.82)", maxWidth: 760, margin: "0 0 14px" }}>
             Growth is a team effort. That&apos;s why we work as an extension of your leadership team — helping you make smarter decisions, focus on the right opportunities, and build systems that drive long-term growth. Our success is measured by yours. We&apos;re here to help you build what&apos;s next.
           </p>
-          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.85, color: "rgba(255,255,255,0.75)", maxWidth: 760, margin: "0 auto 14px" }}>
+          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.85, color: "rgba(255,255,255,0.75)", maxWidth: 760, margin: "0 0 14px" }}>
             Whether you&apos;re defining your brand, entering a new market, improving AI visibility, scaling revenue operations, or preparing for your next stage of growth, Brand Iron is ready to help you move forward with clarity, confidence, and purpose.
           </p>
-          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.85, color: "#FFFFFF", fontWeight: 600, fontStyle: "italic", maxWidth: 760, margin: "0 auto 40px" }}>
+          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.85, color: "#FFFFFF", fontWeight: 600, fontStyle: "italic", maxWidth: 760, margin: "0 0 40px" }}>
             Every successful growth story begins with a conversation. Let&apos;s start yours.
           </p>
-          <div className={`reveal${s6.inView ? " visible" : ""}`} style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
+          <div className={`reveal${s6.inView ? " visible" : ""}`} style={{ display: "flex", gap: 16, justifyContent: "flex-start", flexWrap: "wrap" }}>
             <Link href="/contact" style={{
               fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
@@ -645,7 +645,7 @@ export default function Home() {
 
       {/* ── S7: TESTIMONIALS ─────────────────────────────── */}
       <section style={{ background: "#F7F4EE", padding: "88px 40px" }}>
-        <div ref={s7.ref} style={{ maxWidth: 720, margin: "0 auto", textAlign: "center" }}>
+        <div ref={s7.ref} style={{ maxWidth: 720, margin: "0 auto", textAlign: "left" }}>
           <p className={`reveal${s7.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 32 }}>
             What Our Clients Say
           </p>
@@ -673,7 +673,7 @@ export default function Home() {
             <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: "clamp(22px, 3vw, 30px)", letterSpacing: "0.06em", textTransform: "uppercase", color: "#1a1a1a", marginBottom: 16 }}>
               {testimonials[testimonialIndex].name}
             </h3>
-            <div style={{ display: "flex", justifyContent: "center", gap: 4, marginBottom: 28, color: "#d87307", fontSize: 22 }}>
+            <div style={{ display: "flex", justifyContent: "flex-start", gap: 4, marginBottom: 28, color: "#d87307", fontSize: 22 }}>
               {Array.from({ length: 5 }).map((_, i) => <span key={i}>★</span>)}
             </div>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 17, lineHeight: 1.8, color: "#444" }}>
@@ -732,7 +732,7 @@ export default function Home() {
       {/* ── S8: FINAL CTA ────────────────────────────────── */}
       <section style={{ position: "relative", overflow: "hidden", padding: "100px 40px", backgroundImage: "url('/images/shutterstock_2489980613-scaled.jpg')", backgroundSize: "cover", backgroundPosition: "center 40%" }}>
         <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.82)" }} />
-        <div ref={s8.ref} style={{ position: "relative", zIndex: 1, maxWidth: 860, margin: "0 auto", textAlign: "center" }}>
+        <div ref={s8.ref} style={{ position: "relative", zIndex: 1, maxWidth: 860, margin: "0 auto", textAlign: "left" }}>
           <h2 className={`reveal${s8.inView ? " visible" : ""}`} style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(32px, 5.5vw, 72px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.0, marginBottom: 20 }}>
             Get Found.<br />Get Trusted.<br />Generate Revenue.
           </h2>
