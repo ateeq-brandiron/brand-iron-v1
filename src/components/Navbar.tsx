@@ -74,7 +74,7 @@ export default function Navbar() {
                   <Link key={s.href} href={s.href} style={{
                     display: "block",
                     padding: "11px 24px",
-                    fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
+                    fontFamily: "'Burford Rustic Black', Helvetica, Arial, sans-serif", fontWeight: 700, fontSize: 14,
                     letterSpacing: "0.02em",
                     color: "#1a1a1a",
                     transition: "color 0.2s",
