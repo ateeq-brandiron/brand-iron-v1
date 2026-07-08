@@ -440,8 +440,8 @@ export default function Home() {
       <section style={{ position: "relative", overflow: "hidden" }}>
         {/* Grit & Gumption banner */}
         <div style={{ position: "relative", height: 180, overflow: "hidden" }}>
-          <img src="/images/horse mane circuit lines_1.png" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 55%" }} />
-          <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.4)" }} />
+          <img src="/images/Grit-and-Gumption-Banner.png" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 30%" }} />
+          <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.35)" }} />
           <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center" }}>
             <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(32px, 6vw, 80px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#FFFFFF", lineHeight: 1, marginBottom: 8 }}>
               Brand Iron
