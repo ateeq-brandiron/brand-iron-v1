@@ -475,7 +475,7 @@ export default function Home() {
 
               {/* Image — right */}
               <div className={`reveal${s4.inView ? " visible" : ""}`}>
-                <img src="/images/horse mane circuit lines_1.png" alt="" style={{ width: "100%", height: "auto", display: "block", boxShadow: "0 24px 60px rgba(0,0,0,0.18)" }} />
+                <img src="/images/BIPresentationImage-3-e1725442860394-960x551.jpeg" alt="" style={{ width: "100%", height: "auto", display: "block", boxShadow: "0 24px 60px rgba(0,0,0,0.18)" }} />
               </div>
             </div>
 
