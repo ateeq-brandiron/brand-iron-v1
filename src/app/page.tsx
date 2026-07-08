@@ -132,9 +132,14 @@ export default function Home() {
   const s5 = useInView();
   const [activeService, setActiveService] = useState(0);
   const serviceCardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const carouselRef = useRef<HTMLDivElement>(null);
   const selectService = (i: number, behavior: ScrollBehavior = "smooth") => {
     setActiveService(i);
-    serviceCardRefs.current[i]?.scrollIntoView({ behavior, inline: "center", block: "nearest" });
+    const container = carouselRef.current;
+    const card = serviceCardRefs.current[i];
+    if (container && card) {
+      container.scrollTo({ left: card.offsetLeft - (container.clientWidth - card.clientWidth) / 2, behavior });
+    }
   };
   useEffect(() => {
     selectService(0, "instant");
@@ -195,21 +200,27 @@ export default function Home() {
         </div>
 
         {/* Service labels at bottom */}
-        <div style={{ position: "absolute", bottom: 36, left: 0, right: 0, display: "flex", justifyContent: "center", padding: "0 32px 20px" }}>
-        <div style={{ maxWidth: 1100, width: "100%", display: "flex", flexWrap: "nowrap", justifyContent: "space-between", alignItems: "center", gap: 28, overflowX: "auto" }}>
-          {services.map(s => (
+        <div style={{ position: "absolute", bottom: 64, left: 0, right: 0, display: "flex", justifyContent: "center", padding: "0 32px 20px" }}>
+        <div style={{ maxWidth: 1100, width: "100%", display: "flex", flexWrap: "nowrap", justifyContent: "space-between", alignItems: "flex-start", gap: 36, overflowX: "auto" }}>
+          {services.map(s => {
+            const words = s.label.split(" ");
+            const firstLine = words[0];
+            const secondLine = words.slice(1).join(" ");
+            return (
             <p key={s.label} style={{
               flex: "0 0 auto",
               fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 11,
               letterSpacing: "0.16em", textTransform: "uppercase",
               color: "#FFFFFF", textShadow: "0 1px 8px rgba(0,0,0,0.8)",
-              whiteSpace: "nowrap", cursor: "default",
+              whiteSpace: "nowrap", cursor: "default", textAlign: "center",
+              lineHeight: 1.6,
               transition: "color 0.2s",
             }}
             onMouseEnter={e => (e.currentTarget.style.color = "#d87307")}
             onMouseLeave={e => (e.currentTarget.style.color = "#FFFFFF")}
-            >{s.label}</p>
-          ))}
+            >{firstLine}<br />{secondLine}</p>
+            );
+          })}
         </div>
         </div>
       </section>
@@ -230,7 +241,7 @@ export default function Home() {
 
           {/* Text */}
           <div className={`reveal${s2.inView ? " visible" : ""}`}>
-            <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(24px, 3vw, 38px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.25, marginBottom: 40, maxWidth: 620 }}>
+            <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(24px, 3vw, 38px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.25, marginBottom: 40 }}>
               Trusted by founders, executives, and growth-focused organizations.
             </h2>
 
@@ -569,7 +580,7 @@ export default function Home() {
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </button>
 
-            <div className="services-carousel" style={{
+            <div ref={carouselRef} className="services-carousel" style={{
               display: "flex", gap: 24, overflowX: "auto",
               scrollSnapType: "x mandatory",
               padding: "8px calc(50% - 160px)",
