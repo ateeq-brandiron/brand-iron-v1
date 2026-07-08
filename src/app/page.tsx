@@ -457,19 +457,25 @@ export default function Home() {
           <div style={{ position: "absolute", inset: 0, backgroundImage: "url('/images/Dark-Mountains.webp')", backgroundSize: "55% auto", backgroundPosition: "center center", backgroundRepeat: "no-repeat", opacity: 0.07 }} />
           <div ref={s4.ref} style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto" }}>
 
-            <div style={{ textAlign: "center", marginBottom: 56 }}>
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 18 }}>What Makes Brand Iron Different</p>
-              <p className={`reveal${s4.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 19, fontWeight: 500, lineHeight: 1.65, color: "#333", maxWidth: 640, margin: "0 auto 22px" }}>
-                AI is transforming how businesses grow — but technology alone has never been a strategy.
-              </p>
-              <p className={`reveal${s4.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.85, color: "#767676", maxWidth: 600, margin: "0 auto 36px" }}>
-                At Brand Iron, we combine human expertise with AI-assisted intelligence to help organizations make better decisions, move faster, and execute with greater precision. AI accelerates the work; experienced strategists provide the judgment, creativity, and business insight that drive meaningful outcomes.
-              </p>
-              <div className={`reveal${s4.inView ? " visible" : ""}`} style={{ maxWidth: 640, margin: "0 auto", paddingTop: 28, borderTop: "2px solid #e5ded0" }}>
-                <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(19px, 2.4vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", lineHeight: 1.35, color: "#1a1a1a" }}>
-                  Because sustainable growth isn&apos;t automated.<br />
-                  <span style={{ color: "#d87307" }}>It&apos;s engineered.</span>
+            <div style={{ display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 64, alignItems: "center", marginBottom: 56 }}>
+              {/* Text — left */}
+              <div>
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 18 }}>What Makes Brand Iron Different</p>
+                <p className={`reveal${s4.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", marginBottom: 18 }}>
+                  AI is transforming how businesses grow — but technology alone has never been a strategy.
                 </p>
+                <p className={`reveal${s4.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", marginBottom: 36 }}>
+                  At Brand Iron, we combine human expertise with AI-assisted intelligence to help organizations make better decisions, move faster, and execute with greater precision. AI accelerates the work; experienced strategists provide the judgment, creativity, and business insight that drive meaningful outcomes.
+                </p>
+                <p className={`reveal${s4.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a" }}>
+                  Because sustainable growth isn&apos;t automated.<br />
+                  It&apos;s engineered.
+                </p>
+              </div>
+
+              {/* Image — right */}
+              <div className={`reveal${s4.inView ? " visible" : ""}`}>
+                <img src="/images/horse mane circuit lines_1.png" alt="" style={{ width: "100%", height: "auto", display: "block", boxShadow: "0 24px 60px rgba(0,0,0,0.18)" }} />
               </div>
             </div>
 
