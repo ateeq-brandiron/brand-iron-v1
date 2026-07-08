@@ -3,14 +3,13 @@ import { useState } from "react";
 import Link from "next/link";
 
 const servicesMenu = [
-  { label: "Investor Outreach Campaigns", href: "/services/capital-raise/outreach" },
-  { label: "Capital Raise Decks", href: "/services/capital-raise/deck" },
-  { label: "Brand Champion", href: "/services/brand-strategy" },
-  { label: "GTM-Strategy", href: "/services/gtm" },
+  { label: "Brand Strategy", href: "/services/brand-strategy" },
+  { label: "AI Visibility & Discoverability", href: "/services/ai-visibility" },
+  { label: "GTM Strategy", href: "/services/gtm" },
+  { label: "Revenue Engineering", href: "/services/revenue-engineering" },
+  { label: "Outbound Growth", href: "/services/outbound-growth" },
   { label: "Website Development", href: "/services/website-development" },
-  { label: "Branding", href: "/services/brand-strategy/brand-development" },
-  { label: "Automation", href: "/services/revenue-engineering/marketing-automation" },
-  { label: "Industries", href: "/industries" },
+  { label: "Capital Raise Support", href: "/services/capital-raise" },
 ];
 
 const navLinks = [
