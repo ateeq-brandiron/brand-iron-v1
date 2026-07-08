@@ -51,10 +51,10 @@ export default function Footer() {
       </div>
 
       {/* Main footer body */}
-      <div style={{ position: "relative", display: "flex", minHeight: 340 }}>
+      <div className="footer-body" style={{ position: "relative", display: "flex", minHeight: 340 }}>
 
         {/* LEFT — leather bg with embossed logo */}
-        <Link href="/" aria-label="Brand Iron — Home" style={{
+        <Link href="/" aria-label="Brand Iron — Home" className="footer-logo-panel" style={{
           width: "22%", flexShrink: 0,
           backgroundImage: "url('/images/bi-footer-logo.jpeg')",
           backgroundSize: "cover", backgroundPosition: "center",
@@ -75,7 +75,7 @@ export default function Footer() {
           <div style={{ position: "relative", zIndex: 1, padding: "40px 32px 40px 32px", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
 
             {/* Nav links */}
-            <nav style={{ display: "flex", flexWrap: "nowrap", gap: "0 2px", marginBottom: 28, overflowX: "auto" }}>
+            <nav className="footer-nav" style={{ display: "flex", flexWrap: "nowrap", justifyContent: "center", gap: "0 2px", marginBottom: 28, overflowX: "auto" }}>
               {navLinks.map(([label, href], i) => (
                 <span key={label} style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
                   <Link href={href} style={{
@@ -94,10 +94,10 @@ export default function Footer() {
             </nav>
 
             {/* Address + newsletter */}
-            <div style={{ display: "flex", gap: 48, alignItems: "flex-start", flex: 1 }}>
+            <div className="footer-info-row" style={{ display: "flex", gap: 48, alignItems: "flex-start", justifyContent: "space-between", flex: 1 }}>
 
               {/* Address */}
-              <div style={{ minWidth: 200 }}>
+              <div className="footer-address" style={{ minWidth: 200 }}>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.9, color: "rgba(255,255,255,0.9)", fontWeight: 600 }}>Brand Iron</p>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.9, color: "rgba(255,255,255,0.75)" }}>2590 Welton St. Suite 200,</p>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.9, color: "rgba(255,255,255,0.75)" }}>Denver, CO 80205</p>
@@ -118,7 +118,7 @@ export default function Footer() {
               </div>
 
               {/* Newsletter */}
-              <div style={{ flex: 1, maxWidth: 340 }}>
+              <div className="footer-newsletter" style={{ flex: 1, maxWidth: 340 }}>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, fontWeight: 700, color: "#FFFFFF", marginBottom: 16, lineHeight: 1.3 }}>
                   Subscribe To Our<br />Newsletter
                 </p>
@@ -190,6 +190,16 @@ export default function Footer() {
           <path d="M12 19V5M5 12l7-7 7 7" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       </button>
+
+      <style>{`
+        @media (max-width: 820px) {
+          .footer-body { flex-direction: column; }
+          .footer-logo-panel { width: 100% !important; height: 160px; }
+          .footer-nav { justify-content: flex-start !important; flex-wrap: wrap !important; overflow-x: visible !important; }
+          .footer-info-row { flex-direction: column !important; justify-content: flex-start !important; gap: 28px !important; }
+          .footer-address, .footer-newsletter { max-width: none !important; width: 100%; }
+        }
+      `}</style>
 
     </footer>
   );
