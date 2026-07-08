@@ -246,7 +246,7 @@ export default function Home() {
             </h2>
 
             {/* Stats */}
-            <div className="trust-stats-row" style={{ display: "flex", gap: "28px 40px" }}>
+            <div className="trust-stats-row" style={{ display: "flex", gap: "20px 24px" }}>
               {[
                 { key: "briefcase", num: "50+", label: "Brands Supported" },
                 { key: "trending", num: "150,000+", label: "Investor Network" },
@@ -283,8 +283,8 @@ export default function Home() {
                     {statIcons[key]}
                   </div>
                   <div>
-                    <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 19, fontWeight: 900, color: "#1a1a1a", letterSpacing: "0.02em", lineHeight: 1.15, transition: "color 0.25s ease" }}>{num}</p>
-                    <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, color: "#767676", fontWeight: 500, marginTop: 4 }}>{label}</p>
+                    <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 22, fontWeight: 900, color: "#1a1a1a", letterSpacing: "0.02em", lineHeight: 1.15, whiteSpace: "nowrap", transition: "color 0.25s ease" }}>{num}</p>
+                    <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, color: "#767676", fontWeight: 500, marginTop: 4 }}>{label}</p>
                   </div>
                 </div>
                 );
