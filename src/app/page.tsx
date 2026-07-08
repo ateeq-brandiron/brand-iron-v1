@@ -217,15 +217,9 @@ export default function Home() {
 
           {/* Text */}
           <div className={`reveal${s2.inView ? " visible" : ""}`}>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.16em", textTransform: "uppercase", color: "#d87307", marginBottom: 12 }}>
+            <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(20px, 2.4vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.25, marginBottom: 40, maxWidth: 520 }}>
               Trusted by founders, executives, and growth-focused organizations.
-            </p>
-            <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(28px, 4vw, 52px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.05, marginBottom: 16 }}>
-              Forging Brands.<br />Driving Revenue.
             </h2>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.75, color: "#555", marginBottom: 40, maxWidth: 520 }}>
-              Helping organizations become discoverable, trusted, and chosen in today&apos;s AI-driven buying landscape.
-            </p>
 
             {/* Stats */}
             <div style={{ display: "flex", flexWrap: "wrap", gap: "28px 40px" }}>
