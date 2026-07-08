@@ -204,11 +204,11 @@ export default function Home() {
       </section>
 
       {/* ── S2: TRUST BAR ────────────────────────────────── */}
-      <section style={{ background: "#FFFFFF", padding: "64px 40px 80px" }}>
-        <div ref={s2.ref} style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "auto 1fr", gap: 64, alignItems: "center" }}>
+      <section style={{ background: "#FFFFFF", padding: "24px 40px 40px" }}>
+        <div ref={s2.ref} style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "auto 1fr", gap: 64, alignItems: "start" }}>
 
           {/* B-icon logo mask — overlaps the hero seam above */}
-          <div className={`reveal${s2.inView ? " visible" : ""}`} style={{ position: "relative", top: -128 }}>
+          <div className={`reveal${s2.inView ? " visible" : ""}`} style={{ marginTop: -128, marginBottom: -128 }}>
             <img src="/images/BI-Logo-Mask-1-e1723263913795 (1).png" alt="Brand Iron" style={{ width: 340, height: "auto", display: "block", transition: "transform 0.35s ease" }}
               onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.05) rotate(-3deg)")}
               onMouseLeave={e => (e.currentTarget.style.transform = "scale(1) rotate(0deg)")}
@@ -271,9 +271,9 @@ export default function Home() {
       </section>
 
       {/* ── S3: BUYING JOURNEY ───────────────────────────── */}
-      <section style={{ background: "#FFFFFF", padding: "80px 0 100px" }}>
+      <section style={{ background: "#FFFFFF", padding: "48px 0 56px" }}>
         <div ref={s3.ref} style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 64, alignItems: "center", marginBottom: 56 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 64, alignItems: "start", marginBottom: 56 }}>
             {/* Text — left */}
             <div>
               <h2 className={`reveal${s3.inView ? " visible" : ""}`} style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 28 }}>
@@ -360,10 +360,10 @@ export default function Home() {
       </section>
 
       {/* ── S3B: YOU'RE THE COMPETITION ──────────────────── */}
-      <section style={{ position: "relative", overflow: "hidden", minHeight: 380 }}>
+      <section style={{ position: "relative", overflow: "hidden", minHeight: 340 }}>
         <img src="/images/You-are-the-competition-bg-png.png" alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
         <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.18)" }} />
-        <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "center", justifyContent: "center", minHeight: 380, padding: "60px 40px" }}>
+        <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "center", justifyContent: "center", minHeight: 340, padding: "44px 40px" }}>
           {/* White card with corner brackets */}
           <div style={{
             background: "#FFFFFF", maxWidth: 520, width: "100%",
@@ -445,7 +445,7 @@ export default function Home() {
         </div>
 
         {/* Cards on cream bg with mountain watermark */}
-        <div style={{ position: "relative", background: "#F5F0E8", padding: "72px 40px" }}>
+        <div style={{ position: "relative", background: "#F5F0E8", padding: "56px 40px" }}>
           <div style={{ position: "absolute", inset: 0, backgroundImage: "url('/images/Dark-Mountains.webp')", backgroundSize: "55% auto", backgroundPosition: "center center", backgroundRepeat: "no-repeat", opacity: 0.07 }} />
           <div ref={s4.ref} style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto" }}>
 
@@ -527,7 +527,7 @@ export default function Home() {
       </section>
 
       {/* ── S5: SERVICES ─────────────────────────────────── */}
-      <section style={{ background: "#FFFFFF", padding: "80px 40px" }}>
+      <section style={{ background: "#FFFFFF", padding: "56px 40px" }}>
         <div ref={s5.ref} style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 56 }}>
             <h2 className={`reveal${s5.inView ? " visible" : ""}`} style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(26px, 4vw, 48px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 16 }}>
@@ -545,6 +545,7 @@ export default function Home() {
                 padding: "32px 28px", position: "relative",
                 transitionDelay: `${(i % 3) * 0.07}s`,
                 transition: "transform 0.22s, box-shadow 0.22s",
+                ...(i === coreServices.length - 1 ? { gridColumn: "1 / -1", maxWidth: 360, width: "100%", margin: "0 auto" } : {}),
               }}
               onMouseEnter={e => {
                 (e.currentTarget as HTMLDivElement).style.transform = "translateY(-4px)";
@@ -607,7 +608,7 @@ export default function Home() {
       </section>
 
       {/* ── S6: STRATEGIC PARTNER ────────────────────────── */}
-      <section style={{ position: "relative", overflow: "hidden", padding: "100px 40px", backgroundImage: "url('/images/bg-peaks.png')", backgroundSize: "cover", backgroundPosition: "center 40%" }}>
+      <section style={{ position: "relative", overflow: "hidden", padding: "72px 40px", backgroundImage: "url('/images/bg-peaks.png')", backgroundSize: "cover", backgroundPosition: "center 40%" }}>
         <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.72)" }} />
         <div ref={s6.ref} style={{ position: "relative", zIndex: 1, maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
           <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
