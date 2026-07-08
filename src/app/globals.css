@@ -663,6 +663,16 @@ section p, main p, article p {
   animation: heroSlideUp 0.9s cubic-bezier(0.22,1,0.36,1) 0.54s both;
 }
 
+/* ── Trust Bar stats — single line once there's room ── */
+.trust-stats-row {
+  flex-wrap: wrap;
+}
+@media (min-width: 860px) {
+  .trust-stats-row {
+    flex-wrap: nowrap;
+  }
+}
+
 /* ── Scroll progress bar animate on visible ────────────── */
 .progress-bar-animate {
   width: 0%;

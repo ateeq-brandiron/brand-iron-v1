@@ -217,12 +217,12 @@ export default function Home() {
 
           {/* Text */}
           <div className={`reveal${s2.inView ? " visible" : ""}`}>
-            <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(20px, 2.4vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.25, marginBottom: 40, maxWidth: 520 }}>
+            <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(24px, 3vw, 38px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.25, marginBottom: 40, maxWidth: 620 }}>
               Trusted by founders, executives, and growth-focused organizations.
             </h2>
 
             {/* Stats */}
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "28px 40px" }}>
+            <div className="trust-stats-row" style={{ display: "flex", gap: "28px 40px" }}>
               {[
                 { key: "briefcase", num: "50+", label: "Brands Supported" },
                 { key: "trending", num: "150,000+", label: "Investor Network" },
