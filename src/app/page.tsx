@@ -686,9 +686,6 @@ export default function Home() {
       <section style={{ position: "relative", overflow: "hidden", padding: "72px 24px", backgroundImage: "url('/images/Brand Iron Tech River.png')", backgroundSize: "cover", backgroundPosition: "center 55%" }}>
         <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.55)" }} />
         <div ref={s6.ref} style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto", textAlign: "left" }}>
-          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: 14, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
-            More Than a Service Provider. A Strategic Growth Partner.
-          </p>
           <h2 className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(26px, 4vw, 52px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.05, marginBottom: 12 }}>
             Growth Is a Journey.<br />You Shouldn&apos;t Have to Navigate It Alone.
           </h2>
