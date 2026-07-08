@@ -130,6 +130,15 @@ export default function Home() {
   const s3problems = useInView();
   const s4 = useInView();
   const s5 = useInView();
+  const [activeService, setActiveService] = useState(0);
+  const serviceCardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const selectService = (i: number, behavior: ScrollBehavior = "smooth") => {
+    setActiveService(i);
+    serviceCardRefs.current[i]?.scrollIntoView({ behavior, inline: "center", block: "nearest" });
+  };
+  useEffect(() => {
+    selectService(0, "instant");
+  }, []);
   const s6 = useInView();
   const s7 = useInView();
   const [testimonialIndex, setTestimonialIndex] = useState(0);
@@ -540,51 +549,100 @@ export default function Home() {
             </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24, marginBottom: 40 }}>
-            {coreServices.map(({ title, sub, body, solutions, cta, href }, i) => (
-              <div key={title} className={`reveal${s5.inView ? " visible" : ""}`} style={{
-                background: "#FFFFFF", border: "1px solid #e8e0d4",
-                padding: "32px 28px", position: "relative",
-                transitionDelay: `${(i % 3) * 0.07}s`,
-                transition: "transform 0.22s, box-shadow 0.22s",
-                ...(i === coreServices.length - 1 ? { gridColumn: "1 / -1", maxWidth: 360, width: "100%", margin: "0 auto" } : {}),
+          <div style={{ position: "relative", marginBottom: 40 }}>
+            <button
+              aria-label="Previous solution"
+              onClick={() => selectService((activeService - 1 + coreServices.length) % coreServices.length)}
+              className="services-carousel-arrow"
+              style={{
+                position: "absolute", left: -8, top: "50%", transform: "translateY(-50%)", zIndex: 2,
+                width: 44, height: 44, borderRadius: "50%", background: "#FFFFFF",
+                border: "1px solid #ddd", cursor: "pointer",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                boxShadow: "0 4px 16px rgba(0,0,0,0.1)", transition: "border-color 0.2s",
               }}
-              onMouseEnter={e => {
-                (e.currentTarget as HTMLDivElement).style.transform = "translateY(-4px)";
-                (e.currentTarget as HTMLDivElement).style.boxShadow = "0 8px 32px rgba(0,0,0,0.1)";
-                e.currentTarget.querySelectorAll<HTMLImageElement>(".corner-bracket").forEach(img => (img.style.opacity = "1"));
+              onMouseEnter={e => ((e.currentTarget as HTMLButtonElement).style.borderColor = "#d87307")}
+              onMouseLeave={e => ((e.currentTarget as HTMLButtonElement).style.borderColor = "#ddd")}
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </button>
+
+            <div className="services-carousel" style={{
+              display: "flex", gap: 24, overflowX: "auto",
+              scrollSnapType: "x mandatory",
+              padding: "8px calc(50% - 160px)",
+            }}>
+              {coreServices.map(({ title, sub, body, solutions, cta, href }, i) => {
+                const active = i === activeService;
+                return (
+                <div
+                  key={title}
+                  ref={el => { serviceCardRefs.current[i] = el; }}
+                  className={`reveal${s5.inView ? " visible" : ""}`}
+                  onClick={() => selectService(i)}
+                  style={{
+                    background: "#FFFFFF", border: active ? "1px solid #d87307" : "1px solid #e8e0d4",
+                    padding: "32px 28px", position: "relative",
+                    flex: "0 0 320px", width: 320, scrollSnapAlign: "center",
+                    cursor: "pointer", transformOrigin: "center",
+                    transitionDelay: `${(i % 3) * 0.07}s`,
+                    transition: "transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease",
+                    transform: active ? "scale(1.08)" : "scale(1)",
+                    boxShadow: active ? "0 20px 48px rgba(216,115,7,0.22)" : "0 2px 12px rgba(0,0,0,0.05)",
+                    zIndex: active ? 1 : 0,
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.querySelectorAll<HTMLImageElement>(".corner-bracket").forEach(img => (img.style.opacity = "1"));
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.querySelectorAll<HTMLImageElement>(".corner-bracket").forEach(img => (img.style.opacity = "0"));
+                  }}
+                  >
+                    <img className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 6, right: 6, width: 30, height: 30, opacity: active ? 1 : 0, transition: "opacity 0.25s ease" }} />
+                    <img className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 6, left: 6, width: 30, height: 30, opacity: active ? 1 : 0, transition: "opacity 0.25s ease" }} />
+                    <div style={{ width: "100%", height: 3, background: "#d87307", marginBottom: 20 }} />
+                    <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 18, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 6 }}>{title}</h3>
+                    <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, fontWeight: 700, color: "#d87307", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 14 }}>{sub}</p>
+                    <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "#555", marginBottom: 16 }}>{body}</p>
+                    <ul style={{ listStyle: "none", marginBottom: 24 }}>
+                      {solutions.map(s => (
+                        <li key={s} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, color: "#444", padding: "4px 0", paddingLeft: 16, position: "relative" }}>
+                          <span style={{ position: "absolute", left: 0, color: "#d87307", fontWeight: 700 }}>›</span>
+                          {s}
+                        </li>
+                      ))}
+                    </ul>
+                    <Link href={href} style={{
+                      fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 12,
+                      letterSpacing: "0.12em", textTransform: "uppercase",
+                      color: "#d87307", borderBottom: "1px solid #d87307",
+                      paddingBottom: 2, transition: "color 0.2s",
+                    }}
+                    onClick={e => e.stopPropagation()}
+                    onMouseEnter={e => (e.currentTarget.style.color = "#945B06")}
+                    onMouseLeave={e => (e.currentTarget.style.color = "#d87307")}
+                    >{cta} →</Link>
+                </div>
+                );
+              })}
+            </div>
+
+            <button
+              aria-label="Next solution"
+              onClick={() => selectService((activeService + 1) % coreServices.length)}
+              className="services-carousel-arrow"
+              style={{
+                position: "absolute", right: -8, top: "50%", transform: "translateY(-50%)", zIndex: 2,
+                width: 44, height: 44, borderRadius: "50%", background: "#FFFFFF",
+                border: "1px solid #ddd", cursor: "pointer",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                boxShadow: "0 4px 16px rgba(0,0,0,0.1)", transition: "border-color 0.2s",
               }}
-              onMouseLeave={e => {
-                (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
-                (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
-                e.currentTarget.querySelectorAll<HTMLImageElement>(".corner-bracket").forEach(img => (img.style.opacity = "0"));
-              }}
-              >
-                <img className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 6, right: 6, width: 30, height: 30, opacity: 0, transition: "opacity 0.25s ease" }} />
-                <img className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 6, left: 6, width: 30, height: 30, opacity: 0, transition: "opacity 0.25s ease" }} />
-                <div style={{ width: "100%", height: 3, background: "#d87307", marginBottom: 20 }} />
-                <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 18, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 6 }}>{title}</h3>
-                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, fontWeight: 700, color: "#d87307", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 14 }}>{sub}</p>
-                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "#555", marginBottom: 16 }}>{body}</p>
-                <ul style={{ listStyle: "none", marginBottom: 24 }}>
-                  {solutions.map(s => (
-                    <li key={s} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, color: "#444", padding: "4px 0", paddingLeft: 16, position: "relative" }}>
-                      <span style={{ position: "absolute", left: 0, color: "#d87307", fontWeight: 700 }}>›</span>
-                      {s}
-                    </li>
-                  ))}
-                </ul>
-                <Link href={href} style={{
-                  fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 12,
-                  letterSpacing: "0.12em", textTransform: "uppercase",
-                  color: "#d87307", borderBottom: "1px solid #d87307",
-                  paddingBottom: 2, transition: "color 0.2s",
-                }}
-                onMouseEnter={e => (e.currentTarget.style.color = "#945B06")}
-                onMouseLeave={e => (e.currentTarget.style.color = "#d87307")}
-                >{cta} →</Link>
-              </div>
-            ))}
+              onMouseEnter={e => ((e.currentTarget as HTMLButtonElement).style.borderColor = "#d87307")}
+              onMouseLeave={e => ((e.currentTarget as HTMLButtonElement).style.borderColor = "#ddd")}
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </button>
           </div>
 
           {/* Closing */}

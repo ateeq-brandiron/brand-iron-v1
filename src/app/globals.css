@@ -791,4 +791,18 @@ section p, main p, article p {
   padding: 100px 40px;
 }
 
+/* ── Services carousel ── */
+.services-carousel {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.services-carousel::-webkit-scrollbar {
+  display: none;
+}
+@media (max-width: 640px) {
+  .services-carousel-arrow {
+    display: none !important;
+  }
+}
+
 
