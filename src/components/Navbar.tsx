@@ -3,13 +3,14 @@ import { useState } from "react";
 import Link from "next/link";
 
 const servicesMenu = [
-  { label: "Brand Strategy", href: "/services/brand-strategy" },
-  { label: "AI Visibility & Discoverability", href: "/services/ai-visibility" },
-  { label: "GTM Strategy", href: "/services/gtm" },
-  { label: "Revenue Engineering", href: "/services/revenue-engineering" },
-  { label: "Outbound Growth", href: "/services/outbound-growth" },
+  { label: "Investor Outreach Campaigns", href: "/services/capital-raise/outreach" },
+  { label: "Capital Raise Decks", href: "/services/capital-raise/deck" },
+  { label: "Brand Champion", href: "/services/brand-strategy" },
+  { label: "GTM-Strategy", href: "/services/gtm" },
   { label: "Website Development", href: "/services/website-development" },
-  { label: "Capital Raise Support", href: "/services/capital-raise" },
+  { label: "Branding", href: "/services/brand-strategy/brand-development" },
+  { label: "Automation", href: "/services/revenue-engineering/marketing-automation" },
+  { label: "Industries", href: "/industries" },
 ];
 
 const navLinks = [
@@ -58,9 +59,6 @@ export default function Navbar() {
               transition: "color 0.2s",
             }}>
               Services
-              <svg width="11" height="11" viewBox="0 0 12 12" fill="none" style={{ transition: "transform 0.2s", transform: servicesOpen ? "rotate(180deg)" : "none" }}>
-                <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
             </Link>
 
             {servicesOpen && (
