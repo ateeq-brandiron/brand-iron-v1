@@ -399,7 +399,7 @@ export default function Home() {
         <div style={{ position: "absolute", inset: 0, background: "rgba(245,240,232,0.93)" }} />
         <div style={{ position: "absolute", inset: 0, backgroundImage: "url('/images/Dark-Mountains.webp')", backgroundSize: "60% auto", backgroundPosition: "center bottom", backgroundRepeat: "no-repeat", opacity: 0.06 }} />
         <div ref={s3problems.ref} style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto" }}>
-          <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 12, textAlign: "center" }}>Common Growth Challenges</p>
+          <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(20px, 2.4vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 32, textAlign: "center" }}>Common Growth Challenges</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 20 }}>
             {problems.map(({ heading, body }, i) => (
               <div key={i} className="growth-card" style={{
@@ -421,7 +421,7 @@ export default function Home() {
             <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(16px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#1a1a1a" }}>
               Growth shouldn&apos;t depend on disconnected tactics.
             </p>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, color: "#d87307", fontWeight: 600, marginTop: 6 }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, color: "#1a1a1a", fontWeight: 600, marginTop: 6 }}>
               It should be built on connected strategy.
             </p>
           </div>
