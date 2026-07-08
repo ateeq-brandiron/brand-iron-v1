@@ -186,7 +186,8 @@ export default function Home() {
         </div>
 
         {/* Service labels at bottom */}
-        <div style={{ position: "absolute", bottom: 36, left: 0, right: 0, display: "flex", flexWrap: "nowrap", justifyContent: "space-between", alignItems: "center", gap: 28, padding: "0 32px 20px", overflowX: "auto" }}>
+        <div style={{ position: "absolute", bottom: 36, left: 0, right: 0, display: "flex", justifyContent: "center", padding: "0 32px 20px" }}>
+        <div style={{ maxWidth: 1100, width: "100%", display: "flex", flexWrap: "nowrap", justifyContent: "space-between", alignItems: "center", gap: 28, overflowX: "auto" }}>
           {services.map(s => (
             <p key={s.label} style={{
               flex: "0 0 auto",
@@ -200,6 +201,7 @@ export default function Home() {
             onMouseLeave={e => (e.currentTarget.style.color = "#FFFFFF")}
             >{s.label}</p>
           ))}
+        </div>
         </div>
       </section>
 
@@ -272,7 +274,7 @@ export default function Home() {
 
       {/* ── S3: BUYING JOURNEY ───────────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "48px 0 56px" }}>
-        <div ref={s3.ref} style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px" }}>
+        <div ref={s3.ref} style={{ maxWidth: 1180, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 64, alignItems: "start", marginBottom: 56 }}>
             {/* Text — left */}
             <div>
@@ -346,7 +348,7 @@ export default function Home() {
           })}
         </div>
 
-        <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px" }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 40px" }}>
           {/* Closing statement */}
           <div className={`reveal${s3cards.inView ? " visible" : ""}`} style={{ textAlign: "left", paddingTop: 32 }}>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(14px, 1.6vw, 17px)", fontWeight: 500, color: "#777", marginBottom: 10 }}>
@@ -399,7 +401,7 @@ export default function Home() {
         <div style={{ position: "absolute", inset: 0, background: "rgba(245,240,232,0.93)" }} />
         <div style={{ position: "absolute", inset: 0, backgroundImage: "url('/images/Dark-Mountains.webp')", backgroundSize: "60% auto", backgroundPosition: "center bottom", backgroundRepeat: "no-repeat", opacity: 0.06 }} />
         <div ref={s3problems.ref} style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto" }}>
-          <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(20px, 2.4vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 32, textAlign: "left" }}>Common Growth Challenges</h2>
+          <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 32, textAlign: "left" }}>Common Growth Challenges</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 20 }}>
             {problems.map(({ heading, body }, i) => (
               <div key={i} className="growth-card" style={{
@@ -418,7 +420,7 @@ export default function Home() {
 
           {/* Closing */}
           <div style={{ textAlign: "left", marginTop: 48 }}>
-            <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(16px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#1a1a1a" }}>
+            <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(22px, 3.2vw, 36px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a" }}>
               Growth shouldn&apos;t depend on disconnected tactics.
             </p>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, color: "#1a1a1a", fontWeight: 600, marginTop: 6 }}>
@@ -610,7 +612,7 @@ export default function Home() {
       {/* ── S6: STRATEGIC PARTNER ────────────────────────── */}
       <section style={{ position: "relative", overflow: "hidden", padding: "72px 40px", backgroundImage: "url('/images/bg-peaks.png')", backgroundSize: "cover", backgroundPosition: "center 40%" }}>
         <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.72)" }} />
-        <div ref={s6.ref} style={{ position: "relative", zIndex: 1, maxWidth: 900, margin: "0 auto", textAlign: "left" }}>
+        <div ref={s6.ref} style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto", textAlign: "left" }}>
           <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
             More Than a Service Provider. A Strategic Growth Partner.
           </p>
@@ -645,7 +647,8 @@ export default function Home() {
 
       {/* ── S7: TESTIMONIALS ─────────────────────────────── */}
       <section style={{ background: "#F7F4EE", padding: "88px 40px" }}>
-        <div ref={s7.ref} style={{ maxWidth: 720, margin: "0 auto", textAlign: "left" }}>
+        <div ref={s7.ref} style={{ maxWidth: 1100, margin: "0 auto", textAlign: "left" }}>
+        <div style={{ maxWidth: 720 }}>
           <p className={`reveal${s7.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 32 }}>
             What Our Clients Say
           </p>
@@ -727,12 +730,13 @@ export default function Home() {
             </button>
           </div>
         </div>
+        </div>
       </section>
 
       {/* ── S8: FINAL CTA ────────────────────────────────── */}
       <section style={{ position: "relative", overflow: "hidden", padding: "100px 40px", backgroundImage: "url('/images/shutterstock_2489980613-scaled.jpg')", backgroundSize: "cover", backgroundPosition: "center 40%" }}>
         <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.82)" }} />
-        <div ref={s8.ref} style={{ position: "relative", zIndex: 1, maxWidth: 860, margin: "0 auto", textAlign: "left" }}>
+        <div ref={s8.ref} style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto", textAlign: "left" }}>
           <h2 className={`reveal${s8.inView ? " visible" : ""}`} style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(32px, 5.5vw, 72px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.0, marginBottom: 20 }}>
             Get Found.<br />Get Trusted.<br />Generate Revenue.
           </h2>
