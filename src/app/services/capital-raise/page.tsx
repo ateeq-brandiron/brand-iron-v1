@@ -120,28 +120,28 @@ export default function CapitalRaisePage() {
       {/* ── S2: WHY COMPANIES STRUGGLE TO RAISE CAPITAL ─────── */}
       <section style={{ background: "#FFFFFF", padding: "120px 40px" }}>
         <div ref={s2View.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16, textAlign: "center" }}>
+          <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
             Why Great Companies Still Struggle to Raise Capital
           </p>
-          <h2 className={`section-heading reveal${s2View.inView ? ' visible' : ''}`} style={{ color: "#0F1B2D", marginBottom: 24 }}>
+          <h2 className={`section-heading reveal${s2View.inView ? ' visible' : ''}`} style={{ color: "#0F1B2D", marginBottom: 24, textAlign: "left" }}>
             Investors Don&apos;t Invest in Slides. They Invest in Confidence.
           </h2>
 
-          <div style={{ maxWidth: 800, margin: "0 auto 72px" }}>
-            <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 16, textAlign: "center" }}>
+          <div style={{ maxWidth: 800, margin: "0 0 72px" }}>
+            <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 16 }}>
               Investors review countless opportunities, but only a few move forward. The difference is rarely the idea alone — it&apos;s the confidence founders create in their vision, leadership, market opportunity, and ability to execute.
             </p>
-            <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#666", textAlign: "center" }}>
+            <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#666" }}>
               Successful fundraising isn&apos;t about sharing more information. It&apos;s about delivering the right story to build trust, reduce uncertainty, and inspire investment.
             </p>
           </div>
 
           {/* What investors are evaluating table */}
           <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ marginBottom: 56 }}>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#0F1B2D", marginBottom: 12, textAlign: "center" }}>
+            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#0F1B2D", marginBottom: 12 }}>
               What Investors Are Really Evaluating
             </h3>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", textAlign: "center", maxWidth: 720, margin: "0 auto 32px" }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", maxWidth: 720, marginBottom: 32 }}>
               A capital raise presentation is only one part of the decision-making process. Behind every investment conversation are a series of questions that determine whether investors move forward.
             </p>
             <div style={{ overflowX: "auto" }}>
@@ -174,7 +174,7 @@ export default function CapitalRaisePage() {
           </div>
 
           {/* Beyond the pitch deck */}
-          <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ maxWidth: 800, margin: "0 auto 56px", textAlign: "center" }}>
+          <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ maxWidth: 800, margin: "0 0 56px" }}>
             <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#0F1B2D", marginBottom: 16 }}>
               Beyond the Pitch Deck
             </h3>
@@ -203,14 +203,14 @@ export default function CapitalRaisePage() {
         <div style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.72)" }} />
         <CircuitOverlay />
         <div ref={s3View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 72 }}>
+          <div style={{ marginBottom: 72 }}>
             <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               The Brand Iron Capital Raise Framework
             </p>
-            <h2 className={`section-heading reveal${s3View.inView ? ' visible' : ''}`} style={{ color: "#0F1B2D", marginBottom: 20 }}>
+            <h2 className={`section-heading reveal${s3View.inView ? ' visible' : ''}`} style={{ color: "#0F1B2D", marginBottom: 20, textAlign: "left" }}>
               Not a Process. A Strategic Framework.
             </h2>
-            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 760, margin: "0 auto" }}>
+            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 760 }}>
               Successful fundraising requires more than a pitch deck. Brand Iron connects strategy, investor materials, investor targeting, and outreach into one integrated fundraising system.
             </p>
           </div>
@@ -289,14 +289,14 @@ export default function CapitalRaisePage() {
         <div style={{ position: "absolute", inset: 0, background: "rgba(8,15,32,0.93)" }} />
         <CircuitOverlay />
         <div ref={s4View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1100, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 72 }}>
+          <div style={{ marginBottom: 72 }}>
             <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               How We Help You Raise Capital
             </p>
-            <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "transparent", WebkitTextStroke: "2px #FFFFFF", marginBottom: 20 }}>
+            <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "transparent", WebkitTextStroke: "2px #FFFFFF", marginBottom: 20, textAlign: "left" }}>
               From Investor Story to Fundraising Momentum
             </h2>
-            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.65)", maxWidth: 720, margin: "0 auto" }}>
+            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.65)", maxWidth: 720 }}>
               Successful fundraising is built on a connected journey. Brand Iron guides founders from strategic positioning to investor engagement through a structured framework that builds confidence at every stage.
             </p>
           </div>
@@ -335,14 +335,14 @@ export default function CapitalRaisePage() {
       <section style={{ background: "linear-gradient(180deg, #FFFFFF 0%, #F6F3EF 100%)", padding: "120px 40px", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, backgroundImage: "radial-gradient(circle at 20% 50%, rgba(216,115,7,0.04) 0%, transparent 60%), radial-gradient(circle at 80% 20%, rgba(15,27,45,0.04) 0%, transparent 50%)", pointerEvents: "none" }} />
         <div ref={s5View.ref} style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>
-          <div style={{ textAlign: "center", marginBottom: 72 }}>
+          <div style={{ marginBottom: 72 }}>
             <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               Choose the Right Capital Raise Solution
             </p>
-            <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#0F1B2D", marginBottom: 20 }}>
+            <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#0F1B2D", marginBottom: 20, textAlign: "left" }}>
               Support for Every Stage of Your Fundraising Journey
             </h2>
-            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 760, margin: "0 auto" }}>
+            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 760 }}>
               Whether you&apos;re preparing your first investor pitch, refining your story, identifying qualified investors, or executing outreach, Brand Iron offers specialized solutions that can stand alone or work together as a complete fundraising system.
             </p>
           </div>
@@ -413,10 +413,10 @@ export default function CapitalRaisePage() {
 
           {/* Compare capital raise deck components */}
           <div className={`reveal${s5View.inView ? ' visible' : ''}`}>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#0F1B2D", marginBottom: 8, textAlign: "center" }}>
+            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#0F1B2D", marginBottom: 8 }}>
               Compare Capital Raise Solutions
             </h3>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.8, color: "#666", textAlign: "center", maxWidth: 640, margin: "0 auto 32px" }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.8, color: "#666", maxWidth: 640, marginBottom: 32 }}>
               Every deliverable includes client onboarding, dedicated project management, and two rounds of revisions.
             </p>
             <div style={{ overflowX: "auto" }}>
@@ -474,17 +474,17 @@ export default function CapitalRaisePage() {
       }}>
         <div style={{ position: "absolute", inset: 0, background: "rgba(248,242,232,0.93)" }} />
         <div ref={s6View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 72 }}>
+          <div style={{ marginBottom: 72 }}>
             <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               What Success Looks Like
             </p>
-            <h2 className={`section-heading reveal${s6View.inView ? ' visible' : ''}`} style={{ color: "#0F1B2D", marginBottom: 20 }}>
+            <h2 className={`section-heading reveal${s6View.inView ? ' visible' : ''}`} style={{ color: "#0F1B2D", marginBottom: 20, textAlign: "left" }}>
               Investor Confidence That Creates Fundraising Momentum
             </h2>
-            <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 720, margin: "0 auto 16px" }}>
+            <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 720, marginBottom: 16 }}>
               A successful capital raise isn&apos;t measured by the number of presentations you deliver — it&apos;s measured by your ability to build investor confidence, create meaningful conversations, and move your fundraising forward.
             </p>
-            <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 720, margin: "0 auto" }}>
+            <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 720 }}>
               Our Capital Raise Support framework is designed to help you communicate your opportunity with clarity, engage the right investors, and create the momentum needed to support long-term growth.
             </p>
           </div>
@@ -546,13 +546,13 @@ export default function CapitalRaisePage() {
 
           {/* FAQ Accordion */}
           <div className={`reveal${s6View.inView ? ' visible' : ''}`}>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16, textAlign: "center" }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               Frequently Asked Questions
             </p>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#0F1B2D", marginBottom: 8, textAlign: "center" }}>
+            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#0F1B2D", marginBottom: 8 }}>
               Common Questions About Capital Raise Support
             </h3>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", textAlign: "center", maxWidth: 660, margin: "0 auto 40px" }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", maxWidth: 660, margin: "0 0 40px" }}>
               Preparing for a capital raise often raises as many questions as it answers. Below are some of the most common questions founders and leadership teams ask as they prepare for investor conversations.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>

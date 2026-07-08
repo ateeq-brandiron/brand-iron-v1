@@ -300,7 +300,7 @@ export default function AboutPage() {
       {/* ── Team ── */}
       <section style={{ background: NAVY2, padding: "96px 24px" }}>
         <div style={{ maxWidth: 1400, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 56 }}>
+          <div style={{ marginBottom: 56 }}>
             <p style={labelStyle}>Our People</p>
             <h2 style={{ ...h2Style, marginBottom: 0 }}>Meet The Team</h2>
           </div>

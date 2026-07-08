@@ -120,31 +120,31 @@ export default function GTMPage() {
       {/* ── S2: BUYING JOURNEY EVOLVED ─────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "120px 40px" }}>
         <div ref={s2View.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16, textAlign: "center" }}>
+          <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
             The Shift in Buyer Behavior
           </p>
-          <h2 className={`section-heading reveal${s2View.inView ? ' visible' : ''}`} style={{ color: "#0F1B2D", marginBottom: 24 }}>
+          <h2 className={`section-heading reveal${s2View.inView ? ' visible' : ''}`} style={{ color: "#0F1B2D", marginBottom: 24, textAlign: "left" }}>
             The Buying Journey Has Evolved. Your Go-to-Market Strategy Should Too.
           </h2>
 
-          <div style={{ maxWidth: 800, margin: "0 auto 72px" }}>
-            <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 16, textAlign: "center" }}>
+          <div style={{ maxWidth: 800, margin: "0 0 72px" }}>
+            <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 16 }}>
               For years, go-to-market strategies centered on a familiar formula: define your target audience, position your offering, generate awareness, enable sales, and measure performance. That foundation still matters — but the environment surrounding it has fundamentally changed.
             </p>
-            <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 16, textAlign: "center" }}>
+            <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 16 }}>
               Today&apos;s buyers don&apos;t follow a linear path to purchase. They move between search engines, AI platforms, social networks, peer recommendations, industry publications, and company websites before making a decision.
             </p>
-            <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 16, textAlign: "center" }}>
+            <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 16 }}>
               The organizations gaining market share aren&apos;t necessarily those with the largest marketing budgets. They&apos;re the ones that have built connected systems where strategy, visibility, authority, demand generation, sales, automation, and analytics work as one.
             </p>
-            <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#444", fontWeight: 600, textAlign: "center" }}>
+            <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#444", fontWeight: 600 }}>
               That is where a modern Go-to-Market strategy creates its greatest advantage.
             </p>
           </div>
 
           {/* Comparison table */}
           <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ marginBottom: 56 }}>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#0F1B2D", marginBottom: 28, textAlign: "center" }}>
+            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#0F1B2D", marginBottom: 28 }}>
               Traditional GTM vs. Today&apos;s Buying Reality
             </h3>
             <div style={{ overflowX: "auto" }}>
@@ -193,17 +193,17 @@ export default function GTMPage() {
         <div style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.68)" }} />
         <CircuitOverlay />
         <div ref={s3View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 72 }}>
+          <div style={{ marginBottom: 72 }}>
             <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               The Brand Iron Go-to-Market Framework
             </p>
-            <h2 className={`section-heading reveal${s3View.inView ? ' visible' : ''}`} style={{ color: "#0F1B2D", marginBottom: 20 }}>
+            <h2 className={`section-heading reveal${s3View.inView ? ' visible' : ''}`} style={{ color: "#0F1B2D", marginBottom: 20, textAlign: "left" }}>
               Growth Doesn&apos;t Come from More Marketing. It Comes from Better Alignment.
             </h2>
-            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 760, margin: "0 auto 16px" }}>
+            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 760, margin: "0 0 16px" }}>
               A modern Go-to-Market strategy isn&apos;t a collection of independent tactics. It&apos;s a connected system where every part of the business supports the next.
             </p>
-            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 760, margin: "0 auto" }}>
+            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 760 }}>
               Strategy informs visibility. Visibility builds authority. Authority generates demand. Demand fuels revenue. Revenue is sustained through operational excellence and continuous optimization.
             </p>
           </div>
@@ -301,17 +301,17 @@ export default function GTMPage() {
         <div style={{ position: "absolute", inset: 0, background: "rgba(8,15,32,0.92)" }} />
         <CircuitOverlay />
         <div ref={s4View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 72 }}>
+          <div style={{ marginBottom: 72 }}>
             <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               How the Framework Becomes Execution
             </p>
-            <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "transparent", WebkitTextStroke: "2px #FFFFFF", marginBottom: 20 }}>
+            <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "transparent", WebkitTextStroke: "2px #FFFFFF", marginBottom: 20, textAlign: "left" }}>
               A Framework Is Only Valuable If It Can Be Executed.
             </h2>
-            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "rgba(255,255,255,0.75)", maxWidth: 720, margin: "0 auto 12px" }}>
+            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "rgba(255,255,255,0.75)", maxWidth: 720, margin: "0 0 12px" }}>
               A strong strategy creates direction, but sustainable growth comes from disciplined execution.
             </p>
-            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.6)", maxWidth: 720, margin: "0 auto" }}>
+            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.6)", maxWidth: 720 }}>
               Each component of our Go-to-Market methodology strengthens the next, creating an integrated system that helps organizations become more discoverable, build greater authority, generate qualified demand, improve conversion, and create measurable revenue growth.
             </p>
           </div>
@@ -401,17 +401,17 @@ export default function GTMPage() {
       <section style={{ background: "linear-gradient(180deg, #FFFFFF 0%, #F6F3EF 100%)", padding: "120px 40px", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, backgroundImage: "radial-gradient(circle at 20% 50%, rgba(216,115,7,0.04) 0%, transparent 60%), radial-gradient(circle at 80% 20%, rgba(15,27,45,0.04) 0%, transparent 50%)", pointerEvents: "none" }} />
         <div ref={s5View.ref} style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>
-          <div style={{ textAlign: "center", marginBottom: 72 }}>
+          <div style={{ marginBottom: 72 }}>
             <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               Choose the Right Level of Go-to-Market Execution
             </p>
-            <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#0F1B2D", marginBottom: 20 }}>
+            <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#0F1B2D", marginBottom: 20, textAlign: "left" }}>
               Every Organization Starts from a Different Place
             </h2>
-            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 720, margin: "0 auto 16px" }}>
+            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 720, margin: "0 0 16px" }}>
               No two organizations face the same growth challenges. Rather than forcing every client into the same engagement, Brand Iron offers three progressive Go-to-Market solutions designed to meet your organization where it is today — while creating a clear path for where it wants to go tomorrow.
             </p>
-            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 720, margin: "0 auto" }}>
+            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 720 }}>
               Each tier builds upon the previous one, expanding capabilities as your business grows in complexity, market presence, and revenue objectives.
             </p>
           </div>
@@ -480,7 +480,7 @@ export default function GTMPage() {
 
           {/* At a Glance comparison table */}
           <div className={`reveal${s5View.inView ? ' visible' : ''}`}>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#0F1B2D", marginBottom: 24, textAlign: "center" }}>
+            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#0F1B2D", marginBottom: 24 }}>
               At a Glance
             </h3>
             <div style={{ overflowX: "auto" }}>
@@ -526,14 +526,14 @@ export default function GTMPage() {
         <div style={{ position: "absolute", inset: 0, background: "rgba(8,16,36,0.93)" }} />
         <CircuitOverlay />
         <div ref={s6View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 64 }}>
+          <div style={{ marginBottom: 64 }}>
             <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               Compare Go-to-Market Capabilities
             </p>
-            <h2 className={`section-heading reveal${s6View.inView ? ' visible' : ''}`} style={{ color: "transparent", WebkitTextStroke: "2px #FFFFFF", marginBottom: 20 }}>
+            <h2 className={`section-heading reveal${s6View.inView ? ' visible' : ''}`} style={{ color: "transparent", WebkitTextStroke: "2px #FFFFFF", marginBottom: 20, textAlign: "left" }}>
               The Right Strategy Isn&apos;t About More Services. It&apos;s About the Right Capabilities.
             </h2>
-            <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.65)", maxWidth: 720, margin: "0 auto" }}>
+            <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.65)", maxWidth: 720 }}>
               Rather than overwhelming you with a list of deliverables, this comparison highlights how each engagement expands your organization&apos;s capabilities as it grows. Each tier builds upon the previous one, creating a scalable Go-to-Market system that evolves alongside your business.
             </p>
           </div>
@@ -628,14 +628,14 @@ export default function GTMPage() {
       }}>
         <div style={{ position: "absolute", inset: 0, background: "rgba(248,242,232,0.91)" }} />
         <div ref={s7View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 72 }}>
+          <div style={{ marginBottom: 72 }}>
             <p className={`reveal${s7View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               What Success Looks Like
             </p>
-            <h2 className={`section-heading reveal${s7View.inView ? ' visible' : ''}`} style={{ color: "#0F1B2D", marginBottom: 20 }}>
+            <h2 className={`section-heading reveal${s7View.inView ? ' visible' : ''}`} style={{ color: "#0F1B2D", marginBottom: 20, textAlign: "left" }}>
               A Go-to-Market Strategy Should Create Measurable Business Momentum.
             </h2>
-            <p className={`reveal${s7View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 720, margin: "0 auto" }}>
+            <p className={`reveal${s7View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 720 }}>
               Every initiative within the Brand Iron framework is designed to move your business toward these outcomes.
             </p>
           </div>
@@ -752,13 +752,13 @@ export default function GTMPage() {
 
           {/* FAQ Accordion */}
           <div className={`reveal${s7View.inView ? ' visible' : ''}`}>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16, textAlign: "center" }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               Frequently Asked Questions
             </p>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#0F1B2D", marginBottom: 8, textAlign: "center" }}>
+            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#0F1B2D", marginBottom: 8 }}>
               Common Questions About Our Go-to-Market Strategy Services
             </h3>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", textAlign: "center", maxWidth: 640, margin: "0 auto 40px" }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", maxWidth: 640, margin: "0 0 40px" }}>
               Every organization approaches Go-to-Market strategy from a different starting point. Below are some of the most common questions we receive from leadership teams.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
