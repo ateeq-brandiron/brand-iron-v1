@@ -510,54 +510,18 @@ export default function Home() {
               ))}
             </div>
 
-            {/* Our Commitment */}
-            <div className={`reveal${s4.inView ? " visible" : ""}`} style={{
-              background: "#FFFFFF", padding: "40px 48px", borderLeft: "4px solid #d87307",
-              display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "center",
-              boxShadow: "0 2px 12px rgba(0,0,0,0.04)", position: "relative",
-              transition: "box-shadow 0.3s ease, border-left-color 0.3s ease",
-            }}
-            onMouseEnter={e => {
-              (e.currentTarget as HTMLDivElement).style.boxShadow = "0 16px 40px rgba(216,115,7,0.14)";
-              (e.currentTarget as HTMLDivElement).style.borderLeftColor = "#945B06";
-              e.currentTarget.querySelectorAll<HTMLImageElement>(".corner-bracket").forEach(img => (img.style.opacity = "1"));
-            }}
-            onMouseLeave={e => {
-              (e.currentTarget as HTMLDivElement).style.boxShadow = "0 2px 12px rgba(0,0,0,0.04)";
-              (e.currentTarget as HTMLDivElement).style.borderLeftColor = "#d87307";
-              e.currentTarget.querySelectorAll<HTMLImageElement>(".corner-bracket").forEach(img => (img.style.opacity = "0"));
-            }}
-            >
-              <img className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 8, right: 10, width: 38, height: 38, opacity: 0, transition: "opacity 0.25s ease" }} />
-              <img className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 8, left: 14, width: 38, height: 38, opacity: 0, transition: "opacity 0.25s ease" }} />
-              <div>
-                <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 12 }}>Our Commitment</p>
-                <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#1a1a1a", lineHeight: 1.2, marginBottom: 12 }}>
-                  Every recommendation is guided by one question:
-                </h3>
-                <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(16px, 1.8vw, 22px)", color: "#d87307", fontWeight: 900, textTransform: "uppercase" }}>
-                  Will this create measurable value for your business?
-                </p>
-              </div>
-              <div>
-                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#444", marginBottom: 12 }}>
-                  If the answer is no, we won&apos;t recommend it. That means no unnecessary complexity, no one-size-fits-all playbooks, and no chasing vanity metrics.
-                </p>
-                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#1a1a1a", fontWeight: 600 }}>
-                  Just practical strategies designed to help your organization grow with confidence.
-                </p>
-              </div>
-            </div>
-
-            {/* Closing */}
-            <div className={`reveal${s4.inView ? " visible" : ""}`} style={{ textAlign: "center", borderTop: "1px solid #e8e0d4", paddingTop: 32, marginTop: 48 }}>
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(14px, 1.6vw, 17px)", fontWeight: 500, color: "#777", marginBottom: 10 }}>
-                Modern growth requires more than marketing.
+            {/* Commitment + closing */}
+            <div className={`reveal${s4.inView ? " visible" : ""}`} style={{ textAlign: "center", maxWidth: 760, margin: "48px auto 0" }}>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", marginBottom: 18 }}>
+                Every recommendation is guided by one question: will this create measurable value for your business?
               </p>
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#555", maxWidth: 700, margin: "0 auto 16px" }}>
-                It requires a partner who understands how brand strategy, discoverability, demand generation, technology, and revenue operations work together to create competitive advantage.
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", marginBottom: 18 }}>
+                If the answer is no, we won&apos;t recommend it. That means no unnecessary complexity, no one-size-fits-all playbooks, and no chasing vanity metrics. Just practical strategies designed to help your organization grow with confidence.
               </p>
-              <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(22px, 3.2vw, 36px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#d87307", lineHeight: 1.2 }}>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", marginBottom: 18 }}>
+                Modern growth requires more than marketing. It requires a partner who understands how brand strategy, discoverability, demand generation, technology, and revenue operations work together to create competitive advantage.
+              </p>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a" }}>
                 That&apos;s the role Brand Iron was built to play.
               </p>
             </div>
