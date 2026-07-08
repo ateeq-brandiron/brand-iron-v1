@@ -551,7 +551,7 @@ export default function Home() {
       </section>
 
       {/* ── S5: SERVICES ─────────────────────────────────── */}
-      <section style={{ background: "#FFFFFF", padding: "56px 24px" }}>
+      <section style={{ background: "#FFFFFF", padding: "56px 24px 0" }}>
         <div ref={s5.ref} style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ textAlign: "left", marginBottom: 56 }}>
             <h2 className={`reveal${s5.inView ? " visible" : ""}`} style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(16px, 2.2vw, 28px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", lineHeight: 1.3, marginBottom: 16 }}>
@@ -667,7 +667,7 @@ export default function Home() {
           backgroundImage: "url('/images/bg-outcomes.png')", backgroundSize: "cover", backgroundPosition: "center",
         }}>
           <div style={{ maxWidth: 1148, margin: "0 auto", padding: "0 24px" }}>
-            <div style={{ textAlign: "left", padding: "40px 48px", borderLeft: "4px solid #d87307" }}>
+            <div style={{ textAlign: "left", padding: "40px 48px" }}>
               <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(14px, 1.6vw, 17px)", fontWeight: 500, color: "#1a1a1a", marginBottom: 10 }}>
                 Each solution delivers value on its own,
               </p>
@@ -692,13 +692,13 @@ export default function Home() {
           <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: 14, letterSpacing: "0.08em", textTransform: "uppercase", color: "rgba(255,255,255,0.85)", marginBottom: 24 }}>
             We Build Alongside Your Team
           </p>
-          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.85, color: "rgba(255,255,255,0.82)", maxWidth: 760, margin: "0 0 14px" }}>
+          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.85, color: "rgba(255,255,255,0.82)", margin: "0 0 14px" }}>
             Growth is a team effort. That&apos;s why we work as an extension of your leadership team — helping you make smarter decisions, focus on the right opportunities, and build systems that drive long-term growth. Our success is measured by yours. We&apos;re here to help you build what&apos;s next.
           </p>
-          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.85, color: "rgba(255,255,255,0.75)", maxWidth: 760, margin: "0 0 14px" }}>
+          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.85, color: "rgba(255,255,255,0.75)", margin: "0 0 14px" }}>
             Whether you&apos;re defining your brand, entering a new market, improving AI visibility, scaling revenue operations, or preparing for your next stage of growth, Brand Iron is ready to help you move forward with clarity, confidence, and purpose.
           </p>
-          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.85, color: "#FFFFFF", fontWeight: 600, fontStyle: "italic", maxWidth: 760, margin: "0 0 40px" }}>
+          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.85, color: "#FFFFFF", fontWeight: 600, fontStyle: "italic", margin: "0 0 40px" }}>
             Every successful growth story begins with a conversation. Let&apos;s start yours.
           </p>
           <div className={`reveal${s6.inView ? " visible" : ""}`} style={{ display: "flex", gap: 16, justifyContent: "flex-start", flexWrap: "wrap" }}>
