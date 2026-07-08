@@ -208,7 +208,7 @@ export default function Home() {
         <div ref={s2.ref} style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "auto 1fr", gap: 64, alignItems: "start" }}>
 
           {/* B-icon logo mask — overlaps the hero seam above */}
-          <div className={`reveal${s2.inView ? " visible" : ""}`} style={{ marginTop: -128, marginBottom: -128 }}>
+          <div className={`reveal${s2.inView ? " visible" : ""}`} style={{ marginTop: -70, marginBottom: -70 }}>
             <img src="/images/BI-Logo-Mask-1-e1723263913795 (1).png" alt="Brand Iron" style={{ width: 340, height: "auto", display: "block", transition: "transform 0.35s ease" }}
               onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.05) rotate(-3deg)")}
               onMouseLeave={e => (e.currentTarget.style.transform = "scale(1) rotate(0deg)")}
