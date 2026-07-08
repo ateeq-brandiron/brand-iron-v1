@@ -374,17 +374,15 @@ export default function Home() {
           onMouseEnter={e => {
             (e.currentTarget as HTMLDivElement).style.transform = "translateY(-6px)";
             (e.currentTarget as HTMLDivElement).style.boxShadow = "0 20px 48px rgba(0,0,0,0.18)";
-            e.currentTarget.querySelectorAll<HTMLImageElement>(".corner-bracket").forEach(img => (img.style.opacity = "1"));
           }}
           onMouseLeave={e => {
             (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
             (e.currentTarget as HTMLDivElement).style.boxShadow = "0 4px 20px rgba(0,0,0,0.08)";
-            e.currentTarget.querySelectorAll<HTMLImageElement>(".corner-bracket").forEach(img => (img.style.opacity = "0"));
           }}
           >
-            {/* Corner brackets — hidden until hover */}
-            <img className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 8, right: 8, width: 42, height: 42, opacity: 0, transition: "opacity 0.25s ease" }} />
-            <img className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 8, left: 8, width: 42, height: 42, opacity: 0, transition: "opacity 0.25s ease" }} />
+            {/* Corner brackets */}
+            <img src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 8, right: 8, width: 42, height: 42 }} />
+            <img src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 8, left: 8, width: 42, height: 42 }} />
 
             <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(22px, 3vw, 36px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.1, marginBottom: 20 }}>
               Why Great Companies<br />Still Struggle to Grow
