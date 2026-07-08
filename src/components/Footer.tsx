@@ -40,7 +40,7 @@ export default function Footer() {
           </p>
           <p style={{
             fontFamily: "'Montserrat', sans-serif", fontSize: 15,
-            lineHeight: 1.7, color: "#6b5a3e", maxWidth: 700,
+            lineHeight: 1.7, color: "#6b5a3e",
           }}>
             Helping organizations become discoverable, trusted, and chosen through strategic positioning, AI visibility, revenue engineering, and connected growth systems.
           </p>
