@@ -533,13 +533,13 @@ export default function Home() {
               <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(16px, 2.2vw, 28px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", lineHeight: 1.3, marginBottom: 20 }}>
                 Every recommendation is guided by one question: will this create measurable value for your business?
               </h3>
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", maxWidth: 760, margin: "0 0 32px" }}>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", margin: "0 0 32px" }}>
                 If the answer is no, we won&apos;t recommend it. That means no unnecessary complexity, no one-size-fits-all playbooks, and no chasing vanity metrics. Just practical strategies designed to help your organization grow with confidence.
               </p>
               <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(16px, 2.2vw, 28px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", lineHeight: 1.3, marginBottom: 18 }}>
                 Modern growth requires more than marketing.
               </h3>
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", maxWidth: 760, margin: "0 0 18px" }}>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", margin: "0 0 18px" }}>
                 It requires a partner who understands how brand strategy, discoverability, demand generation, technology, and revenue operations work together to create competitive advantage.
               </p>
               <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a" }}>
