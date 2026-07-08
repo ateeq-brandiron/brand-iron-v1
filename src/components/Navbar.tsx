@@ -67,21 +67,22 @@ export default function Navbar() {
                 paddingTop: 16, minWidth: 280,
               }}>
               <div style={{
-                background: "rgba(15,10,5,0.98)", border: "1px solid rgba(216,115,7,0.25)",
-                borderRadius: 8, padding: "8px 0",
-                boxShadow: "0 20px 50px rgba(0,0,0,0.5)",
+                background: "#FFFFFF", border: "1px solid rgba(0,0,0,0.08)",
+                padding: "10px 0",
+                boxShadow: "0 20px 50px rgba(0,0,0,0.25)",
               }}>
                 {servicesMenu.map(s => (
                   <Link key={s.href} href={s.href} style={{
-                    display: "flex", alignItems: "center", gap: 10,
-                    padding: "11px 20px",
-                    fontFamily: "'Montserrat', sans-serif", fontWeight: 500, fontSize: 13,
-                    color: "rgba(255,255,255,0.85)",
+                    display: "block",
+                    padding: "11px 24px",
+                    fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
+                    letterSpacing: "0.02em",
+                    color: "#1a1a1a",
+                    transition: "color 0.2s",
                   }}
-                  onMouseEnter={e => { e.currentTarget.style.background = "rgba(216,115,7,0.12)"; e.currentTarget.style.color = "#d87307"; }}
-                  onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "rgba(255,255,255,0.85)"; }}
+                  onMouseEnter={e => (e.currentTarget.style.color = "#d87307")}
+                  onMouseLeave={e => (e.currentTarget.style.color = "#1a1a1a")}
                   >
-                    <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#d87307", flexShrink: 0 }} />
                     {s.label}
                   </Link>
                 ))}
