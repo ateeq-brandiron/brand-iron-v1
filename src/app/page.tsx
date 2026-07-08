@@ -658,14 +658,16 @@ export default function Home() {
             </button>
           </div>
 
-          {/* Closing */}
-          <div className={`reveal${s5.inView ? " visible" : ""}`} style={{
-            textAlign: "left", padding: "40px 48px", position: "relative", overflow: "hidden",
-            borderLeft: "4px solid #d87307",
-            backgroundImage: "url('/images/bg-outcomes.png')", backgroundSize: "cover", backgroundPosition: "center",
-          }}>
-            <div style={{ position: "absolute", inset: 0, background: "rgba(245,240,232,0.55)" }} />
-            <div style={{ position: "relative", zIndex: 1 }}>
+        </div>
+
+        {/* Closing — full-bleed background */}
+        <div className={`reveal${s5.inView ? " visible" : ""}`} style={{
+          position: "relative", overflow: "hidden",
+          width: "100vw", marginLeft: "calc(50% - 50vw)",
+          backgroundImage: "url('/images/bg-outcomes.png')", backgroundSize: "cover", backgroundPosition: "center",
+        }}>
+          <div style={{ maxWidth: 1148, margin: "0 auto", padding: "0 24px" }}>
+            <div style={{ textAlign: "left", padding: "40px 48px", borderLeft: "4px solid #d87307" }}>
               <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(14px, 1.6vw, 17px)", fontWeight: 500, color: "#1a1a1a", marginBottom: 10 }}>
                 Each solution delivers value on its own,
               </p>
