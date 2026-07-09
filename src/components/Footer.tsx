@@ -39,8 +39,8 @@ export default function Footer() {
             Forging Brands. Driving Revenue.™
           </p>
           <p style={{
-            fontFamily: "'Montserrat', sans-serif", fontSize: 15,
-            lineHeight: 1.7, color: "#6b5a3e",
+            fontFamily: "'Montserrat', sans-serif", fontSize: 16, fontWeight: 600,
+            lineHeight: 1.8, color: "#6b5a3e",
           }}>
             Helping organizations become discoverable, trusted, and chosen through strategic positioning, AI visibility, revenue engineering, and connected growth systems.
           </p>
