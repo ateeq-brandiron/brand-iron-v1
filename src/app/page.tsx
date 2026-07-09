@@ -392,9 +392,22 @@ export default function Home() {
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "clamp(14px, 1.6vw, 17px)", fontWeight: 500, color: "#777", marginBottom: 10 }}>
               Organizations that win today aren&apos;t simply louder.
             </p>
-            <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(22px, 3.2vw, 36px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.2 }}>
+            <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(22px, 3.2vw, 36px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.2, marginBottom: 28 }}>
               They&apos;re easier to find, easier to trust, and easier to choose.
             </p>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", marginBottom: 20 }}>
+              Wondering how your business performs across today&apos;s buying journey?
+            </p>
+            <Link href="/ai-visibility-audit" style={{
+              fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
+              letterSpacing: "0.14em", textTransform: "uppercase",
+              background: "#d87307", color: "#FFFFFF",
+              padding: "14px 36px", borderRadius: 2,
+              display: "inline-block", transition: "background 0.2s",
+            }}
+            onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
+            onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
+            >Get My Free AI Visibility Audit</Link>
           </div>
         </div>
       </section>
