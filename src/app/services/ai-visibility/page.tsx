@@ -65,13 +65,13 @@ function AuditModal({ onClose }: { onClose: () => void }) {
           {step === 1 ? (
             <>
               <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 10 }}>
-                Free Audit — No Obligation
+                Free Audit, No Obligation
               </p>
               <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(22px, 3vw, 32px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.04em", color: "#FFFFFF", lineHeight: 1.15, marginBottom: 8 }}>
                 Get Your Free SEO &amp; AI Visibility Audit
               </h2>
               <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, color: "rgba(255,255,255,0.65)", lineHeight: 1.7, marginBottom: 28, maxWidth: 520 }}>
-                We&apos;ll review your site&apos;s health across search engines and AI platforms — and send you a plain-English summary of what&apos;s working, what isn&apos;t, and where the quick wins are.
+                We&apos;ll review your site&apos;s health across search engines and AI platforms, and send you a plain-English summary of what&apos;s working, what isn&apos;t, and where the quick wins are.
               </p>
 
               <form onSubmit={handleSubmit}>
@@ -384,13 +384,13 @@ export default function AIVisibilityPage() {
               While traditional Search Engine Optimization (SEO) remains essential, it&apos;s no longer the complete picture.
             </p>
             <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 16 }}>
-              Today&apos;s buyers don&apos;t just search — they ask questions. They expect direct answers, trusted recommendations, and personalized responses from AI-powered platforms before they ever visit a website or speak with a sales representative.
+              Today&apos;s buyers don&apos;t just search, they ask questions. They expect direct answers, trusted recommendations, and personalized responses from AI-powered platforms before they ever visit a website or speak with a sales representative.
             </p>
             <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 16 }}>
               Whether they&apos;re using Google Search, ChatGPT, Gemini, Claude, Perplexity, Microsoft Copilot, voice assistants, or industry communities, the buying journey now spans multiple platforms and multiple moments of discovery.
             </p>
             <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#444", fontWeight: 600 }}>
-              That means your business needs to be visible wherever those conversations happen — not just on a search results page.
+              That means your business needs to be visible wherever those conversations happen, not just on a search results page.
             </p>
           </div>
 
@@ -403,7 +403,7 @@ export default function AIVisibilityPage() {
               Instead, they move between multiple channels as they research, compare, and validate their decisions.
             </p>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#555", maxWidth: 620, margin: "0 auto 48px", textAlign: "center" }}>
-              Every step is an opportunity to build visibility, trust, and credibility — or lose the opportunity to a competitor.
+              Every step is an opportunity to build visibility, trust, and credibility, or lose the opportunity to a competitor.
             </p>
 
             {/* Journey steps */}
@@ -553,7 +553,7 @@ export default function AIVisibilityPage() {
 
           <div className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ maxWidth: 760 }}>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 17, lineHeight: 1.8, color: "#444", marginBottom: 16 }}>
-              The organizations that win tomorrow aren&apos;t simply easier to find — they&apos;re easier to trust.
+              The organizations that win tomorrow aren&apos;t simply easier to find, they&apos;re easier to trust.
             </p>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#555", marginBottom: 16 }}>
               That&apos;s why Brand Iron goes beyond traditional SEO.
@@ -621,7 +621,7 @@ export default function AIVisibilityPage() {
                 title: "Dominate",
                 lines: [
                   "Continuously optimize your digital presence to become a recognized authority in your market.",
-                  "Lead the conversation — not just participate in it.",
+                  "Lead the conversation, not just participate in it.",
                 ],
                 color: "#d87307",
               },
@@ -673,7 +673,7 @@ export default function AIVisibilityPage() {
               Some need to understand why they&apos;re not appearing in AI-powered search results. Others are ready to strengthen their technical foundation, build digital authority, or establish market leadership.
             </p>
             <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 680 }}>
-              Our four-tier framework allows you to start where you are today — and grow as your business grows.
+              Our four-tier framework allows you to start where you are today, and grow as your business grows.
             </p>
           </div>
 
@@ -795,7 +795,7 @@ export default function AIVisibilityPage() {
                 {
                   tier: "AI Market Dominance Engine",
                   items: [
-                    "You want to lead your market — not just compete in it.",
+                    "You want to lead your market, not just compete in it.",
                     "You're investing in long-term brand authority and executive positioning.",
                     "You need continuous optimization, strategic consulting, and AI visibility leadership.",
                   ],

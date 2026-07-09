@@ -50,7 +50,7 @@ export default function CapitalRaisePage() {
     },
     {
       q: "How does Investor Outreach work?",
-      a: "Investor Outreach combines research, messaging, and structured communication to introduce your opportunity to qualified investors. The objective isn't mass outreach—it's creating relevant, personalized conversations that can lead to meaningful investor relationships.",
+      a: "Investor Outreach combines research, messaging, and structured communication to introduce your opportunity to qualified investors. The objective isn't mass outreach, it's creating relevant, personalized conversations that can lead to meaningful investor relationships.",
     },
     {
       q: "Do you help after the deck is complete?",
@@ -97,7 +97,7 @@ export default function CapitalRaisePage() {
             Investors evaluate more than financials. They invest in a compelling story, a credible team, a clear market opportunity, and confidence in your growth strategy.
           </p>
           <p className="hero-body-anim" style={{ fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.75)", maxWidth: 720, marginBottom: 40 }}>
-            Brand Iron helps founders prepare for every stage of the fundraising journey through strategic positioning, investor storytelling, presentation development, investor targeting, and outreach — creating an investment narrative that inspires confidence and moves conversations forward.
+            Brand Iron helps founders prepare for every stage of the fundraising journey through strategic positioning, investor storytelling, presentation development, investor targeting, and outreach, creating an investment narrative that inspires confidence and moves conversations forward.
           </p>
 
           <div className="hero-btns-anim" style={{ display: "flex", gap: 16, flexWrap: "wrap", marginBottom: 28 }}>
@@ -127,7 +127,7 @@ export default function CapitalRaisePage() {
 
           <div style={{ maxWidth: 800, margin: "0 0 72px" }}>
             <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 16 }}>
-              Investors review countless opportunities, but only a few move forward. The difference is rarely the idea alone — it&apos;s the confidence founders create in their vision, leadership, market opportunity, and ability to execute.
+              Investors review countless opportunities, but only a few move forward. The difference is rarely the idea alone, it&apos;s the confidence founders create in their vision, leadership, market opportunity, and ability to execute.
             </p>
             <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#666" }}>
               Successful fundraising isn&apos;t about sharing more information. It&apos;s about delivering the right story to build trust, reduce uncertainty, and inspire investment.
@@ -186,7 +186,7 @@ export default function CapitalRaisePage() {
             <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, transparent, #d87307, transparent)" }} />
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16, textAlign: "center" }}>Key Insight</p>
             <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.05em", color: "#FFFFFF", textAlign: "center", lineHeight: 1.4, margin: 0 }}>
-              The strongest fundraising presentations don&apos;t try to answer every question. They answer the questions that matter most — clearly, confidently, and in a way that earns the next conversation.
+              The strongest fundraising presentations don&apos;t try to answer every question. They answer the questions that matter most, clearly, confidently, and in a way that earns the next conversation.
             </p>
           </div>
         </div>
@@ -272,7 +272,7 @@ export default function CapitalRaisePage() {
               One Framework. One Investor Journey.
             </p>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.85, color: "#555", margin: 0 }}>
-              Each pillar builds on the last — strengthening your story, improving investor targeting, and creating more meaningful conversations. Together, they form a connected fundraising framework designed to prepare, present, connect, and engage with confidence.
+              Each pillar builds on the last, strengthening your story, improving investor targeting, and creating more meaningful conversations. Together, they form a connected fundraising framework designed to prepare, present, connect, and engage with confidence.
             </p>
           </div>
         </div>
@@ -350,14 +350,14 @@ export default function CapitalRaisePage() {
             {[
               {
                 name: "Capital Raise Deck", tagline: "Turn your opportunity into a compelling investment story.",
-                desc: "We develop investor presentations that clearly communicate your vision, market opportunity, competitive advantage, and growth potential — helping you present with confidence.",
+                desc: "We develop investor presentations that clearly communicate your vision, market opportunity, competitive advantage, and growth potential, helping you present with confidence.",
                 bestFor: ["Startups preparing for investor meetings", "Companies seeking funding", "Leadership teams refining their investment story"],
                 outcome: "A clear, investor-ready presentation that builds confidence and supports productive fundraising conversations.",
                 href: "/services/capital-raise/deck", highlight: true,
               },
               {
                 name: "Investor Database", tagline: "Connect with investors who align with your opportunity.",
-                desc: "Successful fundraising isn't measured by how many investors you contact — it's measured by how many are the right fit. Our Investor Database helps identify, organize, and prioritize investors based on industry focus, investment stage, geographic preferences, and funding interests.",
+                desc: "Successful fundraising isn't measured by how many investors you contact, it's measured by how many are the right fit. Our Investor Database helps identify, organize, and prioritize investors based on industry focus, investment stage, geographic preferences, and funding interests.",
                 bestFor: ["Companies beginning investor outreach", "Teams expanding fundraising efforts", "Organizations seeking targeted investor research"],
                 outcome: "A qualified investor pipeline aligned with your fundraising objectives.",
                 href: "/services/capital-raise/investor-database", highlight: false,
@@ -458,7 +458,7 @@ export default function CapitalRaisePage() {
               Not Sure Where to Start?
             </h3>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.85, color: "#555", textAlign: "center", maxWidth: 760, margin: "0 auto" }}>
-              Every organization enters the fundraising process at a different stage. Some need to establish a compelling investor story before approaching the market. Others already have presentation materials but require access to qualified investors or support executing an effective outreach strategy. During a Capital Raise Strategy Session, we&apos;ll assess your current stage of investor readiness, identify the most impactful next steps, and recommend the solutions that best align with your fundraising objectives. Our solutions are designed to work independently, but they&apos;re most powerful when connected as part of a complete Capital Raise Support strategy — from investor story to investor engagement.
+              Every organization enters the fundraising process at a different stage. Some need to establish a compelling investor story before approaching the market. Others already have presentation materials but require access to qualified investors or support executing an effective outreach strategy. During a Capital Raise Strategy Session, we&apos;ll assess your current stage of investor readiness, identify the most impactful next steps, and recommend the solutions that best align with your fundraising objectives. Our solutions are designed to work independently, but they&apos;re most powerful when connected as part of a complete Capital Raise Support strategy, from investor story to investor engagement.
             </p>
           </div>
         </div>
@@ -480,7 +480,7 @@ export default function CapitalRaisePage() {
               Investor Confidence That Creates Fundraising Momentum
             </h2>
             <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 720, marginBottom: 16 }}>
-              A successful capital raise isn&apos;t measured by the number of presentations you deliver — it&apos;s measured by your ability to build investor confidence, create meaningful conversations, and move your fundraising forward.
+              A successful capital raise isn&apos;t measured by the number of presentations you deliver, it&apos;s measured by your ability to build investor confidence, create meaningful conversations, and move your fundraising forward.
             </p>
             <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 720 }}>
               Our Capital Raise Support framework is designed to help you communicate your opportunity with clarity, engage the right investors, and create the momentum needed to support long-term growth.

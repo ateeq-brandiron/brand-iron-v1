@@ -34,14 +34,14 @@ const stats = [
 const problems = [
   { heading: "Buyers can't clearly differentiate your business.", body: "Without a compelling market position, even great companies become interchangeable." },
   { heading: "You're difficult to discover.", body: "Modern buyers search across AI platforms, search engines, communities, and industry resources. If you aren't present where decisions begin, opportunities disappear before they reach your website." },
-  { heading: "Marketing creates activity — not enough pipeline.", body: "Campaigns launch. Content gets published. Reports get shared. But activity doesn't always translate into qualified opportunities." },
+  { heading: "Marketing creates activity, not enough pipeline.", body: "Campaigns launch. Content gets published. Reports get shared. But activity doesn't always translate into qualified opportunities." },
   { heading: "Sales and marketing aren't aligned.", body: "Disconnected messaging, inconsistent lead quality, and siloed data make growth harder than it should be." },
-  { heading: "Technology adds complexity.", body: "CRM platforms, automation, analytics, and reporting should simplify growth — not create more work." },
+  { heading: "Technology adds complexity.", body: "CRM platforms, automation, analytics, and reporting should simplify growth, not create more work." },
 ];
 
 const differentiators = [
   { num: "01", title: "Strategy Before Tactics", body: "Every engagement begins with understanding your business, market, and goals before recommending solutions. Strong execution starts with a clear strategy.", icon: "/images/icons/icon-lightbulb.svg" },
-  { num: "02", title: "Connected Growth Systems", body: "Brand strategy, AI visibility, marketing, sales, technology, and revenue operations work best as one integrated system — not as disconnected initiatives.", icon: "/images/icons/icon-gear.svg" },
+  { num: "02", title: "Connected Growth Systems", body: "Brand strategy, AI visibility, marketing, sales, technology, and revenue operations work best as one integrated system, not as disconnected initiatives.", icon: "/images/icons/icon-gear.svg" },
   { num: "03", title: "Human Expertise + AI Intelligence", body: "We use AI to accelerate research, uncover insights, and improve efficiency, while experienced strategists provide the critical thinking, creativity, and direction technology can't replace.", icon: "/images/icons/icon-lightning.svg" },
   { num: "04", title: "Outcomes Over Activity", body: "We don't measure success by campaigns launched or content published. We measure it by stronger positioning, better opportunities, and measurable business growth.", icon: "/images/icons/icon-trending.svg" },
 ];
@@ -49,7 +49,7 @@ const differentiators = [
 const coreServices = [
   {
     title: "Brand Strategy", sub: "Build a Brand Buyers Remember",
-    body: "Whether you're building a brand from the ground up or repositioning an established business, we help create brands that are clear, differentiated, and built for growth — from strategy and messaging to visual identity and brand systems.",
+    body: "Whether you're building a brand from the ground up or repositioning an established business, we help create brands that are clear, differentiated, and built for growth, from strategy and messaging to visual identity and brand systems.",
     solutions: ["Brand Strategy & Positioning", "Brand Identity & Rebranding", "Messaging Framework", "Visual Identity Systems"],
     cta: "Explore Brand Strategy", href: "/services/brand-strategy",
   },
@@ -73,7 +73,7 @@ const coreServices = [
   },
   {
     title: "Outbound Growth", sub: "Create More Qualified Opportunities",
-    body: "We design targeted outreach programs that help your team start meaningful conversations with the right prospects — not simply send more messages.",
+    body: "We design targeted outreach programs that help your team start meaningful conversations with the right prospects, not simply send more messages.",
     solutions: ["LinkedIn Outreach", "Email Outreach", "SDR Programs", "Appointment Setting"],
     cta: "Explore Outbound Growth", href: "/services/outbound-growth",
   },
@@ -111,7 +111,7 @@ const testimonials = [
     title: "CEO, Worldwide Vintage Autos",
   },
   {
-    quote: "Working with Brand Iron transformed how we think about revenue generation. They didn't just run campaigns — they built us a complete system that connects every part of our go-to-market motion. Pipeline is up 3X in six months.",
+    quote: "Working with Brand Iron transformed how we think about revenue generation. They didn't just run campaigns, they built us a complete system that connects every part of our go-to-market motion. Pipeline is up 3X in six months.",
     name: "Sarah T.",
     title: "VP Marketing, TechScale Inc.",
   },
@@ -437,8 +437,25 @@ export default function Home() {
               Why Great Companies<br />Still Struggle to Grow
             </h2>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.8, color: "#444" }}>
-              Many organizations don&apos;t have a product problem. They don&apos;t have a talent problem. They don&apos;t even have a marketing problem. They have an alignment problem. Brand strategy, marketing, sales, technology, and operations often evolve independently — each with its own goals, tools, and priorities. While every team works hard, the customer experiences a disconnected journey. The result is slower growth, missed opportunities, and increasing costs to acquire and retain customers.
+              Many organizations don&apos;t have a product problem. They don&apos;t have a talent problem. They don&apos;t even have a marketing problem. They have an alignment problem. Brand strategy, marketing, sales, technology, and operations often evolve independently, each with its own goals, tools, and priorities. While every team works hard, the customer experiences a disconnected journey. The result is slower growth, missed opportunities, and increasing costs to acquire and retain customers.
             </p>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", marginTop: 28, marginBottom: 8 }}>
+              Not sure where your growth is breaking down?
+            </p>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.8, color: "#444", marginBottom: 24 }}>
+              We&apos;ll identify your biggest growth bottlenecks and provide practical recommendations.
+            </p>
+            <Link href="/gtm-audit" style={{
+              display: "inline-block",
+              fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
+              letterSpacing: "0.14em", textTransform: "uppercase",
+              background: "#d87307", color: "#FFFFFF",
+              padding: "14px 32px", borderRadius: 6,
+              transition: "background 0.2s",
+            }}
+            onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
+            onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
+            >Request a GTM Growth Review</Link>
           </div>
         </div>
       </section>
@@ -503,7 +520,7 @@ export default function Home() {
               <div>
                 <h2 className={`reveal${s4.inView ? " visible" : ""}`} style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 28 }}>What Makes Brand Iron Different</h2>
                 <p className={`reveal${s4.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", marginBottom: 18 }}>
-                  AI is transforming how businesses grow — but technology alone has never been a strategy.
+                  AI is transforming how businesses grow, but technology alone has never been a strategy.
                 </p>
                 <p className={`reveal${s4.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", marginBottom: 36 }}>
                   At Brand Iron, we combine human expertise with AI-assisted intelligence to help organizations make better decisions, move faster, and execute with greater precision. AI accelerates the work; experienced strategists provide the judgment, creativity, and business insight that drive meaningful outcomes.
@@ -567,9 +584,23 @@ export default function Home() {
               <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", margin: "0 0 18px" }}>
                 It requires a partner who understands how brand strategy, discoverability, demand generation, technology, and revenue operations work together to create competitive advantage.
               </p>
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a" }}>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", marginBottom: 28 }}>
                 That&apos;s the role Brand Iron was built to play.
               </p>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", marginBottom: 20 }}>
+                See How We Engineer Growth
+              </p>
+              <Link href="/case-studies" style={{
+                display: "inline-block",
+                fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
+                letterSpacing: "0.14em", textTransform: "uppercase",
+                background: "#d87307", color: "#FFFFFF",
+                padding: "14px 32px", borderRadius: 6,
+                transition: "background 0.2s",
+              }}
+              onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
+              onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
+              >View Our Framework</Link>
             </div>
           </div>
         </div>
@@ -583,7 +614,7 @@ export default function Home() {
               Solutions That Move Businesses Forward
             </h2>
             <p className={`reveal${s5.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", margin: "0 0 10px" }}>
-              Every business faces unique growth challenges — from strengthening its brand and increasing visibility to generating demand, optimizing revenue, or raising capital. Rather than delivering disconnected services, Brand Iron brings these capabilities together into one connected growth system designed to help organizations become discoverable, trusted, and chosen.
+              Every business faces unique growth challenges, from strengthening its brand and increasing visibility to generating demand, optimizing revenue, or raising capital. Rather than delivering disconnected services, Brand Iron brings these capabilities together into one connected growth system designed to help organizations become discoverable, trusted, and chosen.
             </p>
           </div>
 
@@ -760,7 +791,7 @@ export default function Home() {
             We Build Alongside Your Team
           </p>
           <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.85, color: "#FFFFFF", margin: "0 0 14px", textShadow: "0 2px 10px rgba(0,0,0,0.85)" }}>
-            Growth is a team effort. That&apos;s why we work as an extension of your leadership team — helping you make smarter decisions, focus on the right opportunities, and build systems that drive long-term growth. Our success is measured by yours. We&apos;re here to help you build what&apos;s next.
+            Growth is a team effort. That&apos;s why we work as an extension of your leadership team, helping you make smarter decisions, focus on the right opportunities, and build systems that drive long-term growth. Our success is measured by yours. We&apos;re here to help you build what&apos;s next.
           </p>
           <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.85, color: "#FFFFFF", margin: "0 0 14px", textShadow: "0 2px 10px rgba(0,0,0,0.85)" }}>
             Whether you&apos;re defining your brand, entering a new market, improving AI visibility, scaling revenue operations, or preparing for your next stage of growth, Brand Iron is ready to help you move forward with clarity, confidence, and purpose.

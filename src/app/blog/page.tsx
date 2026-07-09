@@ -11,7 +11,7 @@ const articles = [
   {
     category: "Revenue Strategy",
     title: "The Revenue System Problem: Why Disconnected Teams Destroy Growth",
-    excerpt: "Marketing, sales, and operations all working hard but growth is stagnant. The problem isn't effort — it's architecture.",
+    excerpt: "Marketing, sales, and operations all working hard but growth is stagnant. The problem isn't effort, it's architecture.",
     readTime: "6 min read",
     date: "May 2026",
   },
@@ -53,7 +53,7 @@ const articles = [
   {
     category: "Executive Leadership",
     title: "The CEO's Guide to Revenue Transformation in 2026",
-    excerpt: "What separates companies that compound growth from those that plateau isn't strategy — it's the system they use to execute it.",
+    excerpt: "What separates companies that compound growth from those that plateau isn't strategy, it's the system they use to execute it.",
     readTime: "12 min read",
     date: "February 2026",
   },

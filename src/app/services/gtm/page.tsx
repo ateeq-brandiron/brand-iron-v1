@@ -31,11 +31,11 @@ export default function GTMPage() {
   const faqs = [
     {
       q: "What is a Go-to-Market (GTM) strategy?",
-      a: "A Go-to-Market strategy is a structured plan for bringing your products or services to the right market with the right messaging, channels, and customer experience. At Brand Iron, we expand the traditional GTM approach by integrating strategy, AI Visibility, demand generation, sales enablement, analytics, and automation into one connected growth system. The objective isn't simply to launch campaigns—it's to create sustainable, measurable business growth.",
+      a: "A Go-to-Market strategy is a structured plan for bringing your products or services to the right market with the right messaging, channels, and customer experience. At Brand Iron, we expand the traditional GTM approach by integrating strategy, AI Visibility, demand generation, sales enablement, analytics, and automation into one connected growth system. The objective isn't simply to launch campaigns, it's to create sustainable, measurable business growth.",
     },
     {
       q: "How is Brand Iron's GTM approach different from traditional marketing services?",
-      a: "Traditional marketing engagements often focus on individual tactics such as SEO, advertising, content, or social media. Brand Iron begins with business strategy and connects every initiative—including visibility, authority, demand generation, sales, analytics, and automation—into a unified Go-to-Market framework. This holistic approach helps organizations create alignment across departments rather than optimizing isolated marketing activities.",
+      a: "Traditional marketing engagements often focus on individual tactics such as SEO, advertising, content, or social media. Brand Iron begins with business strategy and connects every initiative, including visibility, authority, demand generation, sales, analytics, and automation, into a unified Go-to-Market framework. This holistic approach helps organizations create alignment across departments rather than optimizing isolated marketing activities.",
     },
     {
       q: "Why does AI Visibility matter in a Go-to-Market strategy?",
@@ -101,7 +101,7 @@ export default function GTMPage() {
             Buyers no longer rely on a single search engine or a sales conversation to evaluate their options. They ask AI platforms, compare competitors, read reviews, validate expertise on LinkedIn, and seek recommendations from trusted sources before they&apos;re ready to engage.
           </p>
           <p className="hero-body-anim" style={{ fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.75)", maxWidth: 720, marginBottom: 40 }}>
-            Many organizations are still executing go-to-market strategies designed for a different buying landscape. Sustainable growth now requires more than marketing campaigns — it demands an integrated system that connects strategy, visibility, authority, demand generation, sales, automation, and revenue into one cohesive growth engine.
+            Many organizations are still executing go-to-market strategies designed for a different buying landscape. Sustainable growth now requires more than marketing campaigns, it demands an integrated system that connects strategy, visibility, authority, demand generation, sales, automation, and revenue into one cohesive growth engine.
           </p>
 
           <div className="hero-btns-anim" style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
@@ -127,7 +127,7 @@ export default function GTMPage() {
 
           <div style={{ maxWidth: 800, margin: "0 0 72px" }}>
             <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 16 }}>
-              For years, go-to-market strategies centered on a familiar formula: define your target audience, position your offering, generate awareness, enable sales, and measure performance. That foundation still matters — but the environment surrounding it has fundamentally changed.
+              For years, go-to-market strategies centered on a familiar formula: define your target audience, position your offering, generate awareness, enable sales, and measure performance. That foundation still matters, but the environment surrounding it has fundamentally changed.
             </p>
             <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 16 }}>
               Today&apos;s buyers don&apos;t follow a linear path to purchase. They move between search engines, AI platforms, social networks, peer recommendations, industry publications, and company websites before making a decision.
@@ -284,7 +284,7 @@ export default function GTMPage() {
               At Brand Iron, we believe sustainable growth is engineered by connecting these systems into one unified Go-to-Market framework.
             </p>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.85, color: "#555", margin: 0 }}>
-              This holistic approach ensures every initiative contributes to a larger business objective rather than operating in isolation. The result isn&apos;t simply more activity — it&apos;s a stronger foundation for long-term growth, supported by measurable outcomes and a framework that evolves as your organization grows.
+              This holistic approach ensures every initiative contributes to a larger business objective rather than operating in isolation. The result isn&apos;t simply more activity, it&apos;s a stronger foundation for long-term growth, supported by measurable outcomes and a framework that evolves as your organization grows.
             </p>
           </div>
         </div>
@@ -332,7 +332,7 @@ export default function GTMPage() {
               {
                 num: "03", title: "Authority & Trust Building",
                 lead: "Visibility creates awareness. Authority creates confidence.",
-                body: "Modern buyers—and increasingly AI systems—look for signals that demonstrate expertise, credibility, and trust. We help establish those signals through strategic content, executive positioning, reviews, digital PR, and industry recognition.",
+                body: "Modern buyers, and increasingly AI systems, look for signals that demonstrate expertise, credibility, and trust. We help establish those signals through strategic content, executive positioning, reviews, digital PR, and industry recognition.",
                 activities: ["Authority Content", "Executive Branding", "Review Strategy", "Thought Leadership", "Guest Posting", "Digital PR"],
               },
               {
@@ -355,7 +355,7 @@ export default function GTMPage() {
               },
               {
                 num: "07", title: "Analytics & Revenue Intelligence",
-                lead: "Growth decisions should be informed by evidence — not assumptions.",
+                lead: "Growth decisions should be informed by evidence, not assumptions.",
                 body: "Our reporting framework connects marketing performance, sales activity, and revenue insights into executive-level dashboards that support better planning, forecasting, and continuous improvement.",
                 activities: ["GA4 & Measurement", "KPI Dashboards", "Revenue Attribution", "Executive Reporting", "AI Visibility Reporting", "Revenue Forecasting"],
               },
@@ -407,7 +407,7 @@ export default function GTMPage() {
               Every Organization Starts from a Different Place
             </h2>
             <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 720, margin: "0 0 16px" }}>
-              No two organizations face the same growth challenges. Rather than forcing every client into the same engagement, Brand Iron offers three progressive Go-to-Market solutions designed to meet your organization where it is today — while creating a clear path for where it wants to go tomorrow.
+              No two organizations face the same growth challenges. Rather than forcing every client into the same engagement, Brand Iron offers three progressive Go-to-Market solutions designed to meet your organization where it is today, while creating a clear path for where it wants to go tomorrow.
             </p>
             <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 720 }}>
               Each tier builds upon the previous one, expanding capabilities as your business grows in complexity, market presence, and revenue objectives.
@@ -604,7 +604,7 @@ export default function GTMPage() {
               What&apos;s Included Across Every Engagement
             </h3>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "rgba(255,255,255,0.7)", textAlign: "center", maxWidth: 640, margin: "0 auto 32px" }}>
-              Regardless of the tier you choose, every engagement begins with a commitment to creating a connected growth system — not disconnected marketing activities.
+              Regardless of the tier you choose, every engagement begins with a commitment to creating a connected growth system, not disconnected marketing activities.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 12 }}>
               {["Strategic consulting", "Executive collaboration", "Performance measurement", "AI Visibility best practices", "Cross-functional alignment", "Business-focused recommendations", "A roadmap for long-term growth"].map(item => (

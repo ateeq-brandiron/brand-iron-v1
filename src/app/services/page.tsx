@@ -7,14 +7,14 @@ const services = [
     number: "01",
     title: "AI Strategy & Consulting",
     href: "/ai-strategy",
-    description: "Executive-level AI roadmapping that connects artificial intelligence to real revenue outcomes. We identify where AI creates the highest ROI in your specific business — and build the plan to get there.",
+    description: "Executive-level AI roadmapping that connects artificial intelligence to real revenue outcomes. We identify where AI creates the highest ROI in your specific business, and build the plan to get there.",
     deliverables: ["AI Readiness Assessment", "ROI-Mapped AI Roadmap", "Use Case Prioritization", "Build vs. Buy Analysis"],
   },
   {
     number: "02",
     title: "AI Execution & Automation",
     href: "/ai-execution",
-    description: "We don't just advise — we build. From AI agents to automated workflows, we deploy intelligent systems that run your revenue operations while your team focuses on high-value work.",
+    description: "We don't just advise, we build. From AI agents to automated workflows, we deploy intelligent systems that run your revenue operations while your team focuses on high-value work.",
     deliverables: ["AI Agent Deployment", "Workflow Automation", "Lead Scoring & Routing", "Revenue Ops Automation"],
   },
   {
@@ -28,7 +28,7 @@ const services = [
     number: "04",
     title: "Branding & High-Converting Decks",
     href: "/branding-decks",
-    description: "Brand positioning and visual storytelling that commands attention and drives action. From investor pitch decks to full brand systems — built to win in competitive markets.",
+    description: "Brand positioning and visual storytelling that commands attention and drives action. From investor pitch decks to full brand systems, built to win in competitive markets.",
     deliverables: ["Brand Strategy", "Visual Identity", "Pitch Deck Design", "Sales Collateral"],
   },
   {
@@ -42,7 +42,7 @@ const services = [
     number: "06",
     title: "Demand Generation & Pipeline",
     href: "/demand-generation",
-    description: "Multi-channel demand generation that fills your pipeline with qualified opportunities — consistently, predictably, and at scale. Not campaigns. A system.",
+    description: "Multi-channel demand generation that fills your pipeline with qualified opportunities, consistently, predictably, and at scale. Not campaigns. A system.",
     deliverables: ["Multi-Channel Campaigns", "Content Strategy", "Outbound Engine", "Pipeline Reporting"],
   },
 ];
@@ -241,7 +241,7 @@ export default function ServicesPage() {
             Our Services
           </h1>
           <p className={`reveal stagger-3${heroVisible ? " visible" : ""}`} style={{ fontSize: 18, lineHeight: 1.7, color: "rgba(255,255,255,0.85)", maxWidth: 600 }}>
-            Six integrated capabilities that work together as a complete revenue system — not isolated services, but one unified engine.
+            Six integrated capabilities that work together as a complete revenue system, not isolated services, but one unified engine.
           </p>
         </div>
       </section>

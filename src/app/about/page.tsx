@@ -117,7 +117,7 @@ const TEAM = [
     name: "Carmen Barker",
     initials: "CB",
     title: "CFO",
-    bio: "Carmen Barker is the financial genius at Brand Iron — handling everything that's money-related from payroll to HR. Carmen's roots go back to being a partner in an award-winning startup business that provides water treatment for humanitarian and disaster relief efforts. Under her leadership, the company was recognized by Fast Company in 2011 for the Top 50 Colorado Companies to Watch and Top 100 Women Owned Companies.",
+    bio: "Carmen Barker is the financial genius at Brand Iron, handling everything that's money-related from payroll to HR. Carmen's roots go back to being a partner in an award-winning startup business that provides water treatment for humanitarian and disaster relief efforts. Under her leadership, the company was recognized by Fast Company in 2011 for the Top 50 Colorado Companies to Watch and Top 100 Women Owned Companies.",
   },
   {
     name: "Valeria Rodriguez Quintanilla",
@@ -146,8 +146,8 @@ const TEAM = [
 ];
 
 const APPROACH_STEPS = [
-  { step: "01", title: "Diagnose", body: "We start by understanding how revenue actually flows through your business — not how it's supposed to work, but how it does." },
-  { step: "02", title: "Design", body: "We design the integrated revenue system your business needs — strategy, positioning, technology, and processes aligned to outcomes." },
+  { step: "01", title: "Diagnose", body: "We start by understanding how revenue actually flows through your business, not how it's supposed to work, but how it does." },
+  { step: "02", title: "Design", body: "We design the integrated revenue system your business needs, strategy, positioning, technology, and processes aligned to outcomes." },
   { step: "03", title: "Build", body: "We build the infrastructure: CRM systems, AI automation, demand generation engines, and revenue intelligence platforms." },
   { step: "04", title: "Deploy", body: "We deploy the system with your team, ensuring adoption, training, and the organizational buy-in that determines success." },
   { step: "05", title: "Optimize", body: "We continuously monitor performance, identify optimization opportunities, and iterate based on real revenue data." },
@@ -210,7 +210,7 @@ export default function AboutPage() {
             We Build Revenue Engines.
           </h1>
           <p style={{ fontSize: 18, lineHeight: 1.7, color: "rgba(255,255,255,0.85)", maxWidth: 560, fontFamily: MONTSERRAT }}>
-            BrandIron exists because too many organizations invest in disconnected strategies, tools, and agencies — and wonder why growth doesn&apos;t compound.
+            BrandIron exists because too many organizations invest in disconnected strategies, tools, and agencies, and wonder why growth doesn&apos;t compound.
           </p>
         </div>
       </section>
@@ -226,7 +226,7 @@ export default function AboutPage() {
                 We combine strategy, branding, go-to-market, AI, automation, CRM, and revenue operations into integrated systems that drive compounding, measurable growth.
               </p>
               <p style={{ fontSize: 16, lineHeight: 1.8, color: WHITE80, fontFamily: MONTSERRAT }}>
-                Companies don&apos;t fail because they lack effort. They fail because their revenue systems are fragmented — marketing, sales, technology, and data all operating in separate lanes.
+                Companies don&apos;t fail because they lack effort. They fail because their revenue systems are fragmented, marketing, sales, technology, and data all operating in separate lanes.
               </p>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 2, background: "rgba(216,115,7,0.2)", borderRadius: 12, overflow: "hidden" }}>
@@ -272,10 +272,10 @@ export default function AboutPage() {
                 A World Where Revenue Is Engineered, Not Hoped For
               </h2>
               <p style={{ fontSize: 16, lineHeight: 1.8, color: WHITE80, fontFamily: MONTSERRAT }}>
-                We envision a future where every revenue-generating organization operates with complete alignment — where strategy, brand, technology, and talent work as a single compounding system rather than competing factions.
+                We envision a future where every revenue-generating organization operates with complete alignment, where strategy, brand, technology, and talent work as a single compounding system rather than competing factions.
               </p>
               <p style={{ fontSize: 16, lineHeight: 1.8, color: WHITE80, fontFamily: MONTSERRAT, marginTop: 16 }}>
-                In that world, growth is predictable. Pipelines are engineered. And revenue becomes a function of design — not luck.
+                In that world, growth is predictable. Pipelines are engineered. And revenue becomes a function of design, not luck.
               </p>
             </div>
             {/* Vertical copper divider */}
@@ -290,7 +290,7 @@ export default function AboutPage() {
                 We combine strategy, brand, go-to-market, AI automation, CRM, and revenue operations into integrated systems that produce compounding, measurable growth.
               </p>
               <p style={{ fontSize: 16, lineHeight: 1.8, color: WHITE80, fontFamily: MONTSERRAT, marginTop: 16 }}>
-                Our work is not advisory. We build, deploy, and optimize the revenue infrastructure our clients need — and we stay accountable to results, not deliverables.
+                Our work is not advisory. We build, deploy, and optimize the revenue infrastructure our clients need, and we stay accountable to results, not deliverables.
               </p>
             </div>
           </div>
