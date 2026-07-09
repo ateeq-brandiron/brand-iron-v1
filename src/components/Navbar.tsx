@@ -121,7 +121,7 @@ export default function Navbar() {
             fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
             letterSpacing: "0.1em", textTransform: "uppercase",
             background: "#d87307", color: "#FFFFFF",
-            padding: "10px 22px", borderRadius: 2,
+            padding: "10px 22px", borderRadius: 6,
             transition: "background 0.2s",
           }}
           onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
@@ -192,7 +192,7 @@ export default function Navbar() {
               fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.1em", textTransform: "uppercase",
               background: "#d87307", color: "#FFFFFF",
-              padding: "12px 28px", borderRadius: 2,
+              padding: "12px 28px", borderRadius: 6,
             }}>Contact</Link>
           </div>
         </div>
