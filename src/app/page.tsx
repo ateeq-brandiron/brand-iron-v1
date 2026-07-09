@@ -663,18 +663,19 @@ export default function Home() {
                     onClick={e => e.stopPropagation()}
                     onMouseEnter={e => {
                       e.currentTarget.style.background = "#c46305";
-                      const arrow = e.currentTarget.querySelector<HTMLElement>(".cta-arrow");
-                      if (arrow) arrow.style.transform = "translateX(5px)";
+                      const tail = e.currentTarget.querySelector<HTMLElement>(".cta-arrow-tail");
+                      if (tail) tail.style.width = "26px";
                     }}
                     onMouseLeave={e => {
                       e.currentTarget.style.background = "#d87307";
-                      const arrow = e.currentTarget.querySelector<HTMLElement>(".cta-arrow");
-                      if (arrow) arrow.style.transform = "translateX(0)";
+                      const tail = e.currentTarget.querySelector<HTMLElement>(".cta-arrow-tail");
+                      if (tail) tail.style.width = "8px";
                     }}
                     >
                       <span>{cta}</span>
-                      <span className="cta-arrow" style={{ display: "inline-flex", transition: "transform 0.25s cubic-bezier(0.22,1,0.36,1)" }}>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      <span className="cta-arrow" style={{ display: "inline-flex", alignItems: "center" }}>
+                        <span className="cta-arrow-tail" style={{ display: "inline-block", height: 2, width: 8, background: "currentColor", marginRight: -1, transition: "width 0.3s cubic-bezier(0.22,1,0.36,1)" }} />
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}><path d="M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                       </span>
                     </Link>
                 </div>
@@ -913,8 +914,8 @@ export default function Home() {
                     >
                       <span>Book a Strategy Session</span>
                       <span className="cta-arrow" style={{ display: "inline-flex", alignItems: "center" }}>
-                        <span className="cta-arrow-tail" style={{ display: "inline-block", height: 2.5, width: 10, background: "currentColor", borderRadius: 2, transition: "width 0.3s cubic-bezier(0.22,1,0.36,1)" }} />
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style={{ marginLeft: -1, flexShrink: 0 }}><path d="M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                        <span className="cta-arrow-tail" style={{ display: "inline-block", height: 2.4, width: 10, background: "currentColor", marginRight: -1, transition: "width 0.3s cubic-bezier(0.22,1,0.36,1)" }} />
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}><path d="M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
                       </span>
                     </Link>
                   </div>
@@ -944,8 +945,8 @@ export default function Home() {
                     >
                       <span>Explore Our Solutions</span>
                       <span className="cta-arrow" style={{ display: "inline-flex", alignItems: "center" }}>
-                        <span className="cta-arrow-tail" style={{ display: "inline-block", height: 2.5, width: 10, background: "currentColor", borderRadius: 2, transition: "width 0.3s cubic-bezier(0.22,1,0.36,1)" }} />
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style={{ marginLeft: -1, flexShrink: 0 }}><path d="M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                        <span className="cta-arrow-tail" style={{ display: "inline-block", height: 2.4, width: 10, background: "currentColor", marginRight: -1, transition: "width 0.3s cubic-bezier(0.22,1,0.36,1)" }} />
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}><path d="M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
                       </span>
                     </Link>
                   </div>
