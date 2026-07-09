@@ -296,21 +296,19 @@ export default function AIVisibilityPage() {
       {/* ── HERO ─────────────────────────────────────────────── */}
       <section style={{
         position: "relative", minHeight: "92vh", display: "flex", alignItems: "center", overflow: "hidden",
-        backgroundImage: "url('/images/horse mane circuit lines_1.png')",
-        backgroundSize: "cover", backgroundPosition: "center top",
       }}>
-        <div style={{ position: "absolute", inset: 0, background: "rgba(8,16,36,0.90)" }} />
-        <CircuitOverlay />
+        <video
+          src="/Animate_this_image_and_these_d.mp4"
+          autoPlay muted loop playsInline preload="auto"
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }}
+        />
 
         <div style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto", padding: "160px 24px 100px", width: "100%" }}>
-          <p className="hero-body-anim" style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 20 }}>
-            SEO / AI Visibility & Discoverability Services
-          </p>
           <h1 className="hero-h1-anim" style={{
-            fontFamily: "'Burford Rustic Black', Helvetica, Arial, Lucida, sans-serif",
-            fontWeight: 700, fontSize: "clamp(38px, 5vw, 72px)",
+            fontFamily: "'Burford Rustic Inline', sans-serif",
+            fontWeight: 400, fontSize: "clamp(42px, 7vw, 96px)",
             textTransform: "uppercase", letterSpacing: "0.03em", lineHeight: 1.0,
-            color: "transparent", WebkitTextStroke: "2px #FFFFFF",
+            color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))",
             maxWidth: 900, marginBottom: 36,
           }}>
             Helping Brands Become Discoverable, Trusted, and Recommended Across Search and AI.
