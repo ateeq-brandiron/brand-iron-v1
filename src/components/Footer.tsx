@@ -74,17 +74,16 @@ export default function Footer() {
           backgroundSize: "cover", backgroundPosition: "center 30%",
         }}>
           <div style={{ position: "absolute", inset: 0, background: "rgba(8,16,30,0.68)" }} />
-          <div style={{ position: "relative", zIndex: 1, padding: "40px 32px 40px 32px", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+          <div style={{ position: "relative", zIndex: 1, padding: "40px 48px", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
 
             {/* Nav links */}
             <nav className="footer-nav" style={{ display: "flex", flexWrap: "nowrap", justifyContent: "space-between", gap: "0 2px", marginBottom: 28, overflowX: "auto" }}>
               {navLinks.map(([label, href], i) => (
                 <span key={label} style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
                   <Link href={href} style={{
-                    fontFamily: "'Montserrat', sans-serif", fontSize: 12, fontWeight: 700,
-                    letterSpacing: "0.06em", textTransform: "uppercase", whiteSpace: "nowrap",
+                    fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 700,
+                    letterSpacing: "0.1em", textTransform: "uppercase", whiteSpace: "nowrap",
                     color: "rgba(255,255,255,0.85)", padding: "2px 6px",
-                    textDecoration: "underline", textUnderlineOffset: 3,
                     transition: "color 0.2s",
                   }}
                   onMouseEnter={e => (e.currentTarget.style.color = "#d87307")}
@@ -100,7 +99,7 @@ export default function Footer() {
 
               {/* Address */}
               <div className="footer-address" style={{ minWidth: 200 }}>
-                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.9, color: "rgba(255,255,255,0.9)", fontWeight: 600 }}>Brand Iron</p>
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", lineHeight: 1.9, color: "rgba(255,255,255,0.9)" }}>Brand Iron</p>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.9, color: "rgba(255,255,255,0.75)" }}>2590 Welton St. Suite 200,</p>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.9, color: "rgba(255,255,255,0.75)" }}>Denver, CO 80205</p>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.9, color: "rgba(255,255,255,0.75)", marginBottom: 20 }}>Ph:&nbsp; 303-534-1901</p>
@@ -160,22 +159,22 @@ export default function Footer() {
               </div>
             </div>
 
-          </div>
-        </div>
-      </div>
+            {/* Copyright */}
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8, marginTop: 32, paddingTop: 20, borderTop: "1px solid rgba(255,255,255,0.12)" }}>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.5)" }}>
+                © {new Date().getFullYear()} Brand Iron Marketing. All rights reserved.
+              </p>
+              <div style={{ display: "flex", gap: 20 }}>
+                {[["Privacy Policy", "/privacy"], ["Terms of Service", "/terms"]].map(([label, href]) => (
+                  <Link key={label} href={href} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.5)", transition: "color 0.2s" }}
+                    onMouseEnter={e => (e.currentTarget.style.color = "#d87307")}
+                    onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.5)")}
+                  >{label}</Link>
+                ))}
+              </div>
+            </div>
 
-      {/* Copyright */}
-      <div style={{ background: "rgba(5,5,5,0.95)", padding: "14px 32px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
-        <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.35)" }}>
-          © {new Date().getFullYear()} Brand Iron Marketing. All rights reserved.
-        </p>
-        <div style={{ display: "flex", gap: 20 }}>
-          {[["Privacy Policy", "/privacy"], ["Terms of Service", "/terms"]].map(([label, href]) => (
-            <Link key={label} href={href} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.35)", transition: "color 0.2s" }}
-              onMouseEnter={e => (e.currentTarget.style.color = "rgba(255,255,255,0.7)")}
-              onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.35)")}
-            >{label}</Link>
-          ))}
+          </div>
         </div>
       </div>
 
