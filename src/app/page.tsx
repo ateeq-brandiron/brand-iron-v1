@@ -133,8 +133,11 @@ export default function Home() {
   const [activeService, setActiveService] = useState(1);
   const serviceCardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const carouselRef = useRef<HTMLDivElement>(null);
+  const activeServiceRef = useRef(activeService);
+  const autoSlideRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const selectService = (i: number, behavior: ScrollBehavior = "smooth") => {
     setActiveService(i);
+    activeServiceRef.current = i;
     const container = carouselRef.current;
     const card = serviceCardRefs.current[i];
     if (container && card) {
@@ -144,6 +147,19 @@ export default function Home() {
   useEffect(() => {
     selectService(1, "instant");
   }, []);
+  const startAutoSlide = () => {
+    if (autoSlideRef.current) return;
+    autoSlideRef.current = setInterval(() => {
+      selectService((activeServiceRef.current + 1) % coreServices.length);
+    }, 2600);
+  };
+  const stopAutoSlide = () => {
+    if (autoSlideRef.current) {
+      clearInterval(autoSlideRef.current);
+      autoSlideRef.current = null;
+    }
+  };
+  useEffect(() => () => stopAutoSlide(), []);
   const s6 = useInView();
   const s7 = useInView();
   const [testimonialIndex, setTestimonialIndex] = useState(0);
@@ -562,7 +578,11 @@ export default function Home() {
             </p>
           </div>
 
-          <div style={{ position: "relative", marginBottom: 40 }}>
+          <div
+            style={{ position: "relative", marginBottom: 40 }}
+            onMouseEnter={startAutoSlide}
+            onMouseLeave={stopAutoSlide}
+          >
             <button
               aria-label="Previous solution"
               onClick={() => selectService((activeService - 1 + coreServices.length) % coreServices.length)}
@@ -582,7 +602,7 @@ export default function Home() {
 
             <div ref={carouselRef} className="services-carousel" style={{
               display: "flex", gap: 24, overflowX: "auto",
-              scrollSnapType: "x mandatory",
+              scrollSnapType: "x proximity", scrollBehavior: "smooth",
               padding: "8px calc(50% - 160px)",
             }}>
               {coreServices.map(({ title, sub, body, solutions, cta, href }, i) => {
@@ -598,17 +618,24 @@ export default function Home() {
                     padding: "32px 28px", position: "relative",
                     flex: "0 0 320px", width: 320, scrollSnapAlign: "center",
                     cursor: "pointer", transformOrigin: "center",
-                    transitionDelay: `${(i % 3) * 0.07}s`,
-                    transition: "transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease",
+                    transition: "transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s cubic-bezier(0.22,1,0.36,1), border-color 0.35s ease",
                     transform: active ? "scale(1.08)" : "scale(1)",
                     boxShadow: active ? "0 20px 48px rgba(216,115,7,0.22)" : "0 2px 12px rgba(0,0,0,0.05)",
                     zIndex: active ? 1 : 0,
                   }}
                   onMouseEnter={e => {
                     e.currentTarget.querySelectorAll<HTMLImageElement>(".corner-bracket").forEach(img => (img.style.opacity = "1"));
+                    if (!active) {
+                      e.currentTarget.style.transform = "translateY(-6px) scale(1.02)";
+                      e.currentTarget.style.boxShadow = "0 16px 36px rgba(0,0,0,0.12)";
+                    }
                   }}
                   onMouseLeave={e => {
                     e.currentTarget.querySelectorAll<HTMLImageElement>(".corner-bracket").forEach(img => (img.style.opacity = "0"));
+                    if (!active) {
+                      e.currentTarget.style.transform = "scale(1)";
+                      e.currentTarget.style.boxShadow = "0 2px 12px rgba(0,0,0,0.05)";
+                    }
                   }}
                   >
                     <img className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 6, right: 6, width: 30, height: 30, opacity: active ? 1 : 0, transition: "opacity 0.25s ease" }} />
@@ -626,15 +653,28 @@ export default function Home() {
                       ))}
                     </ul>
                     <Link href={href} style={{
+                      display: "inline-flex", alignItems: "center", gap: 8,
                       fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 12,
                       letterSpacing: "0.12em", textTransform: "uppercase",
-                      color: "#d87307", borderBottom: "1px solid #d87307",
-                      paddingBottom: 2, transition: "color 0.2s",
+                      color: "#d87307", transition: "color 0.2s",
                     }}
                     onClick={e => e.stopPropagation()}
-                    onMouseEnter={e => (e.currentTarget.style.color = "#945B06")}
-                    onMouseLeave={e => (e.currentTarget.style.color = "#d87307")}
-                    >{cta} →</Link>
+                    onMouseEnter={e => {
+                      e.currentTarget.style.color = "#945B06";
+                      const arrow = e.currentTarget.querySelector<HTMLElement>(".cta-arrow");
+                      if (arrow) arrow.style.transform = "translateX(5px)";
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.color = "#d87307";
+                      const arrow = e.currentTarget.querySelector<HTMLElement>(".cta-arrow");
+                      if (arrow) arrow.style.transform = "translateX(0)";
+                    }}
+                    >
+                      <span style={{ borderBottom: "1px solid currentColor", paddingBottom: 2 }}>{cta}</span>
+                      <span className="cta-arrow" style={{ display: "inline-flex", transition: "transform 0.25s cubic-bezier(0.22,1,0.36,1)" }}>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      </span>
+                    </Link>
                 </div>
                 );
               })}
