@@ -743,7 +743,14 @@ export default function Home() {
       </section>
 
       {/* ── S6: STRATEGIC PARTNER ────────────────────────── */}
-      <section style={{ position: "relative", overflow: "hidden", padding: "72px 24px", backgroundImage: "url('/images/Brand Iron Tech River.png')", backgroundSize: "cover", backgroundPosition: "center 55%" }}>
+      <section style={{ position: "relative", overflow: "hidden", padding: "72px 24px" }}>
+        <video
+          src="/Animate_this_image_and_these_d (1).mp4"
+          autoPlay muted loop playsInline preload="auto"
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 55%" }}
+          onLoadedMetadata={e => { e.currentTarget.currentTime = 1; }}
+          onTimeUpdate={e => { if (e.currentTarget.currentTime >= 5) e.currentTarget.currentTime = 1; }}
+        />
         <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.55)" }} />
         <div ref={s6.ref} style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto", textAlign: "left" }}>
           <h2 className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.25, marginBottom: 12 }}>
