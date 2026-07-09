@@ -242,7 +242,7 @@ export default function AboutPage() {
           {/* ── Core Values ── */}
           <p style={labelStyle}>Core Values</p>
           <h2 style={{ ...h2Style, marginBottom: 40 }}>What We Stand For</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 20 }}>
             {VALUES.map(({ title, body }) => (
               <div key={title} className="value-card" style={{
                 background: WHITE04,
@@ -304,7 +304,7 @@ export default function AboutPage() {
             <p style={labelStyle}>Our People</p>
             <h2 style={{ ...h2Style, marginBottom: 0 }}>Meet The Team</h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 28, maxWidth: 1200, margin: "0 auto" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 28, maxWidth: 1200, margin: "0 auto" }}>
             {TEAM.map(({ name, initials, title, bio }) => (
               <div key={name} className="team-card" style={{
                 background: WHITE04,

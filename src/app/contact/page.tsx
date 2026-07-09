@@ -105,7 +105,7 @@ export default function ContactPage() {
 
       {/* Contact options */}
       <section style={{ background: "#0D1A2E", padding: "60px 24px 0" }}>
-        <div style={{ maxWidth: 1400, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16 }}>
+        <div style={{ maxWidth: 1400, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 16 }}>
           {contactOptions.map(({ icon, title, desc }) => (
             <div key={title} className="contact-opt" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderTop: "3px solid #d87307", borderRadius: 10, padding: "24px 20px", textAlign: "center" }}>
               <div style={{ display: "flex", justifyContent: "center", marginBottom: 12 }}>{icon}</div>
