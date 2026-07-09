@@ -674,8 +674,8 @@ export default function Home() {
                     >
                       <span>{cta}</span>
                       <span className="cta-arrow" style={{ display: "inline-flex", alignItems: "center" }}>
-                        <span className="cta-arrow-tail" style={{ display: "inline-block", height: 2, width: 8, background: "currentColor", marginRight: -1, transition: "width 0.3s cubic-bezier(0.22,1,0.36,1)" }} />
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}><path d="M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                        <span className="cta-arrow-tail" style={{ display: "inline-block", height: 2, width: 8, background: "currentColor", transition: "width 0.3s cubic-bezier(0.22,1,0.36,1)" }} />
+                        <svg width="3.5" height="7" viewBox="0 6 6 12" fill="none" style={{ flexShrink: 0, display: "block" }}><path d="M0 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                       </span>
                     </Link>
                 </div>
@@ -914,8 +914,8 @@ export default function Home() {
                     >
                       <span>Book a Strategy Session</span>
                       <span className="cta-arrow" style={{ display: "inline-flex", alignItems: "center" }}>
-                        <span className="cta-arrow-tail" style={{ display: "inline-block", height: 2.4, width: 10, background: "currentColor", marginRight: -1, transition: "width 0.3s cubic-bezier(0.22,1,0.36,1)" }} />
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}><path d="M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                        <span className="cta-arrow-tail" style={{ display: "inline-block", height: 2.4, width: 10, background: "currentColor", transition: "width 0.3s cubic-bezier(0.22,1,0.36,1)" }} />
+                        <svg width="4.5" height="9" viewBox="0 6 6 12" fill="none" style={{ flexShrink: 0, display: "block" }}><path d="M0 6l6 6-6 6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
                       </span>
                     </Link>
                   </div>
@@ -945,8 +945,8 @@ export default function Home() {
                     >
                       <span>Explore Our Solutions</span>
                       <span className="cta-arrow" style={{ display: "inline-flex", alignItems: "center" }}>
-                        <span className="cta-arrow-tail" style={{ display: "inline-block", height: 2.4, width: 10, background: "currentColor", marginRight: -1, transition: "width 0.3s cubic-bezier(0.22,1,0.36,1)" }} />
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}><path d="M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                        <span className="cta-arrow-tail" style={{ display: "inline-block", height: 2.4, width: 10, background: "currentColor", transition: "width 0.3s cubic-bezier(0.22,1,0.36,1)" }} />
+                        <svg width="4.5" height="9" viewBox="0 6 6 12" fill="none" style={{ flexShrink: 0, display: "block" }}><path d="M0 6l6 6-6 6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
                       </span>
                     </Link>
                   </div>
