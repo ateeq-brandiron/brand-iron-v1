@@ -121,8 +121,8 @@ export default function Footer() {
               {/* Newsletter */}
               <div className="footer-newsletter-wrap" style={{ flex: 1, display: "flex", justifyContent: "flex-end" }}>
               <div className="footer-newsletter" style={{ maxWidth: 340, width: "100%" }}>
-                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, fontWeight: 700, color: "#FFFFFF", marginBottom: 16, lineHeight: 1.3 }}>
-                  Subscribe To Our<br />Newsletter
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.9)", marginBottom: 16, lineHeight: 1.9 }}>
+                  Subscribe To Our Newsletter
                 </p>
                 <form onSubmit={e => { e.preventDefault(); setEmail(""); }} style={{ display: "flex" }}>
                   <input

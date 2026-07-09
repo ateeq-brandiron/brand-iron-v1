@@ -664,18 +664,18 @@ export default function Home() {
                     onMouseEnter={e => {
                       e.currentTarget.style.background = "#c46305";
                       const tail = e.currentTarget.querySelector<HTMLElement>(".cta-arrow-tail");
-                      if (tail) tail.style.width = "26px";
+                      if (tail) tail.style.transform = "scaleX(1)";
                     }}
                     onMouseLeave={e => {
                       e.currentTarget.style.background = "#d87307";
                       const tail = e.currentTarget.querySelector<HTMLElement>(".cta-arrow-tail");
-                      if (tail) tail.style.width = "8px";
+                      if (tail) tail.style.transform = "scaleX(0.3)";
                     }}
                     >
                       <span>{cta}</span>
                       <span className="cta-arrow" style={{ display: "inline-flex", alignItems: "center" }}>
-                        <span className="cta-arrow-tail" style={{ display: "inline-block", height: 2, width: 8, background: "currentColor", transition: "width 0.3s cubic-bezier(0.22,1,0.36,1)" }} />
-                        <svg width="3.5" height="7" viewBox="0 6 6 12" fill="none" style={{ flexShrink: 0, display: "block" }}><path d="M0 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                        <span className="cta-arrow-tail" style={{ display: "inline-block", height: 2, width: 18, background: "currentColor", transform: "scaleX(0.3)", transformOrigin: "right center", transition: "transform 0.3s cubic-bezier(0.22,1,0.36,1)" }} />
+                        <svg width="5" height="10" viewBox="0 6 6 12" fill="none" style={{ flexShrink: 0, display: "block" }}><path d="M0 6l6 6-6 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                       </span>
                     </Link>
                 </div>
@@ -904,18 +904,18 @@ export default function Home() {
                     onMouseEnter={e => {
                       e.currentTarget.style.color = "#d87307";
                       const tail = e.currentTarget.querySelector<HTMLElement>(".cta-arrow-tail");
-                      if (tail) tail.style.width = "34px";
+                      if (tail) tail.style.transform = "scaleX(1)";
                     }}
                     onMouseLeave={e => {
                       e.currentTarget.style.color = "#FFFFFF";
                       const tail = e.currentTarget.querySelector<HTMLElement>(".cta-arrow-tail");
-                      if (tail) tail.style.width = "10px";
+                      if (tail) tail.style.transform = "scaleX(0.3)";
                     }}
                     >
                       <span>Book a Strategy Session</span>
                       <span className="cta-arrow" style={{ display: "inline-flex", alignItems: "center" }}>
-                        <span className="cta-arrow-tail" style={{ display: "inline-block", height: 2.4, width: 10, background: "currentColor", transition: "width 0.3s cubic-bezier(0.22,1,0.36,1)" }} />
-                        <svg width="4.5" height="9" viewBox="0 6 6 12" fill="none" style={{ flexShrink: 0, display: "block" }}><path d="M0 6l6 6-6 6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                        <span className="cta-arrow-tail" style={{ display: "inline-block", height: 2.4, width: 24, background: "currentColor", transform: "scaleX(0.35)", transformOrigin: "right center", transition: "transform 0.3s cubic-bezier(0.22,1,0.36,1)" }} />
+                        <svg width="6" height="12" viewBox="0 6 6 12" fill="none" style={{ flexShrink: 0, display: "block" }}><path d="M0 6l6 6-6 6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
                       </span>
                     </Link>
                   </div>
@@ -934,19 +934,19 @@ export default function Home() {
                       e.currentTarget.style.color = "#d87307";
                       e.currentTarget.style.borderBottomColor = "#d87307";
                       const tail = e.currentTarget.querySelector<HTMLElement>(".cta-arrow-tail");
-                      if (tail) tail.style.width = "34px";
+                      if (tail) tail.style.transform = "scaleX(1)";
                     }}
                     onMouseLeave={e => {
                       e.currentTarget.style.color = "#FFFFFF";
                       e.currentTarget.style.borderBottomColor = "rgba(255,255,255,0.5)";
                       const tail = e.currentTarget.querySelector<HTMLElement>(".cta-arrow-tail");
-                      if (tail) tail.style.width = "10px";
+                      if (tail) tail.style.transform = "scaleX(0.3)";
                     }}
                     >
                       <span>Explore Our Solutions</span>
                       <span className="cta-arrow" style={{ display: "inline-flex", alignItems: "center" }}>
-                        <span className="cta-arrow-tail" style={{ display: "inline-block", height: 2.4, width: 10, background: "currentColor", transition: "width 0.3s cubic-bezier(0.22,1,0.36,1)" }} />
-                        <svg width="4.5" height="9" viewBox="0 6 6 12" fill="none" style={{ flexShrink: 0, display: "block" }}><path d="M0 6l6 6-6 6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                        <span className="cta-arrow-tail" style={{ display: "inline-block", height: 2.4, width: 24, background: "currentColor", transform: "scaleX(0.35)", transformOrigin: "right center", transition: "transform 0.3s cubic-bezier(0.22,1,0.36,1)" }} />
+                        <svg width="6" height="12" viewBox="0 6 6 12" fill="none" style={{ flexShrink: 0, display: "block" }}><path d="M0 6l6 6-6 6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
                       </span>
                     </Link>
                   </div>
