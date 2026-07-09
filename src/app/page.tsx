@@ -117,13 +117,9 @@ const testimonials = [
   },
 ];
 
-const heroImages = ["/images/home-hero.jpg", "/images/hero-barn.webp", "/images/hero-haybales.webp"];
+const heroImg = "/images/hero-barn.webp";
 
 export default function Home() {
-  const [heroImg, setHeroImg] = useState(heroImages[0]);
-  useEffect(() => {
-    setHeroImg(heroImages[Math.floor(Math.random() * heroImages.length)]);
-  }, []);
   const s2 = useInView();
   const s3 = useInView();
   const s3cards = useInView();
