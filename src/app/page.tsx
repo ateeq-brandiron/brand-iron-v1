@@ -437,10 +437,10 @@ export default function Home() {
             <img src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 8, right: 8, width: 42, height: 42 }} />
             <img src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 8, left: 8, width: 42, height: 42 }} />
 
-            <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.1, marginBottom: 20 }}>
+            <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(22px, 3vw, 36px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.1, marginBottom: 20 }}>
               Why Great Companies<br />Still Struggle to Grow
             </h2>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a" }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.8, color: "#444" }}>
               Many organizations don&apos;t have a product problem. They don&apos;t have a talent problem. They don&apos;t even have a marketing problem. They have an alignment problem. Brand strategy, marketing, sales, technology, and operations often evolve independently — each with its own goals, tools, and priorities. While every team works hard, the customer experiences a disconnected journey. The result is slower growth, missed opportunities, and increasing costs to acquire and retain customers.
             </p>
           </div>
