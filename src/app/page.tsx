@@ -653,16 +653,18 @@ export default function Home() {
                     }
                   }}
                   >
-                    <div style={{ width: 44, height: 4, borderRadius: 2, background: "#d87307", marginBottom: 22 }} />
-                    <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 18, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 6 }}>{title}</h3>
-                    <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 700, color: "#d87307", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 14 }}>{sub}</p>
-                    <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "#555", marginBottom: 18 }}>{body}</p>
-                    <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 6, marginBottom: 26 }}>
-                      {solutions.map(s => (
-                        <span key={s} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 600, color: "#6b5a3e", background: "#F2ECDF", padding: "5px 11px", borderRadius: 20 }}>
-                          {s}
-                        </span>
-                      ))}
+                    <div style={{ minHeight: 420 }}>
+                      <div style={{ width: 44, height: 4, borderRadius: 2, background: "#d87307", marginBottom: 22 }} />
+                      <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 18, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 6 }}>{title}</h3>
+                      <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 700, color: "#d87307", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 14 }}>{sub}</p>
+                      <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "#555", marginBottom: 18 }}>{body}</p>
+                      <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 6 }}>
+                        {solutions.map(s => (
+                          <span key={s} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 600, color: "#6b5a3e", background: "#F2ECDF", padding: "5px 11px", borderRadius: 20 }}>
+                            {s}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                     <Link href={href} style={{
                       display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
@@ -670,7 +672,7 @@ export default function Home() {
                       letterSpacing: "0.12em", textTransform: "uppercase",
                       background: "#d87307", color: "#FFFFFF",
                       padding: "13px 20px", borderRadius: 6,
-                      marginTop: "auto",
+                      marginTop: 24,
                       transition: "background 0.2s",
                     }}
                     onClick={e => e.stopPropagation()}
