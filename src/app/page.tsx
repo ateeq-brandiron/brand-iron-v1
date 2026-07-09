@@ -751,21 +751,20 @@ export default function Home() {
           onLoadedMetadata={e => { e.currentTarget.currentTime = 1; }}
           onTimeUpdate={e => { if (e.currentTarget.currentTime >= 5) e.currentTarget.currentTime = 1; }}
         />
-        <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.55)" }} />
         <div ref={s6.ref} style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto", textAlign: "left" }}>
-          <h2 className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.25, marginBottom: 12 }}>
+          <h2 className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.25, marginBottom: 12, textShadow: "0 2px 12px rgba(0,0,0,0.85)" }}>
             Growth Is a Journey.<br />You Shouldn&apos;t Have to Navigate It Alone.
           </h2>
-          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: 14, letterSpacing: "0.08em", textTransform: "uppercase", color: "rgba(255,255,255,0.85)", marginBottom: 24 }}>
+          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: 14, letterSpacing: "0.08em", textTransform: "uppercase", color: "rgba(255,255,255,0.95)", marginBottom: 24, textShadow: "0 2px 10px rgba(0,0,0,0.85)" }}>
             We Build Alongside Your Team
           </p>
-          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.85, color: "rgba(255,255,255,0.82)", margin: "0 0 14px" }}>
+          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.85, color: "#FFFFFF", margin: "0 0 14px", textShadow: "0 2px 10px rgba(0,0,0,0.85)" }}>
             Growth is a team effort. That&apos;s why we work as an extension of your leadership team — helping you make smarter decisions, focus on the right opportunities, and build systems that drive long-term growth. Our success is measured by yours. We&apos;re here to help you build what&apos;s next.
           </p>
-          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.85, color: "rgba(255,255,255,0.75)", margin: "0 0 14px" }}>
+          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.85, color: "#FFFFFF", margin: "0 0 14px", textShadow: "0 2px 10px rgba(0,0,0,0.85)" }}>
             Whether you&apos;re defining your brand, entering a new market, improving AI visibility, scaling revenue operations, or preparing for your next stage of growth, Brand Iron is ready to help you move forward with clarity, confidence, and purpose.
           </p>
-          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.85, color: "#FFFFFF", fontWeight: 600, fontStyle: "italic", margin: "0 0 40px" }}>
+          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.85, color: "#FFFFFF", fontWeight: 600, fontStyle: "italic", margin: "0 0 40px", textShadow: "0 2px 10px rgba(0,0,0,0.85)" }}>
             Every successful growth story begins with a conversation. Let&apos;s start yours.
           </p>
           <div className={`reveal${s6.inView ? " visible" : ""}`} style={{ display: "flex", gap: 16, justifyContent: "flex-start", flexWrap: "wrap" }}>
