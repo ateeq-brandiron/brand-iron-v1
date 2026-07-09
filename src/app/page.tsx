@@ -627,63 +627,63 @@ export default function Home() {
                   className={`reveal${s5.inView ? " visible" : ""}`}
                   onClick={() => selectService(i)}
                   style={{
-                    background: "#FFFFFF", border: active ? "1px solid #d87307" : "1px solid #e8e0d4",
-                    padding: "32px 28px", position: "relative",
+                    background: active ? "#FFFFFF" : "#FDFBF7",
+                    border: active ? "1px solid #d87307" : "1px solid #ECE5D8",
+                    borderRadius: 18, padding: "36px 30px", position: "relative",
                     flex: "0 0 320px", width: 320, scrollSnapAlign: "center",
                     cursor: "pointer", transformOrigin: "center",
-                    transition: "transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s cubic-bezier(0.22,1,0.36,1), border-color 0.35s ease",
-                    transform: active ? "scale(1.08)" : "scale(1)",
-                    boxShadow: active ? "0 20px 48px rgba(216,115,7,0.22)" : "0 2px 12px rgba(0,0,0,0.05)",
+                    transition: "transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s cubic-bezier(0.22,1,0.36,1), border-color 0.35s ease, background 0.35s ease",
+                    transform: active ? "scale(1.06)" : "scale(1)",
+                    boxShadow: active ? "0 24px 48px rgba(216,115,7,0.2)" : "0 4px 20px rgba(0,0,0,0.05)",
                     zIndex: active ? 1 : 0,
                   }}
                   onMouseEnter={e => {
-                    e.currentTarget.querySelectorAll<HTMLImageElement>(".corner-bracket").forEach(img => (img.style.opacity = "1"));
                     if (!active) {
                       e.currentTarget.style.transform = "translateY(-6px) scale(1.02)";
-                      e.currentTarget.style.boxShadow = "0 16px 36px rgba(0,0,0,0.12)";
+                      e.currentTarget.style.boxShadow = "0 18px 36px rgba(0,0,0,0.1)";
+                      e.currentTarget.style.background = "#FFFFFF";
                     }
                   }}
                   onMouseLeave={e => {
-                    e.currentTarget.querySelectorAll<HTMLImageElement>(".corner-bracket").forEach(img => (img.style.opacity = "0"));
                     if (!active) {
                       e.currentTarget.style.transform = "scale(1)";
-                      e.currentTarget.style.boxShadow = "0 2px 12px rgba(0,0,0,0.05)";
+                      e.currentTarget.style.boxShadow = "0 4px 20px rgba(0,0,0,0.05)";
+                      e.currentTarget.style.background = "#FDFBF7";
                     }
                   }}
                   >
-                    <img className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 6, right: 6, width: 30, height: 30, opacity: active ? 1 : 0, transition: "opacity 0.25s ease" }} />
-                    <img className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 6, left: 6, width: 30, height: 30, opacity: active ? 1 : 0, transition: "opacity 0.25s ease" }} />
-                    <div style={{ width: "100%", height: 3, background: "#d87307", marginBottom: 20 }} />
+                    <div style={{ width: 44, height: 4, borderRadius: 2, background: "#d87307", marginBottom: 22 }} />
                     <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 18, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 6 }}>{title}</h3>
                     <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 700, color: "#d87307", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 14 }}>{sub}</p>
-                    <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "#555", marginBottom: 16 }}>{body}</p>
-                    <ul style={{ listStyle: "none", marginBottom: 24 }}>
+                    <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "#555", marginBottom: 18 }}>{body}</p>
+                    <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 26 }}>
                       {solutions.map(s => (
-                        <li key={s} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, color: "#444", padding: "4px 0", paddingLeft: 16, position: "relative" }}>
-                          <span style={{ position: "absolute", left: 0, color: "#d87307", fontWeight: 700 }}>›</span>
+                        <span key={s} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 600, color: "#6b5a3e", background: "#F2ECDF", padding: "5px 11px", borderRadius: 20 }}>
                           {s}
-                        </li>
+                        </span>
                       ))}
-                    </ul>
+                    </div>
                     <Link href={href} style={{
-                      display: "inline-flex", alignItems: "center", gap: 8,
+                      display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
                       fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 12,
                       letterSpacing: "0.12em", textTransform: "uppercase",
-                      color: "#d87307", transition: "color 0.2s",
+                      background: "#d87307", color: "#FFFFFF",
+                      padding: "13px 20px", borderRadius: 6,
+                      transition: "background 0.2s",
                     }}
                     onClick={e => e.stopPropagation()}
                     onMouseEnter={e => {
-                      e.currentTarget.style.color = "#945B06";
+                      e.currentTarget.style.background = "#c46305";
                       const arrow = e.currentTarget.querySelector<HTMLElement>(".cta-arrow");
                       if (arrow) arrow.style.transform = "translateX(5px)";
                     }}
                     onMouseLeave={e => {
-                      e.currentTarget.style.color = "#d87307";
+                      e.currentTarget.style.background = "#d87307";
                       const arrow = e.currentTarget.querySelector<HTMLElement>(".cta-arrow");
                       if (arrow) arrow.style.transform = "translateX(0)";
                     }}
                     >
-                      <span style={{ borderBottom: "1px solid currentColor", paddingBottom: 2 }}>{cta}</span>
+                      <span>{cta}</span>
                       <span className="cta-arrow" style={{ display: "inline-flex", transition: "transform 0.25s cubic-bezier(0.22,1,0.36,1)" }}>
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                       </span>
@@ -709,6 +709,24 @@ export default function Home() {
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </button>
+
+            {/* Dot pagination */}
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, marginTop: 32 }}>
+              {coreServices.map((s, i) => (
+                <button
+                  key={s.title}
+                  aria-label={`Go to ${s.title}`}
+                  onClick={() => selectService(i)}
+                  style={{
+                    width: i === activeService ? 24 : 8, height: 8, borderRadius: 4,
+                    background: i === activeService ? "#d87307" : "#ddd",
+                    border: "none", cursor: "pointer", transition: "width 0.2s, background 0.2s", padding: 0,
+                  }}
+                  onMouseEnter={e => { if (i !== activeService) (e.currentTarget as HTMLButtonElement).style.background = "#d87307"; }}
+                  onMouseLeave={e => { if (i !== activeService) (e.currentTarget as HTMLButtonElement).style.background = "#ddd"; }}
+                />
+              ))}
+            </div>
           </div>
 
         </div>
