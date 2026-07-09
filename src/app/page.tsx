@@ -610,7 +610,7 @@ export default function Home() {
             </button>
 
             <div ref={carouselRef} className="services-carousel" style={{
-              display: "flex", alignItems: "flex-start", gap: 24, overflowX: "auto",
+              display: "flex", gap: 24, overflowX: "auto",
               scrollSnapType: "x proximity", scrollBehavior: "smooth",
               padding: "8px calc(50% - 160px)",
             }}>
