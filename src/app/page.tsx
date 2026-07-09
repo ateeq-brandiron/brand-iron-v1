@@ -313,7 +313,7 @@ export default function Home() {
       {/* ── S3: BUYING JOURNEY ───────────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "48px 0 56px" }}>
         <div ref={s3.ref} style={{ maxWidth: 1148, margin: "0 auto", padding: "0 24px" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 64, alignItems: "start", marginBottom: 56 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 64, alignItems: "center", marginBottom: 56 }}>
             {/* Text — left */}
             <div>
               <h2 className={`reveal${s3.inView ? " visible" : ""}`} style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 28 }}>
@@ -402,7 +402,7 @@ export default function Home() {
               fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
               background: "#d87307", color: "#FFFFFF",
-              padding: "14px 36px", borderRadius: 2,
+              padding: "14px 36px", borderRadius: 6,
               display: "inline-block", transition: "background 0.2s",
             }}
             onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
@@ -759,7 +759,7 @@ export default function Home() {
               fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
               background: "#d87307", color: "#FFFFFF",
-              padding: "14px 36px", borderRadius: 2, transition: "background 0.2s",
+              padding: "14px 36px", borderRadius: 6, transition: "background 0.2s",
             }}
             onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
             onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
@@ -883,7 +883,7 @@ export default function Home() {
                     <Link href="/contact" style={{
                       fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 14,
                       letterSpacing: "0.14em", textTransform: "uppercase",
-                      background: "#d87307", color: "#FFFFFF", padding: "16px 40px", borderRadius: 2,
+                      background: "#d87307", color: "#FFFFFF", padding: "16px 40px", borderRadius: 6,
                       display: "inline-block", transition: "background 0.2s",
                     }}
                     onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
@@ -898,7 +898,7 @@ export default function Home() {
                       fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 14,
                       letterSpacing: "0.14em", textTransform: "uppercase",
                       background: "transparent", color: "#FFFFFF",
-                      padding: "16px 40px", border: "2px solid rgba(255,255,255,0.6)", borderRadius: 2,
+                      padding: "16px 40px", border: "2px solid rgba(255,255,255,0.6)", borderRadius: 6,
                       display: "inline-block", transition: "border-color 0.2s",
                     }}
                     onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.borderColor = "#d87307")}
