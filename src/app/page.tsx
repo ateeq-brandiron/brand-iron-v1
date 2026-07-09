@@ -657,7 +657,7 @@ export default function Home() {
                       letterSpacing: "0.12em", textTransform: "uppercase",
                       background: "#d87307", color: "#FFFFFF",
                       padding: "13px 20px", borderRadius: 6,
-                      marginTop: 4,
+                      marginTop: "auto",
                       transition: "background 0.2s",
                     }}
                     onClick={e => e.stopPropagation()}
