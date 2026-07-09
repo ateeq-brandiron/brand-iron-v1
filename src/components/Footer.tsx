@@ -77,7 +77,7 @@ export default function Footer() {
           <div style={{ position: "relative", zIndex: 1, padding: "40px 32px 40px 32px", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
 
             {/* Nav links */}
-            <nav className="footer-nav" style={{ display: "flex", flexWrap: "nowrap", justifyContent: "center", gap: "0 2px", marginBottom: 28, overflowX: "auto" }}>
+            <nav className="footer-nav" style={{ display: "flex", flexWrap: "nowrap", justifyContent: "space-between", gap: "0 2px", marginBottom: 28, overflowX: "auto" }}>
               {navLinks.map(([label, href], i) => (
                 <span key={label} style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
                   <Link href={href} style={{
@@ -120,7 +120,7 @@ export default function Footer() {
               </div>
 
               {/* Newsletter */}
-              <div className="footer-newsletter-wrap" style={{ flex: 1, display: "flex", justifyContent: "center" }}>
+              <div className="footer-newsletter-wrap" style={{ flex: 1, display: "flex", justifyContent: "flex-end" }}>
               <div className="footer-newsletter" style={{ maxWidth: 340, width: "100%" }}>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, fontWeight: 700, color: "#FFFFFF", marginBottom: 16, lineHeight: 1.3 }}>
                   Subscribe To Our<br />Newsletter
