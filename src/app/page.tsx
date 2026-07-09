@@ -894,29 +894,58 @@ export default function Home() {
                       Let&apos;s discuss your business goals, current challenges, and opportunities for growth. Together, we&apos;ll identify where your greatest opportunities lie and outline practical next steps.
                     </p>
                     <Link href="/contact" style={{
-                      fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 14,
-                      letterSpacing: "0.14em", textTransform: "uppercase",
-                      background: "#d87307", color: "#FFFFFF", padding: "16px 40px", borderRadius: 6,
-                      display: "inline-block", transition: "background 0.2s",
+                      display: "inline-flex", alignItems: "center", gap: 10,
+                      fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: 17,
+                      letterSpacing: "0.02em", textTransform: "uppercase",
+                      color: "#FFFFFF", borderBottom: "3px solid #d87307", paddingBottom: 6,
+                      transition: "color 0.2s",
                     }}
-                    onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
-                    onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
-                    >Book a Strategy Session</Link>
+                    onMouseEnter={e => {
+                      e.currentTarget.style.color = "#d87307";
+                      const arrow = e.currentTarget.querySelector<HTMLElement>(".cta-arrow");
+                      if (arrow) arrow.style.transform = "translateX(7px)";
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.color = "#FFFFFF";
+                      const arrow = e.currentTarget.querySelector<HTMLElement>(".cta-arrow");
+                      if (arrow) arrow.style.transform = "translateX(0)";
+                    }}
+                    >
+                      <span>Book a Strategy Session</span>
+                      <span className="cta-arrow" style={{ display: "inline-flex", transition: "transform 0.25s cubic-bezier(0.22,1,0.36,1)" }}>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      </span>
+                    </Link>
                   </div>
                   <div>
                     <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(255,255,255,0.85)", marginBottom: 20 }}>
                       Learn how Brand Strategy, AI Visibility, Go-to-Market Strategy, Revenue Engineering, Outbound Growth, Website Development, and Capital Raise Support work together to create measurable business outcomes.
                     </p>
                     <Link href="/services" style={{
-                      fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 14,
-                      letterSpacing: "0.14em", textTransform: "uppercase",
-                      background: "transparent", color: "#FFFFFF",
-                      padding: "16px 40px", border: "2px solid rgba(255,255,255,0.6)", borderRadius: 6,
-                      display: "inline-block", transition: "border-color 0.2s",
+                      display: "inline-flex", alignItems: "center", gap: 10,
+                      fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: 17,
+                      letterSpacing: "0.02em", textTransform: "uppercase",
+                      color: "#FFFFFF", borderBottom: "3px solid rgba(255,255,255,0.5)", paddingBottom: 6,
+                      transition: "color 0.2s, border-color 0.2s",
                     }}
-                    onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.borderColor = "#d87307")}
-                    onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,255,255,0.6)")}
-                    >Explore Our Solutions</Link>
+                    onMouseEnter={e => {
+                      e.currentTarget.style.color = "#d87307";
+                      e.currentTarget.style.borderBottomColor = "#d87307";
+                      const arrow = e.currentTarget.querySelector<HTMLElement>(".cta-arrow");
+                      if (arrow) arrow.style.transform = "translateX(7px)";
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.color = "#FFFFFF";
+                      e.currentTarget.style.borderBottomColor = "rgba(255,255,255,0.5)";
+                      const arrow = e.currentTarget.querySelector<HTMLElement>(".cta-arrow");
+                      if (arrow) arrow.style.transform = "translateX(0)";
+                    }}
+                    >
+                      <span>Explore Our Solutions</span>
+                      <span className="cta-arrow" style={{ display: "inline-flex", transition: "transform 0.25s cubic-bezier(0.22,1,0.36,1)" }}>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      </span>
+                    </Link>
                   </div>
                 </div>
               </div>
