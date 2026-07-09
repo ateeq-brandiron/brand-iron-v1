@@ -610,12 +610,11 @@ export default function Home() {
             </button>
 
             <div ref={carouselRef} className="services-carousel" style={{
-              display: "flex", gap: 24, overflowX: "auto",
+              display: "flex", alignItems: "flex-start", gap: 24, overflowX: "auto",
               scrollSnapType: "x proximity", scrollBehavior: "smooth",
               padding: "8px calc(50% - 160px)",
             }}>
               {coreServices.map(({ title, sub, body, solutions, cta, href }, i) => {
-                const active = i === activeService;
                 return (
                 <div
                   key={title}
@@ -623,44 +622,34 @@ export default function Home() {
                   className={`reveal${s5.inView ? " visible" : ""}`}
                   onClick={() => selectService(i)}
                   style={{
-                    background: active ? "#FFFFFF" : "#FDFBF7",
-                    border: active ? "1px solid #d87307" : "1px solid #ECE5D8",
-                    borderRadius: 18, padding: "36px 30px", position: "relative",
-                    display: "flex", flexDirection: "column", minHeight: 645,
+                    background: "#FFFFFF",
+                    border: "1px solid #ECE5D8",
+                    borderRadius: 18, padding: "30px 26px", position: "relative",
+                    display: "flex", flexDirection: "column",
                     flex: "0 0 320px", width: 320, scrollSnapAlign: "center",
-                    cursor: "pointer", transformOrigin: "center",
-                    transition: "transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s cubic-bezier(0.22,1,0.36,1), border-color 0.35s ease, background 0.35s ease",
-                    transform: active ? "scale(1.06)" : "scale(1)",
-                    boxShadow: active ? "0 24px 48px rgba(216,115,7,0.2)" : "0 4px 20px rgba(0,0,0,0.05)",
-                    zIndex: active ? 1 : 0,
+                    cursor: "pointer",
+                    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                    boxShadow: "0 4px 16px rgba(0,0,0,0.05)",
                   }}
                   onMouseEnter={e => {
-                    if (!active) {
-                      e.currentTarget.style.transform = "translateY(-6px) scale(1.02)";
-                      e.currentTarget.style.boxShadow = "0 18px 36px rgba(0,0,0,0.1)";
-                      e.currentTarget.style.background = "#FFFFFF";
-                    }
+                    e.currentTarget.style.transform = "translateY(-4px)";
+                    e.currentTarget.style.boxShadow = "0 14px 28px rgba(0,0,0,0.1)";
                   }}
                   onMouseLeave={e => {
-                    if (!active) {
-                      e.currentTarget.style.transform = "scale(1)";
-                      e.currentTarget.style.boxShadow = "0 4px 20px rgba(0,0,0,0.05)";
-                      e.currentTarget.style.background = "#FDFBF7";
-                    }
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = "0 4px 16px rgba(0,0,0,0.05)";
                   }}
                   >
-                    <div style={{ minHeight: 420 }}>
-                      <div style={{ width: 44, height: 4, borderRadius: 2, background: "#d87307", marginBottom: 22 }} />
-                      <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 18, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 6 }}>{title}</h3>
-                      <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 700, color: "#d87307", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 14 }}>{sub}</p>
-                      <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "#555", marginBottom: 18 }}>{body}</p>
-                      <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 6 }}>
-                        {solutions.map(s => (
-                          <span key={s} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 600, color: "#6b5a3e", background: "#F2ECDF", padding: "5px 11px", borderRadius: 20 }}>
-                            {s}
-                          </span>
-                        ))}
-                      </div>
+                    <div style={{ width: 40, height: 4, borderRadius: 2, background: "#d87307", marginBottom: 16 }} />
+                    <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 17, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 5 }}>{title}</h3>
+                    <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12.5, fontWeight: 700, color: "#d87307", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 12 }}>{sub}</p>
+                    <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.65, color: "#555", marginBottom: 14 }}>{body}</p>
+                    <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 6, marginBottom: 18 }}>
+                      {solutions.map(s => (
+                        <span key={s} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 600, color: "#6b5a3e", background: "#F2ECDF", padding: "5px 11px", borderRadius: 20 }}>
+                          {s}
+                        </span>
+                      ))}
                     </div>
                     <Link href={href} style={{
                       display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
@@ -668,7 +657,7 @@ export default function Home() {
                       letterSpacing: "0.12em", textTransform: "uppercase",
                       background: "#d87307", color: "#FFFFFF",
                       padding: "13px 20px", borderRadius: 6,
-                      marginTop: 24,
+                      marginTop: 4,
                       transition: "background 0.2s",
                     }}
                     onClick={e => e.stopPropagation()}
