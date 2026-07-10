@@ -387,46 +387,6 @@ export default function AIVisibilityPage() {
             </p>
           </div>
 
-          {/* The Modern Buying Journey */}
-          <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ position: "relative", background: "#F9F8F6", borderRadius: 16, padding: "56px 64px", marginBottom: 64, overflow: "hidden", borderTop: "3px solid #d87307" }}>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(20px, 2.5vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 16, textAlign: "center" }}>
-              Today&apos;s buyers don&apos;t follow a straight path to purchase.
-            </h3>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#555", maxWidth: 620, margin: "0 auto 12px", textAlign: "center" }}>
-              Instead, they move between multiple channels as they research, compare, and validate their decisions.
-            </p>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#555", maxWidth: 620, margin: "0 auto 48px", textAlign: "center" }}>
-              Every step is an opportunity to build visibility, trust, and credibility, or lose the opportunity to a competitor.
-            </p>
-
-            {/* Journey steps */}
-            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 0, flexWrap: "wrap" }}>
-              {[
-                { label: "Awareness", sub: "Buyers discover via AI, search, social, or peer referral" },
-                { label: "Research", sub: "They compare options across multiple platforms" },
-                { label: "Validate", sub: "They check reviews, content & AI recommendations" },
-                { label: "Engage", sub: "Only then do they reach out" },
-              ].map(({ label, sub }, i) => (
-                <div key={label} style={{ display: "flex", alignItems: "center" }}>
-                  <div style={{ textAlign: "center", maxWidth: 160, padding: "0 8px" }}>
-                    <div style={{ width: 64, height: 64, borderRadius: "50%", background: i === 3 ? "#d87307" : "#EFEDE7", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 12px" }}>
-                      <span style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 20, fontWeight: 900, color: i === 3 ? "#FFFFFF" : "#d87307" }}>0{i + 1}</span>
-                    </div>
-                    <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 13, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.08em", color: "#1a1a1a", marginBottom: 6 }}>{label}</p>
-                    <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, lineHeight: 1.5, color: "#777" }}>{sub}</p>
-                  </div>
-                  {i < 3 && (
-                    <div style={{ padding: "0 4px", marginBottom: 40 }}>
-                      <svg width="28" height="16" viewBox="0 0 28 16" fill="none">
-                        <path d="M2 8h20M16 3l6 5-6 5" stroke="#d87307" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-
           {/* Then vs Now */}
           <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ marginBottom: 64 }}>
             <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 32 }}>
@@ -509,11 +469,11 @@ export default function AIVisibilityPage() {
           {/* Be Found → Be Understood → Be Trusted → Be Recommended */}
           <div className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ display: "flex", alignItems: "stretch", justifyContent: "center", gap: 0, marginBottom: 64, flexWrap: "wrap" }}>
             {[
-              { label: "Be Found", sub: "Visible across search engines and AI platforms where buyers search", num: "01" },
-              { label: "Be Understood", sub: "AI and search engines clearly understand who you are and what you do", num: "02" },
-              { label: "Be Trusted", sub: "Authority, credibility, and digital presence that earns recommendations", num: "03" },
-              { label: "Be Recommended", sub: "AI surfaces your business when buyers ask the questions you answer", num: "04" },
-            ].map(({ label, sub, num }, i) => (
+              { label: "Be Found", num: "01" },
+              { label: "Be Understood", num: "02" },
+              { label: "Be Trusted", num: "03" },
+              { label: "Be Recommended", num: "04" },
+            ].map(({ label, num }, i) => (
               <div key={label} style={{ display: "flex", alignItems: "center" }}>
                 <div style={{
                   position: "relative",
@@ -528,8 +488,7 @@ export default function AIVisibilityPage() {
                 >
                   {i === 3 && <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "rgba(255,255,255,0.4)" }} />}
                   <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: i === 3 ? "rgba(255,255,255,0.8)" : "#d87307", marginBottom: 12 }}>{num}</p>
-                  <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 18, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", marginBottom: 12, lineHeight: 1.2 }}>{label}</p>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, lineHeight: 1.6, color: "rgba(255,255,255,0.75)", margin: 0 }}>{sub}</p>
+                  <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 18, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", margin: 0, lineHeight: 1.2 }}>{label}</p>
                 </div>
                 {i < 3 && (
                   <div style={{ padding: "0 6px" }}>
