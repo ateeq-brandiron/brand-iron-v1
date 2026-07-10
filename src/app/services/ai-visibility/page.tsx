@@ -652,17 +652,20 @@ export default function AIVisibilityPage() {
       {/* ── S5: CHOOSE YOUR SOLUTION ─────────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "120px 40px" }}>
         <div ref={s5View.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <div style={{ marginBottom: 72 }}>
-            <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
+          <div style={{ marginBottom: 72, textAlign: "center" }}>
+            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 14 }}>
+              Choose Your AI Visibility Journey
+            </p>
+            <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20 }}>
               Choose the Right AI Visibility Solution
             </h2>
-            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 680, marginBottom: 16 }}>
+            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 680, margin: "0 auto 16px" }}>
               Every organization is at a different stage of its AI Visibility journey.
             </p>
-            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 680, marginBottom: 16 }}>
+            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 680, margin: "0 auto 16px" }}>
               Some need to understand why they&apos;re not appearing in AI-powered search results. Others are ready to strengthen their technical foundation, build digital authority, or establish market leadership.
             </p>
-            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 680 }}>
+            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 680, margin: "0 auto" }}>
               Our four-tier framework allows you to start where you are today, and grow as your business grows.
             </p>
           </div>
@@ -673,7 +676,7 @@ export default function AIVisibilityPage() {
               <div key={tier.number} className={`reveal${s5View.inView ? ' visible' : ''}`} style={{
                 position: "relative",
                 background: "#F9F8F6",
-                borderRadius: 12, padding: "36px 28px",
+                borderRadius: 12, padding: "32px 24px",
                 border: "1px solid #EEEBE7",
                 display: "flex", flexDirection: "column",
                 transition: "transform 0.25s, box-shadow 0.25s",
@@ -685,7 +688,7 @@ export default function AIVisibilityPage() {
               onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 2px 12px rgba(0,0,0,0.04)"; }}
               >
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, transparent, rgba(216,115,7,0.4), transparent)" }} />
-                <div style={{ width: 60, height: 60, borderRadius: 12, background: "rgba(216,115,7,0.12)", border: "1px solid rgba(216,115,7,0.25)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 20 }}>
+                <div style={{ width: 56, height: 56, borderRadius: "50%", background: "#FFFFFF", border: "1.5px solid rgba(216,115,7,0.35)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 18 }}>
                   {tier.icon}
                 </div>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#d87307", marginBottom: 8 }}>{tier.number}</p>
@@ -696,68 +699,67 @@ export default function AIVisibilityPage() {
                   <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#999", marginBottom: 6 }}>Best For</p>
                   <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.6, color: "#555" }}>{tier.bestFor}</p>
                 </div>
-                <div style={{ borderTop: "1px solid #EEEBE7", paddingTop: 16, marginBottom: 20 }}>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#999", marginBottom: 6 }}>Primary Outcome</p>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 600, color: "#d87307" }}>{tier.outcome}</p>
+                <div style={{ borderTop: "1px solid #EEEBE7", paddingTop: 16, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12 }}>
+                  <div>
+                    <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#999", marginBottom: 6 }}>Primary Outcome</p>
+                    <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 600, color: "#d87307", margin: 0 }}>{tier.outcome}</p>
+                  </div>
+                  <Link href={tier.href} aria-label={`Learn more about ${tier.name}`} style={{
+                    flexShrink: 0, width: 36, height: 36, borderRadius: "50%",
+                    background: "#d87307", display: "flex", alignItems: "center", justifyContent: "center",
+                    transition: "background 0.2s, transform 0.2s",
+                  }}
+                  onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.background = "#b8691f"; (e.currentTarget as HTMLAnchorElement).style.transform = "translateX(3px)"; }}
+                  onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.background = "#d87307"; (e.currentTarget as HTMLAnchorElement).style.transform = "translateX(0)"; }}
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#FFFFFF" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  </Link>
                 </div>
-                <Link href={tier.href} style={{
-                  display: "block", textAlign: "center", padding: "12px 20px", borderRadius: 8,
-                  fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
-                  letterSpacing: "0.08em", textTransform: "uppercase", textDecoration: "none",
-                  background: "transparent",
-                  color: "#1a1a1a",
-                  border: "1.5px solid #1a1a1a",
-                  transition: "background 0.2s, color 0.2s, border-color 0.2s",
-                }}
-                onMouseEnter={e => {
-                  (e.currentTarget as HTMLAnchorElement).style.background = "#d87307"; (e.currentTarget as HTMLAnchorElement).style.color = "#FFFFFF"; (e.currentTarget as HTMLAnchorElement).style.borderColor = "#d87307";
-                }}
-                onMouseLeave={e => {
-                  (e.currentTarget as HTMLAnchorElement).style.background = "transparent"; (e.currentTarget as HTMLAnchorElement).style.color = "#1a1a1a"; (e.currentTarget as HTMLAnchorElement).style.borderColor = "#1a1a1a";
-                }}
-                >
-                  Learn More →
-                </Link>
               </div>
             ))}
           </div>
 
           {/* Comparison table */}
-          <div className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ marginBottom: 64, overflowX: "auto", border: "1px solid #ECE5D8", borderRadius: 12 }}>
-            <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "'Montserrat', sans-serif", fontSize: 14 }}>
-              <thead>
-                <tr style={{ background: "#EFEDE7" }}>
-                  <th style={{ padding: "18px 24px", textAlign: "left", color: "#8a8378", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase" }}></th>
-                  {tiers.map(t => (
-                    <th key={t.number} style={{ padding: "18px 20px", textAlign: "center", color: "#d87307", fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase" }}>{t.name}</th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  { label: "Engagement", values: tiers.map(t => t.engagement) },
-                  { label: "Primary Focus", values: tiers.map(t => t.focus) },
-                  { label: "Best For", values: ["Visibility Assessment", "Technical Foundation", "Authority Growth", "Category Leadership"] },
-                  { label: "Primary Outcome", values: ["Visibility Clarity", "AI-Ready Website", "Increased Authority & AI Recommendations", "AI & Market Leadership"] },
-                  { label: "Ideal Next Step", values: ["Identify Opportunities", "Implement Foundation", "Scale Visibility", "Sustain Market Leadership"] },
-                ].map(({ label, values }, ri) => (
-                  <tr key={label} style={{ background: ri % 2 === 0 ? "#F9F8F6" : "#FFFFFF" }}>
-                    <td style={{ padding: "18px 24px", fontWeight: 600, color: "#1a1a1a", fontSize: 13, borderBottom: "1px solid #EEEBE7", whiteSpace: "nowrap" }}>{label}</td>
-                    {values.map((v, ci) => (
-                      <td key={ci} style={{ padding: "18px 20px", textAlign: "center", color: "#555", lineHeight: 1.5, borderBottom: "1px solid #EEEBE7" }}>{v}</td>
+          <div className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ marginBottom: 64 }}>
+            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(20px, 2.5vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 32, textAlign: "center" }}>
+              Quick Comparison
+            </h3>
+            <div style={{ overflowX: "auto", border: "1px solid #ECE5D8", borderRadius: 12 }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "'Montserrat', sans-serif", fontSize: 14 }}>
+                <thead>
+                  <tr style={{ background: "#EFEDE7" }}>
+                    <th style={{ padding: "18px 24px", textAlign: "left", color: "#8a8378", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase" }}></th>
+                    {tiers.map(t => (
+                      <th key={t.number} style={{ padding: "18px 20px", textAlign: "center", color: "#d87307", fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase" }}>{t.name}</th>
                     ))}
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {[
+                    { label: "Engagement", values: tiers.map(t => t.engagement) },
+                    { label: "Primary Focus", values: tiers.map(t => t.focus) },
+                    { label: "Best For", values: ["Visibility Assessment", "Technical Foundation", "Authority Growth", "Category Leadership"] },
+                    { label: "Primary Outcome", values: ["Visibility Clarity", "AI-Ready Website", "Increased Authority & AI Recommendations", "AI & Market Leadership"] },
+                    { label: "Ideal Next Step", values: ["Identify Opportunities", "Implement Foundation", "Scale Visibility", "Sustain Market Leadership"] },
+                  ].map(({ label, values }, ri) => (
+                    <tr key={label} style={{ background: ri % 2 === 0 ? "#F9F8F6" : "#FFFFFF" }}>
+                      <td style={{ padding: "18px 24px", fontWeight: 600, color: "#1a1a1a", fontSize: 13, borderBottom: "1px solid #EEEBE7", whiteSpace: "nowrap" }}>{label}</td>
+                      {values.map((v, ci) => (
+                        <td key={ci} style={{ padding: "18px 20px", textAlign: "center", color: "#555", lineHeight: 1.5, borderBottom: "1px solid #EEEBE7" }}>{v}</td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
 
           {/* Which solution is right for you */}
           <div className={`reveal${s5View.inView ? ' visible' : ''}`}>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(20px, 2.5vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 40 }}>
+            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(20px, 2.5vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 40, textAlign: "center" }}>
               Which Solution Is Right for You?
             </h3>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 24 }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 24, marginBottom: 40 }}>
               {[
                 {
                   tier: "AI Visibility Diagnostic",
@@ -799,6 +801,7 @@ export default function AIVisibilityPage() {
                 <div key={tier} style={{
                   background: "#F9F8F6", borderRadius: 12, padding: "36px 32px",
                   borderLeft: "4px solid #d87307",
+                  display: "flex", flexDirection: "column",
                   transition: "box-shadow 0.25s, transform 0.25s",
                   boxShadow: "0 2px 16px rgba(0,0,0,0.05)",
                 }}
@@ -808,7 +811,7 @@ export default function AIVisibilityPage() {
                   <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#d87307", marginBottom: 8 }}>
                     Choose {tier} if…
                   </p>
-                  <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 24 }}>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 24, flex: 1 }}>
                     {items.map(item => (
                       <div key={item} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
                         <svg style={{ flexShrink: 0, marginTop: 2 }} width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4L13 4" stroke="#d87307" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -816,19 +819,47 @@ export default function AIVisibilityPage() {
                       </div>
                     ))}
                   </div>
-                  <Link href={href} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.08em", textTransform: "uppercase", color: "#1a1a1a", textDecoration: "none" }}
-                    onMouseEnter={e => (e.currentTarget.style.color = "#d87307")}
-                    onMouseLeave={e => (e.currentTarget.style.color = "#1a1a1a")}
+                  <Link href={href} style={{
+                    display: "inline-block", alignSelf: "flex-start", textAlign: "center", padding: "12px 24px", borderRadius: 999,
+                    fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
+                    letterSpacing: "0.08em", textTransform: "uppercase", textDecoration: "none",
+                    background: "#d87307", color: "#FFFFFF",
+                    transition: "background 0.2s",
+                  }}
+                    onMouseEnter={e => (e.currentTarget.style.background = "#b8691f")}
+                    onMouseLeave={e => (e.currentTarget.style.background = "#d87307")}
                   >
                     Explore {tier} →
                   </Link>
                 </div>
               ))}
             </div>
+
+            {/* Not sure which path — talk to a strategist */}
+            <div style={{
+              background: "#FDF4EA", border: "1px solid rgba(216,115,7,0.25)", borderRadius: 12,
+              padding: "28px 32px", display: "flex", alignItems: "center", justifyContent: "space-between",
+              flexWrap: "wrap", gap: 20,
+            }}>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.7, color: "#444", margin: 0, maxWidth: 560 }}>
+                Not sure where to start? Talk through your goals with a strategist and find the right AI Visibility solution for your business.
+              </p>
+              <Link href="/contact" style={{
+                flexShrink: 0, display: "inline-block", padding: "14px 32px", borderRadius: 8,
+                fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
+                letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none",
+                background: "#1a1a1a", color: "#FFFFFF", transition: "background 0.2s",
+              }}
+              onMouseEnter={e => (e.currentTarget.style.background = "#d87307")}
+              onMouseLeave={e => (e.currentTarget.style.background = "#1a1a1a")}
+              >
+                Talk to a Strategist →
+              </Link>
+            </div>
           </div>
 
           {/* Transition line */}
-          <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 640, margin: "56px 0 0" }}>
+          <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 640, margin: "40px auto 0", textAlign: "center" }}>
             Explore each solution in detail to understand what&apos;s included, who it&apos;s designed for, and the business outcomes you can expect.
           </p>
         </div>
