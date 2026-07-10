@@ -294,79 +294,105 @@ export default function AIVisibilityPage() {
       {auditOpen && <AuditModal onClose={() => setAuditOpen(false)} />}
 
       {/* ── HERO ─────────────────────────────────────────────── */}
-      <section style={{
-        position: "relative", minHeight: "92vh", display: "flex", alignItems: "center", overflow: "hidden",
-      }}>
+      <section className="ai-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <video
           src="/Animate_this_image_and_these_d.mp4"
           autoPlay muted loop playsInline preload="auto"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }}
         />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.35) 0%, rgba(8,16,36,0.25) 45%, rgba(8,16,36,0.65) 100%)" }} />
 
-        <div style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto", padding: "160px 24px 100px", width: "100%" }}>
-          <h1 className="hero-h1-anim" style={{
-            fontFamily: "'Burford Rustic Inline', sans-serif",
-            fontWeight: 400, fontSize: "clamp(42px, 7vw, 96px)",
-            textTransform: "uppercase", letterSpacing: "0.03em", lineHeight: 1.0,
-            color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))",
-            maxWidth: 900, marginBottom: 36,
-          }}>
-            Helping Brands Become Discoverable, Trusted, and Recommended Across Search and AI.
-          </h1>
+        <div className="ai-hero-wrap" style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", padding: "88px 24px 24px" }}>
+          <div className="ai-hero-grid" style={{ maxWidth: 1200, margin: "0 auto", width: "100%", display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 56, alignItems: "center" }}>
 
-          <p className="hero-body-anim" style={{ fontSize: 18, lineHeight: 1.8, color: "rgba(255,255,255,0.9)", maxWidth: 680, marginBottom: 16 }}>
-            The way people search has changed.
-          </p>
-          <p className="hero-body-anim" style={{ fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.8)", maxWidth: 700, marginBottom: 16 }}>
-            Today&apos;s buyers don&apos;t rely on Google alone. They ask questions in ChatGPT, Gemini, Claude, Perplexity, Microsoft Copilot, voice assistants, industry communities, and traditional search engines long before contacting a company.
-          </p>
-          <p className="hero-body-anim" style={{ fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.75)", maxWidth: 700, marginBottom: 16 }}>
-            If your business isn&apos;t visible where those conversations happen, you&apos;re losing opportunities before your sales team ever has a chance to engage.
-          </p>
-          <p className="hero-body-anim" style={{ fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.75)", maxWidth: 700, marginBottom: 32 }}>
-            Brand Iron helps organizations strengthen their AI Visibility by combining Search Engine Optimization (SEO), Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), technical optimization, entity development, authority building, and strategic content into one connected visibility strategy.
-          </p>
+            {/* LEFT — headline, hook, CTAs */}
+            <div>
+              <h1 className="hero-h1-anim" style={{
+                fontFamily: "'Burford Rustic Inline', sans-serif",
+                fontWeight: 400, fontSize: "clamp(30px, 4.4vw, 58px)",
+                textTransform: "uppercase", letterSpacing: "0.03em", lineHeight: 1.05,
+                color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))",
+                marginBottom: 20,
+              }}>
+                Helping Brands Become Discoverable, Trusted, and Recommended Across Search and AI.
+              </h1>
 
-          {/* Pull quote */}
-          <div className="hero-body-anim" style={{ borderLeft: "3px solid #d87307", paddingLeft: 24, marginBottom: 48, maxWidth: 600, background: "rgba(216,115,7,0.07)", padding: "20px 24px", borderRadius: "0 8px 8px 0" }}>
-            <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(16px, 2vw, 22px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.06em", color: "#d87307", lineHeight: 1.4, margin: 0 }}>
-              &ldquo;The brands that earn visibility today become the brands AI recommends tomorrow.&rdquo;
-            </p>
+              <p className="hero-body-anim" style={{
+                fontFamily: "'Burford Rustic Inline', sans-serif", fontWeight: 400,
+                fontSize: "clamp(12px, 1.4vw, 17px)", letterSpacing: "0.04em",
+                textTransform: "uppercase", lineHeight: 1.5, color: "rgba(255,255,255,0.92)",
+                marginBottom: 28, textShadow: "0 1px 8px rgba(0,0,0,0.5)",
+              }}>
+                The way people search has changed.
+              </p>
+
+              <div className="hero-btns-anim" style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center", marginBottom: 14 }}>
+                {/* Primary CTA — free audit modal */}
+                <button onClick={() => setAuditOpen(true)} style={{
+                  display: "inline-flex", alignItems: "center", gap: 10,
+                  padding: "15px 32px", borderRadius: 6,
+                  background: "#d87307", border: "2px solid #d87307",
+                  color: "#FFFFFF", cursor: "pointer",
+                  fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 700,
+                  letterSpacing: "0.1em", textTransform: "uppercase",
+                  transition: "background 0.2s, transform 0.15s",
+                  boxShadow: "0 4px 20px rgba(216,115,7,0.35)",
+                }}
+                onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.background = "#b8691f"; (e.currentTarget as HTMLButtonElement).style.transform = "translateY(-2px)"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.background = "#d87307"; (e.currentTarget as HTMLButtonElement).style.transform = "translateY(0)"; }}
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
+                    <circle cx="11" cy="11" r="7" stroke="white" strokeWidth="2"/>
+                    <path d="M16.5 16.5l4 4" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+                    <path d="M8 11h6M11 8v6" stroke="white" strokeWidth="1.8" strokeLinecap="round"/>
+                  </svg>
+                  Get Free SEO &amp; AI Visibility Audit
+                </button>
+
+                {/* Secondary CTA */}
+                <Link href="/ai-visibility-audit" className="hero-btn-outline" style={{ fontSize: 14, padding: "14px 30px", textAlign: "center" }}>
+                  Schedule an Assessment
+                </Link>
+              </div>
+
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.5)" }}>
+                Free audit delivered within 1–2 business days. No credit card required.
+              </p>
+            </div>
+
+            {/* RIGHT — supporting detail panel */}
+            <div className="hero-body-anim" style={{
+              background: "rgba(8,16,36,0.55)", backdropFilter: "blur(6px)",
+              border: "1px solid rgba(255,255,255,0.15)", borderRadius: 12,
+              padding: "clamp(20px, 2.6vw, 32px)",
+            }}>
+              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.85)", marginBottom: 14 }}>
+                Today&apos;s buyers don&apos;t rely on Google alone. They ask questions in ChatGPT, Gemini, Claude, Perplexity, Microsoft Copilot, voice assistants, industry communities, and traditional search engines long before contacting a company.
+              </p>
+              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.8)", marginBottom: 14 }}>
+                If your business isn&apos;t visible where those conversations happen, you&apos;re losing opportunities before your sales team ever has a chance to engage.
+              </p>
+              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.8)", marginBottom: 20 }}>
+                Brand Iron helps organizations strengthen their AI Visibility by combining Search Engine Optimization (SEO), Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), technical optimization, entity development, authority building, and strategic content into one connected visibility strategy.
+              </p>
+
+              {/* Pull quote */}
+              <div style={{ borderLeft: "3px solid #d87307", background: "rgba(216,115,7,0.1)", padding: "16px 20px", borderRadius: "0 8px 8px 0" }}>
+                <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(14px, 1.5vw, 18px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.05em", color: "#d87307", lineHeight: 1.35, margin: 0 }}>
+                  &ldquo;The brands that earn visibility today become the brands AI recommends tomorrow.&rdquo;
+                </p>
+              </div>
+            </div>
           </div>
-
-          <div className="hero-btns-anim" style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center" }}>
-            {/* Primary CTA — free audit modal */}
-            <button onClick={() => setAuditOpen(true)} style={{
-              display: "inline-flex", alignItems: "center", gap: 10,
-              padding: "18px 36px", borderRadius: 8,
-              background: "#d87307", border: "2px solid #d87307",
-              color: "#FFFFFF", cursor: "pointer",
-              fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 700,
-              letterSpacing: "0.12em", textTransform: "uppercase",
-              transition: "background 0.2s, transform 0.15s",
-              boxShadow: "0 4px 20px rgba(216,115,7,0.35)",
-            }}
-            onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.background = "#b8691f"; (e.currentTarget as HTMLButtonElement).style.transform = "translateY(-2px)"; }}
-            onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.background = "#d87307"; (e.currentTarget as HTMLButtonElement).style.transform = "translateY(0)"; }}
-            >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
-                <circle cx="11" cy="11" r="7" stroke="white" strokeWidth="2"/>
-                <path d="M16.5 16.5l4 4" stroke="white" strokeWidth="2" strokeLinecap="round"/>
-                <path d="M8 11h6M11 8v6" stroke="white" strokeWidth="1.8" strokeLinecap="round"/>
-              </svg>
-              Get Free SEO &amp; AI Visibility Audit
-            </button>
-
-            {/* Secondary CTA */}
-            <Link href="/ai-visibility-audit" className="hero-btn-outline" style={{ fontSize: 14, padding: "17px 32px", textAlign: "center" }}>
-              Schedule an Assessment
-            </Link>
-          </div>
-
-          <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.45)", marginTop: 14 }}>
-            Free audit delivered within 1–2 business days. No credit card required.
-          </p>
         </div>
+
+        <style>{`
+          @media (max-width: 900px) {
+            .ai-hero-section { height: auto !important; min-height: 100vh; }
+            .ai-hero-wrap { position: relative !important; padding: 140px 20px 48px !important; }
+            .ai-hero-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+          }
+        `}</style>
       </section>
 
       {/* ── S2: SEARCH HAS CHANGED ───────────────────────────── */}
