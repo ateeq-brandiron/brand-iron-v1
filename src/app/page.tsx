@@ -145,7 +145,7 @@ export default function Home() {
     if (autoSlideRef.current) return;
     autoSlideRef.current = setInterval(() => {
       selectService((activeServiceRef.current + 1) % coreServices.length);
-    }, 2600);
+    }, 5000);
   };
   const stopAutoSlide = () => {
     if (autoSlideRef.current) {
