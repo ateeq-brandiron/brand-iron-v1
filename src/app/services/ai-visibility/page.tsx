@@ -376,12 +376,9 @@ export default function AIVisibilityPage() {
                 Brand Iron helps organizations strengthen their AI Visibility by combining Search Engine Optimization (SEO), Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), technical optimization, entity development, authority building, and strategic content into one connected visibility strategy.
               </p>
 
-              {/* Pull quote */}
-              <div style={{ borderLeft: "3px solid #d87307", background: "rgba(216,115,7,0.1)", padding: "16px 20px", borderRadius: "0 8px 8px 0" }}>
-                <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(14px, 1.5vw, 18px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.05em", color: "#d87307", lineHeight: 1.35, margin: 0 }}>
-                  &ldquo;The brands that earn visibility today become the brands AI recommends tomorrow.&rdquo;
-                </p>
-              </div>
+              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "#FFFFFF", fontWeight: 700 }}>
+                The brands that earn visibility today become the brands AI recommends tomorrow.
+              </p>
             </div>
           </div>
         </div>
