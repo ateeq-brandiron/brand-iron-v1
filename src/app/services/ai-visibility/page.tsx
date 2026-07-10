@@ -213,7 +213,6 @@ export default function AIVisibilityPage() {
   const s4View = useInView();
   const s5View = useInView();
   const s6View = useInView();
-  const ctaView = useInView();
 
   const tiers = [
     {
@@ -822,96 +821,6 @@ export default function AIVisibilityPage() {
           <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 640, margin: "40px auto 0", textAlign: "center" }}>
             Explore each solution in detail to understand what&apos;s included, who it&apos;s designed for, and the business outcomes you can expect.
           </p>
-        </div>
-      </section>
-
-      {/* ── FINAL CTA ────────────────────────────────────────── */}
-      <section style={{ background: "#F0EEEA", padding: "80px 24px" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <div ref={ctaView.ref} className={`reveal${ctaView.inView ? " visible" : ""}`} style={{
-            position: "relative", overflow: "hidden", borderRadius: 20,
-            backgroundImage: "url('/images/hero-saddle.jpg')", backgroundSize: "cover", backgroundPosition: "center 30%",
-          }}>
-            <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.5)" }} />
-            <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 20 }}>
-                Ready to Get Visible?
-              </p>
-              <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(28px, 4.2vw, 52px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.05, marginBottom: 20 }}>
-                Ready to Become Discoverable?
-              </h2>
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", fontStyle: "italic", maxWidth: 640, margin: "0 auto 48px" }}>
-                Discover how visible your business is across Google, ChatGPT, Gemini, Claude, Perplexity, and other AI-powered search experiences.
-              </p>
-              <div style={{ textAlign: "left" }}>
-                <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 28 }}>
-                  Choose Your Next Step
-                </p>
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 32 }}>
-                  <div>
-                    <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(255,255,255,0.85)", marginBottom: 20 }}>
-                      Get a clear, expert assessment of how your business shows up across AI platforms and search engines, along with practical next steps to improve it.
-                    </p>
-                    <Link href="/ai-visibility-audit" style={{
-                      display: "inline-flex", alignItems: "center", gap: 10,
-                      fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: 17,
-                      letterSpacing: "0.02em", textTransform: "uppercase",
-                      color: "#FFFFFF", borderBottom: "3px solid #d87307", paddingBottom: 6,
-                      transition: "color 0.2s",
-                    }}
-                    onMouseEnter={e => {
-                      e.currentTarget.style.color = "#d87307";
-                      const tail = e.currentTarget.querySelector<HTMLElement>(".cta-arrow-tail");
-                      if (tail) tail.style.transform = "scaleX(1)";
-                    }}
-                    onMouseLeave={e => {
-                      e.currentTarget.style.color = "#FFFFFF";
-                      const tail = e.currentTarget.querySelector<HTMLElement>(".cta-arrow-tail");
-                      if (tail) tail.style.transform = "scaleX(0.3)";
-                    }}
-                    >
-                      <span>Schedule an Assessment</span>
-                      <span className="cta-arrow" style={{ display: "inline-flex", alignItems: "center" }}>
-                        <span className="cta-arrow-tail" style={{ display: "inline-block", height: 2.4, width: 24, background: "currentColor", transform: "scaleX(0.35)", transformOrigin: "right center", transition: "transform 0.3s cubic-bezier(0.22,1,0.36,1)" }} />
-                        <svg width="6" height="12" viewBox="0 6 6 12" fill="none" style={{ flexShrink: 0, display: "block" }}><path d="M0 6l6 6-6 6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                      </span>
-                    </Link>
-                  </div>
-                  <div>
-                    <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(255,255,255,0.85)", marginBottom: 20 }}>
-                      Not sure where to start? Talk through your goals with a strategist and find the right AI Visibility solution for your business.
-                    </p>
-                    <Link href="/contact" style={{
-                      display: "inline-flex", alignItems: "center", gap: 10,
-                      fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: 17,
-                      letterSpacing: "0.02em", textTransform: "uppercase",
-                      color: "#FFFFFF", borderBottom: "3px solid rgba(255,255,255,0.5)", paddingBottom: 6,
-                      transition: "color 0.2s, border-color 0.2s",
-                    }}
-                    onMouseEnter={e => {
-                      e.currentTarget.style.color = "#d87307";
-                      e.currentTarget.style.borderBottomColor = "#d87307";
-                      const tail = e.currentTarget.querySelector<HTMLElement>(".cta-arrow-tail");
-                      if (tail) tail.style.transform = "scaleX(1)";
-                    }}
-                    onMouseLeave={e => {
-                      e.currentTarget.style.color = "#FFFFFF";
-                      e.currentTarget.style.borderBottomColor = "rgba(255,255,255,0.5)";
-                      const tail = e.currentTarget.querySelector<HTMLElement>(".cta-arrow-tail");
-                      if (tail) tail.style.transform = "scaleX(0.3)";
-                    }}
-                    >
-                      <span>Talk to a Strategist</span>
-                      <span className="cta-arrow" style={{ display: "inline-flex", alignItems: "center" }}>
-                        <span className="cta-arrow-tail" style={{ display: "inline-block", height: 2.4, width: 24, background: "currentColor", transform: "scaleX(0.35)", transformOrigin: "right center", transition: "transform 0.3s cubic-bezier(0.22,1,0.36,1)" }} />
-                        <svg width="6" height="12" viewBox="0 6 6 12" fill="none" style={{ flexShrink: 0, display: "block" }}><path d="M0 6l6 6-6 6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                      </span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
