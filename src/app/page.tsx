@@ -417,8 +417,8 @@ export default function Home() {
         <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "center", justifyContent: "center", minHeight: 340, padding: "44px 24px" }}>
           {/* White card with corner brackets */}
           <div style={{
-            background: "#FFFFFF", maxWidth: 520, width: "100%",
-            padding: "48px 48px", position: "relative",
+            background: "#FFFFFF", maxWidth: 720, width: "100%",
+            padding: "48px 56px", position: "relative",
             boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
             transition: "transform 0.3s ease, box-shadow 0.3s ease",
           }}
