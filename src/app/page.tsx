@@ -164,7 +164,7 @@ export default function Home() {
       {/* ── S1: HERO ─────────────────────────────────────── */}
       <section style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <video
-          src="/Animate_this_image_Pounding_h.mp4"
+          src="/remove_gemini_logo_form_the_vi.mp4"
           autoPlay muted loop playsInline preload="auto"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }}
         />
