@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
-import CircuitOverlay from "@/components/CircuitOverlay";
 
 function useInView(threshold = 0.12) {
   const ref = useRef<HTMLDivElement>(null);
@@ -395,7 +394,7 @@ export default function AIVisibilityPage() {
       {/* ── S2: SEARCH HAS CHANGED ───────────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "120px 40px" }}>
         <div ref={s2View.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <h2 className={`section-heading reveal${s2View.inView ? ' visible' : ''}`} style={{ color: "#0F1B2D", marginBottom: 24, textAlign: "left" }}>
+          <h2 className={`section-heading reveal${s2View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 24, textAlign: "left" }}>
             Search Has Changed. Visibility Has Changed with It.
           </h2>
 
@@ -419,7 +418,7 @@ export default function AIVisibilityPage() {
 
           {/* The Modern Buying Journey */}
           <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ position: "relative", background: "#F9F8F6", borderRadius: 16, padding: "56px 64px", marginBottom: 64, overflow: "hidden", borderTop: "3px solid #d87307" }}>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(20px, 2.5vw, 30px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.06em", color: "#0F1B2D", marginBottom: 16, textAlign: "center" }}>
+            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(20px, 2.5vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 16, textAlign: "center" }}>
               Today&apos;s buyers don&apos;t follow a straight path to purchase.
             </h3>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#555", maxWidth: 620, margin: "0 auto 12px", textAlign: "center" }}>
@@ -439,10 +438,10 @@ export default function AIVisibilityPage() {
               ].map(({ label, sub }, i) => (
                 <div key={label} style={{ display: "flex", alignItems: "center" }}>
                   <div style={{ textAlign: "center", maxWidth: 160, padding: "0 8px" }}>
-                    <div style={{ width: 64, height: 64, borderRadius: "50%", background: i === 3 ? "#d87307" : "#0F1B2D", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 12px" }}>
-                      <span style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 20, fontWeight: 400, color: i === 3 ? "#FFFFFF" : "#d87307" }}>0{i + 1}</span>
+                    <div style={{ width: 64, height: 64, borderRadius: "50%", background: i === 3 ? "#d87307" : "#EFEDE7", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 12px" }}>
+                      <span style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 20, fontWeight: 900, color: i === 3 ? "#FFFFFF" : "#d87307" }}>0{i + 1}</span>
                     </div>
-                    <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 13, fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.08em", color: i === 3 ? "#d87307" : "#0F1B2D", marginBottom: 6 }}>{label}</p>
+                    <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 13, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.08em", color: "#1a1a1a", marginBottom: 6 }}>{label}</p>
                     <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, lineHeight: 1.5, color: "#777" }}>{sub}</p>
                   </div>
                   {i < 3 && (
@@ -459,15 +458,15 @@ export default function AIVisibilityPage() {
 
           {/* Then vs Now */}
           <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ marginBottom: 64 }}>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.08em", color: "#0F1B2D", marginBottom: 32 }}>
+            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 32 }}>
               Search Has Evolved
             </h3>
-            <div style={{ overflowX: "auto" }}>
+            <div style={{ overflowX: "auto", border: "1px solid #ECE5D8", borderRadius: 12 }}>
               <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "'Montserrat', sans-serif", fontSize: 15 }}>
                 <thead>
                   <tr>
-                    <th style={{ background: "#0F1B2D", color: "rgba(255,255,255,0.6)", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 12, padding: "18px 24px", textAlign: "left", width: "50%" }}>Then</th>
-                    <th style={{ background: "#d87307", color: "#FFFFFF", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 12, padding: "18px 24px", textAlign: "left", width: "50%" }}>Now</th>
+                    <th style={{ background: "#EFEDE7", color: "#8a8378", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 12, padding: "18px 24px", textAlign: "left", width: "50%" }}>Then</th>
+                    <th style={{ background: "#d87307", color: "#FFFFFF", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 12, padding: "18px 24px", textAlign: "left", width: "50%" }}>Now</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -480,7 +479,7 @@ export default function AIVisibilityPage() {
                   ].map(([then, now], i) => (
                     <tr key={i} style={{ background: i % 2 === 0 ? "#F9F8F6" : "#FFFFFF" }}>
                       <td style={{ padding: "20px 24px", color: "#666", lineHeight: 1.6, borderBottom: "1px solid #EEEBE7" }}>{then}</td>
-                      <td style={{ padding: "20px 24px", color: "#0F1B2D", fontWeight: 500, lineHeight: 1.6, borderBottom: "1px solid #EEEBE7" }}>{now}</td>
+                      <td style={{ padding: "20px 24px", color: "#1a1a1a", fontWeight: 600, lineHeight: 1.6, borderBottom: "1px solid #EEEBE7" }}>{now}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -489,12 +488,11 @@ export default function AIVisibilityPage() {
           </div>
 
           {/* Why This Matters */}
-          <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ position: "relative", background: "#0F1B2D", borderRadius: 16, padding: "56px 64px", overflow: "hidden" }}>
-            <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, transparent, #d87307, transparent)" }} />
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.06em", color: "#FFFFFF", marginBottom: 24, textAlign: "center" }}>
+          <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ position: "relative", background: "#F9F8F6", borderRadius: 16, padding: "56px 64px", overflow: "hidden", borderTop: "3px solid #d87307" }}>
+            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 24, textAlign: "center" }}>
               Why This Matters for Your Business
             </h3>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.75)", textAlign: "center", marginBottom: 28 }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#555", textAlign: "center", marginBottom: 28 }}>
               Every day, potential customers are asking questions like:
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 16, marginBottom: 40 }}>
@@ -504,18 +502,18 @@ export default function AIVisibilityPage() {
                 "&ldquo;Who can help with Go-to-Market Strategy?&rdquo;",
                 "&ldquo;What is Revenue Engineering?&rdquo;",
               ].map((q, i) => (
-                <div key={i} style={{ background: "rgba(216,115,7,0.12)", border: "1px solid rgba(216,115,7,0.3)", borderRadius: 8, padding: "14px 20px" }}>
+                <div key={i} style={{ background: "#FFFFFF", border: "1px solid #ECE5D8", borderRadius: 8, padding: "14px 20px" }}>
                   <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontStyle: "italic", color: "#d87307", margin: 0 }} dangerouslySetInnerHTML={{ __html: q }} />
                 </div>
               ))}
             </div>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.75)", textAlign: "center", marginBottom: 16 }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#555", textAlign: "center", marginBottom: 16 }}>
               If AI platforms and search engines don&apos;t recognize your business as a trusted source, your competitors may become the answers buyers see first.
             </p>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.75)", textAlign: "center", marginBottom: 8 }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#555", textAlign: "center", marginBottom: 8 }}>
               AI doesn&apos;t simply rank content.
             </p>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.75)", textAlign: "center" }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#444", fontWeight: 600, textAlign: "center" }}>
               It evaluates context, authority, credibility, and relevance to determine which organizations deserve to be referenced and recommended.
             </p>
           </div>
@@ -529,9 +527,8 @@ export default function AIVisibilityPage() {
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
         <div style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.60)" }} />
-        <CircuitOverlay />
         <div ref={s3View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1100, margin: "0 auto" }}>
-          <h2 className={`section-heading reveal${s3View.inView ? ' visible' : ''}`} style={{ color: "#0F1B2D", marginBottom: 16, textAlign: "left" }}>
+          <h2 className={`section-heading reveal${s3View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 16, textAlign: "left" }}>
             Visibility Alone Isn&apos;t Enough.
           </h2>
           <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 640, marginBottom: 64 }}>
@@ -549,7 +546,7 @@ export default function AIVisibilityPage() {
               <div key={label} style={{ display: "flex", alignItems: "center" }}>
                 <div style={{
                   position: "relative",
-                  background: i === 3 ? "#d87307" : "#0F1B2D",
+                  background: i === 3 ? "#d87307" : ["#1a1a1a", "#3a3632", "#5a544c"][i],
                   borderRadius: 12, padding: "32px 24px", textAlign: "center", minWidth: 180, maxWidth: 200,
                   boxShadow: i === 3 ? "0 8px 32px rgba(216,115,7,0.35)" : "0 4px 24px rgba(0,0,0,0.12)",
                   overflow: "hidden",
@@ -560,7 +557,7 @@ export default function AIVisibilityPage() {
                 >
                   {i === 3 && <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "rgba(255,255,255,0.4)" }} />}
                   <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: i === 3 ? "rgba(255,255,255,0.8)" : "#d87307", marginBottom: 12 }}>{num}</p>
-                  <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 18, fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.08em", color: "#FFFFFF", marginBottom: 12, lineHeight: 1.2 }}>{label}</p>
+                  <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 18, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", marginBottom: 12, lineHeight: 1.2 }}>{label}</p>
                   <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, lineHeight: 1.6, color: "rgba(255,255,255,0.75)", margin: 0 }}>{sub}</p>
                 </div>
                 {i < 3 && (
@@ -594,11 +591,10 @@ export default function AIVisibilityPage() {
         backgroundImage: "url('/images/bg-horse.jpg')",
         backgroundSize: "cover", backgroundPosition: "center 30%",
       }}>
-        <div style={{ position: "absolute", inset: 0, background: "rgba(8,16,36,0.90)" }} />
-        <CircuitOverlay />
+        <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.72)" }} />
         <div ref={s4View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
-            <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "transparent", WebkitTextStroke: "2px #FFFFFF", marginBottom: 24, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "#FFFFFF", textShadow: "0 2px 12px rgba(0,0,0,0.85)", marginBottom: 24, textAlign: "left" }}>
               A Strategic Framework for AI Visibility
             </h2>
             <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "rgba(255,255,255,0.75)", maxWidth: 680, marginBottom: 16 }}>
@@ -619,7 +615,7 @@ export default function AIVisibilityPage() {
                   "Understand how search engines and AI platforms currently see your business.",
                   "Identify visibility gaps, technical issues, and missed opportunities.",
                 ],
-                color: "#1a2d4a",
+                color: "#1a1a1a",
               },
               {
                 num: "2",
@@ -628,7 +624,7 @@ export default function AIVisibilityPage() {
                   "Strengthen your SEO, technical foundation, structured data, and entity optimization.",
                   "Create the infrastructure AI and search engines rely on.",
                 ],
-                color: "#1e3554",
+                color: "#3a3632",
               },
               {
                 num: "3",
@@ -637,7 +633,7 @@ export default function AIVisibilityPage() {
                   "Expand your authority through strategic content, citations, digital PR, reviews, and brand mentions.",
                   "Increase trust, relevance, and AI recommendations.",
                 ],
-                color: "#24405f",
+                color: "#5a544c",
               },
               {
                 num: "4",
@@ -663,9 +659,9 @@ export default function AIVisibilityPage() {
               >
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: i === 3 ? "rgba(255,255,255,0.35)" : "linear-gradient(to right, transparent, rgba(216,115,7,0.7), transparent)" }} />
                 <div style={{ width: 52, height: 52, borderRadius: "50%", background: i === 3 ? "rgba(255,255,255,0.2)" : "rgba(216,115,7,0.15)", border: `1px solid ${i === 3 ? "rgba(255,255,255,0.3)" : "rgba(216,115,7,0.3)"}`, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 20 }}>
-                  <span style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 22, fontWeight: 400, color: i === 3 ? "#FFFFFF" : "#d87307" }}>{num}</span>
+                  <span style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 22, fontWeight: 900, color: i === 3 ? "#FFFFFF" : "#d87307" }}>{num}</span>
                 </div>
-                <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 22, fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.08em", color: "#FFFFFF", marginBottom: 16, lineHeight: 1.2 }}>{title}</h3>
+                <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 22, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", marginBottom: 16, lineHeight: 1.2 }}>{title}</h3>
                 {lines.map((line, j) => (
                   <p key={j} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.75, color: i === 3 ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.78)", marginBottom: j < lines.length - 1 ? 10 : 0 }}>{line}</p>
                 ))}
@@ -686,7 +682,7 @@ export default function AIVisibilityPage() {
       <section style={{ background: "#FFFFFF", padding: "120px 40px" }}>
         <div ref={s5View.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
-            <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#0F1B2D", marginBottom: 20, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               Choose the Right AI Visibility Solution
             </h2>
             <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 680, marginBottom: 16 }}>
@@ -705,44 +701,44 @@ export default function AIVisibilityPage() {
             {tiers.map((tier, i) => (
               <div key={tier.number} className={`reveal${s5View.inView ? ' visible' : ''}`} style={{
                 position: "relative",
-                background: i === 3 ? "#0F1B2D" : "#F9F8F6",
+                background: "#F9F8F6",
                 borderRadius: 12, padding: "36px 28px",
-                border: i === 3 ? "1px solid rgba(216,115,7,0.3)" : "1px solid #EEEBE7",
+                border: "1px solid #EEEBE7",
                 display: "flex", flexDirection: "column",
                 transition: "transform 0.25s, box-shadow 0.25s",
                 transitionDelay: `${i * 0.07}s`,
                 overflow: "hidden",
-                boxShadow: i === 3 ? "0 8px 32px rgba(216,115,7,0.15)" : "0 2px 12px rgba(0,0,0,0.04)",
+                boxShadow: "0 2px 12px rgba(0,0,0,0.04)",
               }}
-              onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(-6px)"; (e.currentTarget as HTMLDivElement).style.boxShadow = i === 3 ? "0 20px 56px rgba(216,115,7,0.25)" : "0 16px 48px rgba(0,0,0,0.12)"; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLDivElement).style.boxShadow = i === 3 ? "0 8px 32px rgba(216,115,7,0.15)" : "0 2px 12px rgba(0,0,0,0.04)"; }}
+              onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(-6px)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 16px 48px rgba(0,0,0,0.12)"; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 2px 12px rgba(0,0,0,0.04)"; }}
               >
-                <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: i === 3 ? "#d87307" : "linear-gradient(to right, transparent, rgba(216,115,7,0.4), transparent)" }} />
+                <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, transparent, rgba(216,115,7,0.4), transparent)" }} />
                 <div style={{ width: 60, height: 60, borderRadius: 12, background: "rgba(216,115,7,0.12)", border: "1px solid rgba(216,115,7,0.25)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 20 }}>
                   {tier.icon}
                 </div>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#d87307", marginBottom: 8 }}>{tier.number}</p>
-                <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 17, fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.06em", color: i === 3 ? "#FFFFFF" : "#0F1B2D", marginBottom: 6, lineHeight: 1.3 }}>{tier.name}</h3>
+                <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 17, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 6, lineHeight: 1.3 }}>{tier.name}</h3>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 600, color: "#d87307", marginBottom: 16 }}>{tier.tagline}</p>
-                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.75, color: i === 3 ? "rgba(255,255,255,0.7)" : "#666", marginBottom: 20, flex: 1 }}>{tier.description}</p>
-                <div style={{ borderTop: `1px solid ${i === 3 ? "rgba(255,255,255,0.1)" : "#EEEBE7"}`, paddingTop: 16, marginBottom: 20 }}>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: i === 3 ? "rgba(255,255,255,0.45)" : "#999", marginBottom: 6 }}>Primary Outcome</p>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 600, color: i === 3 ? "#d87307" : "#0F1B2D" }}>{tier.outcome}</p>
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.75, color: "#666", marginBottom: 20, flex: 1 }}>{tier.description}</p>
+                <div style={{ borderTop: "1px solid #EEEBE7", paddingTop: 16, marginBottom: 20 }}>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#999", marginBottom: 6 }}>Primary Outcome</p>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 600, color: "#d87307" }}>{tier.outcome}</p>
                 </div>
                 <Link href={tier.href} style={{
                   display: "block", textAlign: "center", padding: "12px 20px", borderRadius: 8,
                   fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
                   letterSpacing: "0.08em", textTransform: "uppercase", textDecoration: "none",
-                  background: i === 3 ? "#d87307" : "transparent",
-                  color: i === 3 ? "#FFFFFF" : "#0F1B2D",
-                  border: i === 3 ? "none" : "1.5px solid #0F1B2D",
-                  transition: "background 0.2s, color 0.2s",
+                  background: "transparent",
+                  color: "#1a1a1a",
+                  border: "1.5px solid #1a1a1a",
+                  transition: "background 0.2s, color 0.2s, border-color 0.2s",
                 }}
                 onMouseEnter={e => {
-                  if (i !== 3) { (e.currentTarget as HTMLAnchorElement).style.background = "#0F1B2D"; (e.currentTarget as HTMLAnchorElement).style.color = "#FFFFFF"; }
+                  (e.currentTarget as HTMLAnchorElement).style.background = "#d87307"; (e.currentTarget as HTMLAnchorElement).style.color = "#FFFFFF"; (e.currentTarget as HTMLAnchorElement).style.borderColor = "#d87307";
                 }}
                 onMouseLeave={e => {
-                  if (i !== 3) { (e.currentTarget as HTMLAnchorElement).style.background = "transparent"; (e.currentTarget as HTMLAnchorElement).style.color = "#0F1B2D"; }
+                  (e.currentTarget as HTMLAnchorElement).style.background = "transparent"; (e.currentTarget as HTMLAnchorElement).style.color = "#1a1a1a"; (e.currentTarget as HTMLAnchorElement).style.borderColor = "#1a1a1a";
                 }}
                 >
                   Learn More →
@@ -752,11 +748,11 @@ export default function AIVisibilityPage() {
           </div>
 
           {/* Comparison table */}
-          <div className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ marginBottom: 64, overflowX: "auto" }}>
+          <div className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ marginBottom: 64, overflowX: "auto", border: "1px solid #ECE5D8", borderRadius: 12 }}>
             <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "'Montserrat', sans-serif", fontSize: 14 }}>
               <thead>
-                <tr style={{ background: "#0F1B2D" }}>
-                  <th style={{ padding: "18px 24px", textAlign: "left", color: "rgba(255,255,255,0.5)", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase" }}></th>
+                <tr style={{ background: "#EFEDE7" }}>
+                  <th style={{ padding: "18px 24px", textAlign: "left", color: "#8a8378", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase" }}></th>
                   {tiers.map(t => (
                     <th key={t.number} style={{ padding: "18px 20px", textAlign: "center", color: "#d87307", fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase" }}>{t.name}</th>
                   ))}
@@ -771,7 +767,7 @@ export default function AIVisibilityPage() {
                   { label: "Ideal Next Step", values: ["Identify Opportunities", "Implement Foundation", "Scale Visibility", "Sustain Market Leadership"] },
                 ].map(({ label, values }, ri) => (
                   <tr key={label} style={{ background: ri % 2 === 0 ? "#F9F8F6" : "#FFFFFF" }}>
-                    <td style={{ padding: "18px 24px", fontWeight: 600, color: "#0F1B2D", fontSize: 13, borderBottom: "1px solid #EEEBE7", whiteSpace: "nowrap" }}>{label}</td>
+                    <td style={{ padding: "18px 24px", fontWeight: 600, color: "#1a1a1a", fontSize: 13, borderBottom: "1px solid #EEEBE7", whiteSpace: "nowrap" }}>{label}</td>
                     {values.map((v, ci) => (
                       <td key={ci} style={{ padding: "18px 20px", textAlign: "center", color: "#555", lineHeight: 1.5, borderBottom: "1px solid #EEEBE7" }}>{v}</td>
                     ))}
@@ -783,7 +779,7 @@ export default function AIVisibilityPage() {
 
           {/* Which solution is right for you */}
           <div className={`reveal${s5View.inView ? ' visible' : ''}`}>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(20px, 2.5vw, 30px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.06em", color: "#0F1B2D", marginBottom: 40 }}>
+            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(20px, 2.5vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 40 }}>
               Which Solution Is Right for You?
             </h3>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 24 }}>
@@ -845,9 +841,9 @@ export default function AIVisibilityPage() {
                       </div>
                     ))}
                   </div>
-                  <Link href={href} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.08em", textTransform: "uppercase", color: "#0F1B2D", textDecoration: "none" }}
+                  <Link href={href} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.08em", textTransform: "uppercase", color: "#1a1a1a", textDecoration: "none" }}
                     onMouseEnter={e => (e.currentTarget.style.color = "#d87307")}
-                    onMouseLeave={e => (e.currentTarget.style.color = "#0F1B2D")}
+                    onMouseLeave={e => (e.currentTarget.style.color = "#1a1a1a")}
                   >
                     Explore {tier} →
                   </Link>
@@ -864,35 +860,91 @@ export default function AIVisibilityPage() {
       </section>
 
       {/* ── FINAL CTA ────────────────────────────────────────── */}
-      <section style={{
-        position: "relative", overflow: "hidden", padding: "120px 40px",
-        backgroundImage: "url('/images/hero-saddle.jpg')",
-        backgroundSize: "cover", backgroundPosition: "center 30%",
-      }}>
-        <div style={{ position: "absolute", inset: 0, background: "rgba(10,20,35,0.88)" }} />
-        <div ref={ctaView.ref} style={{ position: "relative", zIndex: 2, maxWidth: 760, margin: "0 auto", textAlign: "center" }}>
-          <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 20 }}>
-            Ready to Get Visible?
-          </p>
-          <h2 className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{
-            fontFamily: "'Burford Rustic Black', Helvetica, Arial, Lucida, sans-serif",
-            fontWeight: 700, fontSize: "clamp(32px, 4.5vw, 60px)",
-            textTransform: "uppercase", letterSpacing: "0.02em",
-            color: "transparent", WebkitTextStroke: "2px #FFFFFF",
-            lineHeight: 1.0, marginBottom: 28,
+      <section style={{ background: "#F0EEEA", padding: "80px 24px" }}>
+        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+          <div ref={ctaView.ref} className={`reveal${ctaView.inView ? " visible" : ""}`} style={{
+            position: "relative", overflow: "hidden", borderRadius: 20,
+            backgroundImage: "url('/images/hero-saddle.jpg')", backgroundSize: "cover", backgroundPosition: "center 30%",
           }}>
-            Schedule an AI Visibility Assessment
-          </h2>
-          <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.75)", maxWidth: 580, margin: "0 auto 48px" }}>
-            Discover how visible your business is across Google, ChatGPT, Gemini, Claude, Perplexity, and other AI-powered search experiences.
-          </p>
-          <div className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
-            <Link href="/ai-visibility-audit" className="hero-btn-primary" style={{ fontSize: 15, padding: "16px 40px" }}>
-              Schedule an AI Visibility Assessment
-            </Link>
-            <Link href="/contact" className="hero-btn-outline" style={{ fontSize: 15, padding: "16px 40px" }}>
-              Talk to a Strategist
-            </Link>
+            <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.5)" }} />
+            <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 20 }}>
+                Ready to Get Visible?
+              </p>
+              <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(28px, 4.2vw, 52px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.05, marginBottom: 20 }}>
+                Schedule an AI Visibility Assessment
+              </h2>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", fontStyle: "italic", maxWidth: 640, margin: "0 auto 48px" }}>
+                Discover how visible your business is across Google, ChatGPT, Gemini, Claude, Perplexity, and other AI-powered search experiences.
+              </p>
+              <div style={{ textAlign: "left" }}>
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 28 }}>
+                  Choose Your Next Step
+                </p>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 32 }}>
+                  <div>
+                    <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(255,255,255,0.85)", marginBottom: 20 }}>
+                      Get a clear, expert assessment of how your business shows up across AI platforms and search engines, along with practical next steps to improve it.
+                    </p>
+                    <Link href="/ai-visibility-audit" style={{
+                      display: "inline-flex", alignItems: "center", gap: 10,
+                      fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: 17,
+                      letterSpacing: "0.02em", textTransform: "uppercase",
+                      color: "#FFFFFF", borderBottom: "3px solid #d87307", paddingBottom: 6,
+                      transition: "color 0.2s",
+                    }}
+                    onMouseEnter={e => {
+                      e.currentTarget.style.color = "#d87307";
+                      const tail = e.currentTarget.querySelector<HTMLElement>(".cta-arrow-tail");
+                      if (tail) tail.style.transform = "scaleX(1)";
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.color = "#FFFFFF";
+                      const tail = e.currentTarget.querySelector<HTMLElement>(".cta-arrow-tail");
+                      if (tail) tail.style.transform = "scaleX(0.3)";
+                    }}
+                    >
+                      <span>Schedule an Assessment</span>
+                      <span className="cta-arrow" style={{ display: "inline-flex", alignItems: "center" }}>
+                        <span className="cta-arrow-tail" style={{ display: "inline-block", height: 2.4, width: 24, background: "currentColor", transform: "scaleX(0.35)", transformOrigin: "right center", transition: "transform 0.3s cubic-bezier(0.22,1,0.36,1)" }} />
+                        <svg width="6" height="12" viewBox="0 6 6 12" fill="none" style={{ flexShrink: 0, display: "block" }}><path d="M0 6l6 6-6 6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      </span>
+                    </Link>
+                  </div>
+                  <div>
+                    <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(255,255,255,0.85)", marginBottom: 20 }}>
+                      Not sure where to start? Talk through your goals with a strategist and find the right AI Visibility solution for your business.
+                    </p>
+                    <Link href="/contact" style={{
+                      display: "inline-flex", alignItems: "center", gap: 10,
+                      fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: 17,
+                      letterSpacing: "0.02em", textTransform: "uppercase",
+                      color: "#FFFFFF", borderBottom: "3px solid rgba(255,255,255,0.5)", paddingBottom: 6,
+                      transition: "color 0.2s, border-color 0.2s",
+                    }}
+                    onMouseEnter={e => {
+                      e.currentTarget.style.color = "#d87307";
+                      e.currentTarget.style.borderBottomColor = "#d87307";
+                      const tail = e.currentTarget.querySelector<HTMLElement>(".cta-arrow-tail");
+                      if (tail) tail.style.transform = "scaleX(1)";
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.color = "#FFFFFF";
+                      e.currentTarget.style.borderBottomColor = "rgba(255,255,255,0.5)";
+                      const tail = e.currentTarget.querySelector<HTMLElement>(".cta-arrow-tail");
+                      if (tail) tail.style.transform = "scaleX(0.3)";
+                    }}
+                    >
+                      <span>Talk to a Strategist</span>
+                      <span className="cta-arrow" style={{ display: "inline-flex", alignItems: "center" }}>
+                        <span className="cta-arrow-tail" style={{ display: "inline-block", height: 2.4, width: 24, background: "currentColor", transform: "scaleX(0.35)", transformOrigin: "right center", transition: "transform 0.3s cubic-bezier(0.22,1,0.36,1)" }} />
+                        <svg width="6" height="12" viewBox="0 6 6 12" fill="none" style={{ flexShrink: 0, display: "block" }}><path d="M0 6l6 6-6 6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      </span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
