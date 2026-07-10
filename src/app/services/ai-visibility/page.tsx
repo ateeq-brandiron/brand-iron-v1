@@ -462,7 +462,7 @@ export default function AIVisibilityPage() {
       {/* ── S3: THE NEW VISIBILITY EQUATION ─────────────────── */}
       <section style={{
         position: "relative", overflow: "hidden", padding: "120px 40px",
-        backgroundImage: "url('/images/techy sagebrush.png')",
+        backgroundImage: "url('/images/Brand Iron Techy Horse Mane.png')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
         <div style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.60)" }} />
