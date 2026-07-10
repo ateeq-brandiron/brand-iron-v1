@@ -79,7 +79,7 @@ export default function GTMPage() {
         position: "relative", minHeight: "92vh", display: "flex", alignItems: "center", overflow: "hidden",
       }}>
         <video
-          src="/Refined_Animation_Instructions_Kling_30__83200.mp4"
+          src="/Animate_this_image_Pounding_h.mp4"
           autoPlay muted loop playsInline preload="auto"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }}
         />
