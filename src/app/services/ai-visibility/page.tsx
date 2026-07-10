@@ -525,7 +525,7 @@ export default function AIVisibilityPage() {
       </section>
 
       {/* ── S4: STRATEGIC FRAMEWORK ─────────────────────────── */}
-      <section style={{ position: "relative", background: "#FFFFFF", padding: "120px 40px" }}>
+      <section style={{ position: "relative", background: "#FFFFFF", padding: "120px 40px 48px" }}>
         <div ref={s4View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
             <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 24, textAlign: "left" }}>
@@ -613,12 +613,9 @@ export default function AIVisibilityPage() {
       </section>
 
       {/* ── S5: CHOOSE YOUR SOLUTION ─────────────────────────── */}
-      <section style={{ background: "#FFFFFF", padding: "120px 40px" }}>
+      <section style={{ background: "#FFFFFF", padding: "48px 40px 120px" }}>
         <div ref={s5View.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 72, textAlign: "center" }}>
-            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 14 }}>
-              Choose Your AI Visibility Journey
-            </p>
             <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20 }}>
               Choose the Right AI Visibility Solution
             </h2>
