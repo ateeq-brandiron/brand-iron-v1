@@ -375,7 +375,7 @@ export default function AIVisibilityPage() {
       </section>
 
       {/* ── S2: SEARCH HAS CHANGED ───────────────────────────── */}
-      <section style={{ background: "#FFFFFF", padding: "120px 40px" }}>
+      <section style={{ background: "#FFFFFF", padding: "120px 40px 0" }}>
         <div ref={s2View.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
           <h2 className={`section-heading reveal${s2View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 24, textAlign: "left" }}>
             Search Has Changed. Visibility Has Changed with It.
