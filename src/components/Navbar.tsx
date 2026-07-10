@@ -35,7 +35,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link href="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
-          <img src="/images/brand-iron-logo-white.png" alt="Brand Iron" style={{ height: 48, width: "auto", transition: "transform 0.25s ease, opacity 0.25s ease" }}
+          <img src="/images/brand-iron-logo-white.png" alt="Brand Iron" style={{ height: 56, width: "auto", transition: "transform 0.25s ease, opacity 0.25s ease" }}
             onMouseEnter={e => { e.currentTarget.style.transform = "scale(1.05)"; e.currentTarget.style.opacity = "0.85"; }}
             onMouseLeave={e => { e.currentTarget.style.transform = "scale(1)"; e.currentTarget.style.opacity = "1"; }}
           />

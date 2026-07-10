@@ -177,14 +177,14 @@ export default function Home() {
             fontSize: "clamp(42px, 7vw, 96px)", fontWeight: 400,
             textTransform: "uppercase", letterSpacing: "0.03em",
             color: "#FFFFFF",
-            lineHeight: 1.0, marginBottom: 16,
+            lineHeight: 0.88, marginBottom: 16,
             filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))",
           }}>
             Forging Brands.<br />Driving Revenue.
           </h1>
           <p style={{
             fontFamily: "'Burford Rustic Inline', sans-serif", fontWeight: 400,
-            fontSize: "clamp(11px, 1.35vw, 16px)", letterSpacing: "0.04em",
+            fontSize: "clamp(12px, 1.6vw, 19px)", letterSpacing: "0.04em",
             textTransform: "uppercase", whiteSpace: "nowrap",
             lineHeight: 1.6, color: "rgba(255,255,255,0.92)",
             maxWidth: "92vw", marginBottom: 28, textShadow: "0 1px 8px rgba(0,0,0,0.5)",
