@@ -117,8 +117,6 @@ const testimonials = [
   },
 ];
 
-const heroImg = "/images/hero-barn.webp";
-
 export default function Home() {
   const s2 = useInView();
   const s3 = useInView();
@@ -165,7 +163,11 @@ export default function Home() {
     <>
       {/* ── S1: HERO ─────────────────────────────────────── */}
       <section style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
-        <img src={heroImg} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }} />
+        <video
+          src="/Barn house.mp4"
+          autoPlay muted loop playsInline preload="auto"
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }}
+        />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.15) 50%, rgba(0,0,0,0.55) 100%)" }} />
 
         {/* Centered headline */}
