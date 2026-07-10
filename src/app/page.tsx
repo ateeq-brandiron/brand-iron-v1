@@ -375,7 +375,7 @@ export default function Home() {
               }}
               >
                 <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 19, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: textColor, marginBottom: 14 }}>{stage}</p>
-                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13.5, lineHeight: 1.7, color: bodyColor }}>{body}</p>
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12.5, lineHeight: 1.7, color: bodyColor }}>{body}</p>
                 <div className="journey-badge" style={{ position: "absolute", bottom: 24, left: 28, width: 40, height: 40, borderRadius: "50%", background: "#d87307", display: "flex", alignItems: "center", justifyContent: "center", transition: "transform 0.3s ease" }}>
                   {icons[stage]}
                 </div>
