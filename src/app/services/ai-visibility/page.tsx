@@ -381,7 +381,7 @@ export default function AIVisibilityPage() {
             Search Has Changed. Visibility Has Changed with It.
           </h2>
 
-          <div style={{ maxWidth: 780, marginBottom: 80 }}>
+          <div style={{ marginBottom: 80 }}>
             <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#555" }}>
               Search has evolved beyond Google. While SEO remains essential, today&apos;s buyers ask AI platforms and search engines for trusted answers long before speaking with a company. Whether they&apos;re using ChatGPT, Gemini, Claude, Perplexity, Google, or industry communities, buying decisions now happen across multiple channels. Your business needs to be visible wherever those conversations begin.
             </p>
