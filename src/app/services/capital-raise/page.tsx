@@ -74,45 +74,66 @@ export default function CapitalRaisePage() {
     <main style={{ fontFamily: "'Montserrat', sans-serif" }}>
 
       {/* ── HERO ───────────────────────────────────────────── */}
-      <section style={{
-        position: "relative", minHeight: "92vh", display: "flex", alignItems: "center", overflow: "hidden",
-      }}>
+      <section className="cr-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <video
           src="/BI Video background.mp4"
           autoPlay muted loop playsInline preload="auto"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 35%" }}
         />
-        <div style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto", padding: "160px 40px 100px", width: "100%" }}>
-          <h1 className="hero-h1-anim" style={{
-            fontFamily: "'Burford Rustic Inline', sans-serif",
-            fontWeight: 400, fontSize: "clamp(42px, 7vw, 96px)",
-            textTransform: "uppercase", letterSpacing: "0.03em", lineHeight: 1.0,
-            color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))",
-            maxWidth: 920, marginBottom: 36,
-          }}>
-            Raising Capital Requires More Than a Great Pitch Deck.
-          </h1>
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.35) 0%, rgba(8,16,36,0.25) 45%, rgba(8,16,36,0.65) 100%)" }} />
 
-          <p className="hero-body-anim" style={{ fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", maxWidth: 720, marginBottom: 16 }}>
-            Investors evaluate more than financials. They invest in a compelling story, a credible team, a clear market opportunity, and confidence in your growth strategy.
-          </p>
-          <p className="hero-body-anim" style={{ fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.75)", maxWidth: 720, marginBottom: 40 }}>
-            Brand Iron helps founders prepare for every stage of the fundraising journey through strategic positioning, investor storytelling, presentation development, investor targeting, and outreach, creating an investment narrative that inspires confidence and moves conversations forward.
-          </p>
+        <div className="cr-hero-wrap" style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", padding: "88px 24px 24px" }}>
+          <div className="cr-hero-grid" style={{ maxWidth: 1200, margin: "0 auto", width: "100%", display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 56, alignItems: "center" }}>
 
-          <div className="hero-btns-anim" style={{ display: "flex", gap: 16, flexWrap: "wrap", marginBottom: 28 }}>
-            <Link href="/contact" className="hero-btn-primary" style={{ fontSize: 15, padding: "18px 40px" }}>
-              Schedule a Capital Raise Strategy Session
-            </Link>
-            <Link href="#framework" className="hero-btn-outline" style={{ fontSize: 15, padding: "18px 40px" }}>
-              Explore the Capital Raise Framework
-            </Link>
+            {/* LEFT — headline, CTAs */}
+            <div>
+              <h1 className="hero-h1-anim" style={{
+                fontFamily: "'Burford Rustic Inline', sans-serif",
+                fontWeight: 400, fontSize: "clamp(30px, 4.4vw, 58px)",
+                textTransform: "uppercase", letterSpacing: "0.03em", lineHeight: 1.05,
+                color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))",
+                marginBottom: 20,
+              }}>
+                Raising Capital Requires More Than a Great Pitch Deck.
+              </h1>
+
+              <div className="hero-btns-anim" style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center", marginBottom: 14 }}>
+                <Link href="/contact" className="hero-btn-primary" style={{ fontSize: 14, padding: "15px 32px" }}>
+                  Schedule a Capital Raise Strategy Session
+                </Link>
+                <Link href="#framework" className="hero-btn-outline" style={{ fontSize: 14, padding: "14px 30px" }}>
+                  Explore the Capital Raise Framework
+                </Link>
+              </div>
+
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.5)" }}>
+                From strategic messaging and investor-ready presentations to investor outreach and fundraising support, we help organizations prepare for every stage of the capital raise journey.
+              </p>
+            </div>
+
+            {/* RIGHT — supporting detail panel */}
+            <div className="hero-body-anim" style={{
+              background: "rgba(8,16,36,0.55)", backdropFilter: "blur(6px)",
+              border: "1px solid rgba(255,255,255,0.15)", borderRadius: 12,
+              padding: "clamp(20px, 2.6vw, 32px)",
+            }}>
+              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.85)", marginBottom: 14 }}>
+                Investors evaluate more than financials. They invest in a compelling story, a credible team, a clear market opportunity, and confidence in your growth strategy.
+              </p>
+              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.8)" }}>
+                Brand Iron helps founders prepare for every stage of the fundraising journey through strategic positioning, investor storytelling, presentation development, investor targeting, and outreach, creating an investment narrative that inspires confidence and moves conversations forward.
+              </p>
+            </div>
           </div>
-
-          <p className="hero-body-anim" style={{ fontSize: 13, lineHeight: 1.8, color: "rgba(255,255,255,0.55)", maxWidth: 640, borderLeft: "2px solid rgba(216,115,7,0.5)", paddingLeft: 16 }}>
-            From strategic messaging and investor-ready presentations to investor outreach and fundraising support, we help organizations prepare for every stage of the capital raise journey.
-          </p>
         </div>
+
+        <style>{`
+          @media (max-width: 900px) {
+            .cr-hero-section { height: auto !important; min-height: 100vh; }
+            .cr-hero-wrap { position: relative !important; padding: 140px 20px 48px !important; }
+            .cr-hero-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+          }
+        `}</style>
       </section>
 
       {/* ── S2: WHY COMPANIES STRUGGLE TO RAISE CAPITAL ─────── */}

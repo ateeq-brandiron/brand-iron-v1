@@ -75,44 +75,66 @@ export default function GTMPage() {
     <main style={{ fontFamily: "'Montserrat', sans-serif" }}>
 
       {/* ── HERO ───────────────────────────────────────────── */}
-      <section style={{
-        position: "relative", minHeight: "92vh", display: "flex", alignItems: "center", overflow: "hidden",
-      }}>
+      <section className="gtm-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <video
           src="/Animate_this_image_Pounding_h.mp4"
           autoPlay muted loop playsInline preload="auto"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }}
         />
-        <div style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto", padding: "160px 40px 100px", width: "100%" }}>
-          <h1 className="hero-h1-anim" style={{
-            fontFamily: "'Burford Rustic Inline', sans-serif",
-            fontWeight: 400, fontSize: "clamp(42px, 7vw, 96px)",
-            textTransform: "uppercase", letterSpacing: "0.03em", lineHeight: 1.0,
-            color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))",
-            maxWidth: 920, marginBottom: 36,
-          }}>
-            Go-to-Market Strategies Built for How Buyers Make Decisions Today
-          </h1>
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.35) 0%, rgba(8,16,36,0.25) 45%, rgba(8,16,36,0.65) 100%)" }} />
 
-          <p className="hero-body-anim" style={{ fontSize: 18, lineHeight: 1.8, color: "rgba(255,255,255,0.9)", maxWidth: 700, marginBottom: 16 }}>
-            The path to purchase has changed.
-          </p>
-          <p className="hero-body-anim" style={{ fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.8)", maxWidth: 720, marginBottom: 16 }}>
-            Buyers no longer rely on a single search engine or a sales conversation to evaluate their options. They ask AI platforms, compare competitors, read reviews, validate expertise on LinkedIn, and seek recommendations from trusted sources before they&apos;re ready to engage.
-          </p>
-          <p className="hero-body-anim" style={{ fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.75)", maxWidth: 720, marginBottom: 40 }}>
-            Many organizations are still executing go-to-market strategies designed for a different buying landscape. Sustainable growth now requires more than marketing campaigns, it demands an integrated system that connects strategy, visibility, authority, demand generation, sales, automation, and revenue into one cohesive growth engine.
-          </p>
+        <div className="gtm-hero-wrap" style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", padding: "88px 24px 24px" }}>
+          <div className="gtm-hero-grid" style={{ maxWidth: 1200, margin: "0 auto", width: "100%", display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 56, alignItems: "center" }}>
 
-          <div className="hero-btns-anim" style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
-            <Link href="/contact" className="hero-btn-primary" style={{ fontSize: 15, padding: "18px 40px" }}>
-              Schedule a GTM Strategy Session
-            </Link>
-            <Link href="#framework" className="hero-btn-outline" style={{ fontSize: 15, padding: "18px 40px" }}>
-              Explore the GTM Framework
-            </Link>
+            {/* LEFT — headline, CTAs */}
+            <div>
+              <h1 className="hero-h1-anim" style={{
+                fontFamily: "'Burford Rustic Inline', sans-serif",
+                fontWeight: 400, fontSize: "clamp(30px, 4.4vw, 58px)",
+                textTransform: "uppercase", letterSpacing: "0.03em", lineHeight: 1.05,
+                color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))",
+                marginBottom: 20,
+              }}>
+                Go-to-Market Strategies Built for How Buyers Make Decisions Today
+              </h1>
+
+              <div className="hero-btns-anim" style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center", marginBottom: 14 }}>
+                <Link href="/contact" className="hero-btn-primary" style={{ fontSize: 14, padding: "15px 32px" }}>
+                  Schedule a GTM Strategy Session
+                </Link>
+                <Link href="#framework" className="hero-btn-outline" style={{ fontSize: 14, padding: "14px 30px" }}>
+                  Explore the GTM Framework
+                </Link>
+              </div>
+
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.5)" }}>
+                The path to purchase has changed.
+              </p>
+            </div>
+
+            {/* RIGHT — supporting detail panel */}
+            <div className="hero-body-anim" style={{
+              background: "rgba(8,16,36,0.55)", backdropFilter: "blur(6px)",
+              border: "1px solid rgba(255,255,255,0.15)", borderRadius: 12,
+              padding: "clamp(20px, 2.6vw, 32px)",
+            }}>
+              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.85)", marginBottom: 14 }}>
+                Buyers no longer rely on a single search engine or a sales conversation to evaluate their options. They ask AI platforms, compare competitors, read reviews, validate expertise on LinkedIn, and seek recommendations from trusted sources before they&apos;re ready to engage.
+              </p>
+              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.8)" }}>
+                Many organizations are still executing go-to-market strategies designed for a different buying landscape. Sustainable growth now requires more than marketing campaigns, it demands an integrated system that connects strategy, visibility, authority, demand generation, sales, automation, and revenue into one cohesive growth engine.
+              </p>
+            </div>
           </div>
         </div>
+
+        <style>{`
+          @media (max-width: 900px) {
+            .gtm-hero-section { height: auto !important; min-height: 100vh; }
+            .gtm-hero-wrap { position: relative !important; padding: 140px 20px 48px !important; }
+            .gtm-hero-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+          }
+        `}</style>
       </section>
 
       {/* ── S2: BUYING JOURNEY EVOLVED ─────────────────────── */}
