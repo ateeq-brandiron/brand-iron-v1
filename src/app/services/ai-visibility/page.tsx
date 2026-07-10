@@ -316,17 +316,8 @@ export default function AIVisibilityPage() {
                 Helping Brands Become Discoverable, Trusted, and Recommended Across Search and AI.
               </h1>
 
-              <p className="hero-body-anim" style={{
-                fontFamily: "'Burford Rustic Inline', sans-serif", fontWeight: 400,
-                fontSize: "clamp(12px, 1.4vw, 17px)", letterSpacing: "0.04em",
-                textTransform: "uppercase", lineHeight: 1.5, color: "rgba(255,255,255,0.92)",
-                marginBottom: 28, textShadow: "0 1px 8px rgba(0,0,0,0.5)",
-              }}>
-                The way people search has changed.
-              </p>
-
               <div className="hero-btns-anim" style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center", marginBottom: 14 }}>
-                {/* Primary CTA — free audit modal */}
+                {/* Primary CTA — AI Visibility Assessment (lead capture form) */}
                 <button onClick={() => setAuditOpen(true)} style={{
                   display: "inline-flex", alignItems: "center", gap: 10,
                   padding: "15px 32px", borderRadius: 6,
@@ -345,17 +336,12 @@ export default function AIVisibilityPage() {
                     <path d="M16.5 16.5l4 4" stroke="white" strokeWidth="2" strokeLinecap="round"/>
                     <path d="M8 11h6M11 8v6" stroke="white" strokeWidth="1.8" strokeLinecap="round"/>
                   </svg>
-                  Get Free SEO &amp; AI Visibility Audit
+                  Schedule an AI Visibility Assessment
                 </button>
-
-                {/* Secondary CTA */}
-                <Link href="/ai-visibility-audit" className="hero-btn-outline" style={{ fontSize: 14, padding: "14px 30px", textAlign: "center" }}>
-                  Schedule an Assessment
-                </Link>
               </div>
 
               <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.5)" }}>
-                Free audit delivered within 1–2 business days. No credit card required.
+                Discover how visible your business is across Google, ChatGPT, Gemini, Claude, Perplexity, and other AI-powered search experiences.
               </p>
             </div>
 
@@ -366,13 +352,10 @@ export default function AIVisibilityPage() {
               padding: "clamp(20px, 2.6vw, 32px)",
             }}>
               <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.85)", marginBottom: 14 }}>
-                Today&apos;s buyers don&apos;t rely on Google alone. They ask questions in ChatGPT, Gemini, Claude, Perplexity, Microsoft Copilot, voice assistants, industry communities, and traditional search engines long before contacting a company.
-              </p>
-              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.8)", marginBottom: 14 }}>
-                If your business isn&apos;t visible where those conversations happen, you&apos;re losing opportunities before your sales team ever has a chance to engage.
+                Search behavior has evolved. Today&apos;s buyers research through ChatGPT, Gemini, Claude, Perplexity, voice assistants, industry communities, and search engines long before contacting a company. If your business isn&apos;t visible where those decisions begin, you&apos;re missing opportunities before sales can engage.
               </p>
               <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.8)", marginBottom: 20 }}>
-                Brand Iron helps organizations strengthen their AI Visibility by combining Search Engine Optimization (SEO), Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), technical optimization, entity development, authority building, and strategic content into one connected visibility strategy.
+                Brand Iron helps organizations improve AI Visibility by integrating SEO, AEO, GEO, technical optimization, entity development, authority building, and strategic content into one connected visibility strategy.
               </p>
 
               <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "#FFFFFF", fontWeight: 700 }}>
@@ -399,20 +382,8 @@ export default function AIVisibilityPage() {
           </h2>
 
           <div style={{ maxWidth: 780, marginBottom: 80 }}>
-            <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 16 }}>
-              For years, businesses focused on one primary goal: ranking higher in search engines.
-            </p>
-            <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 16 }}>
-              While traditional Search Engine Optimization (SEO) remains essential, it&apos;s no longer the complete picture.
-            </p>
-            <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 16 }}>
-              Today&apos;s buyers don&apos;t just search, they ask questions. They expect direct answers, trusted recommendations, and personalized responses from AI-powered platforms before they ever visit a website or speak with a sales representative.
-            </p>
-            <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 16 }}>
-              Whether they&apos;re using Google Search, ChatGPT, Gemini, Claude, Perplexity, Microsoft Copilot, voice assistants, or industry communities, the buying journey now spans multiple platforms and multiple moments of discovery.
-            </p>
-            <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#444", fontWeight: 600 }}>
-              That means your business needs to be visible wherever those conversations happen, not just on a search results page.
+            <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#555" }}>
+              Search has evolved beyond Google. While SEO remains essential, today&apos;s buyers ask AI platforms and search engines for trusted answers long before speaking with a company. Whether they&apos;re using ChatGPT, Gemini, Claude, Perplexity, Google, or industry communities, buying decisions now happen across multiple channels. Your business needs to be visible wherever those conversations begin.
             </p>
           </div>
 
@@ -721,6 +692,10 @@ export default function AIVisibilityPage() {
                 <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 17, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 6, lineHeight: 1.3 }}>{tier.name}</h3>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 600, color: "#d87307", marginBottom: 16 }}>{tier.tagline}</p>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.75, color: "#666", marginBottom: 20, flex: 1 }}>{tier.description}</p>
+                <div style={{ borderTop: "1px solid #EEEBE7", paddingTop: 16, marginBottom: 16 }}>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#999", marginBottom: 6 }}>Best For</p>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.6, color: "#555" }}>{tier.bestFor}</p>
+                </div>
                 <div style={{ borderTop: "1px solid #EEEBE7", paddingTop: 16, marginBottom: 20 }}>
                   <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#999", marginBottom: 6 }}>Primary Outcome</p>
                   <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 600, color: "#d87307" }}>{tier.outcome}</p>
@@ -872,7 +847,7 @@ export default function AIVisibilityPage() {
                 Ready to Get Visible?
               </p>
               <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(28px, 4.2vw, 52px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.05, marginBottom: 20 }}>
-                Schedule an AI Visibility Assessment
+                Ready to Become Discoverable?
               </h2>
               <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", fontStyle: "italic", maxWidth: 640, margin: "0 auto 48px" }}>
                 Discover how visible your business is across Google, ChatGPT, Gemini, Claude, Perplexity, and other AI-powered search experiences.
