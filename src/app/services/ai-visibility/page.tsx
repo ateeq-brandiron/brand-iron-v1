@@ -315,7 +315,11 @@ export default function AIVisibilityPage() {
                 Helping Brands Become Discoverable, Trusted, and Recommended Across Search and AI.
               </h1>
 
-              <div className="hero-btns-anim" style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center", marginBottom: 14 }}>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 17, fontWeight: 700, color: "#FFFFFF", lineHeight: 1.5, marginBottom: 20, textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}>
+                Discover how visible your business is across Google, ChatGPT, Gemini, Claude, Perplexity, and other AI-powered search experiences.
+              </p>
+
+              <div className="hero-btns-anim" style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center" }}>
                 {/* Primary CTA — AI Visibility Assessment (lead capture form) */}
                 <button onClick={() => setAuditOpen(true)} style={{
                   display: "inline-flex", alignItems: "center", gap: 10,
@@ -338,10 +342,6 @@ export default function AIVisibilityPage() {
                   Schedule an AI Visibility Assessment
                 </button>
               </div>
-
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.5)" }}>
-                Discover how visible your business is across Google, ChatGPT, Gemini, Claude, Perplexity, and other AI-powered search experiences.
-              </p>
             </div>
 
             {/* RIGHT — supporting detail panel */}
