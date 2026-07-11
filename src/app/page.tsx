@@ -165,7 +165,9 @@ export default function Home() {
       <section style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <video
           src="/remove_gemini_logo_form_the_vi.mp4"
-          autoPlay muted loop playsInline preload="auto"
+          autoPlay muted playsInline preload="auto"
+          onLoadedMetadata={e => { e.currentTarget.currentTime = 2; }}
+          onEnded={e => { e.currentTarget.currentTime = 2; e.currentTarget.play(); }}
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }}
         />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.15) 50%, rgba(0,0,0,0.55) 100%)" }} />
@@ -180,7 +182,7 @@ export default function Home() {
             lineHeight: 0.88, marginBottom: 16,
             filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))",
           }}>
-            Forging Brands.<br />Driving Revenue.
+            Forging Brands.<br />Driving Revenue.<span style={{ position: "relative", display: "inline-block", width: 0 }}><span style={{ position: "absolute", fontSize: "0.3em", top: "-0.05em", left: "-0.7em" }}>™</span></span>
           </h1>
           <p style={{
             fontFamily: "'Burford Rustic Inline', sans-serif", fontWeight: 400,
@@ -243,8 +245,8 @@ export default function Home() {
       <section style={{ background: "#FFFFFF", padding: "24px 24px 40px" }}>
         <div ref={s2.ref} style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "auto 1fr", gap: 64, alignItems: "start" }}>
 
-          {/* B-icon logo mask — overlaps the hero seam above */}
-          <div className={`reveal${s2.inView ? " visible" : ""}`} style={{ marginTop: -88, marginBottom: -70, perspective: 1200 }}>
+          {/* B-icon logo mask */}
+          <div className={`reveal${s2.inView ? " visible" : ""}`} style={{ marginTop: -24, marginBottom: -10, perspective: 1200 }}>
             <div className="logo-3d-float">
               <img src="/images/BI-Logo-Mask-1-e1723263913795 (1).png" alt="Brand Iron" style={{ width: 340, height: "auto", display: "block", transition: "transform 0.35s ease" }}
                 onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.05) rotate(-3deg)")}
@@ -602,7 +604,7 @@ export default function Home() {
               }}
               onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
               onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
-              >View Our Framework</Link>
+              >View Our Case Studies</Link>
             </div>
           </div>
         </div>
