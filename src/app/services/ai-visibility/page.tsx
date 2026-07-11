@@ -462,7 +462,7 @@ export default function AIVisibilityPage() {
       {/* ── S3: THE NEW VISIBILITY EQUATION ─────────────────── */}
       <section style={{
         position: "relative", overflow: "hidden", padding: "120px 40px",
-        backgroundImage: "url('/images/Brand Iron Techy Horse Mane.png')",
+        backgroundImage: "url('/images/brand iron blacksmith and tech lines.png')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
         <div style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.60)" }} />
@@ -793,34 +793,39 @@ export default function AIVisibilityPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
 
-            {/* Not sure which path — talk to a strategist */}
-            <div style={{
-              background: "#FDF4EA", border: "1px solid rgba(216,115,7,0.25)", borderRadius: 12,
-              padding: "28px 32px", display: "flex", alignItems: "center", justifyContent: "space-between",
-              flexWrap: "wrap", gap: 20,
-            }}>
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.7, color: "#444", margin: 0, maxWidth: 560 }}>
+        {/* Not sure which path — full-bleed photo panel */}
+        <div className={`reveal${s5View.inView ? ' visible' : ''}`} style={{
+          position: "relative", width: "100vw", marginLeft: "calc(50% - 50vw)", marginTop: 56,
+          overflow: "hidden", borderTop: "3px solid #d87307",
+          backgroundImage: "url('/images/Brand Iron Techy Horse Mane.png')",
+          backgroundSize: "cover", backgroundPosition: "center",
+        }}>
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(10,12,8,0.6) 0%, rgba(10,12,8,0.72) 100%)" }} />
+          <div style={{ position: "relative", zIndex: 1, maxWidth: 900, margin: "0 auto", padding: "64px 24px" }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 20, marginBottom: 40 }}>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.7, color: "rgba(255,255,255,0.9)", margin: 0, maxWidth: 560 }}>
                 Not sure where to start? Talk through your goals with a strategist and find the right AI Visibility solution for your business.
               </p>
               <Link href="/contact" style={{
                 flexShrink: 0, display: "inline-block", padding: "14px 32px", borderRadius: 8,
                 fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
                 letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none",
-                background: "#1a1a1a", color: "#FFFFFF", transition: "background 0.2s",
+                background: "#d87307", color: "#FFFFFF", transition: "background 0.2s",
               }}
-              onMouseEnter={e => (e.currentTarget.style.background = "#d87307")}
-              onMouseLeave={e => (e.currentTarget.style.background = "#1a1a1a")}
+              onMouseEnter={e => (e.currentTarget.style.background = "#b8691f")}
+              onMouseLeave={e => (e.currentTarget.style.background = "#d87307")}
               >
                 Talk to a Strategist →
               </Link>
             </div>
-          </div>
 
-          {/* Transition line */}
-          <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 640, margin: "40px auto 0", textAlign: "center" }}>
-            Explore each solution in detail to understand what&apos;s included, who it&apos;s designed for, and the business outcomes you can expect.
-          </p>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.75)", maxWidth: 640, margin: "0 auto", textAlign: "center" }}>
+              Explore each solution in detail to understand what&apos;s included, who it&apos;s designed for, and the business outcomes you can expect.
+            </p>
+          </div>
         </div>
       </section>
 
