@@ -36,7 +36,7 @@ export default function Footer() {
             textTransform: "uppercase", letterSpacing: "0.03em",
             color: "#945B06", lineHeight: 1, marginBottom: 12,
           }}>
-            Forging Brands. Driving Revenue.<span style={{ position: "relative", display: "inline-block", width: 0 }}><span style={{ position: "absolute", fontSize: "0.3em", fontWeight: 700, top: "-0.05em", left: "-0.7em" }}>™</span></span>
+            Forging Brands. Driving Revenue<span style={{ position: "relative", display: "inline-block", width: 0 }}><span style={{ position: "absolute", fontSize: "0.32em", fontWeight: 700, top: "-1.3em", left: "0.05em" }}>™</span></span>.
           </p>
           <p style={{
             fontFamily: "'Montserrat', sans-serif", fontSize: 16, fontWeight: 600,

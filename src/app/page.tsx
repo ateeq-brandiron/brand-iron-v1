@@ -182,7 +182,7 @@ export default function Home() {
             lineHeight: 0.88, marginBottom: 16,
             filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))",
           }}>
-            Forging Brands.<br />Driving Revenue.<span style={{ position: "relative", display: "inline-block", width: 0 }}><span style={{ position: "absolute", fontSize: "0.3em", top: "-0.05em", left: "-0.7em" }}>™</span></span>
+            Forging Brands.<br />Driving Revenue.
           </h1>
           <p style={{
             fontFamily: "'Burford Rustic Inline', sans-serif", fontWeight: 400,
