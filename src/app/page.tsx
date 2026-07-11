@@ -359,7 +359,7 @@ export default function Home() {
             return (
               <div key={stage} className={`reveal${s3cards.inView ? " visible" : ""}`} style={{
                 position: "relative", flex: 1, background: overlays[i],
-                padding: "48px 28px 64px", minHeight: 260,
+                padding: "48px 28px 90px", minHeight: 260,
                 borderRight: i < journeyStages.length - 1 ? "1px solid rgba(255,255,255,0.12)" : "none",
                 borderTop: "3px solid transparent",
                 transitionDelay: `${i * 0.08}s`,
