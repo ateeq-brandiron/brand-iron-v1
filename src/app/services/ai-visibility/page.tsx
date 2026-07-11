@@ -804,27 +804,21 @@ export default function AIVisibilityPage() {
           backgroundSize: "cover", backgroundPosition: "center",
         }}>
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(10,12,8,0.6) 0%, rgba(10,12,8,0.72) 100%)" }} />
-          <div style={{ position: "relative", zIndex: 1, maxWidth: 900, margin: "0 auto", padding: "64px 24px" }}>
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 20, marginBottom: 40 }}>
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.7, color: "rgba(255,255,255,0.9)", margin: 0, maxWidth: 560 }}>
-                Not sure where to start? Talk through your goals with a strategist and find the right AI Visibility solution for your business.
-              </p>
-              <Link href="/contact" style={{
-                flexShrink: 0, display: "inline-block", padding: "14px 32px", borderRadius: 8,
-                fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
-                letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none",
-                background: "#d87307", color: "#FFFFFF", transition: "background 0.2s",
-              }}
-              onMouseEnter={e => (e.currentTarget.style.background = "#b8691f")}
-              onMouseLeave={e => (e.currentTarget.style.background = "#d87307")}
-              >
-                Talk to a Strategist →
-              </Link>
-            </div>
-
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.75)", maxWidth: 640, margin: "0 auto", textAlign: "center" }}>
-              Explore each solution in detail to understand what&apos;s included, who it&apos;s designed for, and the business outcomes you can expect.
+          <div style={{ position: "relative", zIndex: 1, maxWidth: 1200, margin: "0 auto", padding: "64px 24px" }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.9)", margin: "0 0 28px" }}>
+              Not sure where to start? Talk through your goals with a strategist and find the right AI Visibility solution for your business. Explore each solution in detail to understand what&apos;s included, who it&apos;s designed for, and the business outcomes you can expect.
             </p>
+            <Link href="/contact" style={{
+              display: "inline-block", padding: "14px 32px", borderRadius: 8,
+              fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
+              letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none",
+              background: "#d87307", color: "#FFFFFF", transition: "background 0.2s",
+            }}
+            onMouseEnter={e => (e.currentTarget.style.background = "#b8691f")}
+            onMouseLeave={e => (e.currentTarget.style.background = "#d87307")}
+            >
+              Talk to a Strategist →
+            </Link>
           </div>
         </div>
       </section>
