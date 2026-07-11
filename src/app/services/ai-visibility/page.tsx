@@ -465,7 +465,7 @@ export default function AIVisibilityPage() {
           <h2 className={`section-heading reveal${s3View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 16, textAlign: "left" }}>
             Visibility Alone Isn&apos;t Enough.
           </h2>
-          <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 640, marginBottom: 64 }}>
+          <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 64 }}>
             Modern discoverability requires four connected capabilities working together.
           </p>
 
@@ -504,15 +504,9 @@ export default function AIVisibilityPage() {
             ))}
           </div>
 
-          <div className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ maxWidth: 760 }}>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 17, lineHeight: 1.8, color: "#444", marginBottom: 16 }}>
-              The organizations that win tomorrow aren&apos;t simply easier to find, they&apos;re easier to trust.
-            </p>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#555", marginBottom: 16 }}>
-              That&apos;s why Brand Iron goes beyond traditional SEO.
-            </p>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#555" }}>
-              We help organizations build the technical foundation, digital authority, and AI readiness needed to become discoverable, trusted, and recommended across today&apos;s evolving search landscape.
+          <div className={`reveal${s3View.inView ? ' visible' : ''}`}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 17, lineHeight: 1.8, color: "#444" }}>
+              The organizations that win tomorrow aren&apos;t simply easier to find, they&apos;re easier to trust. That&apos;s why Brand Iron goes beyond traditional SEO. We help organizations build the technical foundation, digital authority, and AI readiness needed to become discoverable, trusted, and recommended across today&apos;s evolving search landscape.
             </p>
           </div>
         </div>
