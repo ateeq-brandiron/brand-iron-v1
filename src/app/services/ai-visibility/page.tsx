@@ -612,7 +612,7 @@ export default function AIVisibilityPage() {
       </section>
 
       {/* ── S5: CHOOSE YOUR SOLUTION ─────────────────────────── */}
-      <section style={{ background: "#FFFFFF", padding: "48px 40px 120px" }}>
+      <section style={{ background: "#FFFFFF", padding: "48px 40px 0" }}>
         <div ref={s5View.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 72, textAlign: "center" }}>
             <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20 }}>
