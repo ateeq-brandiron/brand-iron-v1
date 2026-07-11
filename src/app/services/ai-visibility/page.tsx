@@ -308,7 +308,7 @@ export default function AIVisibilityPage() {
               <h1 className="hero-h1-anim" style={{
                 fontFamily: "'Burford Rustic Inline', sans-serif",
                 fontWeight: 400, fontSize: "clamp(30px, 4.4vw, 58px)",
-                textTransform: "uppercase", letterSpacing: "0.03em", lineHeight: 1.05,
+                textTransform: "uppercase", letterSpacing: "0.02em", lineHeight: 0.92,
                 color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))",
                 marginBottom: 20,
               }}>
