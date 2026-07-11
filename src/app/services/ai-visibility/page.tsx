@@ -460,12 +460,7 @@ export default function AIVisibilityPage() {
       </section>
 
       {/* ── S3: THE NEW VISIBILITY EQUATION ─────────────────── */}
-      <section style={{
-        position: "relative", overflow: "hidden", padding: "120px 40px",
-        backgroundImage: "url('/images/brand iron blacksmith and tech lines.png')",
-        backgroundSize: "cover", backgroundPosition: "center",
-      }}>
-        <div style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.60)" }} />
+      <section style={{ position: "relative", background: "#FFFFFF", padding: "120px 40px" }}>
         <div ref={s3View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1100, margin: "0 auto" }}>
           <h2 className={`section-heading reveal${s3View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 16, textAlign: "left" }}>
             Visibility Alone Isn&apos;t Enough.
@@ -524,7 +519,12 @@ export default function AIVisibilityPage() {
       </section>
 
       {/* ── S4: STRATEGIC FRAMEWORK ─────────────────────────── */}
-      <section style={{ position: "relative", background: "#FFFFFF", padding: "120px 40px 48px" }}>
+      <section style={{
+        position: "relative", overflow: "hidden", padding: "120px 40px 48px",
+        backgroundImage: "url('/images/brand iron blacksmith and tech lines.png')",
+        backgroundSize: "cover", backgroundPosition: "center",
+      }}>
+        <div style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.60)" }} />
         <div ref={s4View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
             <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 24, textAlign: "left" }}>
