@@ -73,8 +73,8 @@ export default function ContactPage() {
 
   const inputStyle: React.CSSProperties = {
     width: "100%", padding: "13px 16px",
-    background: "#FFFFFF", border: "1.5px solid #d0d5dd",
-    borderRadius: 4, fontFamily: "'Montserrat', sans-serif", fontSize: 14, color: "#333333",
+    background: "#FFFFFF", border: "1.5px solid #EEEBE7",
+    borderRadius: 4, fontFamily: "'Montserrat', sans-serif", fontSize: 14, color: "#1a1a1a",
     outline: "none",
   };
 
@@ -90,9 +90,10 @@ export default function ContactPage() {
         <div style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto", padding: "140px 24px 80px", textAlign: "center" }}>
           <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 500, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>Get In Touch</p>
           <h1 style={{
-            fontFamily: "'Burford Rustic Black', Helvetica, Arial, Lucida, sans-serif", fontWeight: 700, fontSize: "clamp(44px, 6vw, 72px)",
+            fontFamily: "'Burford Rustic Inline', sans-serif", fontWeight: 400, fontSize: "clamp(44px, 6vw, 72px)",
             textTransform: "uppercase", letterSpacing: "0.03em",
-            color: "transparent", WebkitTextStroke: "2px #FFFFFF",
+            color: "#FFFFFF",
+            filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))",
             lineHeight: 1.0, marginBottom: 28,
           }}>
             Let&apos;s Build Your Revenue Engine
@@ -104,110 +105,112 @@ export default function ContactPage() {
       </section>
 
       {/* Contact options */}
-      <section style={{ background: "#0D1A2E", padding: "60px 24px 0" }}>
+      <section style={{ background: "#FFFFFF", padding: "60px 24px 0" }}>
         <div style={{ maxWidth: 1400, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 16 }}>
           {contactOptions.map(({ icon, title, desc }) => (
-            <div key={title} className="contact-opt" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderTop: "3px solid #d87307", borderRadius: 10, padding: "24px 20px", textAlign: "center" }}>
-              <div style={{ display: "flex", justifyContent: "center", marginBottom: 12 }}>{icon}</div>
-              <h3 style={{ fontFamily: "'Burford Rustic Black', Helvetica, Arial, Lucida, sans-serif", fontSize: 20, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.06em", color: "#FFFFFF", marginBottom: 8, lineHeight: 1.3 }}>{title}</h3>
-              <p style={{ fontSize: 13, color: "rgba(255,255,255,0.8)", lineHeight: 1.6 }}>{desc}</p>
+            <div key={title} className="contact-opt" style={{ background: "#F9F8F6", border: "1px solid #EEEBE7", borderTop: "3px solid #d87307", borderRadius: 10, padding: "24px 20px", textAlign: "center" }}>
+              <div style={{ display: "flex", justifyContent: "center", marginBottom: 12 }}>
+                <div style={{ width: 64, height: 64, borderRadius: "50%", background: "rgba(216,115,7,0.1)", display: "flex", alignItems: "center", justifyContent: "center" }}>{icon}</div>
+              </div>
+              <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 20, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 8, lineHeight: 1.3 }}>{title}</h3>
+              <p style={{ fontSize: 13, color: "#666", lineHeight: 1.6 }}>{desc}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* Form + Info */}
-      <section style={{ background: "#0D1A2E", padding: "60px 24px 80px" }}>
+      <section style={{ background: "#F5F0E8", padding: "60px 24px 80px" }}>
         <div style={{ maxWidth: 1400, margin: "0 auto", display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 48, alignItems: "start" }}>
 
           {/* Form */}
-          <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 12, padding: "40px 36px" }}>
-            <h2 style={{ fontFamily: "'Burford Rustic Black', Helvetica, Arial, Lucida, sans-serif", fontWeight: 700, fontSize: 36, textTransform: "uppercase", letterSpacing: "0.04em", color: "#FFFFFF", marginBottom: 8 }}>Send Us A Message</h2>
-            <p style={{ fontSize: 14, color: "rgba(255,255,255,0.8)", marginBottom: 32 }}>We typically respond within one business day.</p>
+          <div style={{ background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 12, padding: "40px 36px", boxShadow: "0 4px 20px rgba(0,0,0,0.06)" }}>
+            <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontWeight: 900, fontSize: 36, textTransform: "uppercase", letterSpacing: "0.04em", color: "#1a1a1a", marginBottom: 8 }}>Send Us A Message</h2>
+            <p style={{ fontSize: 14, color: "#666", marginBottom: 32 }}>We typically respond within one business day.</p>
 
             {submitted ? (
               <div style={{ textAlign: "center", padding: "40px 0" }}>
                 <div style={{ width: 64, height: 64, borderRadius: "50%", background: "#d87307", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px" }}>
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                 </div>
-                <h3 style={{ fontFamily: "'Burford Rustic Black', Helvetica, Arial, Lucida, sans-serif", fontSize: 24, fontWeight: 600, textTransform: "uppercase", color: "#FFFFFF", marginBottom: 12 }}>Message Received</h3>
-                <p style={{ fontSize: 15, color: "rgba(255,255,255,0.75)", lineHeight: 1.7 }}>Thank you for reaching out. A member of our team will be in touch within one business day.</p>
+                <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 24, fontWeight: 900, textTransform: "uppercase", color: "#1a1a1a", marginBottom: 12 }}>Message Received</h3>
+                <p style={{ fontSize: 15, color: "#555", lineHeight: 1.7 }}>Thank you for reaching out. A member of our team will be in touch within one business day.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 16 }}>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
                   <div>
-                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.8)", display: "block", marginBottom: 6 }}>Full Name *</label>
+                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", display: "block", marginBottom: 6 }}>Full Name *</label>
                     <input required value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} placeholder="John Smith" style={inputStyle} />
                   </div>
                   <div>
-                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.8)", display: "block", marginBottom: 6 }}>Company</label>
+                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", display: "block", marginBottom: 6 }}>Company</label>
                     <input value={form.company} onChange={e => setForm({ ...form, company: e.target.value })} placeholder="Your company" style={inputStyle} />
                   </div>
                 </div>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
                   <div>
-                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.8)", display: "block", marginBottom: 6 }}>Email *</label>
+                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", display: "block", marginBottom: 6 }}>Email *</label>
                     <input required type="email" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} placeholder="john@company.com" style={inputStyle} />
                   </div>
                   <div>
-                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.8)", display: "block", marginBottom: 6 }}>Phone</label>
+                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", display: "block", marginBottom: 6 }}>Phone</label>
                     <input value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value })} placeholder="+1 (555) 000-0000" style={inputStyle} />
                   </div>
                 </div>
                 <div>
-                  <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.8)", display: "block", marginBottom: 6 }}>Company Size</label>
+                  <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", display: "block", marginBottom: 6 }}>Company Size</label>
                   <select value={form.size} onChange={e => setForm({ ...form, size: e.target.value })} style={{ ...inputStyle, cursor: "pointer" }}>
-                    <option value="" style={{ background: "#FFFFFF", color: "#333333" }}>Select size...</option>
-                    <option style={{ background: "#FFFFFF", color: "#333333" }}>1–10 employees</option>
-                    <option style={{ background: "#FFFFFF", color: "#333333" }}>11–50 employees</option>
-                    <option style={{ background: "#FFFFFF", color: "#333333" }}>51–200 employees</option>
-                    <option style={{ background: "#FFFFFF", color: "#333333" }}>200+ employees</option>
+                    <option value="" style={{ background: "#FFFFFF", color: "#1a1a1a" }}>Select size...</option>
+                    <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>1–10 employees</option>
+                    <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>11–50 employees</option>
+                    <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>51–200 employees</option>
+                    <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>200+ employees</option>
                   </select>
                 </div>
                 <div>
-                  <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.8)", display: "block", marginBottom: 6 }}>I&apos;m interested in...</label>
+                  <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", display: "block", marginBottom: 6 }}>I&apos;m interested in...</label>
                   <select value={form.interest} onChange={e => setForm({ ...form, interest: e.target.value })} style={{ ...inputStyle, cursor: "pointer" }}>
-                    <option value="" style={{ background: "#FFFFFF", color: "#333333" }}>Select an option...</option>
-                    <option style={{ background: "#FFFFFF", color: "#333333" }}>Revenue Strategy & Growth Planning</option>
-                    <option style={{ background: "#FFFFFF", color: "#333333" }}>AI Transformation</option>
-                    <option style={{ background: "#FFFFFF", color: "#333333" }}>CRM & Revenue Operations</option>
-                    <option style={{ background: "#FFFFFF", color: "#333333" }}>Demand Generation</option>
-                    <option style={{ background: "#FFFFFF", color: "#333333" }}>Capital Raise Support</option>
-                    <option style={{ background: "#FFFFFF", color: "#333333" }}>Full Revenue Engine Build</option>
-                    <option style={{ background: "#FFFFFF", color: "#333333" }}>General Inquiry</option>
+                    <option value="" style={{ background: "#FFFFFF", color: "#1a1a1a" }}>Select an option...</option>
+                    <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>Revenue Strategy & Growth Planning</option>
+                    <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>AI Transformation</option>
+                    <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>CRM & Revenue Operations</option>
+                    <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>Demand Generation</option>
+                    <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>Capital Raise Support</option>
+                    <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>Full Revenue Engine Build</option>
+                    <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>General Inquiry</option>
                   </select>
                 </div>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
                   <div>
-                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.8)", display: "block", marginBottom: 6 }}>Investment Range</label>
+                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", display: "block", marginBottom: 6 }}>Investment Range</label>
                     <select value={form.investment} onChange={e => setForm({ ...form, investment: e.target.value })} style={{ ...inputStyle, cursor: "pointer" }}>
-                      <option value="" style={{ background: "#FFFFFF", color: "#333333" }}>Select range...</option>
-                      <option style={{ background: "#FFFFFF", color: "#333333" }}>Under $5K/mo</option>
-                      <option style={{ background: "#FFFFFF", color: "#333333" }}>$5K–$15K/mo</option>
-                      <option style={{ background: "#FFFFFF", color: "#333333" }}>$15K–$30K/mo</option>
-                      <option style={{ background: "#FFFFFF", color: "#333333" }}>$30K+/mo</option>
+                      <option value="" style={{ background: "#FFFFFF", color: "#1a1a1a" }}>Select range...</option>
+                      <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>Under $5K/mo</option>
+                      <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>$5K–$15K/mo</option>
+                      <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>$15K–$30K/mo</option>
+                      <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>$30K+/mo</option>
                     </select>
                   </div>
                   <div>
-                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.8)", display: "block", marginBottom: 6 }}>Timeline</label>
+                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", display: "block", marginBottom: 6 }}>Timeline</label>
                     <select value={form.timeline} onChange={e => setForm({ ...form, timeline: e.target.value })} style={{ ...inputStyle, cursor: "pointer" }}>
-                      <option value="" style={{ background: "#FFFFFF", color: "#333333" }}>Select timeline...</option>
-                      <option style={{ background: "#FFFFFF", color: "#333333" }}>ASAP</option>
-                      <option style={{ background: "#FFFFFF", color: "#333333" }}>1–3 months</option>
-                      <option style={{ background: "#FFFFFF", color: "#333333" }}>3–6 months</option>
-                      <option style={{ background: "#FFFFFF", color: "#333333" }}>Exploring options</option>
+                      <option value="" style={{ background: "#FFFFFF", color: "#1a1a1a" }}>Select timeline...</option>
+                      <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>ASAP</option>
+                      <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>1–3 months</option>
+                      <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>3–6 months</option>
+                      <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>Exploring options</option>
                     </select>
                   </div>
                 </div>
                 <div>
-                  <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.8)", display: "block", marginBottom: 6 }}>Message</label>
+                  <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", display: "block", marginBottom: 6 }}>Message</label>
                   <textarea rows={4} value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} placeholder="Tell us about your business and what you're looking to achieve..." style={{ ...inputStyle, resize: "vertical" }} />
                 </div>
                 <button type="submit" className="submit-btn" style={{ background: "#d87307", color: "#FFFFFF", fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 15, letterSpacing: "0.1em", textTransform: "uppercase", padding: "16px 32px", borderRadius: 4, border: "none", cursor: "pointer", alignSelf: "flex-start", marginTop: 4 }}>
                   Send Message →
                 </button>
-                <p style={{ fontSize: 12, color: "rgba(255,255,255,0.8)", lineHeight: 1.5 }}>No spam. No obligation. We respond within 1 business day.</p>
+                <p style={{ fontSize: 12, color: "#666", lineHeight: 1.5 }}>No spam. No obligation. We respond within 1 business day.</p>
               </form>
             )}
           </div>
@@ -217,7 +220,7 @@ export default function ContactPage() {
             <div style={{ backgroundImage: "url('/images/bg-haybales.jpg')", backgroundSize: "cover", backgroundPosition: "center", borderRadius: 10, overflow: "hidden", height: 220, position: "relative", marginBottom: 24 }}>
               <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, transparent 40%, rgba(28,54,82,0.75) 100%)" }} />
               <div style={{ position: "absolute", bottom: 20, left: 20 }}>
-                <p style={{ fontFamily: "'Burford Rustic Black', Helvetica, Arial, Lucida, sans-serif", fontSize: 18, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.04em", color: "#FFFFFF" }}>Executive-Level Strategy</p>
+                <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 18, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#FFFFFF" }}>Executive-Level Strategy</p>
                 <p style={{ fontSize: 13, color: "rgba(255,255,255,0.8)", marginTop: 4 }}>25+ years of growth experience, applied to your business.</p>
               </div>
             </div>
@@ -228,20 +231,20 @@ export default function ContactPage() {
                 { label: "Serving", value: "Global clients, enterprise to startup" },
                 { label: "First Step", value: "30-min Revenue Strategy Session" },
               ].map(({ label, value }) => (
-                <div key={label} className="info-row" style={{ display: "flex", alignItems: "center", gap: 14, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 8, padding: "14px 18px" }}>
+                <div key={label} className="info-row" style={{ display: "flex", alignItems: "center", gap: 14, background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 8, padding: "14px 18px" }}>
                   <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#d87307", flexShrink: 0 }} />
                   <div>
                     <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: "#d87307" }}>{label}</p>
-                    <p style={{ fontSize: 14, color: "#FFFFFF", marginTop: 2 }}>{value}</p>
+                    <p style={{ fontSize: 14, color: "#1a1a1a", marginTop: 2 }}>{value}</p>
                   </div>
                 </div>
               ))}
             </div>
 
-            <div style={{ background: "#d87307", borderRadius: 10, padding: "24px 24px" }}>
-              <p style={{ fontFamily: "'Burford Rustic Black', Helvetica, Arial, Lucida, sans-serif", fontSize: 18, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.04em", color: "#FFFFFF", marginBottom: 8 }}>Ready to start immediately?</p>
-              <p style={{ fontSize: 13, color: "rgba(255,255,255,0.80)", marginBottom: 16, lineHeight: 1.6 }}>Book a Revenue Strategy Session directly in our calendar and we&apos;ll get you started right away.</p>
-              <a href="mailto:contact@brandiron.net" className="cta-link-btn">Email Us Directly →</a>
+            <div style={{ background: "#FFFFFF", border: "1px solid #EEEBE7", borderLeft: "4px solid #d87307", borderRadius: 10, padding: "24px 24px" }}>
+              <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 18, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#1a1a1a", marginBottom: 8 }}>Ready to start immediately?</p>
+              <p style={{ fontSize: 13, color: "#555", marginBottom: 16, lineHeight: 1.6 }}>Book a Revenue Strategy Session directly in our calendar and we&apos;ll get you started right away.</p>
+              <a href="mailto:contact@brandiron.net" className="cta-link-btn" style={{ color: "#d87307", fontWeight: 700, fontSize: 14, display: "inline-flex", alignItems: "center", gap: 6 }}>Email Us Directly →</a>
             </div>
           </div>
         </div>

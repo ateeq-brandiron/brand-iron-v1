@@ -142,7 +142,7 @@ export default function CapitalRaisePage() {
           <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
             Why Great Companies Still Struggle to Raise Capital
           </p>
-          <h2 className={`section-heading reveal${s2View.inView ? ' visible' : ''}`} style={{ color: "#0F1B2D", marginBottom: 24, textAlign: "left" }}>
+          <h2 className={`section-heading reveal${s2View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 24, textAlign: "left" }}>
             Investors Don&apos;t Invest in Slides. They Invest in Confidence.
           </h2>
 
@@ -157,7 +157,7 @@ export default function CapitalRaisePage() {
 
           {/* What investors are evaluating table */}
           <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ marginBottom: 56 }}>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#0F1B2D", marginBottom: 12 }}>
+            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 12 }}>
               What Investors Are Really Evaluating
             </h3>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", maxWidth: 720, marginBottom: 32 }}>
@@ -167,7 +167,7 @@ export default function CapitalRaisePage() {
               <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "'Montserrat', sans-serif", fontSize: 15 }}>
                 <thead>
                   <tr>
-                    <th style={{ background: "#0F1B2D", color: "rgba(255,255,255,0.6)", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 12, padding: "18px 28px", textAlign: "left", width: "35%" }}>Investors Want to Understand</th>
+                    <th style={{ background: "#F3F0EC", color: "#1a1a1a", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 12, padding: "18px 28px", textAlign: "left", width: "35%" }}>Investors Want to Understand</th>
                     <th style={{ background: "#d87307", color: "#FFFFFF", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 12, padding: "18px 28px", textAlign: "left", width: "65%" }}>Why It Matters</th>
                   </tr>
                 </thead>
@@ -183,7 +183,7 @@ export default function CapitalRaisePage() {
                     ["Financial Story", "Are the projections realistic, defensible, and aligned with the strategy?"],
                   ].map(([q, why], i) => (
                     <tr key={q} style={{ background: i % 2 === 0 ? "#F9F8F6" : "#FFFFFF" }}>
-                      <td style={{ padding: "18px 28px", color: "#0F1B2D", fontWeight: 600, lineHeight: 1.5, borderBottom: "1px solid #EEEBE7" }}>{q}</td>
+                      <td style={{ padding: "18px 28px", color: "#1a1a1a", fontWeight: 600, lineHeight: 1.5, borderBottom: "1px solid #EEEBE7" }}>{q}</td>
                       <td style={{ padding: "18px 28px", color: "#666", lineHeight: 1.65, borderBottom: "1px solid #EEEBE7" }}>{why}</td>
                     </tr>
                   ))}
@@ -194,7 +194,7 @@ export default function CapitalRaisePage() {
 
           {/* Beyond the pitch deck */}
           <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ maxWidth: 800, margin: "0 0 56px" }}>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#0F1B2D", marginBottom: 16 }}>
+            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 16 }}>
               Beyond the Pitch Deck
             </h3>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666" }}>
@@ -203,10 +203,9 @@ export default function CapitalRaisePage() {
           </div>
 
           {/* Key insight */}
-          <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ position: "relative", background: "#0F1B2D", borderRadius: 16, padding: "48px 64px", overflow: "hidden" }}>
-            <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, transparent, #d87307, transparent)" }} />
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16, textAlign: "center" }}>Key Insight</p>
-            <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.05em", color: "#FFFFFF", textAlign: "center", lineHeight: 1.4, margin: 0 }}>
+          <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ background: "#F9F8F6", border: "1px solid #EEEBE7", borderLeft: "4px solid #d87307", borderRadius: 12, padding: "48px 64px" }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>Key Insight</p>
+            <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.05em", color: "#1a1a1a", lineHeight: 1.4, margin: 0 }}>
               The strongest fundraising presentations don&apos;t try to answer every question. They answer the questions that matter most, clearly, confidently, and in a way that earns the next conversation.
             </p>
           </div>
@@ -226,7 +225,7 @@ export default function CapitalRaisePage() {
             <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               The Brand Iron Capital Raise Framework
             </p>
-            <h2 className={`section-heading reveal${s3View.inView ? ' visible' : ''}`} style={{ color: "#0F1B2D", marginBottom: 20, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${s3View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               Not a Process. A Strategic Framework.
             </h2>
             <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 760 }}>
@@ -238,48 +237,48 @@ export default function CapitalRaisePage() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24, marginBottom: 56 }}>
             {[
               {
-                num: "01", title: "Strategic Foundation", color: "#0F1B2D",
+                num: "01", title: "Strategic Foundation",
                 lead: "Build the clarity behind your fundraising story.",
                 focuses: ["BrandStorm™ Strategy Session", "Investor Messaging", "Value Proposition", "Company Positioning", "Investment Narrative"],
                 icon: (<img src="/images/icons/icon-lightbulb.svg" alt="" style={{ width: 26, height: 26 }} />),
               },
               {
-                num: "02", title: "Investor Readiness", color: "#1c3652",
+                num: "02", title: "Investor Readiness",
                 lead: "Transform your strategy into investor-ready materials.",
                 focuses: ["Capital Raise Deck", "Executive Deck", "Teaser Piece", "Proforma", "Investor Storytelling"],
                 icon: (<img src="/images/icons/icon-briefcase.svg" alt="" style={{ width: 26, height: 26 }} />),
               },
               {
-                num: "03", title: "Investor Access", color: "#2d4f72",
+                num: "03", title: "Investor Access",
                 lead: "Identify and prioritize the investors most aligned with your opportunity.",
                 focuses: ["Investor Database", "Investor Research", "Segmentation", "Qualification", "Target Lists"],
                 icon: (<img src="/images/icons/icon-barchart.svg" alt="" style={{ width: 26, height: 26 }} />),
               },
               {
-                num: "04", title: "Investor Engagement", color: "#0F1B2D",
+                num: "04", title: "Investor Engagement",
                 lead: "Create meaningful conversations that build fundraising momentum.",
                 focuses: ["Investor Outreach", "Follow-up Strategy", "Investor GTM Support", "Relationship Management", "Campaign Tracking"],
                 icon: (<img src="/images/icons/icon-chat.svg" alt="" style={{ width: 26, height: 26 }} />),
               },
-            ].map(({ num, title, color, lead, focuses, icon }, i) => (
+            ].map(({ num, title, lead, focuses, icon }, i) => (
               <div key={num}
                 className={`reveal${s3View.inView ? ' visible' : ''}`}
-                style={{ position: "relative", background: color, borderRadius: 14, padding: "32px 24px 28px", overflow: "hidden", transition: "transform 0.25s, box-shadow 0.25s" }}
-                onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-5px)"; el.style.boxShadow = "0 16px 48px rgba(15,27,45,0.25)"; }}
+                style={{ position: "relative", background: "#F9F8F6", border: "1px solid #EEEBE7", borderRadius: 14, padding: "32px 24px 28px", overflow: "hidden", transition: "transform 0.25s, box-shadow 0.25s" }}
+                onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-5px)"; el.style.boxShadow = "0 16px 48px rgba(0,0,0,0.1)"; }}
                 onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "none"; }}
               >
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 18 }}>
                   <div style={{ width: 44, height: 44, borderRadius: 10, background: "rgba(216,115,7,0.12)", border: "1px solid rgba(216,115,7,0.2)", display: "flex", alignItems: "center", justifyContent: "center" }}>{icon}</div>
-                  <span style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 34, color: "rgba(216,115,7,0.12)", lineHeight: 1 }}>{num}</span>
+                  <span style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 34, color: "rgba(216,115,7,0.18)", lineHeight: 1 }}>{num}</span>
                 </div>
-                <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 16, fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.06em", color: "#FFFFFF", marginBottom: 10, lineHeight: 1.25 }}>{title}</h3>
-                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.7, color: "rgba(255,255,255,0.85)", fontWeight: 600, marginBottom: 18 }}>{lead}</p>
-                <div style={{ borderTop: "1px solid rgba(255,255,255,0.1)", paddingTop: 14 }}>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)", marginBottom: 10 }}>Focus Areas</p>
+                <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 16, fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 10, lineHeight: 1.25 }}>{title}</h3>
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.7, color: "#555", fontWeight: 600, marginBottom: 18 }}>{lead}</p>
+                <div style={{ borderTop: "1px solid #EEEBE7", paddingTop: 14 }}>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#aaa", marginBottom: 10 }}>Focus Areas</p>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
                     {focuses.map(f => (
-                      <span key={f} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.7)", background: "rgba(255,255,255,0.06)", borderRadius: 4, padding: "3px 8px" }}>{f}</span>
+                      <span key={f} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, color: "#666", background: "rgba(216,115,7,0.08)", borderRadius: 4, padding: "3px 8px" }}>{f}</span>
                     ))}
                   </div>
                 </div>
@@ -289,7 +288,7 @@ export default function CapitalRaisePage() {
 
           {/* Closing */}
           <div className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ background: "rgba(255,255,255,0.88)", backdropFilter: "blur(12px)", borderRadius: 16, padding: "40px 56px", borderLeft: "4px solid #d87307" }}>
-            <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.06em", color: "#0F1B2D", marginBottom: 16, lineHeight: 1.3 }}>
+            <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 16, lineHeight: 1.3 }}>
               One Framework. One Investor Journey.
             </p>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.85, color: "#555", margin: 0 }}>
@@ -305,14 +304,14 @@ export default function CapitalRaisePage() {
         backgroundImage: "url('/images/bg-logs.jpg')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
-        <div style={{ position: "absolute", inset: 0, background: "rgba(8,15,32,0.93)" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.6) 100%)" }} />
         <CircuitOverlay />
         <div ref={s4View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
             <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               How We Help You Raise Capital
             </p>
-            <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "transparent", WebkitTextStroke: "2px #FFFFFF", marginBottom: 20, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))", marginBottom: 20, textAlign: "left" }}>
               From Investor Story to Fundraising Momentum
             </h2>
             <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.65)", maxWidth: 720 }}>
@@ -358,7 +357,7 @@ export default function CapitalRaisePage() {
             <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               Choose the Right Capital Raise Solution
             </p>
-            <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#0F1B2D", marginBottom: 20, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               Support for Every Stage of Your Fundraising Journey
             </h2>
             <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 760 }}>
@@ -400,28 +399,33 @@ export default function CapitalRaisePage() {
             ].map(({ name, tagline, desc, bestFor, outcome, href, highlight }, i) => (
               <div key={name}
                 className={`reveal${s5View.inView ? ' visible' : ''}`}
-                style={{ position: "relative", background: highlight ? "#0F1B2D" : "#FFFFFF", border: highlight ? "none" : "1px solid rgba(15,27,45,0.08)", borderRadius: 14, overflow: "hidden", boxShadow: highlight ? "0 20px 60px rgba(15,27,45,0.2)" : "0 4px 20px rgba(0,0,0,0.06)", transition: "transform 0.25s, box-shadow 0.25s", display: "flex", flexDirection: "column" }}
-                onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-6px)"; el.style.boxShadow = highlight ? "0 28px 72px rgba(15,27,45,0.3)" : "0 12px 40px rgba(0,0,0,0.12)"; }}
-                onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = highlight ? "0 20px 60px rgba(15,27,45,0.2)" : "0 4px 20px rgba(0,0,0,0.06)"; }}
+                style={{ position: "relative", background: highlight ? "#F9F8F6" : "#FFFFFF", border: highlight ? "2px solid #d87307" : "1px solid rgba(15,27,45,0.08)", borderRadius: 14, overflow: "hidden", boxShadow: highlight ? "0 20px 60px rgba(216,115,7,0.18)" : "0 4px 20px rgba(0,0,0,0.06)", transition: "transform 0.25s, box-shadow 0.25s", display: "flex", flexDirection: "column" }}
+                onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-6px)"; el.style.boxShadow = highlight ? "0 28px 72px rgba(216,115,7,0.26)" : "0 12px 40px rgba(0,0,0,0.12)"; }}
+                onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = highlight ? "0 20px 60px rgba(216,115,7,0.18)" : "0 4px 20px rgba(0,0,0,0.06)"; }}
               >
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
+                {highlight && (
+                  <div style={{ position: "absolute", top: 20, right: 20, background: "#d87307", color: "#FFFFFF", fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", padding: "5px 12px", borderRadius: 20 }}>
+                    Most Popular
+                  </div>
+                )}
                 <div style={{ padding: "36px 32px 28px", flex: 1 }}>
-                  <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 20, fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.06em", color: highlight ? "#FFFFFF" : "#0F1B2D", marginBottom: 12, lineHeight: 1.2 }}>{name}</h3>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.7, color: highlight ? "rgba(255,255,255,0.85)" : "#444", fontWeight: 600, marginBottom: 14 }}>{tagline}</p>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: highlight ? "rgba(255,255,255,0.65)" : "#666", marginBottom: 24 }}>{desc}</p>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: highlight ? "rgba(255,255,255,0.35)" : "#aaa", marginBottom: 10 }}>Ideal For</p>
+                  <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 20, fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 12, lineHeight: 1.2 }}>{name}</h3>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.7, color: "#444", fontWeight: 600, marginBottom: 14 }}>{tagline}</p>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "#666", marginBottom: 24 }}>{desc}</p>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#aaa", marginBottom: 10 }}>Ideal For</p>
                   <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 24 }}>
                     {bestFor.map(b => (
                       <div key={b} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
                         <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#d87307", flexShrink: 0, marginTop: 5 }} />
-                        <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, color: highlight ? "rgba(255,255,255,0.7)" : "#555", lineHeight: 1.5 }}>{b}</span>
+                        <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, color: "#555", lineHeight: 1.5 }}>{b}</span>
                       </div>
                     ))}
                   </div>
                 </div>
-                <div style={{ padding: "20px 32px 28px", borderTop: highlight ? "1px solid rgba(255,255,255,0.08)" : "1px solid rgba(0,0,0,0.06)" }}>
+                <div style={{ padding: "20px 32px 28px", borderTop: "1px solid rgba(0,0,0,0.06)" }}>
                   <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#d87307", marginBottom: 8 }}>Primary Outcome</p>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.65, color: highlight ? "rgba(255,255,255,0.8)" : "#444", marginBottom: 20, fontStyle: "italic" }}>{outcome}</p>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.65, color: "#444", marginBottom: 20, fontStyle: "italic" }}>{outcome}</p>
                   <Link href={href} style={{ display: "inline-flex", alignItems: "center", gap: 8, color: "#d87307", fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none" }}>
                     Learn More →
                   </Link>
@@ -432,7 +436,7 @@ export default function CapitalRaisePage() {
 
           {/* Compare capital raise deck components */}
           <div className={`reveal${s5View.inView ? ' visible' : ''}`}>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#0F1B2D", marginBottom: 8 }}>
+            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 8 }}>
               Compare Capital Raise Solutions
             </h3>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.8, color: "#666", maxWidth: 640, marginBottom: 32 }}>
@@ -442,11 +446,11 @@ export default function CapitalRaisePage() {
               <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "'Montserrat', sans-serif", fontSize: 13 }}>
                 <thead>
                   <tr>
-                    <th style={{ background: "#F3F0EC", color: "#0F1B2D", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", fontSize: 11, padding: "16px 20px", textAlign: "left" }}>Component</th>
-                    <th style={{ background: "#0F1B2D", color: "rgba(255,255,255,0.7)", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", fontSize: 11, padding: "16px 20px", textAlign: "center" }}>Essentials Deck</th>
+                    <th style={{ background: "#F3F0EC", color: "#1a1a1a", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", fontSize: 11, padding: "16px 20px", textAlign: "left" }}>Component</th>
+                    <th style={{ background: "#F3F0EC", color: "#555", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", fontSize: 11, padding: "16px 20px", textAlign: "center" }}>Essentials Deck</th>
                     <th style={{ background: "#d87307", color: "#FFFFFF", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", fontSize: 11, padding: "16px 20px", textAlign: "center" }}>Executive Deck</th>
-                    <th style={{ background: "#1c3652", color: "rgba(255,255,255,0.7)", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", fontSize: 11, padding: "16px 20px", textAlign: "center" }}>Teaser Piece</th>
-                    <th style={{ background: "#1c3652", color: "rgba(255,255,255,0.7)", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", fontSize: 11, padding: "16px 20px", textAlign: "center" }}>Proforma</th>
+                    <th style={{ background: "#F3F0EC", color: "#555", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", fontSize: 11, padding: "16px 20px", textAlign: "center" }}>Teaser Piece</th>
+                    <th style={{ background: "#F3F0EC", color: "#555", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", fontSize: 11, padding: "16px 20px", textAlign: "center" }}>Proforma</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -460,9 +464,9 @@ export default function CapitalRaisePage() {
                     ["Included Revision Rounds", "2 rounds", "2 rounds", "2 rounds", "2 rounds"],
                   ].map(([cap, e1, e2, t, p], i) => (
                     <tr key={cap} style={{ background: i % 2 === 0 ? "#F9F8F6" : "#FFFFFF" }}>
-                      <td style={{ padding: "14px 20px", color: "#0F1B2D", fontWeight: 600, borderBottom: "1px solid #EEEBE7" }}>{cap}</td>
+                      <td style={{ padding: "14px 20px", color: "#1a1a1a", fontWeight: 600, borderBottom: "1px solid #EEEBE7" }}>{cap}</td>
                       <td style={{ padding: "14px 20px", color: "#555", textAlign: "center", borderBottom: "1px solid #EEEBE7" }}>{e1}</td>
-                      <td style={{ padding: "14px 20px", color: "#0F1B2D", fontWeight: 500, textAlign: "center", borderBottom: "1px solid #EEEBE7", background: "rgba(216,115,7,0.04)" }}>{e2}</td>
+                      <td style={{ padding: "14px 20px", color: "#1a1a1a", fontWeight: 500, textAlign: "center", borderBottom: "1px solid #EEEBE7", background: "rgba(216,115,7,0.04)" }}>{e2}</td>
                       <td style={{ padding: "14px 20px", color: "#555", textAlign: "center", borderBottom: "1px solid #EEEBE7" }}>{t}</td>
                       <td style={{ padding: "14px 20px", color: "#555", textAlign: "center", borderBottom: "1px solid #EEEBE7" }}>{p}</td>
                     </tr>
@@ -475,7 +479,7 @@ export default function CapitalRaisePage() {
           {/* Not sure where to start */}
           <div className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ position: "relative", background: "rgba(216,115,7,0.08)", border: "1px solid rgba(216,115,7,0.2)", borderRadius: 16, padding: "48px 56px", marginTop: 56, overflow: "hidden" }}>
             <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, transparent, #d87307, transparent)" }} />
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#0F1B2D", marginBottom: 16, textAlign: "center" }}>
+            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 16, textAlign: "center" }}>
               Not Sure Where to Start?
             </h3>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.85, color: "#555", textAlign: "center", maxWidth: 760, margin: "0 auto" }}>
@@ -497,7 +501,7 @@ export default function CapitalRaisePage() {
             <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               What Success Looks Like
             </p>
-            <h2 className={`section-heading reveal${s6View.inView ? ' visible' : ''}`} style={{ color: "#0F1B2D", marginBottom: 20, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${s6View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               Investor Confidence That Creates Fundraising Momentum
             </h2>
             <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 720, marginBottom: 16 }}>
@@ -539,7 +543,7 @@ export default function CapitalRaisePage() {
                 onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "none"; }}
               >
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
-                <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 15, fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.06em", color: "#0F1B2D", marginBottom: 12, lineHeight: 1.3 }}>{title}</h3>
+                <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 15, fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 12, lineHeight: 1.3 }}>{title}</h3>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "#555", marginBottom: 18 }}>{body}</p>
                 <div style={{ borderTop: "1px solid rgba(216,115,7,0.2)", paddingTop: 14 }}>
                   <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#d87307", marginBottom: 10 }}>Outcome</p>
@@ -555,10 +559,9 @@ export default function CapitalRaisePage() {
           </div>
 
           {/* Strategic insight */}
-          <div className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ position: "relative", background: "#0F1B2D", borderRadius: 16, padding: "40px 56px", marginBottom: 56, overflow: "hidden", textAlign: "center" }}>
-            <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, transparent, #d87307, transparent)" }} />
+          <div className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ background: "#F9F8F6", border: "1px solid #EEEBE7", borderLeft: "4px solid #d87307", borderRadius: 12, padding: "40px 56px", marginBottom: 56, textAlign: "center" }}>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>Strategic Insight</p>
-            <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.05em", color: "#FFFFFF", lineHeight: 1.4, margin: 0 }}>
+            <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.05em", color: "#1a1a1a", lineHeight: 1.4, margin: 0 }}>
               Capital is the outcome. Investor confidence is what makes it possible.
             </p>
           </div>
@@ -568,7 +571,7 @@ export default function CapitalRaisePage() {
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               Frequently Asked Questions
             </p>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#0F1B2D", marginBottom: 8 }}>
+            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 8 }}>
               Common Questions About Capital Raise Support
             </h3>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", maxWidth: 660, margin: "0 0 40px" }}>
@@ -581,7 +584,7 @@ export default function CapitalRaisePage() {
                     onClick={() => setOpenFaq(openFaq === i ? null : i)}
                     style={{ width: "100%", background: "none", border: "none", cursor: "pointer", padding: "20px 24px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16, textAlign: "left" }}
                   >
-                    <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, fontWeight: 600, color: "#0F1B2D", lineHeight: 1.5 }}>{q}</span>
+                    <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, fontWeight: 600, color: "#1a1a1a", lineHeight: 1.5 }}>{q}</span>
                     <div style={{ width: 28, height: 28, borderRadius: "50%", background: openFaq === i ? "#d87307" : "rgba(216,115,7,0.1)", border: "1px solid rgba(216,115,7,0.3)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, transition: "background 0.2s, transform 0.2s", transform: openFaq === i ? "rotate(45deg)" : "rotate(0)" }}>
                       <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke={openFaq === i ? "#FFFFFF" : "#d87307"} strokeWidth="2" strokeLinecap="round"/></svg>
                     </div>
@@ -614,7 +617,7 @@ export default function CapitalRaisePage() {
           <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 20 }}>
             Build Investor Confidence Before You Raise Capital
           </p>
-          <h2 className={`reveal${ctaView.inView ? ' visible' : ''} section-heading`} style={{ color: "transparent", WebkitTextStroke: "2px #FFFFFF", marginBottom: 24 }}>
+          <h2 className={`reveal${ctaView.inView ? ' visible' : ''} section-heading`} style={{ color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))", marginBottom: 24 }}>
             Let&apos;s Build Your Capital Raise Strategy.
           </h2>
           <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 17, lineHeight: 1.85, color: "rgba(255,255,255,0.8)", maxWidth: 700, margin: "0 auto 20px" }}>
