@@ -315,7 +315,7 @@ export default function AIVisibilityPage() {
                 Helping Brands Become Discoverable, Trusted, and Recommended Across Search and AI.
               </h1>
 
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 17, fontWeight: 700, color: "#FFFFFF", lineHeight: 1.5, marginBottom: 20, textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 700, color: "#FFFFFF", lineHeight: 1.5, marginBottom: 20, textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}>
                 Discover how visible your business is across Google, ChatGPT, Gemini, Claude, Perplexity, and other AI-powered search experiences.
               </p>
 
