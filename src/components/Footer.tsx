@@ -15,10 +15,10 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { label: "X", href: "#", icon: <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> },
-  { label: "Facebook", href: "#", icon: <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg> },
-  { label: "Instagram", href: "#", icon: <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="white" strokeWidth="2"/><circle cx="12" cy="12" r="4" stroke="white" strokeWidth="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="white"/></svg> },
-  { label: "LinkedIn", href: "#", icon: <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V9h4v2a6 6 0 0 1 2-2z" fill="white"/><rect x="2" y="9" width="4" height="13" fill="white"/><circle cx="4" cy="4" r="2" fill="white"/></svg> },
+  { label: "X", href: "https://x.com/BrandIron", icon: <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> },
+  { label: "Facebook", href: "https://www.facebook.com/BrandIronDenver/", icon: <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg> },
+  { label: "Instagram", href: "https://www.instagram.com/brand.iron/?hl=en", icon: <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="white" strokeWidth="2"/><circle cx="12" cy="12" r="4" stroke="white" strokeWidth="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="white"/></svg> },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/brand-iron/", icon: <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V9h4v2a6 6 0 0 1 2-2z" fill="white"/><rect x="2" y="9" width="4" height="13" fill="white"/><circle cx="4" cy="4" r="2" fill="white"/></svg> },
 ];
 
 export default function Footer() {
@@ -105,7 +105,7 @@ export default function Footer() {
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.9, color: "rgba(255,255,255,0.75)", marginBottom: 20 }}>Ph:&nbsp; 303-534-1901</p>
                 <div style={{ display: "flex", gap: 12 }}>
                   {socialLinks.map(({ label, href, icon }) => (
-                    <a key={label} href={href} aria-label={label} style={{
+                    <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} style={{
                       width: 32, height: 32, borderRadius: "50%",
                       background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.2)",
                       display: "flex", alignItems: "center", justifyContent: "center",
