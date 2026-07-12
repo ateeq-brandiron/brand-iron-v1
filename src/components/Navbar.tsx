@@ -55,19 +55,19 @@ export default function Navbar() {
             {servicesOpen && (
               <div style={{
                 position: "absolute", top: "100%", left: "50%", transform: "translateX(-50%)",
-                paddingTop: 16, minWidth: 280,
+                paddingTop: 16, minWidth: 340,
               }}>
               <div style={{
                 background: "#FFFFFF", border: "1px solid rgba(0,0,0,0.08)",
-                padding: "10px 0",
+                padding: "12px 0",
                 boxShadow: "0 20px 50px rgba(0,0,0,0.25)",
               }}>
                 {servicesMenu.map(s => (
                   <Link key={s.href} href={s.href} style={{
                     display: "block",
-                    padding: "11px 24px",
-                    fontFamily: "'Burford Rustic Black', Helvetica, Arial, sans-serif", fontWeight: 700, fontSize: 14,
-                    letterSpacing: "0.02em",
+                    padding: "14px 28px",
+                    fontFamily: "'Burford Rustic Black', Helvetica, Arial, sans-serif", fontWeight: 700, fontSize: 17,
+                    letterSpacing: "0.02em", whiteSpace: "nowrap",
                     color: "#1a1a1a",
                     transition: "color 0.2s",
                   }}
@@ -144,8 +144,8 @@ export default function Navbar() {
             <div style={{ padding: "4px 0 8px 12px" }}>
               {servicesMenu.map(s => (
                 <Link key={s.href} href={s.href} onClick={() => setOpen(false)} style={{
-                  display: "block", padding: "9px 0",
-                  fontFamily: "'Montserrat', sans-serif", fontWeight: 500, fontSize: 13,
+                  display: "block", padding: "11px 0",
+                  fontFamily: "'Montserrat', sans-serif", fontWeight: 500, fontSize: 15,
                   color: "rgba(255,255,255,0.75)",
                 }}>{s.label}</Link>
               ))}
