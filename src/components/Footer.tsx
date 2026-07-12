@@ -5,13 +5,8 @@ import { useState } from "react";
 const navLinks = [
   ["Services", "/services"],
   ["About", "/about"],
-  ["Industries", "/industries"],
-  ["Case Studies", "/case-studies"],
   ["Blog", "/blog"],
-  ["Resources", "/resources"],
-  ["Pricing", "/pricing"],
   ["Contact", "/contact"],
-  ["Client Portal", "/client-portal"],
 ];
 
 const socialLinks = [
@@ -164,14 +159,6 @@ export default function Footer() {
               <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.5)" }}>
                 © {new Date().getFullYear()} Brand Iron Marketing. All rights reserved.
               </p>
-              <div style={{ display: "flex", gap: 20 }}>
-                {[["Privacy Policy", "/privacy"], ["Terms of Service", "/terms"]].map(([label, href]) => (
-                  <Link key={label} href={href} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.5)", transition: "color 0.2s" }}
-                    onMouseEnter={e => (e.currentTarget.style.color = "#d87307")}
-                    onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.5)")}
-                  >{label}</Link>
-                ))}
-              </div>
             </div>
 
           </div>

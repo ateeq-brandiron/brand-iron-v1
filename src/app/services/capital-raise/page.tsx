@@ -374,28 +374,28 @@ export default function CapitalRaisePage() {
                 desc: "We develop investor presentations that clearly communicate your vision, market opportunity, competitive advantage, and growth potential, helping you present with confidence.",
                 bestFor: ["Startups preparing for investor meetings", "Companies seeking funding", "Leadership teams refining their investment story"],
                 outcome: "A clear, investor-ready presentation that builds confidence and supports productive fundraising conversations.",
-                href: "/services/capital-raise/deck", highlight: true,
+                href: "/contact", highlight: true,
               },
               {
                 name: "Investor Database", tagline: "Connect with investors who align with your opportunity.",
                 desc: "Successful fundraising isn't measured by how many investors you contact, it's measured by how many are the right fit. Our Investor Database helps identify, organize, and prioritize investors based on industry focus, investment stage, geographic preferences, and funding interests.",
                 bestFor: ["Companies beginning investor outreach", "Teams expanding fundraising efforts", "Organizations seeking targeted investor research"],
                 outcome: "A qualified investor pipeline aligned with your fundraising objectives.",
-                href: "/services/capital-raise/investor-database", highlight: false,
+                href: "/contact", highlight: false,
               },
               {
                 name: "Investor Outreach Campaigns", tagline: "Turn investor research into meaningful conversations.",
                 desc: "Finding the right investors is only the beginning. We help develop investor outreach campaigns designed to introduce your opportunity, generate interest, and create qualified fundraising conversations.",
                 bestFor: ["Active fundraising campaigns", "Companies ready to engage investors", "Teams seeking structured outreach support"],
                 outcome: "More strategic investor conversations and stronger fundraising momentum.",
-                href: "/services/capital-raise/outreach", highlight: false,
+                href: "/contact", highlight: false,
               },
               {
                 name: "Investor GTM Support", tagline: "Build a fundraising strategy that creates long-term momentum.",
                 desc: "Fundraising follows many of the same principles as a successful Go-to-Market strategy. Investor GTM Support brings positioning, outreach, messaging, and measurement together into a coordinated fundraising strategy.",
                 bestFor: ["Growth-stage companies", "Leadership teams managing ongoing fundraising", "Organizations seeking strategic fundraising guidance"],
                 outcome: "A coordinated fundraising strategy that supports long-term investor engagement and capital raise success.",
-                href: "/services/capital-raise/gtm-support", highlight: false,
+                href: "/contact", highlight: false,
               },
             ].map(({ name, tagline, desc, bestFor, outcome, href, highlight }, i) => (
               <div key={name}

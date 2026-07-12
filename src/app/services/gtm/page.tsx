@@ -444,7 +444,7 @@ export default function GTMPage() {
                 desc: "Designed for organizations establishing market positioning, improving discoverability, and creating the systems needed to generate consistent opportunities.",
                 bestFor: ["Early-stage companies", "Local and regional businesses", "Organizations formalizing their GTM strategy", "Teams building marketing and sales alignment"],
                 outcome: "Create a strong foundation for visibility, credibility, and predictable growth.",
-                href: "/services/gtm/tier-1",
+                href: "/contact",
                 highlight: false,
               },
               {
@@ -452,7 +452,7 @@ export default function GTMPage() {
                 desc: "Designed for organizations ready to strengthen market presence, generate qualified pipeline, and connect marketing, sales, and operations through more advanced execution.",
                 bestFor: ["Growing B2B organizations", "Companies entering new markets", "Businesses seeking predictable pipeline growth", "Teams ready to scale beyond foundational marketing"],
                 outcome: "Increase qualified demand, strengthen authority, and improve revenue performance.",
-                href: "/services/gtm/tier-2",
+                href: "/contact",
                 highlight: true,
               },
               {
@@ -460,7 +460,7 @@ export default function GTMPage() {
                 desc: "Designed for organizations with mature Go-to-Market operations that require advanced automation, executive thought leadership, AI visibility leadership, and multi-channel growth initiatives.",
                 bestFor: ["Established organizations", "Multi-location businesses", "Enterprise teams", "Companies pursuing aggressive growth initiatives"],
                 outcome: "Scale market leadership while improving operational efficiency and revenue performance.",
-                href: "/services/gtm/tier-3",
+                href: "/contact",
                 highlight: false,
               },
             ].map(({ tier, name, tagline, desc, bestFor, outcome, href, highlight }, i) => (

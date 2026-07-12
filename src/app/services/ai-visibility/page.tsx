@@ -224,7 +224,7 @@ export default function AIVisibilityPage() {
       outcome: "Visibility Clarity",
       engagement: "One-Time Audit",
       focus: "Diagnose",
-      href: "/services/ai-visibility/tier-0",
+      href: "/contact",
       icon: (
         <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
           <circle cx="16" cy="16" r="10" stroke="#d87307" strokeWidth="2"/>
@@ -242,7 +242,7 @@ export default function AIVisibilityPage() {
       outcome: "Strong SEO & AI Foundation",
       engagement: "One-Time Implementation",
       focus: "Build",
-      href: "/services/ai-visibility/tier-1",
+      href: "/contact",
       icon: (
         <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
           <rect x="4" y="20" width="8" height="12" rx="1" stroke="#d87307" strokeWidth="2"/>
@@ -260,7 +260,7 @@ export default function AIVisibilityPage() {
       outcome: "Greater Authority & AI Recommendations",
       engagement: "Monthly Growth Program",
       focus: "Grow",
-      href: "/services/ai-visibility/tier-2",
+      href: "/contact",
       icon: (
         <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
           <path d="M4 28l8-10 6 4 10-14 4-4" stroke="#d87307" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -277,7 +277,7 @@ export default function AIVisibilityPage() {
       outcome: "Market Leadership & AI Recommendation Dominance",
       engagement: "Strategic Partnership",
       focus: "Lead",
-      href: "/services/ai-visibility/tier-3",
+      href: "/contact",
       icon: (
         <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
           <path d="M18 4l3.6 7.6 8.4 1.1-6.1 5.9 1.5 8.3L18 23l-7.4 3.9 1.5-8.3-6.1-5.9 8.4-1.1z" stroke="#d87307" strokeWidth="2" strokeLinejoin="round" fill="rgba(216,115,7,0.12)"/>
@@ -721,7 +721,7 @@ export default function AIVisibilityPage() {
                     "You want an expert assessment before investing in optimization.",
                     "You need a roadmap to guide future improvements.",
                   ],
-                  href: "/services/ai-visibility/tier-0",
+                  href: "/contact",
                 },
                 {
                   tier: "SEO & AI Foundation",
@@ -730,7 +730,7 @@ export default function AIVisibilityPage() {
                     "You're ready to establish an AI-ready digital foundation.",
                     "You want search engines and AI platforms to better understand your business.",
                   ],
-                  href: "/services/ai-visibility/tier-1",
+                  href: "/contact",
                 },
                 {
                   tier: "AI Authority Growth System",
@@ -739,7 +739,7 @@ export default function AIVisibilityPage() {
                     "You want to become a trusted source within your industry.",
                     "You're committed to ongoing content and authority building.",
                   ],
-                  href: "/services/ai-visibility/tier-2",
+                  href: "/contact",
                 },
                 {
                   tier: "AI Market Dominance Engine",
@@ -748,7 +748,7 @@ export default function AIVisibilityPage() {
                     "You're investing in long-term brand authority and executive positioning.",
                     "You need continuous optimization, strategic consulting, and AI visibility leadership.",
                   ],
-                  href: "/services/ai-visibility/tier-3",
+                  href: "/contact",
                 },
               ].map(({ tier, items, href }) => (
                 <div key={tier} style={{

@@ -16,12 +16,8 @@ function useInView(threshold = 0.15) {
 }
 
 const services = [
-  { label: "Brand Strategy" },
   { label: "AI Visibility" },
   { label: "GTM Strategy" },
-  { label: "Revenue Engineering" },
-  { label: "Outbound Growth" },
-  { label: "Website Development" },
   { label: "Capital Raise Support" },
 ];
 
@@ -48,12 +44,6 @@ const differentiators = [
 
 const coreServices = [
   {
-    title: "Brand Strategy", sub: "Build a Brand Buyers Remember",
-    body: "Whether you're building a brand from the ground up or repositioning an established business, we help create brands that are clear, differentiated, and built for growth, from strategy and messaging to visual identity and brand systems.",
-    solutions: ["Brand Strategy & Positioning", "Brand Identity & Rebranding", "Messaging Framework", "Visual Identity Systems"],
-    cta: "Explore Brand Strategy", href: "/services/brand-strategy",
-  },
-  {
     title: "AI Visibility & Discoverability", sub: "Be Found Where Buyers Search",
     body: "Modern buyers use search engines, AI assistants, and digital channels to evaluate their options. We help your business increase visibility where buying decisions begin.",
     solutions: ["AI Visibility Diagnostic", "SEO & AI Foundation", "AI Authority Growth System", "AI Market Dominance Engine"],
@@ -64,24 +54,6 @@ const coreServices = [
     body: "We align positioning, messaging, channels, and execution to help your organization launch with confidence and create predictable commercial momentum.",
     solutions: ["GTM Foundation", "Growth Engine", "Revenue Accelerator"],
     cta: "Explore GTM Strategy", href: "/services/gtm",
-  },
-  {
-    title: "Revenue Engineering", sub: "Build Smarter Revenue Systems",
-    body: "Growth is more predictable when marketing, sales, technology, and analytics work together. We help connect the systems that drive measurable business performance.",
-    solutions: ["Marketing Automation", "CRM Optimization", "Revenue Operations", "Funnel Optimization"],
-    cta: "Explore Revenue Engineering", href: "/services/revenue-engineering",
-  },
-  {
-    title: "Outbound Growth", sub: "Create More Qualified Opportunities",
-    body: "We design targeted outreach programs that help your team start meaningful conversations with the right prospects, not simply send more messages.",
-    solutions: ["LinkedIn Outreach", "Email Outreach", "SDR Programs", "Appointment Setting"],
-    cta: "Explore Outbound Growth", href: "/services/outbound-growth",
-  },
-  {
-    title: "Website Development", sub: "Build a Website That Performs",
-    body: "Your website should do more than look good. We create digital experiences designed for discoverability, conversion, and business growth.",
-    solutions: ["Website Strategy", "UX/UI Design", "Website Development", "Conversion Optimization"],
-    cta: "Explore Website Development", href: "/services/website-development",
   },
   {
     title: "Capital Raise Support", sub: "Build Investor Confidence",
@@ -124,7 +96,7 @@ export default function Home() {
   const s3problems = useInView();
   const s4 = useInView();
   const s5 = useInView();
-  const [activeService, setActiveService] = useState(1);
+  const [activeService, setActiveService] = useState(0);
   const serviceCardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const carouselRef = useRef<HTMLDivElement>(null);
   const activeServiceRef = useRef(activeService);
@@ -398,7 +370,7 @@ export default function Home() {
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", marginBottom: 20 }}>
               Wondering how your business performs across today&apos;s buying journey?
             </p>
-            <Link href="/ai-visibility-audit" style={{
+            <Link href="/contact" style={{
               fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
               background: "#d87307", color: "#FFFFFF",
@@ -449,7 +421,7 @@ export default function Home() {
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.8, color: "#444", marginBottom: 24 }}>
               We&apos;ll identify your biggest growth bottlenecks and provide practical recommendations.
             </p>
-            <Link href="/gtm-audit" style={{
+            <Link href="/contact" style={{
               display: "inline-block",
               fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
@@ -594,7 +566,7 @@ export default function Home() {
               <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", marginBottom: 20 }}>
                 See How We Engineer Growth
               </p>
-              <Link href="/case-studies" style={{
+              <Link href="/services" style={{
                 display: "inline-block",
                 fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
                 letterSpacing: "0.14em", textTransform: "uppercase",
@@ -604,7 +576,7 @@ export default function Home() {
               }}
               onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
               onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
-              >View Our Case Studies</Link>
+              >Explore Our Services</Link>
             </div>
           </div>
         </div>

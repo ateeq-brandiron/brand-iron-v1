@@ -3,22 +3,14 @@ import { useState } from "react";
 import Link from "next/link";
 
 const servicesMenu = [
-  { label: "Brand Strategy", href: "/services/brand-strategy" },
   { label: "AI Visibility & Discoverability", href: "/services/ai-visibility" },
   { label: "GTM Strategy", href: "/services/gtm" },
-  { label: "Revenue Engineering", href: "/services/revenue-engineering" },
-  { label: "Outbound Growth", href: "/services/outbound-growth" },
-  { label: "Website Development", href: "/services/website-development" },
   { label: "Capital Raise Support", href: "/services/capital-raise" },
 ];
 
 const navLinks = [
   { label: "About", href: "/about" },
-  { label: "Industries", href: "/industries" },
-  { label: "Case Studies", href: "/case-studies" },
   { label: "Blog", href: "/blog" },
-  { label: "Resources", href: "/resources" },
-  { label: "Pricing", href: "/pricing" },
 ];
 
 export default function Navbar() {
@@ -107,16 +99,6 @@ export default function Navbar() {
             </span>
           ))}
 
-          <Link href="/client-portal" style={{
-            fontFamily: "'Montserrat', sans-serif", fontWeight: 600, fontSize: 12,
-            letterSpacing: "0.08em", textTransform: "uppercase",
-            color: "rgba(255,255,255,0.55)",
-            transition: "color 0.2s",
-          }}
-          onMouseEnter={e => (e.currentTarget.style.color = "#d87307")}
-          onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.55)")}
-          >Client Portal</Link>
-
           <Link href="/contact" style={{
             fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
             letterSpacing: "0.1em", textTransform: "uppercase",
@@ -178,13 +160,6 @@ export default function Navbar() {
               borderBottom: "1px solid rgba(255,255,255,0.06)",
             }}>{l.label}</Link>
           ))}
-
-          <Link href="/client-portal" onClick={() => setOpen(false)} style={{
-            display: "block", padding: "12px 0",
-            fontFamily: "'Montserrat', sans-serif", fontWeight: 600, fontSize: 13,
-            letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.6)",
-            borderBottom: "1px solid rgba(255,255,255,0.06)",
-          }}>Client Portal</Link>
 
           <div style={{ paddingTop: 16 }}>
             <Link href="/contact" onClick={() => setOpen(false)} style={{
