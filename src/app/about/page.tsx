@@ -2,14 +2,15 @@
 import Link from "next/link";
 
 const BURFORD = "'Burford Rustic Black', Helvetica, Arial, Lucida, sans-serif";
+const BURFORD_INLINE = "'Burford Rustic Inline', sans-serif";
 const MONTSERRAT = "'Montserrat', sans-serif";
 const COPPER = "#d87307";
-const NAVY1 = "#0F1B2D";
-const NAVY2 = "#0D1A2E";
 const WHITE = "#FFFFFF";
-const WHITE80 = "rgba(255,255,255,0.8)";
-const WHITE04 = "rgba(255,255,255,0.04)";
-const WHITE08 = "rgba(255,255,255,0.08)";
+const INK = "#1a1a1a";
+const BODY_GRAY = "#555";
+const CARD_BORDER = "#EEEBE7";
+const AVATAR_BG = "rgba(216,115,7,0.12)";
+const AVATAR_BORDER = "1px solid rgba(216,115,7,0.25)";
 
 // ── SVG Icons ──────────────────────────────────────────────────────────────────
 function IconRevenueFirst() {
@@ -173,11 +174,11 @@ const labelStyle: React.CSSProperties = {
 
 const h2Style: React.CSSProperties = {
   fontFamily: BURFORD,
-  fontWeight: 700,
+  fontWeight: 900,
   fontSize: "clamp(30px, 4vw, 52px)",
   textTransform: "uppercase",
   letterSpacing: "0.03em",
-  color: WHITE,
+  color: INK,
   lineHeight: 1.1,
   marginBottom: 20,
 };
@@ -192,20 +193,20 @@ export default function AboutPage() {
         backgroundImage: "url('/images/hero-saddle.jpg')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(28,54,82,0.50) 0%, rgba(20,32,55,0.38) 100%)" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.6) 100%)" }} />
         <div style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto", padding: "140px 24px 80px" }}>
           <p style={labelStyle}>About BrandIron</p>
           <h1 style={{
-            fontFamily: BURFORD,
-            fontWeight: 700,
+            fontFamily: BURFORD_INLINE,
+            fontWeight: 400,
             fontSize: "clamp(44px, 6vw, 72px)",
             textTransform: "uppercase",
             letterSpacing: "0.03em",
-            color: "transparent",
-            WebkitTextStroke: "2px #FFFFFF",
+            color: WHITE,
             maxWidth: 800,
             lineHeight: 1.0,
             marginBottom: 28,
+            filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))",
           }}>
             We Build Revenue Engines.
           </h1>
@@ -216,24 +217,40 @@ export default function AboutPage() {
       </section>
 
       {/* ── Mission + Stats ── */}
-      <section style={{ background: NAVY2, padding: "80px 24px" }}>
+      <section style={{ background: "#FFFFFF", padding: "80px 24px" }}>
         <div style={{ maxWidth: 1400, margin: "0 auto" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center", marginBottom: 80 }}>
             <div>
               <p style={labelStyle}>Our Mission</p>
               <h2 style={h2Style}>Transform How Companies Generate Revenue</h2>
-              <p style={{ fontSize: 16, lineHeight: 1.8, color: WHITE80, marginBottom: 16, fontFamily: MONTSERRAT }}>
+              <p style={{ fontSize: 16, lineHeight: 1.8, color: BODY_GRAY, marginBottom: 16, fontFamily: MONTSERRAT }}>
                 We combine strategy, branding, go-to-market, AI, automation, CRM, and revenue operations into integrated systems that drive compounding, measurable growth.
               </p>
-              <p style={{ fontSize: 16, lineHeight: 1.8, color: WHITE80, fontFamily: MONTSERRAT }}>
+              <p style={{ fontSize: 16, lineHeight: 1.8, color: BODY_GRAY, fontFamily: MONTSERRAT }}>
                 Companies don&apos;t fail because they lack effort. They fail because their revenue systems are fragmented, marketing, sales, technology, and data all operating in separate lanes.
               </p>
             </div>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 2, background: "rgba(216,115,7,0.2)", borderRadius: 12, overflow: "hidden" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
               {STATS.map(({ num, label }) => (
-                <div key={num} className="stat-cell" style={{ background: NAVY1, padding: "36px 24px", textAlign: "center", transition: "background 0.2s" }}>
-                  <div style={{ fontFamily: BURFORD, fontSize: 52, fontWeight: 700, color: COPPER, lineHeight: 1 }}>{num}</div>
-                  <div style={{ fontSize: 13, color: WHITE80, lineHeight: 1.4, marginTop: 8, fontFamily: MONTSERRAT }}>{label}</div>
+                <div
+                  key={num}
+                  style={{ background: "#F9F8F6", border: `1px solid ${CARD_BORDER}`, borderRadius: 12, padding: "36px 24px", textAlign: "center", transition: "transform 0.2s, box-shadow 0.2s, border-color 0.2s" }}
+                  onMouseEnter={e => {
+                    const el = e.currentTarget as HTMLDivElement;
+                    el.style.transform = "translateY(-4px)";
+                    el.style.boxShadow = "0 12px 28px rgba(0,0,0,0.08)";
+                    el.style.borderColor = COPPER;
+                  }}
+                  onMouseLeave={e => {
+                    const el = e.currentTarget as HTMLDivElement;
+                    el.style.transform = "translateY(0)";
+                    el.style.boxShadow = "none";
+                    el.style.borderColor = CARD_BORDER;
+                  }}
+                >
+                  <div style={{ fontFamily: BURFORD, fontSize: 44, fontWeight: 900, color: INK, lineHeight: 1 }}>{num}</div>
+                  <div style={{ width: 32, height: 3, background: COPPER, borderRadius: 2, margin: "12px auto" }} />
+                  <div style={{ fontSize: 13, color: BODY_GRAY, lineHeight: 1.4, fontFamily: MONTSERRAT }}>{label}</div>
                 </div>
               ))}
             </div>
@@ -244,17 +261,32 @@ export default function AboutPage() {
           <h2 style={{ ...h2Style, marginBottom: 40 }}>What We Stand For</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 20 }}>
             {VALUES.map(({ title, body }) => (
-              <div key={title} className="value-card" style={{
-                background: WHITE04,
-                border: `1px solid ${WHITE08}`,
-                borderRadius: 10,
-                padding: "32px 28px",
-                borderLeft: `3px solid ${COPPER}`,
-                transition: "transform 0.2s, box-shadow 0.2s",
-              }}>
+              <div
+                key={title}
+                style={{
+                  background: "#F9F8F6",
+                  border: `1px solid ${CARD_BORDER}`,
+                  borderRadius: 10,
+                  padding: "32px 28px",
+                  borderLeft: `3px solid ${COPPER}`,
+                  transition: "transform 0.2s, box-shadow 0.2s",
+                }}
+                onMouseEnter={e => {
+                  const el = e.currentTarget as HTMLDivElement;
+                  el.style.transform = "translateY(-5px)";
+                  el.style.boxShadow = "0 14px 32px rgba(216,115,7,0.15)";
+                  (el.querySelector("h3") as HTMLElement).style.color = COPPER;
+                }}
+                onMouseLeave={e => {
+                  const el = e.currentTarget as HTMLDivElement;
+                  el.style.transform = "translateY(0)";
+                  el.style.boxShadow = "none";
+                  (el.querySelector("h3") as HTMLElement).style.color = INK;
+                }}
+              >
                 <div style={{ marginBottom: 14 }}>{VALUE_ICONS[title]}</div>
-                <h3 style={{ fontFamily: BURFORD, fontSize: 22, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.08em", color: COPPER, marginBottom: 10 }}>{title}</h3>
-                <p style={{ fontSize: 14, lineHeight: 1.7, color: WHITE80, fontFamily: MONTSERRAT }}>{body}</p>
+                <h3 style={{ fontFamily: BURFORD, fontSize: 22, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.08em", color: INK, marginBottom: 10, transition: "color 0.2s" }}>{title}</h3>
+                <p style={{ fontSize: 14, lineHeight: 1.7, color: BODY_GRAY, fontFamily: MONTSERRAT }}>{body}</p>
               </div>
             ))}
           </div>
@@ -262,34 +294,34 @@ export default function AboutPage() {
       </section>
 
       {/* ── Vision & Mission ── */}
-      <section style={{ background: NAVY1, padding: "96px 24px" }}>
+      <section style={{ background: "#F9F8F6", padding: "96px 24px" }}>
         <div style={{ maxWidth: 1400, margin: "0 auto" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 3px 1fr", gap: "0 48px", alignItems: "start" }}>
             {/* Vision */}
             <div style={{ paddingRight: 24 }}>
               <p style={labelStyle}>Vision</p>
-              <h2 style={{ fontFamily: BURFORD, fontWeight: 700, fontSize: "clamp(28px, 3.5vw, 48px)", textTransform: "uppercase", letterSpacing: "0.03em", color: WHITE, lineHeight: 1.1, marginBottom: 24 }}>
+              <h2 style={{ fontFamily: BURFORD, fontWeight: 900, fontSize: "clamp(28px, 3.5vw, 48px)", textTransform: "uppercase", letterSpacing: "0.03em", color: INK, lineHeight: 1.1, marginBottom: 24 }}>
                 A World Where Revenue Is Engineered, Not Hoped For
               </h2>
-              <p style={{ fontSize: 16, lineHeight: 1.8, color: WHITE80, fontFamily: MONTSERRAT }}>
+              <p style={{ fontSize: 16, lineHeight: 1.8, color: BODY_GRAY, fontFamily: MONTSERRAT }}>
                 We envision a future where every revenue-generating organization operates with complete alignment, where strategy, brand, technology, and talent work as a single compounding system rather than competing factions.
               </p>
-              <p style={{ fontSize: 16, lineHeight: 1.8, color: WHITE80, fontFamily: MONTSERRAT, marginTop: 16 }}>
+              <p style={{ fontSize: 16, lineHeight: 1.8, color: BODY_GRAY, fontFamily: MONTSERRAT, marginTop: 16 }}>
                 In that world, growth is predictable. Pipelines are engineered. And revenue becomes a function of design, not luck.
               </p>
             </div>
-            {/* Vertical copper divider */}
-            <div style={{ background: COPPER, minHeight: 360, borderRadius: 2 }} />
+            {/* Thin vertical copper divider */}
+            <div style={{ background: "rgba(216,115,7,0.4)", alignSelf: "stretch", borderRadius: 2 }} />
             {/* Mission */}
             <div style={{ paddingLeft: 24 }}>
               <p style={labelStyle}>Mission</p>
-              <h2 style={{ fontFamily: BURFORD, fontWeight: 700, fontSize: "clamp(28px, 3.5vw, 48px)", textTransform: "uppercase", letterSpacing: "0.03em", color: WHITE, lineHeight: 1.1, marginBottom: 24 }}>
+              <h2 style={{ fontFamily: BURFORD, fontWeight: 900, fontSize: "clamp(28px, 3.5vw, 48px)", textTransform: "uppercase", letterSpacing: "0.03em", color: INK, lineHeight: 1.1, marginBottom: 24 }}>
                 Transform How Companies Generate Revenue
               </h2>
-              <p style={{ fontSize: 16, lineHeight: 1.8, color: WHITE80, fontFamily: MONTSERRAT }}>
+              <p style={{ fontSize: 16, lineHeight: 1.8, color: BODY_GRAY, fontFamily: MONTSERRAT }}>
                 We combine strategy, brand, go-to-market, AI automation, CRM, and revenue operations into integrated systems that produce compounding, measurable growth.
               </p>
-              <p style={{ fontSize: 16, lineHeight: 1.8, color: WHITE80, fontFamily: MONTSERRAT, marginTop: 16 }}>
+              <p style={{ fontSize: 16, lineHeight: 1.8, color: BODY_GRAY, fontFamily: MONTSERRAT, marginTop: 16 }}>
                 Our work is not advisory. We build, deploy, and optimize the revenue infrastructure our clients need, and we stay accountable to results, not deliverables.
               </p>
             </div>
@@ -298,7 +330,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── Team ── */}
-      <section style={{ background: NAVY2, padding: "96px 24px" }}>
+      <section style={{ background: "#F5F0E8", padding: "96px 24px" }}>
         <div style={{ maxWidth: 1400, margin: "0 auto" }}>
           <div style={{ marginBottom: 56 }}>
             <p style={labelStyle}>Our People</p>
@@ -306,13 +338,28 @@ export default function AboutPage() {
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 28, maxWidth: 1200, margin: "0 auto" }}>
             {TEAM.map(({ name, initials, title, bio }) => (
-              <div key={name} className="team-card" style={{
-                background: WHITE04,
-                border: `1px solid ${WHITE08}`,
-                borderRadius: 12,
-                overflow: "hidden",
-                transition: "transform 0.2s, box-shadow 0.2s",
-              }}>
+              <div
+                key={name}
+                style={{
+                  background: "#FFFFFF",
+                  border: `1px solid ${CARD_BORDER}`,
+                  borderRadius: 12,
+                  overflow: "hidden",
+                  transition: "transform 0.2s, box-shadow 0.2s, border-color 0.2s",
+                }}
+                onMouseEnter={e => {
+                  const el = e.currentTarget as HTMLDivElement;
+                  el.style.transform = "translateY(-6px)";
+                  el.style.boxShadow = "0 20px 44px rgba(216,115,7,0.18)";
+                  el.style.borderColor = "rgba(216,115,7,0.4)";
+                }}
+                onMouseLeave={e => {
+                  const el = e.currentTarget as HTMLDivElement;
+                  el.style.transform = "translateY(0)";
+                  el.style.boxShadow = "none";
+                  el.style.borderColor = CARD_BORDER;
+                }}
+              >
                 {/* Top copper stripe */}
                 <div style={{ height: 4, background: COPPER }} />
                 <div style={{ padding: "36px 28px 32px" }}>
@@ -321,21 +368,21 @@ export default function AboutPage() {
                     width: 64,
                     height: 64,
                     borderRadius: "50%",
-                    background: NAVY1,
-                    border: `2px solid ${COPPER}`,
+                    background: AVATAR_BG,
+                    border: AVATAR_BORDER,
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     marginBottom: 20,
                   }}>
-                    <span style={{ fontFamily: BURFORD, fontSize: 20, fontWeight: 700, color: COPPER }}>{initials}</span>
+                    <span style={{ fontFamily: BURFORD, fontSize: 20, fontWeight: 900, color: COPPER }}>{initials}</span>
                   </div>
                   {/* Name */}
-                  <h3 style={{ fontFamily: BURFORD, fontSize: 24, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: WHITE, marginBottom: 6 }}>{name}</h3>
+                  <h3 style={{ fontFamily: BURFORD, fontSize: 24, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.06em", color: INK, marginBottom: 6 }}>{name}</h3>
                   {/* Title */}
                   <p style={{ fontFamily: MONTSERRAT, fontSize: 11, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: COPPER, marginBottom: 16 }}>{title}</p>
                   {/* Bio */}
-                  <p style={{ fontFamily: MONTSERRAT, fontSize: 14, lineHeight: 1.75, color: WHITE80 }}>{bio}</p>
+                  <p style={{ fontFamily: MONTSERRAT, fontSize: 14, lineHeight: 1.75, color: BODY_GRAY }}>{bio}</p>
                 </div>
               </div>
             ))}
@@ -344,39 +391,60 @@ export default function AboutPage() {
       </section>
 
       {/* ── Approach ── */}
-      <section style={{ background: NAVY1, padding: "96px 24px" }}>
+      <section style={{ background: "#F7F4EE", padding: "96px 24px" }}>
         <div style={{ maxWidth: 1400, margin: "0 auto" }}>
           <p style={labelStyle}>Our Approach</p>
           <h2 style={{ ...h2Style, marginBottom: 56 }}>How We Work</h2>
           <div style={{ display: "flex", flexDirection: "column", gap: 32 }}>
             {APPROACH_STEPS.map(({ step, title, body }) => (
-              <div key={step} className="approach-step" style={{
-                display: "flex",
-                gap: 32,
-                alignItems: "flex-start",
-                padding: "24px 28px",
-                background: WHITE04,
-                border: `1px solid ${WHITE08}`,
-                borderRadius: 10,
-                transition: "transform 0.2s, box-shadow 0.2s",
-              }}>
-                <div className="approach-circle" style={{
+              <div
+                key={step}
+                style={{
+                  display: "flex",
+                  gap: 32,
+                  alignItems: "flex-start",
+                  padding: "24px 28px",
+                  background: "#FFFFFF",
+                  border: `1px solid ${CARD_BORDER}`,
+                  borderRadius: 10,
+                  transition: "transform 0.2s, box-shadow 0.2s",
+                }}
+                onMouseEnter={e => {
+                  const el = e.currentTarget as HTMLDivElement;
+                  el.style.transform = "translateY(-3px)";
+                  el.style.boxShadow = "0 10px 28px rgba(0,0,0,0.06)";
+                  const circle = el.firstElementChild as HTMLDivElement;
+                  circle.style.boxShadow = "0 0 0 6px rgba(216,115,7,0.15), 0 0 24px rgba(216,115,7,0.25)";
+                  circle.style.transform = "scale(1.06)";
+                  (el.lastElementChild!.querySelector("h3") as HTMLElement).style.color = COPPER;
+                }}
+                onMouseLeave={e => {
+                  const el = e.currentTarget as HTMLDivElement;
+                  el.style.transform = "translateY(0)";
+                  el.style.boxShadow = "none";
+                  const circle = el.firstElementChild as HTMLDivElement;
+                  circle.style.boxShadow = "none";
+                  circle.style.transform = "scale(1)";
+                  (el.lastElementChild!.querySelector("h3") as HTMLElement).style.color = INK;
+                }}
+              >
+                <div style={{
                   width: 60,
                   height: 60,
                   borderRadius: "50%",
-                  background: NAVY2,
-                  border: `2px solid ${COPPER}`,
+                  background: AVATAR_BG,
+                  border: AVATAR_BORDER,
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
                   flexShrink: 0,
-                  transition: "background 0.2s, border-color 0.2s",
+                  transition: "box-shadow 0.3s ease, transform 0.3s ease",
                 }}>
-                  <span style={{ fontFamily: BURFORD, fontWeight: 700, fontSize: 18, color: COPPER }}>{step}</span>
+                  <span style={{ fontFamily: BURFORD, fontWeight: 900, fontSize: 18, color: COPPER }}>{step}</span>
                 </div>
                 <div style={{ paddingTop: 8 }}>
-                  <h3 style={{ fontFamily: BURFORD, fontSize: 24, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.06em", color: WHITE, marginBottom: 8 }}>{title}</h3>
-                  <p style={{ fontSize: 15, lineHeight: 1.7, color: WHITE80, fontFamily: MONTSERRAT }}>{body}</p>
+                  <h3 style={{ fontFamily: BURFORD, fontSize: 24, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.06em", color: INK, marginBottom: 8, transition: "color 0.2s" }}>{title}</h3>
+                  <p style={{ fontSize: 15, lineHeight: 1.7, color: BODY_GRAY, fontFamily: MONTSERRAT }}>{body}</p>
                 </div>
               </div>
             ))}
