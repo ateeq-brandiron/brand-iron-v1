@@ -143,7 +143,7 @@ export default function GTMPage() {
           <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
             The Shift in Buyer Behavior
           </p>
-          <h2 className={`section-heading reveal${s2View.inView ? ' visible' : ''}`} style={{ color: "#0F1B2D", marginBottom: 24, textAlign: "left" }}>
+          <h2 className={`section-heading reveal${s2View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 24, textAlign: "left" }}>
             The Buying Journey Has Evolved. Your Go-to-Market Strategy Should Too.
           </h2>
 
@@ -164,15 +164,15 @@ export default function GTMPage() {
 
           {/* Comparison table */}
           <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ marginBottom: 56 }}>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#0F1B2D", marginBottom: 28 }}>
+            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 28 }}>
               Traditional GTM vs. Today&apos;s Buying Reality
             </h3>
             <div style={{ overflowX: "auto" }}>
               <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "'Montserrat', sans-serif", fontSize: 15 }}>
                 <thead>
                   <tr>
-                    <th style={{ background: "#0F1B2D", color: "rgba(255,255,255,0.6)", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 12, padding: "18px 28px", textAlign: "left", width: "50%" }}>Traditional GTM</th>
-                    <th style={{ background: "#d87307", color: "#FFFFFF", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 12, padding: "18px 28px", textAlign: "left", width: "50%" }}>Today&apos;s Buying Reality</th>
+                    <th style={{ background: "#F3F0EC", color: "#1a1a1a", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 12, padding: "18px 28px", textAlign: "left", width: "50%" }}>Traditional GTM</th>
+                    <th style={{ background: "#d87307", color: "#FFFFFF", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 12, padding: "18px 28px", textAlign: "left", width: "50%" }}>Today&apos;s Buying Reality</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -185,7 +185,7 @@ export default function GTMPage() {
                   ].map(([then, now], i) => (
                     <tr key={i} style={{ background: i % 2 === 0 ? "#F9F8F6" : "#FFFFFF" }}>
                       <td style={{ padding: "20px 28px", color: "#666", lineHeight: 1.65, borderBottom: "1px solid #EEEBE7" }}>{then}</td>
-                      <td style={{ padding: "20px 28px", color: "#0F1B2D", fontWeight: 500, lineHeight: 1.65, borderBottom: "1px solid #EEEBE7" }}>{now}</td>
+                      <td style={{ padding: "20px 28px", color: "#1a1a1a", fontWeight: 500, lineHeight: 1.65, borderBottom: "1px solid #EEEBE7" }}>{now}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -194,10 +194,10 @@ export default function GTMPage() {
           </div>
 
           {/* Key insight */}
-          <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ position: "relative", background: "#0F1B2D", borderRadius: 16, padding: "48px 64px", overflow: "hidden" }}>
+          <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ position: "relative", background: "#F9F8F6", border: "1px solid #EEEBE7", borderRadius: 16, padding: "48px 64px", overflow: "hidden", boxShadow: "0 4px 20px rgba(0,0,0,0.06)" }}>
             <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, transparent, #d87307, transparent)" }} />
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16, textAlign: "center" }}>Key Insight</p>
-            <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.05em", color: "#FFFFFF", textAlign: "center", lineHeight: 1.4, margin: 0 }}>
+            <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.05em", color: "#1a1a1a", textAlign: "center", lineHeight: 1.4, margin: 0 }}>
               Modern Go-to-Market success isn&apos;t about doing more marketing. It&apos;s about creating alignment between strategy, visibility, authority, demand generation, revenue operations, and customer experience so buyers encounter a consistent, trustworthy brand at every stage of their journey.
             </p>
           </div>
@@ -217,7 +217,7 @@ export default function GTMPage() {
             <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               The Brand Iron Go-to-Market Framework
             </p>
-            <h2 className={`section-heading reveal${s3View.inView ? ' visible' : ''}`} style={{ color: "#0F1B2D", marginBottom: 20, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${s3View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               Growth Doesn&apos;t Come from More Marketing. It Comes from Better Alignment.
             </h2>
             <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 760, margin: "0 0 16px" }}>
@@ -232,67 +232,67 @@ export default function GTMPage() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24, marginBottom: 56 }}>
             {[
               {
-                num: "01", title: "Strategy", color: "#0F1B2D",
+                num: "01", title: "Strategy",
                 lead: "Every successful Go-to-Market initiative begins with clarity.",
                 body: "Understanding your market, ideal customers, competitive landscape, and value proposition creates the foundation for every decision that follows.",
                 focuses: ["Market Strategy", "Ideal Customer Profile (ICP)", "Buyer Personas", "Competitive Intelligence", "Positioning & Messaging", "Go-to-Market Roadmap"],
                 icon: (<img src="/images/icons/icon-briefcase.svg" alt="" style={{ width: 28, height: 28 }} />),
               },
               {
-                num: "02", title: "Visibility", color: "#1c3652",
+                num: "02", title: "Visibility",
                 lead: "Buyers can't evaluate a business they never discover.",
                 body: "Modern visibility extends beyond traditional search rankings to include AI search platforms, semantic search, entity optimization, and structured digital signals that help organizations appear wherever decisions begin.",
                 focuses: ["Technical SEO", "AI Visibility", "AEO & GEO", "Entity Optimization", "Schema & Structured Data", "Knowledge Graph Readiness"],
                 icon: (<img src="/images/icons/icon-lightbulb.svg" alt="" style={{ width: 28, height: 28 }} />),
               },
               {
-                num: "03", title: "Authority", color: "#2d4f72",
+                num: "03", title: "Authority",
                 lead: "Visibility creates awareness. Authority creates confidence.",
                 body: "Trust is built through expertise, credibility, and consistent digital signals that influence both people and AI systems evaluating your organization.",
                 focuses: ["Thought Leadership", "Executive Branding", "Reviews & Reputation", "Digital PR", "Media Coverage", "Industry Recognition"],
                 icon: (<img src="/images/icons/icon-chat.svg" alt="" style={{ width: 28, height: 28 }} />),
               },
               {
-                num: "04", title: "Demand", color: "#0F1B2D",
+                num: "04", title: "Demand",
                 lead: "Once trust is established, organizations need a consistent system for attracting qualified prospects.",
                 body: "Valuable content, meaningful engagement, and strategic campaigns attract and nurture prospects through the decision-making journey.",
                 focuses: ["Content Strategy", "SEO Content", "Social Media", "Video Content", "Paid Media", "Campaign Execution"],
                 icon: (<img src="/images/icons/icon-lightning.svg" alt="" style={{ width: 28, height: 28 }} />),
               },
               {
-                num: "05", title: "Revenue", color: "#1c3652",
+                num: "05", title: "Revenue",
                 lead: "Demand alone doesn't create growth.",
                 body: "Revenue comes from converting interest into meaningful business opportunities through coordinated outreach, optimized customer journeys, and sales enablement.",
                 focuses: ["Outbound Campaigns", "LinkedIn Outreach", "Email Outreach", "Conversion Optimization", "Sales Funnels", "Partnership Development"],
                 icon: (<img src="/images/icons/icon-trending.svg" alt="" style={{ width: 28, height: 28 }} />),
               },
               {
-                num: "06", title: "Operations", color: "#2d4f72",
+                num: "06", title: "Operations",
                 lead: "As organizations grow, complexity grows with them.",
                 body: "Connected systems, automation, analytics, and performance measurement ensure growth remains scalable, measurable, and repeatable.",
                 focuses: ["Revenue Intelligence", "KPI Dashboards", "CRM & Marketing Automation", "Workflow Automation", "AI Assistants", "Executive Reporting"],
                 icon: (<img src="/images/icons/icon-gear.svg" alt="" style={{ width: 28, height: 28 }} />),
               },
-            ].map(({ num, title, color, lead, body, focuses, icon }, i) => (
+            ].map(({ num, title, lead, body, focuses, icon }, i) => (
               <div key={num}
                 className={`reveal stagger-${(i % 3) + 1}${s3View.inView ? ' visible' : ''}`}
-                style={{ position: "relative", background: color, borderRadius: 14, padding: "36px 28px 32px", overflow: "hidden", transition: "transform 0.25s, box-shadow 0.25s" }}
-                onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-5px)"; el.style.boxShadow = "0 16px 48px rgba(15,27,45,0.2)"; }}
+                style={{ position: "relative", background: "#F9F8F6", border: "1px solid #EEEBE7", borderRadius: 14, padding: "36px 28px 32px", overflow: "hidden", transition: "transform 0.25s, box-shadow 0.25s" }}
+                onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-5px)"; el.style.boxShadow = "0 16px 40px rgba(0,0,0,0.1)"; }}
                 onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "none"; }}
               >
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 20 }}>
                   <div style={{ width: 48, height: 48, borderRadius: 10, background: "rgba(216,115,7,0.12)", border: "1px solid rgba(216,115,7,0.2)", display: "flex", alignItems: "center", justifyContent: "center" }}>{icon}</div>
-                  <span style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 40, color: "rgba(216,115,7,0.12)", lineHeight: 1 }}>{num}</span>
+                  <span style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontWeight: 900, fontSize: 40, color: "rgba(216,115,7,0.14)", lineHeight: 1 }}>{num}</span>
                 </div>
-                <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 18, fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.08em", color: "#FFFFFF", marginBottom: 10, lineHeight: 1.2 }}>{title}</h3>
-                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "rgba(255,255,255,0.85)", fontWeight: 600, marginBottom: 10 }}>{lead}</p>
-                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "rgba(255,255,255,0.6)", marginBottom: 20 }}>{body}</p>
-                <div style={{ borderTop: "1px solid rgba(255,255,255,0.1)", paddingTop: 16 }}>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)", marginBottom: 10 }}>Focus Areas</p>
+                <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 18, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.08em", color: "#1a1a1a", marginBottom: 10, lineHeight: 1.2 }}>{title}</h3>
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "#444", fontWeight: 600, marginBottom: 10 }}>{lead}</p>
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "#666", marginBottom: 20 }}>{body}</p>
+                <div style={{ borderTop: "1px solid #EEEBE7", paddingTop: 16 }}>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#aaa", marginBottom: 10 }}>Focus Areas</p>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
                     {focuses.map(f => (
-                      <span key={f} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.7)", background: "rgba(255,255,255,0.06)", borderRadius: 4, padding: "3px 8px" }}>{f}</span>
+                      <span key={f} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 600, color: "#6b5a3e", background: "#F2ECDF", borderRadius: 4, padding: "3px 8px" }}>{f}</span>
                     ))}
                   </div>
                 </div>
@@ -302,7 +302,7 @@ export default function GTMPage() {
 
           {/* Philosophy statement */}
           <div className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ background: "rgba(255,255,255,0.88)", backdropFilter: "blur(12px)", borderRadius: 16, padding: "40px 56px", borderLeft: "4px solid #d87307" }}>
-            <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.06em", color: "#0F1B2D", marginBottom: 16, lineHeight: 1.3 }}>
+            <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 16, lineHeight: 1.3 }}>
               At Brand Iron, we believe sustainable growth is engineered by connecting these systems into one unified Go-to-Market framework.
             </p>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.85, color: "#555", margin: 0 }}>
@@ -318,14 +318,14 @@ export default function GTMPage() {
         backgroundImage: "url('/images/bg-barn.jpg')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
-        <div style={{ position: "absolute", inset: 0, background: "rgba(8,15,32,0.92)" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.35) 0%, rgba(8,16,36,0.25) 50%, rgba(8,16,36,0.6) 100%)" }} />
         <CircuitOverlay />
         <div ref={s4View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
             <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               How the Framework Becomes Execution
             </p>
-            <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "transparent", WebkitTextStroke: "2px #FFFFFF", marginBottom: 20, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))", marginBottom: 20, textAlign: "left" }}>
               A Framework Is Only Valuable If It Can Be Executed.
             </h2>
             <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "rgba(255,255,255,0.75)", maxWidth: 720, margin: "0 0 12px" }}>
@@ -397,9 +397,9 @@ export default function GTMPage() {
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.2))" }} />
                 <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 18 }}>
                   <div style={{ width: 40, height: 40, borderRadius: "50%", background: "rgba(216,115,7,0.15)", border: "1px solid rgba(216,115,7,0.3)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                    <span style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 14, color: "#d87307" }}>{num}</span>
+                    <span style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontWeight: 900, fontSize: 14, color: "#d87307" }}>{num}</span>
                   </div>
-                  <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 16, fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#FFFFFF", margin: 0, lineHeight: 1.3 }}>{title}</h3>
+                  <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 16, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#FFFFFF", margin: 0, lineHeight: 1.3 }}>{title}</h3>
                 </div>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(255,255,255,0.85)", fontWeight: 600, marginBottom: 10 }}>{lead}</p>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "rgba(255,255,255,0.6)", marginBottom: 20 }}>{body}</p>
@@ -425,7 +425,7 @@ export default function GTMPage() {
             <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               Choose the Right Level of Go-to-Market Execution
             </p>
-            <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#0F1B2D", marginBottom: 20, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               Every Organization Starts from a Different Place
             </h2>
             <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 720, margin: "0 0 16px" }}>
@@ -466,30 +466,30 @@ export default function GTMPage() {
             ].map(({ tier, name, tagline, desc, bestFor, outcome, href, highlight }, i) => (
               <div key={tier}
                 className={`reveal stagger-${i + 1}${s5View.inView ? ' visible' : ''}`}
-                style={{ position: "relative", background: highlight ? "#0F1B2D" : "#FFFFFF", border: highlight ? "none" : "1px solid rgba(15,27,45,0.08)", borderRadius: 14, overflow: "hidden", boxShadow: highlight ? "0 20px 60px rgba(15,27,45,0.2)" : "0 4px 20px rgba(0,0,0,0.06)", transition: "transform 0.25s, box-shadow 0.25s", display: "flex", flexDirection: "column" }}
-                onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-6px)"; el.style.boxShadow = highlight ? "0 28px 72px rgba(15,27,45,0.3)" : "0 12px 40px rgba(0,0,0,0.12)"; }}
-                onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = highlight ? "0 20px 60px rgba(15,27,45,0.2)" : "0 4px 20px rgba(0,0,0,0.06)"; }}
+                style={{ position: "relative", background: "#FFFFFF", border: highlight ? "2px solid #d87307" : "1px solid #EEEBE7", borderRadius: 14, overflow: "hidden", boxShadow: highlight ? "0 20px 60px rgba(216,115,7,0.15)" : "0 4px 20px rgba(0,0,0,0.06)", transition: "transform 0.25s, box-shadow 0.25s", display: "flex", flexDirection: "column" }}
+                onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-6px)"; el.style.boxShadow = highlight ? "0 28px 72px rgba(216,115,7,0.22)" : "0 12px 40px rgba(0,0,0,0.12)"; }}
+                onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = highlight ? "0 20px 60px rgba(216,115,7,0.15)" : "0 4px 20px rgba(0,0,0,0.06)"; }}
               >
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
                 {highlight && <div style={{ position: "absolute", top: 16, right: 16, background: "#d87307", color: "#FFFFFF", fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", padding: "4px 10px", borderRadius: 20 }}>Most Popular</div>}
                 <div style={{ padding: "36px 32px 28px", flex: 1 }}>
                   <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#d87307", marginBottom: 8 }}>{tier}</p>
-                  <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 22, fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: highlight ? "#FFFFFF" : "#0F1B2D", marginBottom: 12, lineHeight: 1.2 }}>{name}</h3>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.7, color: highlight ? "rgba(255,255,255,0.85)" : "#444", fontWeight: 600, marginBottom: 14 }}>{tagline}</p>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: highlight ? "rgba(255,255,255,0.65)" : "#666", marginBottom: 24 }}>{desc}</p>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: highlight ? "rgba(255,255,255,0.35)" : "#aaa", marginBottom: 10 }}>Best For</p>
+                  <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 22, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 12, lineHeight: 1.2 }}>{name}</h3>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.7, color: "#444", fontWeight: 600, marginBottom: 14 }}>{tagline}</p>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "#666", marginBottom: 24 }}>{desc}</p>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#aaa", marginBottom: 10 }}>Best For</p>
                   <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 24 }}>
                     {bestFor.map(b => (
                       <div key={b} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
                         <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#d87307", flexShrink: 0, marginTop: 5 }} />
-                        <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, color: highlight ? "rgba(255,255,255,0.7)" : "#555", lineHeight: 1.5 }}>{b}</span>
+                        <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, color: "#555", lineHeight: 1.5 }}>{b}</span>
                       </div>
                     ))}
                   </div>
                 </div>
-                <div style={{ padding: "20px 32px 28px", borderTop: highlight ? "1px solid rgba(255,255,255,0.08)" : "1px solid rgba(0,0,0,0.06)" }}>
+                <div style={{ padding: "20px 32px 28px", borderTop: "1px solid rgba(0,0,0,0.06)" }}>
                   <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#d87307", marginBottom: 8 }}>Primary Outcome</p>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.65, color: highlight ? "rgba(255,255,255,0.8)" : "#444", marginBottom: 20, fontStyle: "italic" }}>{outcome}</p>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.65, color: "#444", marginBottom: 20, fontStyle: "italic" }}>{outcome}</p>
                   <Link href={href} style={{ display: "inline-flex", alignItems: "center", gap: 8, background: highlight ? "#d87307" : "transparent", color: highlight ? "#FFFFFF" : "#d87307", fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.1em", textTransform: "uppercase", padding: highlight ? "12px 24px" : "0", borderRadius: 8, textDecoration: "none", border: highlight ? "none" : "none" }}>
                     Learn More →
                   </Link>
@@ -500,17 +500,17 @@ export default function GTMPage() {
 
           {/* At a Glance comparison table */}
           <div className={`reveal${s5View.inView ? ' visible' : ''}`}>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#0F1B2D", marginBottom: 24 }}>
+            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 24 }}>
               At a Glance
             </h3>
             <div style={{ overflowX: "auto" }}>
               <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "'Montserrat', sans-serif", fontSize: 14 }}>
                 <thead>
                   <tr>
-                    <th style={{ background: "#F3F0EC", color: "#0F1B2D", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", fontSize: 11, padding: "16px 24px", textAlign: "left" }}>Capability</th>
-                    <th style={{ background: "#0F1B2D", color: "rgba(255,255,255,0.7)", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 11, padding: "16px 24px", textAlign: "center" }}>Foundation</th>
+                    <th style={{ background: "#F3F0EC", color: "#1a1a1a", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", fontSize: 11, padding: "16px 24px", textAlign: "left" }}>Capability</th>
+                    <th style={{ background: "#F3F0EC", color: "#1a1a1a", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 11, padding: "16px 24px", textAlign: "center" }}>Foundation</th>
                     <th style={{ background: "#d87307", color: "#FFFFFF", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 11, padding: "16px 24px", textAlign: "center" }}>Growth Engine</th>
-                    <th style={{ background: "#1c3652", color: "rgba(255,255,255,0.7)", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 11, padding: "16px 24px", textAlign: "center" }}>Revenue Accelerator</th>
+                    <th style={{ background: "#F3F0EC", color: "#1a1a1a", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 11, padding: "16px 24px", textAlign: "center" }}>Revenue Accelerator</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -524,9 +524,9 @@ export default function GTMPage() {
                     ["Executive Support", "Strategic Guidance", "Quarterly Planning", "Executive Revenue Strategy"],
                   ].map(([cap, f, g, r], i) => (
                     <tr key={cap} style={{ background: i % 2 === 0 ? "#F9F8F6" : "#FFFFFF" }}>
-                      <td style={{ padding: "16px 24px", color: "#0F1B2D", fontWeight: 600, fontSize: 13, borderBottom: "1px solid #EEEBE7" }}>{cap}</td>
+                      <td style={{ padding: "16px 24px", color: "#1a1a1a", fontWeight: 600, fontSize: 13, borderBottom: "1px solid #EEEBE7" }}>{cap}</td>
                       <td style={{ padding: "16px 24px", color: "#555", textAlign: "center", borderBottom: "1px solid #EEEBE7" }}>{f}</td>
-                      <td style={{ padding: "16px 24px", color: "#0F1B2D", fontWeight: 500, textAlign: "center", borderBottom: "1px solid #EEEBE7", background: "rgba(216,115,7,0.04)" }}>{g}</td>
+                      <td style={{ padding: "16px 24px", color: "#1a1a1a", fontWeight: 500, textAlign: "center", borderBottom: "1px solid #EEEBE7", background: "rgba(216,115,7,0.04)" }}>{g}</td>
                       <td style={{ padding: "16px 24px", color: "#555", textAlign: "center", borderBottom: "1px solid #EEEBE7" }}>{r}</td>
                     </tr>
                   ))}
@@ -543,14 +543,14 @@ export default function GTMPage() {
         backgroundImage: "url('/images/bg-horse.jpg')",
         backgroundSize: "cover", backgroundPosition: "center 30%",
       }}>
-        <div style={{ position: "absolute", inset: 0, background: "rgba(8,16,36,0.93)" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.35) 0%, rgba(8,16,36,0.25) 50%, rgba(8,16,36,0.6) 100%)" }} />
         <CircuitOverlay />
         <div ref={s6View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 64 }}>
             <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               Compare Go-to-Market Capabilities
             </p>
-            <h2 className={`section-heading reveal${s6View.inView ? ' visible' : ''}`} style={{ color: "transparent", WebkitTextStroke: "2px #FFFFFF", marginBottom: 20, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${s6View.inView ? ' visible' : ''}`} style={{ color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))", marginBottom: 20, textAlign: "left" }}>
               The Right Strategy Isn&apos;t About More Services. It&apos;s About the Right Capabilities.
             </h2>
             <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.65)", maxWidth: 720 }}>
@@ -611,7 +611,7 @@ export default function GTMPage() {
             ].map(({ tier, body }, i) => (
               <>
                 <div key={tier} style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 12, padding: "28px 28px", textAlign: "center" }}>
-                  <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 15, fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.08em", color: "#d87307", marginBottom: 10 }}>{tier}</p>
+                  <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 15, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.08em", color: "#d87307", marginBottom: 10 }}>{tier}</p>
                   <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.7, color: "rgba(255,255,255,0.6)", margin: 0 }}>{body}</p>
                 </div>
                 {i < 2 && <div key={`arrow-${i}`} style={{ padding: "0 16px", textAlign: "center" }}><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M14 7l5 5-5 5" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg></div>}
@@ -622,7 +622,7 @@ export default function GTMPage() {
           {/* What's included */}
           <div className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ position: "relative", background: "rgba(216,115,7,0.08)", border: "1px solid rgba(216,115,7,0.2)", borderRadius: 16, padding: "48px 56px", overflow: "hidden" }}>
             <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, transparent, #d87307, transparent)" }} />
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#FFFFFF", marginBottom: 16, textAlign: "center" }}>
+            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#FFFFFF", marginBottom: 16, textAlign: "center" }}>
               What&apos;s Included Across Every Engagement
             </h3>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "rgba(255,255,255,0.7)", textAlign: "center", maxWidth: 640, margin: "0 auto 32px" }}>
@@ -652,7 +652,7 @@ export default function GTMPage() {
             <p className={`reveal${s7View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               What Success Looks Like
             </p>
-            <h2 className={`section-heading reveal${s7View.inView ? ' visible' : ''}`} style={{ color: "#0F1B2D", marginBottom: 20, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${s7View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               A Go-to-Market Strategy Should Create Measurable Business Momentum.
             </h2>
             <p className={`reveal${s7View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 720 }}>
@@ -686,7 +686,7 @@ export default function GTMPage() {
                 onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "none"; }}
               >
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
-                <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 16, fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#0F1B2D", marginBottom: 12, lineHeight: 1.3 }}>{title}</h3>
+                <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 16, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 12, lineHeight: 1.3 }}>{title}</h3>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "#555", marginBottom: 20 }}>{body}</p>
                 <div style={{ borderTop: "1px solid rgba(216,115,7,0.2)", paddingTop: 16 }}>
                   <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#d87307", marginBottom: 10 }}>Business Impact</p>
@@ -720,7 +720,7 @@ export default function GTMPage() {
                 onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "none"; }}
               >
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
-                <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 16, fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#0F1B2D", marginBottom: 12, lineHeight: 1.3 }}>{title}</h3>
+                <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 16, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 12, lineHeight: 1.3 }}>{title}</h3>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "#555", marginBottom: 20 }}>{body}</p>
                 <div style={{ borderTop: "1px solid rgba(216,115,7,0.2)", paddingTop: 16 }}>
                   <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#d87307", marginBottom: 10 }}>Business Impact</p>
@@ -736,12 +736,12 @@ export default function GTMPage() {
           </div>
 
           {/* Growth is built in phases */}
-          <div className={`reveal${s7View.inView ? ' visible' : ''}`} style={{ position: "relative", background: "#0F1B2D", borderRadius: 16, padding: "48px 56px", marginBottom: 56, overflow: "hidden" }}>
+          <div className={`reveal${s7View.inView ? ' visible' : ''}`} style={{ position: "relative", background: "#F9F8F6", border: "1px solid #EEEBE7", borderRadius: 16, padding: "48px 56px", marginBottom: 56, overflow: "hidden", boxShadow: "0 4px 20px rgba(0,0,0,0.06)" }}>
             <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, transparent, #d87307, transparent)" }} />
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#FFFFFF", marginBottom: 16, textAlign: "center" }}>
+            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 16, textAlign: "center" }}>
               Growth Is Built in Phases
             </h3>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "rgba(255,255,255,0.65)", textAlign: "center", maxWidth: 620, margin: "0 auto 36px" }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#555", textAlign: "center", maxWidth: 620, margin: "0 auto 36px" }}>
               Meaningful growth doesn&apos;t happen through isolated campaigns. It develops through a structured progression, where each phase strengthens the next and builds long-term momentum.
             </p>
             <div style={{ overflowX: "auto" }}>
@@ -749,7 +749,7 @@ export default function GTMPage() {
                 <thead>
                   <tr>
                     {["Phase", "Primary Objective", "Business Outcome"].map(h => (
-                      <th key={h} style={{ background: "rgba(255,255,255,0.06)", color: "rgba(255,255,255,0.5)", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 11, padding: "14px 20px", textAlign: "left", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>{h}</th>
+                      <th key={h} style={{ background: "#F3F0EC", color: "#1a1a1a", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 11, padding: "14px 20px", textAlign: "left", borderBottom: "1px solid #EEEBE7" }}>{h}</th>
                     ))}
                   </tr>
                 </thead>
@@ -759,10 +759,10 @@ export default function GTMPage() {
                     ["Growth", "Expand authority and generate qualified demand", "Increased pipeline and market presence"],
                     ["Acceleration", "Optimize revenue systems and operational efficiency", "Scalable, predictable business growth"],
                   ].map(([phase, obj, outcome], i) => (
-                    <tr key={phase}>
-                      <td style={{ padding: "16px 20px", color: "#d87307", fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 14, fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.08em", borderBottom: "1px solid rgba(255,255,255,0.05)", background: i % 2 === 0 ? "rgba(255,255,255,0.02)" : "transparent" }}>{phase}</td>
-                      <td style={{ padding: "16px 20px", color: "rgba(255,255,255,0.75)", lineHeight: 1.6, borderBottom: "1px solid rgba(255,255,255,0.05)", background: i % 2 === 0 ? "rgba(255,255,255,0.02)" : "transparent" }}>{obj}</td>
-                      <td style={{ padding: "16px 20px", color: "rgba(255,255,255,0.6)", lineHeight: 1.6, borderBottom: "1px solid rgba(255,255,255,0.05)", background: i % 2 === 0 ? "rgba(255,255,255,0.02)" : "transparent" }}>{outcome}</td>
+                    <tr key={phase} style={{ background: i % 2 === 0 ? "#FFFFFF" : "transparent" }}>
+                      <td style={{ padding: "16px 20px", color: "#d87307", fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 14, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.08em", borderBottom: "1px solid #EEEBE7" }}>{phase}</td>
+                      <td style={{ padding: "16px 20px", color: "#444", lineHeight: 1.6, borderBottom: "1px solid #EEEBE7" }}>{obj}</td>
+                      <td style={{ padding: "16px 20px", color: "#666", lineHeight: 1.6, borderBottom: "1px solid #EEEBE7" }}>{outcome}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -775,7 +775,7 @@ export default function GTMPage() {
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               Frequently Asked Questions
             </p>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#0F1B2D", marginBottom: 8 }}>
+            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 8 }}>
               Common Questions About Our Go-to-Market Strategy Services
             </h3>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", maxWidth: 640, margin: "0 0 40px" }}>
@@ -788,7 +788,7 @@ export default function GTMPage() {
                     onClick={() => setOpenFaq(openFaq === i ? null : i)}
                     style={{ width: "100%", background: "none", border: "none", cursor: "pointer", padding: "20px 24px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16, textAlign: "left" }}
                   >
-                    <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, fontWeight: 600, color: "#0F1B2D", lineHeight: 1.5 }}>{q}</span>
+                    <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, fontWeight: 600, color: "#1a1a1a", lineHeight: 1.5 }}>{q}</span>
                     <div style={{ width: 28, height: 28, borderRadius: "50%", background: openFaq === i ? "#d87307" : "rgba(216,115,7,0.1)", border: "1px solid rgba(216,115,7,0.3)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, transition: "background 0.2s, transform 0.2s", transform: openFaq === i ? "rotate(45deg)" : "rotate(0)" }}>
                       <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke={openFaq === i ? "#FFFFFF" : "#d87307"} strokeWidth="2" strokeLinecap="round"/></svg>
                     </div>
@@ -811,7 +811,7 @@ export default function GTMPage() {
         backgroundImage: "url('/images/hero-saddle.jpg')",
         backgroundSize: "cover", backgroundPosition: "center 30%",
       }}>
-        <div style={{ position: "absolute", inset: 0, background: "rgba(10,20,35,0.90)" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.35) 0%, rgba(8,16,36,0.25) 50%, rgba(8,16,36,0.6) 100%)" }} />
         <div ref={ctaView.ref} style={{ position: "relative", zIndex: 2, maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
           <div className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 40, justifyContent: "center" }}>
             <div style={{ flex: 1, maxWidth: 200, height: 1, background: "rgba(216,115,7,0.35)" }} />
@@ -821,7 +821,7 @@ export default function GTMPage() {
           <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 20 }}>
             Ready to Build a Smarter Go-to-Market Strategy?
           </p>
-          <h2 className={`reveal${ctaView.inView ? ' visible' : ''} section-heading`} style={{ color: "transparent", WebkitTextStroke: "2px #FFFFFF", marginBottom: 24 }}>
+          <h2 className={`reveal${ctaView.inView ? ' visible' : ''} section-heading`} style={{ color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))", marginBottom: 24 }}>
             Let&apos;s Build Your Growth Engine.
           </h2>
           <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 17, lineHeight: 1.85, color: "rgba(255,255,255,0.75)", maxWidth: 680, margin: "0 auto 48px" }}>
