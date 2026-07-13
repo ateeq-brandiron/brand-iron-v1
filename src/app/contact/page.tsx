@@ -64,11 +64,44 @@ const contactOptions = [
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
   const [form, setForm] = useState({ name: "", email: "", company: "", phone: "", size: "", interest: "", investment: "", timeline: "", message: "" });
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setSubmitted(true);
+    setError("");
+    setSubmitting(true);
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+          subject: `New Contact Form Submission from ${form.name}`,
+          from_name: "Brand Iron Website",
+          name: form.name,
+          email: form.email,
+          company: form.company,
+          phone: form.phone,
+          company_size: form.size,
+          interested_in: form.interest,
+          investment_range: form.investment,
+          timeline: form.timeline,
+          message: form.message,
+        }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        setError("Something went wrong sending your message. Please try again or email us directly.");
+      }
+    } catch {
+      setError("Something went wrong sending your message. Please try again or email us directly.");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   const inputStyle: React.CSSProperties = {
@@ -207,8 +240,11 @@ export default function ContactPage() {
                   <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", display: "block", marginBottom: 6 }}>Message</label>
                   <textarea rows={4} value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} placeholder="Tell us about your business and what you're looking to achieve..." style={{ ...inputStyle, resize: "vertical" }} />
                 </div>
-                <button type="submit" className="submit-btn" style={{ background: "#d87307", color: "#FFFFFF", fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 15, letterSpacing: "0.1em", textTransform: "uppercase", padding: "16px 32px", borderRadius: 4, border: "none", cursor: "pointer", alignSelf: "flex-start", marginTop: 4 }}>
-                  Send Message →
+                {error && (
+                  <p style={{ fontSize: 13, color: "#b3261e", lineHeight: 1.5 }}>{error}</p>
+                )}
+                <button type="submit" disabled={submitting} className="submit-btn" style={{ background: "#d87307", color: "#FFFFFF", fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 15, letterSpacing: "0.1em", textTransform: "uppercase", padding: "16px 32px", borderRadius: 4, border: "none", cursor: submitting ? "default" : "pointer", opacity: submitting ? 0.7 : 1, alignSelf: "flex-start", marginTop: 4 }}>
+                  {submitting ? "Sending…" : "Send Message →"}
                 </button>
                 <p style={{ fontSize: 12, color: "#666", lineHeight: 1.5 }}>No spam. No obligation. We respond within 1 business day.</p>
               </form>
