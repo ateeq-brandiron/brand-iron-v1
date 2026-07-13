@@ -72,35 +72,40 @@ export default function ContactPage() {
     e.preventDefault();
     setError("");
     setSubmitting(true);
-    try {
-      const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
-          subject: `New Contact Form Submission from ${form.name}`,
-          from_name: "Brand Iron Website",
-          name: form.name,
-          email: form.email,
-          company: form.company,
-          phone: form.phone,
-          company_size: form.size,
-          interested_in: form.interest,
-          investment_range: form.investment,
-          timeline: form.timeline,
-          message: form.message,
-        }),
-      });
-      const data = await res.json();
-      if (data.success) {
-        setSubmitted(true);
-      } else {
-        setError("Something went wrong sending your message. Please try again or email us directly.");
-      }
-    } catch {
+
+    const emailNotification = fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({
+        access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+        subject: `New Contact Form Submission from ${form.name}`,
+        from_name: "Brand Iron Website",
+        name: form.name,
+        email: form.email,
+        company: form.company,
+        phone: form.phone,
+        company_size: form.size,
+        interested_in: form.interest,
+        investment_range: form.investment,
+        timeline: form.timeline,
+        message: form.message,
+      }),
+    }).then(res => res.json()).then(data => Boolean(data.success));
+
+    const sharpSpringLead = fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    }).then(res => res.json()).then(data => Boolean(data.success));
+
+    const [emailOk, crmOk] = await Promise.allSettled([emailNotification, sharpSpringLead])
+      .then(results => results.map(r => r.status === "fulfilled" && r.value === true));
+
+    setSubmitting(false);
+    if (emailOk || crmOk) {
+      setSubmitted(true);
+    } else {
       setError("Something went wrong sending your message. Please try again or email us directly.");
-    } finally {
-      setSubmitting(false);
     }
   }
 
