@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const contactOptions = [
   {
@@ -67,6 +67,11 @@ export default function ContactPage() {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
   const [form, setForm] = useState({ name: "", email: "", company: "", phone: "", size: "", interest: "", investment: "", timeline: "", message: "" });
+
+  useEffect(() => {
+    const interest = new URLSearchParams(window.location.search).get("interest");
+    if (interest) setForm(f => ({ ...f, interest }));
+  }, []);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -207,9 +212,11 @@ export default function ContactPage() {
                   </select>
                 </div>
                 <div>
-                  <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", display: "block", marginBottom: 6 }}>I&apos;m interested in...</label>
-                  <select value={form.interest} onChange={e => setForm({ ...form, interest: e.target.value })} style={{ ...inputStyle, cursor: "pointer" }}>
+                  <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", display: "block", marginBottom: 6 }}>I&apos;m interested in... *</label>
+                  <select required value={form.interest} onChange={e => setForm({ ...form, interest: e.target.value })} style={{ ...inputStyle, cursor: "pointer" }}>
                     <option value="" style={{ background: "#FFFFFF", color: "#1a1a1a" }}>Select an option...</option>
+                    <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>AI Visibility Audit (SEO/AEO)</option>
+                    <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>GTM Growth Review</option>
                     <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>Revenue Strategy & Growth Planning</option>
                     <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>AI Transformation</option>
                     <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>CRM & Revenue Operations</option>

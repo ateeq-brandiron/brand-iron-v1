@@ -370,7 +370,7 @@ export default function Home() {
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", marginBottom: 20 }}>
               Wondering how your business performs across today&apos;s buying journey?
             </p>
-            <Link href="/contact" style={{
+            <Link href="/contact?interest=AI+Visibility+Audit+(SEO/AEO)" style={{
               fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
               background: "#d87307", color: "#FFFFFF",
@@ -421,7 +421,7 @@ export default function Home() {
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.8, color: "#444", marginBottom: 24 }}>
               We&apos;ll identify your biggest growth bottlenecks and provide practical recommendations.
             </p>
-            <Link href="/contact" style={{
+            <Link href="/contact?interest=GTM+Growth+Review" style={{
               display: "inline-block",
               fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
