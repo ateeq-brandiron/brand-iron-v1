@@ -66,7 +66,10 @@ export async function POST(request: Request) {
 
     const data = await sharpSpringRes.json();
     const createResult = data?.result?.creates?.[0];
-    const failed = Boolean(data?.error) || Boolean(createResult?.error);
+    // SharpSpring returns "error": [] (an empty, truthy array) on success, so
+    // only a non-empty error array/object counts as a real RPC-level error.
+    const rpcError = Array.isArray(data?.error) ? data.error.length > 0 : Boolean(data?.error);
+    const failed = rpcError || createResult?.success !== true || Boolean(createResult?.error);
 
     if (failed) {
       console.error("[api/contact] SharpSpring rejected the lead:", JSON.stringify(data));
