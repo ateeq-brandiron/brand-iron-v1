@@ -1,6 +1,12 @@
 "use client";
 import { useEffect, useState } from "react";
 
+const confirmationByInterest: Record<string, string> = {
+  "AI Visibility Audit (SEO/AEO)": "Thank you for requesting your AI Visibility Audit. Your results will be ready within 24 hours.",
+  "GTM Growth Review": "Thank you for requesting your GTM Growth Review. Your results will be ready within 24 hours.",
+};
+const defaultConfirmation = "Thank you for reaching out. A member of our team will be in touch within one business day.";
+
 const contactOptions = [
   {
     title: "Book A Strategy Session",
@@ -177,7 +183,7 @@ export default function ContactPage() {
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                 </div>
                 <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 24, fontWeight: 900, textTransform: "uppercase", color: "#1a1a1a", marginBottom: 12 }}>Message Received</h3>
-                <p style={{ fontSize: 15, color: "#555", lineHeight: 1.7 }}>Thank you for reaching out. A member of our team will be in touch within one business day.</p>
+                <p style={{ fontSize: 15, color: "#555", lineHeight: 1.7 }}>{confirmationByInterest[form.interest] || defaultConfirmation}</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 16 }}>
