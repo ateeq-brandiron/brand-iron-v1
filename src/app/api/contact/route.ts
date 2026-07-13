@@ -40,7 +40,7 @@ export async function POST(request: Request) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          method: "createLead",
+          method: "createLeads",
           params: {
             objects: [
               {
