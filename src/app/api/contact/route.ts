@@ -13,6 +13,7 @@ export async function POST(request: Request) {
   const secretKey = process.env.SHARPSPRING_SECRET_KEY;
 
   if (!accountID || !secretKey) {
+    console.error("[api/contact] SHARPSPRING_ACCOUNT_ID / SHARPSPRING_SECRET_KEY missing from process.env at request time");
     return Response.json({ success: false, error: "SharpSpring is not configured" }, { status: 500 });
   }
 
@@ -57,11 +58,18 @@ export async function POST(request: Request) {
       }
     );
 
+    if (!sharpSpringRes.ok) {
+      const text = await sharpSpringRes.text();
+      console.error(`[api/contact] SharpSpring HTTP ${sharpSpringRes.status}:`, text);
+      return Response.json({ success: false, error: `SharpSpring returned HTTP ${sharpSpringRes.status}` }, { status: 502 });
+    }
+
     const data = await sharpSpringRes.json();
     const createResult = data?.result?.creates?.[0];
     const failed = Boolean(data?.error) || Boolean(createResult?.error);
 
     if (failed) {
+      console.error("[api/contact] SharpSpring rejected the lead:", JSON.stringify(data));
       return Response.json(
         { success: false, error: data?.error?.message || createResult?.error?.message || "SharpSpring rejected the lead" },
         { status: 502 }
@@ -69,7 +77,8 @@ export async function POST(request: Request) {
     }
 
     return Response.json({ success: true });
-  } catch {
+  } catch (err) {
+    console.error("[api/contact] Could not reach SharpSpring:", err instanceof Error ? err.message : err);
     return Response.json({ success: false, error: "Could not reach SharpSpring" }, { status: 502 });
   }
 }
