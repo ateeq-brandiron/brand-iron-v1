@@ -518,16 +518,16 @@ export default function AIVisibilityPage() {
         backgroundImage: "url('/images/brand iron blacksmith and tech lines.png')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
-        <div style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.60)" }} />
+        <div style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.88)" }} />
         <div ref={s4View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
             <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 24, textAlign: "left" }}>
               A Strategic Framework for AI Visibility
             </h2>
-            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 16 }}>
+            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 500, fontSize: 18, lineHeight: 1.8, color: "#3a3a3a", marginBottom: 16 }}>
               AI Visibility isn&apos;t achieved through a single tactic or tool. It requires a connected strategy that strengthens your technical foundation, builds digital authority, and helps AI platforms understand, trust, and recommend your business.
             </p>
-            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666" }}>
+            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 500, fontSize: 16, lineHeight: 1.8, color: "#4a4a4a" }}>
               At Brand Iron, we guide organizations through a four-stage framework designed to improve discoverability across search engines and AI-powered search experiences.
             </p>
           </div>
@@ -598,7 +598,7 @@ export default function AIVisibilityPage() {
 
           {/* Closing statement */}
           <div className={`reveal${s4View.inView ? ' visible' : ''}`}>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 17, lineHeight: 1.8, color: "#555" }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 500, fontSize: 17, lineHeight: 1.8, color: "#3a3a3a" }}>
               No matter where you are in your AI Visibility journey, our framework helps you build a stronger digital presence that supports long-term discoverability, authority, and business growth.
             </p>
           </div>
