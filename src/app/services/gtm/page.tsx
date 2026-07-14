@@ -321,13 +321,20 @@ export default function GTMPage() {
             <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))", marginBottom: 20, textAlign: "left" }}>
               A Framework Is Only Valuable If It Can Be Executed.
             </h2>
-            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 500, fontSize: 18, lineHeight: 1.8, color: "#FFFFFF", textShadow: "0 1px 8px rgba(0,0,0,0.6)", maxWidth: 720, margin: "0 0 12px" }}>
-              A strong strategy creates direction, but sustainable growth comes from disciplined execution.
+            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 500, fontSize: 18, lineHeight: 1.8, color: "#FFFFFF", textShadow: "0 1px 8px rgba(0,0,0,0.6)", margin: "0 0 12px" }}>
+              Strategy sets the direction. Sustainable growth comes from disciplined execution.
             </p>
-            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 500, fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.9)", textShadow: "0 1px 8px rgba(0,0,0,0.6)", maxWidth: 720 }}>
-              Each component of our Go-to-Market methodology strengthens the next, creating an integrated system that helps organizations become more discoverable, build greater authority, generate qualified demand, improve conversion, and create measurable revenue growth.
+            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 500, fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.9)", textShadow: "0 1px 8px rgba(0,0,0,0.6)", marginBottom: 12 }}>
+              Rather than following a one-size-fits-all playbook, Brand Iron activates the right capabilities at the right time. Each initiative builds on the last, creating a connected growth system that strengthens visibility, authority, demand, conversion, and revenue.
+            </p>
+            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 600, fontSize: 16, lineHeight: 1.8, color: "#FFFFFF", textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>
+              Together, these eight execution components transform strategy into measurable growth.
             </p>
           </div>
+
+          <h3 className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))", marginBottom: 28 }}>
+            The Eight Components of Execution
+          </h3>
 
           {/* 8 execution components */}
           <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20 }}>
@@ -347,7 +354,7 @@ export default function GTMPage() {
               {
                 num: "03", title: "Authority & Trust Building",
                 lead: "Visibility creates awareness. Authority creates confidence.",
-                body: "Modern buyers, and increasingly AI systems, look for signals that demonstrate expertise, credibility, and trust. We help establish those signals through strategic content, executive positioning, reviews, digital PR, and industry recognition.",
+                body: "Modern buyers—and increasingly AI systems—look for signals that demonstrate expertise, credibility, and trust before recommending or engaging with an organization. We help establish those signals through strategic content, executive positioning, reviews, digital PR, and industry recognition.",
                 activities: ["Authority Content", "Executive Branding", "Review Strategy", "Thought Leadership", "Guest Posting", "Digital PR"],
               },
               {
@@ -370,7 +377,7 @@ export default function GTMPage() {
               },
               {
                 num: "07", title: "Analytics & Revenue Intelligence",
-                lead: "Growth decisions should be informed by evidence, not assumptions.",
+                lead: "Growth decisions should be informed by evidence—not assumptions.",
                 body: "Our reporting framework connects marketing performance, sales activity, and revenue insights into executive-level dashboards that support better planning, forecasting, and continuous improvement.",
                 activities: ["GA4 & Measurement", "KPI Dashboards", "Revenue Attribution", "Executive Reporting", "AI Visibility Reporting", "Revenue Forecasting"],
               },
@@ -419,13 +426,13 @@ export default function GTMPage() {
               Choose the Right Level of Go-to-Market Execution
             </p>
             <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
-              Every Organization Starts from a Different Place
+              One Framework. Three Levels of Execution.
             </h2>
-            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 720, margin: "0 0 16px" }}>
-              No two organizations face the same growth challenges. Rather than forcing every client into the same engagement, Brand Iron offers three progressive Go-to-Market solutions designed to meet your organization where it is today, while creating a clear path for where it wants to go tomorrow.
+            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", margin: "0 0 16px" }}>
+              Every organization has different growth priorities. Whether you need a stronger foundation, accelerated demand generation, or enterprise-scale revenue systems, Brand Iron offers three progressive Go-to-Market solutions that grow with your business.
             </p>
-            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 720 }}>
-              Each tier builds upon the previous one, expanding capabilities as your business grows in complexity, market presence, and revenue objectives.
+            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666" }}>
+              Each tier builds on the last, expanding capabilities as your organization evolves.
             </p>
           </div>
 
