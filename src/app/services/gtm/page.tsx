@@ -140,9 +140,6 @@ export default function GTMPage() {
       {/* ── S2: BUYING JOURNEY EVOLVED ─────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "120px 40px" }}>
         <div ref={s2View.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
-            The Shift in Buyer Behavior
-          </p>
           <h2 className={`section-heading reveal${s2View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 24, textAlign: "left" }}>
             The Buying Journey Has Evolved. Your Go-to-Market Strategy Should Too.
           </h2>
