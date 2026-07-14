@@ -25,7 +25,6 @@ export default function GTMPage() {
   const s5View = useInView();
   const s6View = useInView();
   const s7View = useInView();
-  const ctaView = useInView();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const faqs = [
@@ -784,36 +783,6 @@ export default function GTMPage() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── CTA ────────────────────────────────────────────── */}
-      <section style={{
-        position: "relative", overflow: "hidden", padding: "140px 40px",
-        backgroundImage: "url('/Brand Iron Digital Crops.png')",
-        backgroundSize: "cover", backgroundPosition: "center",
-      }}>
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,10,0.55) 0%, rgba(8,16,10,0.45) 45%, rgba(8,16,10,0.75) 100%)" }} />
-        <div ref={ctaView.ref} style={{ position: "relative", zIndex: 2, maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
-          <div className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 40, justifyContent: "center" }}>
-            <div style={{ flex: 1, maxWidth: 200, height: 1, background: "rgba(216,115,7,0.35)" }} />
-            <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#d87307" }} />
-            <div style={{ flex: 1, maxWidth: 200, height: 1, background: "rgba(216,115,7,0.35)" }} />
-          </div>
-          <h2 className={`reveal${ctaView.inView ? ' visible' : ''} section-heading`} style={{ color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.5))", marginBottom: 24 }}>
-            Let&apos;s Build Your Growth Engine.
-          </h2>
-          <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 500, fontSize: 17, lineHeight: 1.85, color: "#FFFFFF", textShadow: "0 1px 8px rgba(0,0,0,0.6)", maxWidth: 680, margin: "0 auto 48px" }}>
-            Every successful Go-to-Market strategy begins with a conversation. Schedule a strategy session to evaluate your current market position, identify growth opportunities, and explore the right level of engagement for your organization.
-          </p>
-          <div className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
-            <Link href="/contact" className="hero-btn-primary" style={{ fontSize: 15, padding: "18px 44px" }}>
-              Schedule a GTM Strategy Session
-            </Link>
-            <Link href="/services" className="hero-btn-outline" style={{ fontSize: 15, padding: "18px 44px" }}>
-              Explore All Solutions
-            </Link>
           </div>
         </div>
       </section>
