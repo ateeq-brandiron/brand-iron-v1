@@ -189,7 +189,7 @@ export default function ContactPage() {
               <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 16 }}>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
                   <div>
-                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", display: "block", marginBottom: 6 }}>Full Name *</label>
+                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", display: "block", marginBottom: 6 }}>Full Name <span style={{ color: "#d87307" }}>*</span></label>
                     <input required value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} placeholder="John Smith" style={inputStyle} />
                   </div>
                   <div>
@@ -199,7 +199,7 @@ export default function ContactPage() {
                 </div>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
                   <div>
-                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", display: "block", marginBottom: 6 }}>Email *</label>
+                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", display: "block", marginBottom: 6 }}>Email <span style={{ color: "#d87307" }}>*</span></label>
                     <input required type="email" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} placeholder="john@company.com" style={inputStyle} />
                   </div>
                   <div>
@@ -218,7 +218,7 @@ export default function ContactPage() {
                   </select>
                 </div>
                 <div>
-                  <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", display: "block", marginBottom: 6 }}>I&apos;m interested in... *</label>
+                  <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", display: "block", marginBottom: 6 }}>I&apos;m interested in... <span style={{ color: "#d87307" }}>*</span></label>
                   <select required value={form.interest} onChange={e => setForm({ ...form, interest: e.target.value })} style={{ ...inputStyle, cursor: "pointer" }}>
                     <option value="" style={{ background: "#FFFFFF", color: "#1a1a1a" }}>Select an option...</option>
                     <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>AI Visibility Audit (SEO/AEO)</option>
