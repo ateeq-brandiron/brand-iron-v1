@@ -191,10 +191,9 @@ export default function GTMPage() {
           </div>
 
           {/* Key insight */}
-          <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ position: "relative", background: "#F9F8F6", border: "1px solid #EEEBE7", borderRadius: 16, padding: "48px 64px", overflow: "hidden", boxShadow: "0 4px 20px rgba(0,0,0,0.06)" }}>
-            <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, transparent, #d87307, transparent)" }} />
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16, textAlign: "center" }}>Key Insight</p>
-            <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.05em", color: "#1a1a1a", textAlign: "center", lineHeight: 1.4, margin: 0 }}>
+          <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ background: "#F9F8F6", border: "1px solid #EEEBE7", borderLeft: "4px solid #d87307", borderRadius: 12, padding: "48px 64px", textAlign: "center" }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>Key Insight</p>
+            <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.05em", color: "#1a1a1a", lineHeight: 1.4, margin: 0 }}>
               Modern Go-to-Market success isn&apos;t about doing more marketing. It&apos;s about creating alignment between strategy, visibility, authority, demand generation, revenue operations, and customer experience so buyers encounter a consistent, trustworthy brand at every stage of their journey.
             </p>
           </div>
