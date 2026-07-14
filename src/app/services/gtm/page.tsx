@@ -390,15 +390,15 @@ export default function GTMPage() {
             <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#444", fontWeight: 600, marginBottom: 32 }}>
               That&apos;s how Brand Iron helps organizations build sustainable growth.
             </p>
-            <button onClick={() => setGrowthReviewOpen(true)} className={`reveal${s3View.inView ? ' visible' : ''}`} style={{
+            <Link href="/contact" className={`reveal${s3View.inView ? ' visible' : ''}`} style={{
               display: "inline-block", fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
-              background: "#d87307", color: "#FFFFFF", border: "none", cursor: "pointer",
+              background: "#d87307", color: "#FFFFFF",
               padding: "14px 36px", borderRadius: 6, transition: "background 0.2s",
             }}
-            onMouseEnter={e => ((e.currentTarget as HTMLButtonElement).style.background = "#c46305")}
-            onMouseLeave={e => ((e.currentTarget as HTMLButtonElement).style.background = "#d87307")}
-            >Book A Strategy Session</button>
+            onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
+            onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
+            >Book A Strategy Session</Link>
           </div>
 
           <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 28, marginTop: 56 }}>
@@ -840,15 +840,15 @@ export default function GTMPage() {
             <p className={`reveal${s7View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 720, marginBottom: 32 }}>
               Every initiative within the Brand Iron framework is designed to move your business toward these outcomes.
             </p>
-            <button onClick={() => setGrowthReviewOpen(true)} className={`reveal${s7View.inView ? ' visible' : ''}`} style={{
+            <Link href="/contact" className={`reveal${s7View.inView ? ' visible' : ''}`} style={{
               display: "inline-block", fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
-              background: "#d87307", color: "#FFFFFF", border: "none", cursor: "pointer",
+              background: "#d87307", color: "#FFFFFF",
               padding: "14px 36px", borderRadius: 6, transition: "background 0.2s",
             }}
-            onMouseEnter={e => ((e.currentTarget as HTMLButtonElement).style.background = "#c46305")}
-            onMouseLeave={e => ((e.currentTarget as HTMLButtonElement).style.background = "#d87307")}
-            >Book A Strategy Session</button>
+            onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
+            onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
+            >Book A Strategy Session</Link>
           </div>
 
           {/* 5 outcome cards */}
