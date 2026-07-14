@@ -23,11 +23,11 @@ export default function Navbar() {
       position: "absolute", top: 0, left: 0, right: 0, zIndex: 1000,
       background: "transparent",
     }}>
-      <div style={{ maxWidth: 1360, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between", height: 72 }}>
+      <div style={{ maxWidth: 1360, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between", minHeight: 130 }}>
 
         {/* Logo */}
-        <Link href="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
-          <img src="/images/brand-iron-logo-white.png" alt="Brand Iron" style={{ height: 56, width: "auto", transition: "transform 0.25s ease, opacity 0.25s ease" }}
+        <Link href="/" style={{ display: "flex", alignItems: "center", flexShrink: 0, paddingTop: 26 }}>
+          <img src="/images/brand-iron-logo-white.png" alt="Brand Iron" style={{ height: 100, width: "auto", transition: "transform 0.25s ease, opacity 0.25s ease" }}
             onMouseEnter={e => { e.currentTarget.style.transform = "scale(1.05)"; e.currentTarget.style.opacity = "0.85"; }}
             onMouseLeave={e => { e.currentTarget.style.transform = "scale(1)"; e.currentTarget.style.opacity = "1"; }}
           />

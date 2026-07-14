@@ -158,12 +158,12 @@ export default function Home() {
           </h1>
           <p style={{
             fontFamily: "'Burford Rustic Inline', sans-serif", fontWeight: 400,
-            fontSize: "clamp(12px, 1.6vw, 19px)", letterSpacing: "0.04em",
-            textTransform: "uppercase", whiteSpace: "nowrap",
+            fontSize: 25, letterSpacing: "0.04em",
+            textTransform: "uppercase",
             lineHeight: 1.6, color: "rgba(255,255,255,0.92)",
             maxWidth: "92vw", marginBottom: 28, textShadow: "0 1px 8px rgba(0,0,0,0.5)",
           }}>
-            Helping organizations become discoverable, trusted, and chosen in today&apos;s AI-driven buying landscape.
+            Helping organizations become discoverable, trusted,<br />and chosen in today&apos;s AI-driven buying landscape.
           </p>
           <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
             <Link href="/contact" style={{
