@@ -98,10 +98,6 @@ export default function GTMPage() {
                 Go-to-Market Strategies Built for How Buyers Make Decisions Today
               </h1>
 
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 700, color: "#FFFFFF", lineHeight: 1.5, marginBottom: 20, textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}>
-                The path to purchase has changed. Your Go-to-Market strategy should too.
-              </p>
-
               <div className="hero-btns-anim" style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center" }}>
                 <Link href="/contact" className="hero-btn-primary" style={{ fontSize: 14, padding: "15px 32px" }}>
                   Schedule a GTM Strategy Session
@@ -119,10 +115,10 @@ export default function GTMPage() {
               padding: "clamp(20px, 2.6vw, 32px)",
             }}>
               <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.85)", marginBottom: 14 }}>
-                Buyers no longer rely on a single search engine or a sales conversation to evaluate their options. They ask AI platforms, compare competitors, read reviews, validate expertise on LinkedIn, and seek recommendations from trusted sources before they&apos;re ready to engage.
+                Today&apos;s buyers evaluate options long before speaking with sales. They use AI platforms, compare competitors, read reviews, validate expertise, and seek trusted recommendations across multiple channels.
               </p>
               <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.8)" }}>
-                Many organizations are still executing go-to-market strategies designed for a different buying landscape. Sustainable growth now requires more than marketing campaigns, it demands an integrated system that connects strategy, visibility, authority, demand generation, sales, automation, and revenue into one cohesive growth engine.
+                Growth today requires more than marketing campaigns. It demands a connected go-to-market system that aligns strategy, visibility, demand generation, sales, automation, and revenue.
               </p>
             </div>
           </div>
