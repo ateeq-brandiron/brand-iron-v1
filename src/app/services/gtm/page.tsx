@@ -303,31 +303,26 @@ export default function GTMPage() {
       {/* ── S4: HOW THE FRAMEWORK BECOMES EXECUTION ─────────── */}
       <section style={{
         position: "relative", overflow: "hidden", padding: "120px 40px",
-        backgroundImage: "url('/Brand Iron man and rope.png')",
-        backgroundSize: "cover", backgroundPosition: "center 20%",
+        background: "#0F1B2D",
       }}>
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,10,14,0.72) 0%, rgba(8,10,14,0.6) 45%, rgba(8,10,14,0.82) 100%)" }} />
         <CircuitOverlay />
         <div ref={s4View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
-            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
-              How the Framework Becomes Execution
-            </p>
-            <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))", marginBottom: 20, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "#FFFFFF", marginBottom: 20, textAlign: "left" }}>
               A Framework Is Only Valuable If It Can Be Executed.
             </h2>
-            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 500, fontSize: 18, lineHeight: 1.8, color: "#FFFFFF", textShadow: "0 1px 8px rgba(0,0,0,0.6)", margin: "0 0 12px" }}>
+            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 500, fontSize: 18, lineHeight: 1.8, color: "#FFFFFF", margin: "0 0 12px" }}>
               Strategy sets the direction. Sustainable growth comes from disciplined execution.
             </p>
-            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 500, fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.9)", textShadow: "0 1px 8px rgba(0,0,0,0.6)", marginBottom: 12 }}>
+            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 500, fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.9)", marginBottom: 12 }}>
               Rather than following a one-size-fits-all playbook, Brand Iron activates the right capabilities at the right time. Each initiative builds on the last, creating a connected growth system that strengthens visibility, authority, demand, conversion, and revenue.
             </p>
-            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 600, fontSize: 16, lineHeight: 1.8, color: "#FFFFFF", textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>
+            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 600, fontSize: 16, lineHeight: 1.8, color: "#FFFFFF" }}>
               Together, these eight execution components transform strategy into measurable growth.
             </p>
           </div>
 
-          <h3 className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))", marginBottom: 28 }}>
+          <h3 className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#FFFFFF", marginBottom: 28 }}>
             The Eight Components of Execution
           </h3>
 
