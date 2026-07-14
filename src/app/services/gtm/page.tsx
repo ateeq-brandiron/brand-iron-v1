@@ -334,50 +334,58 @@ export default function GTMPage() {
                 lead: "Every successful Go-to-Market initiative begins with understanding the market before entering it.",
                 body: "We identify your ideal customers, evaluate competitors, refine positioning, strengthen messaging, and develop a strategic roadmap that aligns every future initiative around clear business objectives.",
                 activities: ["GTM Strategy & Roadmap", "Ideal Customer Profile (ICP)", "Buyer Personas", "Competitive Analysis", "Messaging Framework", "Offer Positioning"],
+                icon: (<img src="/images/icons/icon-briefcase.svg" alt="" style={{ width: 24, height: 24 }} />),
               },
               {
                 num: "02", title: "Visibility & Discoverability",
                 lead: "Being the best solution has little value if buyers and AI platforms can't find you.",
                 body: "We strengthen your digital foundation through technical optimization, AI Visibility, semantic search, structured data, and entity optimization so your organization is discoverable wherever modern buying journeys begin.",
                 activities: ["Technical SEO", "AI Visibility", "AEO & GEO", "Entity Optimization", "Schema Markup", "AI Recommendation Testing"],
+                icon: (<img src="/images/icons/icon-lightbulb.svg" alt="" style={{ width: 24, height: 24 }} />),
               },
               {
                 num: "03", title: "Authority & Trust Building",
                 lead: "Visibility creates awareness. Authority creates confidence.",
                 body: "Modern buyers—and increasingly AI systems—look for signals that demonstrate expertise, credibility, and trust before recommending or engaging with an organization. We help establish those signals through strategic content, executive positioning, reviews, digital PR, and industry recognition.",
                 activities: ["Authority Content", "Executive Branding", "Review Strategy", "Thought Leadership", "Guest Posting", "Digital PR"],
+                icon: (<img src="/images/icons/icon-chat.svg" alt="" style={{ width: 24, height: 24 }} />),
               },
               {
                 num: "04", title: "Demand Generation",
                 lead: "Once trust is established, organizations need a consistent system for attracting qualified opportunities.",
                 body: "Our demand generation initiatives combine educational content, social media, search visibility, paid campaigns, and targeted marketing efforts to engage buyers throughout their decision-making journey.",
                 activities: ["Content Strategy", "SEO Content", "Industry Pages", "Social Media", "Video Content", "Paid Campaigns"],
+                icon: (<img src="/images/icons/icon-lightning.svg" alt="" style={{ width: 24, height: 24 }} />),
               },
               {
                 num: "05", title: "Outbound & Business Development",
                 lead: "Not every opportunity should wait to discover you.",
                 body: "We help organizations proactively build relationships through strategic outreach, business development initiatives, partnerships, and referral programs that complement inbound demand generation.",
                 activities: ["Prospect Research", "Lead Enrichment", "LinkedIn Outreach", "Email Outreach", "Appointment Setting", "Partnership Development"],
+                icon: (<img src="/images/icons/icon-arrow.svg" alt="" style={{ width: 24, height: 24 }} />),
               },
               {
                 num: "06", title: "Conversion Optimization",
                 lead: "Generating interest is only valuable when it leads to meaningful business outcomes.",
                 body: "We evaluate every stage of the customer journey to remove friction, improve user experience, strengthen offers, and increase the percentage of visitors who become qualified opportunities.",
                 activities: ["Landing Page Optimization", "Conversion Reviews", "Lead Magnets", "Funnel Development", "CRO", "A/B Testing"],
+                icon: (<img src="/images/icons/icon-trending.svg" alt="" style={{ width: 24, height: 24 }} />),
               },
               {
                 num: "07", title: "Analytics & Revenue Intelligence",
                 lead: "Growth decisions should be informed by evidence—not assumptions.",
                 body: "Our reporting framework connects marketing performance, sales activity, and revenue insights into executive-level dashboards that support better planning, forecasting, and continuous improvement.",
                 activities: ["GA4 & Measurement", "KPI Dashboards", "Revenue Attribution", "Executive Reporting", "AI Visibility Reporting", "Revenue Forecasting"],
+                icon: (<img src="/images/icons/icon-barchart.svg" alt="" style={{ width: 24, height: 24 }} />),
               },
               {
                 num: "08", title: "Automation & Scaling",
                 lead: "As organizations grow, manual processes become barriers to growth.",
                 body: "Automation creates consistency, improves operational efficiency, and allows your team to scale without increasing complexity at the same pace.",
                 activities: ["CRM Optimization", "Email Automation", "Workflow Automation", "Lead Routing", "Marketing Automation", "AI Assistants"],
+                icon: (<img src="/images/icons/icon-gear.svg" alt="" style={{ width: 24, height: 24 }} />),
               },
-            ].map(({ num, title, lead, body, activities }, i) => (
+            ].map(({ num, title, lead, body, activities, icon }, i) => (
               <div key={num}
                 className={`reveal stagger-${(i % 2) + 1}${s4View.inView ? ' visible' : ''}`}
                 style={{ position: "relative", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 14, padding: "36px 32px", overflow: "hidden", transition: "background 0.25s, border-color 0.25s" }}
@@ -385,12 +393,11 @@ export default function GTMPage() {
                 onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.background = "rgba(255,255,255,0.04)"; el.style.borderColor = "rgba(255,255,255,0.08)"; }}
               >
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.2))" }} />
-                <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 18 }}>
-                  <div style={{ width: 40, height: 40, borderRadius: "50%", background: "rgba(216,115,7,0.15)", border: "1px solid rgba(216,115,7,0.3)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                    <span style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontWeight: 900, fontSize: 14, color: "#d87307" }}>{num}</span>
-                  </div>
-                  <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 16, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#FFFFFF", margin: 0, lineHeight: 1.3 }}>{title}</h3>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 18 }}>
+                  <div style={{ width: 44, height: 44, borderRadius: 10, background: "rgba(216,115,7,0.15)", border: "1px solid rgba(216,115,7,0.3)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>{icon}</div>
+                  <span style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontWeight: 900, fontSize: 34, color: "rgba(255,255,255,0.08)", lineHeight: 1 }}>{num}</span>
                 </div>
+                <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 16, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#FFFFFF", marginBottom: 14, lineHeight: 1.3 }}>{title}</h3>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(255,255,255,0.92)", fontWeight: 600, marginBottom: 10 }}>{lead}</p>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "rgba(255,255,255,0.8)", marginBottom: 20 }}>{body}</p>
                 <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", paddingTop: 16 }}>
