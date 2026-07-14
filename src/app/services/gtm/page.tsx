@@ -266,7 +266,7 @@ export default function GTMPage() {
             ].map(({ num, title, lead, body, focuses, icon }, i) => (
               <div key={num}
                 className={`reveal stagger-${(i % 3) + 1}${s3View.inView ? ' visible' : ''}`}
-                style={{ position: "relative", background: "#F9F8F6", border: "1px solid #EEEBE7", borderRadius: 14, padding: "36px 28px 32px", overflow: "hidden", transition: "transform 0.25s, box-shadow 0.25s" }}
+                style={{ position: "relative", background: "#F9F8F6", border: "1px solid #EEEBE7", borderRadius: 14, padding: "36px 28px 32px", overflow: "hidden", transition: "transform 0.25s, box-shadow 0.25s", display: "flex", flexDirection: "column", minHeight: 480 }}
                 onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-5px)"; el.style.boxShadow = "0 16px 40px rgba(0,0,0,0.1)"; }}
                 onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "none"; }}
               >
@@ -278,7 +278,7 @@ export default function GTMPage() {
                 <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 18, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.08em", color: "#1a1a1a", marginBottom: 10, lineHeight: 1.2 }}>{title}</h3>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "#444", fontWeight: 600, marginBottom: 10 }}>{lead}</p>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "#666", marginBottom: 20 }}>{body}</p>
-                <div style={{ borderTop: "1px solid #EEEBE7", paddingTop: 16 }}>
+                <div style={{ borderTop: "1px solid #EEEBE7", paddingTop: 16, marginTop: "auto" }}>
                   <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#aaa", marginBottom: 10 }}>Focus Areas</p>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
                     {focuses.map(f => (
