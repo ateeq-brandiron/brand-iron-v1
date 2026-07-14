@@ -169,7 +169,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact options */}
-      <section style={{ background: "#FFFFFF", padding: "60px 24px 0" }}>
+      <section style={{ background: "#FFFFFF", padding: "60px 24px" }}>
         <div ref={sOptions.ref} className="reveal-group" style={{ maxWidth: 1400, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 16 }}>
           {contactOptions.map(({ icon, title, desc }) => (
             <div key={title} className={`contact-opt reveal${sOptions.inView ? ' visible' : ''}`} style={{ background: "#F9F8F6", border: "1px solid #EEEBE7", borderTop: "3px solid #d87307", borderRadius: 10, padding: "24px 20px", textAlign: "center" }}>
