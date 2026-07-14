@@ -291,14 +291,12 @@ export default function GTMPage() {
           </div>
 
           {/* Philosophy statement */}
-          <div className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ background: "rgba(255,255,255,0.88)", backdropFilter: "blur(12px)", borderRadius: 16, padding: "40px 56px", borderLeft: "4px solid #d87307" }}>
-            <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 16, lineHeight: 1.3 }}>
-              At Brand Iron, we believe sustainable growth is engineered by connecting these systems into one unified Go-to-Market framework.
-            </p>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.85, color: "#555", margin: 0 }}>
-              This holistic approach ensures every initiative contributes to a larger business objective rather than operating in isolation. The result isn&apos;t simply more activity, it&apos;s a stronger foundation for long-term growth, supported by measurable outcomes and a framework that evolves as your organization grows.
-            </p>
-          </div>
+          <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontSize: 20, lineHeight: 1.6, color: "#1a1a1a", fontWeight: 700, marginBottom: 16 }}>
+            At Brand Iron, we believe sustainable growth is engineered by connecting these systems into one unified Go-to-Market framework.
+          </p>
+          <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#555" }}>
+            This holistic approach ensures every initiative contributes to a larger business objective rather than operating in isolation. The result isn&apos;t simply more activity, it&apos;s a stronger foundation for long-term growth, supported by measurable outcomes and a framework that evolves as your organization grows.
+          </p>
         </div>
       </section>
 
