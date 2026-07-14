@@ -122,8 +122,8 @@ export default function ContactPage() {
 
   const inputStyle: React.CSSProperties = {
     width: "100%", padding: "13px 16px",
-    background: "#FFFFFF", border: "1.5px solid #EEEBE7",
-    borderRadius: 4, fontFamily: "'Montserrat', sans-serif", fontSize: 14, color: "#1a1a1a",
+    background: "#FFFFFF", border: "1.5px solid #D8D2C7",
+    borderRadius: 4, fontFamily: "'Montserrat', sans-serif", fontSize: 15, fontWeight: 500, color: "#1a1a1a",
     outline: "none",
   };
 
@@ -189,26 +189,26 @@ export default function ContactPage() {
               <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 16 }}>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
                   <div>
-                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", display: "block", marginBottom: 6 }}>Full Name <span style={{ color: "#d87307" }}>*</span></label>
+                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a1a1a", display: "block", marginBottom: 8 }}>Full Name <span style={{ color: "#d87307" }}>*</span></label>
                     <input required value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} placeholder="John Smith" style={inputStyle} />
                   </div>
                   <div>
-                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", display: "block", marginBottom: 6 }}>Company</label>
+                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a1a1a", display: "block", marginBottom: 8 }}>Company</label>
                     <input value={form.company} onChange={e => setForm({ ...form, company: e.target.value })} placeholder="Your company" style={inputStyle} />
                   </div>
                 </div>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
                   <div>
-                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", display: "block", marginBottom: 6 }}>Email <span style={{ color: "#d87307" }}>*</span></label>
+                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a1a1a", display: "block", marginBottom: 8 }}>Email <span style={{ color: "#d87307" }}>*</span></label>
                     <input required type="email" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} placeholder="john@company.com" style={inputStyle} />
                   </div>
                   <div>
-                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", display: "block", marginBottom: 6 }}>Phone</label>
+                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a1a1a", display: "block", marginBottom: 8 }}>Phone</label>
                     <input value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value })} placeholder="+1 (555) 000-0000" style={inputStyle} />
                   </div>
                 </div>
                 <div>
-                  <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", display: "block", marginBottom: 6 }}>Company Size</label>
+                  <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a1a1a", display: "block", marginBottom: 8 }}>Company Size</label>
                   <select value={form.size} onChange={e => setForm({ ...form, size: e.target.value })} style={{ ...inputStyle, cursor: "pointer" }}>
                     <option value="" style={{ background: "#FFFFFF", color: "#1a1a1a" }}>Select size...</option>
                     <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>1–10 employees</option>
@@ -218,7 +218,7 @@ export default function ContactPage() {
                   </select>
                 </div>
                 <div>
-                  <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", display: "block", marginBottom: 6 }}>I&apos;m interested in... <span style={{ color: "#d87307" }}>*</span></label>
+                  <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a1a1a", display: "block", marginBottom: 8 }}>I&apos;m interested in... <span style={{ color: "#d87307" }}>*</span></label>
                   <select required value={form.interest} onChange={e => setForm({ ...form, interest: e.target.value })} style={{ ...inputStyle, cursor: "pointer" }}>
                     <option value="" style={{ background: "#FFFFFF", color: "#1a1a1a" }}>Select an option...</option>
                     <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>AI Visibility Audit (SEO/AEO)</option>
@@ -234,7 +234,7 @@ export default function ContactPage() {
                 </div>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
                   <div>
-                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", display: "block", marginBottom: 6 }}>Investment Range</label>
+                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a1a1a", display: "block", marginBottom: 8 }}>Investment Range</label>
                     <select value={form.investment} onChange={e => setForm({ ...form, investment: e.target.value })} style={{ ...inputStyle, cursor: "pointer" }}>
                       <option value="" style={{ background: "#FFFFFF", color: "#1a1a1a" }}>Select range...</option>
                       <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>Under $5K/mo</option>
@@ -244,7 +244,7 @@ export default function ContactPage() {
                     </select>
                   </div>
                   <div>
-                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", display: "block", marginBottom: 6 }}>Timeline</label>
+                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a1a1a", display: "block", marginBottom: 8 }}>Timeline</label>
                     <select value={form.timeline} onChange={e => setForm({ ...form, timeline: e.target.value })} style={{ ...inputStyle, cursor: "pointer" }}>
                       <option value="" style={{ background: "#FFFFFF", color: "#1a1a1a" }}>Select timeline...</option>
                       <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>ASAP</option>
@@ -255,7 +255,7 @@ export default function ContactPage() {
                   </div>
                 </div>
                 <div>
-                  <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", display: "block", marginBottom: 6 }}>Message</label>
+                  <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a1a1a", display: "block", marginBottom: 8 }}>Message</label>
                   <textarea rows={4} value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} placeholder="Tell us about your business and what you're looking to achieve..." style={{ ...inputStyle, resize: "vertical" }} />
                 </div>
                 {error && (
