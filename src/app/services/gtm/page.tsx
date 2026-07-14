@@ -419,9 +419,6 @@ export default function GTMPage() {
         <div style={{ position: "absolute", inset: 0, backgroundImage: "radial-gradient(circle at 20% 50%, rgba(216,115,7,0.04) 0%, transparent 60%), radial-gradient(circle at 80% 20%, rgba(15,27,45,0.04) 0%, transparent 50%)", pointerEvents: "none" }} />
         <div ref={s5View.ref} style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>
           <div style={{ marginBottom: 72 }}>
-            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
-              Choose the Right Level of Go-to-Market Execution
-            </p>
             <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               One Framework. Three Levels of Execution.
             </h2>
@@ -542,9 +539,6 @@ export default function GTMPage() {
         <CircuitOverlay />
         <div ref={s6View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 64 }}>
-            <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
-              Compare Go-to-Market Capabilities
-            </p>
             <h2 className={`section-heading reveal${s6View.inView ? ' visible' : ''}`} style={{ color: "#FFFFFF", marginBottom: 20, textAlign: "left" }}>
               The Right Strategy Isn&apos;t About More Services. It&apos;s About the Right Capabilities.
             </h2>
@@ -644,9 +638,6 @@ export default function GTMPage() {
         <div style={{ position: "absolute", inset: 0, background: "rgba(248,242,232,0.91)" }} />
         <div ref={s7View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
-            <p className={`reveal${s7View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
-              What Success Looks Like
-            </p>
             <h2 className={`section-heading reveal${s7View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               A Go-to-Market Strategy Should Create Measurable Business Momentum.
             </h2>
@@ -767,9 +758,6 @@ export default function GTMPage() {
 
           {/* FAQ Accordion */}
           <div className={`reveal${s7View.inView ? ' visible' : ''}`}>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
-              Frequently Asked Questions
-            </p>
             <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 8 }}>
               Common Questions About Our Go-to-Market Strategy Services
             </h3>
@@ -813,9 +801,6 @@ export default function GTMPage() {
             <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#d87307" }} />
             <div style={{ flex: 1, maxWidth: 200, height: 1, background: "rgba(216,115,7,0.35)" }} />
           </div>
-          <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#f0a860", marginBottom: 20 }}>
-            Ready to Build a Smarter Go-to-Market Strategy?
-          </p>
           <h2 className={`reveal${ctaView.inView ? ' visible' : ''} section-heading`} style={{ color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.5))", marginBottom: 24 }}>
             Let&apos;s Build Your Growth Engine.
           </h2>
