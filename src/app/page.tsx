@@ -134,7 +134,7 @@ export default function Home() {
   const s8 = useInView();
 
   return (
-    <>
+    <main>
       {/* ── S1: HERO ─────────────────────────────────────── */}
       <section style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <video
@@ -969,6 +969,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }
