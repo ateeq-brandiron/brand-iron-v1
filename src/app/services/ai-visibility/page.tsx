@@ -140,13 +140,13 @@ function AuditModal({ onClose }: { onClose: () => void }) {
                 <div style={{ marginBottom: 14 }}>
                   <label style={labelStyle}>Estimated Monthly Website Visitors</label>
                   <select value={form.monthlyVisitors} onChange={e => set("monthlyVisitors", e.target.value)} style={selectStyle}>
-                    <option value="">Select range…</option>
-                    <option>Under 500</option>
-                    <option>500 – 2,000</option>
-                    <option>2,000 – 10,000</option>
-                    <option>10,000 – 50,000</option>
-                    <option>50,000+</option>
-                    <option>Not sure</option>
+                    <option value="" style={optionStyle}>Select range…</option>
+                    <option style={optionStyle}>Under 500</option>
+                    <option style={optionStyle}>500 – 2,000</option>
+                    <option style={optionStyle}>2,000 – 10,000</option>
+                    <option style={optionStyle}>10,000 – 50,000</option>
+                    <option style={optionStyle}>50,000+</option>
+                    <option style={optionStyle}>Not sure</option>
                   </select>
                 </div>
 
@@ -154,12 +154,12 @@ function AuditModal({ onClose }: { onClose: () => void }) {
                 <div style={{ marginBottom: 14 }}>
                   <label style={labelStyle}>Current SEO / AI Visibility Situation</label>
                   <select value={form.currentSeo} onChange={e => set("currentSeo", e.target.value)} style={selectStyle}>
-                    <option value="">Select one…</option>
-                    <option>No SEO work done yet</option>
-                    <option>Some SEO, but not consistent</option>
-                    <option>Active SEO program in place</option>
-                    <option>Had SEO before, lapsed</option>
-                    <option>Not sure where we stand</option>
+                    <option value="" style={optionStyle}>Select one…</option>
+                    <option style={optionStyle}>No SEO work done yet</option>
+                    <option style={optionStyle}>Some SEO, but not consistent</option>
+                    <option style={optionStyle}>Active SEO program in place</option>
+                    <option style={optionStyle}>Had SEO before, lapsed</option>
+                    <option style={optionStyle}>Not sure where we stand</option>
                   </select>
                 </div>
 
@@ -167,12 +167,12 @@ function AuditModal({ onClose }: { onClose: () => void }) {
                 <div style={{ marginBottom: 28 }}>
                   <label style={labelStyle}>Primary Goal</label>
                   <select value={form.goal} onChange={e => set("goal", e.target.value)} style={selectStyle}>
-                    <option value="">Select one…</option>
-                    <option>Rank higher on Google</option>
-                    <option>Show up in ChatGPT / AI answers</option>
-                    <option>More qualified organic traffic</option>
-                    <option>Understand my current visibility gaps</option>
-                    <option>All of the above</option>
+                    <option value="" style={optionStyle}>Select one…</option>
+                    <option style={optionStyle}>Rank higher on Google</option>
+                    <option style={optionStyle}>Show up in ChatGPT / AI answers</option>
+                    <option style={optionStyle}>More qualified organic traffic</option>
+                    <option style={optionStyle}>Understand my current visibility gaps</option>
+                    <option style={optionStyle}>All of the above</option>
                   </select>
                 </div>
 
@@ -236,6 +236,7 @@ const selectStyle: React.CSSProperties = {
   backgroundRepeat: "no-repeat", backgroundPosition: "right 14px center",
   paddingRight: 36,
 };
+const optionStyle: React.CSSProperties = { background: "#FFFFFF", color: "#1a1a1a" };
 
 export default function AIVisibilityPage() {
   const [auditOpen, setAuditOpen] = useState(false);
