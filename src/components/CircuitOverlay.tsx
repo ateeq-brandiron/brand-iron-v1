@@ -13,7 +13,7 @@ export default function CircuitOverlay() {
         pointerEvents: "none",
         zIndex: 1,
         opacity: 0.55,
-        filter: "drop-shadow(0 0 4px rgba(0,220,255,0.8))",
+        filter: "drop-shadow(0 0 4px rgba(216,115,7,0.8))",
       }}
     >
       <style>{`
@@ -36,7 +36,7 @@ export default function CircuitOverlay() {
           100% { r: 11; opacity: 0; }
         }
         .circuit-line {
-          stroke: rgba(0,220,255,0.35);
+          stroke: rgba(216,115,7,0.35);
           stroke-width: 1;
           fill: none;
           stroke-dasharray: 2000;
@@ -44,17 +44,17 @@ export default function CircuitOverlay() {
           animation: circuitDraw 3.5s ease forwards, circuitPulse 4s ease-in-out 3.5s infinite;
         }
         .circuit-node {
-          fill: rgba(0,220,255,0.5);
+          fill: rgba(216,115,7,0.5);
           animation: nodePing 3s ease-in-out infinite;
         }
         .circuit-node-ripple {
-          fill: rgba(0,220,255,0.25);
+          fill: rgba(216,115,7,0.25);
           animation: nodeRipple 3s ease-out infinite;
         }
         /* Signal dots travelling along paths */
         .signal {
-          fill: rgba(0,255,220,0.9);
-          filter: drop-shadow(0 0 4px rgba(0,255,220,1));
+          fill: rgba(255,180,60,0.95);
+          filter: drop-shadow(0 0 4px rgba(255,180,60,1));
         }
       `}</style>
 
