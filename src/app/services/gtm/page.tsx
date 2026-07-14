@@ -209,13 +209,20 @@ export default function GTMPage() {
             <h2 className={`section-heading reveal${s3View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               Growth Doesn&apos;t Come from More Marketing. It Comes from Better Alignment.
             </h2>
-            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 760, margin: "0 0 16px" }}>
-              A modern Go-to-Market strategy isn&apos;t a collection of independent tactics. It&apos;s a connected system where every part of the business supports the next.
+            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", margin: "0 0 16px" }}>
+              Organizations don&apos;t struggle because they&apos;re doing too little—they struggle because their efforts aren&apos;t connected.
             </p>
-            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 760 }}>
-              Strategy informs visibility. Visibility builds authority. Authority generates demand. Demand fuels revenue. Revenue is sustained through operational excellence and continuous optimization.
+            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 16 }}>
+              A modern go-to-market strategy is more than a collection of tactics. It aligns strategy, visibility, authority, demand generation, sales, automation, and analytics into one connected growth system where every initiative supports measurable business outcomes.
+            </p>
+            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#444", fontWeight: 600 }}>
+              That&apos;s how Brand Iron helps organizations build sustainable growth.
             </p>
           </div>
+
+          <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 28 }}>
+            The Six Pillars of Modern Go-to-Market
+          </h3>
 
           {/* 6 Pillars */}
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24, marginBottom: 56 }}>
@@ -243,8 +250,8 @@ export default function GTMPage() {
               },
               {
                 num: "04", title: "Demand",
-                lead: "Once trust is established, organizations need a consistent system for attracting qualified prospects.",
-                body: "Valuable content, meaningful engagement, and strategic campaigns attract and nurture prospects through the decision-making journey.",
+                lead: "Once trust is established, organizations need a consistent system for attracting and nurturing qualified prospects",
+                body: "through valuable content, meaningful engagement, and strategic campaigns.",
                 focuses: ["Content Strategy", "SEO Content", "Social Media", "Video Content", "Paid Media", "Campaign Execution"],
                 icon: (<img src="/images/icons/icon-lightning.svg" alt="" style={{ width: 28, height: 28 }} />),
               },
