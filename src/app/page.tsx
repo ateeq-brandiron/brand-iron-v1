@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
 function useInView(threshold = 0.15) {
@@ -90,6 +91,7 @@ const testimonials = [
 ];
 
 export default function Home() {
+  const router = useRouter();
   const s2 = useInView();
   const s3 = useInView();
   const s3cards = useInView();
@@ -631,7 +633,7 @@ export default function Home() {
                   key={title}
                   ref={el => { serviceCardRefs.current[i] = el; }}
                   className={`reveal${s5.inView ? " visible" : ""}`}
-                  onClick={() => selectService(i)}
+                  onClick={() => router.push(href)}
                   style={{
                     background: "#FFFFFF",
                     border: "1px solid #ECE5D8",
