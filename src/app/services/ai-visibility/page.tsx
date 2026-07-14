@@ -357,7 +357,7 @@ export default function AIVisibilityPage() {
 
               <div className="hero-btns-anim" style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center" }}>
                 {/* Primary CTA — books a consultation via the Contact page; the self-serve audit form lives in AuditModal above */}
-                <Link href="/contact?interest=AI+Visibility+Audit+(SEO/AEO)" style={{
+                <Link href="/contact" style={{
                   display: "inline-flex", alignItems: "center", gap: 10,
                   padding: "15px 32px", borderRadius: 6,
                   background: "#d87307", border: "2px solid #d87307",
@@ -544,9 +544,18 @@ export default function AIVisibilityPage() {
           </div>
 
           <div className={`reveal${s3View.inView ? ' visible' : ''}`}>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 17, lineHeight: 1.8, color: "#444" }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 17, lineHeight: 1.8, color: "#444", marginBottom: 32 }}>
               The organizations that win tomorrow aren&apos;t simply easier to find, they&apos;re easier to trust. That&apos;s why Brand Iron goes beyond traditional SEO. We help organizations build the technical foundation, digital authority, and AI readiness needed to become discoverable, trusted, and recommended across today&apos;s evolving search landscape.
             </p>
+            <button onClick={() => setAuditOpen(true)} style={{
+              display: "inline-block", fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
+              letterSpacing: "0.14em", textTransform: "uppercase",
+              background: "#d87307", color: "#FFFFFF", border: "none", cursor: "pointer",
+              padding: "14px 36px", borderRadius: 6, transition: "background 0.2s",
+            }}
+            onMouseEnter={e => ((e.currentTarget as HTMLButtonElement).style.background = "#c46305")}
+            onMouseLeave={e => ((e.currentTarget as HTMLButtonElement).style.background = "#d87307")}
+            >Get Free AI Visibility Audit</button>
           </div>
         </div>
       </section>
@@ -657,9 +666,18 @@ export default function AIVisibilityPage() {
             <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 680, margin: "0 auto 16px" }}>
               Some need to understand why they&apos;re not appearing in AI-powered search results. Others are ready to strengthen their technical foundation, build digital authority, or establish market leadership.
             </p>
-            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 680, margin: "0 auto" }}>
+            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 680, margin: "0 auto 32px" }}>
               Our four-tier framework allows you to start where you are today, and grow as your business grows.
             </p>
+            <Link href="/contact" className={`reveal${s5View.inView ? ' visible' : ''}`} style={{
+              display: "inline-block", fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
+              letterSpacing: "0.14em", textTransform: "uppercase",
+              background: "#d87307", color: "#FFFFFF",
+              padding: "14px 36px", borderRadius: 6, transition: "background 0.2s",
+            }}
+            onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
+            onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
+            >Schedule an AI Visibility Assessment</Link>
           </div>
 
           {/* Four tier cards */}

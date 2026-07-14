@@ -183,9 +183,18 @@ export default function GTMPage() {
           </div>
 
           {/* Key insight */}
-          <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#1a1a1a", fontWeight: 700 }}>
+          <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#1a1a1a", fontWeight: 700, marginBottom: 32 }}>
             Modern Go-to-Market success isn&apos;t about doing more marketing. It&apos;s about creating alignment between strategy, visibility, authority, demand generation, revenue operations, and customer experience so buyers encounter a consistent, trustworthy brand at every stage of their journey.
           </p>
+          <Link href="/contact" className={`reveal${s2View.inView ? ' visible' : ''}`} style={{
+            display: "inline-block", fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
+            letterSpacing: "0.14em", textTransform: "uppercase",
+            background: "#d87307", color: "#FFFFFF",
+            padding: "14px 36px", borderRadius: 6, transition: "background 0.2s",
+          }}
+          onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
+          onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
+          >Request a GTM Growth Review</Link>
         </div>
       </section>
 
@@ -208,12 +217,21 @@ export default function GTMPage() {
             <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 16 }}>
               A modern go-to-market strategy is more than a collection of tactics. It aligns strategy, visibility, authority, demand generation, sales, automation, and analytics into one connected growth system where every initiative supports measurable business outcomes.
             </p>
-            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#444", fontWeight: 600 }}>
+            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#444", fontWeight: 600, marginBottom: 32 }}>
               That&apos;s how Brand Iron helps organizations build sustainable growth.
             </p>
+            <Link href="/contact" className={`reveal${s3View.inView ? ' visible' : ''}`} style={{
+              display: "inline-block", fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
+              letterSpacing: "0.14em", textTransform: "uppercase",
+              background: "#d87307", color: "#FFFFFF",
+              padding: "14px 36px", borderRadius: 6, transition: "background 0.2s",
+            }}
+            onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
+            onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
+            >Book A Strategy Session</Link>
           </div>
 
-          <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 28 }}>
+          <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 28, marginTop: 56 }}>
             The Six Pillars of Modern Go-to-Market
           </h3>
 
@@ -541,9 +559,18 @@ export default function GTMPage() {
             <h2 className={`section-heading reveal${s6View.inView ? ' visible' : ''}`} style={{ color: "#FFFFFF", marginBottom: 20, textAlign: "left" }}>
               The Right Strategy Isn&apos;t About More Services. It&apos;s About the Right Capabilities.
             </h2>
-            <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", maxWidth: 720 }}>
+            <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", maxWidth: 720, marginBottom: 32 }}>
               Rather than overwhelming you with a list of deliverables, this comparison highlights how each engagement expands your organization&apos;s capabilities as it grows. Each tier builds upon the previous one, creating a scalable Go-to-Market system that evolves alongside your business.
             </p>
+            <Link href="/contact" className={`reveal${s6View.inView ? ' visible' : ''}`} style={{
+              display: "inline-block", fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
+              letterSpacing: "0.14em", textTransform: "uppercase",
+              background: "#d87307", color: "#FFFFFF",
+              padding: "14px 36px", borderRadius: 6, transition: "background 0.2s",
+            }}
+            onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
+            onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
+            >Request a GTM Growth Review</Link>
           </div>
 
           {/* Capability table */}
@@ -640,9 +667,18 @@ export default function GTMPage() {
             <h2 className={`section-heading reveal${s7View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               A Go-to-Market Strategy Should Create Measurable Business Momentum.
             </h2>
-            <p className={`reveal${s7View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 720 }}>
+            <p className={`reveal${s7View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 720, marginBottom: 32 }}>
               Every initiative within the Brand Iron framework is designed to move your business toward these outcomes.
             </p>
+            <Link href="/contact" className={`reveal${s7View.inView ? ' visible' : ''}`} style={{
+              display: "inline-block", fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
+              letterSpacing: "0.14em", textTransform: "uppercase",
+              background: "#d87307", color: "#FFFFFF",
+              padding: "14px 36px", borderRadius: 6, transition: "background 0.2s",
+            }}
+            onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
+            onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
+            >Book A Strategy Session</Link>
           </div>
 
           {/* 5 outcome cards */}

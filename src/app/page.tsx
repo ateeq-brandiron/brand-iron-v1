@@ -427,7 +427,7 @@ export default function Home() {
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.8, color: "#444", marginBottom: 24 }}>
               We&apos;ll identify your biggest growth bottlenecks and provide practical recommendations.
             </p>
-            <Link href="/contact?interest=GTM+Growth+Review" style={{
+            <Link href="/contact" style={{
               display: "inline-block",
               fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
