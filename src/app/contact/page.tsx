@@ -1,5 +1,18 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
+function useInView(threshold = 0.15) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [inView, setInView] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) setInView(true); }, { threshold });
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [threshold]);
+  return { ref, inView };
+}
 
 const confirmationByInterest: Record<string, string> = {
   "AI Visibility Audit (SEO/AEO)": "Thank you for requesting your AI Visibility Audit. Your results will be ready within 24 hours.",
@@ -73,6 +86,8 @@ export default function ContactPage() {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
   const [form, setForm] = useState({ name: "", email: "", company: "", phone: "", size: "", interest: "", investment: "", timeline: "", message: "" });
+  const sOptions = useInView();
+  const sMain = useInView();
 
   useEffect(() => {
     const interest = new URLSearchParams(window.location.search).get("interest");
@@ -135,10 +150,10 @@ export default function ContactPage() {
         backgroundImage: "url('/images/bg-fence.jpg')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
-        <div style={{ position: "absolute", inset: 0, background: "rgba(10,20,35,0.38)" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(10,20,35,0.3) 0%, rgba(10,20,35,0.22) 45%, rgba(10,20,35,0.62) 100%)" }} />
         <div style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto", padding: "140px 24px 80px", textAlign: "center" }}>
           <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 500, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>Get In Touch</p>
-          <h1 style={{
+          <h1 className="hero-h1-anim" style={{
             fontFamily: "'Burford Rustic Inline', sans-serif", fontWeight: 400, fontSize: "clamp(44px, 6vw, 72px)",
             textTransform: "uppercase", letterSpacing: "0.03em",
             color: "#FFFFFF",
@@ -147,7 +162,7 @@ export default function ContactPage() {
           }}>
             Let&apos;s Build Your Revenue Engine
           </h1>
-          <p style={{ fontSize: 18, lineHeight: 1.7, color: "rgba(255,255,255,0.85)", maxWidth: 540, margin: "0 auto" }}>
+          <p className="hero-body-anim" style={{ fontSize: 18, lineHeight: 1.7, color: "rgba(255,255,255,0.85)", maxWidth: 540, margin: "0 auto" }}>
             Whether you&apos;re ready to start or just exploring, we&apos;d love to learn about your business and share how BrandIron creates transformative growth.
           </p>
         </div>
@@ -155,9 +170,9 @@ export default function ContactPage() {
 
       {/* Contact options */}
       <section style={{ background: "#FFFFFF", padding: "60px 24px 0" }}>
-        <div style={{ maxWidth: 1400, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 16 }}>
+        <div ref={sOptions.ref} className="reveal-group" style={{ maxWidth: 1400, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 16 }}>
           {contactOptions.map(({ icon, title, desc }) => (
-            <div key={title} className="contact-opt" style={{ background: "#F9F8F6", border: "1px solid #EEEBE7", borderTop: "3px solid #d87307", borderRadius: 10, padding: "24px 20px", textAlign: "center" }}>
+            <div key={title} className={`contact-opt reveal${sOptions.inView ? ' visible' : ''}`} style={{ background: "#F9F8F6", border: "1px solid #EEEBE7", borderTop: "3px solid #d87307", borderRadius: 10, padding: "24px 20px", textAlign: "center" }}>
               <div style={{ display: "flex", justifyContent: "center", marginBottom: 12 }}>
                 <div style={{ width: 64, height: 64, borderRadius: "50%", background: "rgba(216,115,7,0.1)", display: "flex", alignItems: "center", justifyContent: "center" }}>{icon}</div>
               </div>
@@ -170,10 +185,10 @@ export default function ContactPage() {
 
       {/* Form + Info */}
       <section style={{ background: "#F5F0E8", padding: "60px 24px 80px" }}>
-        <div style={{ maxWidth: 1400, margin: "0 auto", display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 48, alignItems: "start" }}>
+        <div ref={sMain.ref} style={{ maxWidth: 1400, margin: "0 auto", display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 48, alignItems: "start" }}>
 
           {/* Form */}
-          <div style={{ background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 12, padding: "40px 36px", boxShadow: "0 4px 20px rgba(0,0,0,0.06)" }}>
+          <div className={`reveal${sMain.inView ? ' visible' : ''}`} style={{ background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 12, padding: "40px 36px", boxShadow: "0 4px 20px rgba(0,0,0,0.06)" }}>
             <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontWeight: 900, fontSize: 36, textTransform: "uppercase", letterSpacing: "0.04em", color: "#1a1a1a", marginBottom: 8 }}>Send Us A Message</h2>
             <p style={{ fontSize: 14, color: "#666", marginBottom: 32 }}>We typically respond within one business day.</p>
 
@@ -270,7 +285,7 @@ export default function ContactPage() {
           </div>
 
           {/* Info */}
-          <div>
+          <div className={`reveal${sMain.inView ? ' visible' : ''}`} style={{ transitionDelay: "0.1s" }}>
             <div style={{ backgroundImage: "url('/images/bg-haybales.jpg')", backgroundSize: "cover", backgroundPosition: "center", borderRadius: 10, overflow: "hidden", height: 220, position: "relative", marginBottom: 24 }}>
               <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, transparent 40%, rgba(28,54,82,0.75) 100%)" }} />
               <div style={{ position: "absolute", bottom: 20, left: 20 }}>
