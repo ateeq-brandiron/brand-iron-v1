@@ -140,7 +140,7 @@ export default function GTMPage() {
             The Buying Journey Has Evolved. Your Go-to-Market Strategy Should Too.
           </h2>
 
-          <div style={{ maxWidth: 800, margin: "0 0 72px" }}>
+          <div style={{ margin: "0 0 72px" }}>
             <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 16 }}>
               Traditional go-to-market strategies still provide the foundation, but today&apos;s buying journey is far more complex. Buyers move between search engines, AI platforms, industry communities, reviews, and peer recommendations long before engaging with sales.
             </p>
