@@ -33,38 +33,34 @@ export async function POST(request: Request) {
     message && `Message: ${message}`,
   ].filter(Boolean).join("\n");
 
-  try {
-    const sharpSpringRes = await fetch(
-      `https://api.sharpspring.com/pubapi/v1/?accountID=${encodeURIComponent(accountID)}&secretKey=${encodeURIComponent(secretKey)}`,
+  const leadFields = {
+    firstName,
+    lastName,
+    companyName: company || "",
+    phoneNumber: phone || "",
+    description,
+  };
+
+  async function callSharpSpring(method: string, params: Record<string, unknown>) {
+    const res = await fetch(
+      `https://api.sharpspring.com/pubapi/v1/?accountID=${encodeURIComponent(accountID!)}&secretKey=${encodeURIComponent(secretKey!)}`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          method: "createLeads",
-          params: {
-            objects: [
-              {
-                emailAddress: email,
-                firstName,
-                lastName,
-                companyName: company || "",
-                phoneNumber: phone || "",
-                description,
-              },
-            ],
-          },
-          id: `contact-form-${Date.now()}`,
-        }),
+        body: JSON.stringify({ method, params, id: `contact-${method}-${Date.now()}` }),
       }
     );
-
-    if (!sharpSpringRes.ok) {
-      const text = await sharpSpringRes.text();
-      console.error(`[api/contact] SharpSpring HTTP ${sharpSpringRes.status}:`, text);
-      return Response.json({ success: false, error: `SharpSpring returned HTTP ${sharpSpringRes.status}` }, { status: 502 });
+    if (!res.ok) {
+      throw new Error(`HTTP ${res.status}: ${await res.text()}`);
     }
+    return res.json();
+  }
 
-    const data = await sharpSpringRes.json();
+  try {
+    const data = await callSharpSpring("createLeads", {
+      objects: [{ emailAddress: email, ...leadFields }],
+    });
+
     const createResult = data?.result?.creates?.[0];
     // SharpSpring returns "error": [] (an empty, truthy array) on success, so
     // only a non-empty error array/object counts as a real RPC-level error.
@@ -72,6 +68,27 @@ export async function POST(request: Request) {
     const failed = rpcError || createResult?.success !== true || Boolean(createResult?.error);
 
     if (failed) {
+      const errCode = createResult?.error?.code ?? (Array.isArray(data?.error) ? data.error[0]?.code : undefined);
+
+      // Code 301 "Entry already exists" means this email is already a lead
+      // in SharpSpring - not a real failure for the visitor. Update the
+      // existing record with the fresh submission details instead of
+      // surfacing an error for what's effectively a repeat/duplicate contact.
+      if (errCode === 301) {
+        try {
+          const lookup = await callSharpSpring("getLeads", { where: { emailAddress: email }, limit: 1, offset: 0 });
+          const existingId = lookup?.result?.lead?.[0]?.id;
+          if (existingId) {
+            await callSharpSpring("updateLeads", { objects: [{ id: existingId, ...leadFields }] });
+          } else {
+            console.error("[api/contact] Duplicate lead (301) but lookup found no id:", JSON.stringify(lookup));
+          }
+        } catch (updateErr) {
+          console.error("[api/contact] Duplicate lead (301); follow-up update failed:", updateErr instanceof Error ? updateErr.message : updateErr);
+        }
+        return Response.json({ success: true });
+      }
+
       console.error("[api/contact] SharpSpring rejected the lead:", JSON.stringify(data));
       return Response.json(
         { success: false, error: data?.error?.message || createResult?.error?.message || "SharpSpring rejected the lead" },
