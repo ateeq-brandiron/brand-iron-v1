@@ -24,14 +24,42 @@ function AuditModal({ onClose }: { onClose: () => void }) {
     website: "", company: "", monthlyVisitors: "", currentSeo: "", goal: "",
   });
   const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
   const set = (k: string, v: string) => setForm(f => ({ ...f, [k]: v }));
 
-  const handleSubmit = (e: React.FormEvent) => {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    setError("");
     setSubmitting(true);
-    setTimeout(() => { setSubmitting(false); setStep(2); }, 900);
-  };
+
+    const message = [
+      `Website: ${form.website}`,
+      form.monthlyVisitors && `Estimated Monthly Visitors: ${form.monthlyVisitors}`,
+      form.currentSeo && `Current SEO / AI Visibility Situation: ${form.currentSeo}`,
+      form.goal && `Primary Goal: ${form.goal}`,
+    ].filter(Boolean).join("\n");
+
+    const ok = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: `${form.firstName} ${form.lastName}`.trim(),
+        email: form.email,
+        company: form.company,
+        phone: form.phone,
+        interest: "AI Visibility Audit (SEO/AEO)",
+        message,
+      }),
+    }).then(res => res.json()).then(data => Boolean(data.success)).catch(() => false);
+
+    setSubmitting(false);
+    if (ok) {
+      setStep(2);
+    } else {
+      setError("Something went wrong sending your request. Please try again or email us directly.");
+    }
+  }
 
   return (
     <div style={{
@@ -148,6 +176,9 @@ function AuditModal({ onClose }: { onClose: () => void }) {
                   </select>
                 </div>
 
+                {error && (
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, color: "#ff8a80", lineHeight: 1.5, marginBottom: 14 }}>{error}</p>
+                )}
                 <button type="submit" disabled={submitting} style={{
                   width: "100%", padding: "17px 32px",
                   background: submitting ? "rgba(216,115,7,0.50)" : "#d87307",
@@ -208,6 +239,11 @@ const selectStyle: React.CSSProperties = {
 
 export default function AIVisibilityPage() {
   const [auditOpen, setAuditOpen] = useState(false);
+
+  useEffect(() => {
+    if (new URLSearchParams(window.location.search).get("openAudit")) setAuditOpen(true);
+  }, []);
+
   const s2View = useInView();
   const s3View = useInView();
   const s4View = useInView();
@@ -320,19 +356,19 @@ export default function AIVisibilityPage() {
               </p>
 
               <div className="hero-btns-anim" style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center" }}>
-                {/* Primary CTA — AI Visibility Assessment (lead capture form) */}
-                <button onClick={() => setAuditOpen(true)} style={{
+                {/* Primary CTA — books a consultation via the Contact page; the self-serve audit form lives in AuditModal above */}
+                <Link href="/contact?interest=AI+Visibility+Audit+(SEO/AEO)" style={{
                   display: "inline-flex", alignItems: "center", gap: 10,
                   padding: "15px 32px", borderRadius: 6,
                   background: "#d87307", border: "2px solid #d87307",
-                  color: "#FFFFFF", cursor: "pointer",
+                  color: "#FFFFFF", cursor: "pointer", textDecoration: "none",
                   fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 700,
                   letterSpacing: "0.1em", textTransform: "uppercase",
                   transition: "background 0.2s, transform 0.15s",
                   boxShadow: "0 4px 20px rgba(216,115,7,0.35)",
                 }}
-                onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.background = "#b8691f"; (e.currentTarget as HTMLButtonElement).style.transform = "translateY(-2px)"; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.background = "#d87307"; (e.currentTarget as HTMLButtonElement).style.transform = "translateY(0)"; }}
+                onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.background = "#b8691f"; (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(-2px)"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.background = "#d87307"; (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(0)"; }}
                 >
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
                     <circle cx="11" cy="11" r="7" stroke="white" strokeWidth="2"/>
@@ -340,7 +376,7 @@ export default function AIVisibilityPage() {
                     <path d="M8 11h6M11 8v6" stroke="white" strokeWidth="1.8" strokeLinecap="round"/>
                   </svg>
                   Schedule an AI Visibility Assessment
-                </button>
+                </Link>
               </div>
             </div>
 
