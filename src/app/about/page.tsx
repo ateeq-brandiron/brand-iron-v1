@@ -121,10 +121,10 @@ const TEAM = [
     bio: "Carmen Barker is the financial genius at Brand Iron, handling everything that's money-related from payroll to HR. Carmen's roots go back to being a partner in an award-winning startup business that provides water treatment for humanitarian and disaster relief efforts. Under her leadership, the company was recognized by Fast Company in 2011 for the Top 50 Colorado Companies to Watch and Top 100 Women Owned Companies.",
   },
   {
-    name: "Valeria Rodriguez Quintanilla",
-    initials: "VR",
-    title: "Project Manager / Business Development",
-    bio: "Valeria was born and raised in Northern Mexico near the Texas border, and she attended the University of Texas at Austin, where she received a degree in Mathematics and Actuarial Science in 2019. She's applied her knowledge working in tech as an Analyst and Team Lead prior to lending her many talents to Brand Iron. Valeria is analytical, creative, and always up for a challenge.",
+    name: "Olivia Briones",
+    initials: "OB",
+    title: "Operations & Growth Strategy Manager",
+    bio: "With more than 14 years of experience in operations, project management, and digital marketing, Olivia Briones specializes in transforming complex ideas into structured, scalable growth systems. She leads strategic initiatives across branding, go-to-market strategy, AI visibility, SEO, and operational execution, helping businesses build the systems, processes, and digital foundations needed to grow with confidence.",
   },
   {
     name: "Shelly Barson",
