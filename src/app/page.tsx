@@ -2,6 +2,8 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import AuditModal from "@/components/AuditModal";
+import GrowthReviewModal from "@/components/GrowthReviewModal";
 
 function useInView(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);
@@ -92,6 +94,8 @@ const testimonials = [
 
 export default function Home() {
   const router = useRouter();
+  const [auditOpen, setAuditOpen] = useState(false);
+  const [growthReviewOpen, setGrowthReviewOpen] = useState(false);
   const s2 = useInView();
   const s3 = useInView();
   const s3cards = useInView();
@@ -135,6 +139,9 @@ export default function Home() {
 
   return (
     <main>
+      {auditOpen && <AuditModal onClose={() => setAuditOpen(false)} />}
+      {growthReviewOpen && <GrowthReviewModal onClose={() => setGrowthReviewOpen(false)} />}
+
       {/* ── S1: HERO ─────────────────────────────────────── */}
       <section style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <video
@@ -376,16 +383,16 @@ export default function Home() {
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", marginBottom: 20 }}>
               Wondering how your business performs across today&apos;s buying journey?
             </p>
-            <Link href="/services/ai-visibility?openAudit=1" style={{
+            <button onClick={() => setAuditOpen(true)} style={{
               fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
-              background: "#d87307", color: "#FFFFFF",
+              background: "#d87307", color: "#FFFFFF", border: "none", cursor: "pointer",
               padding: "14px 36px", borderRadius: 6,
               display: "inline-block", transition: "background 0.2s",
             }}
-            onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
-            onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
-            >Get My Free AI Visibility Audit</Link>
+            onMouseEnter={e => ((e.currentTarget as HTMLButtonElement).style.background = "#c46305")}
+            onMouseLeave={e => ((e.currentTarget as HTMLButtonElement).style.background = "#d87307")}
+            >Get My Free AI Visibility Audit</button>
           </div>
         </div>
       </section>
@@ -427,17 +434,17 @@ export default function Home() {
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.8, color: "#444", marginBottom: 24 }}>
               We&apos;ll identify your biggest growth bottlenecks and provide practical recommendations.
             </p>
-            <Link href="/contact" style={{
+            <button onClick={() => setGrowthReviewOpen(true)} style={{
               display: "inline-block",
               fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
-              background: "#d87307", color: "#FFFFFF",
+              background: "#d87307", color: "#FFFFFF", border: "none", cursor: "pointer",
               padding: "14px 32px", borderRadius: 6,
               transition: "background 0.2s",
             }}
-            onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
-            onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
-            >Request a GTM Growth Review</Link>
+            onMouseEnter={e => ((e.currentTarget as HTMLButtonElement).style.background = "#c46305")}
+            onMouseLeave={e => ((e.currentTarget as HTMLButtonElement).style.background = "#d87307")}
+            >Request a GTM Growth Review</button>
           </div>
         </div>
       </section>
