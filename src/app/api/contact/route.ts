@@ -71,15 +71,24 @@ export async function POST(request: Request) {
       const errCode = createResult?.error?.code ?? (Array.isArray(data?.error) ? data.error[0]?.code : undefined);
 
       // Code 301 "Entry already exists" means this email is already a lead
-      // in SharpSpring - not a real failure for the visitor. Update the
-      // existing record with the fresh submission details instead of
-      // surfacing an error for what's effectively a repeat/duplicate contact.
+      // in SharpSpring - a visitor is free to submit any number of forms
+      // (audit, growth review, general inquiry, ...) with the same address,
+      // so this must never block or overwrite prior history. Append the new
+      // submission to the existing record's description instead of
+      // replacing it, and treat it as success either way.
       if (errCode === 301) {
         try {
           const lookup = await callSharpSpring("getLeads", { where: { emailAddress: email }, limit: 1, offset: 0 });
-          const existingId = lookup?.result?.lead?.[0]?.id;
+          const existingLead = lookup?.result?.lead?.[0];
+          const existingId = existingLead?.id;
           if (existingId) {
-            await callSharpSpring("updateLeads", { objects: [{ id: existingId, ...leadFields }] });
+            const timestamp = new Date().toISOString();
+            const mergedDescription = [
+              existingLead?.description,
+              `--- New submission (${timestamp}) ---`,
+              description,
+            ].filter(Boolean).join("\n\n");
+            await callSharpSpring("updateLeads", { objects: [{ id: existingId, ...leadFields, description: mergedDescription }] });
           } else {
             console.error("[api/contact] Duplicate lead (301) but lookup found no id:", JSON.stringify(lookup));
           }
