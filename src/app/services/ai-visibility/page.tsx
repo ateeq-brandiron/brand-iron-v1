@@ -65,8 +65,8 @@ function AuditModal({ onClose }: { onClose: () => void }) {
     <div style={{
       position: "fixed", inset: 0, zIndex: 9999,
       background: "rgba(8,16,36,0.85)", backdropFilter: "blur(6px)",
-      display: "flex", alignItems: "center", justifyContent: "center",
-      padding: "24px", overflowY: "auto",
+      display: "flex", alignItems: "flex-start", justifyContent: "center",
+      padding: "40px 24px", overflowY: "auto",
     }} onClick={e => { if (e.target === e.currentTarget) onClose(); }}>
       <div style={{
         background: "#0F1B2D", borderRadius: 16, maxWidth: 680, width: "100%",
