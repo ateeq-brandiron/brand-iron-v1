@@ -419,19 +419,22 @@ export default function AIVisibilityPage() {
 
         </div>
 
-        {/* Why This Matters — full-bleed photo panel */}
+        {/* Why This Matters — full-bleed video panel */}
         <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{
           position: "relative", width: "100vw", marginLeft: "calc(50% - 50vw)", marginTop: 64,
           overflow: "hidden", borderTop: "3px solid #d87307",
-          backgroundImage: "url('/images/Brand Iron Techy Grass Prairie.png')",
-          backgroundSize: "cover", backgroundPosition: "center",
         }}>
-          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(10,12,8,0.55) 0%, rgba(10,12,8,0.72) 100%)" }} />
+          <video
+            src="/animate_this_image.mp4"
+            autoPlay muted loop playsInline preload="auto"
+            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}
+          />
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,10,7,0.68) 0%, rgba(8,10,7,0.82) 100%)" }} />
           <div style={{ position: "relative", zIndex: 1, maxWidth: 900, margin: "0 auto", padding: "80px 24px" }}>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", textShadow: "0 2px 12px rgba(0,0,0,0.6)", marginBottom: 24, textAlign: "center" }}>
+            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", textShadow: "0 2px 12px rgba(0,0,0,0.75)", marginBottom: 24, textAlign: "center" }}>
               Why This Matters for Your Business
             </h3>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", textAlign: "center", marginBottom: 28 }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, fontWeight: 500, lineHeight: 1.8, color: "#FFFFFF", textShadow: "0 1px 8px rgba(0,0,0,0.6)", textAlign: "center", marginBottom: 28 }}>
               Every day, potential customers are asking questions like:
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 16, marginBottom: 40 }}>
@@ -441,18 +444,18 @@ export default function AIVisibilityPage() {
                 "&ldquo;Who can help with Go-to-Market Strategy?&rdquo;",
                 "&ldquo;What is Revenue Engineering?&rdquo;",
               ].map((q, i) => (
-                <div key={i} style={{ background: "rgba(8,16,36,0.45)", backdropFilter: "blur(4px)", border: "1px solid rgba(255,255,255,0.25)", borderRadius: 8, padding: "14px 20px" }}>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontStyle: "italic", color: "#f0a860", margin: 0 }} dangerouslySetInnerHTML={{ __html: q }} />
+                <div key={i} style={{ background: "rgba(8,16,36,0.6)", backdropFilter: "blur(4px)", border: "1px solid rgba(255,255,255,0.25)", borderRadius: 8, padding: "14px 20px" }}>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 500, fontStyle: "italic", color: "#f7b878", margin: 0 }} dangerouslySetInnerHTML={{ __html: q }} />
                 </div>
               ))}
             </div>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", textAlign: "center", marginBottom: 16 }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, fontWeight: 500, lineHeight: 1.8, color: "#FFFFFF", textShadow: "0 1px 8px rgba(0,0,0,0.6)", textAlign: "center", marginBottom: 16 }}>
               If AI platforms and search engines don&apos;t recognize your business as a trusted source, your competitors may become the answers buyers see first.
             </p>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", textAlign: "center", marginBottom: 8 }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, fontWeight: 500, lineHeight: 1.8, color: "#FFFFFF", textShadow: "0 1px 8px rgba(0,0,0,0.6)", textAlign: "center", marginBottom: 8 }}>
               AI doesn&apos;t simply rank content.
             </p>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#FFFFFF", fontWeight: 600, textAlign: "center" }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#FFFFFF", fontWeight: 700, textShadow: "0 1px 8px rgba(0,0,0,0.6)", textAlign: "center" }}>
               It evaluates context, authority, credibility, and relevance to determine which organizations deserve to be referenced and recommended.
             </p>
           </div>
