@@ -630,7 +630,7 @@ export default function GTMPage() {
 
       {/* ── S7: OUTCOMES ───────────────────────────────────── */}
       <section style={{
-        position: "relative", overflow: "hidden", padding: "120px 40px",
+        position: "relative", overflow: "hidden", padding: "120px 40px 56px",
         backgroundImage: "url('/images/bg-wood.jpg')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
