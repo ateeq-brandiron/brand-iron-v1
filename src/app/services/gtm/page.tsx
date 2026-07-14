@@ -142,16 +142,13 @@ export default function GTMPage() {
 
           <div style={{ maxWidth: 800, margin: "0 0 72px" }}>
             <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 16 }}>
-              For years, go-to-market strategies centered on a familiar formula: define your target audience, position your offering, generate awareness, enable sales, and measure performance. That foundation still matters, but the environment surrounding it has fundamentally changed.
+              Traditional go-to-market strategies still provide the foundation, but today&apos;s buying journey is far more complex. Buyers move between search engines, AI platforms, industry communities, reviews, and peer recommendations long before engaging with sales.
             </p>
             <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 16 }}>
-              Today&apos;s buyers don&apos;t follow a linear path to purchase. They move between search engines, AI platforms, social networks, peer recommendations, industry publications, and company websites before making a decision.
-            </p>
-            <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 16 }}>
-              The organizations gaining market share aren&apos;t necessarily those with the largest marketing budgets. They&apos;re the ones that have built connected systems where strategy, visibility, authority, demand generation, sales, automation, and analytics work as one.
+              Growth now depends on more than marketing. It requires a connected system that makes your business discoverable, builds trust across every touchpoint, and aligns strategy, visibility, demand generation, sales, automation, and analytics.
             </p>
             <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#444", fontWeight: 600 }}>
-              That is where a modern Go-to-Market strategy creates its greatest advantage.
+              The organizations winning market share aren&apos;t simply spending more—they&apos;re executing better through connected growth systems. That&apos;s the advantage of a modern go-to-market strategy.
             </p>
           </div>
 
