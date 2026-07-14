@@ -294,7 +294,7 @@ export default function GTMPage() {
           <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontSize: 20, lineHeight: 1.6, color: "#1a1a1a", fontWeight: 700, marginBottom: 16 }}>
             At Brand Iron, we believe sustainable growth is engineered by connecting these systems into one unified Go-to-Market framework.
           </p>
-          <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#555" }}>
+          <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#2a2318", fontWeight: 500 }}>
             This holistic approach ensures every initiative contributes to a larger business objective rather than operating in isolation. The result isn&apos;t simply more activity, it&apos;s a stronger foundation for long-term growth, supported by measurable outcomes and a framework that evolves as your organization grows.
           </p>
         </div>
