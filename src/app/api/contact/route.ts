@@ -11,6 +11,7 @@ export async function POST(request: Request) {
 
   const accountID = process.env.SHARPSPRING_ACCOUNT_ID;
   const secretKey = process.env.SHARPSPRING_SECRET_KEY;
+  const listID = process.env.SHARPSPRING_CONTACT_FORM_LIST_ID;
 
   if (!accountID || !secretKey) {
     console.error("[api/contact] SHARPSPRING_ACCOUNT_ID / SHARPSPRING_SECRET_KEY missing from process.env at request time");
@@ -56,6 +57,18 @@ export async function POST(request: Request) {
     return res.json();
   }
 
+  // Adds the lead to the "Brand Iron Contact Form" SharpSpring list (via its
+  // ID, set as SHARPSPRING_CONTACT_FORM_LIST_ID). Best-effort: list placement
+  // should never block or fail the visitor's form submission.
+  async function addToContactList() {
+    if (!listID) return;
+    try {
+      await callSharpSpring("addListMemberEmailAddress", { objects: [{ emailAddress: email, listID }] });
+    } catch (err) {
+      console.error("[api/contact] Could not add lead to SharpSpring list:", err instanceof Error ? err.message : err);
+    }
+  }
+
   try {
     const data = await callSharpSpring("createLeads", {
       objects: [{ emailAddress: email, ...leadFields }],
@@ -95,6 +108,7 @@ export async function POST(request: Request) {
         } catch (updateErr) {
           console.error("[api/contact] Duplicate lead (301); follow-up update failed:", updateErr instanceof Error ? updateErr.message : updateErr);
         }
+        await addToContactList();
         return Response.json({ success: true });
       }
 
@@ -105,6 +119,7 @@ export async function POST(request: Request) {
       );
     }
 
+    await addToContactList();
     return Response.json({ success: true });
   } catch (err) {
     console.error("[api/contact] Could not reach SharpSpring:", err instanceof Error ? err.message : err);
