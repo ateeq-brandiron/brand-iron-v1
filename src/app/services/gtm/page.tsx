@@ -91,14 +91,18 @@ export default function GTMPage() {
               <h1 className="hero-h1-anim" style={{
                 fontFamily: "'Burford Rustic Inline', sans-serif",
                 fontWeight: 400, fontSize: "clamp(30px, 4.4vw, 58px)",
-                textTransform: "uppercase", letterSpacing: "0.03em", lineHeight: 1.05,
+                textTransform: "uppercase", letterSpacing: "0.02em", lineHeight: 0.92,
                 color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))",
                 marginBottom: 20,
               }}>
                 Go-to-Market Strategies Built for How Buyers Make Decisions Today
               </h1>
 
-              <div className="hero-btns-anim" style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center", marginBottom: 14 }}>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 700, color: "#FFFFFF", lineHeight: 1.5, marginBottom: 20, textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}>
+                The path to purchase has changed. Your Go-to-Market strategy should too.
+              </p>
+
+              <div className="hero-btns-anim" style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center" }}>
                 <Link href="/contact" className="hero-btn-primary" style={{ fontSize: 14, padding: "15px 32px" }}>
                   Schedule a GTM Strategy Session
                 </Link>
@@ -106,10 +110,6 @@ export default function GTMPage() {
                   Explore the GTM Framework
                 </Link>
               </div>
-
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.5)" }}>
-                The path to purchase has changed.
-              </p>
             </div>
 
             {/* RIGHT — supporting detail panel */}
@@ -315,10 +315,10 @@ export default function GTMPage() {
       {/* ── S4: HOW THE FRAMEWORK BECOMES EXECUTION ─────────── */}
       <section style={{
         position: "relative", overflow: "hidden", padding: "120px 40px",
-        backgroundImage: "url('/images/bg-barn.jpg')",
-        backgroundSize: "cover", backgroundPosition: "center",
+        backgroundImage: "url('/Brand Iron man and rope.png')",
+        backgroundSize: "cover", backgroundPosition: "center 20%",
       }}>
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.35) 0%, rgba(8,16,36,0.25) 50%, rgba(8,16,36,0.6) 100%)" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,10,14,0.72) 0%, rgba(8,10,14,0.6) 45%, rgba(8,10,14,0.82) 100%)" }} />
         <CircuitOverlay />
         <div ref={s4View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
@@ -328,10 +328,10 @@ export default function GTMPage() {
             <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))", marginBottom: 20, textAlign: "left" }}>
               A Framework Is Only Valuable If It Can Be Executed.
             </h2>
-            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "rgba(255,255,255,0.75)", maxWidth: 720, margin: "0 0 12px" }}>
+            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 500, fontSize: 18, lineHeight: 1.8, color: "#FFFFFF", textShadow: "0 1px 8px rgba(0,0,0,0.6)", maxWidth: 720, margin: "0 0 12px" }}>
               A strong strategy creates direction, but sustainable growth comes from disciplined execution.
             </p>
-            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.6)", maxWidth: 720 }}>
+            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 500, fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.9)", textShadow: "0 1px 8px rgba(0,0,0,0.6)", maxWidth: 720 }}>
               Each component of our Go-to-Market methodology strengthens the next, creating an integrated system that helps organizations become more discoverable, build greater authority, generate qualified demand, improve conversion, and create measurable revenue growth.
             </p>
           </div>
@@ -401,13 +401,13 @@ export default function GTMPage() {
                   </div>
                   <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 16, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#FFFFFF", margin: 0, lineHeight: 1.3 }}>{title}</h3>
                 </div>
-                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(255,255,255,0.85)", fontWeight: 600, marginBottom: 10 }}>{lead}</p>
-                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "rgba(255,255,255,0.6)", marginBottom: 20 }}>{body}</p>
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(255,255,255,0.92)", fontWeight: 600, marginBottom: 10 }}>{lead}</p>
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "rgba(255,255,255,0.8)", marginBottom: 20 }}>{body}</p>
                 <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", paddingTop: 16 }}>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(255,255,255,0.3)", marginBottom: 10 }}>Typical Activities</p>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(255,255,255,0.55)", marginBottom: 10 }}>Typical Activities</p>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
                     {activities.map(a => (
-                      <span key={a} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.65)", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 4, padding: "3px 8px" }}>{a}</span>
+                      <span key={a} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.85)", background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 4, padding: "3px 8px" }}>{a}</span>
                     ))}
                   </div>
                 </div>
@@ -540,20 +540,18 @@ export default function GTMPage() {
       {/* ── S6: CAPABILITY COMPARISON ──────────────────────── */}
       <section style={{
         position: "relative", overflow: "hidden", padding: "120px 40px",
-        backgroundImage: "url('/images/bg-horse.jpg')",
-        backgroundSize: "cover", backgroundPosition: "center 30%",
+        background: "#0F1B2D",
       }}>
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.35) 0%, rgba(8,16,36,0.25) 50%, rgba(8,16,36,0.6) 100%)" }} />
         <CircuitOverlay />
         <div ref={s6View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 64 }}>
             <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               Compare Go-to-Market Capabilities
             </p>
-            <h2 className={`section-heading reveal${s6View.inView ? ' visible' : ''}`} style={{ color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))", marginBottom: 20, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${s6View.inView ? ' visible' : ''}`} style={{ color: "#FFFFFF", marginBottom: 20, textAlign: "left" }}>
               The Right Strategy Isn&apos;t About More Services. It&apos;s About the Right Capabilities.
             </h2>
-            <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.65)", maxWidth: 720 }}>
+            <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", maxWidth: 720 }}>
               Rather than overwhelming you with a list of deliverables, this comparison highlights how each engagement expands your organization&apos;s capabilities as it grows. Each tier builds upon the previous one, creating a scalable Go-to-Market system that evolves alongside your business.
             </p>
           </div>
@@ -563,10 +561,10 @@ export default function GTMPage() {
             <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "'Montserrat', sans-serif", fontSize: 13 }}>
               <thead>
                 <tr>
-                  <th style={{ background: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.5)", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 11, padding: "18px 24px", textAlign: "left", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>Capability</th>
-                  <th style={{ background: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.7)", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 11, padding: "18px 24px", textAlign: "center", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>Foundation</th>
-                  <th style={{ background: "rgba(216,115,7,0.15)", color: "#d87307", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 11, padding: "18px 24px", textAlign: "center", borderBottom: "1px solid rgba(216,115,7,0.3)" }}>Growth Engine</th>
-                  <th style={{ background: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.7)", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 11, padding: "18px 24px", textAlign: "center", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>Revenue Accelerator</th>
+                  <th style={{ background: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.75)", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 11, padding: "18px 24px", textAlign: "left", borderBottom: "1px solid rgba(255,255,255,0.12)" }}>Capability</th>
+                  <th style={{ background: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.85)", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 11, padding: "18px 24px", textAlign: "center", borderBottom: "1px solid rgba(255,255,255,0.12)" }}>Foundation</th>
+                  <th style={{ background: "rgba(216,115,7,0.18)", color: "#f0a860", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 11, padding: "18px 24px", textAlign: "center", borderBottom: "1px solid rgba(216,115,7,0.35)" }}>Growth Engine</th>
+                  <th style={{ background: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.85)", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 11, padding: "18px 24px", textAlign: "center", borderBottom: "1px solid rgba(255,255,255,0.12)" }}>Revenue Accelerator</th>
                 </tr>
               </thead>
               <tbody>
@@ -591,11 +589,11 @@ export default function GTMPage() {
                   ["AI Assistants & Sales Automation", "—", "—", "✓"],
                   ["Executive Reporting", "Standard", "Advanced", "Strategic"],
                 ].map(([cap, f, g, r], i) => (
-                  <tr key={cap} style={{ background: i % 2 === 0 ? "rgba(255,255,255,0.02)" : "transparent" }}>
-                    <td style={{ padding: "14px 24px", color: "rgba(255,255,255,0.8)", fontWeight: 500, borderBottom: "1px solid rgba(255,255,255,0.05)" }}>{cap}</td>
-                    <td style={{ padding: "14px 24px", color: f === "—" ? "rgba(255,255,255,0.2)" : "rgba(255,255,255,0.6)", textAlign: "center", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>{f}</td>
-                    <td style={{ padding: "14px 24px", color: g === "—" ? "rgba(216,115,7,0.3)" : "#d87307", textAlign: "center", fontWeight: 500, borderBottom: "1px solid rgba(216,115,7,0.1)", background: "rgba(216,115,7,0.04)" }}>{g}</td>
-                    <td style={{ padding: "14px 24px", color: r === "—" ? "rgba(255,255,255,0.2)" : "rgba(255,255,255,0.6)", textAlign: "center", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>{r}</td>
+                  <tr key={cap} style={{ background: i % 2 === 0 ? "rgba(255,255,255,0.04)" : "transparent" }}>
+                    <td style={{ padding: "14px 24px", color: "rgba(255,255,255,0.92)", fontWeight: 500, borderBottom: "1px solid rgba(255,255,255,0.08)" }}>{cap}</td>
+                    <td style={{ padding: "14px 24px", color: f === "—" ? "rgba(255,255,255,0.3)" : "rgba(255,255,255,0.8)", textAlign: "center", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>{f}</td>
+                    <td style={{ padding: "14px 24px", color: g === "—" ? "rgba(216,115,7,0.4)" : "#f0a860", textAlign: "center", fontWeight: 500, borderBottom: "1px solid rgba(216,115,7,0.15)", background: "rgba(216,115,7,0.06)" }}>{g}</td>
+                    <td style={{ padding: "14px 24px", color: r === "—" ? "rgba(255,255,255,0.3)" : "rgba(255,255,255,0.8)", textAlign: "center", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>{r}</td>
                   </tr>
                 ))}
               </tbody>
@@ -612,7 +610,7 @@ export default function GTMPage() {
               <>
                 <div key={tier} style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 12, padding: "28px 28px", textAlign: "center" }}>
                   <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 15, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.08em", color: "#d87307", marginBottom: 10 }}>{tier}</p>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.7, color: "rgba(255,255,255,0.6)", margin: 0 }}>{body}</p>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.7, color: "rgba(255,255,255,0.85)", margin: 0 }}>{body}</p>
                 </div>
                 {i < 2 && <div key={`arrow-${i}`} style={{ padding: "0 16px", textAlign: "center" }}><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M14 7l5 5-5 5" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg></div>}
               </>
@@ -625,7 +623,7 @@ export default function GTMPage() {
             <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#FFFFFF", marginBottom: 16, textAlign: "center" }}>
               What&apos;s Included Across Every Engagement
             </h3>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "rgba(255,255,255,0.7)", textAlign: "center", maxWidth: 640, margin: "0 auto 32px" }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "rgba(255,255,255,0.88)", textAlign: "center", maxWidth: 640, margin: "0 auto 32px" }}>
               Regardless of the tier you choose, every engagement begins with a commitment to creating a connected growth system, not disconnected marketing activities.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 12 }}>
@@ -808,23 +806,23 @@ export default function GTMPage() {
       {/* ── CTA ────────────────────────────────────────────── */}
       <section style={{
         position: "relative", overflow: "hidden", padding: "140px 40px",
-        backgroundImage: "url('/images/hero-saddle.jpg')",
-        backgroundSize: "cover", backgroundPosition: "center 30%",
+        backgroundImage: "url('/Brand Iron Digital Crops.png')",
+        backgroundSize: "cover", backgroundPosition: "center",
       }}>
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.35) 0%, rgba(8,16,36,0.25) 50%, rgba(8,16,36,0.6) 100%)" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,10,0.55) 0%, rgba(8,16,10,0.45) 45%, rgba(8,16,10,0.75) 100%)" }} />
         <div ref={ctaView.ref} style={{ position: "relative", zIndex: 2, maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
           <div className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 40, justifyContent: "center" }}>
             <div style={{ flex: 1, maxWidth: 200, height: 1, background: "rgba(216,115,7,0.35)" }} />
             <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#d87307" }} />
             <div style={{ flex: 1, maxWidth: 200, height: 1, background: "rgba(216,115,7,0.35)" }} />
           </div>
-          <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 20 }}>
+          <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#f0a860", marginBottom: 20 }}>
             Ready to Build a Smarter Go-to-Market Strategy?
           </p>
-          <h2 className={`reveal${ctaView.inView ? ' visible' : ''} section-heading`} style={{ color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))", marginBottom: 24 }}>
+          <h2 className={`reveal${ctaView.inView ? ' visible' : ''} section-heading`} style={{ color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.5))", marginBottom: 24 }}>
             Let&apos;s Build Your Growth Engine.
           </h2>
-          <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 17, lineHeight: 1.85, color: "rgba(255,255,255,0.75)", maxWidth: 680, margin: "0 auto 48px" }}>
+          <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 500, fontSize: 17, lineHeight: 1.85, color: "#FFFFFF", textShadow: "0 1px 8px rgba(0,0,0,0.6)", maxWidth: 680, margin: "0 auto 48px" }}>
             Every successful Go-to-Market strategy begins with a conversation. Schedule a strategy session to evaluate your current market position, identify growth opportunities, and explore the right level of engagement for your organization.
           </p>
           <div className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
