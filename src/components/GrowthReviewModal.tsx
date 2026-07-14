@@ -27,6 +27,7 @@ export default function GrowthReviewModal({ onClose }: { onClose: () => void }) 
         email: form.email,
         company: form.company,
         interest: "GTM Growth Review",
+        formId: "gtm_growth_review",
         message,
       }),
     }).then(res => res.json()).then(data => Boolean(data.success)).catch(() => false);

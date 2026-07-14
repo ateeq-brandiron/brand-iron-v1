@@ -3,7 +3,7 @@
 // so the client never talks to SharpSpring directly (see src/app/contact/page.tsx).
 export async function POST(request: Request) {
   const body = await request.json();
-  const { name, email, company, phone, size, interest, investment, timeline, message } = body ?? {};
+  const { name, email, company, phone, size, interest, investment, timeline, message, formId } = body ?? {};
 
   if (!name || !email) {
     return Response.json({ success: false, error: "Missing required fields" }, { status: 400 });
@@ -11,7 +11,16 @@ export async function POST(request: Request) {
 
   const accountID = process.env.SHARPSPRING_ACCOUNT_ID;
   const secretKey = process.env.SHARPSPRING_SECRET_KEY;
-  const listID = process.env.SHARPSPRING_CONTACT_FORM_LIST_ID;
+
+  // Each source form declares its own formId (see src/app/contact/page.tsx,
+  // src/components/AuditModal.tsx, src/components/GrowthReviewModal.tsx) so
+  // leads land in the right SharpSpring list rather than one shared list.
+  const LIST_ID_BY_FORM: Record<string, string | undefined> = {
+    general_inquiry: process.env.SHARPSPRING_CONTACT_FORM_LIST_ID,
+    ai_visibility_audit: process.env.SHARPSPRING_AI_VISIBILITY_LIST_ID,
+    gtm_growth_review: process.env.SHARPSPRING_GTM_GROWTH_REVIEW_LIST_ID,
+  };
+  const listID = LIST_ID_BY_FORM[formId as string];
 
   if (!accountID || !secretKey) {
     console.error("[api/contact] SHARPSPRING_ACCOUNT_ID / SHARPSPRING_SECRET_KEY missing from process.env at request time");

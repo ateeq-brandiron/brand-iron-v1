@@ -102,7 +102,7 @@ export default function ContactPage() {
     const crmOk = await fetch("/api/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
+      body: JSON.stringify({ ...form, formId: "general_inquiry" }),
     }).then(res => res.json()).then(data => Boolean(data.success)).catch(() => false);
 
     setSubmitting(false);

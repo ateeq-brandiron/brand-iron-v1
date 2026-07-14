@@ -33,6 +33,7 @@ export default function AuditModal({ onClose }: { onClose: () => void }) {
         company: form.company,
         phone: form.phone,
         interest: "AI Visibility Audit (SEO/AEO)",
+        formId: "ai_visibility_audit",
         message,
       }),
     }).then(res => res.json()).then(data => Boolean(data.success)).catch(() => false);
