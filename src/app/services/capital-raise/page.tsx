@@ -18,6 +18,113 @@ function useInView(threshold = 0.1) {
   return { ref, inView };
 }
 
+const evaluations = [
+  {
+    title: "The Problem",
+    body: "Is the challenge significant enough to create a meaningful market opportunity?",
+    icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#d87307" strokeWidth="1.6" /><circle cx="12" cy="12" r="5" stroke="#d87307" strokeWidth="1.6" /><circle cx="12" cy="12" r="1.5" fill="#d87307" /></svg>),
+  },
+  {
+    title: "The Solution",
+    body: "Does the company solve the problem in a differentiated and scalable way?",
+    icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.45 1 1.15 1 1.9V17h5v-1.2c0-.75.4-1.45 1-1.9A6 6 0 0 0 12 3Z" stroke="#d87307" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>),
+  },
+  {
+    title: "The Market Opportunity",
+    body: "Is the addressable market large enough to support long-term growth?",
+    icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-8M21 7v5M21 7h-5" stroke="#d87307" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>),
+  },
+  {
+    title: "The Business Model",
+    body: "Can the company generate sustainable revenue and profitability?",
+    icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="2" y="6" width="20" height="12" rx="2" stroke="#d87307" strokeWidth="1.6" /><circle cx="12" cy="12" r="3" stroke="#d87307" strokeWidth="1.6" /></svg>),
+  },
+  {
+    title: "The Leadership Team",
+    body: "Does the team have the experience and capability to execute?",
+    icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3" stroke="#d87307" strokeWidth="1.6" /><circle cx="17" cy="9" r="2.5" stroke="#d87307" strokeWidth="1.6" /><path d="M3 20c0-3 2.5-5 6-5s6 2 6 5M15 15c2.8 0 5 1.6 5 4.5" stroke="#d87307" strokeWidth="1.6" strokeLinecap="round" /></svg>),
+  },
+  {
+    title: "Competitive Positioning",
+    body: "Why is this opportunity different from the alternatives?",
+    icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.6L12 17.3l-5.9 3.3 1.2-6.6-4.8-4.6 6.6-.9L12 2.5Z" stroke="#d87307" strokeWidth="1.6" strokeLinejoin="round" /></svg>),
+  },
+  {
+    title: "Growth Strategy",
+    body: "Is there a credible and repeatable plan for scaling the business?",
+    icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 19V13M11 19V9M17 19V5M4 19h16" stroke="#d87307" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>),
+  },
+  {
+    title: "Financial Story",
+    body: "Are the projections realistic, defensible, and aligned with the strategy?",
+    icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 12V3a9 9 0 1 1-9 9h9Z" stroke="#d87307" strokeWidth="1.6" strokeLinejoin="round" /></svg>),
+  },
+];
+
+const solutions = [
+  {
+    num: "01", name: "Capital Raise Deck", tagline: "Turn your opportunity into a compelling investment story.",
+    desc: "We develop investor presentations that clearly communicate your vision, market opportunity, competitive advantage, and growth potential—helping you present with confidence.",
+    bestFor: ["Startups preparing for investor meetings", "Companies seeking funding", "Leadership teams refining their investment story"],
+    outcome: "A clear, investor-ready presentation that builds confidence and supports productive fundraising conversations.",
+    cta: "Learn More", href: "/contact",
+    icon: (<img src="/images/icons/icon-briefcase.svg" alt="" style={{ width: 26, height: 26 }} />),
+  },
+  {
+    num: "02", name: "Investor Database", tagline: "Connect with investors who align with your opportunity.",
+    desc: "Successful fundraising isn’t measured by how many investors you contact—it’s measured by how many are the right fit. Our Investor Database helps identify, organize, and prioritize investors based on industry focus, investment stage, geographic preferences, and funding interests, giving your outreach strategy greater precision and efficiency.",
+    bestFor: ["Companies beginning investor outreach", "Teams expanding fundraising efforts", "Organizations seeking targeted investor research"],
+    outcome: "A qualified investor pipeline aligned with your fundraising objectives.",
+    cta: "Explore Investor Database", href: "/contact",
+    icon: (<img src="/images/icons/icon-barchart.svg" alt="" style={{ width: 26, height: 26 }} />),
+  },
+  {
+    num: "03", name: "Investor Outreach Campaigns", tagline: "Turn investor research into meaningful conversations.",
+    desc: "Finding the right investors is only the beginning. Building relationships requires thoughtful communication, consistent follow-up, and a structured outreach strategy. We help develop investor outreach campaigns designed to introduce your opportunity, generate interest, and create qualified fundraising conversations.",
+    bestFor: ["Active fundraising campaigns", "Companies ready to engage investors", "Teams seeking structured outreach support"],
+    outcome: "More strategic investor conversations and stronger fundraising momentum.",
+    cta: "Learn More", href: "/contact",
+    icon: (<img src="/images/icons/icon-chat.svg" alt="" style={{ width: 26, height: 26 }} />),
+  },
+  {
+    num: "04", name: "Investor GTM Support", tagline: "Build a fundraising strategy that creates long-term momentum.",
+    desc: "Fundraising follows many of the same principles as a successful Go-to-Market strategy. It requires the right positioning, targeted outreach, consistent messaging, measurable progress, and continuous refinement. Investor GTM Support brings these elements together into a coordinated fundraising strategy, helping organizations manage investor engagement while adapting to feedback and maintaining momentum throughout the capital raise process.",
+    bestFor: ["Growth-stage companies", "Leadership teams managing ongoing fundraising", "Organizations seeking strategic fundraising guidance"],
+    outcome: "A coordinated fundraising strategy that supports long-term investor engagement and capital raise success.",
+    cta: "Explore Investor GTM Support", href: "/services/gtm",
+    icon: (<img src="/images/icons/icon-lightning.svg" alt="" style={{ width: 26, height: 26 }} />),
+  },
+];
+
+const comparisonRows = [
+  ["Strategy Foundation", "BrandStorm™ Strategy Session", "Focused working session to align brand, financial narrative, value proposition, investor storytelling, partner credibility, and market positioning.", "Add-on", "Add-on", "Optional", "Optional"],
+  ["Strategy Foundation", "Messaging Platform", "Internal strategic framework covering vision, company voice, key differentiators, company ethos, value proposition, value points, and elevator pitch.", "Add-on", "Add-on", "Optional", "Optional"],
+  ["Capital Raise Deck", "Essentials Deck", "Investor-ready deck development for a concise raise story.", "✓ up to 12 slides", "—", "—", "—"],
+  ["Capital Raise Deck", "Executive Deck", "Expanded deck development for a more robust investor narrative.", "—", "✓ up to 24 slides", "—", "—"],
+  ["Investor Outreach Asset", "Teaser Piece", "Short-form teaser used to open investor conversations and summarize the opportunity.", "—", "Optional", "✓", "—"],
+  ["Financial Narrative", "Proforma", "Financial modeling support to communicate projections, assumptions, and capital needs.", "—", "Optional", "—", "✓"],
+  ["Project Management", "Client Setup + Meetings", "Client portal, Asana setup, dashboard/process, weekly meetings, agendas, reports, and check-ins as needed.", "Included", "Included", "Included", "Included"],
+  ["Revision Process", "Included Revision Rounds", "Each deliverable includes two rounds of revisions to incorporate feedback.", "✓", "✓", "✓", "✓"],
+];
+
+const journeySteps = [
+  { name: "Capital Raise Deck", icon: "/images/icons/icon-briefcase.svg" },
+  { name: "Investor Database", icon: "/images/icons/icon-barchart.svg" },
+  { name: "Investor Outreach", icon: "/images/icons/icon-chat.svg" },
+  { name: "Investor GTM Support", icon: "/images/icons/icon-lightning.svg" },
+];
+
+const goalMap = [
+  { goal: "Turn your opportunity into a compelling investment story", solution: "Capital Raise Deck" },
+  { goal: "Connect with investors who align with your opportunity", solution: "Investor Database" },
+  { goal: "Turn investor research into meaningful conversations", solution: "Investor Outreach Campaigns" },
+  { goal: "Build a fundraising strategy that creates long-term momentum", solution: "Investor GTM Support" },
+];
+
+const ArrowConnector = () => (
+  <svg width="28" height="14" viewBox="0 0 28 14" fill="none"><path d="M1 7h22M17 1l6 6-6 6" stroke="rgba(216,115,7,0.5)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>
+);
+
 export default function CapitalRaisePage() {
   const s2View = useInView();
   const s3View = useInView();
@@ -50,7 +157,7 @@ export default function CapitalRaisePage() {
     },
     {
       q: "How does Investor Outreach work?",
-      a: "Investor Outreach combines research, messaging, and structured communication to introduce your opportunity to qualified investors. The objective isn't mass outreach, it's creating relevant, personalized conversations that can lead to meaningful investor relationships.",
+      a: "Investor Outreach combines research, messaging, and structured communication to introduce your opportunity to qualified investors. The objective isn't mass outreach—it's creating relevant, personalized conversations that can lead to meaningful investor relationships.",
     },
     {
       q: "Do you help after the deck is complete?",
@@ -121,7 +228,7 @@ export default function CapitalRaisePage() {
                 Investors evaluate more than financials. They invest in a compelling story, a credible team, a clear market opportunity, and confidence in your growth strategy.
               </p>
               <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.8)" }}>
-                Brand Iron helps founders prepare for every stage of the fundraising journey through strategic positioning, investor storytelling, presentation development, investor targeting, and outreach, creating an investment narrative that inspires confidence and moves conversations forward.
+                Brand Iron helps founders prepare for every stage of the fundraising journey through strategic positioning, investor storytelling, presentation development, investor targeting, and outreach—creating an investment narrative that inspires confidence and moves conversations forward.
               </p>
             </div>
           </div>
@@ -146,7 +253,7 @@ export default function CapitalRaisePage() {
             Investors Don&apos;t Invest in Slides. They Invest in Confidence.
           </h2>
 
-          <div style={{ maxWidth: 800, margin: "0 0 72px" }}>
+          <div style={{ margin: "0 0 72px" }}>
             <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 16 }}>
               Investors review countless opportunities, but only a few move forward. The difference is rarely the idea alone, it&apos;s the confidence founders create in their vision, leadership, market opportunity, and ability to execute.
             </p>
@@ -155,46 +262,35 @@ export default function CapitalRaisePage() {
             </p>
           </div>
 
-          {/* What investors are evaluating table */}
+          {/* What investors are evaluating — icon grid */}
           <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ marginBottom: 56 }}>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 12 }}>
+            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 12 }}>
               What Investors Are Really Evaluating
             </h3>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", maxWidth: 720, marginBottom: 32 }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", marginBottom: 32 }}>
               A capital raise presentation is only one part of the decision-making process. Behind every investment conversation are a series of questions that determine whether investors move forward.
             </p>
-            <div style={{ overflowX: "auto" }}>
-              <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "'Montserrat', sans-serif", fontSize: 15 }}>
-                <thead>
-                  <tr>
-                    <th style={{ background: "#F3F0EC", color: "#1a1a1a", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 12, padding: "18px 28px", textAlign: "left", width: "35%" }}>Investors Want to Understand</th>
-                    <th style={{ background: "#d87307", color: "#FFFFFF", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 12, padding: "18px 28px", textAlign: "left", width: "65%" }}>Why It Matters</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    ["The Problem", "Is the challenge significant enough to create a meaningful market opportunity?"],
-                    ["The Solution", "Does the company solve the problem in a differentiated and scalable way?"],
-                    ["The Market Opportunity", "Is the addressable market large enough to support long-term growth?"],
-                    ["The Business Model", "Can the company generate sustainable revenue and profitability?"],
-                    ["The Leadership Team", "Does the team have the experience and capability to execute?"],
-                    ["Competitive Positioning", "Why is this opportunity different from the alternatives?"],
-                    ["Growth Strategy", "Is there a credible and repeatable plan for scaling the business?"],
-                    ["Financial Story", "Are the projections realistic, defensible, and aligned with the strategy?"],
-                  ].map(([q, why], i) => (
-                    <tr key={q} style={{ background: i % 2 === 0 ? "#F9F8F6" : "#FFFFFF" }}>
-                      <td style={{ padding: "18px 28px", color: "#1a1a1a", fontWeight: 600, lineHeight: 1.5, borderBottom: "1px solid #EEEBE7" }}>{q}</td>
-                      <td style={{ padding: "18px 28px", color: "#666", lineHeight: 1.65, borderBottom: "1px solid #EEEBE7" }}>{why}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20 }}>
+              {evaluations.map(({ title, body, icon }) => (
+                <div key={title}
+                  style={{ position: "relative", background: "#F9F8F6", border: "1px solid #EEEBE7", borderRadius: 12, padding: "26px 22px", overflow: "hidden", transition: "transform 0.25s, box-shadow 0.25s" }}
+                  onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-4px)"; el.style.boxShadow = "0 14px 40px rgba(0,0,0,0.08)"; }}
+                  onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "none"; }}
+                >
+                  <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
+                  <div style={{ width: 46, height: 46, borderRadius: "50%", background: "rgba(216,115,7,0.1)", border: "1px solid rgba(216,115,7,0.25)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 16 }}>
+                    {icon}
+                  </div>
+                  <h4 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 14, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#1a1a1a", marginBottom: 8, lineHeight: 1.3 }}>{title}</h4>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12.5, lineHeight: 1.65, color: "#666", margin: 0 }}>{body}</p>
+                </div>
+              ))}
             </div>
           </div>
 
           {/* Beyond the pitch deck */}
           <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ maxWidth: 800, margin: "0 0 56px" }}>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 16 }}>
+            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 16 }}>
               Beyond the Pitch Deck
             </h3>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666" }}>
@@ -202,12 +298,19 @@ export default function CapitalRaisePage() {
             </p>
           </div>
 
-          {/* Key insight */}
-          <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ background: "#F9F8F6", border: "1px solid #EEEBE7", borderLeft: "4px solid #d87307", borderRadius: 12, padding: "48px 64px" }}>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>Key Insight</p>
-            <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.05em", color: "#1a1a1a", lineHeight: 1.4, margin: 0 }}>
-              The strongest fundraising presentations don&apos;t try to answer every question. They answer the questions that matter most, clearly, confidently, and in a way that earns the next conversation.
-            </p>
+          {/* Key insight — photo panel */}
+          <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ position: "relative", overflow: "hidden", borderRadius: 16, minHeight: 300 }}>
+            <div style={{ position: "absolute", inset: 0, backgroundImage: "url('/images/bg-peaks.png')", backgroundSize: "cover", backgroundPosition: "center" }} />
+            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(90deg, rgba(15,27,45,0.97) 0%, rgba(15,27,45,0.85) 45%, rgba(15,27,45,0.35) 100%)" }} />
+            <div style={{ position: "relative", zIndex: 2, padding: "56px 64px", maxWidth: 720 }}>
+              <div style={{ width: 56, height: 56, borderRadius: "50%", background: "rgba(216,115,7,0.15)", border: "1px solid rgba(216,115,7,0.4)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 24 }}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9.5 8.5c-2.2 0-4 1.8-4 4v3h4v-4h-2c0-1.1.9-2 2-2V8.5Zm9 0c-2.2 0-4 1.8-4 4v3h4v-4h-2c0-1.1.9-2 2-2V8.5Z" fill="#d87307" /></svg>
+              </div>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>Key Insight</p>
+              <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.4, margin: 0 }}>
+                The strongest fundraising presentations don&apos;t try to answer every question. They answer the questions that matter most—clearly, confidently, and in a way that earns the next conversation.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -228,7 +331,7 @@ export default function CapitalRaisePage() {
             <h2 className={`section-heading reveal${s3View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               Not a Process. A Strategic Framework.
             </h2>
-            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 760 }}>
+            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555" }}>
               Successful fundraising requires more than a pitch deck. Brand Iron connects strategy, investor materials, investor targeting, and outreach into one integrated fundraising system.
             </p>
           </div>
@@ -260,7 +363,7 @@ export default function CapitalRaisePage() {
                 focuses: ["Investor Outreach", "Follow-up Strategy", "Investor GTM Support", "Relationship Management", "Campaign Tracking"],
                 icon: (<img src="/images/icons/icon-chat.svg" alt="" style={{ width: 26, height: 26 }} />),
               },
-            ].map(({ num, title, lead, focuses, icon }, i) => (
+            ].map(({ num, title, lead, focuses, icon }) => (
               <div key={num}
                 className={`reveal${s3View.inView ? ' visible' : ''}`}
                 style={{ position: "relative", background: "#F9F8F6", border: "1px solid #EEEBE7", borderRadius: 14, padding: "32px 24px 28px", overflow: "hidden", transition: "transform 0.25s, box-shadow 0.25s" }}
@@ -270,9 +373,9 @@ export default function CapitalRaisePage() {
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 18 }}>
                   <div style={{ width: 44, height: 44, borderRadius: 10, background: "rgba(216,115,7,0.12)", border: "1px solid rgba(216,115,7,0.2)", display: "flex", alignItems: "center", justifyContent: "center" }}>{icon}</div>
-                  <span style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 34, color: "rgba(216,115,7,0.18)", lineHeight: 1 }}>{num}</span>
+                  <span style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontWeight: 900, fontSize: 34, color: "rgba(216,115,7,0.18)", lineHeight: 1 }}>{num}</span>
                 </div>
-                <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 16, fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 10, lineHeight: 1.25 }}>{title}</h3>
+                <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 16, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 10, lineHeight: 1.25 }}>{title}</h3>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.7, color: "#555", fontWeight: 600, marginBottom: 18 }}>{lead}</p>
                 <div style={{ borderTop: "1px solid #EEEBE7", paddingTop: 14 }}>
                   <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#aaa", marginBottom: 10 }}>Focus Areas</p>
@@ -288,7 +391,7 @@ export default function CapitalRaisePage() {
 
           {/* Closing */}
           <div className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ background: "rgba(255,255,255,0.88)", backdropFilter: "blur(12px)", borderRadius: 16, padding: "40px 56px", borderLeft: "4px solid #d87307" }}>
-            <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 16, lineHeight: 1.3 }}>
+            <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 16, lineHeight: 1.3 }}>
               One Framework. One Investor Journey.
             </p>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.85, color: "#555", margin: 0 }}>
@@ -328,7 +431,7 @@ export default function CapitalRaisePage() {
               { num: "04", title: "Identify the Right Investors", body: "Focus on investors aligned with your stage, industry, and goals." },
               { num: "05", title: "Engage Investors", body: "Support outreach, follow-up, and relationship building." },
               { num: "06", title: "Maintain Momentum", body: "Refine your messaging and sustain fundraising progress as conversations evolve." },
-            ].map(({ num, title, body }, i) => (
+            ].map(({ num, title, body }) => (
               <div key={num}
                 className={`reveal${s4View.inView ? ' visible' : ''}`}
                 style={{ position: "relative", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 14, padding: "32px 28px", overflow: "hidden", transition: "background 0.25s, border-color 0.25s" }}
@@ -338,9 +441,9 @@ export default function CapitalRaisePage() {
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.2))" }} />
                 <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 14 }}>
                   <div style={{ width: 38, height: 38, borderRadius: "50%", background: "rgba(216,115,7,0.15)", border: "1px solid rgba(216,115,7,0.3)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                    <span style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 13, color: "#d87307" }}>{num}</span>
+                    <span style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontWeight: 900, fontSize: 13, color: "#d87307" }}>{num}</span>
                   </div>
-                  <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 15, fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.06em", color: "#FFFFFF", margin: 0, lineHeight: 1.3 }}>{title}</h3>
+                  <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 15, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.06em", color: "#FFFFFF", margin: 0, lineHeight: 1.3 }}>{title}</h3>
                 </div>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "rgba(255,255,255,0.6)", margin: 0 }}>{body}</p>
               </div>
@@ -360,115 +463,81 @@ export default function CapitalRaisePage() {
             <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               Support for Every Stage of Your Fundraising Journey
             </h2>
-            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 760 }}>
+            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555" }}>
               Whether you&apos;re preparing your first investor pitch, refining your story, identifying qualified investors, or executing outreach, Brand Iron offers specialized solutions that can stand alone or work together as a complete fundraising system.
             </p>
           </div>
 
-          {/* 4 solution cards */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 24, marginBottom: 64 }}>
-            {[
-              {
-                name: "Capital Raise Deck", tagline: "Turn your opportunity into a compelling investment story.",
-                desc: "We develop investor presentations that clearly communicate your vision, market opportunity, competitive advantage, and growth potential, helping you present with confidence.",
-                bestFor: ["Startups preparing for investor meetings", "Companies seeking funding", "Leadership teams refining their investment story"],
-                outcome: "A clear, investor-ready presentation that builds confidence and supports productive fundraising conversations.",
-                href: "/contact", highlight: true,
-              },
-              {
-                name: "Investor Database", tagline: "Connect with investors who align with your opportunity.",
-                desc: "Successful fundraising isn't measured by how many investors you contact, it's measured by how many are the right fit. Our Investor Database helps identify, organize, and prioritize investors based on industry focus, investment stage, geographic preferences, and funding interests.",
-                bestFor: ["Companies beginning investor outreach", "Teams expanding fundraising efforts", "Organizations seeking targeted investor research"],
-                outcome: "A qualified investor pipeline aligned with your fundraising objectives.",
-                href: "/contact", highlight: false,
-              },
-              {
-                name: "Investor Outreach Campaigns", tagline: "Turn investor research into meaningful conversations.",
-                desc: "Finding the right investors is only the beginning. We help develop investor outreach campaigns designed to introduce your opportunity, generate interest, and create qualified fundraising conversations.",
-                bestFor: ["Active fundraising campaigns", "Companies ready to engage investors", "Teams seeking structured outreach support"],
-                outcome: "More strategic investor conversations and stronger fundraising momentum.",
-                href: "/contact", highlight: false,
-              },
-              {
-                name: "Investor GTM Support", tagline: "Build a fundraising strategy that creates long-term momentum.",
-                desc: "Fundraising follows many of the same principles as a successful Go-to-Market strategy. Investor GTM Support brings positioning, outreach, messaging, and measurement together into a coordinated fundraising strategy.",
-                bestFor: ["Growth-stage companies", "Leadership teams managing ongoing fundraising", "Organizations seeking strategic fundraising guidance"],
-                outcome: "A coordinated fundraising strategy that supports long-term investor engagement and capital raise success.",
-                href: "/contact", highlight: false,
-              },
-            ].map(({ name, tagline, desc, bestFor, outcome, href, highlight }, i) => (
+          {/* 4 solution cards — single row */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20, marginBottom: 64 }}>
+            {solutions.map(({ num, name, tagline, desc, bestFor, outcome, cta, href, icon }) => (
               <div key={name}
                 className={`reveal${s5View.inView ? ' visible' : ''}`}
-                style={{ position: "relative", background: highlight ? "#F9F8F6" : "#FFFFFF", border: highlight ? "2px solid #d87307" : "1px solid rgba(15,27,45,0.08)", borderRadius: 14, overflow: "hidden", boxShadow: highlight ? "0 20px 60px rgba(216,115,7,0.18)" : "0 4px 20px rgba(0,0,0,0.06)", transition: "transform 0.25s, box-shadow 0.25s", display: "flex", flexDirection: "column" }}
-                onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-6px)"; el.style.boxShadow = highlight ? "0 28px 72px rgba(216,115,7,0.26)" : "0 12px 40px rgba(0,0,0,0.12)"; }}
-                onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = highlight ? "0 20px 60px rgba(216,115,7,0.18)" : "0 4px 20px rgba(0,0,0,0.06)"; }}
+                style={{ position: "relative", background: "#FFFFFF", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 14, overflow: "hidden", boxShadow: "0 4px 20px rgba(0,0,0,0.06)", transition: "transform 0.25s, box-shadow 0.25s", display: "flex", flexDirection: "column" }}
+                onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-6px)"; el.style.boxShadow = "0 16px 44px rgba(0,0,0,0.12)"; }}
+                onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "0 4px 20px rgba(0,0,0,0.06)"; }}
               >
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
-                {highlight && (
-                  <div style={{ position: "absolute", top: 20, right: 20, background: "#d87307", color: "#FFFFFF", fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", padding: "5px 12px", borderRadius: 20 }}>
-                    Most Popular
+                <div style={{ padding: "28px 22px 22px", flex: 1 }}>
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 16 }}>
+                    <div style={{ width: 42, height: 42, borderRadius: 10, background: "rgba(216,115,7,0.12)", border: "1px solid rgba(216,115,7,0.2)", display: "flex", alignItems: "center", justifyContent: "center" }}>{icon}</div>
+                    <span style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontWeight: 900, fontSize: 30, color: "rgba(216,115,7,0.18)", lineHeight: 1 }}>{num}</span>
                   </div>
-                )}
-                <div style={{ padding: "36px 32px 28px", flex: 1 }}>
-                  <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 20, fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 12, lineHeight: 1.2 }}>{name}</h3>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.7, color: "#444", fontWeight: 600, marginBottom: 14 }}>{tagline}</p>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "#666", marginBottom: 24 }}>{desc}</p>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#aaa", marginBottom: 10 }}>Ideal For</p>
-                  <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 24 }}>
+                  <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 16, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#1a1a1a", marginBottom: 10, lineHeight: 1.25 }}>{name}</h3>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12.5, lineHeight: 1.6, color: "#444", fontWeight: 600, marginBottom: 12 }}>{tagline}</p>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, lineHeight: 1.65, color: "#666", marginBottom: 18 }}>{desc}</p>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 9.5, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#aaa", marginBottom: 8 }}>Ideal For</p>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 6, marginBottom: 18 }}>
                     {bestFor.map(b => (
-                      <div key={b} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
-                        <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#d87307", flexShrink: 0, marginTop: 5 }} />
-                        <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, color: "#555", lineHeight: 1.5 }}>{b}</span>
+                      <div key={b} style={{ display: "flex", gap: 8, alignItems: "flex-start" }}>
+                        <div style={{ width: 5, height: 5, borderRadius: "50%", background: "#d87307", flexShrink: 0, marginTop: 5 }} />
+                        <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11.5, color: "#555", lineHeight: 1.5 }}>{b}</span>
                       </div>
                     ))}
                   </div>
                 </div>
-                <div style={{ padding: "20px 32px 28px", borderTop: "1px solid rgba(0,0,0,0.06)" }}>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#d87307", marginBottom: 8 }}>Primary Outcome</p>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.65, color: "#444", marginBottom: 20, fontStyle: "italic" }}>{outcome}</p>
-                  <Link href={href} style={{ display: "inline-flex", alignItems: "center", gap: 8, color: "#d87307", fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none" }}>
-                    Learn More →
+                <div style={{ padding: "16px 22px 24px", borderTop: "1px solid rgba(0,0,0,0.06)" }}>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#d87307", marginBottom: 8 }}>Primary Outcome</p>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, lineHeight: 1.6, color: "#444", marginBottom: 16, fontStyle: "italic" }}>{outcome}</p>
+                  <Link href={href} style={{ display: "inline-flex", alignItems: "center", gap: 8, color: "#d87307", fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: "0.08em", textTransform: "uppercase", textDecoration: "none" }}>
+                    {cta} →
                   </Link>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Compare capital raise deck components */}
+          {/* Compare capital raise solutions */}
           <div className={`reveal${s5View.inView ? ' visible' : ''}`}>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 8 }}>
+            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 8 }}>
               Compare Capital Raise Solutions
             </h3>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.8, color: "#666", maxWidth: 640, marginBottom: 32 }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.8, color: "#666", marginBottom: 32 }}>
               Every deliverable includes client onboarding, dedicated project management, and two rounds of revisions.
             </p>
             <div style={{ overflowX: "auto" }}>
-              <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "'Montserrat', sans-serif", fontSize: 13 }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "'Montserrat', sans-serif", fontSize: 12.5, minWidth: 980 }}>
                 <thead>
                   <tr>
-                    <th style={{ background: "#F3F0EC", color: "#1a1a1a", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", fontSize: 11, padding: "16px 20px", textAlign: "left" }}>Component</th>
-                    <th style={{ background: "#F3F0EC", color: "#555", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", fontSize: 11, padding: "16px 20px", textAlign: "center" }}>Essentials Deck</th>
-                    <th style={{ background: "#d87307", color: "#FFFFFF", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", fontSize: 11, padding: "16px 20px", textAlign: "center" }}>Executive Deck</th>
-                    <th style={{ background: "#F3F0EC", color: "#555", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", fontSize: 11, padding: "16px 20px", textAlign: "center" }}>Teaser Piece</th>
-                    <th style={{ background: "#F3F0EC", color: "#555", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", fontSize: 11, padding: "16px 20px", textAlign: "center" }}>Proforma</th>
+                    <th style={{ background: "#F3F0EC", color: "#1a1a1a", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", fontSize: 10.5, padding: "14px 16px", textAlign: "left" }}>Component</th>
+                    <th style={{ background: "#F3F0EC", color: "#1a1a1a", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", fontSize: 10.5, padding: "14px 16px", textAlign: "left" }}>Service</th>
+                    <th style={{ background: "#F3F0EC", color: "#555", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", fontSize: 10.5, padding: "14px 16px", textAlign: "left", minWidth: 260 }}>Description / Scope</th>
+                    <th style={{ background: "#F3F0EC", color: "#555", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", fontSize: 10.5, padding: "14px 12px", textAlign: "center" }}>Essentials Deck</th>
+                    <th style={{ background: "#d87307", color: "#FFFFFF", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", fontSize: 10.5, padding: "14px 12px", textAlign: "center" }}>Executive Deck</th>
+                    <th style={{ background: "#F3F0EC", color: "#555", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", fontSize: 10.5, padding: "14px 12px", textAlign: "center" }}>Teaser Piece</th>
+                    <th style={{ background: "#F3F0EC", color: "#555", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", fontSize: 10.5, padding: "14px 12px", textAlign: "center" }}>Proforma</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {[
-                    ["BrandStorm™ Strategy Session", "Add-on", "Add-on", "Optional", "Optional"],
-                    ["Messaging Platform", "Add-on", "Add-on", "Optional", "Optional"],
-                    ["Deck Length", "Up to 12 slides", "Up to 24 slides", "—", "—"],
-                    ["Investor Storytelling", "✓", "✓", "✓", "—"],
-                    ["Financial Modeling Support", "—", "Optional", "—", "✓"],
-                    ["Client Portal & Project Management", "Included", "Included", "Included", "Included"],
-                    ["Included Revision Rounds", "2 rounds", "2 rounds", "2 rounds", "2 rounds"],
-                  ].map(([cap, e1, e2, t, p], i) => (
-                    <tr key={cap} style={{ background: i % 2 === 0 ? "#F9F8F6" : "#FFFFFF" }}>
-                      <td style={{ padding: "14px 20px", color: "#1a1a1a", fontWeight: 600, borderBottom: "1px solid #EEEBE7" }}>{cap}</td>
-                      <td style={{ padding: "14px 20px", color: "#555", textAlign: "center", borderBottom: "1px solid #EEEBE7" }}>{e1}</td>
-                      <td style={{ padding: "14px 20px", color: "#1a1a1a", fontWeight: 500, textAlign: "center", borderBottom: "1px solid #EEEBE7", background: "rgba(216,115,7,0.04)" }}>{e2}</td>
-                      <td style={{ padding: "14px 20px", color: "#555", textAlign: "center", borderBottom: "1px solid #EEEBE7" }}>{t}</td>
-                      <td style={{ padding: "14px 20px", color: "#555", textAlign: "center", borderBottom: "1px solid #EEEBE7" }}>{p}</td>
+                  {comparisonRows.map(([component, service, desc, e1, e2, t, p], i) => (
+                    <tr key={`${component}-${service}`} style={{ background: i % 2 === 0 ? "#F9F8F6" : "#FFFFFF" }}>
+                      <td style={{ padding: "14px 16px", color: "#1a1a1a", fontWeight: 600, borderBottom: "1px solid #EEEBE7", verticalAlign: "top" }}>{component}</td>
+                      <td style={{ padding: "14px 16px", color: "#1a1a1a", fontWeight: 600, borderBottom: "1px solid #EEEBE7", verticalAlign: "top" }}>{service}</td>
+                      <td style={{ padding: "14px 16px", color: "#666", lineHeight: 1.6, borderBottom: "1px solid #EEEBE7", verticalAlign: "top" }}>{desc}</td>
+                      <td style={{ padding: "14px 12px", color: "#555", textAlign: "center", borderBottom: "1px solid #EEEBE7", verticalAlign: "top" }}>{e1}</td>
+                      <td style={{ padding: "14px 12px", color: "#1a1a1a", fontWeight: 500, textAlign: "center", borderBottom: "1px solid #EEEBE7", background: "rgba(216,115,7,0.04)", verticalAlign: "top" }}>{e2}</td>
+                      <td style={{ padding: "14px 12px", color: "#555", textAlign: "center", borderBottom: "1px solid #EEEBE7", verticalAlign: "top" }}>{t}</td>
+                      <td style={{ padding: "14px 12px", color: "#555", textAlign: "center", borderBottom: "1px solid #EEEBE7", verticalAlign: "top" }}>{p}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -477,14 +546,72 @@ export default function CapitalRaisePage() {
           </div>
 
           {/* Not sure where to start */}
-          <div className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ position: "relative", background: "rgba(216,115,7,0.08)", border: "1px solid rgba(216,115,7,0.2)", borderRadius: 16, padding: "48px 56px", marginTop: 56, overflow: "hidden" }}>
+          <div className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ position: "relative", background: "#0F1B2D", borderRadius: 16, padding: "48px 56px", marginTop: 64, overflow: "hidden" }}>
             <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, transparent, #d87307, transparent)" }} />
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 16, textAlign: "center" }}>
-              Not Sure Where to Start?
-            </h3>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.85, color: "#555", textAlign: "center", maxWidth: 760, margin: "0 auto" }}>
-              Every organization enters the fundraising process at a different stage. Some need to establish a compelling investor story before approaching the market. Others already have presentation materials but require access to qualified investors or support executing an effective outreach strategy. During a Capital Raise Strategy Session, we&apos;ll assess your current stage of investor readiness, identify the most impactful next steps, and recommend the solutions that best align with your fundraising objectives. Our solutions are designed to work independently, but they&apos;re most powerful when connected as part of a complete Capital Raise Support strategy, from investor story to investor engagement.
+
+            <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 24, flexWrap: "wrap", marginBottom: 24 }}>
+              <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.05em", color: "#FFFFFF", margin: 0, maxWidth: 560 }}>
+                Not Sure Where to Start?
+              </h3>
+              <Link href="/contact" style={{
+                display: "inline-flex", alignItems: "center", gap: 10, flexShrink: 0,
+                fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 12.5,
+                letterSpacing: "0.1em", textTransform: "uppercase",
+                background: "#d87307", color: "#FFFFFF", textDecoration: "none",
+                padding: "14px 26px", borderRadius: 8, transition: "background 0.2s",
+              }}>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="16" rx="2" stroke="#fff" strokeWidth="1.8" /><path d="M3 9h18M8 3v4M16 3v4" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" /></svg>
+                Schedule a Strategy Session
+              </Link>
+            </div>
+
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.85, color: "rgba(255,255,255,0.7)", maxWidth: 820, marginBottom: 48 }}>
+              Every organization enters the fundraising process at a different stage. Some need to establish a compelling investor story before approaching the market. Others already have presentation materials but require access to qualified investors or support executing an effective outreach strategy. During a Capital Raise Strategy Session, we&apos;ll assess your current stage of investor readiness, identify the most impactful next steps, and recommend the solutions that best align with your fundraising objectives.
             </p>
+
+            {/* Solutions that work better together */}
+            <div style={{ textAlign: "center", marginBottom: 48 }}>
+              <h4 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(16px, 1.6vw, 20px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.05em", color: "#FFFFFF", marginBottom: 14 }}>
+                Solutions That Work Better Together
+              </h4>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.8, color: "rgba(255,255,255,0.6)", maxWidth: 700, margin: "0 auto 40px" }}>
+                Our solutions are designed to work independently, but they&apos;re most powerful when connected as part of a complete Capital Raise Support strategy—from investor story to investor engagement.
+              </p>
+
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", gap: 8 }}>
+                {journeySteps.map((step, i) => (
+                  <div key={step.name} style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10, width: 130 }}>
+                      <div style={{ position: "relative", width: 56, height: 56, borderRadius: "50%", background: "rgba(216,115,7,0.15)", border: "1px solid rgba(216,115,7,0.35)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                        <img src={step.icon} alt="" style={{ width: 24, height: 24 }} />
+                        <span style={{ position: "absolute", top: -6, right: -6, width: 20, height: 20, borderRadius: "50%", background: "#d87307", color: "#FFFFFF", fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center" }}>{i + 1}</span>
+                      </div>
+                      <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11.5, fontWeight: 600, color: "rgba(255,255,255,0.75)", textAlign: "center", lineHeight: 1.3 }}>{step.name}</span>
+                    </div>
+                    {i < journeySteps.length - 1 && <ArrowConnector />}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Which solution is right for you */}
+            <div>
+              <h4 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(16px, 1.6vw, 20px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.05em", color: "#FFFFFF", textAlign: "center", marginBottom: 28 }}>
+                Which Solution Is Right for You?
+              </h4>
+              <div style={{ display: "flex", flexDirection: "column", gap: 1, maxWidth: 880, margin: "0 auto" }}>
+                {goalMap.map(({ goal, solution }) => (
+                  <div key={solution} style={{ display: "grid", gridTemplateColumns: "1fr auto 1fr", alignItems: "center", gap: 20, padding: "18px 4px", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                      <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#d87307", flexShrink: 0 }} />
+                      <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13.5, color: "rgba(255,255,255,0.75)", lineHeight: 1.5 }}>If your goal is to {goal}</span>
+                    </div>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#d87307" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                    <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 700, color: "#FFFFFF" }}>Start with {solution}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -504,10 +631,10 @@ export default function CapitalRaisePage() {
             <h2 className={`section-heading reveal${s6View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               Investor Confidence That Creates Fundraising Momentum
             </h2>
-            <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 720, marginBottom: 16 }}>
+            <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 16 }}>
               A successful capital raise isn&apos;t measured by the number of presentations you deliver, it&apos;s measured by your ability to build investor confidence, create meaningful conversations, and move your fundraising forward.
             </p>
-            <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 720 }}>
+            <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666" }}>
               Our Capital Raise Support framework is designed to help you communicate your opportunity with clarity, engage the right investors, and create the momentum needed to support long-term growth.
             </p>
           </div>
@@ -535,7 +662,7 @@ export default function CapitalRaisePage() {
                 body: "Create strategic assets and messaging that continue supporting future fundraising, partnerships, and business growth.",
                 impacts: ["Reusable investor assets", "Consistent communications", "Scalable fundraising foundation"],
               },
-            ].map(({ title, body, impacts }, i) => (
+            ].map(({ title, body, impacts }) => (
               <div key={title}
                 className={`reveal${s6View.inView ? ' visible' : ''}`}
                 style={{ position: "relative", background: "rgba(255,255,255,0.92)", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 14, padding: "28px 24px", overflow: "hidden", transition: "transform 0.25s, box-shadow 0.25s" }}
@@ -543,7 +670,7 @@ export default function CapitalRaisePage() {
                 onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "none"; }}
               >
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
-                <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 15, fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 12, lineHeight: 1.3 }}>{title}</h3>
+                <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 15, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 12, lineHeight: 1.3 }}>{title}</h3>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "#555", marginBottom: 18 }}>{body}</p>
                 <div style={{ borderTop: "1px solid rgba(216,115,7,0.2)", paddingTop: 14 }}>
                   <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#d87307", marginBottom: 10 }}>Outcome</p>
@@ -561,7 +688,7 @@ export default function CapitalRaisePage() {
           {/* Strategic insight */}
           <div className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ background: "#F9F8F6", border: "1px solid #EEEBE7", borderLeft: "4px solid #d87307", borderRadius: 12, padding: "40px 56px", marginBottom: 56, textAlign: "center" }}>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>Strategic Insight</p>
-            <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.05em", color: "#1a1a1a", lineHeight: 1.4, margin: 0 }}>
+            <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.4, margin: 0 }}>
               Capital is the outcome. Investor confidence is what makes it possible.
             </p>
           </div>
@@ -571,7 +698,7 @@ export default function CapitalRaisePage() {
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               Frequently Asked Questions
             </p>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 8 }}>
+            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 8 }}>
               Common Questions About Capital Raise Support
             </h3>
             <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", maxWidth: 660, margin: "0 0 40px" }}>
@@ -634,6 +761,9 @@ export default function CapitalRaisePage() {
               Explore Our Go-to-Market Strategy Services
             </Link>
           </div>
+          <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.7, color: "rgba(255,255,255,0.5)", maxWidth: 620, margin: "0 auto 20px" }}>
+            Meet with our team to evaluate your investor readiness, identify opportunities to strengthen your fundraising strategy, and determine the right Capital Raise Support solutions for your business.
+          </p>
           <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.7, color: "rgba(255,255,255,0.45)", maxWidth: 560, margin: "0 auto" }}>
             Raising capital is only one part of sustainable growth. Discover how our Go-to-Market Strategy helps organizations become discoverable, trusted, and chosen while building predictable revenue systems.
           </p>
