@@ -16,9 +16,9 @@ function useInView(threshold = 0.15) {
 }
 
 const services = [
-  { label: "AI Visibility" },
-  { label: "GTM Strategy" },
-  { label: "Capital Raise Support" },
+  { label: "AI Visibility", href: "/services/ai-visibility" },
+  { label: "GTM Strategy", href: "/services/gtm" },
+  { label: "Capital Raise Support", href: "/services/capital-raise" },
 ];
 
 const stats = [
@@ -195,18 +195,18 @@ export default function Home() {
             const firstLine = words[0];
             const secondLine = words.slice(1).join(" ");
             return (
-            <p key={s.label} style={{
+            <Link key={s.label} href={s.href} style={{
               flex: "0 0 auto",
               fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 11,
               letterSpacing: "0.16em", textTransform: "uppercase",
               color: "#FFFFFF", textShadow: "0 1px 8px rgba(0,0,0,0.8)",
-              whiteSpace: "nowrap", cursor: "default", textAlign: "center",
-              lineHeight: 1.6,
+              whiteSpace: "nowrap", cursor: "pointer", textAlign: "center",
+              lineHeight: 1.6, display: "block",
               transition: "color 0.2s",
             }}
             onMouseEnter={e => (e.currentTarget.style.color = "#d87307")}
             onMouseLeave={e => (e.currentTarget.style.color = "#FFFFFF")}
-            >{firstLine}<br />{secondLine}</p>
+            >{firstLine}<br />{secondLine}</Link>
             );
           })}
         </div>
