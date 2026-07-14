@@ -306,9 +306,13 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Image — right */}
+            {/* Video — right */}
             <div className={`reveal${s3.inView ? " visible" : ""}`}>
-              <img src="/images/BIRepresentationImage1Scale.jpeg" alt="" style={{ width: "100%", height: "auto", display: "block", boxShadow: "0 24px 60px rgba(0,0,0,0.18)" }} />
+              <video
+                src="/Data.mp4"
+                autoPlay muted loop playsInline preload="auto"
+                style={{ width: "100%", height: "auto", display: "block", boxShadow: "0 24px 60px rgba(0,0,0,0.18)" }}
+              />
             </div>
           </div>
 
