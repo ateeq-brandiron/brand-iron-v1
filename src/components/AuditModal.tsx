@@ -4,7 +4,7 @@ import { useState } from "react";
 export default function AuditModal({ onClose }: { onClose: () => void }) {
   const [step, setStep] = useState(1); // 1 = form, 2 = thank you
   const [form, setForm] = useState({
-    firstName: "", lastName: "", email: "", phone: "",
+    name: "", email: "", phone: "",
     website: "", company: "", monthlyVisitors: "", currentSeo: "", goal: "",
   });
   const [submitting, setSubmitting] = useState(false);
@@ -28,7 +28,7 @@ export default function AuditModal({ onClose }: { onClose: () => void }) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        name: `${form.firstName} ${form.lastName}`.trim(),
+        name: form.name,
         email: form.email,
         company: form.company,
         phone: form.phone,
@@ -86,14 +86,10 @@ export default function AuditModal({ onClose }: { onClose: () => void }) {
               </p>
 
               <form onSubmit={handleSubmit}>
-                {/* Name row */}
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 14 }}>
-                  {[["firstName", "First Name *"], ["lastName", "Last Name *"]].map(([k, label]) => (
-                    <div key={k}>
-                      <label style={labelStyle}>{label}</label>
-                      <input required value={form[k as keyof typeof form]} onChange={e => set(k, e.target.value)} style={inputStyle} placeholder={label.replace(" *","")} />
-                    </div>
-                  ))}
+                {/* Name */}
+                <div style={{ marginBottom: 14 }}>
+                  <label style={labelStyle}>Name *</label>
+                  <input required value={form.name} onChange={e => set("name", e.target.value)} style={inputStyle} placeholder="Your name" />
                 </div>
 
                 {/* Email + Phone */}
