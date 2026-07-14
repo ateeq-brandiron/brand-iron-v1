@@ -77,7 +77,7 @@ export default function GTMPage() {
       {/* ── HERO ───────────────────────────────────────────── */}
       <section className="gtm-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <video
-          src="/Animate_this_image_Pounding_h.mp4"
+          src="/The_connecting_line_should_not_Kling_O3_Video_Edit_60783.mp4"
           autoPlay muted loop playsInline preload="auto"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }}
         />
