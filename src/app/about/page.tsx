@@ -80,7 +80,7 @@ const TEAM = [
     bio: "Shelly is passionate about simple, smart design that tells a compelling story. A seasoned art director, she's worked on projects ranging from small startups to global brands like Intel, Vivint, and Microsoft.",
   },
   {
-    name: "Katrina",
+    name: "Katrina Jumawid",
     title: "Account Manager",
     photo: "/images/team/katrina.jpg",
     bio: "Katrina brings sharp client relationship skills and a results-driven approach to every account. She ensures clients receive seamless communication, timely delivery, and consistent value.",
@@ -217,7 +217,7 @@ export default function AboutPage() {
                 We combine strategy, branding, go-to-market, AI, automation, CRM, and revenue operations into integrated systems that drive compounding, measurable growth.
               </p>
               <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#555" }}>
-                Companies don&apos;t fail because they lack effort. They fail because their revenue systems are fragmented—marketing, sales, technology, and data all operating in separate lanes.
+                Companies don&apos;t fail because they lack effort. They fail because their revenue systems are fragmented: marketing, sales, technology, and data all operating in separate lanes.
               </p>
             </div>
             <div className={`reveal-group${s2View.inView ? ' visible' : ''}`} style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
@@ -313,7 +313,7 @@ export default function AboutPage() {
                 A World Where Revenue Is Engineered, Not Hoped For
               </h3>
               <p style={{ fontSize: 15.5, lineHeight: 1.85, color: "#555", marginBottom: 16 }}>
-                We envision a future where every revenue-generating organization operates with complete alignment—strategy, brand, technology, and talent working as a single compounding system rather than competing factions.
+                We envision a future where every revenue-generating organization operates with complete alignment: strategy, brand, technology, and talent working as a single compounding system rather than competing factions.
               </p>
               <p style={{ fontSize: 15.5, lineHeight: 1.85, color: "#555" }}>
                 In that world, growth is predictable. Pipelines are engineered. And revenue becomes a function of design, not luck.

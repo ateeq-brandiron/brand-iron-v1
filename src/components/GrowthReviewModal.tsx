@@ -119,7 +119,7 @@ export default function GrowthReviewModal({ onClose }: { onClose: () => void }) 
                     <option style={optionStyle}>Improve Brand Positioning &amp; Messaging</option>
                     <option style={optionStyle}>Launch a New Product or Market</option>
                     <option style={optionStyle}>Align Sales &amp; Marketing Systems</option>
-                    <option style={optionStyle}>Not Sure — Need Strategic Guidance</option>
+                    <option style={optionStyle}>Not Sure / Need Strategic Guidance</option>
                   </select>
                 </div>
 

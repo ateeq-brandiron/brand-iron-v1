@@ -169,7 +169,7 @@ export default function GTMPage() {
               Growth now depends on more than marketing. It requires a connected system that makes your business discoverable, builds trust across every touchpoint, and aligns strategy, visibility, demand generation, sales, automation, and analytics.
             </p>
             <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#444", fontWeight: 600 }}>
-              The organizations winning market share aren&apos;t simply spending more—they&apos;re executing better through connected growth systems. That&apos;s the advantage of a modern go-to-market strategy.
+              The organizations winning market share aren&apos;t simply spending more. They&apos;re executing better through connected growth systems. That&apos;s the advantage of a modern go-to-market strategy.
             </p>
           </div>
 
@@ -234,7 +234,7 @@ export default function GTMPage() {
               Growth Doesn&apos;t Come from More Marketing. It Comes from Better Alignment.
             </h2>
             <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", margin: "0 0 16px" }}>
-              Organizations don&apos;t struggle because they&apos;re doing too little—they struggle because their efforts aren&apos;t connected.
+              Organizations don&apos;t struggle because they&apos;re doing too little. They struggle because their efforts aren&apos;t connected.
             </p>
             <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 16 }}>
               A modern go-to-market strategy is more than a collection of tactics. It aligns strategy, visibility, authority, demand generation, sales, automation, and analytics into one connected growth system where every initiative supports measurable business outcomes.
@@ -385,7 +385,7 @@ export default function GTMPage() {
               {
                 num: "03", title: "Authority & Trust Building",
                 lead: "Visibility creates awareness. Authority creates confidence.",
-                body: "Modern buyers—and increasingly AI systems—look for signals that demonstrate expertise, credibility, and trust before recommending or engaging with an organization. We help establish those signals through strategic content, executive positioning, reviews, digital PR, and industry recognition.",
+                body: "Modern buyers, and increasingly AI systems, look for signals that demonstrate expertise, credibility, and trust before recommending or engaging with an organization. We help establish those signals through strategic content, executive positioning, reviews, digital PR, and industry recognition.",
                 activities: ["Authority Content", "Executive Branding", "Review Strategy", "Thought Leadership", "Guest Posting", "Digital PR"],
                 icon: (<img src="/images/icons/icon-chat.svg" alt="" style={{ width: 24, height: 24 }} />),
               },
@@ -412,7 +412,7 @@ export default function GTMPage() {
               },
               {
                 num: "07", title: "Analytics & Revenue Intelligence",
-                lead: "Growth decisions should be informed by evidence—not assumptions.",
+                lead: "Growth decisions should be informed by evidence, not assumptions.",
                 body: "Our reporting framework connects marketing performance, sales activity, and revenue insights into executive-level dashboards that support better planning, forecasting, and continuous improvement.",
                 activities: ["GA4 & Measurement", "KPI Dashboards", "Revenue Attribution", "Executive Reporting", "AI Visibility Reporting", "Revenue Forecasting"],
                 icon: (<img src="/images/icons/icon-barchart.svg" alt="" style={{ width: 24, height: 24 }} />),

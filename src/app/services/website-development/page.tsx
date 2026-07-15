@@ -505,7 +505,7 @@ export default function WebsiteDevelopmentPage() {
               A Website That Becomes a Long-Term Business Asset
             </h2>
             <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.8, color: "#555" }}>
-              A successful website does more than launch—it becomes a long-term business asset. With Brand Iron, your website is designed to:
+              A successful website does more than launch. It becomes a long-term business asset. With Brand Iron, your website is designed to:
             </p>
           </div>
 
@@ -519,7 +519,7 @@ export default function WebsiteDevelopmentPage() {
           </div>
 
           <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, fontWeight: 700, lineHeight: 1.7, color: "#1a1a1a", textAlign: "center", marginBottom: 64 }}>
-            A great website doesn&apos;t just represent your business—it helps grow it.
+            A great website doesn&apos;t just represent your business. It helps grow it.
           </p>
 
           {/* FAQ Accordion */}

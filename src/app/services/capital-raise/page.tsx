@@ -64,7 +64,7 @@ const evaluations = [
 const solutions = [
   {
     num: "01", name: "Capital Raise Deck", tagline: "Turn your opportunity into a compelling investment story.",
-    desc: "We develop investor presentations that clearly communicate your vision, market opportunity, competitive advantage, and growth potential—helping you present with confidence.",
+    desc: "We develop investor presentations that clearly communicate your vision, market opportunity, competitive advantage, and growth potential, helping you present with confidence.",
     bestFor: ["Startups preparing for investor meetings", "Companies seeking funding", "Leadership teams refining their investment story"],
     outcome: "A clear, investor-ready presentation that builds confidence and supports productive fundraising conversations.",
     cta: "Learn More", href: "/contact",
@@ -72,7 +72,7 @@ const solutions = [
   },
   {
     num: "02", name: "Investor Database", tagline: "Connect with investors who align with your opportunity.",
-    desc: "Successful fundraising isn’t measured by how many investors you contact—it’s measured by how many are the right fit. Our Investor Database helps identify, organize, and prioritize investors based on industry focus, investment stage, geographic preferences, and funding interests, giving your outreach strategy greater precision and efficiency.",
+    desc: "Successful fundraising isn’t measured by how many investors you contact. It’s measured by how many are the right fit. Our Investor Database helps identify, organize, and prioritize investors based on industry focus, investment stage, geographic preferences, and funding interests, giving your outreach strategy greater precision and efficiency.",
     bestFor: ["Companies beginning investor outreach", "Teams expanding fundraising efforts", "Organizations seeking targeted investor research"],
     outcome: "A qualified investor pipeline aligned with your fundraising objectives.",
     cta: "Explore Investor Database", href: "/contact",
@@ -157,7 +157,7 @@ export default function CapitalRaisePage() {
     },
     {
       q: "How does Investor Outreach work?",
-      a: "Investor Outreach combines research, messaging, and structured communication to introduce your opportunity to qualified investors. The objective isn't mass outreach—it's creating relevant, personalized conversations that can lead to meaningful investor relationships.",
+      a: "Investor Outreach combines research, messaging, and structured communication to introduce your opportunity to qualified investors. The objective isn't mass outreach. It's creating relevant, personalized conversations that can lead to meaningful investor relationships.",
     },
     {
       q: "Do you help after the deck is complete?",
@@ -246,7 +246,7 @@ export default function CapitalRaisePage() {
                 Investors evaluate more than financials. They invest in a compelling story, a credible team, a clear market opportunity, and confidence in your growth strategy.
               </p>
               <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.8)" }}>
-                Brand Iron helps founders prepare for every stage of the fundraising journey through strategic positioning, investor storytelling, presentation development, investor targeting, and outreach—creating an investment narrative that inspires confidence and moves conversations forward.
+                Brand Iron helps founders prepare for every stage of the fundraising journey through strategic positioning, investor storytelling, presentation development, investor targeting, and outreach, creating an investment narrative that inspires confidence and moves conversations forward.
               </p>
             </div>
           </div>
@@ -321,7 +321,7 @@ export default function CapitalRaisePage() {
           <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ textAlign: "center", maxWidth: 820, margin: "0 auto" }}>
             <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>Key Insight</p>
             <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(20px, 2.6vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.4, margin: 0 }}>
-              The strongest fundraising presentations don&apos;t try to answer every question. They answer the questions that matter most—clearly, confidently, and in a way that earns the next conversation.
+              The strongest fundraising presentations don&apos;t try to answer every question. They answer the questions that matter most: clearly, confidently, and in a way that earns the next conversation.
             </p>
           </div>
         </div>
@@ -571,7 +571,7 @@ export default function CapitalRaisePage() {
                 Solutions That Work Better Together
               </h4>
               <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.8, color: "rgba(255,255,255,0.6)", marginBottom: 40 }}>
-                Our solutions are designed to work independently, but they&apos;re most powerful when connected as part of a complete Capital Raise Support strategy—from investor story to investor engagement.
+                Our solutions are designed to work independently, but they&apos;re most powerful when connected as part of a complete Capital Raise Support strategy, from investor story to investor engagement.
               </p>
 
               <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", gap: 8 }}>

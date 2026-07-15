@@ -51,7 +51,7 @@ export default function Footer() {
       <div className="footer-body" style={{ position: "relative", display: "flex", minHeight: 340 }}>
 
         {/* LEFT — leather bg with embossed logo */}
-        <Link href="/" aria-label="Brand Iron — Home" className="footer-logo-panel" style={{
+        <Link href="/" aria-label="Brand Iron Home" className="footer-logo-panel" style={{
           width: "22%", flexShrink: 0,
           backgroundImage: "url('/images/bi-footer-logo.jpeg')",
           backgroundSize: "cover", backgroundPosition: "center",
