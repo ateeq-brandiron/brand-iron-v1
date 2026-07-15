@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import CircuitOverlay from "@/components/CircuitOverlay";
 
 const services = [
   {
@@ -63,49 +64,100 @@ export default function ServicesPage() {
   return (
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
 
-      {/* ── HERO ─────────────────────────────────────────────── */}
-      <section style={{
-        position: "relative", minHeight: "55vh", display: "flex", alignItems: "center",
-        backgroundImage: "url('/images/bg-barn.jpg')",
-        backgroundSize: "cover", backgroundPosition: "center",
-        overflow: "hidden",
-      }}>
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.6) 100%)" }} />
+      {/* ── HERO ───────────────────────────────────────────── */}
+      <section className="svc-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
+        <div style={{
+          position: "absolute", inset: 0,
+          backgroundImage: "url('/images/bg-barn.jpg')",
+          backgroundSize: "cover", backgroundPosition: "center",
+        }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.35) 0%, rgba(8,16,36,0.25) 45%, rgba(8,16,36,0.65) 100%)" }} />
 
-        <div style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto", padding: "140px 24px 80px", width: "100%" }}>
-          <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
-            What We Do
-          </p>
-          <h1 style={{
-            fontFamily: "var(--font-burford-inline), sans-serif", fontWeight: 400,
-            fontSize: "clamp(42px, 6vw, 72px)", textTransform: "uppercase", letterSpacing: "0.03em",
-            color: "#FFFFFF", lineHeight: 1.0, marginBottom: 24,
-            filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))",
-          }}>
-            Our Services
-          </h1>
-          <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.75, color: "rgba(255,255,255,0.85)", maxWidth: 600 }}>
-            Strategy, visibility, and revenue systems that work together, not isolated services, but one connected growth engine.
-          </p>
+        <div className="svc-hero-wrap" style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", padding: "88px 24px 24px" }}>
+          <div className="svc-hero-grid" style={{ maxWidth: 1200, margin: "0 auto", width: "100%", display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 56, alignItems: "center" }}>
+
+            {/* LEFT — headline, CTAs */}
+            <div>
+              <h1 className="hero-h1-anim" style={{
+                fontFamily: "var(--font-burford-inline), sans-serif",
+                fontWeight: 400, fontSize: "clamp(30px, 4.4vw, 58px)",
+                textTransform: "uppercase", letterSpacing: "0.02em", lineHeight: 0.92,
+                color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))",
+                marginBottom: 20,
+              }}>
+                Our Services
+              </h1>
+
+              <div className="hero-btns-anim" style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center" }}>
+                <Link href="/contact" style={{
+                  display: "inline-flex", alignItems: "center",
+                  fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 14,
+                  background: "#d87307", color: "#FFFFFF",
+                  padding: "15px 32px", borderRadius: 6,
+                  transition: "background 0.2s",
+                }}
+                onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
+                onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
+                >
+                  Book a Strategy Session
+                </Link>
+                <Link href="#services-list" style={{
+                  display: "inline-flex", alignItems: "center",
+                  fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 14,
+                  background: "transparent", color: "#FFFFFF",
+                  padding: "14px 30px", border: "2px solid rgba(255,255,255,0.7)", borderRadius: 6,
+                  transition: "border-color 0.2s, background 0.2s",
+                }}
+                onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = "#d87307"; (e.currentTarget as HTMLAnchorElement).style.background = "rgba(216,115,7,0.15)"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,255,255,0.7)"; (e.currentTarget as HTMLAnchorElement).style.background = "transparent"; }}
+                >
+                  Explore Our Services
+                </Link>
+              </div>
+            </div>
+
+            {/* RIGHT — supporting detail panel */}
+            <div className="hero-body-anim" style={{
+              background: "rgba(8,16,36,0.55)", backdropFilter: "blur(6px)",
+              border: "1px solid rgba(255,255,255,0.15)", borderRadius: 12,
+              padding: "clamp(20px, 2.6vw, 32px)",
+            }}>
+              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.85)", marginBottom: 14 }}>
+                Strategy, visibility, and revenue systems that work together, not isolated services, but one connected growth engine.
+              </p>
+              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.8)" }}>
+                Every engagement starts with understanding your business first, then connects the right combination of these four capabilities to build toward one outcome: sustainable, measurable revenue growth.
+              </p>
+            </div>
+          </div>
         </div>
+
+        <style>{`
+          @media (max-width: 900px) {
+            .svc-hero-section { height: auto !important; min-height: 100vh; }
+            .svc-hero-wrap { position: relative !important; padding: 140px 20px 48px !important; }
+            .svc-hero-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+          }
+        `}</style>
       </section>
 
       {/* ── SERVICES LIST ────────────────────────────────────── */}
-      <section style={{ background: "#FFFFFF", padding: "100px 40px" }}>
+      <section id="services-list" style={{ background: "#FFFFFF", padding: "120px 40px" }}>
         <div ref={listView.ref} style={{ maxWidth: 1100, margin: "0 auto", display: "flex", flexDirection: "column", gap: 24 }}>
           {services.map(({ number, title, href, description, icon }, i) => (
             <Link key={href} href={href} className={`reveal${listView.inView ? " visible" : ""}`} style={{
               textDecoration: "none", transitionDelay: `${i * 0.08}s`,
             }}>
-              <div style={{
+              <div className="svc-list-card" style={{
                 position: "relative", background: "#F9F8F6", border: "1px solid #EEEBE7", borderRadius: 12,
                 padding: "40px 44px", display: "grid", gridTemplateColumns: "auto auto 1fr auto", gap: 32, alignItems: "center",
-                transition: "transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease",
+                overflow: "hidden", transition: "transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease",
                 boxShadow: "0 2px 12px rgba(0,0,0,0.04)",
               }}
               onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateX(6px)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 16px 40px rgba(0,0,0,0.1)"; (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(216,115,7,0.35)"; }}
               onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateX(0)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 2px 12px rgba(0,0,0,0.04)"; (e.currentTarget as HTMLDivElement).style.borderColor = "#EEEBE7"; }}
               >
+                <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
                 <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 40, fontWeight: 900, color: "#d87307", lineHeight: 1, margin: 0 }}>{number}</p>
                 <div style={{ width: 60, height: 60, borderRadius: 12, background: "rgba(216,115,7,0.12)", border: "1px solid rgba(216,115,7,0.25)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                   {icon}
@@ -119,14 +171,22 @@ export default function ServicesPage() {
             </Link>
           ))}
         </div>
+
+        <style>{`
+          @media (max-width: 720px) {
+            .svc-list-card { grid-template-columns: auto 1fr !important; padding: 28px 24px !important; gap: 20px !important; }
+            .svc-list-card > svg:last-child { display: none; }
+          }
+        `}</style>
       </section>
 
       {/* ── FINAL CTA ────────────────────────────────────────── */}
-      <section style={{ background: "#F0EEEA", padding: "80px 24px" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+      <section style={{ background: "#F0EEEA", padding: "80px 24px", position: "relative", overflow: "hidden" }}>
+        <CircuitOverlay />
+        <div style={{ maxWidth: 1100, margin: "0 auto", position: "relative", zIndex: 1 }}>
           <div ref={ctaView.ref} className={`reveal${ctaView.inView ? " visible" : ""}`} style={{
             position: "relative", overflow: "hidden", borderRadius: 20,
-            backgroundImage: "url('/images/bg-barn.jpg')", backgroundSize: "cover", backgroundPosition: "center",
+            backgroundImage: "url('/images/bg-horse.jpg')", backgroundSize: "cover", backgroundPosition: "center",
           }}>
             <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
             <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>
@@ -155,7 +215,11 @@ export default function ServicesPage() {
                   fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 14,
                   letterSpacing: "0.08em", textTransform: "uppercase", textDecoration: "none",
                   color: "#FFFFFF", borderBottom: "1px solid rgba(255,255,255,0.4)", paddingBottom: 2,
-                }}>
+                  transition: "color 0.2s, border-color 0.2s",
+                }}
+                onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = "#f0a860"; (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(240,168,96,0.6)"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color = "#FFFFFF"; (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,255,255,0.4)"; }}
+                >
                   Meet the Team →
                 </Link>
               </div>
