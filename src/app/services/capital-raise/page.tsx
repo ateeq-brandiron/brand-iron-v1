@@ -550,32 +550,20 @@ export default function CapitalRaisePage() {
           <div className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ position: "relative", background: "#0F1B2D", borderRadius: 16, padding: "48px 56px", marginTop: 64, overflow: "hidden" }}>
             <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, transparent, #d87307, transparent)" }} />
 
-            <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 24, flexWrap: "wrap", marginBottom: 24 }}>
-              <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.05em", color: "#FFFFFF", margin: 0, maxWidth: 560 }}>
-                Not Sure Where to Start?
-              </h3>
-              <Link href="/contact" style={{
-                display: "inline-flex", alignItems: "center", gap: 10, flexShrink: 0,
-                fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 12.5,
-                letterSpacing: "0.1em", textTransform: "uppercase",
-                background: "#d87307", color: "#FFFFFF", textDecoration: "none",
-                padding: "14px 26px", borderRadius: 8, transition: "background 0.2s",
-              }}>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="16" rx="2" stroke="#fff" strokeWidth="1.8" /><path d="M3 9h18M8 3v4M16 3v4" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" /></svg>
-                Schedule a Strategy Session
-              </Link>
-            </div>
+            <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.05em", color: "#FFFFFF", marginBottom: 20 }}>
+              Not Sure Where to Start?
+            </h3>
 
-            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.85, color: "rgba(255,255,255,0.7)", maxWidth: 820, marginBottom: 48 }}>
+            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.85, color: "rgba(255,255,255,0.7)", marginBottom: 48 }}>
               Every organization enters the fundraising process at a different stage. Some need to establish a compelling investor story before approaching the market. Others already have presentation materials but require access to qualified investors or support executing an effective outreach strategy. During a Capital Raise Strategy Session, we&apos;ll assess your current stage of investor readiness, identify the most impactful next steps, and recommend the solutions that best align with your fundraising objectives.
             </p>
 
             {/* Solutions that work better together */}
-            <div style={{ textAlign: "center", marginBottom: 48 }}>
-              <h4 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(16px, 1.6vw, 20px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.05em", color: "#FFFFFF", marginBottom: 14 }}>
+            <div style={{ marginBottom: 48 }}>
+              <h4 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(16px, 1.6vw, 20px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.05em", color: "#FFFFFF", textAlign: "center", marginBottom: 14 }}>
                 Solutions That Work Better Together
               </h4>
-              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.8, color: "rgba(255,255,255,0.6)", maxWidth: 700, margin: "0 auto 40px" }}>
+              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.8, color: "rgba(255,255,255,0.6)", marginBottom: 40 }}>
                 Our solutions are designed to work independently, but they&apos;re most powerful when connected as part of a complete Capital Raise Support strategy—from investor story to investor engagement.
               </p>
 
@@ -596,7 +584,7 @@ export default function CapitalRaisePage() {
             </div>
 
             {/* Which solution is right for you */}
-            <div>
+            <div style={{ marginBottom: 48 }}>
               <h4 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(16px, 1.6vw, 20px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.05em", color: "#FFFFFF", textAlign: "center", marginBottom: 28 }}>
                 Which Solution Is Right for You?
               </h4>
@@ -612,6 +600,23 @@ export default function CapitalRaisePage() {
                   </div>
                 ))}
               </div>
+            </div>
+
+            {/* CTA — closes the section */}
+            <div style={{ textAlign: "center", paddingTop: 32, borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+              <Link href="/contact" style={{
+                display: "inline-flex", alignItems: "center", gap: 10,
+                fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
+                letterSpacing: "0.1em", textTransform: "uppercase",
+                background: "#d87307", color: "#FFFFFF", textDecoration: "none",
+                padding: "16px 32px", borderRadius: 8, transition: "background 0.2s",
+              }}
+              onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
+              onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="16" rx="2" stroke="#fff" strokeWidth="1.8" /><path d="M3 9h18M8 3v4M16 3v4" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" /></svg>
+                Schedule a Strategy Session
+              </Link>
             </div>
           </div>
         </div>
