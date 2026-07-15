@@ -2,11 +2,32 @@
 // SharpSpring's secret key must stay server-side, so this route exists purely
 // so the client never talks to SharpSpring directly (see src/app/contact/page.tsx).
 export async function POST(request: Request) {
-  const body = await request.json();
-  const { name, email, company, phone, size, interest, investment, timeline, message, formId } = body ?? {};
+  const body = await request.json().catch(() => null);
+  if (!body) {
+    return Response.json(
+      { success: false, error: "We couldn't read your submission. Please refresh the page and try again." },
+      { status: 400 }
+    );
+  }
+  const { name, email, company, phone, size, interest, investment, timeline, message, formId } = body;
 
-  if (!name || !email) {
-    return Response.json({ success: false, error: "Missing required fields" }, { status: 400 });
+  // Name and email are the only fields this route truly requires - name a
+  // missing field explicitly rather than a generic "invalid form" message,
+  // so a visitor can fix it and resubmit without guessing.
+  const missing: string[] = [];
+  if (!name || !String(name).trim()) missing.push("your name");
+  if (!email || !String(email).trim()) missing.push("your email address");
+  if (missing.length > 0) {
+    return Response.json(
+      { success: false, error: `Please enter ${missing.join(" and ")} to continue.` },
+      { status: 400 }
+    );
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(email).trim())) {
+    return Response.json(
+      { success: false, error: "Please enter a valid email address." },
+      { status: 400 }
+    );
   }
 
   const accountID = process.env.SHARPSPRING_ACCOUNT_ID;
@@ -25,7 +46,10 @@ export async function POST(request: Request) {
 
   if (!accountID || !secretKey) {
     console.error("[api/contact] SHARPSPRING_ACCOUNT_ID / SHARPSPRING_SECRET_KEY missing from process.env at request time");
-    return Response.json({ success: false, error: "SharpSpring is not configured" }, { status: 500 });
+    return Response.json(
+      { success: false, error: "We're unable to submit your request right now. Please email us directly at contact@brandiron.net and we'll follow up personally." },
+      { status: 500 }
+    );
   }
 
   const [firstName, ...rest] = String(name).trim().split(/\s+/);
@@ -124,7 +148,7 @@ export async function POST(request: Request) {
 
       console.error("[api/contact] SharpSpring rejected the lead:", JSON.stringify(data));
       return Response.json(
-        { success: false, error: data?.error?.message || createResult?.error?.message || "SharpSpring rejected the lead" },
+        { success: false, error: "We're having trouble submitting your request right now. Please try again in a moment, or email us directly at contact@brandiron.net." },
         { status: 502 }
       );
     }
@@ -133,6 +157,9 @@ export async function POST(request: Request) {
     return Response.json({ success: true });
   } catch (err) {
     console.error("[api/contact] Could not reach SharpSpring:", err instanceof Error ? err.message : err);
-    return Response.json({ success: false, error: "Could not reach SharpSpring" }, { status: 502 });
+    return Response.json(
+      { success: false, error: "We're having trouble submitting your request right now. Please try again in a moment, or email us directly at contact@brandiron.net." },
+      { status: 502 }
+    );
   }
 }

@@ -99,17 +99,17 @@ export default function ContactPage() {
     setError("");
     setSubmitting(true);
 
-    const crmOk = await fetch("/api/contact", {
+    const result = await fetch("/api/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ ...form, formId: "general_inquiry" }),
-    }).then(res => res.json()).then(data => Boolean(data.success)).catch(() => false);
+    }).then(res => res.json()).catch(() => null);
 
     setSubmitting(false);
-    if (crmOk) {
+    if (result?.success) {
       setSubmitted(true);
     } else {
-      setError("Something went wrong sending your message. Please try again or email us directly.");
+      setError(result?.error || "Something went wrong sending your message. Please try again or email us directly.");
     }
   }
 

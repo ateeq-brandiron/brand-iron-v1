@@ -19,7 +19,7 @@ export default function GrowthReviewModal({ onClose }: { onClose: () => void }) 
       form.goal && `Primary Goal: ${form.goal}`,
     ].filter(Boolean).join("\n");
 
-    const ok = await fetch("/api/contact", {
+    const result = await fetch("/api/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -31,13 +31,13 @@ export default function GrowthReviewModal({ onClose }: { onClose: () => void }) 
         formId: "gtm_growth_review",
         message,
       }),
-    }).then(res => res.json()).then(data => Boolean(data.success)).catch(() => false);
+    }).then(res => res.json()).catch(() => null);
 
     setSubmitting(false);
-    if (ok) {
+    if (result?.success) {
       setStep(2);
     } else {
-      setError("Something went wrong sending your request. Please try again or email us directly.");
+      setError(result?.error || "Something went wrong sending your request. Please try again or email us directly.");
     }
   }
 
