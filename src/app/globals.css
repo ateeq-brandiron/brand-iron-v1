@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: 'Burford Rustic Black';
   src: url('/fonts/BurfordRusticBookBlack.woff') format('woff'),
        url('/fonts/BurfordRusticBookBlack.ttf') format('truetype');
@@ -31,12 +31,15 @@
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
-}
+} */
+
+
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: var(--font-montserrat), Arial, sans-serif;
+  /* font-family: 'Montserrat', Arial, sans-serif; */
   color: #1a1a1a;
   background: #ffffff;
   -webkit-font-smoothing: antialiased;
@@ -55,7 +58,8 @@ button { font-family: inherit; }
 
 /* All headings: Burford Rustic Book Black */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Burford Rustic Black', Helvetica, Arial, Lucida, sans-serif;
+  /* font-family: 'Burford Rustic Black', Helvetica, Arial, Lucida, sans-serif; */
+  font-family: var(--font-burford-black);
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -64,7 +68,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero H1 — Burford Rustic Black outline stroke, matches inner pages */
 .hero-heading {
-  font-family: 'Burford Rustic Black', Helvetica, Arial, Lucida, sans-serif !important;
+  /* font-family: 'Burford Rustic Black', Helvetica, Arial, Lucida, sans-serif !important; */
+  font-family: var(--font-burford-black);
   font-weight: 700;
   text-transform: uppercase;
   font-size: clamp(44px, 6vw, 72px);
@@ -82,7 +87,8 @@ h1, h2, h3, h4, h5, h6 {
   gap: 8px;
   background: #d87307;
   color: #FFFFFF;
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  /* font-family: 'Montserrat', Helvetica, Arial, sans-serif; */
+  font-family: var(--font-montserrat), Arial, sans-serif;
   font-weight: 600;
   font-size: 14px;
   letter-spacing: 0.06em;
@@ -103,7 +109,8 @@ h1, h2, h3, h4, h5, h6 {
   gap: 8px;
   background: transparent;
   color: #FFFFFF;
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  /* font-family: 'Montserrat', Helvetica, Arial, sans-serif; */
+  font-family: var(--font-montserrat), Arial, sans-serif;
   font-weight: 600;
   font-size: 14px;
   letter-spacing: 0.06em;
@@ -273,7 +280,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ── Section Heading (H2) ───────────────────────────────── */
 .section-heading {
-  font-family: 'Burford Rustic Black', Helvetica, Arial, Lucida, sans-serif;
+  /* font-family: 'Burford Rustic Black', Helvetica, Arial, Lucida, sans-serif; */
+  font-family: var(--font-burford-black);
   font-weight: 900;
   text-transform: uppercase;
   font-size: clamp(24px, 3.5vw, 44px);
@@ -296,7 +304,8 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   background: rgba(156,83,5,0.55);
   color: #FFFFFF;
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  /* font-family: 'Montserrat', Helvetica, Arial, sans-serif; */
+  font-family: var(--font-montserrat), Arial, sans-serif;
   font-weight: 600;
   font-size: 15px;
   letter-spacing: 0.1em;
@@ -338,7 +347,8 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   background: rgba(15,27,45,0.55);
   color: rgba(255,255,255,0.92);
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  /* font-family: 'Montserrat', Helvetica, Arial, sans-serif; */
+  font-family: var(--font-montserrat), Arial, sans-serif;
   font-weight: 600;
   font-size: 15px;
   letter-spacing: 0.1em;
@@ -376,7 +386,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-label {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  /* font-family: 'Montserrat', Helvetica, Arial, sans-serif; */
+  font-family: var(--font-montserrat), Arial, sans-serif;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.2em;
