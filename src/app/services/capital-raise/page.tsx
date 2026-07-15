@@ -197,7 +197,7 @@ export default function CapitalRaisePage() {
               <h1 className="hero-h1-anim" style={{
                 fontFamily: "var(--font-burford-inline), sans-serif",
                 fontWeight: 400, fontSize: "clamp(30px, 4.4vw, 58px)",
-                textTransform: "uppercase", letterSpacing: "0.03em", lineHeight: 1.05,
+                textTransform: "uppercase", letterSpacing: "0.02em", lineHeight: 0.92,
                 color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))",
                 marginBottom: 20,
               }}>
@@ -205,10 +205,28 @@ export default function CapitalRaisePage() {
               </h1>
 
               <div className="hero-btns-anim" style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center", marginBottom: 14 }}>
-                <Link href="/contact" className="hero-btn-primary" style={{ fontSize: 14, padding: "15px 32px" }}>
+                <Link href="/contact" style={{
+                  display: "inline-flex", alignItems: "center",
+                  fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 14,
+                  background: "#d87307", color: "#FFFFFF",
+                  padding: "15px 32px", borderRadius: 6,
+                  transition: "background 0.2s",
+                }}
+                onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
+                onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
+                >
                   Schedule a Capital Raise Strategy Session
                 </Link>
-                <Link href="#framework" className="hero-btn-outline" style={{ fontSize: 14, padding: "14px 30px" }}>
+                <Link href="#framework" style={{
+                  display: "inline-flex", alignItems: "center",
+                  fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 14,
+                  background: "transparent", color: "#FFFFFF",
+                  padding: "14px 30px", border: "2px solid rgba(255,255,255,0.7)", borderRadius: 6,
+                  transition: "border-color 0.2s, background 0.2s",
+                }}
+                onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = "#d87307"; (e.currentTarget as HTMLAnchorElement).style.background = "rgba(216,115,7,0.15)"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,255,255,0.7)"; (e.currentTarget as HTMLAnchorElement).style.background = "transparent"; }}
+                >
                   Explore the Capital Raise Framework
                 </Link>
               </div>
