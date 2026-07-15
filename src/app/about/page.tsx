@@ -137,9 +137,6 @@ export default function AboutPage() {
 
             {/* LEFT — headline, CTAs */}
             <div>
-              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
-                About Brand Iron
-              </p>
               <h1 className="hero-h1-anim" style={{
                 fontFamily: "var(--font-burford-inline), sans-serif",
                 fontWeight: 400, fontSize: "clamp(30px, 4.4vw, 58px)",
