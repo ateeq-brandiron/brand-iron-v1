@@ -126,12 +126,10 @@ export default function AboutPage() {
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
 
       {/* ── HERO ───────────────────────────────────────────── */}
-      <section className="ab-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
-        <video
-          src="/BI Video background.mp4"
-          autoPlay muted loop playsInline preload="auto"
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 100%" }}
-        />
+      <section className="ab-hero-section" style={{
+        position: "relative", height: "100vh", minHeight: 600, overflow: "hidden",
+        backgroundImage: "url('/images/hero-saddle.jpg')", backgroundSize: "cover", backgroundPosition: "center",
+      }}>
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.35) 0%, rgba(8,16,36,0.25) 45%, rgba(8,16,36,0.65) 100%)" }} />
 
         <div className="ab-hero-wrap" style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", padding: "88px 24px 24px" }}>
@@ -293,7 +291,7 @@ export default function AboutPage() {
                 <div style={{ width: 46, height: 46, borderRadius: "50%", background: "rgba(216,115,7,0.1)", border: "1px solid rgba(216,115,7,0.25)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 18 }}>
                   {icon}
                 </div>
-                <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 17, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#1a1a1a", marginBottom: 10, lineHeight: 1.3, transition: "color 0.2s" }}>{title}</h3>
+                <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 19, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 10, lineHeight: 1.3, transition: "color 0.2s" }}>{title}</h3>
                 <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13.5, lineHeight: 1.7, color: "#666", margin: 0 }}>{body}</p>
               </div>
             ))}
@@ -425,7 +423,7 @@ export default function AboutPage() {
                 <div style={{ width: 40, height: 40, borderRadius: "50%", background: "rgba(216,115,7,0.15)", border: "1px solid rgba(216,115,7,0.3)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 16 }}>
                   <span style={{ fontFamily: "var(--font-burford-black), sans-serif", fontWeight: 900, fontSize: 13, color: "#d87307" }}>{step}</span>
                 </div>
-                <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 15, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#FFFFFF", marginBottom: 10, lineHeight: 1.3 }}>{title}</h3>
+                <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 17, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", marginBottom: 10, lineHeight: 1.3 }}>{title}</h3>
                 <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12.5, lineHeight: 1.7, color: "rgba(255,255,255,0.6)", margin: 0 }}>{body}</p>
               </div>
             ))}
@@ -447,7 +445,7 @@ export default function AboutPage() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div ref={ctaView.ref} className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{
             position: "relative", overflow: "hidden", borderRadius: 20,
-            backgroundImage: "url('/images/bg-hero-lake.png')", backgroundSize: "cover", backgroundPosition: "center",
+            backgroundImage: "url('/images/hero-barn.webp')", backgroundSize: "cover", backgroundPosition: "center",
           }}>
             <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.55)" }} />
             <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>
