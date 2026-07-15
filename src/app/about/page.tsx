@@ -92,7 +92,7 @@ const TEAM = [
     bio: "With 14+ years in operations and digital marketing, Olivia turns complex ideas into structured, scalable growth systems. She leads initiatives across branding, go-to-market strategy, AI visibility, and SEO.",
   },
   {
-    name: "Ateeq",
+    name: "Ateeq Asif",
     title: "Operations & Technical Delivery Manager",
     photo: "/images/team/ateeq.jpg",
     bio: "Ateeq drives execution across Brand Iron's client portfolio, from web development and marketing automation to campaign operations and account management. He turns strategy into shipped, working systems, keeping teams, tools, and timelines aligned across every account.",
