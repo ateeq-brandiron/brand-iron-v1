@@ -718,41 +718,89 @@ export default function CapitalRaisePage() {
       </section>
 
       {/* ── CTA ────────────────────────────────────────────── */}
-      <section style={{
-        position: "relative", overflow: "hidden", padding: "140px 40px",
-        backgroundImage: "url('/images/bg-leather.svg')",
-        backgroundSize: "cover", backgroundPosition: "center",
-      }}>
-        <div style={{ position: "absolute", inset: 0, background: "rgba(10,6,3,0.55)" }} />
-        <div ref={ctaView.ref} style={{ position: "relative", zIndex: 2, maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
-          <div className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 40, justifyContent: "center" }}>
-            <div style={{ flex: 1, maxWidth: 200, height: 1, background: "rgba(216,115,7,0.35)" }} />
-            <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#d87307" }} />
-            <div style={{ flex: 1, maxWidth: 200, height: 1, background: "rgba(216,115,7,0.35)" }} />
+      <section style={{ background: "#F0EEEA", padding: "80px 24px" }}>
+        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+          <div ref={ctaView.ref} className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{
+            position: "relative", overflow: "hidden", borderRadius: 20,
+            backgroundImage: "url('/images/bg-peaks.png')", backgroundSize: "cover", backgroundPosition: "center",
+          }}>
+            <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.55)" }} />
+            <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>
+              <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(28px, 4.2vw, 52px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.05, marginBottom: 20 }}>
+                Let&apos;s Build Your Capital Raise Strategy.
+              </h2>
+              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", fontStyle: "italic", maxWidth: 640, margin: "0 auto 48px" }}>
+                Let&apos;s build a capital raise strategy that helps your organization prepare, connect, and engage with confidence.
+              </p>
+              <div style={{ textAlign: "left" }}>
+                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 28 }}>
+                  Choose Your Next Step
+                </p>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 32 }}>
+                  <div>
+                    <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(255,255,255,0.85)", marginBottom: 20 }}>
+                      Meet with our team to evaluate your investor readiness, identify opportunities to strengthen your fundraising strategy, and determine the right Capital Raise Support solutions for your business.
+                    </p>
+                    <Link href="/contact" style={{
+                      display: "inline-flex", alignItems: "center", gap: 10,
+                      fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 800, fontSize: 17,
+                      letterSpacing: "0.02em", textTransform: "uppercase",
+                      color: "#FFFFFF", borderBottom: "3px solid #d87307", paddingBottom: 6,
+                      transition: "color 0.2s",
+                    }}
+                    onMouseEnter={e => {
+                      e.currentTarget.style.color = "#d87307";
+                      const tail = e.currentTarget.querySelector<HTMLElement>(".cta-arrow-tail");
+                      if (tail) tail.style.transform = "scaleX(1)";
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.color = "#FFFFFF";
+                      const tail = e.currentTarget.querySelector<HTMLElement>(".cta-arrow-tail");
+                      if (tail) tail.style.transform = "scaleX(0.3)";
+                    }}
+                    >
+                      <span>Schedule a Capital Raise Strategy Session</span>
+                      <span className="cta-arrow" style={{ display: "inline-flex", alignItems: "center" }}>
+                        <span className="cta-arrow-tail" style={{ display: "inline-block", height: 2.4, width: 24, background: "currentColor", transform: "scaleX(0.35)", transformOrigin: "right center", transition: "transform 0.3s cubic-bezier(0.22,1,0.36,1)" }} />
+                        <svg width="6" height="12" viewBox="0 6 6 12" fill="none" style={{ flexShrink: 0, display: "block" }}><path d="M0 6l6 6-6 6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      </span>
+                    </Link>
+                  </div>
+                  <div>
+                    <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(255,255,255,0.85)", marginBottom: 20 }}>
+                      Raising capital is only one part of sustainable growth. Discover how our Go-to-Market Strategy helps organizations become discoverable, trusted, and chosen while building predictable revenue systems.
+                    </p>
+                    <Link href="/services/gtm" style={{
+                      display: "inline-flex", alignItems: "center", gap: 10,
+                      fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 800, fontSize: 17,
+                      letterSpacing: "0.02em", textTransform: "uppercase",
+                      color: "#FFFFFF", borderBottom: "3px solid rgba(255,255,255,0.5)", paddingBottom: 6,
+                      transition: "color 0.2s, border-color 0.2s",
+                    }}
+                    onMouseEnter={e => {
+                      e.currentTarget.style.color = "#d87307";
+                      e.currentTarget.style.borderBottomColor = "#d87307";
+                      const tail = e.currentTarget.querySelector<HTMLElement>(".cta-arrow-tail");
+                      if (tail) tail.style.transform = "scaleX(1)";
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.color = "#FFFFFF";
+                      e.currentTarget.style.borderBottomColor = "rgba(255,255,255,0.5)";
+                      const tail = e.currentTarget.querySelector<HTMLElement>(".cta-arrow-tail");
+                      if (tail) tail.style.transform = "scaleX(0.3)";
+                    }}
+                    >
+                      <span>Explore Our Go-to-Market Strategy Services</span>
+                      <span className="cta-arrow" style={{ display: "inline-flex", alignItems: "center" }}>
+                        <span className="cta-arrow-tail" style={{ display: "inline-block", height: 2.4, width: 24, background: "currentColor", transform: "scaleX(0.35)", transformOrigin: "right center", transition: "transform 0.3s cubic-bezier(0.22,1,0.36,1)" }} />
+                        <svg width="6" height="12" viewBox="0 6 6 12" fill="none" style={{ flexShrink: 0, display: "block" }}><path d="M0 6l6 6-6 6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      </span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <h2 className={`reveal${ctaView.inView ? ' visible' : ''} section-heading`} style={{ color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))", marginBottom: 24 }}>
-            Let&apos;s Build Your Capital Raise Strategy.
-          </h2>
-          <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.85, color: "rgba(255,255,255,0.8)", maxWidth: 700, margin: "0 auto 20px" }}>
-            Every successful fundraising journey begins with a clear strategy. Whether you&apos;re preparing for your first investor meeting or managing an active capital raise, success depends on more than presentation materials. It requires a compelling investment story, the right investor strategy, and a structured approach that builds confidence at every stage of the fundraising journey.
-          </p>
-          <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.8, color: "rgba(255,255,255,0.6)", maxWidth: 680, margin: "0 auto 48px" }}>
-            Let&apos;s build a capital raise strategy that helps your organization prepare, connect, and engage with confidence.
-          </p>
-          <div className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap", marginBottom: 28 }}>
-            <Link href="/contact" className="hero-btn-primary" style={{ fontSize: 15, padding: "18px 44px" }}>
-              Schedule a Capital Raise Strategy Session
-            </Link>
-            <Link href="/services/gtm" className="hero-btn-outline" style={{ fontSize: 15, padding: "18px 44px" }}>
-              Explore Our Go-to-Market Strategy Services
-            </Link>
-          </div>
-          <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.7, color: "rgba(255,255,255,0.5)", maxWidth: 620, margin: "0 auto 20px" }}>
-            Meet with our team to evaluate your investor readiness, identify opportunities to strengthen your fundraising strategy, and determine the right Capital Raise Support solutions for your business.
-          </p>
-          <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.7, color: "rgba(255,255,255,0.45)", maxWidth: 560, margin: "0 auto" }}>
-            Raising capital is only one part of sustainable growth. Discover how our Go-to-Market Strategy helps organizations become discoverable, trusted, and chosen while building predictable revenue systems.
-          </p>
         </div>
       </section>
 

@@ -480,28 +480,33 @@ export default function WebsiteDevelopmentPage() {
       </section>
 
       {/* ── CTA ────────────────────────────────────────────── */}
-      <section style={{
-        position: "relative", overflow: "hidden", padding: "140px 40px",
-        backgroundImage: "url('/images/bg-leather.svg')",
-        backgroundSize: "cover", backgroundPosition: "center",
-      }}>
-        <div style={{ position: "absolute", inset: 0, background: "rgba(10,6,3,0.55)" }} />
-        <div ref={ctaView.ref} style={{ position: "relative", zIndex: 2, maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
-          <div className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 40, justifyContent: "center" }}>
-            <div style={{ flex: 1, maxWidth: 200, height: 1, background: "rgba(216,115,7,0.35)" }} />
-            <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#d87307" }} />
-            <div style={{ flex: 1, maxWidth: 200, height: 1, background: "rgba(216,115,7,0.35)" }} />
-          </div>
-          <h2 className={`reveal${ctaView.inView ? ' visible' : ''} section-heading`} style={{ color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))", marginBottom: 24 }}>
-            Build a Website Designed for Growth
-          </h2>
-          <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.85, color: "rgba(255,255,255,0.8)", maxWidth: 700, margin: "0 auto 48px" }}>
-            Whether you&apos;re launching a new website or transforming an existing one, Brand Iron helps you create a digital experience that supports your brand, strengthens credibility, and drives measurable business outcomes.
-          </p>
-          <div className={`reveal${ctaView.inView ? ' visible' : ''}`}>
-            <Link href="/contact" className="hero-btn-primary" style={{ fontSize: 15, padding: "18px 44px" }}>
-              Schedule a Website Strategy Session
-            </Link>
+      <section style={{ background: "#F0EEEA", padding: "80px 24px" }}>
+        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+          <div ref={ctaView.ref} className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{
+            position: "relative", overflow: "hidden", borderRadius: 20,
+            backgroundImage: "url('/images/Brand Iron Techy Grass Prairie.png')", backgroundSize: "cover", backgroundPosition: "center",
+          }}>
+            <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.55)" }} />
+            <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>
+              <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(28px, 4.2vw, 52px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.05, marginBottom: 20 }}>
+                Build a Website Designed for Growth
+              </h2>
+              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", fontStyle: "italic", maxWidth: 640, margin: "0 auto 48px" }}>
+                Whether you&apos;re launching a new website or transforming an existing one, Brand Iron helps you create a digital experience that supports your brand, strengthens credibility, and drives measurable business outcomes.
+              </p>
+              <Link href="/contact" style={{
+                display: "inline-flex", alignItems: "center",
+                fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 15,
+                background: "#d87307", color: "#FFFFFF",
+                padding: "18px 44px", borderRadius: 6,
+                transition: "background 0.2s",
+              }}
+              onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
+              onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
+              >
+                Schedule a Website Strategy Session
+              </Link>
+            </div>
           </div>
         </div>
       </section>
