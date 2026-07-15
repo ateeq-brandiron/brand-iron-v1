@@ -313,19 +313,12 @@ export default function CapitalRaisePage() {
             </p>
           </div>
 
-          {/* Key insight — photo panel */}
-          <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ position: "relative", overflow: "hidden", borderRadius: 16, minHeight: 300 }}>
-            <div style={{ position: "absolute", inset: 0, backgroundImage: "url('/images/bg-peaks.png')", backgroundSize: "cover", backgroundPosition: "center" }} />
-            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(90deg, rgba(15,27,45,0.97) 0%, rgba(15,27,45,0.85) 45%, rgba(15,27,45,0.35) 100%)" }} />
-            <div style={{ position: "relative", zIndex: 2, padding: "56px 64px", maxWidth: 720 }}>
-              <div style={{ width: 56, height: 56, borderRadius: "50%", background: "rgba(216,115,7,0.15)", border: "1px solid rgba(216,115,7,0.4)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 24 }}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9.5 8.5c-2.2 0-4 1.8-4 4v3h4v-4h-2c0-1.1.9-2 2-2V8.5Zm9 0c-2.2 0-4 1.8-4 4v3h4v-4h-2c0-1.1.9-2 2-2V8.5Z" fill="#d87307" /></svg>
-              </div>
-              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>Key Insight</p>
-              <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.4, margin: 0 }}>
-                The strongest fundraising presentations don&apos;t try to answer every question. They answer the questions that matter most—clearly, confidently, and in a way that earns the next conversation.
-              </p>
-            </div>
+          {/* Key insight */}
+          <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ background: "#F9F8F6", border: "1px solid #EEEBE7", borderLeft: "4px solid #d87307", borderRadius: 12, padding: "40px 56px", textAlign: "center" }}>
+            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>Key Insight</p>
+            <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.4, margin: 0 }}>
+              The strongest fundraising presentations don&apos;t try to answer every question. They answer the questions that matter most—clearly, confidently, and in a way that earns the next conversation.
+            </p>
           </div>
         </div>
       </section>
