@@ -823,7 +823,11 @@ export default function GTMPage() {
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               {faqs.map(({ q, a }, i) => (
-                <div key={i} style={{ background: "rgba(255,255,255,0.88)", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 10, overflow: "hidden", transition: "box-shadow 0.2s" }}>
+                <div key={i}
+                  style={{ background: "rgba(255,255,255,0.88)", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 10, overflow: "hidden", transition: "box-shadow 0.2s, border-color 0.2s" }}
+                  onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.borderColor = "rgba(216,115,7,0.3)"; el.style.boxShadow = "0 8px 24px rgba(0,0,0,0.06)"; }}
+                  onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.borderColor = "rgba(15,27,45,0.08)"; el.style.boxShadow = "none"; }}
+                >
                   <button
                     onClick={() => setOpenFaq(openFaq === i ? null : i)}
                     style={{ width: "100%", background: "none", border: "none", cursor: "pointer", padding: "20px 24px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16, textAlign: "left" }}

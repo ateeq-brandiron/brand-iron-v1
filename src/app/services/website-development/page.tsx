@@ -65,7 +65,48 @@ const pillars = [
   },
 ];
 
-const processSteps = ["Discovery", "Strategy", "UX Planning", "Design", "Development", "Testing", "Launch", "Growth"];
+const processSteps = [
+  {
+    title: "Discovery",
+    body: "Understand your business, audience, and goals before any design work begins.",
+    icon: (<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="10" cy="10" r="6.5" stroke="#d87307" strokeWidth="1.8" /><path d="M15 15l5 5" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round" /></svg>),
+  },
+  {
+    title: "Strategy",
+    body: "Define the site's structure, messaging priorities, and success metrics.",
+    icon: (<img src="/images/icons/icon-lightbulb.svg" alt="" style={{ width: 20, height: 20 }} />),
+  },
+  {
+    title: "UX Planning",
+    body: "Map user journeys, navigation, and information architecture.",
+    icon: (<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 3l4 16 2.5-6.5L18 10z" stroke="#d87307" strokeWidth="1.8" strokeLinejoin="round" fill="rgba(216,115,7,0.12)" /></svg>),
+  },
+  {
+    title: "Design",
+    body: "Create a modern, responsive interface that reflects your brand.",
+    icon: (<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M14.5 4.5l5 5L8 21H3v-5L14.5 4.5Z" stroke="#d87307" strokeWidth="1.8" strokeLinejoin="round" /><path d="M12.5 6.5l5 5" stroke="#d87307" strokeWidth="1.8" /></svg>),
+  },
+  {
+    title: "Development",
+    body: "Build a fast, scalable, and technically sound website.",
+    icon: (<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M8 4L2 12l6 8M16 4l6 8-6 8" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>),
+  },
+  {
+    title: "Testing",
+    body: "Validate functionality, performance, and content across devices.",
+    icon: (<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4Z" stroke="#d87307" strokeWidth="1.6" strokeLinejoin="round" /><path d="M8.5 12l2.5 2.5L16 9" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>),
+  },
+  {
+    title: "Launch",
+    body: "Deploy your website with a smooth, coordinated rollout.",
+    icon: (<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2c3 2 5 6 5 10 0 2-1 4-2 5l-3 2-3-2c-1-1-2-3-2-5 0-4 2-8 5-10Z" stroke="#d87307" strokeWidth="1.6" strokeLinejoin="round" /><circle cx="12" cy="10" r="2" stroke="#d87307" strokeWidth="1.5" /><path d="M8 16l-3 5M16 16l3 5" stroke="#d87307" strokeWidth="1.6" strokeLinecap="round" /></svg>),
+  },
+  {
+    title: "Growth",
+    body: "Monitor, optimize, and evolve the site as your business grows.",
+    icon: (<img src="/images/icons/icon-lightning.svg" alt="" style={{ width: 20, height: 20 }} />),
+  },
+];
 
 const solutions = [
   {
@@ -102,10 +143,6 @@ const successPoints = [
 
 const CheckIcon = () => (
   <svg style={{ flexShrink: 0 }} width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4L13 4" stroke="#d87307" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-);
-
-const ArrowConnector = () => (
-  <svg width="24" height="14" viewBox="0 0 24 14" fill="none"><path d="M1 7h18M14 1l6 6-6 6" stroke="rgba(216,115,7,0.5)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>
 );
 
 export default function WebsiteDevelopmentPage() {
@@ -313,28 +350,59 @@ export default function WebsiteDevelopmentPage() {
             </p>
           </div>
 
-          {/* 8-step process chain */}
-          <div className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ display: "flex", alignItems: "center", flexWrap: "wrap", gap: 4, marginBottom: 48 }}>
-            {processSteps.map((step, i) => (
-              <div key={step} style={{ display: "flex", alignItems: "center" }}>
-                <div style={{
-                  background: i === processSteps.length - 1 ? "#d87307" : "rgba(255,255,255,0.06)",
-                  border: i === processSteps.length - 1 ? "none" : "1px solid rgba(255,255,255,0.12)",
-                  borderRadius: 10, padding: "16px 18px", minWidth: 108, textAlign: "center",
-                  boxShadow: i === processSteps.length - 1 ? "0 8px 28px rgba(216,115,7,0.35)" : "none",
-                }}>
-                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.14em", color: i === processSteps.length - 1 ? "rgba(255,255,255,0.75)" : "#d87307", marginBottom: 6 }}>{String(i + 1).padStart(2, "0")}</p>
-                  <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 14, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#FFFFFF", margin: 0, lineHeight: 1.2 }}>{step}</p>
+          {/* 8-step process grid */}
+          <div className={`reveal${s4View.inView ? ' visible' : ''} wd-process-grid`} style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, marginBottom: 48 }}>
+            {processSteps.map(({ title, body, icon }, i) => {
+              const isLast = i === processSteps.length - 1;
+              return (
+                <div key={title}
+                  style={{
+                    position: "relative", borderRadius: 14, padding: "26px 20px", overflow: "hidden",
+                    background: isLast ? "#d87307" : "rgba(255,255,255,0.04)",
+                    border: isLast ? "none" : "1px solid rgba(255,255,255,0.08)",
+                    boxShadow: isLast ? "0 10px 32px rgba(216,115,7,0.3)" : "none",
+                    transition: "transform 0.25s, box-shadow 0.25s, border-color 0.25s, background 0.25s",
+                  }}
+                  onMouseEnter={e => {
+                    const el = e.currentTarget as HTMLDivElement;
+                    el.style.transform = "translateY(-5px)";
+                    if (isLast) { el.style.boxShadow = "0 16px 44px rgba(216,115,7,0.45)"; }
+                    else { el.style.background = "rgba(216,115,7,0.08)"; el.style.borderColor = "rgba(216,115,7,0.25)"; el.style.boxShadow = "0 14px 36px rgba(0,0,0,0.25)"; }
+                  }}
+                  onMouseLeave={e => {
+                    const el = e.currentTarget as HTMLDivElement;
+                    el.style.transform = "translateY(0)";
+                    if (isLast) { el.style.boxShadow = "0 10px 32px rgba(216,115,7,0.3)"; }
+                    else { el.style.background = "rgba(255,255,255,0.04)"; el.style.borderColor = "rgba(255,255,255,0.08)"; el.style.boxShadow = "none"; }
+                  }}
+                >
+                  <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: isLast ? "rgba(255,255,255,0.35)" : "linear-gradient(to right, #d87307, rgba(216,115,7,0.2))" }} />
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 14 }}>
+                    <div style={{ width: 38, height: 38, borderRadius: "50%", background: isLast ? "rgba(255,255,255,0.95)" : "rgba(216,115,7,0.15)", border: isLast ? "none" : "1px solid rgba(216,115,7,0.3)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                      {icon}
+                    </div>
+                    <span style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, color: isLast ? "rgba(255,255,255,0.85)" : "#d87307" }}>{String(i + 1).padStart(2, "0")}</span>
+                  </div>
+                  <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 15, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#FFFFFF", marginBottom: 8, lineHeight: 1.25 }}>{title}</h3>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12.5, lineHeight: 1.6, color: isLast ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.6)", margin: 0 }}>{body}</p>
                 </div>
-                {i < processSteps.length - 1 && <div style={{ padding: "0 4px" }}><ArrowConnector /></div>}
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.7)" }}>
             This collaborative approach ensures your website is aligned with your business goals before it goes live.
           </p>
         </div>
+
+        <style>{`
+          @media (max-width: 900px) {
+            .wd-process-grid { grid-template-columns: repeat(2, 1fr) !important; }
+          }
+          @media (max-width: 520px) {
+            .wd-process-grid { grid-template-columns: 1fr !important; }
+          }
+        `}</style>
       </section>
 
       {/* ── S5: CHOOSE THE RIGHT WEBSITE SOLUTION ───────────── */}
@@ -395,7 +463,11 @@ export default function WebsiteDevelopmentPage() {
                     ["Website Growth", "Marketing-ready businesses", "Better user engagement and lead generation"],
                     ["Website Advanced", "Growing organizations", "Scalable digital platform with advanced capabilities"],
                   ].map(([name, bestFor, outcome], i) => (
-                    <tr key={name} style={{ background: i % 2 === 0 ? "#F9F8F6" : "#FFFFFF" }}>
+                    <tr key={name}
+                      style={{ background: i % 2 === 0 ? "#F9F8F6" : "#FFFFFF", transition: "background 0.2s" }}
+                      onMouseEnter={e => ((e.currentTarget as HTMLTableRowElement).style.background = "rgba(216,115,7,0.06)")}
+                      onMouseLeave={e => ((e.currentTarget as HTMLTableRowElement).style.background = i % 2 === 0 ? "#F9F8F6" : "#FFFFFF")}
+                    >
                       <td style={{ padding: "18px 24px", color: "#1a1a1a", fontWeight: 600, borderBottom: "1px solid #EEEBE7" }}>{name}</td>
                       <td style={{ padding: "18px 24px", color: "#666", lineHeight: 1.6, borderBottom: "1px solid #EEEBE7" }}>{bestFor}</td>
                       <td style={{ padding: "18px 24px", color: "#1a1a1a", fontWeight: 500, lineHeight: 1.6, borderBottom: "1px solid #EEEBE7", background: "rgba(216,115,7,0.04)" }}>{outcome}</td>
@@ -457,7 +529,11 @@ export default function WebsiteDevelopmentPage() {
             </h3>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               {faqs.map(({ q, a }, i) => (
-                <div key={i} style={{ background: "rgba(255,255,255,0.9)", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 10, overflow: "hidden", transition: "box-shadow 0.2s" }}>
+                <div key={i}
+                  style={{ background: "rgba(255,255,255,0.9)", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 10, overflow: "hidden", transition: "box-shadow 0.2s, border-color 0.2s" }}
+                  onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.borderColor = "rgba(216,115,7,0.3)"; el.style.boxShadow = "0 8px 24px rgba(0,0,0,0.06)"; }}
+                  onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.borderColor = "rgba(15,27,45,0.08)"; el.style.boxShadow = "none"; }}
+                >
                   <button
                     onClick={() => setOpenFaq(openFaq === i ? null : i)}
                     style={{ width: "100%", background: "none", border: "none", cursor: "pointer", padding: "20px 24px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16, textAlign: "left" }}

@@ -500,7 +500,10 @@ export default function CapitalRaisePage() {
                 <div style={{ padding: "16px 22px 24px", borderTop: "1px solid rgba(0,0,0,0.06)" }}>
                   <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#d87307", marginBottom: 8 }}>Primary Outcome</p>
                   <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, lineHeight: 1.6, color: "#444", marginBottom: 16, fontStyle: "italic" }}>{outcome}</p>
-                  <Link href={href} style={{ display: "inline-flex", alignItems: "center", gap: 8, color: "#d87307", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: "0.08em", textTransform: "uppercase", textDecoration: "none" }}>
+                  <Link href={href} style={{ display: "inline-flex", alignItems: "center", gap: 8, color: "#d87307", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: "0.08em", textTransform: "uppercase", textDecoration: "none", borderBottom: "1px solid transparent", transition: "color 0.2s, border-color 0.2s" }}
+                    onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = "#a85c05"; (e.currentTarget as HTMLAnchorElement).style.borderBottomColor = "#a85c05"; }}
+                    onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color = "#d87307"; (e.currentTarget as HTMLAnchorElement).style.borderBottomColor = "transparent"; }}
+                  >
                     {cta} →
                   </Link>
                 </div>
@@ -531,7 +534,11 @@ export default function CapitalRaisePage() {
                 </thead>
                 <tbody>
                   {comparisonRows.map(([component, service, desc, e1, e2, t, p], i) => (
-                    <tr key={`${component}-${service}`} style={{ background: i % 2 === 0 ? "#F9F8F6" : "#FFFFFF" }}>
+                    <tr key={`${component}-${service}`}
+                      style={{ background: i % 2 === 0 ? "#F9F8F6" : "#FFFFFF", transition: "background 0.2s" }}
+                      onMouseEnter={e => ((e.currentTarget as HTMLTableRowElement).style.background = "rgba(216,115,7,0.06)")}
+                      onMouseLeave={e => ((e.currentTarget as HTMLTableRowElement).style.background = i % 2 === 0 ? "#F9F8F6" : "#FFFFFF")}
+                    >
                       <td style={{ padding: "14px 16px", color: "#1a1a1a", fontWeight: 600, borderBottom: "1px solid #EEEBE7", verticalAlign: "top" }}>{component}</td>
                       <td style={{ padding: "14px 16px", color: "#1a1a1a", fontWeight: 600, borderBottom: "1px solid #EEEBE7", verticalAlign: "top" }}>{service}</td>
                       <td style={{ padding: "14px 16px", color: "#666", lineHeight: 1.6, borderBottom: "1px solid #EEEBE7", verticalAlign: "top" }}>{desc}</td>
@@ -704,7 +711,11 @@ export default function CapitalRaisePage() {
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               {faqs.map(({ q, a }, i) => (
-                <div key={i} style={{ background: "rgba(255,255,255,0.9)", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 10, overflow: "hidden", transition: "box-shadow 0.2s" }}>
+                <div key={i}
+                  style={{ background: "rgba(255,255,255,0.9)", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 10, overflow: "hidden", transition: "box-shadow 0.2s, border-color 0.2s" }}
+                  onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.borderColor = "rgba(216,115,7,0.3)"; el.style.boxShadow = "0 8px 24px rgba(0,0,0,0.06)"; }}
+                  onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.borderColor = "rgba(15,27,45,0.08)"; el.style.boxShadow = "none"; }}
+                >
                   <button
                     onClick={() => setOpenFaq(openFaq === i ? null : i)}
                     style={{ width: "100%", background: "none", border: "none", cursor: "pointer", padding: "20px 24px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16, textAlign: "left" }}
