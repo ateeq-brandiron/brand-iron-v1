@@ -406,7 +406,7 @@ export default function WebsiteDevelopmentPage() {
       </section>
 
       {/* ── S5: CHOOSE THE RIGHT WEBSITE SOLUTION ───────────── */}
-      <section id="solutions" style={{ background: "linear-gradient(180deg, #FFFFFF 0%, #F6F3EF 100%)", padding: "120px 40px", position: "relative", overflow: "hidden" }}>
+      <section id="solutions" style={{ background: "linear-gradient(180deg, #FFFFFF 0%, #F6F3EF 100%)", padding: "120px 40px 48px", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, backgroundImage: "radial-gradient(circle at 20% 50%, rgba(216,115,7,0.04) 0%, transparent 60%), radial-gradient(circle at 80% 20%, rgba(15,27,45,0.04) 0%, transparent 50%)", pointerEvents: "none" }} />
         <div ref={s5View.ref} style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>
           <div style={{ marginBottom: 64 }}>
@@ -494,7 +494,7 @@ export default function WebsiteDevelopmentPage() {
 
       {/* ── S6: WHAT SUCCESS LOOKS LIKE + FAQ ────────────────── */}
       <section style={{
-        position: "relative", overflow: "hidden", padding: "120px 40px",
+        position: "relative", overflow: "hidden", padding: "120px 40px 48px",
         backgroundImage: "url('/images/bg-outcomes.png')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
