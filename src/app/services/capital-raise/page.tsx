@@ -262,11 +262,8 @@ export default function CapitalRaisePage() {
       </section>
 
       {/* ── S2: WHY COMPANIES STRUGGLE TO RAISE CAPITAL ─────── */}
-      <section style={{ background: "#FFFFFF", padding: "120px 40px" }}>
+      <section style={{ background: "#FFFFFF", padding: "120px 40px 48px" }}>
         <div ref={s2View.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
-            Why Great Companies Still Struggle to Raise Capital
-          </p>
           <h2 className={`section-heading reveal${s2View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 24, textAlign: "left" }}>
             Investors Don&apos;t Invest in Slides. They Invest in Confidence.
           </h2>
@@ -343,9 +340,6 @@ export default function CapitalRaisePage() {
         <CircuitOverlay />
         <div ref={s3View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
-            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
-              The Brand Iron Capital Raise Framework
-            </p>
             <h2 className={`section-heading reveal${s3View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               Not a Process. A Strategic Framework.
             </h2>
@@ -427,9 +421,6 @@ export default function CapitalRaisePage() {
         <CircuitOverlay />
         <div ref={s4View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
-            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
-              How We Help You Raise Capital
-            </p>
             <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))", marginBottom: 20, textAlign: "left" }}>
               From Investor Story to Fundraising Momentum
             </h2>
@@ -469,13 +460,10 @@ export default function CapitalRaisePage() {
       </section>
 
       {/* ── S5: CHOOSE THE RIGHT SOLUTION ────────────────────── */}
-      <section style={{ background: "linear-gradient(180deg, #FFFFFF 0%, #F6F3EF 100%)", padding: "120px 40px", position: "relative", overflow: "hidden" }}>
+      <section style={{ background: "linear-gradient(180deg, #FFFFFF 0%, #F6F3EF 100%)", padding: "120px 40px 48px", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, backgroundImage: "radial-gradient(circle at 20% 50%, rgba(216,115,7,0.04) 0%, transparent 60%), radial-gradient(circle at 80% 20%, rgba(15,27,45,0.04) 0%, transparent 50%)", pointerEvents: "none" }} />
         <div ref={s5View.ref} style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>
           <div style={{ marginBottom: 72 }}>
-            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
-              Choose the Right Capital Raise Solution
-            </p>
             <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               Support for Every Stage of Your Fundraising Journey
             </h2>
@@ -639,9 +627,6 @@ export default function CapitalRaisePage() {
       }}>
         <div ref={s6View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
-            <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
-              What Success Looks Like
-            </p>
             <h2 className={`section-heading reveal${s6View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               Investor Confidence That Creates Fundraising Momentum
             </h2>
@@ -709,9 +694,6 @@ export default function CapitalRaisePage() {
 
           {/* FAQ Accordion */}
           <div className={`reveal${s6View.inView ? ' visible' : ''}`}>
-            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
-              Frequently Asked Questions
-            </p>
             <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 8 }}>
               Common Questions About Capital Raise Support
             </h3>
@@ -755,9 +737,6 @@ export default function CapitalRaisePage() {
             <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#d87307" }} />
             <div style={{ flex: 1, maxWidth: 200, height: 1, background: "rgba(216,115,7,0.35)" }} />
           </div>
-          <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 20 }}>
-            Build Investor Confidence Before You Raise Capital
-          </p>
           <h2 className={`reveal${ctaView.inView ? ' visible' : ''} section-heading`} style={{ color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))", marginBottom: 24 }}>
             Let&apos;s Build Your Capital Raise Strategy.
           </h2>
