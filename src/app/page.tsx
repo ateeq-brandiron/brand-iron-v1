@@ -97,6 +97,21 @@ const testimonials = [
     name: "Sarah T.",
     title: "VP Marketing, TechScale Inc.",
   },
+  {
+    quote: "Brand Iron has implemented marketing processes that we would not have utilized otherwise. It has been extremely beneficial to have their extensive knowledge at our disposal.",
+    name: "Cortez Kampos",
+    title: "Founder, Fulsome Films",
+  },
+  {
+    quote: "The project required them to understand our company very well, and they did a great job with that. They listened and retained our needs before applying their full-service marketing expertise to our project. I appreciate their ability to take on all aspects of marketing, advertising, branding, and fundraising. We can rely on them across the board, so I don't have to orchestrate projects with other vendors in the future.",
+    name: "Dr. Robert Varney",
+    title: "CEO, Cities Project Global",
+  },
+  {
+    quote: "They customized their process for our company size and type, quickly learning our target demographics.",
+    name: "Heidi Fisher",
+    title: "AR/Marketing, People Source",
+  },
 ];
 
 export default function Home() {
