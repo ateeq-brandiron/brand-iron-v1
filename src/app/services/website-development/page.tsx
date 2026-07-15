@@ -277,7 +277,7 @@ export default function WebsiteDevelopmentPage() {
                   <div style={{ width: 40, height: 40, borderRadius: 10, background: "rgba(216,115,7,0.12)", border: "1px solid rgba(216,115,7,0.2)", display: "flex", alignItems: "center", justifyContent: "center" }}>{icon}</div>
                   <span style={{ fontFamily: "var(--font-burford-black), sans-serif", fontWeight: 900, fontSize: 28, color: "rgba(216,115,7,0.18)", lineHeight: 1 }}>{num}</span>
                 </div>
-                <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 15, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#1a1a1a", marginBottom: 10, lineHeight: 1.25 }}>{title}</h3>
+                <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 16, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 10, lineHeight: 1.25 }}>{title}</h3>
                 <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12.5, lineHeight: 1.65, color: "#666", margin: 0 }}>{body}</p>
               </div>
             ))}
@@ -324,7 +324,7 @@ export default function WebsiteDevelopmentPage() {
                   boxShadow: i === processSteps.length - 1 ? "0 8px 28px rgba(216,115,7,0.35)" : "none",
                 }}>
                   <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.14em", color: i === processSteps.length - 1 ? "rgba(255,255,255,0.75)" : "#d87307", marginBottom: 6 }}>{String(i + 1).padStart(2, "0")}</p>
-                  <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 13, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#FFFFFF", margin: 0, lineHeight: 1.2 }}>{step}</p>
+                  <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 14, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#FFFFFF", margin: 0, lineHeight: 1.2 }}>{step}</p>
                 </div>
                 {i < processSteps.length - 1 && <div style={{ padding: "0 4px" }}><ArrowConnector /></div>}
               </div>
@@ -362,7 +362,7 @@ export default function WebsiteDevelopmentPage() {
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
                 <div style={{ padding: "36px 32px 28px", flex: 1 }}>
                   <div style={{ width: 56, height: 56, borderRadius: 12, background: "rgba(216,115,7,0.1)", border: "1px solid rgba(216,115,7,0.25)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 20 }}>{icon}</div>
-                  <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 19, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 14, lineHeight: 1.2 }}>{name}</h3>
+                  <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 20, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", marginBottom: 14, lineHeight: 1.2 }}>{name}</h3>
                   <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.75, color: "#666", marginBottom: 20 }}>{body}</p>
                 </div>
                 <div style={{ padding: "20px 32px 28px", borderTop: "1px solid rgba(0,0,0,0.06)" }}>
