@@ -39,6 +39,22 @@ export default function RootLayout({
       lang="en"
       className={`${montserrat.variable} ${burfordBlack.variable} ${burfordInline.variable}`}
     >
+      <head>
+        {/*
+          globals.css declares these same font files under their real names
+          ('Montserrat', 'Burford Rustic Black', 'Burford Rustic Inline') via
+          @font-face, and every component references those names directly
+          rather than the next/font CSS variables above. Without an explicit
+          preload here, the browser doesn't discover it needs these files
+          until it parses globals.css, so the fallback font (Arial) is
+          visible until the swap - preloading fetches them immediately,
+          in parallel with the HTML, so Burford/Montserrat are ready by the
+          time text first paints.
+        */}
+        <link rel="preload" href="/fonts/Montserrat-variable.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/BurfordRusticBookBlack.woff" as="font" type="font/woff" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/BurfordRusticInline.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      </head>
       <body>
         <Navbar />
         {children}
