@@ -34,15 +34,25 @@ export async function POST(request: Request) {
   const secretKey = process.env.SHARPSPRING_SECRET_KEY;
 
   // Each source form declares its own formId (see src/app/contact/page.tsx,
-  // src/components/AuditModal.tsx, src/components/GrowthReviewModal.tsx) so
-  // leads land in the right SharpSpring list rather than one shared list.
+  // src/components/AuditModal.tsx, src/components/GrowthReviewModal.tsx,
+  // src/components/WebsiteInquiryModal.tsx). Only one SharpSpring list exists
+  // today, so every form falls back to it; a form-specific env var (once
+  // provided) takes over automatically without any other code changes.
+  const FORM_LABELS: Record<string, string> = {
+    general_inquiry: "General Inquiry",
+    ai_visibility_audit: "AI Visibility Audit",
+    gtm_growth_review: "GTM Growth Review",
+    website_inquiry: "Website Inquiry",
+  };
+  const formLabel = FORM_LABELS[formId as string] || "Website Form";
+
   const LIST_ID_BY_FORM: Record<string, string | undefined> = {
     general_inquiry: process.env.SHARPSPRING_CONTACT_FORM_LIST_ID,
     ai_visibility_audit: process.env.SHARPSPRING_AI_VISIBILITY_LIST_ID,
     gtm_growth_review: process.env.SHARPSPRING_GTM_GROWTH_REVIEW_LIST_ID,
     website_inquiry: process.env.SHARPSPRING_WEBSITE_INQUIRY_LIST_ID,
   };
-  const listID = LIST_ID_BY_FORM[formId as string];
+  const listID = LIST_ID_BY_FORM[formId as string] || process.env.SHARPSPRING_CONTACT_FORM_LIST_ID;
 
   if (!accountID || !secretKey) {
     console.error("[api/contact] SHARPSPRING_ACCOUNT_ID / SHARPSPRING_SECRET_KEY missing from process.env at request time");
@@ -60,6 +70,7 @@ export async function POST(request: Request) {
   // supplied from the account (Setup > Edit Fields), fold them into the
   // description field so nothing gets silently dropped.
   const description = [
+    `Source Form: ${formLabel}`,
     company && `Company: ${company}`,
     size && `Company Size: ${size}`,
     interest && `Interested In: ${interest}`,
