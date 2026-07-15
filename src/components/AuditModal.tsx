@@ -87,34 +87,35 @@ export default function AuditModal({ onClose }: { onClose: () => void }) {
               </p>
 
               <form onSubmit={handleSubmit}>
-                {/* Name */}
-                <div style={{ marginBottom: 14 }}>
-                  <label style={labelStyle}>Name *</label>
-                  <input required value={form.name} onChange={e => set("name", e.target.value)} style={inputStyle} placeholder="Your name" />
-                </div>
+                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(255,255,255,0.4)", marginBottom: 12 }}>
+                  Contact Information
+                </p>
 
-                {/* Email + Phone */}
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 14 }}>
                   <div>
-                    <label style={labelStyle}>Work Email *</label>
+                    <label style={labelStyle}>Full Name *</label>
+                    <input required value={form.name} onChange={e => set("name", e.target.value)} style={inputStyle} placeholder="Your name" />
+                  </div>
+                  <div>
+                    <label style={labelStyle}>Company</label>
+                    <input value={form.company} onChange={e => set("company", e.target.value)} style={inputStyle} placeholder="Company" />
+                  </div>
+                </div>
+
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 14 }}>
+                  <div>
+                    <label style={labelStyle}>Email Address *</label>
                     <input required type="email" value={form.email} onChange={e => set("email", e.target.value)} style={inputStyle} placeholder="you@company.com" />
                   </div>
                   <div>
-                    <label style={labelStyle}>Phone</label>
+                    <label style={labelStyle}>Phone Number</label>
                     <input type="tel" value={form.phone} onChange={e => set("phone", e.target.value)} style={inputStyle} placeholder="(000) 000-0000" />
                   </div>
                 </div>
 
-                {/* Website + Company */}
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 14 }}>
-                  <div>
-                    <label style={labelStyle}>Website URL *</label>
-                    <input required value={form.website} onChange={e => set("website", e.target.value)} style={inputStyle} placeholder="https://yoursite.com" />
-                  </div>
-                  <div>
-                    <label style={labelStyle}>Company Name</label>
-                    <input value={form.company} onChange={e => set("company", e.target.value)} style={inputStyle} placeholder="Company" />
-                  </div>
+                <div style={{ marginBottom: 20 }}>
+                  <label style={labelStyle}>Website URL *</label>
+                  <input required value={form.website} onChange={e => set("website", e.target.value)} style={inputStyle} placeholder="https://yoursite.com" />
                 </div>
 
                 {/* Monthly visitors */}

@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function GrowthReviewModal({ onClose }: { onClose: () => void }) {
   const [step, setStep] = useState(1); // 1 = form, 2 = thank you
-  const [form, setForm] = useState({ name: "", email: "", company: "", website: "", goal: "" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", company: "", website: "", goal: "" });
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
 
@@ -25,6 +25,7 @@ export default function GrowthReviewModal({ onClose }: { onClose: () => void }) 
       body: JSON.stringify({
         name: form.name,
         email: form.email,
+        phone: form.phone,
         company: form.company,
         interest: "GTM Growth Review",
         formId: "gtm_growth_review",
@@ -79,22 +80,37 @@ export default function GrowthReviewModal({ onClose }: { onClose: () => void }) 
               </p>
 
               <form onSubmit={handleSubmit}>
-                <div style={{ marginBottom: 14 }}>
-                  <label style={labelStyle}>Name *</label>
-                  <input required value={form.name} onChange={e => set("name", e.target.value)} style={inputStyle} placeholder="Your name" />
+                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(255,255,255,0.4)", marginBottom: 12 }}>
+                  Contact Information
+                </p>
+
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 14 }}>
+                  <div>
+                    <label style={labelStyle}>Full Name *</label>
+                    <input required value={form.name} onChange={e => set("name", e.target.value)} style={inputStyle} placeholder="Your name" />
+                  </div>
+                  <div>
+                    <label style={labelStyle}>Company</label>
+                    <input value={form.company} onChange={e => set("company", e.target.value)} style={inputStyle} placeholder="Company" />
+                  </div>
                 </div>
-                <div style={{ marginBottom: 14 }}>
-                  <label style={labelStyle}>Work Email *</label>
-                  <input required type="email" value={form.email} onChange={e => set("email", e.target.value)} style={inputStyle} placeholder="you@company.com" />
+
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 14 }}>
+                  <div>
+                    <label style={labelStyle}>Email Address *</label>
+                    <input required type="email" value={form.email} onChange={e => set("email", e.target.value)} style={inputStyle} placeholder="you@company.com" />
+                  </div>
+                  <div>
+                    <label style={labelStyle}>Phone Number</label>
+                    <input type="tel" value={form.phone} onChange={e => set("phone", e.target.value)} style={inputStyle} placeholder="(000) 000-0000" />
+                  </div>
                 </div>
-                <div style={{ marginBottom: 14 }}>
-                  <label style={labelStyle}>Company Name</label>
-                  <input value={form.company} onChange={e => set("company", e.target.value)} style={inputStyle} placeholder="Company" />
-                </div>
-                <div style={{ marginBottom: 14 }}>
+
+                <div style={{ marginBottom: 20 }}>
                   <label style={labelStyle}>Website URL *</label>
                   <input required value={form.website} onChange={e => set("website", e.target.value)} style={inputStyle} placeholder="https://yoursite.com" />
                 </div>
+
                 <div style={{ marginBottom: 28 }}>
                   <label style={labelStyle}>Primary Goal</label>
                   <select value={form.goal} onChange={e => set("goal", e.target.value)} style={selectStyle}>
