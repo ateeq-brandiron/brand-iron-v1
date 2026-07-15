@@ -422,10 +422,8 @@ export default function CapitalRaisePage() {
       {/* ── S4: CAPITAL RAISE JOURNEY ───────────────────────── */}
       <section style={{
         position: "relative", overflow: "hidden", padding: "120px 40px",
-        backgroundImage: "url('/images/bg-logs.jpg')",
-        backgroundSize: "cover", backgroundPosition: "center",
+        background: "#0F1B2D",
       }}>
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.6) 100%)" }} />
         <CircuitOverlay />
         <div ref={s4View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
@@ -637,10 +635,8 @@ export default function CapitalRaisePage() {
       {/* ── S6: WHAT SUCCESS LOOKS LIKE + FAQ ────────────────── */}
       <section style={{
         position: "relative", overflow: "hidden", padding: "120px 40px",
-        backgroundImage: "url('/images/BIRepresentationImage1Scale.jpeg')",
-        backgroundSize: "cover", backgroundPosition: "center",
+        background: "#F8F2E8",
       }}>
-        <div style={{ position: "absolute", inset: 0, background: "rgba(248,242,232,0.93)" }} />
         <div ref={s6View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
             <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>

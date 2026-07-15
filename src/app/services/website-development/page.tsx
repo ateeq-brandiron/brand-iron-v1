@@ -304,10 +304,9 @@ export default function WebsiteDevelopmentPage() {
       {/* ── S4: HOW WE BUILD WEBSITES ────────────────────────── */}
       <section style={{
         position: "relative", overflow: "hidden", padding: "120px 40px",
-        backgroundImage: "url('/images/bg-haybales.jpg')",
-        backgroundSize: "cover", backgroundPosition: "center",
+        background: "#0F1B2D",
       }}>
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.65) 100%)" }} />
+        <CircuitOverlay />
         <div ref={s4View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ marginBottom: 56 }}>
             <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))", marginBottom: 20, textAlign: "left" }}>
