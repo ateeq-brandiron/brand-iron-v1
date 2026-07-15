@@ -22,6 +22,7 @@ const services = [
   { label: "AI Visibility", href: "/services/ai-visibility" },
   { label: "GTM Strategy", href: "/services/gtm" },
   { label: "Capital Raise Support", href: "/services/capital-raise" },
+  { label: "Website Development", href: "/services/website-development" },
 ];
 
 const stats = [
@@ -63,6 +64,12 @@ const coreServices = [
     body: "We help founders prepare for investment with compelling pitch decks, fundraising strategy, and targeted investor outreach.",
     solutions: ["Capital Raise Decks", "150K+ Investor Database", "Investor Outreach", "Investor GTM Support"],
     cta: "Explore Capital Raise Support", href: "/services/capital-raise",
+  },
+  {
+    title: "Website Development", sub: "Your Strongest Growth Asset",
+    body: "We build strategic digital experiences that connect your brand, messaging, user experience, and AI Visibility into one platform designed to help you become discoverable, trusted, and chosen.",
+    solutions: ["Website Essentials", "Website Growth", "Website Advanced"],
+    cta: "Explore Website Development", href: "/services/website-development",
   },
 ];
 

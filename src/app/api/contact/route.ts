@@ -19,6 +19,7 @@ export async function POST(request: Request) {
     general_inquiry: process.env.SHARPSPRING_CONTACT_FORM_LIST_ID,
     ai_visibility_audit: process.env.SHARPSPRING_AI_VISIBILITY_LIST_ID,
     gtm_growth_review: process.env.SHARPSPRING_GTM_GROWTH_REVIEW_LIST_ID,
+    website_inquiry: process.env.SHARPSPRING_WEBSITE_INQUIRY_LIST_ID,
   };
   const listID = LIST_ID_BY_FORM[formId as string];
 

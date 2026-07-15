@@ -6,6 +6,7 @@ const servicesMenu = [
   { label: "AI Visibility & Discoverability", href: "/services/ai-visibility" },
   { label: "GTM Strategy", href: "/services/gtm" },
   { label: "Capital Raise Support", href: "/services/capital-raise" },
+  { label: "Website Development", href: "/services/website-development" },
 ];
 
 const navLinks = [

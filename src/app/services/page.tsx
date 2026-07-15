@@ -30,6 +30,15 @@ const services = [
       <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="#D87307" strokeWidth="2" strokeLinejoin="round"/><path d="M9 12l2 2 4-4" stroke="#D87307" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
     ),
   },
+  {
+    number: "04",
+    title: "Website Development",
+    href: "/services/website-development",
+    description: "Strategic digital experiences that connect your brand, messaging, user experience, and AI Visibility into one platform designed to help your organization become discoverable, trusted, and chosen.",
+    icon: (
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="#D87307" strokeWidth="2"/><path d="M3 9h18" stroke="#D87307" strokeWidth="2"/><circle cx="6.5" cy="6.5" r="0.75" fill="#D87307"/><circle cx="9" cy="6.5" r="0.75" fill="#D87307"/></svg>
+    ),
+  },
 ];
 
 function useInView(threshold = 0.12) {

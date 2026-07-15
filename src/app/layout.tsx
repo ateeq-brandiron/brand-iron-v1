@@ -6,19 +6,19 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const montserrat = localFont({
-  src: "../public/fonts/Montserrat-variable.woff2",
+  src: "../../public/fonts/Montserrat-variable.woff2",
   variable: "--font-montserrat",
   display: "swap",
 });
 
 const burfordBlack = localFont({
-  src: "../public/fonts/BurfordRusticBookBlack.woff",
+  src: "../../public/fonts/BurfordRusticBookBlack.woff",
   variable: "--font-burford-black",
   display: "swap",
 });
 
 const burfordInline = localFont({
-  src: "../public/fonts/BurfordRusticInline.woff2",
+  src: "../../public/fonts/BurfordRusticInline.woff2",
   variable: "--font-burford-inline",
   display: "swap",
 });
