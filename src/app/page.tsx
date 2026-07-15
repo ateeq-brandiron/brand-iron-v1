@@ -174,7 +174,8 @@ export default function Home() {
             Forging Brands.<br />Driving Revenue.
           </h1>
           <p style={{
-            fontFamily: "'Burford Rustic Inline', sans-serif", fontWeight: 400,
+            // fontFamily: "'Burford Rustic Inline', sans-serif", fontWeight: 400,
+            fontFamily: "var(--font-burford-inline), sans-serif",
             fontSize: 25, letterSpacing: "0.04em",
             textTransform: "uppercase",
             lineHeight: 1.6, color: "rgba(255,255,255,0.92)",
