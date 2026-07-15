@@ -116,7 +116,7 @@ export default function ContactPage() {
   const inputStyle: React.CSSProperties = {
     width: "100%", padding: "13px 16px",
     background: "#FFFFFF", border: "1.5px solid #D8D2C7",
-    borderRadius: 4, fontFamily: "'Montserrat', sans-serif", fontSize: 15, fontWeight: 500, color: "#1a1a1a",
+    borderRadius: 4, fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, fontWeight: 500, color: "#1a1a1a",
     outline: "none",
   };
 
@@ -130,9 +130,9 @@ export default function ContactPage() {
       }}>
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(10,20,35,0.3) 0%, rgba(10,20,35,0.22) 45%, rgba(10,20,35,0.62) 100%)" }} />
         <div style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto", padding: "140px 24px 80px", textAlign: "center" }}>
-          <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 500, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>Get In Touch</p>
+          <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 500, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>Get In Touch</p>
           <h1 className="hero-h1-anim" style={{
-            fontFamily: "'Burford Rustic Inline', sans-serif", fontWeight: 400, fontSize: "clamp(44px, 6vw, 72px)",
+            fontFamily: "var(--font-burford-inline), sans-serif", fontWeight: 400, fontSize: "clamp(44px, 6vw, 72px)",
             textTransform: "uppercase", letterSpacing: "0.03em",
             color: "#FFFFFF",
             filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))",
@@ -154,7 +154,7 @@ export default function ContactPage() {
               <div style={{ display: "flex", justifyContent: "center", marginBottom: 12 }}>
                 <div style={{ width: 64, height: 64, borderRadius: "50%", background: "rgba(216,115,7,0.1)", display: "flex", alignItems: "center", justifyContent: "center" }}>{icon}</div>
               </div>
-              <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 20, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 8, lineHeight: 1.3 }}>{title}</h3>
+              <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 20, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 8, lineHeight: 1.3 }}>{title}</h3>
               <p style={{ fontSize: 13, color: "#666", lineHeight: 1.6 }}>{desc}</p>
             </div>
           ))}
@@ -167,7 +167,7 @@ export default function ContactPage() {
 
           {/* Form */}
           <div className={`reveal${sMain.inView ? ' visible' : ''}`} style={{ background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 12, padding: "40px 36px", boxShadow: "0 4px 20px rgba(0,0,0,0.06)" }}>
-            <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontWeight: 900, fontSize: 36, textTransform: "uppercase", letterSpacing: "0.04em", color: "#1a1a1a", marginBottom: 8 }}>Send Us A Message</h2>
+            <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontWeight: 900, fontSize: 36, textTransform: "uppercase", letterSpacing: "0.04em", color: "#1a1a1a", marginBottom: 8 }}>Send Us A Message</h2>
             <p style={{ fontSize: 14, color: "#666", marginBottom: 32 }}>We typically respond within one business day.</p>
 
             {submitted ? (
@@ -175,33 +175,33 @@ export default function ContactPage() {
                 <div style={{ width: 64, height: 64, borderRadius: "50%", background: "#d87307", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px" }}>
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                 </div>
-                <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 24, fontWeight: 900, textTransform: "uppercase", color: "#1a1a1a", marginBottom: 12 }}>Message Received</h3>
+                <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 24, fontWeight: 900, textTransform: "uppercase", color: "#1a1a1a", marginBottom: 12 }}>Message Received</h3>
                 <p style={{ fontSize: 15, color: "#555", lineHeight: 1.7 }}>{confirmationByInterest[form.interest] || defaultConfirmation}</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 16 }}>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
                   <div>
-                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a1a1a", display: "block", marginBottom: 8 }}>Full Name <span style={{ color: "#d87307" }}>*</span></label>
+                    <label style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a1a1a", display: "block", marginBottom: 8 }}>Full Name <span style={{ color: "#d87307" }}>*</span></label>
                     <input required value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} placeholder="John Smith" style={inputStyle} />
                   </div>
                   <div>
-                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a1a1a", display: "block", marginBottom: 8 }}>Company</label>
+                    <label style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a1a1a", display: "block", marginBottom: 8 }}>Company</label>
                     <input value={form.company} onChange={e => setForm({ ...form, company: e.target.value })} placeholder="Your company" style={inputStyle} />
                   </div>
                 </div>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
                   <div>
-                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a1a1a", display: "block", marginBottom: 8 }}>Email <span style={{ color: "#d87307" }}>*</span></label>
+                    <label style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a1a1a", display: "block", marginBottom: 8 }}>Email <span style={{ color: "#d87307" }}>*</span></label>
                     <input required type="email" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} placeholder="john@company.com" style={inputStyle} />
                   </div>
                   <div>
-                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a1a1a", display: "block", marginBottom: 8 }}>Phone</label>
+                    <label style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a1a1a", display: "block", marginBottom: 8 }}>Phone</label>
                     <input value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value })} placeholder="+1 (555) 000-0000" style={inputStyle} />
                   </div>
                 </div>
                 <div>
-                  <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a1a1a", display: "block", marginBottom: 8 }}>Company Size</label>
+                  <label style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a1a1a", display: "block", marginBottom: 8 }}>Company Size</label>
                   <select value={form.size} onChange={e => setForm({ ...form, size: e.target.value })} style={{ ...inputStyle, cursor: "pointer" }}>
                     <option value="" style={{ background: "#FFFFFF", color: "#1a1a1a" }}>Select size...</option>
                     <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>1–10 employees</option>
@@ -211,7 +211,7 @@ export default function ContactPage() {
                   </select>
                 </div>
                 <div>
-                  <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a1a1a", display: "block", marginBottom: 8 }}>I&apos;m interested in... <span style={{ color: "#d87307" }}>*</span></label>
+                  <label style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a1a1a", display: "block", marginBottom: 8 }}>I&apos;m interested in... <span style={{ color: "#d87307" }}>*</span></label>
                   <select required value={form.interest} onChange={e => setForm({ ...form, interest: e.target.value })} style={{ ...inputStyle, cursor: "pointer" }}>
                     <option value="" style={{ background: "#FFFFFF", color: "#1a1a1a" }}>Select an option...</option>
                     <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>AI Visibility Audit (SEO/AEO)</option>
@@ -228,7 +228,7 @@ export default function ContactPage() {
                 </div>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
                   <div>
-                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a1a1a", display: "block", marginBottom: 8 }}>Investment Range</label>
+                    <label style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a1a1a", display: "block", marginBottom: 8 }}>Investment Range</label>
                     <select value={form.investment} onChange={e => setForm({ ...form, investment: e.target.value })} style={{ ...inputStyle, cursor: "pointer" }}>
                       <option value="" style={{ background: "#FFFFFF", color: "#1a1a1a" }}>Select range...</option>
                       <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>Under $5K/mo</option>
@@ -238,7 +238,7 @@ export default function ContactPage() {
                     </select>
                   </div>
                   <div>
-                    <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a1a1a", display: "block", marginBottom: 8 }}>Timeline</label>
+                    <label style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a1a1a", display: "block", marginBottom: 8 }}>Timeline</label>
                     <select value={form.timeline} onChange={e => setForm({ ...form, timeline: e.target.value })} style={{ ...inputStyle, cursor: "pointer" }}>
                       <option value="" style={{ background: "#FFFFFF", color: "#1a1a1a" }}>Select timeline...</option>
                       <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>ASAP</option>
@@ -249,13 +249,13 @@ export default function ContactPage() {
                   </div>
                 </div>
                 <div>
-                  <label style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a1a1a", display: "block", marginBottom: 8 }}>Message</label>
+                  <label style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a1a1a", display: "block", marginBottom: 8 }}>Message</label>
                   <textarea rows={4} value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} placeholder="Tell us about your business and what you're looking to achieve..." style={{ ...inputStyle, resize: "vertical" }} />
                 </div>
                 {error && (
                   <p style={{ fontSize: 13, color: "#b3261e", lineHeight: 1.5 }}>{error}</p>
                 )}
-                <button type="submit" disabled={submitting} className="submit-btn" style={{ background: "#d87307", color: "#FFFFFF", fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 15, letterSpacing: "0.1em", textTransform: "uppercase", padding: "16px 32px", borderRadius: 4, border: "none", cursor: submitting ? "default" : "pointer", opacity: submitting ? 0.7 : 1, alignSelf: "flex-start", marginTop: 4 }}>
+                <button type="submit" disabled={submitting} className="submit-btn" style={{ background: "#d87307", color: "#FFFFFF", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 15, letterSpacing: "0.1em", textTransform: "uppercase", padding: "16px 32px", borderRadius: 4, border: "none", cursor: submitting ? "default" : "pointer", opacity: submitting ? 0.7 : 1, alignSelf: "flex-start", marginTop: 4 }}>
                   {submitting ? "Sending…" : "Send Message →"}
                 </button>
                 <p style={{ fontSize: 12, color: "#666", lineHeight: 1.5 }}>No spam. No obligation. We respond within 1 business day.</p>
@@ -268,7 +268,7 @@ export default function ContactPage() {
             <div style={{ backgroundImage: "url('/images/bg-haybales.jpg')", backgroundSize: "cover", backgroundPosition: "center", borderRadius: 10, overflow: "hidden", height: 220, position: "relative", marginBottom: 24 }}>
               <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, transparent 40%, rgba(28,54,82,0.75) 100%)" }} />
               <div style={{ position: "absolute", bottom: 20, left: 20 }}>
-                <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 18, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#FFFFFF" }}>Executive-Level Strategy</p>
+                <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 18, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#FFFFFF" }}>Executive-Level Strategy</p>
                 <p style={{ fontSize: 13, color: "rgba(255,255,255,0.8)", marginTop: 4 }}>25+ years of growth experience, applied to your business.</p>
               </div>
             </div>
@@ -282,7 +282,7 @@ export default function ContactPage() {
                 <div key={label} className="info-row" style={{ display: "flex", alignItems: "center", gap: 14, background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 8, padding: "14px 18px" }}>
                   <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#d87307", flexShrink: 0 }} />
                   <div>
-                    <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: "#d87307" }}>{label}</p>
+                    <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: "#d87307" }}>{label}</p>
                     <p style={{ fontSize: 14, color: "#1a1a1a", marginTop: 2 }}>{value}</p>
                   </div>
                 </div>
@@ -290,7 +290,7 @@ export default function ContactPage() {
             </div>
 
             <div style={{ background: "#FFFFFF", border: "1px solid #EEEBE7", borderLeft: "4px solid #d87307", borderRadius: 10, padding: "24px 24px" }}>
-              <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 18, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#1a1a1a", marginBottom: 8 }}>Ready to start immediately?</p>
+              <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 18, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#1a1a1a", marginBottom: 8 }}>Ready to start immediately?</p>
               <p style={{ fontSize: 13, color: "#555", marginBottom: 16, lineHeight: 1.6 }}>Book a Revenue Strategy Session directly in our calendar and we&apos;ll get you started right away.</p>
               <a href="mailto:contact@brandiron.net" className="cta-link-btn" style={{ color: "#d87307", fontWeight: 700, fontSize: 14, display: "inline-flex", alignItems: "center", gap: 6 }}>Email Us Directly →</a>
             </div>

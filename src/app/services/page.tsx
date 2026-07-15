@@ -61,7 +61,7 @@ export default function ServicesPage() {
   const ctaView = useInView(0.1);
 
   return (
-    <main style={{ fontFamily: "'Montserrat', sans-serif" }}>
+    <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
 
       {/* ── HERO ─────────────────────────────────────────────── */}
       <section style={{
@@ -73,18 +73,18 @@ export default function ServicesPage() {
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.6) 100%)" }} />
 
         <div style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto", padding: "140px 24px 80px", width: "100%" }}>
-          <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
+          <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
             What We Do
           </p>
           <h1 style={{
-            fontFamily: "'Burford Rustic Inline', sans-serif", fontWeight: 400,
+            fontFamily: "var(--font-burford-inline), sans-serif", fontWeight: 400,
             fontSize: "clamp(42px, 6vw, 72px)", textTransform: "uppercase", letterSpacing: "0.03em",
             color: "#FFFFFF", lineHeight: 1.0, marginBottom: 24,
             filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))",
           }}>
             Our Services
           </h1>
-          <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.75, color: "rgba(255,255,255,0.85)", maxWidth: 600 }}>
+          <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.75, color: "rgba(255,255,255,0.85)", maxWidth: 600 }}>
             Strategy, visibility, and revenue systems that work together, not isolated services, but one connected growth engine.
           </p>
         </div>
@@ -106,13 +106,13 @@ export default function ServicesPage() {
               onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateX(6px)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 16px 40px rgba(0,0,0,0.1)"; (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(216,115,7,0.35)"; }}
               onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateX(0)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 2px 12px rgba(0,0,0,0.04)"; (e.currentTarget as HTMLDivElement).style.borderColor = "#EEEBE7"; }}
               >
-                <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 40, fontWeight: 900, color: "#d87307", lineHeight: 1, margin: 0 }}>{number}</p>
+                <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 40, fontWeight: 900, color: "#d87307", lineHeight: 1, margin: 0 }}>{number}</p>
                 <div style={{ width: 60, height: 60, borderRadius: 12, background: "rgba(216,115,7,0.12)", border: "1px solid rgba(216,115,7,0.25)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                   {icon}
                 </div>
                 <div>
-                  <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(20px, 2.2vw, 28px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 8 }}>{title}</h2>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.7, color: "#666", margin: 0, maxWidth: 700 }}>{description}</p>
+                  <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(20px, 2.2vw, 28px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 8 }}>{title}</h2>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.7, color: "#666", margin: 0, maxWidth: 700 }}>{description}</p>
                 </div>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ color: "#d87307", flexShrink: 0 }}><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </div>
@@ -130,19 +130,19 @@ export default function ServicesPage() {
           }}>
             <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
             <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 20 }}>
+              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 20 }}>
                 Ready to Start?
               </p>
-              <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(28px, 4.2vw, 52px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.05, marginBottom: 20 }}>
+              <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(28px, 4.2vw, 52px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.05, marginBottom: 20 }}>
                 Not Sure Where to Start?
               </h2>
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", fontStyle: "italic", maxWidth: 560, margin: "0 auto 40px" }}>
+              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", fontStyle: "italic", maxWidth: 560, margin: "0 auto 40px" }}>
                 Book a strategy session and we&apos;ll map the exact services your business needs to build a complete revenue engine.
               </p>
               <div style={{ display: "flex", gap: 24, justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
                 <Link href="/contact" style={{
                   display: "inline-block", padding: "16px 40px", borderRadius: 6,
-                  fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 14,
+                  fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 14,
                   letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none",
                   background: "#d87307", color: "#FFFFFF", transition: "background 0.2s",
                 }}
@@ -152,7 +152,7 @@ export default function ServicesPage() {
                   Book a Strategy Session
                 </Link>
                 <Link href="/about" style={{
-                  fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 14,
+                  fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 14,
                   letterSpacing: "0.08em", textTransform: "uppercase", textDecoration: "none",
                   color: "#FFFFFF", borderBottom: "1px solid rgba(255,255,255,0.4)", paddingBottom: 2,
                 }}>

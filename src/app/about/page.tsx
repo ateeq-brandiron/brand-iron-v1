@@ -1,9 +1,9 @@
 "use client";
 import Link from "next/link";
 
-const BURFORD = "'Burford Rustic Black', Helvetica, Arial, Lucida, sans-serif";
-const BURFORD_INLINE = "'Burford Rustic Inline', sans-serif";
-const MONTSERRAT = "'Montserrat', sans-serif";
+const BURFORD = "var(--font-burford-black), Helvetica, Arial, Lucida, sans-serif";
+const BURFORD_INLINE = "var(--font-burford-inline), sans-serif";
+const MONTSERRAT = "var(--font-montserrat), sans-serif";
 const COPPER = "#d87307";
 const WHITE = "#FFFFFF";
 const INK = "#1a1a1a";
@@ -458,19 +458,19 @@ export default function AboutPage() {
         <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", width: 700, height: 500, background: "radial-gradient(ellipse, rgba(216,115,7,0.10) 0%, transparent 68%)", pointerEvents: "none" }} />
         <div style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }}>
           <div>
-            <p style={{ fontFamily: "'Montserrat', Helvetica, Arial, sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 20 }}>Ready To Start?</p>
-            <h2 style={{ fontFamily: "'Burford Rustic Black', Helvetica, Arial, Lucida, sans-serif", fontWeight: 400, fontSize: "clamp(32px, 4vw, 54px)", textTransform: "uppercase", letterSpacing: "0.02em", color: "#FFFFFF", lineHeight: 1.1, marginBottom: 28 }}>
+            <p style={{ fontFamily: "var(--font-montserrat), Helvetica, Arial, sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 20 }}>Ready To Start?</p>
+            <h2 style={{ fontFamily: "var(--font-burford-black), Helvetica, Arial, Lucida, sans-serif", fontWeight: 400, fontSize: "clamp(32px, 4vw, 54px)", textTransform: "uppercase", letterSpacing: "0.02em", color: "#FFFFFF", lineHeight: 1.1, marginBottom: 28 }}>
               Ready To Work With BrandIron?
             </h2>
             <div style={{ width: 64, height: 3, background: "#d87307", borderRadius: 2 }} />
           </div>
           <div>
-            <p style={{ fontFamily: "'Montserrat', Helvetica, Arial, sans-serif", fontSize: 17, lineHeight: 1.75, color: "rgba(255,255,255,0.82)", marginBottom: 36 }}>
+            <p style={{ fontFamily: "var(--font-montserrat), Helvetica, Arial, sans-serif", fontSize: 17, lineHeight: 1.75, color: "rgba(255,255,255,0.82)", marginBottom: 36 }}>
               Book a strategy session and let&apos;s design the revenue system your business deserves.
             </p>
             <div style={{ display: "flex", gap: 16, flexWrap: "wrap", alignItems: "center" }}>
               <Link href="/contact" className="btn-primary">Book Strategy Session</Link>
-              <Link href="/services" style={{ fontFamily: "'Montserrat', Helvetica, Arial, sans-serif", fontSize: 14, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "rgba(255,255,255,0.7)", textDecoration: "none", borderBottom: "1px solid rgba(255,255,255,0.3)", paddingBottom: 2, transition: "color 0.2s ease, border-color 0.2s ease" }}>Our Services →</Link>
+              <Link href="/services" style={{ fontFamily: "var(--font-montserrat), Helvetica, Arial, sans-serif", fontSize: 14, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "rgba(255,255,255,0.7)", textDecoration: "none", borderBottom: "1px solid rgba(255,255,255,0.3)", paddingBottom: 2, transition: "color 0.2s ease, border-color 0.2s ease" }}>Our Services →</Link>
             </div>
           </div>
         </div>

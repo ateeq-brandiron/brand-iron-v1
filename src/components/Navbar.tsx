@@ -45,7 +45,7 @@ export default function Navbar() {
           >
             <Link href="/services" style={{
               display: "flex", alignItems: "center", gap: 5,
-              fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
+              fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.1em", textTransform: "uppercase",
               color: servicesOpen ? "#d87307" : "#FFFFFF",
               transition: "color 0.2s",
@@ -67,7 +67,7 @@ export default function Navbar() {
                   <Link key={s.href} href={s.href} style={{
                     display: "block",
                     padding: "14px 28px",
-                    fontFamily: "'Burford Rustic Black', Helvetica, Arial, sans-serif", fontWeight: 700, fontSize: 17,
+                    fontFamily: "var(--font-burford-black), Helvetica, Arial, sans-serif", fontWeight: 700, fontSize: 17,
                     letterSpacing: "0.02em", whiteSpace: "nowrap",
                     color: "#1a1a1a",
                     transition: "color 0.2s",
@@ -88,7 +88,7 @@ export default function Navbar() {
           {navLinks.map(l => (
             <span key={l.href} style={{ display: "flex", alignItems: "center", gap: 18 }}>
               <Link href={l.href} style={{
-                fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
+                fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
                 letterSpacing: "0.1em", textTransform: "uppercase",
                 color: "#FFFFFF",
                 transition: "color 0.2s",
@@ -101,7 +101,7 @@ export default function Navbar() {
           ))}
 
           <Link href="/contact" style={{
-            fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
+            fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
             letterSpacing: "0.1em", textTransform: "uppercase",
             background: "#d87307", color: "#FFFFFF",
             padding: "10px 22px", borderRadius: 6,
@@ -132,7 +132,7 @@ export default function Navbar() {
           <button onClick={() => setMobileServicesOpen(!mobileServicesOpen)} style={{
             display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%",
             background: "none", border: "none", cursor: "pointer", padding: "12px 0",
-            fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 14,
+            fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 14,
             letterSpacing: "0.12em", textTransform: "uppercase", color: "#FFFFFF",
             borderBottom: "1px solid rgba(255,255,255,0.06)",
           }}>
@@ -146,7 +146,7 @@ export default function Navbar() {
               {servicesMenu.map(s => (
                 <Link key={s.href} href={s.href} onClick={() => setOpen(false)} style={{
                   display: "block", padding: "11px 0",
-                  fontFamily: "'Montserrat', sans-serif", fontWeight: 500, fontSize: 15,
+                  fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 500, fontSize: 15,
                   color: "rgba(255,255,255,0.75)",
                 }}>{s.label}</Link>
               ))}
@@ -156,7 +156,7 @@ export default function Navbar() {
           {navLinks.map(l => (
             <Link key={l.href} href={l.href} onClick={() => setOpen(false)} style={{
               display: "block", padding: "12px 0",
-              fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 14,
+              fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 14,
               letterSpacing: "0.12em", textTransform: "uppercase", color: "#FFFFFF",
               borderBottom: "1px solid rgba(255,255,255,0.06)",
             }}>{l.label}</Link>
@@ -165,7 +165,7 @@ export default function Navbar() {
           <div style={{ paddingTop: 16 }}>
             <Link href="/contact" onClick={() => setOpen(false)} style={{
               display: "inline-block",
-              fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
+              fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.1em", textTransform: "uppercase",
               background: "#d87307", color: "#FFFFFF",
               padding: "12px 28px", borderRadius: 6,

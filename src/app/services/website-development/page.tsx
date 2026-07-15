@@ -145,7 +145,7 @@ export default function WebsiteDevelopmentPage() {
   ];
 
   return (
-    <main style={{ fontFamily: "'Montserrat', sans-serif" }}>
+    <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
 
       {inquiryOpen && <WebsiteInquiryModal onClose={() => setInquiryOpen(false)} />}
 
@@ -164,7 +164,7 @@ export default function WebsiteDevelopmentPage() {
             {/* LEFT — crossfading headline, CTAs */}
             <div>
               <h1 className="hero-h1-anim" style={{
-                fontFamily: "'Burford Rustic Inline', sans-serif",
+                fontFamily: "var(--font-burford-inline), sans-serif",
                 fontWeight: 400, fontSize: "clamp(30px, 4.4vw, 58px)",
                 textTransform: "uppercase", letterSpacing: "0.03em", lineHeight: 1.05,
                 color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))",
@@ -238,13 +238,13 @@ export default function WebsiteDevelopmentPage() {
         <CircuitOverlay />
         <div ref={s3View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 64 }}>
-            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
+            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               The Brand Iron Website Framework
             </p>
             <h2 className={`section-heading reveal${s3View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               Every Great Website Starts with Strategy.
             </h2>
-            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555" }}>
+            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555" }}>
               Our approach combines five connected pillars that ensure your website supports both today&apos;s users and tomorrow&apos;s growth.
             </p>
           </div>
@@ -261,17 +261,17 @@ export default function WebsiteDevelopmentPage() {
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 16 }}>
                   <div style={{ width: 40, height: 40, borderRadius: 10, background: "rgba(216,115,7,0.12)", border: "1px solid rgba(216,115,7,0.2)", display: "flex", alignItems: "center", justifyContent: "center" }}>{icon}</div>
-                  <span style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontWeight: 900, fontSize: 28, color: "rgba(216,115,7,0.18)", lineHeight: 1 }}>{num}</span>
+                  <span style={{ fontFamily: "var(--font-burford-black), sans-serif", fontWeight: 900, fontSize: 28, color: "rgba(216,115,7,0.18)", lineHeight: 1 }}>{num}</span>
                 </div>
-                <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 15, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#1a1a1a", marginBottom: 10, lineHeight: 1.25 }}>{title}</h3>
-                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12.5, lineHeight: 1.65, color: "#666", margin: 0 }}>{body}</p>
+                <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 15, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#1a1a1a", marginBottom: 10, lineHeight: 1.25 }}>{title}</h3>
+                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12.5, lineHeight: 1.65, color: "#666", margin: 0 }}>{body}</p>
               </div>
             ))}
           </div>
 
           <div className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ textAlign: "center" }}>
             <button onClick={() => setInquiryOpen(true)} style={{
-              display: "inline-block", fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
+              display: "inline-block", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
               background: "#d87307", color: "#FFFFFF", border: "none", cursor: "pointer",
               padding: "14px 36px", borderRadius: 6, transition: "background 0.2s",
@@ -295,7 +295,7 @@ export default function WebsiteDevelopmentPage() {
             <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))", marginBottom: 20, textAlign: "left" }}>
               How We Build Websites
             </h2>
-            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.65)" }}>
+            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.65)" }}>
               Every project follows a structured process designed to reduce risk and create a smoother launch.
             </p>
           </div>
@@ -310,15 +310,15 @@ export default function WebsiteDevelopmentPage() {
                   borderRadius: 10, padding: "16px 18px", minWidth: 108, textAlign: "center",
                   boxShadow: i === processSteps.length - 1 ? "0 8px 28px rgba(216,115,7,0.35)" : "none",
                 }}>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.14em", color: i === processSteps.length - 1 ? "rgba(255,255,255,0.75)" : "#d87307", marginBottom: 6 }}>{String(i + 1).padStart(2, "0")}</p>
-                  <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 13, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#FFFFFF", margin: 0, lineHeight: 1.2 }}>{step}</p>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.14em", color: i === processSteps.length - 1 ? "rgba(255,255,255,0.75)" : "#d87307", marginBottom: 6 }}>{String(i + 1).padStart(2, "0")}</p>
+                  <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 13, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#FFFFFF", margin: 0, lineHeight: 1.2 }}>{step}</p>
                 </div>
                 {i < processSteps.length - 1 && <div style={{ padding: "0 4px" }}><ArrowConnector /></div>}
               </div>
             ))}
           </div>
 
-          <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.7)" }}>
+          <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.7)" }}>
             This collaborative approach ensures your website is aligned with your business goals before it goes live.
           </p>
         </div>
@@ -329,13 +329,13 @@ export default function WebsiteDevelopmentPage() {
         <div style={{ position: "absolute", inset: 0, backgroundImage: "radial-gradient(circle at 20% 50%, rgba(216,115,7,0.04) 0%, transparent 60%), radial-gradient(circle at 80% 20%, rgba(15,27,45,0.04) 0%, transparent 50%)", pointerEvents: "none" }} />
         <div ref={s5View.ref} style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>
           <div style={{ marginBottom: 64 }}>
-            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
+            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               Choose the Right Website Solution
             </p>
             <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               Every Organization Has Different Website Requirements
             </h2>
-            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555" }}>
+            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555" }}>
               Whether you need a focused website refresh, a marketing-ready platform, or a larger website with advanced functionality, Brand Iron provides solutions designed to meet your current needs while supporting future growth.
             </p>
           </div>
@@ -352,14 +352,14 @@ export default function WebsiteDevelopmentPage() {
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
                 <div style={{ padding: "36px 32px 28px", flex: 1 }}>
                   <div style={{ width: 56, height: 56, borderRadius: 12, background: "rgba(216,115,7,0.1)", border: "1px solid rgba(216,115,7,0.25)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 20 }}>{icon}</div>
-                  <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 19, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 14, lineHeight: 1.2 }}>{name}</h3>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.75, color: "#666", marginBottom: 20 }}>{body}</p>
+                  <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 19, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 14, lineHeight: 1.2 }}>{name}</h3>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.75, color: "#666", marginBottom: 20 }}>{body}</p>
                 </div>
                 <div style={{ padding: "20px 32px 28px", borderTop: "1px solid rgba(0,0,0,0.06)" }}>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#999", marginBottom: 6 }}>Best For</p>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 600, color: "#1a1a1a", marginBottom: 16 }}>{bestFor}</p>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#999", marginBottom: 6 }}>Primary Outcome</p>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.55, color: "#d87307", fontWeight: 600, margin: 0 }}>{outcome}</p>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#999", marginBottom: 6 }}>Best For</p>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, fontWeight: 600, color: "#1a1a1a", marginBottom: 16 }}>{bestFor}</p>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#999", marginBottom: 6 }}>Primary Outcome</p>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.55, color: "#d87307", fontWeight: 600, margin: 0 }}>{outcome}</p>
                 </div>
               </div>
             ))}
@@ -367,11 +367,11 @@ export default function WebsiteDevelopmentPage() {
 
           {/* Comparison table */}
           <div className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ marginBottom: 56 }}>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 32, textAlign: "center" }}>
+            <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 32, textAlign: "center" }}>
               Compare Website Solutions
             </h3>
             <div style={{ overflowX: "auto", border: "1px solid #ECE5D8", borderRadius: 12 }}>
-              <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "'Montserrat', sans-serif", fontSize: 14 }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14 }}>
                 <thead>
                   <tr>
                     <th style={{ background: "#F3F0EC", color: "#1a1a1a", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", fontSize: 12, padding: "18px 24px", textAlign: "left" }}>Solution</th>
@@ -398,7 +398,7 @@ export default function WebsiteDevelopmentPage() {
 
           <div className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ textAlign: "center" }}>
             <button onClick={() => setInquiryOpen(true)} style={{
-              display: "inline-block", fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
+              display: "inline-block", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
               background: "#d87307", color: "#FFFFFF", border: "none", cursor: "pointer",
               padding: "14px 36px", borderRadius: 6, transition: "background 0.2s",
@@ -419,13 +419,13 @@ export default function WebsiteDevelopmentPage() {
         <div style={{ position: "absolute", inset: 0, background: "rgba(248,242,232,0.93)" }} />
         <div ref={s6View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ marginBottom: 48 }}>
-            <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
+            <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               What Success Looks Like
             </p>
             <h2 className={`section-heading reveal${s6View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               A Website That Becomes a Long-Term Business Asset
             </h2>
-            <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 17, lineHeight: 1.8, color: "#555" }}>
+            <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.8, color: "#555" }}>
               A successful website does more than launch—it becomes a long-term business asset. With Brand Iron, your website is designed to:
             </p>
           </div>
@@ -434,21 +434,21 @@ export default function WebsiteDevelopmentPage() {
             {successPoints.map(point => (
               <div key={point} style={{ display: "flex", alignItems: "center", gap: 12 }}>
                 <CheckIcon />
-                <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, fontWeight: 600, color: "#1a1a1a" }}>{point}</span>
+                <span style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, fontWeight: 600, color: "#1a1a1a" }}>{point}</span>
               </div>
             ))}
           </div>
 
-          <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, fontWeight: 700, lineHeight: 1.7, color: "#1a1a1a", textAlign: "center", marginBottom: 64 }}>
+          <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, fontWeight: 700, lineHeight: 1.7, color: "#1a1a1a", textAlign: "center", marginBottom: 64 }}>
             A great website doesn&apos;t just represent your business—it helps grow it.
           </p>
 
           {/* FAQ Accordion */}
           <div className={`reveal${s6View.inView ? ' visible' : ''}`}>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
+            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               Frequently Asked Questions
             </p>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 32 }}>
+            <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 32 }}>
               Common Questions About Website Development
             </h3>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
@@ -458,14 +458,14 @@ export default function WebsiteDevelopmentPage() {
                     onClick={() => setOpenFaq(openFaq === i ? null : i)}
                     style={{ width: "100%", background: "none", border: "none", cursor: "pointer", padding: "20px 24px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16, textAlign: "left" }}
                   >
-                    <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, fontWeight: 600, color: "#1a1a1a", lineHeight: 1.5 }}>{q}</span>
+                    <span style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, fontWeight: 600, color: "#1a1a1a", lineHeight: 1.5 }}>{q}</span>
                     <div style={{ width: 28, height: 28, borderRadius: "50%", background: openFaq === i ? "#d87307" : "rgba(216,115,7,0.1)", border: "1px solid rgba(216,115,7,0.3)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, transition: "background 0.2s, transform 0.2s", transform: openFaq === i ? "rotate(45deg)" : "rotate(0)" }}>
                       <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke={openFaq === i ? "#FFFFFF" : "#d87307"} strokeWidth="2" strokeLinecap="round"/></svg>
                     </div>
                   </button>
                   {openFaq === i && (
                     <div style={{ padding: "0 24px 20px" }}>
-                      <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.8, color: "#555", margin: 0 }}>{a}</p>
+                      <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.8, color: "#555", margin: 0 }}>{a}</p>
                     </div>
                   )}
                 </div>
@@ -491,7 +491,7 @@ export default function WebsiteDevelopmentPage() {
           <h2 className={`reveal${ctaView.inView ? ' visible' : ''} section-heading`} style={{ color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))", marginBottom: 24 }}>
             Build a Website Designed for Growth
           </h2>
-          <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 17, lineHeight: 1.85, color: "rgba(255,255,255,0.8)", maxWidth: 700, margin: "0 auto 48px" }}>
+          <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.85, color: "rgba(255,255,255,0.8)", maxWidth: 700, margin: "0 auto 48px" }}>
             Whether you&apos;re launching a new website or transforming an existing one, Brand Iron helps you create a digital experience that supports your brand, strengthens credibility, and drives measurable business outcomes.
           </p>
           <div className={`reveal${ctaView.inView ? ' visible' : ''}`}>

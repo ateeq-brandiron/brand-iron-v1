@@ -76,13 +76,13 @@ export default function AuditModal({ onClose }: { onClose: () => void }) {
         <div style={{ padding: "36px 40px 40px" }}>
           {step === 1 ? (
             <>
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 10 }}>
+              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 10 }}>
                 Free Audit, No Obligation
               </p>
-              <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(22px, 3vw, 32px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.04em", color: "#FFFFFF", lineHeight: 1.15, marginBottom: 8 }}>
+              <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 3vw, 32px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.04em", color: "#FFFFFF", lineHeight: 1.15, marginBottom: 8 }}>
                 Get Your Free SEO &amp; AI Visibility Audit
               </h2>
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, color: "rgba(255,255,255,0.65)", lineHeight: 1.7, marginBottom: 28, maxWidth: 520 }}>
+              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, color: "rgba(255,255,255,0.65)", lineHeight: 1.7, marginBottom: 28, maxWidth: 520 }}>
                 We&apos;ll review your site&apos;s health across search engines and AI platforms, and send you a plain-English summary of what&apos;s working, what isn&apos;t, and where the quick wins are.
               </p>
 
@@ -158,13 +158,13 @@ export default function AuditModal({ onClose }: { onClose: () => void }) {
                 </div>
 
                 {error && (
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, color: "#ff8a80", lineHeight: 1.5, marginBottom: 14 }}>{error}</p>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, color: "#ff8a80", lineHeight: 1.5, marginBottom: 14 }}>{error}</p>
                 )}
                 <button type="submit" disabled={submitting} style={{
                   width: "100%", padding: "17px 32px",
                   background: submitting ? "rgba(216,115,7,0.50)" : "#d87307",
                   color: "#FFFFFF", border: "none", borderRadius: 8,
-                  fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 700,
+                  fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, fontWeight: 700,
                   letterSpacing: "0.12em", textTransform: "uppercase", cursor: submitting ? "default" : "pointer",
                   transition: "background 0.2s",
                 }}>
@@ -179,16 +179,16 @@ export default function AuditModal({ onClose }: { onClose: () => void }) {
                   <path d="M20 6L9 17l-5-5" stroke="#d87307" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
-              <h2 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 28, fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.06em", color: "#FFFFFF", marginBottom: 12 }}>
+              <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 28, fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.06em", color: "#FFFFFF", marginBottom: 12 }}>
                 You&apos;re On The List!
               </h2>
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, color: "rgba(255,255,255,0.75)", lineHeight: 1.75, maxWidth: 420, margin: "0 auto 32px" }}>
+              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, color: "rgba(255,255,255,0.75)", lineHeight: 1.75, maxWidth: 420, margin: "0 auto 32px" }}>
                 We&apos;ll review <strong style={{ color: "#d87307" }}>{form.website || "your site"}</strong> and send your free AI Visibility & SEO health summary within 1–2 business days.
               </p>
               <button onClick={onClose} style={{
                 padding: "14px 40px", background: "transparent",
                 border: "2px solid #d87307", borderRadius: 8, color: "#d87307",
-                fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 700,
+                fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700,
                 letterSpacing: "0.12em", textTransform: "uppercase", cursor: "pointer",
               }}>Close</button>
             </div>
@@ -200,7 +200,7 @@ export default function AuditModal({ onClose }: { onClose: () => void }) {
 }
 
 const labelStyle: React.CSSProperties = {
-  display: "block", fontFamily: "'Montserrat', sans-serif", fontSize: 11,
+  display: "block", fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11,
   fontWeight: 700, letterSpacing: "0.10em", textTransform: "uppercase",
   color: "rgba(255,255,255,0.55)", marginBottom: 6,
 };
@@ -208,7 +208,7 @@ const inputStyle: React.CSSProperties = {
   width: "100%", padding: "11px 14px",
   background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.15)",
   borderRadius: 6, color: "#FFFFFF",
-  fontFamily: "'Montserrat', sans-serif", fontSize: 13,
+  fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13,
   outline: "none", boxSizing: "border-box",
 };
 const selectStyle: React.CSSProperties = {

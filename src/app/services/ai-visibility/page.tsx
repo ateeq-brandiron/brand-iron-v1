@@ -104,7 +104,7 @@ export default function AIVisibilityPage() {
   ];
 
   return (
-    <main style={{ fontFamily: "'Montserrat', sans-serif" }}>
+    <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
 
       {auditOpen && <AuditModal onClose={() => setAuditOpen(false)} />}
 
@@ -123,7 +123,7 @@ export default function AIVisibilityPage() {
             {/* LEFT — headline, hook, CTAs */}
             <div>
               <h1 className="hero-h1-anim" style={{
-                fontFamily: "'Burford Rustic Inline', sans-serif",
+                fontFamily: "var(--font-burford-inline), sans-serif",
                 fontWeight: 400, fontSize: "clamp(30px, 4.4vw, 58px)",
                 textTransform: "uppercase", letterSpacing: "0.02em", lineHeight: 0.92,
                 color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))",
@@ -132,7 +132,7 @@ export default function AIVisibilityPage() {
                 Helping Brands Become Discoverable, Trusted, and Recommended Across Search and AI.
               </h1>
 
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 700, color: "#FFFFFF", lineHeight: 1.5, marginBottom: 20, textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}>
+              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, fontWeight: 700, color: "#FFFFFF", lineHeight: 1.5, marginBottom: 20, textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}>
                 Discover how visible your business is across Google, ChatGPT, Gemini, Claude, Perplexity, and other AI-powered search experiences.
               </p>
 
@@ -143,7 +143,7 @@ export default function AIVisibilityPage() {
                   padding: "15px 32px", borderRadius: 6,
                   background: "#d87307", border: "2px solid #d87307",
                   color: "#FFFFFF", cursor: "pointer", textDecoration: "none",
-                  fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 700,
+                  fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, fontWeight: 700,
                   letterSpacing: "0.1em", textTransform: "uppercase",
                   transition: "background 0.2s, transform 0.15s",
                   boxShadow: "0 4px 20px rgba(216,115,7,0.35)",
@@ -205,11 +205,11 @@ export default function AIVisibilityPage() {
 
           {/* Then vs Now */}
           <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ marginBottom: 64 }}>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 32 }}>
+            <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 32 }}>
               Search Has Evolved
             </h3>
             <div style={{ overflowX: "auto", border: "1px solid #ECE5D8", borderRadius: 12 }}>
-              <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "'Montserrat', sans-serif", fontSize: 15 }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15 }}>
                 <thead>
                   <tr>
                     <th style={{ background: "#EFEDE7", color: "#8a8378", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", fontSize: 12, padding: "18px 24px", textAlign: "left", width: "50%" }}>Then</th>
@@ -248,10 +248,10 @@ export default function AIVisibilityPage() {
           />
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,10,7,0.68) 0%, rgba(8,10,7,0.82) 100%)" }} />
           <div style={{ position: "relative", zIndex: 1, maxWidth: 900, margin: "0 auto", padding: "80px 24px" }}>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", textShadow: "0 2px 12px rgba(0,0,0,0.75)", marginBottom: 24, textAlign: "center" }}>
+            <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", textShadow: "0 2px 12px rgba(0,0,0,0.75)", marginBottom: 24, textAlign: "center" }}>
               Why This Matters for Your Business
             </h3>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, fontWeight: 500, lineHeight: 1.8, color: "#FFFFFF", textShadow: "0 1px 8px rgba(0,0,0,0.6)", textAlign: "center", marginBottom: 28 }}>
+            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, fontWeight: 500, lineHeight: 1.8, color: "#FFFFFF", textShadow: "0 1px 8px rgba(0,0,0,0.6)", textAlign: "center", marginBottom: 28 }}>
               Every day, potential customers are asking questions like:
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 16, marginBottom: 40 }}>
@@ -262,17 +262,17 @@ export default function AIVisibilityPage() {
                 "&ldquo;What is Revenue Engineering?&rdquo;",
               ].map((q, i) => (
                 <div key={i} style={{ background: "rgba(8,16,36,0.6)", backdropFilter: "blur(4px)", border: "1px solid rgba(255,255,255,0.25)", borderRadius: 8, padding: "14px 20px" }}>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 500, fontStyle: "italic", color: "#f7b878", margin: 0 }} dangerouslySetInnerHTML={{ __html: q }} />
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, fontWeight: 500, fontStyle: "italic", color: "#f7b878", margin: 0 }} dangerouslySetInnerHTML={{ __html: q }} />
                 </div>
               ))}
             </div>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, fontWeight: 500, lineHeight: 1.8, color: "#FFFFFF", textShadow: "0 1px 8px rgba(0,0,0,0.6)", textAlign: "center", marginBottom: 16 }}>
+            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, fontWeight: 500, lineHeight: 1.8, color: "#FFFFFF", textShadow: "0 1px 8px rgba(0,0,0,0.6)", textAlign: "center", marginBottom: 16 }}>
               If AI platforms and search engines don&apos;t recognize your business as a trusted source, your competitors may become the answers buyers see first.
             </p>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, fontWeight: 500, lineHeight: 1.8, color: "#FFFFFF", textShadow: "0 1px 8px rgba(0,0,0,0.6)", textAlign: "center", marginBottom: 8 }}>
+            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, fontWeight: 500, lineHeight: 1.8, color: "#FFFFFF", textShadow: "0 1px 8px rgba(0,0,0,0.6)", textAlign: "center", marginBottom: 8 }}>
               AI doesn&apos;t simply rank content.
             </p>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#FFFFFF", fontWeight: 700, textShadow: "0 1px 8px rgba(0,0,0,0.6)", textAlign: "center" }}>
+            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#FFFFFF", fontWeight: 700, textShadow: "0 1px 8px rgba(0,0,0,0.6)", textAlign: "center" }}>
               It evaluates context, authority, credibility, and relevance to determine which organizations deserve to be referenced and recommended.
             </p>
           </div>
@@ -285,7 +285,7 @@ export default function AIVisibilityPage() {
           <h2 className={`section-heading reveal${s3View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 16, textAlign: "left" }}>
             Visibility Alone Isn&apos;t Enough.
           </h2>
-          <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 64 }}>
+          <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 64 }}>
             Modern discoverability requires four connected capabilities working together.
           </p>
 
@@ -310,8 +310,8 @@ export default function AIVisibilityPage() {
                 onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLDivElement).style.boxShadow = i === 3 ? "0 8px 32px rgba(216,115,7,0.35)" : "0 4px 24px rgba(0,0,0,0.12)"; }}
                 >
                   {i === 3 && <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "rgba(255,255,255,0.4)" }} />}
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: i === 3 ? "rgba(255,255,255,0.8)" : "#d87307", marginBottom: 12 }}>{num}</p>
-                  <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 18, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", margin: 0, lineHeight: 1.2 }}>{label}</p>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: i === 3 ? "rgba(255,255,255,0.8)" : "#d87307", marginBottom: 12 }}>{num}</p>
+                  <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 18, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", margin: 0, lineHeight: 1.2 }}>{label}</p>
                 </div>
                 {i < 3 && (
                   <div style={{ padding: "0 6px" }}>
@@ -325,11 +325,11 @@ export default function AIVisibilityPage() {
           </div>
 
           <div className={`reveal${s3View.inView ? ' visible' : ''}`}>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 17, lineHeight: 1.8, color: "#444", marginBottom: 32 }}>
+            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.8, color: "#444", marginBottom: 32 }}>
               The organizations that win tomorrow aren&apos;t simply easier to find, they&apos;re easier to trust. That&apos;s why Brand Iron goes beyond traditional SEO. We help organizations build the technical foundation, digital authority, and AI readiness needed to become discoverable, trusted, and recommended across today&apos;s evolving search landscape.
             </p>
             <button onClick={() => setAuditOpen(true)} style={{
-              display: "inline-block", fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
+              display: "inline-block", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
               background: "#d87307", color: "#FFFFFF", border: "none", cursor: "pointer",
               padding: "14px 36px", borderRadius: 6, transition: "background 0.2s",
@@ -353,10 +353,10 @@ export default function AIVisibilityPage() {
             <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 24, textAlign: "left" }}>
               A Strategic Framework for AI Visibility
             </h2>
-            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 500, fontSize: 18, lineHeight: 1.8, color: "#3a3a3a", marginBottom: 16 }}>
+            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 500, fontSize: 18, lineHeight: 1.8, color: "#3a3a3a", marginBottom: 16 }}>
               AI Visibility isn&apos;t achieved through a single tactic or tool. It requires a connected strategy that strengthens your technical foundation, builds digital authority, and helps AI platforms understand, trust, and recommend your business.
             </p>
-            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 500, fontSize: 16, lineHeight: 1.8, color: "#4a4a4a" }}>
+            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 500, fontSize: 16, lineHeight: 1.8, color: "#4a4a4a" }}>
               At Brand Iron, we guide organizations through a four-stage framework designed to improve discoverability across search engines and AI-powered search experiences.
             </p>
           </div>
@@ -415,11 +415,11 @@ export default function AIVisibilityPage() {
               >
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: i === 3 ? "rgba(255,255,255,0.35)" : "linear-gradient(to right, transparent, rgba(216,115,7,0.7), transparent)" }} />
                 <div style={{ width: 52, height: 52, borderRadius: "50%", background: i === 3 ? "rgba(255,255,255,0.2)" : "rgba(216,115,7,0.15)", border: `1px solid ${i === 3 ? "rgba(255,255,255,0.3)" : "rgba(216,115,7,0.3)"}`, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 20 }}>
-                  <span style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 22, fontWeight: 900, color: i === 3 ? "#FFFFFF" : "#d87307" }}>{num}</span>
+                  <span style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 22, fontWeight: 900, color: i === 3 ? "#FFFFFF" : "#d87307" }}>{num}</span>
                 </div>
-                <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 22, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", marginBottom: 16, lineHeight: 1.2 }}>{title}</h3>
+                <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 22, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", marginBottom: 16, lineHeight: 1.2 }}>{title}</h3>
                 {lines.map((line, j) => (
-                  <p key={j} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.75, color: i === 3 ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.78)", marginBottom: j < lines.length - 1 ? 10 : 0 }}>{line}</p>
+                  <p key={j} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.75, color: i === 3 ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.78)", marginBottom: j < lines.length - 1 ? 10 : 0 }}>{line}</p>
                 ))}
               </div>
             ))}
@@ -427,7 +427,7 @@ export default function AIVisibilityPage() {
 
           {/* Closing statement */}
           <div className={`reveal${s4View.inView ? ' visible' : ''}`}>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 500, fontSize: 17, lineHeight: 1.8, color: "#3a3a3a" }}>
+            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 500, fontSize: 17, lineHeight: 1.8, color: "#3a3a3a" }}>
               No matter where you are in your AI Visibility journey, our framework helps you build a stronger digital presence that supports long-term discoverability, authority, and business growth.
             </p>
           </div>
@@ -441,17 +441,17 @@ export default function AIVisibilityPage() {
             <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20 }}>
               Choose the Right AI Visibility Solution
             </h2>
-            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 680, margin: "0 auto 16px" }}>
+            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 680, margin: "0 auto 16px" }}>
               Every organization is at a different stage of its AI Visibility journey.
             </p>
-            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 680, margin: "0 auto 16px" }}>
+            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 680, margin: "0 auto 16px" }}>
               Some need to understand why they&apos;re not appearing in AI-powered search results. Others are ready to strengthen their technical foundation, build digital authority, or establish market leadership.
             </p>
-            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 680, margin: "0 auto 32px" }}>
+            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 680, margin: "0 auto 32px" }}>
               Our four-tier framework allows you to start where you are today, and grow as your business grows.
             </p>
             <Link href="/contact" className={`reveal${s5View.inView ? ' visible' : ''}`} style={{
-              display: "inline-block", fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
+              display: "inline-block", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
               background: "#d87307", color: "#FFFFFF",
               padding: "14px 36px", borderRadius: 6, transition: "background 0.2s",
@@ -482,18 +482,18 @@ export default function AIVisibilityPage() {
                 <div style={{ width: 56, height: 56, borderRadius: "50%", background: "#FFFFFF", border: "1.5px solid rgba(216,115,7,0.35)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 18 }}>
                   {tier.icon}
                 </div>
-                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#d87307", marginBottom: 8 }}>{tier.number}</p>
-                <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 17, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 6, lineHeight: 1.3 }}>{tier.name}</h3>
-                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 600, color: "#d87307", marginBottom: 16 }}>{tier.tagline}</p>
-                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.75, color: "#666", marginBottom: 20, flex: 1 }}>{tier.description}</p>
+                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#d87307", marginBottom: 8 }}>{tier.number}</p>
+                <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 17, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 6, lineHeight: 1.3 }}>{tier.name}</h3>
+                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 600, color: "#d87307", marginBottom: 16 }}>{tier.tagline}</p>
+                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.75, color: "#666", marginBottom: 20, flex: 1 }}>{tier.description}</p>
                 <div style={{ borderTop: "1px solid #EEEBE7", paddingTop: 16, marginBottom: 16 }}>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#999", marginBottom: 6 }}>Best For</p>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.6, color: "#555" }}>{tier.bestFor}</p>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#999", marginBottom: 6 }}>Best For</p>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.6, color: "#555" }}>{tier.bestFor}</p>
                 </div>
                 <div style={{ borderTop: "1px solid #EEEBE7", paddingTop: 16, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12 }}>
                   <div>
-                    <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#999", marginBottom: 6 }}>Primary Outcome</p>
-                    <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 600, color: "#d87307", margin: 0 }}>{tier.outcome}</p>
+                    <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#999", marginBottom: 6 }}>Primary Outcome</p>
+                    <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 600, color: "#d87307", margin: 0 }}>{tier.outcome}</p>
                   </div>
                   <Link href={tier.href} aria-label={`Learn more about ${tier.name}`} style={{
                     flexShrink: 0, width: 36, height: 36, borderRadius: "50%",
@@ -512,11 +512,11 @@ export default function AIVisibilityPage() {
 
           {/* Comparison table */}
           <div className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ marginBottom: 64 }}>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(20px, 2.5vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 32, textAlign: "center" }}>
+            <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(20px, 2.5vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 32, textAlign: "center" }}>
               Quick Comparison
             </h3>
             <div style={{ overflowX: "auto", border: "1px solid #ECE5D8", borderRadius: 12 }}>
-              <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "'Montserrat', sans-serif", fontSize: 14 }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14 }}>
                 <thead>
                   <tr style={{ background: "#EFEDE7" }}>
                     <th style={{ padding: "18px 24px", textAlign: "left", color: "#8a8378", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase" }}></th>
@@ -547,7 +547,7 @@ export default function AIVisibilityPage() {
 
           {/* Which solution is right for you */}
           <div className={`reveal${s5View.inView ? ' visible' : ''}`}>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(20px, 2.5vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 40, textAlign: "center" }}>
+            <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(20px, 2.5vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 40, textAlign: "center" }}>
               Which Solution Is Right for You?
             </h3>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 24, marginBottom: 40 }}>
@@ -599,20 +599,20 @@ export default function AIVisibilityPage() {
                 onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = "0 12px 40px rgba(216,115,7,0.15)"; (e.currentTarget as HTMLDivElement).style.transform = "translateY(-3px)"; }}
                 onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = "0 2px 16px rgba(0,0,0,0.05)"; (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; }}
                 >
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#d87307", marginBottom: 8 }}>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#d87307", marginBottom: 8 }}>
                     Choose {tier} if…
                   </p>
                   <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 24, flex: 1 }}>
                     {items.map(item => (
                       <div key={item} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
                         <svg style={{ flexShrink: 0, marginTop: 2 }} width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4L13 4" stroke="#d87307" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                        <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.65, color: "#444", margin: 0 }}>{item}</p>
+                        <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.65, color: "#444", margin: 0 }}>{item}</p>
                       </div>
                     ))}
                   </div>
                   <Link href={href} style={{
                     display: "inline-block", alignSelf: "flex-start", textAlign: "center", padding: "12px 24px", borderRadius: 999,
-                    fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
+                    fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
                     letterSpacing: "0.08em", textTransform: "uppercase", textDecoration: "none",
                     background: "#d87307", color: "#FFFFFF",
                     transition: "background 0.2s",
@@ -637,12 +637,12 @@ export default function AIVisibilityPage() {
         }}>
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(10,12,8,0.6) 0%, rgba(10,12,8,0.72) 100%)" }} />
           <div style={{ position: "relative", zIndex: 1, maxWidth: 1200, margin: "0 auto", padding: "64px 24px" }}>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.9)", margin: "0 0 28px" }}>
+            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.9)", margin: "0 0 28px" }}>
               Not sure where to start? Talk through your goals with a strategist and find the right AI Visibility solution for your business. Explore each solution in detail to understand what&apos;s included, who it&apos;s designed for, and the business outcomes you can expect.
             </p>
             <Link href="/contact" style={{
               display: "inline-block", padding: "14px 32px", borderRadius: 8,
-              fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13,
+              fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none",
               background: "#d87307", color: "#FFFFFF", transition: "background 0.2s",
             }}

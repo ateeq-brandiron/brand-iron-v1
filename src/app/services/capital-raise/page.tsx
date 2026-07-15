@@ -178,7 +178,7 @@ export default function CapitalRaisePage() {
   ];
 
   return (
-    <main style={{ fontFamily: "'Montserrat', sans-serif" }}>
+    <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
 
       {/* ── HERO ───────────────────────────────────────────── */}
       <section className="cr-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
@@ -195,7 +195,7 @@ export default function CapitalRaisePage() {
             {/* LEFT — headline, CTAs */}
             <div>
               <h1 className="hero-h1-anim" style={{
-                fontFamily: "'Burford Rustic Inline', sans-serif",
+                fontFamily: "var(--font-burford-inline), sans-serif",
                 fontWeight: 400, fontSize: "clamp(30px, 4.4vw, 58px)",
                 textTransform: "uppercase", letterSpacing: "0.03em", lineHeight: 1.05,
                 color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))",
@@ -213,7 +213,7 @@ export default function CapitalRaisePage() {
                 </Link>
               </div>
 
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.5)" }}>
+              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, color: "rgba(255,255,255,0.5)" }}>
                 From strategic messaging and investor-ready presentations to investor outreach and fundraising support, we help organizations prepare for every stage of the capital raise journey.
               </p>
             </div>
@@ -246,7 +246,7 @@ export default function CapitalRaisePage() {
       {/* ── S2: WHY COMPANIES STRUGGLE TO RAISE CAPITAL ─────── */}
       <section style={{ background: "#FFFFFF", padding: "120px 40px" }}>
         <div ref={s2View.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
+          <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
             Why Great Companies Still Struggle to Raise Capital
           </p>
           <h2 className={`section-heading reveal${s2View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 24, textAlign: "left" }}>
@@ -264,10 +264,10 @@ export default function CapitalRaisePage() {
 
           {/* What investors are evaluating — icon grid */}
           <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ marginBottom: 56 }}>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 12 }}>
+            <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 12 }}>
               What Investors Are Really Evaluating
             </h3>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", marginBottom: 32 }}>
+            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", marginBottom: 32 }}>
               A capital raise presentation is only one part of the decision-making process. Behind every investment conversation are a series of questions that determine whether investors move forward.
             </p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20 }}>
@@ -281,8 +281,8 @@ export default function CapitalRaisePage() {
                   <div style={{ width: 46, height: 46, borderRadius: "50%", background: "rgba(216,115,7,0.1)", border: "1px solid rgba(216,115,7,0.25)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 16 }}>
                     {icon}
                   </div>
-                  <h4 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 14, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#1a1a1a", marginBottom: 8, lineHeight: 1.3 }}>{title}</h4>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12.5, lineHeight: 1.65, color: "#666", margin: 0 }}>{body}</p>
+                  <h4 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 14, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#1a1a1a", marginBottom: 8, lineHeight: 1.3 }}>{title}</h4>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12.5, lineHeight: 1.65, color: "#666", margin: 0 }}>{body}</p>
                 </div>
               ))}
             </div>
@@ -290,10 +290,10 @@ export default function CapitalRaisePage() {
 
           {/* Beyond the pitch deck */}
           <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ maxWidth: 800, margin: "0 0 56px" }}>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 16 }}>
+            <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 16 }}>
               Beyond the Pitch Deck
             </h3>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666" }}>
+            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666" }}>
               A great presentation helps, but it doesn&apos;t earn investor confidence. Confidence comes from a clear investment story, credible financials, strategic positioning, and consistent messaging throughout the fundraising journey. That&apos;s why Brand Iron goes beyond deck design to prepare your organization for every stage of the capital raise process.
             </p>
           </div>
@@ -306,8 +306,8 @@ export default function CapitalRaisePage() {
               <div style={{ width: 56, height: 56, borderRadius: "50%", background: "rgba(216,115,7,0.15)", border: "1px solid rgba(216,115,7,0.4)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 24 }}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9.5 8.5c-2.2 0-4 1.8-4 4v3h4v-4h-2c0-1.1.9-2 2-2V8.5Zm9 0c-2.2 0-4 1.8-4 4v3h4v-4h-2c0-1.1.9-2 2-2V8.5Z" fill="#d87307" /></svg>
               </div>
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>Key Insight</p>
-              <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.4, margin: 0 }}>
+              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>Key Insight</p>
+              <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.4, margin: 0 }}>
                 The strongest fundraising presentations don&apos;t try to answer every question. They answer the questions that matter most—clearly, confidently, and in a way that earns the next conversation.
               </p>
             </div>
@@ -325,13 +325,13 @@ export default function CapitalRaisePage() {
         <CircuitOverlay />
         <div ref={s3View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
-            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
+            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               The Brand Iron Capital Raise Framework
             </p>
             <h2 className={`section-heading reveal${s3View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               Not a Process. A Strategic Framework.
             </h2>
-            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555" }}>
+            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555" }}>
               Successful fundraising requires more than a pitch deck. Brand Iron connects strategy, investor materials, investor targeting, and outreach into one integrated fundraising system.
             </p>
           </div>
@@ -373,15 +373,15 @@ export default function CapitalRaisePage() {
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 18 }}>
                   <div style={{ width: 44, height: 44, borderRadius: 10, background: "rgba(216,115,7,0.12)", border: "1px solid rgba(216,115,7,0.2)", display: "flex", alignItems: "center", justifyContent: "center" }}>{icon}</div>
-                  <span style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontWeight: 900, fontSize: 34, color: "rgba(216,115,7,0.18)", lineHeight: 1 }}>{num}</span>
+                  <span style={{ fontFamily: "var(--font-burford-black), sans-serif", fontWeight: 900, fontSize: 34, color: "rgba(216,115,7,0.18)", lineHeight: 1 }}>{num}</span>
                 </div>
-                <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 16, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 10, lineHeight: 1.25 }}>{title}</h3>
-                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.7, color: "#555", fontWeight: 600, marginBottom: 18 }}>{lead}</p>
+                <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 16, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 10, lineHeight: 1.25 }}>{title}</h3>
+                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.7, color: "#555", fontWeight: 600, marginBottom: 18 }}>{lead}</p>
                 <div style={{ borderTop: "1px solid #EEEBE7", paddingTop: 14 }}>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#aaa", marginBottom: 10 }}>Focus Areas</p>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#aaa", marginBottom: 10 }}>Focus Areas</p>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
                     {focuses.map(f => (
-                      <span key={f} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, color: "#666", background: "rgba(216,115,7,0.08)", borderRadius: 4, padding: "3px 8px" }}>{f}</span>
+                      <span key={f} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, color: "#666", background: "rgba(216,115,7,0.08)", borderRadius: 4, padding: "3px 8px" }}>{f}</span>
                     ))}
                   </div>
                 </div>
@@ -391,10 +391,10 @@ export default function CapitalRaisePage() {
 
           {/* Closing */}
           <div className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ background: "rgba(255,255,255,0.88)", backdropFilter: "blur(12px)", borderRadius: 16, padding: "40px 56px", borderLeft: "4px solid #d87307" }}>
-            <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 16, lineHeight: 1.3 }}>
+            <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 16, lineHeight: 1.3 }}>
               One Framework. One Investor Journey.
             </p>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.85, color: "#555", margin: 0 }}>
+            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.85, color: "#555", margin: 0 }}>
               Each pillar builds on the last, strengthening your story, improving investor targeting, and creating more meaningful conversations. Together, they form a connected fundraising framework designed to prepare, present, connect, and engage with confidence.
             </p>
           </div>
@@ -411,13 +411,13 @@ export default function CapitalRaisePage() {
         <CircuitOverlay />
         <div ref={s4View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
-            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
+            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               How We Help You Raise Capital
             </p>
             <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))", marginBottom: 20, textAlign: "left" }}>
               From Investor Story to Fundraising Momentum
             </h2>
-            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.65)", maxWidth: 720 }}>
+            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.65)", maxWidth: 720 }}>
               Successful fundraising is built on a connected journey. Brand Iron guides founders from strategic positioning to investor engagement through a structured framework that builds confidence at every stage.
             </p>
           </div>
@@ -441,11 +441,11 @@ export default function CapitalRaisePage() {
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.2))" }} />
                 <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 14 }}>
                   <div style={{ width: 38, height: 38, borderRadius: "50%", background: "rgba(216,115,7,0.15)", border: "1px solid rgba(216,115,7,0.3)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                    <span style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontWeight: 900, fontSize: 13, color: "#d87307" }}>{num}</span>
+                    <span style={{ fontFamily: "var(--font-burford-black), sans-serif", fontWeight: 900, fontSize: 13, color: "#d87307" }}>{num}</span>
                   </div>
-                  <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 15, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.06em", color: "#FFFFFF", margin: 0, lineHeight: 1.3 }}>{title}</h3>
+                  <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 15, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.06em", color: "#FFFFFF", margin: 0, lineHeight: 1.3 }}>{title}</h3>
                 </div>
-                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "rgba(255,255,255,0.6)", margin: 0 }}>{body}</p>
+                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.75, color: "rgba(255,255,255,0.6)", margin: 0 }}>{body}</p>
               </div>
             ))}
           </div>
@@ -457,13 +457,13 @@ export default function CapitalRaisePage() {
         <div style={{ position: "absolute", inset: 0, backgroundImage: "radial-gradient(circle at 20% 50%, rgba(216,115,7,0.04) 0%, transparent 60%), radial-gradient(circle at 80% 20%, rgba(15,27,45,0.04) 0%, transparent 50%)", pointerEvents: "none" }} />
         <div ref={s5View.ref} style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>
           <div style={{ marginBottom: 72 }}>
-            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
+            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               Choose the Right Capital Raise Solution
             </p>
             <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               Support for Every Stage of Your Fundraising Journey
             </h2>
-            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555" }}>
+            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555" }}>
               Whether you&apos;re preparing your first investor pitch, refining your story, identifying qualified investors, or executing outreach, Brand Iron offers specialized solutions that can stand alone or work together as a complete fundraising system.
             </p>
           </div>
@@ -481,25 +481,25 @@ export default function CapitalRaisePage() {
                 <div style={{ padding: "28px 22px 22px", flex: 1 }}>
                   <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 16 }}>
                     <div style={{ width: 42, height: 42, borderRadius: 10, background: "rgba(216,115,7,0.12)", border: "1px solid rgba(216,115,7,0.2)", display: "flex", alignItems: "center", justifyContent: "center" }}>{icon}</div>
-                    <span style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontWeight: 900, fontSize: 30, color: "rgba(216,115,7,0.18)", lineHeight: 1 }}>{num}</span>
+                    <span style={{ fontFamily: "var(--font-burford-black), sans-serif", fontWeight: 900, fontSize: 30, color: "rgba(216,115,7,0.18)", lineHeight: 1 }}>{num}</span>
                   </div>
-                  <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 16, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#1a1a1a", marginBottom: 10, lineHeight: 1.25 }}>{name}</h3>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12.5, lineHeight: 1.6, color: "#444", fontWeight: 600, marginBottom: 12 }}>{tagline}</p>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, lineHeight: 1.65, color: "#666", marginBottom: 18 }}>{desc}</p>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 9.5, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#aaa", marginBottom: 8 }}>Ideal For</p>
+                  <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 16, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#1a1a1a", marginBottom: 10, lineHeight: 1.25 }}>{name}</h3>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12.5, lineHeight: 1.6, color: "#444", fontWeight: 600, marginBottom: 12 }}>{tagline}</p>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, lineHeight: 1.65, color: "#666", marginBottom: 18 }}>{desc}</p>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 9.5, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#aaa", marginBottom: 8 }}>Ideal For</p>
                   <div style={{ display: "flex", flexDirection: "column", gap: 6, marginBottom: 18 }}>
                     {bestFor.map(b => (
                       <div key={b} style={{ display: "flex", gap: 8, alignItems: "flex-start" }}>
                         <div style={{ width: 5, height: 5, borderRadius: "50%", background: "#d87307", flexShrink: 0, marginTop: 5 }} />
-                        <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11.5, color: "#555", lineHeight: 1.5 }}>{b}</span>
+                        <span style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11.5, color: "#555", lineHeight: 1.5 }}>{b}</span>
                       </div>
                     ))}
                   </div>
                 </div>
                 <div style={{ padding: "16px 22px 24px", borderTop: "1px solid rgba(0,0,0,0.06)" }}>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#d87307", marginBottom: 8 }}>Primary Outcome</p>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, lineHeight: 1.6, color: "#444", marginBottom: 16, fontStyle: "italic" }}>{outcome}</p>
-                  <Link href={href} style={{ display: "inline-flex", alignItems: "center", gap: 8, color: "#d87307", fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: "0.08em", textTransform: "uppercase", textDecoration: "none" }}>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#d87307", marginBottom: 8 }}>Primary Outcome</p>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, lineHeight: 1.6, color: "#444", marginBottom: 16, fontStyle: "italic" }}>{outcome}</p>
+                  <Link href={href} style={{ display: "inline-flex", alignItems: "center", gap: 8, color: "#d87307", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: "0.08em", textTransform: "uppercase", textDecoration: "none" }}>
                     {cta} →
                   </Link>
                 </div>
@@ -509,14 +509,14 @@ export default function CapitalRaisePage() {
 
           {/* Compare capital raise solutions */}
           <div className={`reveal${s5View.inView ? ' visible' : ''}`}>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 8 }}>
+            <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 8 }}>
               Compare Capital Raise Solutions
             </h3>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.8, color: "#666", marginBottom: 32 }}>
+            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.8, color: "#666", marginBottom: 32 }}>
               Every deliverable includes client onboarding, dedicated project management, and two rounds of revisions.
             </p>
             <div style={{ overflowX: "auto" }}>
-              <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "'Montserrat', sans-serif", fontSize: 12.5, minWidth: 980 }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12.5, minWidth: 980 }}>
                 <thead>
                   <tr>
                     <th style={{ background: "#F3F0EC", color: "#1a1a1a", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", fontSize: 10.5, padding: "14px 16px", textAlign: "left" }}>Component</th>
@@ -550,12 +550,12 @@ export default function CapitalRaisePage() {
             <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, transparent, #d87307, transparent)" }} />
 
             <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 24, flexWrap: "wrap", marginBottom: 24 }}>
-              <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.05em", color: "#FFFFFF", margin: 0, maxWidth: 560 }}>
+              <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.05em", color: "#FFFFFF", margin: 0, maxWidth: 560 }}>
                 Not Sure Where to Start?
               </h3>
               <Link href="/contact" style={{
                 display: "inline-flex", alignItems: "center", gap: 10, flexShrink: 0,
-                fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 12.5,
+                fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 12.5,
                 letterSpacing: "0.1em", textTransform: "uppercase",
                 background: "#d87307", color: "#FFFFFF", textDecoration: "none",
                 padding: "14px 26px", borderRadius: 8, transition: "background 0.2s",
@@ -565,16 +565,16 @@ export default function CapitalRaisePage() {
               </Link>
             </div>
 
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.85, color: "rgba(255,255,255,0.7)", maxWidth: 820, marginBottom: 48 }}>
+            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.85, color: "rgba(255,255,255,0.7)", maxWidth: 820, marginBottom: 48 }}>
               Every organization enters the fundraising process at a different stage. Some need to establish a compelling investor story before approaching the market. Others already have presentation materials but require access to qualified investors or support executing an effective outreach strategy. During a Capital Raise Strategy Session, we&apos;ll assess your current stage of investor readiness, identify the most impactful next steps, and recommend the solutions that best align with your fundraising objectives.
             </p>
 
             {/* Solutions that work better together */}
             <div style={{ textAlign: "center", marginBottom: 48 }}>
-              <h4 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(16px, 1.6vw, 20px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.05em", color: "#FFFFFF", marginBottom: 14 }}>
+              <h4 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(16px, 1.6vw, 20px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.05em", color: "#FFFFFF", marginBottom: 14 }}>
                 Solutions That Work Better Together
               </h4>
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.8, color: "rgba(255,255,255,0.6)", maxWidth: 700, margin: "0 auto 40px" }}>
+              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.8, color: "rgba(255,255,255,0.6)", maxWidth: 700, margin: "0 auto 40px" }}>
                 Our solutions are designed to work independently, but they&apos;re most powerful when connected as part of a complete Capital Raise Support strategy—from investor story to investor engagement.
               </p>
 
@@ -584,9 +584,9 @@ export default function CapitalRaisePage() {
                     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10, width: 130 }}>
                       <div style={{ position: "relative", width: 56, height: 56, borderRadius: "50%", background: "rgba(216,115,7,0.15)", border: "1px solid rgba(216,115,7,0.35)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                         <img src={step.icon} alt="" style={{ width: 24, height: 24 }} />
-                        <span style={{ position: "absolute", top: -6, right: -6, width: 20, height: 20, borderRadius: "50%", background: "#d87307", color: "#FFFFFF", fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center" }}>{i + 1}</span>
+                        <span style={{ position: "absolute", top: -6, right: -6, width: 20, height: 20, borderRadius: "50%", background: "#d87307", color: "#FFFFFF", fontFamily: "var(--font-montserrat), sans-serif", fontSize: 10, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center" }}>{i + 1}</span>
                       </div>
-                      <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11.5, fontWeight: 600, color: "rgba(255,255,255,0.75)", textAlign: "center", lineHeight: 1.3 }}>{step.name}</span>
+                      <span style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11.5, fontWeight: 600, color: "rgba(255,255,255,0.75)", textAlign: "center", lineHeight: 1.3 }}>{step.name}</span>
                     </div>
                     {i < journeySteps.length - 1 && <ArrowConnector />}
                   </div>
@@ -596,7 +596,7 @@ export default function CapitalRaisePage() {
 
             {/* Which solution is right for you */}
             <div>
-              <h4 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(16px, 1.6vw, 20px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.05em", color: "#FFFFFF", textAlign: "center", marginBottom: 28 }}>
+              <h4 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(16px, 1.6vw, 20px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.05em", color: "#FFFFFF", textAlign: "center", marginBottom: 28 }}>
                 Which Solution Is Right for You?
               </h4>
               <div style={{ display: "flex", flexDirection: "column", gap: 1, maxWidth: 880, margin: "0 auto" }}>
@@ -604,10 +604,10 @@ export default function CapitalRaisePage() {
                   <div key={solution} style={{ display: "grid", gridTemplateColumns: "1fr auto 1fr", alignItems: "center", gap: 20, padding: "18px 4px", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
                       <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#d87307", flexShrink: 0 }} />
-                      <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13.5, color: "rgba(255,255,255,0.75)", lineHeight: 1.5 }}>If your goal is to {goal}</span>
+                      <span style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13.5, color: "rgba(255,255,255,0.75)", lineHeight: 1.5 }}>If your goal is to {goal}</span>
                     </div>
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#d87307" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                    <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, fontWeight: 700, color: "#FFFFFF" }}>Start with {solution}</span>
+                    <span style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, fontWeight: 700, color: "#FFFFFF" }}>Start with {solution}</span>
                   </div>
                 ))}
               </div>
@@ -625,16 +625,16 @@ export default function CapitalRaisePage() {
         <div style={{ position: "absolute", inset: 0, background: "rgba(248,242,232,0.93)" }} />
         <div ref={s6View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
-            <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
+            <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               What Success Looks Like
             </p>
             <h2 className={`section-heading reveal${s6View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               Investor Confidence That Creates Fundraising Momentum
             </h2>
-            <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 16 }}>
+            <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 16 }}>
               A successful capital raise isn&apos;t measured by the number of presentations you deliver, it&apos;s measured by your ability to build investor confidence, create meaningful conversations, and move your fundraising forward.
             </p>
-            <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666" }}>
+            <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666" }}>
               Our Capital Raise Support framework is designed to help you communicate your opportunity with clarity, engage the right investors, and create the momentum needed to support long-term growth.
             </p>
           </div>
@@ -670,14 +670,14 @@ export default function CapitalRaisePage() {
                 onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "none"; }}
               >
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
-                <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: 15, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 12, lineHeight: 1.3 }}>{title}</h3>
-                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.75, color: "#555", marginBottom: 18 }}>{body}</p>
+                <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 15, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 12, lineHeight: 1.3 }}>{title}</h3>
+                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.75, color: "#555", marginBottom: 18 }}>{body}</p>
                 <div style={{ borderTop: "1px solid rgba(216,115,7,0.2)", paddingTop: 14 }}>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#d87307", marginBottom: 10 }}>Outcome</p>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#d87307", marginBottom: 10 }}>Outcome</p>
                   {impacts.map(im => (
                     <div key={im} style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 6 }}>
                       <div style={{ width: 5, height: 5, borderRadius: "50%", background: "#d87307", flexShrink: 0 }} />
-                      <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, color: "#444" }}>{im}</span>
+                      <span style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, color: "#444" }}>{im}</span>
                     </div>
                   ))}
                 </div>
@@ -687,21 +687,21 @@ export default function CapitalRaisePage() {
 
           {/* Strategic insight */}
           <div className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ background: "#F9F8F6", border: "1px solid #EEEBE7", borderLeft: "4px solid #d87307", borderRadius: 12, padding: "40px 56px", marginBottom: 56, textAlign: "center" }}>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>Strategic Insight</p>
-            <p style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.4, margin: 0 }}>
+            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>Strategic Insight</p>
+            <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.4, margin: 0 }}>
               Capital is the outcome. Investor confidence is what makes it possible.
             </p>
           </div>
 
           {/* FAQ Accordion */}
           <div className={`reveal${s6View.inView ? ' visible' : ''}`}>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
+            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
               Frequently Asked Questions
             </p>
-            <h3 style={{ fontFamily: "'Burford Rustic Black', sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 8 }}>
+            <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 8 }}>
               Common Questions About Capital Raise Support
             </h3>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", maxWidth: 660, margin: "0 0 40px" }}>
+            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", maxWidth: 660, margin: "0 0 40px" }}>
               Preparing for a capital raise often raises as many questions as it answers. Below are some of the most common questions founders and leadership teams ask as they prepare for investor conversations.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
@@ -711,14 +711,14 @@ export default function CapitalRaisePage() {
                     onClick={() => setOpenFaq(openFaq === i ? null : i)}
                     style={{ width: "100%", background: "none", border: "none", cursor: "pointer", padding: "20px 24px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16, textAlign: "left" }}
                   >
-                    <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, fontWeight: 600, color: "#1a1a1a", lineHeight: 1.5 }}>{q}</span>
+                    <span style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, fontWeight: 600, color: "#1a1a1a", lineHeight: 1.5 }}>{q}</span>
                     <div style={{ width: 28, height: 28, borderRadius: "50%", background: openFaq === i ? "#d87307" : "rgba(216,115,7,0.1)", border: "1px solid rgba(216,115,7,0.3)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, transition: "background 0.2s, transform 0.2s", transform: openFaq === i ? "rotate(45deg)" : "rotate(0)" }}>
                       <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke={openFaq === i ? "#FFFFFF" : "#d87307"} strokeWidth="2" strokeLinecap="round"/></svg>
                     </div>
                   </button>
                   {openFaq === i && (
                     <div style={{ padding: "0 24px 20px" }}>
-                      <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.8, color: "#555", margin: 0 }}>{a}</p>
+                      <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.8, color: "#555", margin: 0 }}>{a}</p>
                     </div>
                   )}
                 </div>
@@ -741,16 +741,16 @@ export default function CapitalRaisePage() {
             <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#d87307" }} />
             <div style={{ flex: 1, maxWidth: 200, height: 1, background: "rgba(216,115,7,0.35)" }} />
           </div>
-          <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 20 }}>
+          <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 20 }}>
             Build Investor Confidence Before You Raise Capital
           </p>
           <h2 className={`reveal${ctaView.inView ? ' visible' : ''} section-heading`} style={{ color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))", marginBottom: 24 }}>
             Let&apos;s Build Your Capital Raise Strategy.
           </h2>
-          <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 17, lineHeight: 1.85, color: "rgba(255,255,255,0.8)", maxWidth: 700, margin: "0 auto 20px" }}>
+          <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.85, color: "rgba(255,255,255,0.8)", maxWidth: 700, margin: "0 auto 20px" }}>
             Every successful fundraising journey begins with a clear strategy. Whether you&apos;re preparing for your first investor meeting or managing an active capital raise, success depends on more than presentation materials. It requires a compelling investment story, the right investor strategy, and a structured approach that builds confidence at every stage of the fundraising journey.
           </p>
-          <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 15, lineHeight: 1.8, color: "rgba(255,255,255,0.6)", maxWidth: 680, margin: "0 auto 48px" }}>
+          <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.8, color: "rgba(255,255,255,0.6)", maxWidth: 680, margin: "0 auto 48px" }}>
             Let&apos;s build a capital raise strategy that helps your organization prepare, connect, and engage with confidence.
           </p>
           <div className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap", marginBottom: 28 }}>
@@ -761,10 +761,10 @@ export default function CapitalRaisePage() {
               Explore Our Go-to-Market Strategy Services
             </Link>
           </div>
-          <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.7, color: "rgba(255,255,255,0.5)", maxWidth: 620, margin: "0 auto 20px" }}>
+          <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.7, color: "rgba(255,255,255,0.5)", maxWidth: 620, margin: "0 auto 20px" }}>
             Meet with our team to evaluate your investor readiness, identify opportunities to strengthen your fundraising strategy, and determine the right Capital Raise Support solutions for your business.
           </p>
-          <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.7, color: "rgba(255,255,255,0.45)", maxWidth: 560, margin: "0 auto" }}>
+          <p className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.7, color: "rgba(255,255,255,0.45)", maxWidth: 560, margin: "0 auto" }}>
             Raising capital is only one part of sustainable growth. Discover how our Go-to-Market Strategy helps organizations become discoverable, trusted, and chosen while building predictable revenue systems.
           </p>
         </div>

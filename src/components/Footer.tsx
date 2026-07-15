@@ -26,7 +26,7 @@ export default function Footer() {
       <div style={{ background: "#F5F0E8", padding: "28px 32px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", textAlign: "left" }}>
           <p style={{
-            fontFamily: "'Burford Rustic Black', sans-serif",
+            fontFamily: "var(--font-burford-black), sans-serif",
             fontSize: "clamp(28px, 4vw, 52px)", fontWeight: 900,
             textTransform: "uppercase", letterSpacing: "0.03em",
             color: "#945B06", lineHeight: 1, marginBottom: 12,
@@ -34,7 +34,7 @@ export default function Footer() {
             Forging Brands. Driving Revenue<span style={{ position: "relative", display: "inline-block", width: 0, top: "-0.651em", left: "0.021em" }}><span style={{ position: "absolute", fontSize: "0.6em", fontWeight: 700 }}>™</span></span>.
           </p>
           <p style={{
-            fontFamily: "'Montserrat', sans-serif", fontSize: 16, fontWeight: 600,
+            fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, fontWeight: 600,
             lineHeight: 1.8, color: "#6b5a3e",
           }}>
             Helping organizations become discoverable, trusted, and chosen through strategic positioning, AI visibility, revenue engineering, and connected growth systems.
@@ -76,7 +76,7 @@ export default function Footer() {
               {navLinks.map(([label, href], i) => (
                 <span key={label} style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
                   <Link href={href} style={{
-                    fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 700,
+                    fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700,
                     letterSpacing: "0.1em", textTransform: "uppercase", whiteSpace: "nowrap",
                     color: "rgba(255,255,255,0.85)", padding: "2px 6px",
                     transition: "color 0.2s",
@@ -94,10 +94,10 @@ export default function Footer() {
 
               {/* Address */}
               <div className="footer-address" style={{ minWidth: 200 }}>
-                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", lineHeight: 1.9, color: "rgba(255,255,255,0.9)" }}>Brand Iron</p>
-                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.9, color: "rgba(255,255,255,0.75)" }}>2590 Welton St. Suite 200,</p>
-                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.9, color: "rgba(255,255,255,0.75)" }}>Denver, CO 80205</p>
-                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.9, color: "rgba(255,255,255,0.75)", marginBottom: 20 }}>Ph:&nbsp; 303-534-1901</p>
+                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", lineHeight: 1.9, color: "rgba(255,255,255,0.9)" }}>Brand Iron</p>
+                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.9, color: "rgba(255,255,255,0.75)" }}>2590 Welton St. Suite 200,</p>
+                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.9, color: "rgba(255,255,255,0.75)" }}>Denver, CO 80205</p>
+                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.9, color: "rgba(255,255,255,0.75)", marginBottom: 20 }}>Ph:&nbsp; 303-534-1901</p>
                 <div style={{ display: "flex", gap: 12 }}>
                   {socialLinks.map(({ label, href, icon }) => (
                     <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} style={{
@@ -116,7 +116,7 @@ export default function Footer() {
               {/* Newsletter */}
               <div className="footer-newsletter-wrap" style={{ flex: 1, display: "flex", justifyContent: "flex-end" }}>
               <div className="footer-newsletter" style={{ maxWidth: 340, width: "100%" }}>
-                <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.9)", marginBottom: 16, lineHeight: 1.9 }}>
+                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.9)", marginBottom: 16, lineHeight: 1.9 }}>
                   Subscribe To Our Newsletter
                 </p>
                 <form onSubmit={e => { e.preventDefault(); setEmail(""); }} style={{ display: "flex" }}>
@@ -125,7 +125,7 @@ export default function Footer() {
                     onChange={e => setEmail(e.target.value)}
                     style={{
                       flex: 1, padding: "12px 18px",
-                      fontFamily: "'Montserrat', sans-serif", fontSize: 13,
+                      fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13,
                       background: "rgba(255,255,255,0.08)",
                       border: "1px solid rgba(255,255,255,0.35)", borderRight: "none",
                       borderRadius: "40px 0 0 40px", color: "#FFFFFF", outline: "none",
@@ -156,7 +156,7 @@ export default function Footer() {
 
             {/* Copyright */}
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8, marginTop: 32, paddingTop: 20, borderTop: "1px solid rgba(255,255,255,0.12)" }}>
-              <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.5)" }}>
+              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, color: "rgba(255,255,255,0.5)" }}>
                 © {new Date().getFullYear()} Brand Iron Marketing. All rights reserved.
               </p>
             </div>
