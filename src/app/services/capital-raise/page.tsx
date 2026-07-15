@@ -204,6 +204,10 @@ export default function CapitalRaisePage() {
                 Raising Capital Requires More Than a Great Pitch Deck.
               </h1>
 
+              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, fontWeight: 700, color: "#FFFFFF", lineHeight: 1.5, marginBottom: 20, textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}>
+                From strategic messaging and investor-ready presentations to investor outreach and fundraising support, we help organizations prepare for every stage of the capital raise journey.
+              </p>
+
               <div className="hero-btns-anim" style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center", marginBottom: 14 }}>
                 <Link href="/contact" style={{
                   display: "inline-flex", alignItems: "center",
@@ -230,10 +234,6 @@ export default function CapitalRaisePage() {
                   Explore the Capital Raise Framework
                 </Link>
               </div>
-
-              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, color: "rgba(255,255,255,0.5)" }}>
-                From strategic messaging and investor-ready presentations to investor outreach and fundraising support, we help organizations prepare for every stage of the capital raise journey.
-              </p>
             </div>
 
             {/* RIGHT — supporting detail panel */}
