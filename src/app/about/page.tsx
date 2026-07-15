@@ -93,9 +93,9 @@ const TEAM = [
   },
   {
     name: "Ateeq",
-    title: "Program Manager",
+    title: "Operations & Technical Delivery Manager",
     photo: "/images/team/ateeq.jpg",
-    bio: "Ateeq oversees execution of Brand Iron's integrated programs, ensuring strategy translates into measurable outcomes. He connects teams, tools, and timelines to keep every initiative on track.",
+    bio: "Ateeq drives execution across Brand Iron's client portfolio, from web development and marketing automation to campaign operations and account management. He turns strategy into shipped, working systems, keeping teams, tools, and timelines aligned across every account.",
   },
 ];
 
