@@ -4,7 +4,8 @@ export type ArticleBlock =
   | { type: "h3"; text: string }
   | { type: "ul"; items: (string | { bold: string; text: string })[] }
   | { type: "table"; headers: string[]; rows: string[][] }
-  | { type: "faq"; items: { q: string; a: string }[] };
+  | { type: "faq"; items: { q: string; a: string }[] }
+  | { type: "image"; src: string; alt: string };
 
 export type Article = {
   slug: string;
@@ -27,13 +28,15 @@ export const articles: Article[] = [
     excerpt: "Brand Iron is more than a marketing agency — it's a GTM strategy partner that helps companies plan, launch, and scale with clarity and precision.",
     readTime: "13 min read",
     date: "July 2026",
-    headerImage: "/images/Brand Iron Techy Horse Mane.png",
+    headerImage: "/images/Brand Iron Map and compass.jpg",
     seoTitle: "Brand Iron: Your GTM Strategy & Growth Partner | Go-To-Market Consulting",
     metaDescription: "Brand Iron is more than a marketing agency — it's a GTM strategy partner that helps companies plan, launch, and scale with clarity and precision.",
     body: [
       { type: "p", text: "Most companies don't have a go-to-market problem, they have a go-to-market clarity problem. They know what they're selling, but they can't articulate why anyone should care, who they're really talking to, or how to coordinate brand, messaging, and marketing into a strategy that actually moves the needle." },
       { type: "p", text: "That's where a true GTM strategy partner makes the difference. Brand Iron isn't a traditional marketing agency. It's a strategic growth partner built for companies that need more than a new logo or a paid ad campaign. Brand Iron's proprietary BrandStorm™ process, synchronized end-to-end services, and data-driven approach bring clarity to the full arc of your go-to-market journey, from shaping your brand foundation to launching with precision and scaling with confidence." },
       { type: "p", text: "Whether you're entering a new market, repositioning for growth, or preparing for a capital raise, having the right GTM partner in your corner changes everything." },
+
+      { type: "image", src: "/images/2nd image.png", alt: "Brand Iron: Your GTM Strategy & Growth Partner — Plan, Launch, Scale with clarity and precision" },
 
       { type: "h2", text: "Key Takeaways" },
       { type: "ul", items: [

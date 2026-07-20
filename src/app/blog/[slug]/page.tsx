@@ -144,6 +144,13 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 </div>
               );
             }
+            if (block.type === "image") {
+              return (
+                <div key={i} style={{ margin: "8px 0 32px", textAlign: "center" }}>
+                  <img src={block.src} alt={block.alt} style={{ maxWidth: "100%", width: 560, borderRadius: 10, border: "1px solid #EEEBE7" }} />
+                </div>
+              );
+            }
             if (block.type === "faq") {
               return (
                 <div key={i} style={{ marginBottom: 22 }}>
