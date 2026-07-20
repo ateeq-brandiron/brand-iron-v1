@@ -581,61 +581,62 @@ export default function BrandStrategyPage() {
           </div>
         </div>
 
-        {/* Horizontal peek-scroll carousel */}
-        <div
-          ref={coreCarouselRef}
-          onScroll={handleCoreScroll}
-          className="core-services-carousel"
-          style={{
-            display: "flex", gap: 20, overflowX: "auto",
-            scrollSnapType: "x proximity", scrollBehavior: "smooth",
-            padding: "8px 40px 8px max(24px, calc(50% - 600px + 40px))",
-          }}
-        >
-          {coreServices.map(({ num, title, body, deliverable, outcome, scope, icon }, i) => (
-            <div key={num}
-              className={`core-service-card reveal${s5View.inView ? ' visible' : ''}`}
-              style={{
-                position: "relative", background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 14,
-                padding: "32px 28px", overflow: "hidden", transition: "transform 0.25s, box-shadow 0.25s, border-color 0.25s",
-                flex: "0 0 320px", width: 320, scrollSnapAlign: "start", display: "flex", flexDirection: "column",
-                boxShadow: "0 4px 16px rgba(0,0,0,0.05)", transitionDelay: `${(i % 4) * 0.05}s`,
-              }}
-            >
-              <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 18 }}>
-                <div style={{ width: 44, height: 44, borderRadius: 10, background: "rgba(216,115,7,0.1)", border: "1px solid rgba(216,115,7,0.25)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>{icon}</div>
-                <span style={{ fontFamily: "var(--font-burford-black), sans-serif", fontWeight: 900, fontSize: 34, color: "rgba(216,115,7,0.14)", lineHeight: 1 }}>{num}</span>
+        {/* Full-card paged carousel — exactly N complete cards per view, never cut off */}
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px" }}>
+          <div
+            ref={coreCarouselRef}
+            onScroll={handleCoreScroll}
+            className="core-services-carousel"
+            style={{
+              display: "flex", gap: 20, overflowX: "auto",
+              scrollSnapType: "x mandatory", scrollBehavior: "smooth",
+            }}
+          >
+            {coreServices.map(({ num, title, body, deliverable, outcome, scope, icon }, i) => (
+              <div key={num}
+                className={`core-service-card reveal${s5View.inView ? ' visible' : ''}`}
+                style={{
+                  position: "relative", background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 14,
+                  padding: "32px 28px", overflow: "hidden", transition: "transform 0.25s, box-shadow 0.25s, border-color 0.25s",
+                  scrollSnapAlign: "start", scrollSnapStop: "always", display: "flex", flexDirection: "column",
+                  minHeight: 440, boxShadow: "0 4px 16px rgba(0,0,0,0.05)", transitionDelay: `${(i % 4) * 0.05}s`,
+                }}
+              >
+                <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 18 }}>
+                  <div style={{ width: 44, height: 44, borderRadius: 10, background: "rgba(216,115,7,0.1)", border: "1px solid rgba(216,115,7,0.25)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>{icon}</div>
+                  <span style={{ fontFamily: "var(--font-burford-black), sans-serif", fontWeight: 900, fontSize: 34, color: "rgba(216,115,7,0.14)", lineHeight: 1 }}>{num}</span>
+                </div>
+                <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 16, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.05em", color: "#1a1a1a", marginBottom: 14, lineHeight: 1.3 }}>{title}</h3>
+                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.75, color: "#666", marginBottom: 20 }}>{body}</p>
+                <div style={{ borderTop: "1px solid #EEEBE7", paddingTop: 16, marginTop: "auto" }}>
+                  {scope ? (
+                    <>
+                      <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#aaa", marginBottom: 10 }}>Scope May Include</p>
+                      <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+                        {scope.map(s => (
+                          <span key={s} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 600, color: "#6b5a3e", background: "#F2ECDF", borderRadius: 4, padding: "3px 8px" }}>{s}</span>
+                        ))}
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#aaa", marginBottom: 8 }}>Deliverable</p>
+                      <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.65, color: "#555", marginBottom: 14 }}>{deliverable}</p>
+                      <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#aaa", marginBottom: 8 }}>Outcome</p>
+                      <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.65, color: "#d87307", fontWeight: 600, margin: 0 }}>{outcome}</p>
+                    </>
+                  )}
+                </div>
               </div>
-              <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 16, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.05em", color: "#1a1a1a", marginBottom: 14, lineHeight: 1.3 }}>{title}</h3>
-              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.75, color: "#666", marginBottom: 20 }}>{body}</p>
-              <div style={{ borderTop: "1px solid #EEEBE7", paddingTop: 16, marginTop: "auto" }}>
-                {scope ? (
-                  <>
-                    <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#aaa", marginBottom: 10 }}>Scope May Include</p>
-                    <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
-                      {scope.map(s => (
-                        <span key={s} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 600, color: "#6b5a3e", background: "#F2ECDF", borderRadius: 4, padding: "3px 8px" }}>{s}</span>
-                      ))}
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#aaa", marginBottom: 8 }}>Deliverable</p>
-                    <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.65, color: "#555", marginBottom: 14 }}>{deliverable}</p>
-                    <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#aaa", marginBottom: 8 }}>Outcome</p>
-                    <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.65, color: "#d87307", fontWeight: 600, margin: 0 }}>{outcome}</p>
-                  </>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        {/* Progress bar (in place of dot pagination) */}
-        <div style={{ maxWidth: 1200, margin: "32px auto 0", padding: "0 40px" }}>
-          <div style={{ position: "relative", height: 3, background: "#EEEBE7", borderRadius: 2, overflow: "hidden" }}>
-            <div style={{ position: "absolute", top: 0, height: "100%", width: "22%", left: `${coreScrollProgress * (100 - 22)}%`, background: "#d87307", borderRadius: 2, transition: "left 0.1s linear" }} />
+          {/* Progress bar */}
+          <div style={{ marginTop: 32 }}>
+            <div style={{ position: "relative", height: 3, background: "#EEEBE7", borderRadius: 2, overflow: "hidden" }}>
+              <div style={{ position: "absolute", top: 0, height: "100%", width: "30%", left: `${coreScrollProgress * (100 - 30)}%`, background: "#d87307", borderRadius: 2, transition: "left 0.1s linear" }} />
+            </div>
           </div>
         </div>
 
@@ -644,6 +645,13 @@ export default function BrandStrategyPage() {
           .core-services-carousel { scrollbar-width: none; -ms-overflow-style: none; }
           .core-services-carousel::-webkit-scrollbar { display: none; }
           .core-service-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(0,0,0,0.1); border-color: rgba(216,115,7,0.3) !important; }
+          .core-service-card { flex: 0 0 calc((100% - 40px) / 3); }
+          @media (max-width: 900px) {
+            .core-service-card { flex: 0 0 calc((100% - 20px) / 2); }
+          }
+          @media (max-width: 600px) {
+            .core-service-card { flex: 0 0 100%; }
+          }
         `}</style>
       </section>
 
