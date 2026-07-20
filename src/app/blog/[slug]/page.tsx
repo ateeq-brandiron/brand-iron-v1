@@ -22,9 +22,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         <CircuitOverlay />
         <div style={{ position: "relative", zIndex: 2, maxWidth: 820, margin: "0 auto" }}>
           <Link href="/blog" className="back-link" style={{
-            display: "inline-flex", alignItems: "center", gap: 8,
+            display: "flex", width: "fit-content", alignItems: "center", gap: 8,
             fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 600,
-            color: "rgba(255,255,255,0.6)", textDecoration: "none", marginBottom: 28,
+            color: "rgba(255,255,255,0.6)", textDecoration: "none", marginBottom: 32,
             transition: "color 0.2s",
           }}>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M11 18l-6-6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
