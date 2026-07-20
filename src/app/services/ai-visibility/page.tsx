@@ -242,7 +242,7 @@ export default function AIVisibilityPage() {
           overflow: "hidden", borderTop: "3px solid #d87307",
         }}>
           <video
-            src="/animate_this_image.mp4"
+            src="/Tree Animation.mp4"
             autoPlay muted loop playsInline preload="auto"
             style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}
           />
