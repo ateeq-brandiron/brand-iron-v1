@@ -41,7 +41,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             {article.title}
           </h1>
           <div style={{ display: "flex", gap: 16, alignItems: "center", fontSize: 13, color: "rgba(255,255,255,0.55)" }}>
-            <span>By the Brand Iron Team</span>
+            <span>By Michael Doyle</span>
             <span style={{ width: 4, height: 4, borderRadius: "50%", background: "rgba(255,255,255,0.35)" }} />
             <span>{article.date}</span>
             <span style={{ width: 4, height: 4, borderRadius: "50%", background: "rgba(255,255,255,0.35)" }} />
