@@ -31,6 +31,27 @@ function useHeadlineCrossfade(count: number, pauseMs = 3500, fadeMs = 400) {
   return { index, visible, fadeMs };
 }
 
+// Measures every headline variant off-screen at the current column width and
+// returns the tallest one, so the visible headline's box never resizes (and
+// nothing below it jumps) no matter which variant is showing or how the
+// viewport wraps its lines.
+function useMaxHeadlineHeight(headlines: string[]) {
+  const measureRef = useRef<HTMLDivElement>(null);
+  const [height, setHeight] = useState<number | null>(null);
+  useEffect(() => {
+    const el = measureRef.current;
+    if (!el) return;
+    const measure = () => {
+      const kids = Array.from(el.children) as HTMLElement[];
+      setHeight(Math.max(...kids.map(k => k.getBoundingClientRect().height)));
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, []);
+  return { measureRef, height };
+}
+
 const HEADLINES = [
   "Forge a Website That Pulls Its Weight.",
   "Your Website Should Be Your Hardest-Working Asset.",
@@ -149,6 +170,7 @@ export default function WebsiteDevelopmentPage() {
   const [inquiryOpen, setInquiryOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const headline = useHeadlineCrossfade(HEADLINES.length);
+  const headlineBox = useMaxHeadlineHeight(HEADLINES);
 
   const s2View = useInView();
   const s3View = useInView();
@@ -199,7 +221,19 @@ export default function WebsiteDevelopmentPage() {
 
             {/* LEFT — crossfading headline, CTAs */}
             <div>
-              <div className="hero-h1-anim" style={{ marginBottom: 20, minHeight: "clamp(79px, 11.6vw, 152px)" }}>
+              <div className="hero-h1-anim" style={{ position: "relative", marginBottom: 20, height: headlineBox.height ?? "clamp(79px, 11.6vw, 152px)" }}>
+                {/* Off-screen copies of every variant, measured to size the box above so nothing jumps when the headline swaps */}
+                <div ref={headlineBox.measureRef} aria-hidden style={{ position: "absolute", inset: 0, visibility: "hidden", pointerEvents: "none" }}>
+                  {HEADLINES.map(text => (
+                    <div key={text} style={{
+                      fontFamily: "var(--font-burford-inline), sans-serif",
+                      fontWeight: 400, fontSize: "clamp(30px, 4.4vw, 58px)",
+                      textTransform: "uppercase", letterSpacing: "0.02em", lineHeight: 0.92,
+                    }}>
+                      {text}
+                    </div>
+                  ))}
+                </div>
                 <h1 style={{
                   fontFamily: "var(--font-burford-inline), sans-serif",
                   fontWeight: 400, fontSize: "clamp(30px, 4.4vw, 58px)",

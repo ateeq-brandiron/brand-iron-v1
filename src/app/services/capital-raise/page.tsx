@@ -219,7 +219,7 @@ export default function CapitalRaisePage() {
                 onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
                 onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
                 >
-                  Schedule a Capital Raise Strategy Session
+                  Schedule a Capital Raise Session
                 </Link>
                 <Link href="#framework" style={{
                   display: "inline-flex", alignItems: "center",
@@ -231,7 +231,7 @@ export default function CapitalRaisePage() {
                 onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = "#d87307"; (e.currentTarget as HTMLAnchorElement).style.background = "rgba(216,115,7,0.15)"; }}
                 onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,255,255,0.7)"; (e.currentTarget as HTMLAnchorElement).style.background = "transparent"; }}
                 >
-                  Explore the Capital Raise Framework
+                  Explore the Framework
                 </Link>
               </div>
             </div>
