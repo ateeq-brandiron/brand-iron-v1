@@ -288,7 +288,7 @@ export default function InsightsPage() {
           backgroundImage: "url('/images/bg-peaks.png')",
           backgroundSize: "cover", backgroundPosition: "center",
         }} />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.7) 0%, rgba(8,16,36,0.62) 50%, rgba(8,16,36,0.78) 100%)" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.5) 0%, rgba(8,16,36,0.42) 50%, rgba(8,16,36,0.6) 100%)" }} />
         <div ref={resourcesView.ref} className={`reveal${resourcesView.inView ? " visible" : ""}`} style={{ position: "relative", zIndex: 2, maxWidth: 780, margin: "0 auto", textAlign: "center" }}>
           <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(24px, 3vw, 34px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", marginBottom: 16, lineHeight: 1.2 }}>
             Featured Resources
