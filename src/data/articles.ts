@@ -36,7 +36,7 @@ export const articles: Article[] = [
       { type: "p", text: "That's where a true GTM strategy partner makes the difference. Brand Iron isn't a traditional marketing agency. It's a strategic growth partner built for companies that need more than a new logo or a paid ad campaign. Brand Iron's proprietary BrandStorm™ process, synchronized end-to-end services, and data-driven approach bring clarity to the full arc of your go-to-market journey, from shaping your brand foundation to launching with precision and scaling with confidence." },
       { type: "p", text: "Whether you're entering a new market, repositioning for growth, or preparing for a capital raise, having the right GTM partner in your corner changes everything." },
 
-      { type: "image", src: "/images/2nd image.png", alt: "Brand Iron: Your GTM Strategy & Growth Partner — Plan, Launch, Scale with clarity and precision" },
+      { type: "image", src: "/images/brand-iron-gtm-summary-card.png", alt: "Brand Iron: Your GTM Strategy & Growth Partner — Plan, Launch, Scale with clarity and precision" },
 
       { type: "h2", text: "Key Takeaways" },
       { type: "ul", items: [
