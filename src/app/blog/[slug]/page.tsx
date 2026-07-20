@@ -18,8 +18,13 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
 
       {/* ── HEADER ───────────────────────────────────────────── */}
-      <section style={{ position: "relative", overflow: "hidden", background: "#0F1B2D", padding: "160px 24px 72px" }}>
-        <CircuitOverlay />
+      <section style={{ position: "relative", overflow: "hidden", padding: "160px 24px 72px" }}>
+        <div style={{
+          position: "absolute", inset: 0,
+          backgroundImage: `url('${article.headerImage}')`,
+          backgroundSize: "cover", backgroundPosition: "center",
+        }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.55) 0%, rgba(8,16,36,0.5) 45%, rgba(8,16,36,0.8) 100%)" }} />
         <div style={{ position: "relative", zIndex: 2, maxWidth: 820, margin: "0 auto" }}>
           <Link href="/blog" className="back-link" style={{
             display: "flex", width: "fit-content", alignItems: "center", gap: 8,

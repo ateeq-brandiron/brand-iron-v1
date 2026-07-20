@@ -9,6 +9,7 @@ export type Article = {
   excerpt: string;
   readTime: string;
   date: string;
+  headerImage: string;
   body: ArticleBlock[];
 };
 
@@ -20,6 +21,7 @@ export const articles: Article[] = [
     excerpt: "Most organizations approach AI as a technology project. The ones that succeed treat it as a business transformation initiative with technology as the enabler.",
     readTime: "8 min read",
     date: "June 2026",
+    headerImage: "/images/brand iron blacksmith and tech lines.png",
     body: [
       { type: "p", text: "Every organization we talk to has an AI initiative underway. Most of them will never produce a measurable return. Not because the models are wrong, or the vendors are wrong, but because the initiative was never designed to change how the business actually works." },
       { type: "h2", text: "The Technology Project Trap" },
@@ -40,6 +42,7 @@ export const articles: Article[] = [
     excerpt: "Marketing, sales, and operations all working hard but growth is stagnant. The problem isn't effort, it's architecture.",
     readTime: "6 min read",
     date: "May 2026",
+    headerImage: "/images/Brand Iron Techy Grass Prairie.png",
     body: [
       { type: "p", text: "Almost every stalled-growth conversation we have starts the same way: the team is working hard, the pipeline reports look reasonable, and the leadership team can't explain why revenue isn't compounding. The instinct is usually to add more, more content, more outbound, more headcount. Rarely is the instinct to look at how the pieces actually connect." },
       { type: "h2", text: "Activity Isn't Architecture" },
@@ -59,6 +62,7 @@ export const articles: Article[] = [
     excerpt: "A CRM that only tracks deals is a missed opportunity. Here's how the highest-performing revenue teams use their CRM to accelerate growth.",
     readTime: "7 min read",
     date: "May 2026",
+    headerImage: "/images/Brand Iron Techy Hay Bale.png",
     body: [
       { type: "p", text: "For most organizations, the CRM is a filing cabinet. Contacts go in, deals move through stages, someone runs a pipeline report before the leadership meeting. It works, technically, but it isn't doing anything to actually accelerate revenue. It's just recording what already happened." },
       { type: "h2", text: "The Filing Cabinet Trap" },
@@ -77,6 +81,7 @@ export const articles: Article[] = [
     excerpt: "The bar has changed. In a market with more scrutiny and less capital chasing deals, your story needs to be airtight.",
     readTime: "9 min read",
     date: "April 2026",
+    headerImage: "/images/Brand Iron Techy Sagebrush.png",
     body: [
       { type: "p", text: "Capital hasn't disappeared, but the bar to access it has moved. Investors are seeing more decks, asking harder questions, and moving slower before they commit. A deck that would have gotten a second meeting a few years ago now gets a polite pass. The founders who are still raising successfully aren't the ones with the flashiest design, they're the ones whose story holds up under scrutiny." },
       { type: "h2", text: "Clarity Over Cleverness" },
@@ -95,6 +100,7 @@ export const articles: Article[] = [
     excerpt: "Marketing qualified leads are a vanity metric that disconnects marketing from revenue outcomes. Here's what to measure instead.",
     readTime: "5 min read",
     date: "April 2026",
+    headerImage: "/images/Brand Iron Tech River.png",
     body: [
       { type: "p", text: "For over a decade, the marketing qualified lead has been the default scoreboard for demand generation. It's also one of the easiest metrics to inflate and one of the least connected to whether the business actually grows." },
       { type: "h2", text: "Why MQLs Disconnect Marketing From Revenue" },
@@ -113,6 +119,7 @@ export const articles: Article[] = [
     excerpt: "We've deployed AI agents across dozens of revenue organizations. Here's what we've learned about where they create real value.",
     readTime: "10 min read",
     date: "March 2026",
+    headerImage: "/images/Brand Iron Techy Horse Mane.png",
     body: [
       { type: "p", text: "AI agents have moved quickly from novelty to standard tooling inside revenue teams. The results, though, are uneven, and the difference usually comes down to where in the revenue process an organization deploys them, not which vendor they picked." },
       { type: "h2", text: "Where AI Agents Create Real Value" },
@@ -130,6 +137,7 @@ export const articles: Article[] = [
     excerpt: "Stop automating tasks and start automating outcomes. The difference determines whether automation creates leverage or just activity.",
     readTime: "7 min read",
     date: "March 2026",
+    headerImage: "/images/brand iron blacksmith and tech lines.png",
     body: [
       { type: "p", text: "Most automation initiatives start with a task: automate the follow-up email, automate the data entry, automate the report. Task-level automation is easy to justify and easy to build, and it rarely moves the needle on revenue, because a faster version of a task that wasn't driving growth is still not driving growth." },
       { type: "h2", text: "The Difference Between Activity and Leverage" },
@@ -147,6 +155,7 @@ export const articles: Article[] = [
     excerpt: "What separates companies that compound growth from those that plateau isn't strategy, it's the system they use to execute it.",
     readTime: "12 min read",
     date: "February 2026",
+    headerImage: "/images/Brand Iron Techy Grass Prairie.png",
     body: [
       { type: "p", text: "Nearly every executive team we work with already has a growth strategy. Fewer have a system built to execute it consistently, quarter after quarter, regardless of which individual happens to be running a given function. That difference, not the quality of the strategy itself, is what separates companies that compound growth from ones that plateau after an initial period of success." },
       { type: "h2", text: "Why Strategy Alone Doesn't Compound" },
@@ -164,6 +173,7 @@ export const articles: Article[] = [
     excerpt: "You don't need to replace your existing technology to transform with AI. Here's how to layer intelligence on what you already have.",
     readTime: "8 min read",
     date: "February 2026",
+    headerImage: "/images/Brand Iron Techy Hay Bale.png",
     body: [
       { type: "p", text: "The most common reason AI initiatives stall before they start isn't the technology, it's the assumption that AI transformation requires ripping out the existing tech stack and starting over. For most organizations, that assumption is wrong, and expensive enough to talk leadership out of starting at all." },
       { type: "h2", text: "Start With What's Already Working" },
