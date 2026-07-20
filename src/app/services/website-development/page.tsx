@@ -32,8 +32,8 @@ function useHeadlineCrossfade(count: number, pauseMs = 3500, fadeMs = 400) {
 }
 
 const HEADLINES = [
-  "Your Website Should Be Your Strongest Growth Asset.",
-  "Your Website Is Where Strategy Becomes Experience.",
+  "Forge a Website That Pulls Its Weight.",
+  "Your Website Should Be Your Hardest-Working Asset.",
   "Every Growth Strategy Eventually Leads to Your Website.",
 ];
 
@@ -199,17 +199,20 @@ export default function WebsiteDevelopmentPage() {
 
             {/* LEFT — crossfading headline, CTAs */}
             <div>
-              <h1 className="hero-h1-anim" style={{
-                fontFamily: "var(--font-burford-inline), sans-serif",
-                fontWeight: 400, fontSize: "clamp(30px, 4.4vw, 58px)",
-                textTransform: "uppercase", letterSpacing: "0.02em", lineHeight: 0.92,
-                color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))",
-                marginBottom: 20, minHeight: "clamp(79px, 11.6vw, 152px)",
-                opacity: headline.visible ? 1 : 0,
-                transition: `opacity ${headline.fadeMs}ms ease`,
-              }}>
-                {HEADLINES[headline.index]}
-              </h1>
+              <div className="hero-h1-anim" style={{ marginBottom: 20, minHeight: "clamp(79px, 11.6vw, 152px)" }}>
+                <h1 style={{
+                  fontFamily: "var(--font-burford-inline), sans-serif",
+                  fontWeight: 400, fontSize: "clamp(30px, 4.4vw, 58px)",
+                  textTransform: "uppercase", letterSpacing: "0.02em", lineHeight: 0.92,
+                  color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))",
+                  margin: 0,
+                  opacity: headline.visible ? 1 : 0,
+                  transform: headline.visible ? "translateY(0)" : "translateY(10px)",
+                  transition: `opacity ${headline.fadeMs}ms ease, transform ${headline.fadeMs}ms ease`,
+                }}>
+                  {HEADLINES[headline.index]}
+                </h1>
+              </div>
 
               <div className="hero-btns-anim" style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center" }}>
                 <Link href="/contact" style={{
