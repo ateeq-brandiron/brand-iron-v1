@@ -100,16 +100,10 @@ export default function InsightsPage() {
 
             {/* LEFT — headline, CTAs */}
             <div>
-              <p className="hero-h1-anim" style={{
-                fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700,
-                letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16,
-              }}>
-                Insights
-              </p>
               <h1 className="hero-h1-anim" style={{
                 fontFamily: "var(--font-burford-inline), sans-serif",
-                fontWeight: 400, fontSize: "clamp(28px, 3.6vw, 48px)",
-                textTransform: "uppercase", letterSpacing: "0.02em", lineHeight: 1.0,
+                fontWeight: 400, fontSize: "clamp(30px, 4.4vw, 58px)",
+                textTransform: "uppercase", letterSpacing: "0.02em", lineHeight: 0.92,
                 color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))",
                 marginBottom: 20,
               }}>
