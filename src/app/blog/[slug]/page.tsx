@@ -7,6 +7,16 @@ export function generateStaticParams() {
   return articles.map(a => ({ slug: a.slug }));
 }
 
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const article = articles.find(a => a.slug === slug);
+  if (!article) return {};
+  return {
+    title: article.seoTitle ?? article.title,
+    description: article.metaDescription ?? article.excerpt,
+  };
+}
+
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const article = articles.find(a => a.slug === slug);
@@ -61,21 +71,108 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           <p style={{ fontSize: 19, lineHeight: 1.75, color: "#333", fontWeight: 500, marginBottom: 32 }}>
             {article.excerpt}
           </p>
-          {article.body.map((block, i) => (
-            block.type === "h2" ? (
-              <h2 key={i} style={{
-                fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(20px, 2.4vw, 26px)", fontWeight: 900,
-                textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a",
-                marginTop: 40, marginBottom: 16, lineHeight: 1.3,
-              }}>
-                {block.text}
-              </h2>
-            ) : (
+          {article.body.map((block, i) => {
+            if (block.type === "h2") {
+              return (
+                <h2 key={i} style={{
+                  fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(20px, 2.4vw, 26px)", fontWeight: 900,
+                  textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a",
+                  marginTop: 40, marginBottom: 16, lineHeight: 1.3,
+                }}>
+                  {block.text}
+                </h2>
+              );
+            }
+            if (block.type === "h3") {
+              return (
+                <h3 key={i} style={{
+                  fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(16px, 1.8vw, 19px)", fontWeight: 900,
+                  textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a",
+                  marginTop: 30, marginBottom: 12, lineHeight: 1.3,
+                }}>
+                  {block.text}
+                </h3>
+              );
+            }
+            if (block.type === "ul") {
+              return (
+                <ul key={i} style={{ margin: "0 0 22px", padding: 0, listStyle: "none" }}>
+                  {block.items.map((item, j) => {
+                    const isObj = typeof item !== "string";
+                    return (
+                      <li key={j} style={{ display: "flex", gap: 12, marginBottom: 12, fontSize: 17, lineHeight: 1.75, color: "#444" }}>
+                        <span style={{ flex: "0 0 auto", color: "#d87307", fontWeight: 700 }}>—</span>
+                        <span>
+                          {isObj && <strong style={{ color: "#1a1a1a" }}>{(item as { bold: string; text: string }).bold} </strong>}
+                          {isObj ? (item as { bold: string; text: string }).text : (item as string)}
+                        </span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              );
+            }
+            if (block.type === "table") {
+              return (
+                <div key={i} style={{ overflowX: "auto", marginBottom: 28, border: "1px solid #EEEBE7", borderRadius: 10 }}>
+                  <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 15 }}>
+                    <thead>
+                      <tr>
+                        {block.headers.map((h, hi) => (
+                          <th key={hi} style={{
+                            textAlign: "left", padding: "14px 18px", background: "#0F1B2D", color: "#FFFFFF",
+                            fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, fontWeight: 700,
+                            letterSpacing: "0.06em", textTransform: "uppercase",
+                          }}>
+                            {h}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {block.rows.map((row, ri) => (
+                        <tr key={ri} style={{ background: ri % 2 === 0 ? "#FFFFFF" : "#F9F8F6" }}>
+                          {row.map((cell, ci) => (
+                            <td key={ci} style={{ padding: "14px 18px", color: "#444", lineHeight: 1.6, borderTop: "1px solid #EEEBE7" }}>
+                              {cell}
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              );
+            }
+            if (block.type === "faq") {
+              return (
+                <div key={i} style={{ marginBottom: 22 }}>
+                  {block.items.map((item, fi) => (
+                    <details key={fi} className="faq-item" style={{
+                      borderBottom: "1px solid #EEEBE7", padding: "18px 0",
+                    }}>
+                      <summary style={{
+                        cursor: "pointer", listStyle: "none", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16,
+                        fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 16, color: "#1a1a1a",
+                      }}>
+                        {item.q}
+                        <span className="faq-icon" style={{ flex: "0 0 auto", color: "#d87307", fontSize: 20, lineHeight: 1, transition: "transform 0.2s" }}>+</span>
+                      </summary>
+                      <p style={{ fontSize: 16, lineHeight: 1.8, color: "#444", marginTop: 14, marginBottom: 0 }}>
+                        {item.a}
+                      </p>
+                    </details>
+                  ))}
+                </div>
+              );
+            }
+            return (
               <p key={i} style={{ fontSize: 17, lineHeight: 1.85, color: "#444", marginBottom: 22 }}>
+                {block.bold && <strong style={{ color: "#1a1a1a" }}>{block.bold} </strong>}
                 {block.text}
               </p>
-            )
-          ))}
+            );
+          })}
 
           <div style={{ marginTop: 48, paddingTop: 32, borderTop: "1px solid #EEEBE7" }}>
             <Link href="/contact" className="cta-btn-primary" style={{
@@ -126,6 +223,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           .back-link:hover { color: #d87307 !important; }
           .cta-btn-primary:hover { background: #c46305 !important; }
           .cta-btn-secondary:hover { color: #f0a860 !important; border-color: rgba(240,168,96,0.6) !important; }
+          .faq-item summary { outline: none; }
+          .faq-item summary::-webkit-details-marker { display: none; }
+          .faq-item[open] .faq-icon { transform: rotate(45deg); }
         `}</style>
       </section>
 

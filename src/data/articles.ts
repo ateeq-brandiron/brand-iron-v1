@@ -1,6 +1,10 @@
 export type ArticleBlock =
-  | { type: "p"; text: string }
-  | { type: "h2"; text: string };
+  | { type: "p"; text: string; bold?: string }
+  | { type: "h2"; text: string }
+  | { type: "h3"; text: string }
+  | { type: "ul"; items: (string | { bold: string; text: string })[] }
+  | { type: "table"; headers: string[]; rows: string[][] }
+  | { type: "faq"; items: { q: string; a: string }[] };
 
 export type Article = {
   slug: string;
@@ -11,9 +15,192 @@ export type Article = {
   date: string;
   headerImage: string;
   body: ArticleBlock[];
+  seoTitle?: string;
+  metaDescription?: string;
 };
 
 export const articles: Article[] = [
+  {
+    slug: "gtm-strategy-partner",
+    category: "GTM Strategy",
+    title: "Brand Iron: Your GTM Strategy & Growth Partner",
+    excerpt: "Brand Iron is more than a marketing agency — it's a GTM strategy partner that helps companies plan, launch, and scale with clarity and precision.",
+    readTime: "13 min read",
+    date: "July 2026",
+    headerImage: "/images/Brand Iron Techy Horse Mane.png",
+    seoTitle: "Brand Iron: Your GTM Strategy & Growth Partner | Go-To-Market Consulting",
+    metaDescription: "Brand Iron is more than a marketing agency — it's a GTM strategy partner that helps companies plan, launch, and scale with clarity and precision.",
+    body: [
+      { type: "p", text: "Most companies don't have a go-to-market problem, they have a go-to-market clarity problem. They know what they're selling, but they can't articulate why anyone should care, who they're really talking to, or how to coordinate brand, messaging, and marketing into a strategy that actually moves the needle." },
+      { type: "p", text: "That's where a true GTM strategy partner makes the difference. Brand Iron isn't a traditional marketing agency. It's a strategic growth partner built for companies that need more than a new logo or a paid ad campaign. Brand Iron's proprietary BrandStorm™ process, synchronized end-to-end services, and data-driven approach bring clarity to the full arc of your go-to-market journey, from shaping your brand foundation to launching with precision and scaling with confidence." },
+      { type: "p", text: "Whether you're entering a new market, repositioning for growth, or preparing for a capital raise, having the right GTM partner in your corner changes everything." },
+
+      { type: "h2", text: "Key Takeaways" },
+      { type: "ul", items: [
+        "A GTM strategy partner is not just a vendor — they are an embedded strategic ally who aligns brand, marketing, and business development toward a unified growth goal.",
+        "Brand Iron's BrandStorm™ process defines the brand architecture that underpins every GTM decision, from messaging to market positioning.",
+        "Effective GTM strategy requires synchronized end-to-end execution, not disconnected campaign tactics.",
+        "The BrandGo™ framework delivers precision impact by connecting brand strategy directly to market activation.",
+        "Companies that invest in GTM strategy before launch reduce wasted spend, accelerate market traction, and build lasting credibility with customers and investors alike.",
+        "Brand Iron serves as a strategic partner across the full growth lifecycle, from early-stage brand building to scaling and capital raise readiness.",
+        "A results-focused, holistic approach to GTM ensures your brand, marketing, and sales efforts reinforce each other rather than compete.",
+      ] },
+
+      { type: "h2", text: "Fast Facts" },
+      { type: "table", headers: ["Attribute", "Details"], rows: [
+        ["Topic", "GTM Strategy Partner / Go-To-Market Consulting"],
+        ["Industry", "Marketing, Brand Strategy, Business Consulting"],
+        ["Primary Goal", "Help companies plan, launch, and scale with brand clarity and precision"],
+        ["Key Benefit", "Synchronized brand-to-market execution that drives measurable growth"],
+        ["Common Challenge", "Disconnected brand, marketing, and sales efforts with no unified GTM plan"],
+        ["Proprietary Tools", "BrandStorm™, BrandGo™, Brand Architecture Document"],
+        ["Company", "Brand Iron Marketing"],
+        ["Value Proposition", "Strategic partnership + timeless brand experience + results-focused execution"],
+      ] },
+
+      { type: "h2", text: "What Is a GTM Strategy Partner — and Why Does It Matter?" },
+      { type: "p", text: "A go-to-market (GTM) strategy defines how a company brings a product or service to market. It encompasses target audience definition, brand positioning, messaging, channel strategy, and the coordinated plan to reach, engage, and convert customers." },
+      { type: "p", text: "A GTM strategy partner goes further. Rather than simply executing tactics, a GTM partner embeds itself in your business to:" },
+      { type: "ul", items: [
+        "Understand your competitive landscape and market opportunity",
+        "Define your brand architecture and core messaging",
+        "Align your team around a unified go-to-market plan",
+        "Execute campaigns with precision and measurable accountability",
+        "Adapt the strategy as market conditions and results evolve",
+      ] },
+      { type: "p", text: "The difference between a marketing vendor and a GTM strategy partner is the difference between buying media and building a market position." },
+
+      { type: "h2", text: "Why Most GTM Strategies Fall Short" },
+      { type: "p", text: "Companies frequently launch into the market with enthusiasm but without alignment. The symptoms are recognizable:" },
+      { type: "ul", items: [
+        "Sales and marketing tell different stories to prospects",
+        "Campaigns generate impressions but not pipeline",
+        "Brand messaging feels generic and fails to differentiate",
+        "Budget is spent reactively rather than strategically",
+        "There's no clear narrative for customers, or investors",
+      ] },
+      { type: "p", text: "According to CB Insights' analysis of startup failure post-mortems, approximately 35% of startup failures are attributed to no market need, a problem that disciplined GTM strategy directly addresses by validating positioning before significant resources are committed." },
+
+      { type: "h2", text: "Brand Iron's Approach to GTM Strategy" },
+      { type: "p", text: "Brand Iron operates from a core belief: great execution without a great strategy is just expensive noise. That's why every client engagement starts with the foundation, and builds up from there." },
+
+      { type: "h3", text: "Step 1: The BrandStorm™ — Building Your Foundation" },
+      { type: "p", text: "The BrandStorm™ is Brand Iron's proprietary discovery and brand architecture process. It's where GTM strategy begins. During BrandStorm™, Brand Iron works with your leadership team to define:" },
+      { type: "ul", items: [
+        { bold: "Mission and vision", text: "— why your company exists and where it's going" },
+        { bold: "Core differentiators", text: "— what makes you meaningfully different in your market" },
+        { bold: "Value proposition", text: "— the specific value you deliver to specific customers" },
+        { bold: "Brand voice", text: "— how your company communicates: assertive, data-driven, personable, edgy" },
+        { bold: "Elevator pitch and brand story", text: "— the narrative that resonates with customers and investors" },
+      ] },
+      { type: "p", text: "The output is a Brand Architecture document, a governing blueprint that codifies everything that makes your brand unique, ensuring consistency from your website to your pitch deck to your sales conversations." },
+
+      { type: "h3", text: "Step 2: Synchronized End-to-End Services" },
+      { type: "p", text: "One of Brand Iron's key differentiators is synchronized end-to-end service delivery. This isn't a hand-off model where strategy gets tossed to a creative team and then again to a media buyer. Everything moves together, brand, creative, digital, and marketing implementation, because in GTM execution, alignment is everything. Synchronized services include:" },
+      { type: "ul", items: [
+        "Brand architecture and visual identity development",
+        "Website strategy and development",
+        "Digital marketing (paid search, social, programmatic)",
+        "Content strategy and SEO",
+        "Capital raise decks and investor materials",
+        "Outbound campaign design and execution",
+      ] },
+
+      { type: "h3", text: "Step 3: BrandGo™ — Precision Impact at Launch" },
+      { type: "p", text: "BrandGo™ is Brand Iron's go-to-market activation framework. Once the brand foundation is established, BrandGo™ translates strategy into market-ready execution with precision targeting, channel selection, and performance accountability. BrandGo™ focuses on:" },
+      { type: "ul", items: [
+        { bold: "Audience precision", text: "— reaching the right people, not just the most people" },
+        { bold: "Channel alignment", text: "— matching your message to the channels your buyers actually use" },
+        { bold: "Conversion focus", text: "— measuring what matters: leads, revenue, and growth" },
+        { bold: "Iteration discipline", text: "— optimizing campaigns based on real data, not assumptions" },
+      ] },
+
+      { type: "h3", text: "Step 4: Relentless Marketing Implementation" },
+      { type: "p", text: "Strategy without implementation is just a slide deck. Brand Iron's relentless marketing implementation ensures that what's planned actually gets built, deployed, and optimized, continuously. This includes:" },
+      { type: "ul", items: [
+        "Ongoing campaign management and optimization",
+        "Performance reporting tied to business outcomes",
+        "Creative production that stays aligned to brand standards",
+        "Proactive strategy adjustments as market conditions shift",
+      ] },
+
+      { type: "h2", text: "Who Needs a GTM Strategy Partner?" },
+      { type: "p", text: "Not every company needs a GTM partner at the same stage, but most need one sooner than they realize. Brand Iron works with:" },
+
+      { type: "h3", text: "Companies Entering a New Market" },
+      { type: "p", text: "Whether you're a startup launching for the first time or an established company expanding into new verticals, you need a clear GTM plan before you spend a dollar on marketing. Brand Iron helps you define the opportunity, sharpen your positioning, and build the foundation for sustainable market entry." },
+
+      { type: "h3", text: "Companies Repositioning for Growth" },
+      { type: "p", text: "Businesses that have stalled, lost differentiation, or outgrown their original brand story need more than a rebrand. They need a strategic reset. Brand Iron's BrandStorm™ process re-anchors your brand in what actually makes you valuable, and then rebuilds the go-to-market plan around that truth." },
+
+      { type: "h3", text: "Companies Preparing for a Capital Raise" },
+      { type: "p", text: "Investors don't just evaluate your product, they evaluate your market strategy, your brand credibility, and your team's ability to execute. Brand Iron's compelling capital raise decks and pre-raise GTM strategy work help companies present with confidence and clarity." },
+
+      { type: "h2", text: "GTM Strategy Partner vs. Traditional Marketing Agency" },
+      { type: "table", headers: ["Dimension", "Traditional Marketing Agency", "GTM Strategy Partner (Brand Iron)"], rows: [
+        ["Starting Point", "Tactics and campaigns", "Brand strategy and market positioning"],
+        ["Scope", "Execution of defined deliverables", "End-to-end strategy through implementation"],
+        ["Alignment", "Often siloed by discipline", "Synchronized across brand, digital, and sales"],
+        ["Measurement", "Impressions, clicks, reach", "Pipeline, revenue, and business outcomes"],
+        ["Relationship Model", "Vendor", "Strategic partner"],
+        ["Brand Foundation", "Typically assumed or skipped", "Defined and documented via BrandStorm™"],
+        ["Adaptability", "Project-based", "Continuously optimized and evolved"],
+      ] },
+
+      { type: "h2", text: "The Business Case for Investing in GTM Strategy" },
+      { type: "p", text: "Getting to market without a strategy is expensive in ways that are rarely visible until the damage is done. Wasted ad spend, misaligned messaging, sales cycles that drag, and brands that fail to stick are all symptoms of underdeveloped GTM strategy. The business case for investing in a GTM strategy partner is straightforward:" },
+      { type: "ul", items: [
+        { bold: "Reduced wasted spend:", text: "you stop paying for tactics that don't connect to your positioning" },
+        { bold: "Faster time to traction:", text: "a clear message reaches the right audience more efficiently" },
+        { bold: "Greater brand equity:", text: "consistent, aligned execution builds lasting recognition and trust" },
+        { bold: "Stronger investor narrative:", text: "a coherent GTM story is a competitive advantage in fundraising" },
+        { bold: "Scalable foundation:", text: "a well-built brand architecture and GTM framework scales with you" },
+      ] },
+      { type: "p", text: "Research from Gartner on go-to-market strategy and sales effectiveness consistently shows that organizations with documented go-to-market strategies outperform those operating without one, particularly in new market entry scenarios where brand clarity is the primary competitive variable." },
+
+      { type: "h2", text: "Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "What is a GTM strategy partner?", a: "A GTM strategy partner is a consulting firm or agency that works alongside your leadership team to develop, execute, and optimize your go-to-market strategy. Unlike traditional marketing agencies focused on tactical execution, a GTM partner operates at the strategic level, aligning brand, messaging, marketing, and sales into a unified growth plan. Brand Iron serves in this capacity by combining brand architecture with synchronized end-to-end execution." },
+        { q: "How is Brand Iron different from a traditional marketing agency?", a: "Brand Iron differs in both scope and philosophy. Where a traditional agency might start with a campaign brief, Brand Iron starts with your brand architecture, the foundational document that defines your mission, differentiators, voice, and value proposition. From there, Brand Iron's synchronized services ensure that every marketing deliverable is rooted in strategy, not just aesthetics or clicks." },
+        { q: "What is the BrandStorm™ process?", a: "BrandStorm™ is Brand Iron's proprietary brand discovery and architecture process. It's a structured engagement that draws out and documents everything that makes your brand unique, from mission and vision to key differentiators, brand voice, value proposition, and elevator pitch. The output is a Brand Architecture document that governs all brand and marketing decisions going forward." },
+        { q: "What is BrandGo™?", a: "BrandGo™ is Brand Iron's go-to-market activation framework, designed to translate your brand strategy into precise, measurable market execution. It focuses on targeting the right audience through the right channels with messaging that converts, and then continuously optimizing based on performance data." },
+        { q: "When should a company hire a GTM strategy partner?", a: "Ideally, before spending heavily on marketing. The best time to engage a GTM strategy partner is when you're planning a new product or service launch, entering a new market, repositioning your brand, or preparing for a fundraising round. However, companies at any stage benefit from strategic clarity, especially if current marketing efforts aren't producing results." },
+        { q: "Can Brand Iron help with investor pitch decks?", a: "Yes. Brand Iron creates compelling capital raise decks as part of its go-to-market service suite. These aren't just visually polished presentations, they're strategically built to communicate your market opportunity, GTM strategy, differentiation, and growth plan in the way that sophisticated investors expect to see." },
+        { q: "Does Brand Iron only work with startups?", a: "No. Brand Iron works with companies across multiple stages of growth, from early-stage startups building their brand for the first time to established businesses repositioning for a new chapter. The GTM strategy approach scales to the complexity and ambition of each client's situation." },
+        { q: "How long does it take to develop a GTM strategy with Brand Iron?", a: "The timeline depends on the scope of engagement. The BrandStorm™ process to establish brand architecture is typically completed within a few weeks. Full GTM strategy development and activation, including brand identity, website, and initial campaign deployment, varies based on project complexity but is designed to move with urgency and precision." },
+        { q: "What industries does Brand Iron serve?", a: "Brand Iron's GTM consulting and marketing services span multiple industries, with particular strength in B2B, professional services, technology, and companies navigating growth inflection points. The BrandStorm™ process is industry-agnostic by design, because the fundamentals of brand clarity and market positioning apply universally." },
+        { q: "What makes Brand Iron's approach \"holistic\"?", a: "Brand Iron's holistic approach means that no element of your brand or marketing operates in isolation. Brand architecture informs creative direction. Creative direction informs digital campaigns. Digital campaigns are measured against business outcomes, not vanity metrics. And everything is continuously aligned to your strategic objectives. This end-to-end coordination is what separates GTM strategy from GTM guessing." },
+        { q: "Is Brand Iron a good fit for companies preparing for a rebrand?", a: "Absolutely. Rebranding without strategic grounding is one of the most common and costly marketing mistakes. Brand Iron's BrandStorm™ process ensures that a rebrand is rooted in genuine differentiation and positioned for the market you're actually targeting, not just the market you once served." },
+        { q: "How does Brand Iron measure GTM success?", a: "Brand Iron measures success against business outcomes: qualified pipeline, revenue growth, brand recognition, and, where applicable, capital raise outcomes. Impressions and clicks matter, but they're inputs to the outcomes that actually move your business forward. Every engagement is built with performance accountability at its core." },
+      ] },
+
+      { type: "h2", text: "At a Glance" },
+      { type: "p", bold: "What is a GTM strategy partner?", text: "A strategic consulting partner that aligns brand, marketing, and sales into a unified go-to-market plan, from strategy through execution and optimization." },
+      { type: "p", bold: "Who is Brand Iron?", text: "Brand Iron is a go-to-market strategy and marketing firm that combines brand architecture, synchronized end-to-end services, and relentless marketing implementation to help companies launch and scale." },
+      { type: "p", bold: "Key Brand Iron differentiators:", text: "" },
+      { type: "ul", items: [
+        { bold: "BrandStorm™", text: "— proprietary brand discovery and architecture process" },
+        { bold: "BrandGo™", text: "— precision go-to-market activation framework" },
+        { bold: "Synchronized End-to-End Services", text: "— strategy, creative, digital, and implementation in one cohesive engagement" },
+        { bold: "Compelling Capital Raise Decks", text: "— investor-ready materials built on GTM strategy" },
+        { bold: "Relentless Marketing Implementation", text: "— continuous execution and optimization" },
+      ] },
+      { type: "p", bold: "Core value points:", text: "" },
+      { type: "ul", items: [
+        "Holistic approach",
+        "Results focused",
+        "Strategic partnership",
+        "Timeless brand experience",
+      ] },
+      { type: "p", bold: "When to hire a GTM strategy partner:", text: "Before entering a new market, launching a new product, repositioning your brand, or preparing for a capital raise." },
+      { type: "p", bold: "Primary business outcomes:", text: "Reduced wasted marketing spend, faster time to traction, stronger brand equity, a more compelling investor narrative, and a scalable brand and GTM foundation." },
+      { type: "p", bold: "Brand Iron's philosophy:", text: "Great execution without great strategy is just expensive noise. Build the foundation first, then launch with precision." },
+
+      { type: "h2", text: "Conclusion" },
+      { type: "p", text: "The difference between a company that struggles to gain traction and one that scales with clarity usually comes down to strategy, specifically, whether that company has defined its brand, aligned its messaging, and built a coherent plan for reaching the right market with the right story." },
+      { type: "p", text: "Brand Iron exists to be the GTM strategy partner that makes that difference. Through the BrandStorm™ process, BrandGo™ activation, and synchronized end-to-end execution, Brand Iron brings the strategic rigor and marketing precision that growing companies need to move from vision to measurable market impact. If you're ready to stop guessing and start growing with a partner who's as invested in your outcomes as you are, Brand Iron is built for that conversation." },
+    ],
+  },
   {
     slug: "why-ai-implementations-fail",
     category: "AI Transformation",
