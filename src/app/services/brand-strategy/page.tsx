@@ -255,7 +255,7 @@ export default function BrandStrategyPage() {
       {/* ── HERO ───────────────────────────────────────────── */}
       <section className="bs-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <video
-          src="/Barn house.mp4"
+          src="/Tree Animation.mp4"
           autoPlay muted loop playsInline preload="auto"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }}
         />
