@@ -6,6 +6,15 @@ import CircuitOverlay from "@/components/CircuitOverlay";
 const services = [
   {
     number: "01",
+    title: "Brand Strategy",
+    href: "/services/brand-strategy",
+    description: "We forge brands that get chosen, connecting strategy, messaging, identity, digital experiences, and go-to-market execution into one connected brand system built to drive growth.",
+    icon: (
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="#D87307" strokeWidth="2" strokeLinejoin="round"/><path d="M12 8v6M9 11h6" stroke="#D87307" strokeWidth="2" strokeLinecap="round"/></svg>
+    ),
+  },
+  {
+    number: "02",
     title: "AI Visibility & Discoverability",
     href: "/services/ai-visibility",
     description: "Helping brands become discoverable, trusted, and recommended across search and AI, integrating SEO, AEO, GEO, technical optimization, entity development, authority building, and strategic content into one connected visibility strategy.",
@@ -14,7 +23,7 @@ const services = [
     ),
   },
   {
-    number: "02",
+    number: "03",
     title: "GTM Strategy",
     href: "/services/gtm",
     description: "Go-to-market strategies built for how buyers make decisions today, connecting strategy, visibility, authority, demand generation, sales, automation, and revenue into one cohesive growth engine.",
@@ -23,7 +32,7 @@ const services = [
     ),
   },
   {
-    number: "03",
+    number: "04",
     title: "Capital Raise Support",
     href: "/services/capital-raise",
     description: "Raising capital requires more than a great pitch deck. We help founders prepare for every stage of the fundraising journey through strategic positioning, investor storytelling, presentation development, investor targeting, and outreach.",
@@ -32,7 +41,7 @@ const services = [
     ),
   },
   {
-    number: "04",
+    number: "05",
     title: "Website Development",
     href: "/services/website-development",
     description: "Strategic digital experiences that connect your brand, messaging, user experience, and AI Visibility into one platform designed to help your organization become discoverable, trusted, and chosen.",

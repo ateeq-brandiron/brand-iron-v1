@@ -43,6 +43,7 @@ export async function POST(request: Request) {
     ai_visibility_audit: "AI Visibility Audit",
     gtm_growth_review: "GTM Growth Review",
     website_inquiry: "Website Inquiry",
+    branding_proposal: "Branding Proposal",
   };
   const formLabel = FORM_LABELS[formId as string] || "Website Form";
 
@@ -51,6 +52,7 @@ export async function POST(request: Request) {
     ai_visibility_audit: process.env.SHARPSPRING_AI_VISIBILITY_LIST_ID,
     gtm_growth_review: process.env.SHARPSPRING_GTM_GROWTH_REVIEW_LIST_ID,
     website_inquiry: process.env.SHARPSPRING_WEBSITE_INQUIRY_LIST_ID,
+    branding_proposal: process.env.SHARPSPRING_BRANDING_PROPOSAL_LIST_ID,
   };
   const listID = LIST_ID_BY_FORM[formId as string] || process.env.SHARPSPRING_CONTACT_FORM_LIST_ID;
 

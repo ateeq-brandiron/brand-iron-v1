@@ -214,6 +214,9 @@ export default function ContactPage() {
                   <label style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a1a1a", display: "block", marginBottom: 8 }}>I&apos;m interested in... <span style={{ color: "#d87307" }}>*</span></label>
                   <select required value={form.interest} onChange={e => setForm({ ...form, interest: e.target.value })} style={{ ...inputStyle, cursor: "pointer" }}>
                     <option value="" style={{ background: "#FFFFFF", color: "#1a1a1a" }}>Select an option...</option>
+                    <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>Brand Strategy</option>
+                    <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>Brand Foundation</option>
+                    <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>Brand Foundation + Market Launch</option>
                     <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>AI Visibility Audit (SEO/AEO)</option>
                     <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>GTM Growth Review</option>
                     <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>Revenue Strategy & Growth Planning</option>

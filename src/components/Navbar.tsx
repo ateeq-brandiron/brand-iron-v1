@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 
 const servicesMenu = [
+  { label: "Brand Strategy", href: "/services/brand-strategy" },
   { label: "AI Visibility & Discoverability", href: "/services/ai-visibility" },
   { label: "GTM Strategy", href: "/services/gtm" },
   { label: "Capital Raise Support", href: "/services/capital-raise" },

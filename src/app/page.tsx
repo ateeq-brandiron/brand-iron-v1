@@ -19,6 +19,7 @@ function useInView(threshold = 0.15) {
 }
 
 const services = [
+  { label: "Brand Strategy", href: "/services/brand-strategy" },
   { label: "AI Visibility", href: "/services/ai-visibility" },
   { label: "GTM Strategy", href: "/services/gtm" },
   { label: "Capital Raise Support", href: "/services/capital-raise" },
@@ -47,6 +48,12 @@ const differentiators = [
 ];
 
 const coreServices = [
+  {
+    title: "Brand Strategy", sub: "Forge a Brand That Gets Chosen",
+    body: "We build branding as a business system, connecting strategy, messaging, visual identity, and go-to-market execution into one foundation designed to earn trust and hold its ground.",
+    solutions: ["Brand Foundation", "Brand Foundation + Market Launch"],
+    cta: "Explore Brand Strategy", href: "/services/brand-strategy",
+  },
   {
     title: "AI Visibility & Discoverability", sub: "Be Found Where Buyers Search",
     body: "Modern buyers use search engines, AI assistants, and digital channels to evaluate their options. We help your business increase visibility where buying decisions begin.",
@@ -139,7 +146,7 @@ export default function Home() {
     }
   };
   useEffect(() => {
-    selectService(1, "instant");
+    selectService(2, "instant");
   }, []);
   const startAutoSlide = () => {
     if (autoSlideRef.current) return;
