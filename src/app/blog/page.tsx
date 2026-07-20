@@ -2,72 +2,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import CircuitOverlay from "@/components/CircuitOverlay";
-
-const articles = [
-  {
-    category: "AI Transformation",
-    title: "Why 90% of AI Implementations Fail to Create Business Value",
-    excerpt: "Most organizations approach AI as a technology project. The ones that succeed treat it as a business transformation initiative with technology as the enabler.",
-    readTime: "8 min read",
-    date: "June 2026",
-  },
-  {
-    category: "Revenue Strategy",
-    title: "The Revenue System Problem: Why Disconnected Teams Destroy Growth",
-    excerpt: "Marketing, sales, and operations all working hard but growth is stagnant. The problem isn't effort, it's architecture.",
-    readTime: "6 min read",
-    date: "May 2026",
-  },
-  {
-    category: "Revenue Operations",
-    title: "CRM as a Revenue Engine: Beyond Contact Management",
-    excerpt: "A CRM that only tracks deals is a missed opportunity. Here's how the highest-performing revenue teams use their CRM to accelerate growth.",
-    readTime: "7 min read",
-    date: "May 2026",
-  },
-  {
-    category: "Capital Raise",
-    title: "What Investors Actually Want to See in Your Pitch Deck in 2026",
-    excerpt: "The bar has changed. In a market with more scrutiny and less capital chasing deals, your story needs to be airtight.",
-    readTime: "9 min read",
-    date: "April 2026",
-  },
-  {
-    category: "Demand Generation",
-    title: "The Death of the MQL: How to Measure Marketing in a Revenue-Focused World",
-    excerpt: "Marketing qualified leads are a vanity metric that disconnects marketing from revenue outcomes. Here's what to measure instead.",
-    readTime: "5 min read",
-    date: "April 2026",
-  },
-  {
-    category: "AI Transformation",
-    title: "AI Agents for Revenue Teams: What Works and What Doesn't",
-    excerpt: "We've deployed AI agents across dozens of revenue organizations. Here's what we've learned about where they create real value.",
-    readTime: "10 min read",
-    date: "March 2026",
-  },
-  {
-    category: "Automation",
-    title: "Revenue Automation That Actually Works: A Practical Framework",
-    excerpt: "Stop automating tasks and start automating outcomes. The difference determines whether automation creates leverage or just activity.",
-    readTime: "7 min read",
-    date: "March 2026",
-  },
-  {
-    category: "Executive Leadership",
-    title: "The CEO's Guide to Revenue Transformation in 2026",
-    excerpt: "What separates companies that compound growth from those that plateau isn't strategy, it's the system they use to execute it.",
-    readTime: "12 min read",
-    date: "February 2026",
-  },
-  {
-    category: "Digital Transformation",
-    title: "Integrating AI Into Your Revenue Stack Without Starting Over",
-    excerpt: "You don't need to replace your existing technology to transform with AI. Here's how to layer intelligence on what you already have.",
-    readTime: "8 min read",
-    date: "February 2026",
-  },
-];
+import { articles } from "@/data/articles";
 
 function useInView(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null);
@@ -173,17 +108,17 @@ export default function InsightsPage() {
         <CircuitOverlay />
         <div ref={articlesView.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1100, margin: "0 auto" }}>
           <div className="blog-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
-            {articles.map(({ category, title, excerpt, readTime, date }, i) => (
-              <div key={title}
+            {articles.map(({ slug, category, title, excerpt, readTime, date }, i) => (
+              <Link key={slug} href={`/blog/${slug}`}
                 className={`reveal${articlesView.inView ? " visible" : ""}`}
                 style={{
                   position: "relative", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)",
                   borderRadius: 10, padding: "28px 24px", display: "flex", flexDirection: "column",
-                  overflow: "hidden", transitionDelay: `${(i % 6) * 0.06}s`,
+                  overflow: "hidden", transitionDelay: `${(i % 6) * 0.06}s`, textDecoration: "none",
                   transition: "transform 0.25s, box-shadow 0.25s, border-color 0.25s, background 0.25s",
                 }}
-                onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-5px)"; el.style.background = "rgba(216,115,7,0.06)"; el.style.borderColor = "rgba(216,115,7,0.3)"; el.style.boxShadow = "0 16px 40px rgba(0,0,0,0.25)"; }}
-                onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.background = "rgba(255,255,255,0.04)"; el.style.borderColor = "rgba(255,255,255,0.08)"; el.style.boxShadow = "none"; }}
+                onMouseEnter={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.transform = "translateY(-5px)"; el.style.background = "rgba(216,115,7,0.06)"; el.style.borderColor = "rgba(216,115,7,0.3)"; el.style.boxShadow = "0 16px 40px rgba(0,0,0,0.25)"; }}
+                onMouseLeave={e => { const el = e.currentTarget as HTMLAnchorElement; el.style.transform = "translateY(0)"; el.style.background = "rgba(255,255,255,0.04)"; el.style.borderColor = "rgba(255,255,255,0.08)"; el.style.boxShadow = "none"; }}
               >
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.2))" }} />
                 <span style={{ display: "inline-block", padding: "4px 12px", border: "1px solid rgba(216,115,7,0.4)", borderRadius: 4, fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", color: "#d87307", marginBottom: 16, width: "fit-content" }}>{category}</span>
@@ -193,7 +128,7 @@ export default function InsightsPage() {
                   <span style={{ fontSize: 12, color: "rgba(255,255,255,0.6)" }}>{date}</span>
                   <span style={{ fontSize: 12, color: "#d87307" }}>{readTime}</span>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
