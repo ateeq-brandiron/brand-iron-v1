@@ -658,13 +658,19 @@ export default function BrandStrategyPage() {
       {/* ── S6: STATEMENT + FAQ ──────────────────────────────── */}
       <section style={{ background: "#F8F5EF", padding: "120px 40px 48px" }}>
         <div ref={s6View.ref} style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{
-            fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 2.8vw, 32px)", fontWeight: 900,
+          <p className={`s6-statement reveal${s6View.inView ? ' visible' : ''}`} style={{
+            fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(20px, 2.4vw, 30px)", fontWeight: 900,
             textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.3,
-            textAlign: "center", maxWidth: 780, margin: "0 auto 72px",
+            textAlign: "center", margin: "0 auto 72px", whiteSpace: "nowrap",
           }}>
             Your Brand Should Strengthen Everything Around It.
           </p>
+
+          <style>{`
+            @media (max-width: 900px) {
+              .s6-statement { white-space: normal !important; font-size: clamp(20px, 3.6vw, 26px) !important; }
+            }
+          `}</style>
 
           {/* FAQ Accordion */}
           <div className={`reveal${s6View.inView ? ' visible' : ''}`}>
