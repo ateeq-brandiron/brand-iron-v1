@@ -75,7 +75,7 @@ const TEAM = [
   },
   {
     name: "Shelly Barson",
-    title: "Design Manager",
+    title: "Creative Director",
     photo: "/images/team/shelly.jpg",
     bio: "Shelly is passionate about simple, smart design that tells a compelling story. A seasoned art director, she's worked on projects ranging from small startups to global brands like Intel, Vivint, and Microsoft.",
   },
@@ -87,9 +87,9 @@ const TEAM = [
   },
   {
     name: "Olivia Briones",
-    title: "Operations & Growth Strategy Manager",
+    title: "Operations & Project Manager",
     photo: "/images/team/olivia.jpg",
-    bio: "With 14+ years in operations and digital marketing, Olivia turns complex ideas into structured, scalable growth systems. She leads initiatives across branding, go-to-market strategy, AI visibility, and SEO.",
+    bio: "With more than 16 years of experience in operations, project management, and digital marketing, Olivia Briones is an Operations & Project Manager who thrives on bringing order to complexity. Combining expertise in branding, AI visibility, go-to-market strategy, SEO, and operational systems, she helps transform strategy into execution. Her focus is building efficient processes, aligning teams, and creating scalable marketing systems that drive sustainable business growth.",
   },
   {
     name: "Ateeq Asif",
