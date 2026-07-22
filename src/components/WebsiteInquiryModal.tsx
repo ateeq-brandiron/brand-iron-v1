@@ -96,13 +96,13 @@ export default function WebsiteInquiryModal({ onClose }: { onClose: () => void }
           {step === 1 ? (
             <>
               <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 10 }}>
-                Website Inquiry Form
+                Website Optimization Review Form
               </p>
               <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 3vw, 32px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.15, marginBottom: 8 }}>
                 Let&apos;s Build a Website That Supports Your Business Goals
               </h2>
               <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, color: "rgba(255,255,255,0.65)", lineHeight: 1.7, marginBottom: 28, maxWidth: 540 }}>
-                Tell us about your organization and your website objectives. We&apos;ll review your requirements and prepare a tailored website proposal aligned with your business, brand, and growth strategy.
+                Tell us about your organization and your website objectives. We&apos;ll review your requirements and prepare a tailored website optimization review aligned with your business, brand, and growth strategy.
               </p>
 
               <form onSubmit={handleSubmit}>
@@ -173,7 +173,7 @@ export default function WebsiteInquiryModal({ onClose }: { onClose: () => void }
                   letterSpacing: "0.12em", textTransform: "uppercase", cursor: submitting ? "default" : "pointer",
                   transition: "background 0.2s",
                 }}>
-                  {submitting ? "Submitting…" : "Send My Website Inquiry →"}
+                  {submitting ? "Submitting…" : "Send My Website Optimization Review Request →"}
                 </button>
               </form>
             </>
@@ -188,7 +188,7 @@ export default function WebsiteInquiryModal({ onClose }: { onClose: () => void }
                 Request Received!
               </h2>
               <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, color: "rgba(255,255,255,0.75)", lineHeight: 1.75, maxWidth: 440, margin: "0 auto 32px" }}>
-                We&apos;ll review your requirements and follow up with a tailored website proposal within 1–2 business days.
+                We&apos;ll review your requirements and follow up with a tailored website optimization review within 1–2 business days.
               </p>
               <button onClick={onClose} style={{
                 padding: "14px 40px", background: "transparent",
