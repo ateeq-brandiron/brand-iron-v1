@@ -797,7 +797,7 @@ export default function Home() {
       {/* ── S6: STRATEGIC PARTNER ────────────────────────── */}
       <section style={{ position: "relative", overflow: "hidden", padding: "72px 24px" }}>
         <video
-          src="/Animate_this_image_and_these_d (1).mp4"
+          src="/tech river animation.mp4"
           autoPlay muted loop playsInline preload="auto"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 55%" }}
           onLoadedMetadata={e => { e.currentTarget.currentTime = 1; }}
