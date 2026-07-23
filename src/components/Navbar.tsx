@@ -7,9 +7,9 @@ const servicesMenu = [
   { label: "AI Visibility & Discoverability", href: "/services/ai-visibility" },
   { label: "GTM Strategy", href: "/services/gtm" },
   { label: "Capital Raise Support", href: "/services/capital-raise" },
-  { label: "Website Development", href: "/services/website-development" },
-  { label: "Outbound Growth", href: "/services/outbound-growth" },
   { label: "Revenue Engineering", href: "/services/revenue-engineering" },
+  { label: "Outbound Growth", href: "/services/outbound-growth" },
+  { label: "Website Development", href: "/services/website-development" },
 ];
 
 const navLinks = [
