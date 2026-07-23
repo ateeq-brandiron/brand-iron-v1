@@ -27,7 +27,6 @@ export default function GTMPage() {
   const s5View = useInView();
   const s6View = useInView();
   const s7View = useInView();
-  const s8View = useInView();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const faqs = [
@@ -846,44 +845,6 @@ export default function GTMPage() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── S8: FINAL CTA ─────────────────────────────────────── */}
-      <section style={{ position: "relative", overflow: "hidden", padding: "100px 40px", background: "linear-gradient(160deg, #0F1B2D 0%, #16273f 100%)" }}>
-        <CircuitOverlay />
-        <div ref={s8View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
-          <h2 className={`section-heading reveal${s8View.inView ? ' visible' : ''}`} style={{ color: "#FFFFFF", marginBottom: 20 }}>
-            Schedule Your GTM Strategy Session
-          </h2>
-          <p className={`reveal${s8View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", marginBottom: 40 }}>
-            Most organizations invest in disconnected marketing efforts. We build connected Go-to-Market systems that align strategy, visibility, authority, demand generation, sales, and automation, creating measurable, sustainable growth.
-          </p>
-          <div className={`reveal${s8View.inView ? ' visible' : ''}`} style={{ display: "flex", gap: 24, justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
-            <Link href="/contact" style={{
-              display: "inline-block", padding: "16px 40px", borderRadius: 6,
-              fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 14,
-              letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none",
-              background: "#d87307", color: "#FFFFFF", transition: "background 0.2s",
-            }}
-            onMouseEnter={e => (e.currentTarget.style.background = "#c46305")}
-            onMouseLeave={e => (e.currentTarget.style.background = "#d87307")}
-            >
-              Schedule a GTM Strategy Session
-            </Link>
-            <button onClick={() => setGrowthReviewOpen(true)} style={{
-              background: "none", border: "none", cursor: "pointer",
-              fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 14,
-              letterSpacing: "0.08em", textTransform: "uppercase",
-              color: "#FFFFFF", borderBottom: "1px solid rgba(255,255,255,0.4)", paddingBottom: 2,
-              transition: "color 0.2s, border-color 0.2s",
-            }}
-            onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.color = "#f0a860"; (e.currentTarget as HTMLButtonElement).style.borderColor = "rgba(240,168,96,0.6)"; }}
-            onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.color = "#FFFFFF"; (e.currentTarget as HTMLButtonElement).style.borderColor = "rgba(255,255,255,0.4)"; }}
-            >
-              Request a GTM Growth Review
-            </button>
           </div>
         </div>
       </section>
