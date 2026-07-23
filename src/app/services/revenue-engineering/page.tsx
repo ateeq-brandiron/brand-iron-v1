@@ -21,44 +21,49 @@ function useInView(threshold = 0.1) {
 
 const coreServices = [
   {
+    num: "01",
     title: "Marketing Automation",
     lead: "Put Repetitive Work Out to Pasture",
     body: "We build automated workflows that keep leads moving and your team focused on closing.",
     items: ["Lead capture automation", "Email nurture workflows", "Automated follow-up", "Lead scoring", "Sales alerts", "Re-engagement campaigns", "Workflow integrations"],
     outcome: "Faster follow-up. Fewer missed opportunities.",
-    icon: (<svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="#d87307" strokeWidth="1.8"/><path d="M19.4 13a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V19a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1.08-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H4a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1.08 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H10a1.65 1.65 0 0 0 1-1.51V4a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V10a1.65 1.65 0 0 0 1.51 1H20a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z" stroke="#d87307" strokeWidth="1.5" strokeLinejoin="round"/></svg>),
+    icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="#d87307" strokeWidth="1.8"/><path d="M19.4 13a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V19a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1.08-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H4a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1.08 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H10a1.65 1.65 0 0 0 1-1.51V4a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V10a1.65 1.65 0 0 0 1.51 1H20a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z" stroke="#d87307" strokeWidth="1.5" strokeLinejoin="round"/></svg>),
   },
   {
+    num: "02",
     title: "CRM Optimization",
     lead: "Make Your CRM Earn Its Keep",
     body: "We clean up your data, sharpen your pipeline, and build a system your team can actually use.",
     items: ["CRM audit and cleanup", "Pipeline setup", "Lifecycle mapping", "Lead-source tracking", "Custom fields", "Deal-stage configuration", "CRM dashboards", "System integrations"],
     outcome: "Cleaner data. Better visibility. Stronger control.",
-    icon: (<svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="3.5" y="4" width="17" height="16" rx="2" stroke="#d87307" strokeWidth="1.8"/><path d="M3.5 9.5h17M9 4v5.5" stroke="#d87307" strokeWidth="1.8"/><path d="M12.5 14l2 2 3.5-3.5" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>),
+    icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3.5" y="4" width="17" height="16" rx="2" stroke="#d87307" strokeWidth="1.8"/><path d="M3.5 9.5h17M9 4v5.5" stroke="#d87307" strokeWidth="1.8"/><path d="M12.5 14l2 2 3.5-3.5" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>),
   },
   {
+    num: "03",
     title: "Revenue Operations",
     lead: "Get Marketing and Sales Riding in the Same Direction",
     body: "We align the people, processes, platforms, and handoffs behind one revenue plan.",
     items: ["Process mapping", "Lead routing", "Sales handoff workflows", "Pipeline governance", "Roles and responsibilities", "SOP development", "Performance frameworks", "Technology recommendations"],
     outcome: "Clear ownership. Fewer bottlenecks. Better execution.",
-    icon: (<svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="6" cy="6" r="2.3" stroke="#d87307" strokeWidth="1.8"/><circle cx="18" cy="6" r="2.3" stroke="#d87307" strokeWidth="1.8"/><circle cx="12" cy="18" r="2.3" stroke="#d87307" strokeWidth="1.8"/><path d="M7.8 7.6L11 16M16.2 7.6L13 16M8.3 6h7.4" stroke="#d87307" strokeWidth="1.6" strokeLinecap="round"/></svg>),
+    icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="6" cy="6" r="2.3" stroke="#d87307" strokeWidth="1.8"/><circle cx="18" cy="6" r="2.3" stroke="#d87307" strokeWidth="1.8"/><circle cx="12" cy="18" r="2.3" stroke="#d87307" strokeWidth="1.8"/><path d="M7.8 7.6L11 16M16.2 7.6L13 16M8.3 6h7.4" stroke="#d87307" strokeWidth="1.6" strokeLinecap="round"/></svg>),
   },
   {
+    num: "04",
     title: "Funnel Optimization",
     lead: "Fix the Leaks Before Driving More Traffic",
     body: "We identify where prospects stall, drop off, or disappear, then strengthen the path to conversion.",
     items: ["Funnel analysis", "Customer journey mapping", "Landing page review", "Lead-form optimization", "CTA and offer refinement", "Appointment funnel setup", "Nurture optimization", "Drop-off analysis"],
     outcome: "A smoother path from interest to opportunity.",
-    icon: (<svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 5h16l-6 8v6l-4-2v-4L4 5Z" stroke="#d87307" strokeWidth="1.8" strokeLinejoin="round"/></svg>),
+    icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 5h16l-6 8v6l-4-2v-4L4 5Z" stroke="#d87307" strokeWidth="1.8" strokeLinejoin="round"/></svg>),
   },
   {
+    num: "05",
     title: "Reporting & Attribution",
     lead: "Know What Is Making Money and What Is Just Making Noise",
     body: "We connect marketing activity to pipeline and revenue so you can make smarter decisions.",
     items: ["KPI definition", "Conversion tracking", "UTM governance", "Lead-source attribution", "Revenue dashboards", "Funnel reporting", "Campaign analysis", "Revenue leakage review"],
     outcome: "Clear numbers. Better decisions. Smarter investment.",
-    icon: (<svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 20V10M11 20V4M18 20v-7" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round"/><path d="M3 20h18" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round"/></svg>),
+    icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 20V10M11 20V4M18 20v-7" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round"/><path d="M3 20h18" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round"/></svg>),
   },
 ];
 
@@ -108,6 +113,22 @@ export default function RevenueEngineeringPage() {
   const s6View = useInView();
   const s7View = useInView();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  const coreCarouselRef = useRef<HTMLDivElement>(null);
+  const [coreScrollProgress, setCoreScrollProgress] = useState(0);
+  const handleCoreScroll = () => {
+    const el = coreCarouselRef.current;
+    if (!el) return;
+    const max = el.scrollWidth - el.clientWidth;
+    setCoreScrollProgress(max > 0 ? el.scrollLeft / max : 0);
+  };
+  const scrollCoreCarousel = (dir: 1 | -1) => {
+    const el = coreCarouselRef.current;
+    if (!el) return;
+    const card = el.querySelector<HTMLElement>(".re-service-card");
+    const step = card ? card.getBoundingClientRect().width + 20 : 340;
+    el.scrollBy({ left: step * dir, behavior: "smooth" });
+  };
 
   return (
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
@@ -193,14 +214,14 @@ export default function RevenueEngineeringPage() {
 
       {/* ── S2: STOP LETTING REVENUE SLIP THROUGH THE CRACKS ── */}
       <section style={{ background: "#FFFFFF", padding: "120px 40px" }}>
-        <div ref={s2View.ref} style={{ maxWidth: 1100, margin: "0 auto" }}>
+        <div ref={s2View.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
           <h2 className={`section-heading reveal${s2View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 24, textAlign: "left" }}>
             Stop Letting Revenue Slip Through the Cracks
           </h2>
-          <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 16, maxWidth: 780 }}>
+          <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 16 }}>
             Most companies already have the tools. The problem? They are not working together. Leads go cold. Follow-ups fall behind. Data gets scattered. Reporting gets muddy.
           </p>
-          <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#1a1a1a", fontWeight: 700, marginBottom: 32, maxWidth: 780 }}>
+          <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#1a1a1a", fontWeight: 700, marginBottom: 32 }}>
             We bring the whole operation into line. One system. Clear direction. Better revenue performance.
           </p>
 
@@ -216,43 +237,103 @@ export default function RevenueEngineeringPage() {
         </div>
       </section>
 
-      {/* ── S3: WHAT WE ENGINEER ─────────────────────────────── */}
-      <section id="services" style={{ position: "relative", overflow: "hidden", padding: "120px 40px", background: "#0F1B2D" }}>
-        <CircuitOverlay />
-        <div ref={s3View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
-          <h2 className={`section-heading reveal${s3View.inView ? ' visible' : ''}`} style={{ color: "#FFFFFF", marginBottom: 56, textAlign: "left" }}>
-            What We Engineer
-          </h2>
-
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24 }}>
-            {coreServices.map(({ title, lead, body, items, outcome, icon }, i) => (
-              <div key={title}
-                className={`reveal stagger-${(i % 3) + 1}${s3View.inView ? ' visible' : ''}`}
-                style={{ position: "relative", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 14, padding: "32px 28px", overflow: "hidden", display: "flex", flexDirection: "column", transition: "background 0.25s, border-color 0.25s" }}
-                onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.background = "rgba(216,115,7,0.07)"; el.style.borderColor = "rgba(216,115,7,0.25)"; }}
-                onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.background = "rgba(255,255,255,0.04)"; el.style.borderColor = "rgba(255,255,255,0.08)"; }}
+      {/* ── S3: WHAT WE ENGINEER (carousel) ──────────────────── */}
+      <section id="services" style={{ position: "relative", overflow: "hidden", padding: "120px 0" }}>
+        <div ref={s3View.ref} style={{ position: "relative", maxWidth: 1200, margin: "0 auto", padding: "0 40px" }}>
+          <div style={{ marginBottom: 48, display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 24, flexWrap: "wrap" }}>
+            <div style={{ maxWidth: 640 }}>
+              <h2 className={`section-heading reveal${s3View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
+                What We Engineer
+              </h2>
+              <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666" }}>
+                Every engagement draws from the same connected set of capabilities, scoped to where your revenue system is leaking.
+              </p>
+            </div>
+            <div className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ display: "flex", gap: 10, flexShrink: 0 }}>
+              <button
+                aria-label="Previous service"
+                onClick={() => scrollCoreCarousel(-1)}
+                className="re-carousel-arrow"
+                style={{ width: 44, height: 44, borderRadius: "50%", background: "#F9F8F6", border: "1px solid #EEEBE7", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", transition: "border-color 0.2s, background 0.2s" }}
               >
-                <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.2))" }} />
-                <div style={{ width: 48, height: 48, borderRadius: 10, background: "rgba(216,115,7,0.14)", border: "1px solid rgba(216,115,7,0.3)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 20 }}>
-                  {icon}
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </button>
+              <button
+                aria-label="Next service"
+                onClick={() => scrollCoreCarousel(1)}
+                className="re-carousel-arrow"
+                style={{ width: 44, height: 44, borderRadius: "50%", background: "#F9F8F6", border: "1px solid #EEEBE7", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", transition: "border-color 0.2s, background 0.2s" }}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Full-card paged carousel — exactly N complete cards per view, never cut off */}
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px" }}>
+          <div
+            ref={coreCarouselRef}
+            onScroll={handleCoreScroll}
+            className="re-services-carousel"
+            style={{
+              display: "flex", gap: 20, overflowX: "auto",
+              scrollSnapType: "x mandatory", scrollBehavior: "smooth",
+            }}
+          >
+            {coreServices.map(({ num, title, lead, body, items, outcome, icon }, i) => (
+              <div key={num}
+                className={`re-service-card reveal${s3View.inView ? ' visible' : ''}`}
+                style={{
+                  position: "relative", background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 14,
+                  padding: "32px 28px", overflow: "hidden", transition: "transform 0.25s, box-shadow 0.25s, border-color 0.25s",
+                  scrollSnapAlign: "start", scrollSnapStop: "always", display: "flex", flexDirection: "column",
+                  minHeight: 480, boxShadow: "0 4px 16px rgba(0,0,0,0.05)", transitionDelay: `${(i % 3) * 0.06}s`,
+                }}
+              >
+                <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 18 }}>
+                  <div style={{ width: 44, height: 44, borderRadius: 10, background: "rgba(216,115,7,0.1)", border: "1px solid rgba(216,115,7,0.25)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>{icon}</div>
+                  <span style={{ fontFamily: "var(--font-burford-black), sans-serif", fontWeight: 900, fontSize: 34, color: "rgba(216,115,7,0.14)", lineHeight: 1 }}>{num}</span>
                 </div>
-                <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 18, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.06em", color: "#FFFFFF", marginBottom: 10, lineHeight: 1.3 }}>{title}</h3>
-                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.7, color: "rgba(255,255,255,0.92)", fontWeight: 600, marginBottom: 10 }}>{lead}</p>
-                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.7, color: "rgba(255,255,255,0.75)", marginBottom: 20 }}>{body}</p>
-                <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", paddingTop: 16, marginTop: "auto" }}>
-                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(255,255,255,0.5)", marginBottom: 10 }}>May Include</p>
-                  <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 18 }}>
+                <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 16, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.05em", color: "#1a1a1a", marginBottom: 10, lineHeight: 1.3 }}>{title}</h3>
+                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.7, color: "#444", fontWeight: 600, marginBottom: 10 }}>{lead}</p>
+                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.75, color: "#666", marginBottom: 20 }}>{body}</p>
+                <div style={{ borderTop: "1px solid #EEEBE7", paddingTop: 16, marginTop: "auto" }}>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#aaa", marginBottom: 10 }}>May Include</p>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 16 }}>
                     {items.map(it => (
-                      <span key={it} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, color: "rgba(255,255,255,0.85)", background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 4, padding: "3px 8px" }}>{it}</span>
+                      <span key={it} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 600, color: "#6b5a3e", background: "#F2ECDF", borderRadius: 4, padding: "3px 8px" }}>{it}</span>
                     ))}
                   </div>
-                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#d87307", marginBottom: 6 }}>Outcome</p>
-                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, color: "#f0a860", fontStyle: "italic", fontWeight: 600, margin: 0 }}>{outcome}</p>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#aaa", marginBottom: 6 }}>Outcome</p>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.65, color: "#d87307", fontWeight: 600, margin: 0 }}>{outcome}</p>
                 </div>
               </div>
             ))}
           </div>
+
+          {/* Progress bar */}
+          <div style={{ marginTop: 32 }}>
+            <div style={{ position: "relative", height: 3, background: "#EEEBE7", borderRadius: 2, overflow: "hidden" }}>
+              <div style={{ position: "absolute", top: 0, height: "100%", width: "30%", left: `${coreScrollProgress * (100 - 30)}%`, background: "#d87307", borderRadius: 2, transition: "left 0.1s linear" }} />
+            </div>
+          </div>
         </div>
+
+        <style>{`
+          .re-carousel-arrow:hover { border-color: #d87307 !important; background: rgba(216,115,7,0.08) !important; }
+          .re-services-carousel { scrollbar-width: none; -ms-overflow-style: none; }
+          .re-services-carousel::-webkit-scrollbar { display: none; }
+          .re-service-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(0,0,0,0.1); border-color: rgba(216,115,7,0.3) !important; }
+          .re-service-card { flex: 0 0 calc((100% - 40px) / 3); }
+          @media (max-width: 900px) {
+            .re-service-card { flex: 0 0 calc((100% - 20px) / 2); }
+          }
+          @media (max-width: 600px) {
+            .re-service-card { flex: 0 0 100%; }
+          }
+        `}</style>
       </section>
 
       {/* ── S4: OUR PROCESS ──────────────────────────────────── */}
@@ -282,11 +363,11 @@ export default function RevenueEngineeringPage() {
 
       {/* ── S5: BUILT FOR BUSINESSES THAT... ─────────────────── */}
       <section style={{ background: "#F8F5EF", padding: "120px 40px" }}>
-        <div ref={s5View.ref} style={{ maxWidth: 1100, margin: "0 auto", textAlign: "center" }}>
-          <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 40 }}>
+        <div ref={s5View.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 40, textAlign: "left" }}>
             Revenue Engineering Is Built for Businesses That:
           </h2>
-          <div className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 12 }}>
+          <div className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ display: "flex", flexWrap: "wrap", justifyContent: "flex-start", gap: 12 }}>
             {builtFor.map(item => (
               <div key={item} style={{ display: "flex", alignItems: "center", gap: 8, background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 24, padding: "10px 18px" }}>
                 <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#d87307", flexShrink: 0 }} />
@@ -357,9 +438,12 @@ export default function RevenueEngineeringPage() {
 
         {/* FAQ Accordion */}
         <div style={{ position: "relative", zIndex: 2, maxWidth: 900, margin: "0 auto" }}>
-          <h3 className={`reveal${s7View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#FFFFFF", marginBottom: 32, textAlign: "center" }}>
+          <h3 className={`reveal${s7View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#FFFFFF", marginBottom: 8 }}>
             Frequently Asked Questions
           </h3>
+          <p className={`reveal${s7View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.8, color: "rgba(255,255,255,0.7)", maxWidth: 640, margin: "0 0 32px" }}>
+            Common questions we hear from teams considering a Revenue Engineering engagement.
+          </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 8, paddingBottom: 80 }}>
             {faqs.map(({ q, a }, i) => (
               <div key={i}

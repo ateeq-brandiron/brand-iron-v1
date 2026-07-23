@@ -21,44 +21,49 @@ function useInView(threshold = 0.1) {
 
 const coreServices = [
   {
+    num: "01",
     title: "LinkedIn Outreach",
     lead: "Get in Front of the People Who Make the Call",
     body: "We build LinkedIn outreach campaigns that create familiarity, start conversations, and move qualified prospects toward a meeting.",
     items: ["Decision-maker targeting", "Prospect-list building", "Profile positioning", "Connection messaging", "Follow-up sequences", "Conversation management", "Lead qualification", "Meeting booking"],
-    tagline: "Build the connection. Earn the conversation.",
-    icon: (<svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#d87307" strokeWidth="1.8"/><path d="M7.5 10.5v6M7.5 7.75v.01M12 16.5v-3.75c0-1.24 1-2.25 2.25-2.25s2.25 1.01 2.25 2.25v3.75M12 10.5v6" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>),
+    outcome: "Build the connection. Earn the conversation.",
+    icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#d87307" strokeWidth="1.8"/><path d="M7.5 10.5v6M7.5 7.75v.01M12 16.5v-3.75c0-1.24 1-2.25 2.25-2.25s2.25 1.01 2.25 2.25v3.75M12 10.5v6" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>),
   },
   {
+    num: "02",
     title: "Email Outreach",
     lead: "Cut Through the Noise",
     body: "We create targeted email campaigns built around the prospect, not a generic sales pitch.",
     items: ["Lead research and segmentation", "Contact verification", "Offer positioning", "Cold email copy", "Follow-up sequences", "Campaign setup", "Reply management", "Testing and optimization"],
-    tagline: "Right prospect. Right message. Right time.",
-    icon: (<svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#d87307" strokeWidth="1.8"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>),
+    outcome: "Right prospect. Right message. Right time.",
+    icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#d87307" strokeWidth="1.8"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>),
   },
   {
+    num: "03",
     title: "SDR Programs",
     lead: "Give Your Sales Development Team a System That Works",
     body: "A good SDR needs more than a list and a script. We build the structure behind consistent prospecting.",
     items: ["SDR workflows", "Outreach cadences", "Email, LinkedIn, and call scripts", "Qualification standards", "Objection handling", "CRM stages", "Sales handoff processes", "KPIs and reporting", "Training documentation"],
-    tagline: "Less guesswork. More accountability. Stronger execution.",
-    icon: (<svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.2" stroke="#d87307" strokeWidth="1.8"/><path d="M5 19.5c0-3.4 3.13-5.5 7-5.5s7 2.1 7 5.5" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round"/></svg>),
+    outcome: "Less guesswork. More accountability. Stronger execution.",
+    icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.2" stroke="#d87307" strokeWidth="1.8"/><path d="M5 19.5c0-3.4 3.13-5.5 7-5.5s7 2.1 7 5.5" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round"/></svg>),
   },
   {
+    num: "04",
     title: "Appointment Setting",
     lead: "Turn Interest Into a Meeting",
     body: "A positive reply is only the beginning. We help move interested prospects from first response to qualified appointment.",
     items: ["Reply monitoring", "Lead qualification", "Follow-up communication", "Calendar scheduling", "Meeting confirmations", "Reminder sequences", "Prospect briefing notes", "No-show follow-up"],
-    tagline: "Don't let a warm lead go cold.",
-    icon: (<svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="3.5" y="4.5" width="17" height="16" rx="2" stroke="#d87307" strokeWidth="1.8"/><path d="M3.5 9.5h17M8 3v3M16 3v3" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round"/><path d="M8.5 13.5l2 2 4.5-4.5" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>),
+    outcome: "Don't let a warm lead go cold.",
+    icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3.5" y="4.5" width="17" height="16" rx="2" stroke="#d87307" strokeWidth="1.8"/><path d="M3.5 9.5h17M8 3v3M16 3v3" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round"/><path d="M8.5 13.5l2 2 4.5-4.5" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>),
   },
   {
+    num: "05",
     title: "Sales Enablement",
     lead: "Arm Your Sales Team With Better Tools",
     body: "Your team should never walk into a sales conversation unprepared. We create the messaging, materials, and workflows that help move deals forward.",
     items: ["Sales scripts", "Discovery call frameworks", "Sales decks", "Proposal templates", "Case studies", "Service one-sheets", "Objection-handling guides", "Competitive talking points", "Follow-up templates", "Sales process documentation"],
-    tagline: "Better tools. Better conversations. Better odds.",
-    icon: (<svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 19.5V6.5a2 2 0 0 1 2-2h8.5L20 8.5V19.5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z" stroke="#d87307" strokeWidth="1.8" strokeLinejoin="round"/><path d="M8 12h8M8 16h5" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round"/></svg>),
+    outcome: "Better tools. Better conversations. Better odds.",
+    icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 19.5V6.5a2 2 0 0 1 2-2h8.5L20 8.5V19.5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z" stroke="#d87307" strokeWidth="1.8" strokeLinejoin="round"/><path d="M8 12h8M8 16h5" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round"/></svg>),
   },
 ];
 
@@ -110,6 +115,22 @@ export default function OutboundGrowthPage() {
   const s6View = useInView();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
+  const coreCarouselRef = useRef<HTMLDivElement>(null);
+  const [coreScrollProgress, setCoreScrollProgress] = useState(0);
+  const handleCoreScroll = () => {
+    const el = coreCarouselRef.current;
+    if (!el) return;
+    const max = el.scrollWidth - el.clientWidth;
+    setCoreScrollProgress(max > 0 ? el.scrollLeft / max : 0);
+  };
+  const scrollCoreCarousel = (dir: 1 | -1) => {
+    const el = coreCarouselRef.current;
+    if (!el) return;
+    const card = el.querySelector<HTMLElement>(".og-service-card");
+    const step = card ? card.getBoundingClientRect().width + 20 : 340;
+    el.scrollBy({ left: step * dir, behavior: "smooth" });
+  };
+
   return (
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
 
@@ -122,7 +143,7 @@ export default function OutboundGrowthPage() {
           backgroundImage: "url('/images/home-hero.jpg')",
           backgroundSize: "cover", backgroundPosition: "center",
         }} />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.45) 0%, rgba(8,16,36,0.35) 45%, rgba(8,16,36,0.75) 100%)" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.35) 0%, rgba(8,16,36,0.25) 45%, rgba(8,16,36,0.65) 100%)" }} />
 
         <div className="og-hero-wrap" style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", padding: "88px 24px 24px" }}>
           <div className="og-hero-grid" style={{ maxWidth: 1200, margin: "0 auto", width: "100%", display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 56, alignItems: "center" }}>
@@ -194,15 +215,15 @@ export default function OutboundGrowthPage() {
 
       {/* ── S2: PROSPECT WITH PURPOSE ───────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "120px 40px" }}>
-        <div ref={s2View.ref} style={{ maxWidth: 1100, margin: "0 auto" }}>
+        <div ref={s2View.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
           <h2 className={`section-heading reveal${s2View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 24, textAlign: "left" }}>
             Prospect With Purpose
           </h2>
-          <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 24, maxWidth: 780 }}>
+          <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 28 }}>
             Outbound works when the target is right, the message is sharp, and the follow-up does not quit too soon. We help you:
           </p>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "14px 32px", marginBottom: 32, maxWidth: 780 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "14px 32px", marginBottom: 32 }}>
             {["Find the right accounts", "Reach the right decision-makers", "Lead with a stronger message", "Qualify real opportunities", "Book more sales conversations", "Give your team the tools to close"].map(item => (
               <div key={item} className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
                 <div style={{ width: 22, height: 22, borderRadius: "50%", background: "rgba(216,115,7,0.12)", border: "1px solid rgba(216,115,7,0.3)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 2 }}>
@@ -229,42 +250,102 @@ export default function OutboundGrowthPage() {
         </div>
       </section>
 
-      {/* ── S3: CORE OUTBOUND SERVICES ──────────────────────── */}
-      <section id="services" style={{ position: "relative", overflow: "hidden", padding: "120px 40px", background: "#0F1B2D" }}>
-        <CircuitOverlay />
-        <div ref={s3View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
-          <h2 className={`section-heading reveal${s3View.inView ? ' visible' : ''}`} style={{ color: "#FFFFFF", marginBottom: 56, textAlign: "left" }}>
-            Core Outbound Services
-          </h2>
-
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24 }}>
-            {coreServices.map(({ title, lead, body, items, tagline, icon }, i) => (
-              <div key={title}
-                className={`reveal stagger-${(i % 3) + 1}${s3View.inView ? ' visible' : ''}`}
-                style={{ position: "relative", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 14, padding: "32px 28px", overflow: "hidden", display: "flex", flexDirection: "column", transition: "background 0.25s, border-color 0.25s" }}
-                onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.background = "rgba(216,115,7,0.07)"; el.style.borderColor = "rgba(216,115,7,0.25)"; }}
-                onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.background = "rgba(255,255,255,0.04)"; el.style.borderColor = "rgba(255,255,255,0.08)"; }}
+      {/* ── S3: CORE OUTBOUND SERVICES (carousel) ───────────── */}
+      <section id="services" style={{ position: "relative", overflow: "hidden", padding: "120px 0" }}>
+        <div ref={s3View.ref} style={{ position: "relative", maxWidth: 1200, margin: "0 auto", padding: "0 40px" }}>
+          <div style={{ marginBottom: 48, display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 24, flexWrap: "wrap" }}>
+            <div style={{ maxWidth: 640 }}>
+              <h2 className={`section-heading reveal${s3View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
+                Core Outbound Services
+              </h2>
+              <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666" }}>
+                Every outbound engagement draws from the same connected set of capabilities, scoped to what your pipeline needs.
+              </p>
+            </div>
+            <div className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ display: "flex", gap: 10, flexShrink: 0 }}>
+              <button
+                aria-label="Previous service"
+                onClick={() => scrollCoreCarousel(-1)}
+                className="og-carousel-arrow"
+                style={{ width: 44, height: 44, borderRadius: "50%", background: "#F9F8F6", border: "1px solid #EEEBE7", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", transition: "border-color 0.2s, background 0.2s" }}
               >
-                <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.2))" }} />
-                <div style={{ width: 48, height: 48, borderRadius: 10, background: "rgba(216,115,7,0.14)", border: "1px solid rgba(216,115,7,0.3)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 20 }}>
-                  {icon}
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </button>
+              <button
+                aria-label="Next service"
+                onClick={() => scrollCoreCarousel(1)}
+                className="og-carousel-arrow"
+                style={{ width: 44, height: 44, borderRadius: "50%", background: "#F9F8F6", border: "1px solid #EEEBE7", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", transition: "border-color 0.2s, background 0.2s" }}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Full-card paged carousel — exactly N complete cards per view, never cut off */}
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px" }}>
+          <div
+            ref={coreCarouselRef}
+            onScroll={handleCoreScroll}
+            className="og-services-carousel"
+            style={{
+              display: "flex", gap: 20, overflowX: "auto",
+              scrollSnapType: "x mandatory", scrollBehavior: "smooth",
+            }}
+          >
+            {coreServices.map(({ num, title, lead, body, items, outcome, icon }, i) => (
+              <div key={num}
+                className={`og-service-card reveal${s3View.inView ? ' visible' : ''}`}
+                style={{
+                  position: "relative", background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 14,
+                  padding: "32px 28px", overflow: "hidden", transition: "transform 0.25s, box-shadow 0.25s, border-color 0.25s",
+                  scrollSnapAlign: "start", scrollSnapStop: "always", display: "flex", flexDirection: "column",
+                  minHeight: 480, boxShadow: "0 4px 16px rgba(0,0,0,0.05)", transitionDelay: `${(i % 3) * 0.06}s`,
+                }}
+              >
+                <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 18 }}>
+                  <div style={{ width: 44, height: 44, borderRadius: 10, background: "rgba(216,115,7,0.1)", border: "1px solid rgba(216,115,7,0.25)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>{icon}</div>
+                  <span style={{ fontFamily: "var(--font-burford-black), sans-serif", fontWeight: 900, fontSize: 34, color: "rgba(216,115,7,0.14)", lineHeight: 1 }}>{num}</span>
                 </div>
-                <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 18, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.06em", color: "#FFFFFF", marginBottom: 10, lineHeight: 1.3 }}>{title}</h3>
-                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.7, color: "rgba(255,255,255,0.92)", fontWeight: 600, marginBottom: 10 }}>{lead}</p>
-                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.7, color: "rgba(255,255,255,0.75)", marginBottom: 20 }}>{body}</p>
-                <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", paddingTop: 16, marginTop: "auto" }}>
-                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(255,255,255,0.5)", marginBottom: 10 }}>May Include</p>
-                  <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 18 }}>
+                <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 16, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.05em", color: "#1a1a1a", marginBottom: 10, lineHeight: 1.3 }}>{title}</h3>
+                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.7, color: "#444", fontWeight: 600, marginBottom: 10 }}>{lead}</p>
+                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.75, color: "#666", marginBottom: 20 }}>{body}</p>
+                <div style={{ borderTop: "1px solid #EEEBE7", paddingTop: 16, marginTop: "auto" }}>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#aaa", marginBottom: 10 }}>May Include</p>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 16 }}>
                     {items.map(it => (
-                      <span key={it} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, color: "rgba(255,255,255,0.85)", background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 4, padding: "3px 8px" }}>{it}</span>
+                      <span key={it} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 600, color: "#6b5a3e", background: "#F2ECDF", borderRadius: 4, padding: "3px 8px" }}>{it}</span>
                     ))}
                   </div>
-                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, color: "#f0a860", fontStyle: "italic", fontWeight: 600, margin: 0 }}>{tagline}</p>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.65, color: "#d87307", fontWeight: 600, margin: 0 }}>{outcome}</p>
                 </div>
               </div>
             ))}
           </div>
+
+          {/* Progress bar */}
+          <div style={{ marginTop: 32 }}>
+            <div style={{ position: "relative", height: 3, background: "#EEEBE7", borderRadius: 2, overflow: "hidden" }}>
+              <div style={{ position: "absolute", top: 0, height: "100%", width: "30%", left: `${coreScrollProgress * (100 - 30)}%`, background: "#d87307", borderRadius: 2, transition: "left 0.1s linear" }} />
+            </div>
+          </div>
         </div>
+
+        <style>{`
+          .og-carousel-arrow:hover { border-color: #d87307 !important; background: rgba(216,115,7,0.08) !important; }
+          .og-services-carousel { scrollbar-width: none; -ms-overflow-style: none; }
+          .og-services-carousel::-webkit-scrollbar { display: none; }
+          .og-service-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(0,0,0,0.1); border-color: rgba(216,115,7,0.3) !important; }
+          .og-service-card { flex: 0 0 calc((100% - 40px) / 3); }
+          @media (max-width: 900px) {
+            .og-service-card { flex: 0 0 calc((100% - 20px) / 2); }
+          }
+          @media (max-width: 600px) {
+            .og-service-card { flex: 0 0 100%; }
+          }
+        `}</style>
       </section>
 
       {/* ── S4: HOW IT WORKS ─────────────────────────────────── */}
@@ -297,11 +378,11 @@ export default function OutboundGrowthPage() {
 
       {/* ── S5: BUILT FOR B2B GROWTH ─────────────────────────── */}
       <section style={{ background: "#F8F5EF", padding: "120px 40px" }}>
-        <div ref={s5View.ref} style={{ maxWidth: 1100, margin: "0 auto", textAlign: "center" }}>
-          <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 40 }}>
+        <div ref={s5View.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 40, textAlign: "left" }}>
             Built for B2B Growth
           </h2>
-          <div className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 12 }}>
+          <div className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ display: "flex", flexWrap: "wrap", justifyContent: "flex-start", gap: 12 }}>
             {builtFor.map(item => (
               <div key={item} style={{ display: "flex", alignItems: "center", gap: 8, background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 24, padding: "10px 18px" }}>
                 <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#d87307", flexShrink: 0 }} />
@@ -354,9 +435,12 @@ export default function OutboundGrowthPage() {
 
         {/* FAQ Accordion */}
         <div style={{ position: "relative", zIndex: 2, maxWidth: 900, margin: "0 auto" }}>
-          <h3 className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#FFFFFF", marginBottom: 32, textAlign: "center" }}>
+          <h3 className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#FFFFFF", marginBottom: 8 }}>
             Frequently Asked Questions
           </h3>
+          <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.8, color: "rgba(255,255,255,0.7)", maxWidth: 640, margin: "0 0 32px" }}>
+            Common questions we hear from teams considering an outbound engagement.
+          </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 8, paddingBottom: 80 }}>
             {faqs.map(({ q, a }, i) => (
               <div key={i}
