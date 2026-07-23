@@ -252,7 +252,7 @@ export default function OutboundGrowthPage() {
       </section>
 
       {/* ── S3: CORE OUTBOUND SERVICES (carousel) ───────────── */}
-      <section id="services" style={{ position: "relative", overflow: "hidden", padding: "64px 0 120px" }}>
+      <section id="services" style={{ position: "relative", overflow: "hidden", padding: "64px 0 90px" }}>
         <div ref={s3View.ref} style={{ position: "relative", maxWidth: 1200, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ marginBottom: 48, display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 24, flexWrap: "wrap" }}>
             <div style={{ maxWidth: 640 }}>
@@ -351,7 +351,7 @@ export default function OutboundGrowthPage() {
 
       {/* ── S4: HOW IT WORKS ─────────────────────────────────── */}
       <section style={{
-        position: "relative", overflow: "hidden", padding: "120px 40px",
+        position: "relative", overflow: "hidden", padding: "90px 40px",
         backgroundImage: "url('/images/bg-saddle-rope.png')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
@@ -365,7 +365,7 @@ export default function OutboundGrowthPage() {
             Aim. Engage. Qualify. Book. Improve.
           </p>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 20 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 20 }}>
             {howItWorks.map(({ num, title, body }, i) => (
               <div key={num}
                 className={`reveal stagger-${(i % 3) + 1}${s4View.inView ? ' visible' : ''}`}
@@ -384,7 +384,7 @@ export default function OutboundGrowthPage() {
       </section>
 
       {/* ── S5: BUILT FOR B2B GROWTH + FAQ ───────────────────── */}
-      <section style={{ background: "#F8F5EF", padding: "120px 40px 48px" }}>
+      <section style={{ background: "#F8F5EF", padding: "90px 40px 48px" }}>
         <div ref={s5View.ref} style={{ maxWidth: 1200, margin: "0 auto 72px" }}>
           <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 40, textAlign: "left" }}>
             Built for B2B Growth

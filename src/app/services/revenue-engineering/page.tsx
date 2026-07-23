@@ -239,7 +239,7 @@ export default function RevenueEngineeringPage() {
       </section>
 
       {/* ── S3: WHAT WE ENGINEER (carousel) ──────────────────── */}
-      <section id="services" style={{ position: "relative", overflow: "hidden", padding: "64px 0 120px" }}>
+      <section id="services" style={{ position: "relative", overflow: "hidden", padding: "64px 0 90px" }}>
         <div ref={s3View.ref} style={{ position: "relative", maxWidth: 1200, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ marginBottom: 48, display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 24, flexWrap: "wrap" }}>
             <div style={{ maxWidth: 640 }}>
@@ -339,7 +339,7 @@ export default function RevenueEngineeringPage() {
 
       {/* ── S4: OUR PROCESS ──────────────────────────────────── */}
       <section style={{
-        position: "relative", overflow: "hidden", padding: "120px 40px",
+        position: "relative", overflow: "hidden", padding: "90px 40px",
         backgroundImage: "url('/images/bg-logs.jpg')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
