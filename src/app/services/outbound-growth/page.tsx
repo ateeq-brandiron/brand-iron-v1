@@ -113,6 +113,7 @@ export default function OutboundGrowthPage() {
   const s4View = useInView();
   const s5View = useInView();
   const s6View = useInView();
+  const s7View = useInView();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const coreCarouselRef = useRef<HTMLDivElement>(null);
@@ -393,20 +394,57 @@ export default function OutboundGrowthPage() {
         </div>
       </section>
 
-      {/* ── S6: FINAL CTA + FAQ ──────────────────────────────── */}
-      <section style={{ position: "relative", overflow: "hidden", padding: "120px 40px 40px", background: "linear-gradient(160deg, #0F1B2D 0%, #16273f 100%)" }}>
+      {/* ── S6: FAQ ───────────────────────────────────────────── */}
+      <section style={{ background: "#F8F5EF", padding: "120px 40px" }}>
+        <div ref={s6View.ref} style={{ maxWidth: 900, margin: "0 auto" }}>
+          <h3 className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 8 }}>
+            Frequently Asked Questions
+          </h3>
+          <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", maxWidth: 640, margin: "0 0 32px" }}>
+            Common questions we hear from teams considering an outbound engagement.
+          </p>
+          <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+            {faqs.map(({ q, a }, i) => (
+              <div key={i}
+                className={`reveal${s6View.inView ? ' visible' : ''}`}
+                style={{ background: "rgba(255,255,255,0.9)", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 10, overflow: "hidden", transition: "box-shadow 0.2s, border-color 0.2s" }}
+                onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.borderColor = "rgba(216,115,7,0.3)"; el.style.boxShadow = "0 8px 24px rgba(0,0,0,0.06)"; }}
+                onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.borderColor = "rgba(15,27,45,0.08)"; el.style.boxShadow = "none"; }}
+              >
+                <button
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  style={{ width: "100%", background: "none", border: "none", cursor: "pointer", padding: "20px 24px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16, textAlign: "left" }}
+                >
+                  <span style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, fontWeight: 600, color: "#1a1a1a", lineHeight: 1.5 }}>{q}</span>
+                  <div style={{ width: 28, height: 28, borderRadius: "50%", background: openFaq === i ? "#d87307" : "rgba(216,115,7,0.1)", border: "1px solid rgba(216,115,7,0.3)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, transition: "background 0.2s, transform 0.2s", transform: openFaq === i ? "rotate(45deg)" : "rotate(0)" }}>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke={openFaq === i ? "#FFFFFF" : "#d87307"} strokeWidth="2" strokeLinecap="round"/></svg>
+                  </div>
+                </button>
+                {openFaq === i && (
+                  <div style={{ padding: "0 24px 20px" }}>
+                    <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.8, color: "#555", margin: 0 }}>{a}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── S7: FINAL CTA ─────────────────────────────────────── */}
+      <section style={{ position: "relative", overflow: "hidden", padding: "100px 40px", background: "linear-gradient(160deg, #0F1B2D 0%, #16273f 100%)" }}>
         <CircuitOverlay />
-        <div ref={s6View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 900, margin: "0 auto 96px", textAlign: "center" }}>
-          <h2 className={`section-heading reveal${s6View.inView ? ' visible' : ''}`} style={{ color: "#FFFFFF", marginBottom: 20 }}>
+        <div ref={s7View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
+          <h2 className={`section-heading reveal${s7View.inView ? ' visible' : ''}`} style={{ color: "#FFFFFF", marginBottom: 20 }}>
             Stop Prospecting Like It&apos;s a Numbers Game
           </h2>
-          <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", marginBottom: 12 }}>
+          <p className={`reveal${s7View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", marginBottom: 12 }}>
             More names do not always create more pipeline. The right market, message, and system do.
           </p>
-          <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", marginBottom: 40 }}>
+          <p className={`reveal${s7View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", marginBottom: 40 }}>
             Brand Iron helps you build outbound campaigns with more focus, more structure, and more firepower. Ready to put more qualified opportunities in the pipeline?
           </p>
-          <div className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ display: "flex", gap: 24, justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
+          <div className={`reveal${s7View.inView ? ' visible' : ''}`} style={{ display: "flex", gap: 24, justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
             <Link href="/contact" style={{
               display: "inline-block", padding: "16px 40px", borderRadius: 6,
               fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 14,
@@ -430,41 +468,6 @@ export default function OutboundGrowthPage() {
             >
               Request an Outbound Strategy Review
             </button>
-          </div>
-        </div>
-
-        {/* FAQ Accordion */}
-        <div style={{ position: "relative", zIndex: 2, maxWidth: 900, margin: "0 auto" }}>
-          <h3 className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#FFFFFF", marginBottom: 8 }}>
-            Frequently Asked Questions
-          </h3>
-          <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.8, color: "rgba(255,255,255,0.7)", maxWidth: 640, margin: "0 0 32px" }}>
-            Common questions we hear from teams considering an outbound engagement.
-          </p>
-          <div style={{ display: "flex", flexDirection: "column", gap: 8, paddingBottom: 80 }}>
-            {faqs.map(({ q, a }, i) => (
-              <div key={i}
-                className={`reveal${s6View.inView ? ' visible' : ''}`}
-                style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 10, overflow: "hidden", transition: "border-color 0.2s, background 0.2s" }}
-                onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.borderColor = "rgba(216,115,7,0.35)"; el.style.background = "rgba(216,115,7,0.06)"; }}
-                onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.borderColor = "rgba(255,255,255,0.1)"; el.style.background = "rgba(255,255,255,0.05)"; }}
-              >
-                <button
-                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  style={{ width: "100%", background: "none", border: "none", cursor: "pointer", padding: "20px 24px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16, textAlign: "left" }}
-                >
-                  <span style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, fontWeight: 600, color: "#FFFFFF", lineHeight: 1.5 }}>{q}</span>
-                  <div style={{ width: 28, height: 28, borderRadius: "50%", background: openFaq === i ? "#d87307" : "rgba(216,115,7,0.15)", border: "1px solid rgba(216,115,7,0.35)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, transition: "background 0.2s, transform 0.2s", transform: openFaq === i ? "rotate(45deg)" : "rotate(0)" }}>
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke={openFaq === i ? "#FFFFFF" : "#d87307"} strokeWidth="2" strokeLinecap="round"/></svg>
-                  </div>
-                </button>
-                {openFaq === i && (
-                  <div style={{ padding: "0 24px 20px" }}>
-                    <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.8, color: "rgba(255,255,255,0.75)", margin: 0 }}>{a}</p>
-                  </div>
-                )}
-              </div>
-            ))}
           </div>
         </div>
       </section>
