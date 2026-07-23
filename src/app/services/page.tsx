@@ -58,6 +58,15 @@ const services = [
       <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#D87307" strokeWidth="2"/><circle cx="12" cy="12" r="4.5" stroke="#D87307" strokeWidth="2"/><circle cx="12" cy="12" r="0.9" fill="#D87307"/></svg>
     ),
   },
+  {
+    number: "07",
+    title: "Revenue Engineering",
+    href: "/services/revenue-engineering",
+    description: "Revenue Engineering connects your marketing, sales, CRM, automation, funnels, and reporting into one hard-working growth machine, finding the leaks, fixing the handoffs, and tracking what actually drives revenue.",
+    icon: (
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M4 20V10M11 20V4M18 20v-7" stroke="#D87307" strokeWidth="2" strokeLinecap="round"/><path d="M3 20h18" stroke="#D87307" strokeWidth="2" strokeLinecap="round"/></svg>
+    ),
+  },
 ];
 
 function useInView(threshold = 0.12) {

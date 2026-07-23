@@ -35,8 +35,8 @@ export async function POST(request: Request) {
 
   // Each source form declares its own formId (see src/app/contact/page.tsx,
   // src/components/AuditModal.tsx, src/components/GrowthReviewModal.tsx,
-  // src/components/WebsiteInquiryModal.tsx, src/components/OutboundStrategyReviewModal.tsx).
-  // Only one SharpSpring list exists
+  // src/components/WebsiteInquiryModal.tsx, src/components/OutboundStrategyReviewModal.tsx,
+  // src/components/RevenueStrategistModal.tsx). Only one SharpSpring list exists
   // today, so every form falls back to it; a form-specific env var (once
   // provided) takes over automatically without any other code changes.
   const FORM_LABELS: Record<string, string> = {
@@ -46,6 +46,7 @@ export async function POST(request: Request) {
     website_inquiry: "Website Inquiry",
     branding_proposal: "Branding Proposal",
     outbound_strategy_review: "Outbound Strategy Review",
+    revenue_strategist_review: "Revenue Engineering Strategist Review",
   };
   const formLabel = FORM_LABELS[formId as string] || "Website Form";
 
@@ -56,6 +57,7 @@ export async function POST(request: Request) {
     website_inquiry: process.env.SHARPSPRING_WEBSITE_INQUIRY_LIST_ID,
     branding_proposal: process.env.SHARPSPRING_BRANDING_PROPOSAL_LIST_ID,
     outbound_strategy_review: process.env.SHARPSPRING_OUTBOUND_STRATEGY_REVIEW_LIST_ID,
+    revenue_strategist_review: process.env.SHARPSPRING_REVENUE_STRATEGIST_LIST_ID,
   };
   const listID = LIST_ID_BY_FORM[formId as string] || process.env.SHARPSPRING_CONTACT_FORM_LIST_ID;
 

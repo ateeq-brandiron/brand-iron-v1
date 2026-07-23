@@ -9,6 +9,7 @@ const servicesMenu = [
   { label: "Capital Raise Support", href: "/services/capital-raise" },
   { label: "Website Development", href: "/services/website-development" },
   { label: "Outbound Growth", href: "/services/outbound-growth" },
+  { label: "Revenue Engineering", href: "/services/revenue-engineering" },
 ];
 
 const navLinks = [
