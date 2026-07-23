@@ -338,8 +338,14 @@ export default function RevenueEngineeringPage() {
       </section>
 
       {/* ── S4: OUR PROCESS ──────────────────────────────────── */}
-      <section style={{ background: "#F9F8F6", padding: "120px 40px" }}>
-        <div ref={s4View.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
+      <section style={{
+        position: "relative", overflow: "hidden", padding: "120px 40px",
+        backgroundImage: "url('/images/bg-logs.jpg')",
+        backgroundSize: "cover", backgroundPosition: "center",
+      }}>
+        <div style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.72)" }} />
+        <CircuitOverlay />
+        <div ref={s4View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 48, textAlign: "left" }}>
             Our Process
           </h2>
@@ -438,39 +444,47 @@ export default function RevenueEngineeringPage() {
       </section>
 
       {/* ── S8: FINAL CTA ─────────────────────────────────────── */}
-      <section style={{ position: "relative", overflow: "hidden", padding: "100px 40px", background: "linear-gradient(160deg, #0F1B2D 0%, #16273f 100%)" }}>
-        <CircuitOverlay />
-        <div ref={s8View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
-          <h2 className={`section-heading reveal${s8View.inView ? ' visible' : ''}`} style={{ color: "#FFFFFF", marginBottom: 20 }}>
-            Stop Losing Revenue Between the Cracks
-          </h2>
-          <p className={`reveal${s8View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", marginBottom: 40 }}>
-            Build a revenue system with stronger handoffs, faster follow-up, and clearer visibility.
-          </p>
-          <div className={`reveal${s8View.inView ? ' visible' : ''}`} style={{ display: "flex", gap: 24, justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
-            <Link href="/contact" style={{
-              display: "inline-block", padding: "16px 40px", borderRadius: 6,
-              fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 14,
-              letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none",
-              background: "#d87307", color: "#FFFFFF", transition: "background 0.2s",
-            }}
-            onMouseEnter={e => (e.currentTarget.style.background = "#c46305")}
-            onMouseLeave={e => (e.currentTarget.style.background = "#d87307")}
-            >
-              Engineer Your Revenue System
-            </Link>
-            <button onClick={() => setReviewOpen(true)} style={{
-              background: "none", border: "none", cursor: "pointer",
-              fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 14,
-              letterSpacing: "0.08em", textTransform: "uppercase",
-              color: "#FFFFFF", borderBottom: "1px solid rgba(255,255,255,0.4)", paddingBottom: 2,
-              transition: "color 0.2s, border-color 0.2s",
-            }}
-            onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.color = "#f0a860"; (e.currentTarget as HTMLButtonElement).style.borderColor = "rgba(240,168,96,0.6)"; }}
-            onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.color = "#FFFFFF"; (e.currentTarget as HTMLButtonElement).style.borderColor = "rgba(255,255,255,0.4)"; }}
-            >
-              Talk to a Revenue Strategist
-            </button>
+      <section style={{ background: "#F0EEEA", padding: "80px 24px" }}>
+        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+          <div ref={s8View.ref} className={`reveal${s8View.inView ? ' visible' : ''}`} style={{
+            position: "relative", overflow: "hidden", borderRadius: 20,
+            backgroundImage: "url('/images/Brand Iron Map and compass.jpg')", backgroundSize: "cover", backgroundPosition: "center",
+          }}>
+            <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
+            <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>
+              <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(28px, 4.2vw, 52px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.05, marginBottom: 20 }}>
+                Stop Losing Revenue Between the Cracks
+              </h2>
+              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", fontStyle: "italic", maxWidth: 680, margin: "0 auto 48px" }}>
+                Build a revenue system with stronger handoffs, faster follow-up, and clearer visibility.
+              </p>
+              <div style={{ display: "flex", gap: 24, justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
+                <Link href="/contact" style={{
+                  display: "inline-flex", alignItems: "center",
+                  fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 15,
+                  background: "#d87307", color: "#FFFFFF",
+                  padding: "18px 44px", borderRadius: 6,
+                  transition: "background 0.2s",
+                }}
+                onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
+                onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
+                >
+                  Engineer Your Revenue System
+                </Link>
+                <button onClick={() => setReviewOpen(true)} style={{
+                  background: "none", border: "none", cursor: "pointer",
+                  fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 14,
+                  letterSpacing: "0.08em", textTransform: "uppercase",
+                  color: "#FFFFFF", borderBottom: "1px solid rgba(255,255,255,0.4)", paddingBottom: 2,
+                  transition: "color 0.2s, border-color 0.2s",
+                }}
+                onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.color = "#f0a860"; (e.currentTarget as HTMLButtonElement).style.borderColor = "rgba(240,168,96,0.6)"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.color = "#FFFFFF"; (e.currentTarget as HTMLButtonElement).style.borderColor = "rgba(255,255,255,0.4)"; }}
+                >
+                  Talk to a Revenue Strategist
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
