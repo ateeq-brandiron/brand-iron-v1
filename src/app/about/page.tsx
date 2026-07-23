@@ -64,37 +64,37 @@ const TEAM = [
   {
     name: "Michael Doyle",
     title: "CEO | Brand Champion",
-    photo: "/images/team/michael.jpg",
+    photo: "/images/team/Brand Iron Team_Michael.jpg",
     bio: "A trailblazer in brand marketing for 20+ years, Michael launched Brand Iron in 2002 after building and selling a multi-million dollar advertising agency. His precision has steered businesses across industries to success worldwide.",
   },
   {
     name: "Carmen Barker",
     title: "CFO",
-    photo: "/images/team/carmen.jpg",
+    photo: "/images/team/Brand Iron Team_Carmen.jpg",
     bio: "Carmen handles everything money-related at Brand Iron, from payroll to HR. She previously helped build an award-winning humanitarian water-treatment startup recognized by Fast Company's Top 50 Colorado Companies to Watch.",
   },
   {
     name: "Shelly Barson",
     title: "Creative Director",
-    photo: "/images/team/shelly.jpg",
+    photo: "/images/team/Brand Iron Team_Shelly.jpg",
     bio: "Shelly is passionate about simple, smart design that tells a compelling story. A seasoned art director, she's worked on projects ranging from small startups to global brands like Intel, Vivint, and Microsoft.",
   },
   {
     name: "Katrina Jumawid",
     title: "Account Manager",
-    photo: "/images/team/katrina.jpg",
+    photo: "/images/team/Brand Iron Team_Katrina.jpg",
     bio: "Katrina brings sharp client relationship skills and a results-driven approach to every account. She ensures clients receive seamless communication, timely delivery, and consistent value.",
   },
   {
     name: "Olivia Briones",
     title: "Operations & Project Manager",
-    photo: "/images/team/olivia.jpg",
+    photo: "/images/team/Brand Iron Team_Olivia.jpg",
     bio: "With more than 16 years of experience in operations, project management, and digital marketing, Olivia Briones is an Operations & Project Manager who thrives on bringing order to complexity. Combining expertise in branding, AI visibility, go-to-market strategy, SEO, and operational systems, she helps transform strategy into execution. Her focus is building efficient processes, aligning teams, and creating scalable marketing systems that drive sustainable business growth.",
   },
   {
     name: "Ateeq Asif",
     title: "Operations & Technical Delivery Manager",
-    photo: "/images/team/ateeq.jpg",
+    photo: "/images/team/Brand Iron Team_Ateeq.jpg",
     bio: "Ateeq drives execution across Brand Iron's client portfolio, from web development and marketing automation to campaign operations and account management. He turns strategy into shipped, working systems, keeping teams, tools, and timelines aligned across every account.",
   },
 ];
