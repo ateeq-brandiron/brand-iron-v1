@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ChunkErrorRecovery from "@/components/ChunkErrorRecovery";
 
 const montserrat = localFont({
   src: "../../public/fonts/Montserrat-variable.woff2",
@@ -40,6 +41,7 @@ export default function RootLayout({
       className={`${montserrat.variable} ${burfordBlack.variable} ${burfordInline.variable}`}
     >
       <body>
+        <ChunkErrorRecovery />
         <Navbar />
         {children}
         <Footer />

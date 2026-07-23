@@ -17,6 +17,9 @@
 /.next/
 /out/
 
+# Phusion Passenger restart trigger (see package.json postbuild script)
+/tmp/
+
 # production
 /build
 
