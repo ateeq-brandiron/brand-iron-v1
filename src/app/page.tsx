@@ -24,6 +24,8 @@ const services = [
   { label: "GTM Strategy", href: "/services/gtm" },
   { label: "Capital Raise Support", href: "/services/capital-raise" },
   { label: "Website Development", href: "/services/website-development" },
+  { label: "Outbound Growth", href: "/services/outbound-growth" },
+  { label: "Revenue Engineering", href: "/services/revenue-engineering" },
 ];
 
 const stats = [
@@ -77,6 +79,18 @@ const coreServices = [
     body: "We build strategic digital experiences that connect your brand, messaging, user experience, and AI Visibility into one platform designed to help you become discoverable, trusted, and chosen.",
     solutions: ["Website Essentials", "Website Growth", "Website Advanced"],
     cta: "Explore Website Development", href: "/services/website-development",
+  },
+  {
+    title: "Outbound Growth", sub: "Turn Cold Outreach Into Warm Pipeline",
+    body: "We build and run LinkedIn, email, and SDR-driven outbound programs that put your business in front of the right buyers, with the messaging and follow-through to turn conversations into qualified opportunities.",
+    solutions: ["LinkedIn Outreach", "Email Outreach", "SDR Programs", "Appointment Setting", "Sales Enablement"],
+    cta: "Explore Outbound Growth", href: "/services/outbound-growth",
+  },
+  {
+    title: "Revenue Engineering", sub: "Connect the Systems Behind Your Revenue",
+    body: "We align your marketing automation, CRM, and revenue operations into one connected system, so leads move smoothly through the funnel and every stage of the buyer journey is visible and measurable.",
+    solutions: ["Marketing Automation", "CRM Optimization", "Revenue Operations", "Funnel Optimization", "Reporting & Attribution"],
+    cta: "Explore Revenue Engineering", href: "/services/revenue-engineering",
   },
 ];
 
