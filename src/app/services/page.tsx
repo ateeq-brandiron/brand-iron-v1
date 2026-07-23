@@ -49,6 +49,15 @@ const services = [
       <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="#D87307" strokeWidth="2"/><path d="M3 9h18" stroke="#D87307" strokeWidth="2"/><circle cx="6.5" cy="6.5" r="0.75" fill="#D87307"/><circle cx="9" cy="6.5" r="0.75" fill="#D87307"/></svg>
     ),
   },
+  {
+    number: "06",
+    title: "Outbound Growth",
+    href: "/services/outbound-growth",
+    description: "Outbound growth systems that put your business in front of the right decision-makers, connecting LinkedIn outreach, email campaigns, SDR programs, appointment setting, and sales enablement into one connected pipeline engine.",
+    icon: (
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#D87307" strokeWidth="2"/><circle cx="12" cy="12" r="4.5" stroke="#D87307" strokeWidth="2"/><circle cx="12" cy="12" r="0.9" fill="#D87307"/></svg>
+    ),
+  },
 ];
 
 function useInView(threshold = 0.12) {

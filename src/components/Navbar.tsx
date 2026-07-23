@@ -8,6 +8,7 @@ const servicesMenu = [
   { label: "GTM Strategy", href: "/services/gtm" },
   { label: "Capital Raise Support", href: "/services/capital-raise" },
   { label: "Website Development", href: "/services/website-development" },
+  { label: "Outbound Growth", href: "/services/outbound-growth" },
 ];
 
 const navLinks = [
