@@ -214,7 +214,7 @@ export default function RevenueEngineeringPage() {
       </section>
 
       {/* ── S2: STOP LETTING REVENUE SLIP THROUGH THE CRACKS ── */}
-      <section style={{ background: "#FFFFFF", padding: "120px 40px" }}>
+      <section style={{ background: "#FFFFFF", padding: "120px 40px 64px" }}>
         <div ref={s2View.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
           <h2 className={`section-heading reveal${s2View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 24, textAlign: "left" }}>
             Stop Letting Revenue Slip Through the Cracks
@@ -239,7 +239,7 @@ export default function RevenueEngineeringPage() {
       </section>
 
       {/* ── S3: WHAT WE ENGINEER (carousel) ──────────────────── */}
-      <section id="services" style={{ position: "relative", overflow: "hidden", padding: "120px 0" }}>
+      <section id="services" style={{ position: "relative", overflow: "hidden", padding: "64px 0 120px" }}>
         <div ref={s3View.ref} style={{ position: "relative", maxWidth: 1200, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ marginBottom: 48, display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 24, flexWrap: "wrap" }}>
             <div style={{ maxWidth: 640 }}>
@@ -369,7 +369,7 @@ export default function RevenueEngineeringPage() {
       </section>
 
       {/* ── S5: BUILT FOR BUSINESSES THAT... ─────────────────── */}
-      <section style={{ background: "#F8F5EF", padding: "120px 40px" }}>
+      <section style={{ background: "#F8F5EF", padding: "100px 40px" }}>
         <div ref={s5View.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
           <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 40, textAlign: "left" }}>
             Revenue Engineering Is Built for Businesses That:
@@ -386,7 +386,7 @@ export default function RevenueEngineeringPage() {
       </section>
 
       {/* ── S6: GROWTH NEEDS MORE THAN GRIT ──────────────────── */}
-      <section style={{ background: "#FFFFFF", padding: "100px 40px" }}>
+      <section style={{ background: "#FFFFFF", padding: "80px 40px" }}>
         <div ref={s6View.ref} style={{ maxWidth: 780, margin: "0 auto", textAlign: "center" }}>
           <h2 className={`section-heading reveal${s6View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20 }}>
             Growth Needs More Than Grit

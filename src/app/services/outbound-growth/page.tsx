@@ -215,7 +215,7 @@ export default function OutboundGrowthPage() {
       </section>
 
       {/* ── S2: PROSPECT WITH PURPOSE ───────────────────────── */}
-      <section style={{ background: "#FFFFFF", padding: "120px 40px" }}>
+      <section style={{ background: "#FFFFFF", padding: "120px 40px 64px" }}>
         <div ref={s2View.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
           <h2 className={`section-heading reveal${s2View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 24, textAlign: "left" }}>
             Prospect With Purpose
@@ -252,7 +252,7 @@ export default function OutboundGrowthPage() {
       </section>
 
       {/* ── S3: CORE OUTBOUND SERVICES (carousel) ───────────── */}
-      <section id="services" style={{ position: "relative", overflow: "hidden", padding: "120px 0" }}>
+      <section id="services" style={{ position: "relative", overflow: "hidden", padding: "64px 0 120px" }}>
         <div ref={s3View.ref} style={{ position: "relative", maxWidth: 1200, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ marginBottom: 48, display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 24, flexWrap: "wrap" }}>
             <div style={{ maxWidth: 640 }}>
@@ -383,9 +383,9 @@ export default function OutboundGrowthPage() {
         </div>
       </section>
 
-      {/* ── S5: BUILT FOR B2B GROWTH ─────────────────────────── */}
-      <section style={{ background: "#F8F5EF", padding: "120px 40px" }}>
-        <div ref={s5View.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
+      {/* ── S5: BUILT FOR B2B GROWTH + FAQ ───────────────────── */}
+      <section style={{ background: "#F8F5EF", padding: "120px 40px 48px" }}>
+        <div ref={s5View.ref} style={{ maxWidth: 1200, margin: "0 auto 72px" }}>
           <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 40, textAlign: "left" }}>
             Built for B2B Growth
           </h2>
@@ -398,10 +398,8 @@ export default function OutboundGrowthPage() {
             ))}
           </div>
         </div>
-      </section>
 
-      {/* ── S6: FAQ ───────────────────────────────────────────── */}
-      <section style={{ background: "#F8F5EF", padding: "120px 40px" }}>
+        {/* FAQ */}
         <div ref={s6View.ref} style={{ maxWidth: 900, margin: "0 auto" }}>
           <h3 className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 8 }}>
             Frequently Asked Questions
