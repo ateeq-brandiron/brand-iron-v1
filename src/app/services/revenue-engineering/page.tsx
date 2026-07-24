@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
-import CircuitOverlay from "@/components/CircuitOverlay";
 import RevenueStrategistModal from "@/components/RevenueStrategistModal";
 
 function useInView(threshold = 0.1) {
@@ -340,11 +339,10 @@ export default function RevenueEngineeringPage() {
       {/* ── S4: OUR PROCESS ──────────────────────────────────── */}
       <section style={{
         position: "relative", overflow: "hidden", padding: "90px 40px",
-        backgroundImage: "url('/images/bg-logs.jpg')",
+        backgroundImage: "url('/images/shutterstock_2479236003.jpg')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
-        <div style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.72)" }} />
-        <CircuitOverlay />
+        <div style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.45)" }} />
         <div ref={s4View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 48, textAlign: "left" }}>
             Our Process
