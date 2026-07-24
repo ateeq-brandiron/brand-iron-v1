@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
-import CircuitOverlay from "@/components/CircuitOverlay";
 import OutboundStrategyReviewModal from "@/components/OutboundStrategyReviewModal";
 
 function useInView(threshold = 0.1) {
@@ -355,8 +354,7 @@ export default function OutboundGrowthPage() {
         backgroundImage: "url('/images/shutterstock_2589988035.jpg')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
-        <div style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.72)" }} />
-        <CircuitOverlay />
+        <div style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.45)" }} />
         <div ref={s4View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 16, textAlign: "left" }}>
             How It Works
