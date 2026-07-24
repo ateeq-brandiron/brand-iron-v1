@@ -339,7 +339,7 @@ export default function RevenueEngineeringPage() {
       {/* ── S4: OUR PROCESS ──────────────────────────────────── */}
       <section style={{
         position: "relative", overflow: "hidden", padding: "90px 40px",
-        backgroundImage: "url('/images/shutterstock_2421939601.jpg')",
+        backgroundImage: "url('/images/Brand Iron Techy Growth Fields.jpg')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
         <div style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.45)" }} />

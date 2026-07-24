@@ -438,7 +438,7 @@ export default function OutboundGrowthPage() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div ref={s7View.ref} className={`reveal${s7View.inView ? ' visible' : ''}`} style={{
             position: "relative", overflow: "hidden", borderRadius: 20,
-            backgroundImage: "url('/images/Brand Iron Techy Growth Fields.jpg')", backgroundSize: "cover", backgroundPosition: "center",
+            backgroundImage: "url('/images/shutterstock_2421939601.jpg')", backgroundSize: "cover", backgroundPosition: "center",
           }}>
             <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
             <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>
