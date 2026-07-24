@@ -139,7 +139,7 @@ export default function RevenueEngineeringPage() {
       {/* ── HERO ───────────────────────────────────────────── */}
       <section className="re-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <video
-          src="/Animate_this_image_Pounding_h.mp4"
+          src="/Revenue-animation.mp4"
           autoPlay muted loop playsInline preload="auto"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }}
         />
