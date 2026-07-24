@@ -352,7 +352,7 @@ export default function OutboundGrowthPage() {
       {/* ── S4: HOW IT WORKS ─────────────────────────────────── */}
       <section style={{
         position: "relative", overflow: "hidden", padding: "90px 40px",
-        backgroundImage: "url('/images/bg-saddle-rope.png')",
+        backgroundImage: "url('/images/shutterstock_2589988035.jpg')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
         <div style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.72)" }} />
