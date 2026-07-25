@@ -270,7 +270,7 @@ export default function BrandStrategyPage() {
       {/* ── HERO ───────────────────────────────────────────── */}
       <section className="bs-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <video
-          src="/videos/brand-strategy/hero.mp4"
+          src="/videos/brand-strategy/brand-strategy-hero.mp4"
           aria-label="A solitary oak tree in a sunlit field with glowing circuit-root lines at its base, representing strong brand positioning roots"
           autoPlay muted loop playsInline preload="auto"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }}

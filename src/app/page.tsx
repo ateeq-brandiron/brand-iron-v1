@@ -218,7 +218,7 @@ export default function Home() {
       {/* ── S1: HERO ─────────────────────────────────────── */}
       <section style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <video
-          src="/videos/home/hero.mp4"
+          src="/videos/home/home-hero.mp4"
           aria-label="Rustic wooden barn in a green field beneath a dramatic sunset sky, representing Brand Iron's growth marketing agency roots"
           autoPlay muted playsInline preload="auto"
           onLoadedMetadata={e => { e.currentTarget.currentTime = 2; }}
@@ -394,7 +394,7 @@ export default function Home() {
             {/* Video — right */}
             <div className={`reveal${s3.inView ? " visible" : ""}`}>
               <video
-                src="/videos/home/buying-journey.mp4"
+                src="/videos/home/home-buying-journey.mp4"
                 aria-label="Laptop displaying a Brand Iron marketing analytics dashboard tracking leads and calls, illustrating revenue growth reporting"
                 autoPlay muted loop playsInline preload="auto"
                 style={{ width: "100%", height: "auto", display: "block", boxShadow: "0 24px 60px rgba(0,0,0,0.18)" }}
@@ -844,7 +844,7 @@ export default function Home() {
       {/* ── S6: STRATEGIC PARTNER ────────────────────────── */}
       <section style={{ position: "relative", overflow: "hidden", padding: "72px 24px" }}>
         <video
-          src="/videos/home/strategic-partner-tech-river.mp4"
+          src="/videos/home/home-strategic-partner-tech-river.mp4"
           aria-label="Rushing forested river with glowing connective lines woven through the rapids, symbolizing connected growth systems"
           autoPlay muted loop playsInline preload="auto"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 55%" }}

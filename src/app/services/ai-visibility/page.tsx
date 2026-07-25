@@ -111,7 +111,7 @@ export default function AIVisibilityPage() {
       {/* ── HERO ─────────────────────────────────────────────── */}
       <section className="ai-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <video
-          src="/videos/ai-visibility/hero.mp4"
+          src="/videos/ai-visibility/ai-visibility-hero.mp4"
           aria-label="Close-up of a horse's mane blending into glowing circuit-line branches, representing AI search optimization and discoverability"
           autoPlay muted loop playsInline preload="auto"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }}
@@ -243,7 +243,7 @@ export default function AIVisibilityPage() {
           overflow: "hidden", borderTop: "3px solid #d87307",
         }}>
           <video
-            src="/videos/ai-visibility/search-has-changed.mp4"
+            src="/videos/ai-visibility/ai-visibility-search-has-changed.mp4"
             aria-label="A solitary oak tree in a sunlit field with glowing circuit-root lines, representing how AI-driven search has changed discovery"
             autoPlay muted loop playsInline preload="auto"
             style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}

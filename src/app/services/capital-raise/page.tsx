@@ -183,7 +183,7 @@ export default function CapitalRaisePage() {
       {/* ── HERO ───────────────────────────────────────────── */}
       <section className="cr-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <video
-          src="/videos/capital-raise/hero.mp4"
+          src="/videos/capital-raise/capital-raise-hero.mp4"
           aria-label="Cattle grazing on an open prairie under a dramatic sunset sky, representing steady investor outreach and capital raise support"
           autoPlay muted loop playsInline preload="auto"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 100%" }}

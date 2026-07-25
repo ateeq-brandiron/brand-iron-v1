@@ -210,7 +210,7 @@ export default function WebsiteDevelopmentPage() {
       {/* ── HERO ───────────────────────────────────────────── */}
       <section className="wd-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <video
-          src="/videos/website-development/hero.mp4"
+          src="/videos/website-development/website-development-hero.mp4"
           aria-label="Computer chip embedded in a grassy hillside with glowing circuit lines, representing an AI visibility website foundation"
           autoPlay muted loop playsInline preload="auto"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 35%" }}

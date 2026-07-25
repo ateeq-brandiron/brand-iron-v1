@@ -138,7 +138,7 @@ export default function RevenueEngineeringPage() {
       {/* ── HERO ───────────────────────────────────────────── */}
       <section className="re-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <video
-          src="/videos/revenue-engineering/hero.mp4"
+          src="/videos/revenue-engineering/revenue-engineering-hero.mp4"
           aria-label="Animated wildflower meadow at sunset with glowing connective lines, representing a connected revenue operations system"
           autoPlay muted loop playsInline preload="auto"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }}

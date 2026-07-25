@@ -80,7 +80,7 @@ export default function GTMPage() {
       {/* ── HERO ───────────────────────────────────────────── */}
       <section className="gtm-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <video
-          src="/videos/gtm/hero.mp4"
+          src="/videos/gtm/gtm-hero.mp4"
           aria-label="Glowing iron bar being forged on an anvil with mountain silhouettes at dusk, representing a go-to-market strategy framework being built"
           autoPlay muted loop playsInline preload="auto"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }}
