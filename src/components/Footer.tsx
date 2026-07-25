@@ -53,7 +53,7 @@ export default function Footer() {
         {/* LEFT — leather bg with embossed logo */}
         <Link href="/" aria-label="Brand Iron Home" className="footer-logo-panel" style={{
           width: "22%", flexShrink: 0,
-          backgroundImage: "url('/images/shared/footer-logo.jpeg')",
+          backgroundImage: "url('/images/shared/shared-footer-logo.jpeg')",
           backgroundSize: "cover", backgroundPosition: "center",
           filter: "brightness(1)",
           transition: "filter 0.3s ease",
@@ -65,7 +65,7 @@ export default function Footer() {
         {/* RIGHT — misty forest bg */}
         <div style={{
           flex: 1, position: "relative",
-          backgroundImage: "url('/images/shared/forest-mist.jpg')",
+          backgroundImage: "url('/images/shared/shared-forest-mist.jpg')",
           backgroundSize: "cover", backgroundPosition: "center 30%",
         }}>
           <div role="img" aria-label="Misty pine forest hillside with a sunlit rocky outcrop, representing Brand Iron's growth marketing roots" style={{ position: "absolute", inset: 0, background: "rgba(8,16,30,0.68)" }} />

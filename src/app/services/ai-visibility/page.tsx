@@ -346,7 +346,7 @@ export default function AIVisibilityPage() {
       {/* ── S4: STRATEGIC FRAMEWORK ─────────────────────────── */}
       <section style={{
         position: "relative", overflow: "hidden", padding: "120px 40px 48px",
-        backgroundImage: "url('/images/shared/blacksmith-tech-lines.png')",
+        backgroundImage: "url('/images/shared/shared-blacksmith-tech-lines.png')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
         <div role="img" aria-label="Blacksmith hammering molten metal on an anvil with glowing AI data-line visualizations exploding from the impact point" style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.88)" }} />
@@ -634,7 +634,7 @@ export default function AIVisibilityPage() {
         <div className={`reveal${s5View.inView ? ' visible' : ''}`} style={{
           position: "relative", width: "100vw", marginLeft: "calc(50% - 50vw)", marginTop: 56,
           overflow: "hidden", borderTop: "3px solid #d87307",
-          backgroundImage: "url('/images/shared/horse-mane-circuit-lines.png')",
+          backgroundImage: "url('/images/shared/shared-horse-mane-circuit-lines.png')",
           backgroundSize: "cover", backgroundPosition: "center",
         }}>
           <div role="img" aria-label="Close-up black-and-white photo of a horse's mane blending into glowing circuit-board line patterns and logic-gate symbols" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(10,12,8,0.6) 0%, rgba(10,12,8,0.72) 100%)" }} />

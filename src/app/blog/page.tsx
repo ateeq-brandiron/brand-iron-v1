@@ -90,7 +90,7 @@ export default function InsightsPage() {
       <section className="blog-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <div style={{
           position: "absolute", inset: 0,
-          backgroundImage: "url('/images/shared/fence-pasture.jpg')",
+          backgroundImage: "url('/images/shared/shared-fence-pasture.jpg')",
           backgroundSize: "cover", backgroundPosition: "center",
         }} />
         <div role="img" aria-label="Dark, misty mountain ridge landscape at dusk" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.35) 0%, rgba(8,16,36,0.25) 45%, rgba(8,16,36,0.65) 100%)" }} />
@@ -279,7 +279,7 @@ export default function InsightsPage() {
       <section style={{ position: "relative", overflow: "hidden", padding: "88px 24px" }}>
         <div style={{
           position: "absolute", inset: 0,
-          backgroundImage: "url('/images/shared/mountain-peaks.png')",
+          backgroundImage: "url('/images/shared/shared-mountain-peaks.png')",
           backgroundSize: "cover", backgroundPosition: "center",
         }} />
         <div role="img" aria-label="Rocky mountain trail along a ridge crest at sunset" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.5) 0%, rgba(8,16,36,0.42) 50%, rgba(8,16,36,0.6) 100%)" }} />
@@ -353,7 +353,7 @@ export default function InsightsPage() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div ref={ctaView.ref} className={`reveal${ctaView.inView ? " visible" : ""}`} style={{
             position: "relative", overflow: "hidden", borderRadius: 20,
-            backgroundImage: "url('/images/blog/wood-logs-texture.jpg')", backgroundSize: "cover", backgroundPosition: "center",
+            backgroundImage: "url('/images/blog/blog-wood-logs-texture.jpg')", backgroundSize: "cover", backgroundPosition: "center",
           }}>
             <div role="img" aria-label="Close-up of weathered gray wooden log siding with orange lichen patches" style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
             <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>

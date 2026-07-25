@@ -224,7 +224,7 @@ export default function GTMPage() {
       {/* ── S3: THE BRAND IRON GTM FRAMEWORK ───────────────── */}
       <section id="framework" style={{
         position: "relative", overflow: "hidden", padding: "120px 40px",
-        backgroundImage: "url('/images/shared/sagebrush-circuit-lines.png')",
+        backgroundImage: "url('/images/shared/shared-sagebrush-circuit-lines.png')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
         <div role="img" aria-label="Desert butte landscape at sunset with sagebrush replaced by glowing computer-chip circuit patterns, representing a go-to-market strategy framework" style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.68)" }} />
@@ -681,7 +681,7 @@ export default function GTMPage() {
       {/* ── S7: OUTCOMES ───────────────────────────────────── */}
       <section style={{
         position: "relative", overflow: "hidden", padding: "120px 40px 56px",
-        backgroundImage: "url('/images/shared/wood-grain-texture.jpg')",
+        backgroundImage: "url('/images/shared/shared-wood-grain-texture.jpg')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
         <div role="img" aria-label="Close-up of weathered gray wood grain texture with lichen speckles" style={{ position: "absolute", inset: 0, background: "rgba(248,242,232,0.91)" }} />

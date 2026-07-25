@@ -323,7 +323,7 @@ export default function WebsiteDevelopmentPage() {
       {/* ── S3: THE BRAND IRON WEBSITE FRAMEWORK ────────────── */}
       <section id="framework" style={{
         position: "relative", overflow: "hidden", padding: "120px 40px",
-        backgroundImage: "url('/images/shared/wood-grain-texture.jpg')",
+        backgroundImage: "url('/images/shared/shared-wood-grain-texture.jpg')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
         <div role="img" aria-label="Close-up of weathered gray wood grain texture with lichen speckles" style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.85)" }} />
@@ -533,7 +533,7 @@ export default function WebsiteDevelopmentPage() {
       {/* ── S6: WHAT SUCCESS LOOKS LIKE + FAQ ────────────────── */}
       <section style={{
         position: "relative", overflow: "hidden", padding: "120px 40px 48px",
-        backgroundImage: "url('/images/shared/outcomes-texture.png')",
+        backgroundImage: "url('/images/shared/shared-outcomes-texture.png')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
         <div role="img" aria-label="Hay bale field at sunset with warm golden light" style={{ position: "absolute", inset: 0, background: "rgba(248,242,232,0.93)" }} />
@@ -598,7 +598,7 @@ export default function WebsiteDevelopmentPage() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div ref={ctaView.ref} className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{
             position: "relative", overflow: "hidden", borderRadius: 20,
-            backgroundImage: "url('/images/shared/grass-prairie-circuit-lines.png')", backgroundSize: "cover", backgroundPosition: "center",
+            backgroundImage: "url('/images/shared/shared-grass-prairie-circuit-lines.png')", backgroundSize: "cover", backgroundPosition: "center",
           }}>
             <div role="img" aria-label="Grass prairie at sunset with a computer chip and glowing network lines woven through the field, representing a connected website technology foundation" style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.55)" }} />
             <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>

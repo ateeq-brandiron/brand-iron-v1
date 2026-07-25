@@ -265,7 +265,7 @@ export default function CapitalRaisePage() {
       {/* ── S2: WHY COMPANIES STRUGGLE TO RAISE CAPITAL ─────── */}
       <section style={{
         position: "relative", overflow: "hidden", padding: "120px 40px 48px",
-        backgroundImage: "url('/images/shared/haybales-field.jpg')", backgroundSize: "cover", backgroundPosition: "center",
+        backgroundImage: "url('/images/shared/shared-haybales-field.jpg')", backgroundSize: "cover", backgroundPosition: "center",
       }}>
         <div role="img" aria-label="Close-up of a saddle with coiled rope resting on a horse's back" style={{ position: "absolute", inset: 0, background: "rgba(255,255,255,0.87)" }} />
         <div ref={s2View.ref} style={{ position: "relative", zIndex: 1, maxWidth: 1200, margin: "0 auto" }}>
@@ -331,7 +331,7 @@ export default function CapitalRaisePage() {
       {/* ── S3: THE BRAND IRON CAPITAL RAISE FRAMEWORK ──────── */}
       <section id="framework" style={{
         position: "relative", overflow: "hidden", padding: "120px 40px",
-        backgroundImage: "url('/images/shared/fence-pasture.jpg')",
+        backgroundImage: "url('/images/shared/shared-fence-pasture.jpg')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
         <div role="img" aria-label="Dark, misty mountain ridge landscape at dusk" style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.72)" }} />
@@ -743,7 +743,7 @@ export default function CapitalRaisePage() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div ref={ctaView.ref} className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{
             position: "relative", overflow: "hidden", borderRadius: 20,
-            backgroundImage: "url('/images/shared/mountain-peaks.png')", backgroundSize: "cover", backgroundPosition: "center",
+            backgroundImage: "url('/images/shared/shared-mountain-peaks.png')", backgroundSize: "cover", backgroundPosition: "center",
           }}>
             <div role="img" aria-label="Rocky mountain trail along a ridge crest at sunset" style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.55)" }} />
             <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>

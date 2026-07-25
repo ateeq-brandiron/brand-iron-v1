@@ -11,7 +11,7 @@ export default function OrganizationSchema() {
     name: "Brand Iron",
     legalName: "Brand Iron Marketing",
     url: "https://brandiron.net",
-    logo: "https://brandiron.net/images/shared/logo-white.png",
+    logo: "https://brandiron.net/images/shared/shared-logo-white.png",
     description: "Brand Iron helps organizations become discoverable, trusted, and chosen through brand strategy, AI visibility, and connected growth systems.",
     email: "contact@brandiron.net",
     telephone: "+1-303-534-1901",

@@ -375,7 +375,7 @@ export default function BrandStrategyPage() {
       {/* ── S3: FROM BUSINESS STRATEGY TO MARKET IMPACT ─────── */}
       <section id="framework" style={{
         position: "relative", overflow: "hidden", padding: "120px 40px",
-        backgroundImage: "url('/images/brand-strategy/hero-haybales.webp')",
+        backgroundImage: "url('/images/brand-strategy/brand-strategy-hero-haybales.webp')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
         <div role="img" aria-label="Golden hay bale field at sunset with rolled bales and sun flare" style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.85)" }} />
@@ -711,7 +711,7 @@ export default function BrandStrategyPage() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div ref={ctaView.ref} className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{
             position: "relative", overflow: "hidden", borderRadius: 20,
-            backgroundImage: "url('/images/brand-strategy/cta-lake.png')", backgroundSize: "cover", backgroundPosition: "center",
+            backgroundImage: "url('/images/brand-strategy/brand-strategy-cta-lake.png')", backgroundSize: "cover", backgroundPosition: "center",
           }}>
             <div role="img" aria-label="Snow-capped mountain range reflected in a still lake surrounded by golden autumn aspen trees" style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
             <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>

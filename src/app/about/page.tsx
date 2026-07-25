@@ -128,7 +128,7 @@ export default function AboutPage() {
       {/* ── HERO ───────────────────────────────────────────── */}
       <section className="ab-hero-section" style={{
         position: "relative", height: "100vh", minHeight: 600, overflow: "hidden",
-        backgroundImage: "url('/images/about/hero-saddle.jpg')", backgroundSize: "cover", backgroundPosition: "center",
+        backgroundImage: "url('/images/about/about-hero-saddle.jpg')", backgroundSize: "cover", backgroundPosition: "center",
       }}>
         <div role="img" aria-label="Snow-capped mountain range reflected in a still lake surrounded by golden autumn aspen trees" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.35) 0%, rgba(8,16,36,0.25) 45%, rgba(8,16,36,0.65) 100%)" }} />
 
@@ -442,7 +442,7 @@ export default function AboutPage() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div ref={ctaView.ref} className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{
             position: "relative", overflow: "hidden", borderRadius: 20,
-            backgroundImage: "url('/images/about/hero-barn.webp')", backgroundSize: "cover", backgroundPosition: "center",
+            backgroundImage: "url('/images/about/about-hero-barn.webp')", backgroundSize: "cover", backgroundPosition: "center",
           }}>
             <div role="img" aria-label="Rustic wooden barn in a green field beneath a dramatic orange sunset sky" style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.55)" }} />
             <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>

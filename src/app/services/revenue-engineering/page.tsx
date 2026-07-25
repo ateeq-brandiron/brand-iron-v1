@@ -340,7 +340,7 @@ export default function RevenueEngineeringPage() {
       {/* ── S4: OUR PROCESS ──────────────────────────────────── */}
       <section style={{
         position: "relative", overflow: "hidden", padding: "90px 40px",
-        backgroundImage: "url('/images/revenue-engineering/process-grass-circuit-lines.jpg')",
+        backgroundImage: "url('/images/revenue-engineering/revenue-engineering-process-grass-circuit-lines.jpg')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
         <div role="img" aria-label="Grassy hillside at sunset with glowing digital circuit lines and a computer chip woven through the grass, representing a connected revenue operations system" style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.45)" }} />
@@ -447,7 +447,7 @@ export default function RevenueEngineeringPage() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div ref={s8View.ref} className={`reveal${s8View.inView ? ' visible' : ''}`} style={{
             position: "relative", overflow: "hidden", borderRadius: 20,
-            backgroundImage: "url('/images/revenue-engineering/cta-river-sunset.jpg')", backgroundSize: "cover", backgroundPosition: "center",
+            backgroundImage: "url('/images/revenue-engineering/revenue-engineering-cta-river-sunset.jpg')", backgroundSize: "cover", backgroundPosition: "center",
           }}>
             <div role="img" aria-label="Winding river with scattered stones flowing past a red cabin beneath a sunset sky" style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
             <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>
