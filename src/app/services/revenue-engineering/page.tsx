@@ -138,7 +138,7 @@ export default function RevenueEngineeringPage() {
       {/* ── HERO ───────────────────────────────────────────── */}
       <section className="re-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <video
-          src="/Revenue-animation.mp4"
+          src="/videos/revenue-engineering/hero.mp4"
           autoPlay muted loop playsInline preload="auto"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }}
         />
@@ -339,7 +339,7 @@ export default function RevenueEngineeringPage() {
       {/* ── S4: OUR PROCESS ──────────────────────────────────── */}
       <section style={{
         position: "relative", overflow: "hidden", padding: "90px 40px",
-        backgroundImage: "url('/images/Brand Iron Techy Growth Fields.jpg')",
+        backgroundImage: "url('/images/revenue-engineering/process-grass-circuit-lines.jpg')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
         <div style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.45)" }} />
@@ -446,7 +446,7 @@ export default function RevenueEngineeringPage() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div ref={s8View.ref} className={`reveal${s8View.inView ? ' visible' : ''}`} style={{
             position: "relative", overflow: "hidden", borderRadius: 20,
-            backgroundImage: "url('/images/shutterstock_2071787987.jpg')", backgroundSize: "cover", backgroundPosition: "center",
+            backgroundImage: "url('/images/revenue-engineering/cta-river-sunset.jpg')", backgroundSize: "cover", backgroundPosition: "center",
           }}>
             <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
             <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>

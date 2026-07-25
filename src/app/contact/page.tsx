@@ -125,7 +125,7 @@ export default function ContactPage() {
       {/* Hero */}
       <section style={{
         position: "relative", minHeight: "50vh", display: "flex", alignItems: "center",
-        backgroundImage: "url('/images/bg-fence.jpg')",
+        backgroundImage: "url('/images/shared/fence-pasture.jpg')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(10,20,35,0.3) 0%, rgba(10,20,35,0.22) 45%, rgba(10,20,35,0.62) 100%)" }} />
@@ -270,7 +270,7 @@ export default function ContactPage() {
 
           {/* Info */}
           <div className={`reveal${sMain.inView ? ' visible' : ''}`} style={{ transitionDelay: "0.1s" }}>
-            <div style={{ backgroundImage: "url('/images/bg-haybales.jpg')", backgroundSize: "cover", backgroundPosition: "center", borderRadius: 10, overflow: "hidden", height: 220, position: "relative", marginBottom: 24 }}>
+            <div style={{ backgroundImage: "url('/images/shared/haybales-field.jpg')", backgroundSize: "cover", backgroundPosition: "center", borderRadius: 10, overflow: "hidden", height: 220, position: "relative", marginBottom: 24 }}>
               <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, transparent 40%, rgba(28,54,82,0.75) 100%)" }} />
               <div style={{ position: "absolute", bottom: 20, left: 20 }}>
                 <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 18, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#FFFFFF" }}>Executive-Level Strategy</p>

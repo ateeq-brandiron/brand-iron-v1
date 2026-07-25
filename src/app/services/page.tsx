@@ -95,7 +95,7 @@ export default function ServicesPage() {
       <section className="svc-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <div style={{
           position: "absolute", inset: 0,
-          backgroundImage: "url('/images/bg-barn.jpg')",
+          backgroundImage: "url('/images/services-hub/barn-sunset.jpg')",
           backgroundSize: "cover", backgroundPosition: "center",
         }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.35) 0%, rgba(8,16,36,0.25) 45%, rgba(8,16,36,0.65) 100%)" }} />
@@ -213,7 +213,7 @@ export default function ServicesPage() {
         <div style={{ maxWidth: 1100, margin: "0 auto", position: "relative", zIndex: 1 }}>
           <div ref={ctaView.ref} className={`reveal${ctaView.inView ? " visible" : ""}`} style={{
             position: "relative", overflow: "hidden", borderRadius: 20,
-            backgroundImage: "url('/images/bg-horse.jpg')", backgroundSize: "cover", backgroundPosition: "center",
+            backgroundImage: "url('/images/services-hub/horse-portrait.jpg')", backgroundSize: "cover", backgroundPosition: "center",
           }}>
             <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
             <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>

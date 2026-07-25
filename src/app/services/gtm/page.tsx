@@ -80,7 +80,7 @@ export default function GTMPage() {
       {/* ── HERO ───────────────────────────────────────────── */}
       <section className="gtm-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <video
-          src="/The_connecting_line_should_not_Kling_O3_Video_Edit_60783.mp4"
+          src="/videos/gtm/hero.mp4"
           autoPlay muted loop playsInline preload="auto"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }}
         />
@@ -223,7 +223,7 @@ export default function GTMPage() {
       {/* ── S3: THE BRAND IRON GTM FRAMEWORK ───────────────── */}
       <section id="framework" style={{
         position: "relative", overflow: "hidden", padding: "120px 40px",
-        backgroundImage: "url('/images/techy sagebrush.png')",
+        backgroundImage: "url('/images/shared/sagebrush-circuit-lines.png')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
         <div style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.68)" }} />
@@ -680,7 +680,7 @@ export default function GTMPage() {
       {/* ── S7: OUTCOMES ───────────────────────────────────── */}
       <section style={{
         position: "relative", overflow: "hidden", padding: "120px 40px 56px",
-        backgroundImage: "url('/images/bg-wood.jpg')",
+        backgroundImage: "url('/images/shared/wood-grain-texture.jpg')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
         <div style={{ position: "absolute", inset: 0, background: "rgba(248,242,232,0.91)" }} />

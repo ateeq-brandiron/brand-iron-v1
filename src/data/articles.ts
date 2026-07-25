@@ -28,7 +28,7 @@ export const articles: Article[] = [
     excerpt: "A go-to-market (GTM) strategy consultant is essential when your business needs expert guidance to launch new products, enter new markets, or significantly improve market penetration and revenue, especially for founders, CEOs, and business owners facing unclear market paths or stalled growth.",
     readTime: "11 min read",
     date: "July 2026",
-    headerImage: "/images/when to hire blog.png",
+    headerImage: "/images/blog/when-to-hire-a-go-to-market-strategy-consultant/hero.png",
     seoTitle: "When to Hire a Go-To-Market Strategy Consultant | Brand Iron",
     metaDescription: "Wondering when to bring in a go-to-market strategy consultant? This guide helps founders, CEOs, and business owners decide when expert insights are crucial for growth.",
     body: [
@@ -169,7 +169,7 @@ export const articles: Article[] = [
     excerpt: "Brand Iron is more than a marketing agency — it's a GTM strategy partner that helps companies plan, launch, and scale with clarity and precision.",
     readTime: "13 min read",
     date: "July 2026",
-    headerImage: "/images/Brand Iron Map and compass.jpg",
+    headerImage: "/images/blog/gtm-strategy-partner/map-and-compass.jpg",
     seoTitle: "Brand Iron: Your GTM Strategy & Growth Partner | Go-To-Market Consulting",
     metaDescription: "Brand Iron is more than a marketing agency — it's a GTM strategy partner that helps companies plan, launch, and scale with clarity and precision.",
     body: [
@@ -177,7 +177,7 @@ export const articles: Article[] = [
       { type: "p", text: "That's where a true GTM strategy partner makes the difference. Brand Iron isn't a traditional marketing agency. It's a strategic growth partner built for companies that need more than a new logo or a paid ad campaign. Brand Iron's proprietary BrandStorm™ process, synchronized end-to-end services, and data-driven approach bring clarity to the full arc of your go-to-market journey, from shaping your brand foundation to launching with precision and scaling with confidence." },
       { type: "p", text: "Whether you're entering a new market, repositioning for growth, or preparing for a capital raise, having the right GTM partner in your corner changes everything." },
 
-      { type: "image", src: "/images/brand-iron-gtm-summary-card.png", alt: "Brand Iron: Your GTM Strategy & Growth Partner — Plan, Launch, Scale with clarity and precision" },
+      { type: "image", src: "/images/blog/gtm-strategy-partner/summary-card.png", alt: "Brand Iron: Your GTM Strategy & Growth Partner — Plan, Launch, Scale with clarity and precision" },
 
       { type: "h2", text: "Key Takeaways" },
       { type: "ul", items: [
@@ -352,7 +352,7 @@ export const articles: Article[] = [
     excerpt: "Most organizations approach AI as a technology project. The ones that succeed treat it as a business transformation initiative with technology as the enabler.",
     readTime: "8 min read",
     date: "June 2026",
-    headerImage: "/images/brand iron blacksmith and tech lines.png",
+    headerImage: "/images/shared/blacksmith-tech-lines.png",
     body: [
       { type: "p", text: "Every organization we talk to has an AI initiative underway. Most of them will never produce a measurable return. Not because the models are wrong, or the vendors are wrong, but because the initiative was never designed to change how the business actually works." },
       { type: "h2", text: "The Technology Project Trap" },
@@ -373,7 +373,7 @@ export const articles: Article[] = [
     excerpt: "Marketing, sales, and operations all working hard but growth is stagnant. The problem isn't effort, it's architecture.",
     readTime: "6 min read",
     date: "May 2026",
-    headerImage: "/images/Brand Iron Techy Grass Prairie.png",
+    headerImage: "/images/shared/grass-prairie-circuit-lines.png",
     body: [
       { type: "p", text: "Almost every stalled-growth conversation we have starts the same way: the team is working hard, the pipeline reports look reasonable, and the leadership team can't explain why revenue isn't compounding. The instinct is usually to add more, more content, more outbound, more headcount. Rarely is the instinct to look at how the pieces actually connect." },
       { type: "h2", text: "Activity Isn't Architecture" },
@@ -393,7 +393,7 @@ export const articles: Article[] = [
     excerpt: "A CRM that only tracks deals is a missed opportunity. Here's how the highest-performing revenue teams use their CRM to accelerate growth.",
     readTime: "7 min read",
     date: "May 2026",
-    headerImage: "/images/Brand Iron Techy Hay Bale.png",
+    headerImage: "/images/blog/shared/hay-bale-circuit-lines.png",
     body: [
       { type: "p", text: "For most organizations, the CRM is a filing cabinet. Contacts go in, deals move through stages, someone runs a pipeline report before the leadership meeting. It works, technically, but it isn't doing anything to actually accelerate revenue. It's just recording what already happened." },
       { type: "h2", text: "The Filing Cabinet Trap" },
@@ -412,7 +412,7 @@ export const articles: Article[] = [
     excerpt: "The bar has changed. In a market with more scrutiny and less capital chasing deals, your story needs to be airtight.",
     readTime: "9 min read",
     date: "April 2026",
-    headerImage: "/images/Brand Iron Techy Sagebrush.png",
+    headerImage: "/images/shared/sagebrush-circuit-lines.png",
     body: [
       { type: "p", text: "Capital hasn't disappeared, but the bar to access it has moved. Investors are seeing more decks, asking harder questions, and moving slower before they commit. A deck that would have gotten a second meeting a few years ago now gets a polite pass. The founders who are still raising successfully aren't the ones with the flashiest design, they're the ones whose story holds up under scrutiny." },
       { type: "h2", text: "Clarity Over Cleverness" },
@@ -431,7 +431,7 @@ export const articles: Article[] = [
     excerpt: "Marketing qualified leads are a vanity metric that disconnects marketing from revenue outcomes. Here's what to measure instead.",
     readTime: "5 min read",
     date: "April 2026",
-    headerImage: "/images/Brand Iron Tech River.png",
+    headerImage: "/images/blog/death-of-the-mql/tech-river.png",
     body: [
       { type: "p", text: "For over a decade, the marketing qualified lead has been the default scoreboard for demand generation. It's also one of the easiest metrics to inflate and one of the least connected to whether the business actually grows." },
       { type: "h2", text: "Why MQLs Disconnect Marketing From Revenue" },
@@ -450,7 +450,7 @@ export const articles: Article[] = [
     excerpt: "We've deployed AI agents across dozens of revenue organizations. Here's what we've learned about where they create real value.",
     readTime: "10 min read",
     date: "March 2026",
-    headerImage: "/images/Brand Iron Techy Horse Mane.png",
+    headerImage: "/images/shared/horse-mane-circuit-lines.png",
     body: [
       { type: "p", text: "AI agents have moved quickly from novelty to standard tooling inside revenue teams. The results, though, are uneven, and the difference usually comes down to where in the revenue process an organization deploys them, not which vendor they picked." },
       { type: "h2", text: "Where AI Agents Create Real Value" },
@@ -468,7 +468,7 @@ export const articles: Article[] = [
     excerpt: "Stop automating tasks and start automating outcomes. The difference determines whether automation creates leverage or just activity.",
     readTime: "7 min read",
     date: "March 2026",
-    headerImage: "/images/brand iron blacksmith and tech lines.png",
+    headerImage: "/images/shared/blacksmith-tech-lines.png",
     body: [
       { type: "p", text: "Most automation initiatives start with a task: automate the follow-up email, automate the data entry, automate the report. Task-level automation is easy to justify and easy to build, and it rarely moves the needle on revenue, because a faster version of a task that wasn't driving growth is still not driving growth." },
       { type: "h2", text: "The Difference Between Activity and Leverage" },
@@ -486,7 +486,7 @@ export const articles: Article[] = [
     excerpt: "What separates companies that compound growth from those that plateau isn't strategy, it's the system they use to execute it.",
     readTime: "12 min read",
     date: "February 2026",
-    headerImage: "/images/Brand Iron Techy Grass Prairie.png",
+    headerImage: "/images/shared/grass-prairie-circuit-lines.png",
     body: [
       { type: "p", text: "Nearly every executive team we work with already has a growth strategy. Fewer have a system built to execute it consistently, quarter after quarter, regardless of which individual happens to be running a given function. That difference, not the quality of the strategy itself, is what separates companies that compound growth from ones that plateau after an initial period of success." },
       { type: "h2", text: "Why Strategy Alone Doesn't Compound" },
@@ -504,7 +504,7 @@ export const articles: Article[] = [
     excerpt: "You don't need to replace your existing technology to transform with AI. Here's how to layer intelligence on what you already have.",
     readTime: "8 min read",
     date: "February 2026",
-    headerImage: "/images/Brand Iron Techy Hay Bale.png",
+    headerImage: "/images/blog/shared/hay-bale-circuit-lines.png",
     body: [
       { type: "p", text: "The most common reason AI initiatives stall before they start isn't the technology, it's the assumption that AI transformation requires ripping out the existing tech stack and starting over. For most organizations, that assumption is wrong, and expensive enough to talk leadership out of starting at all." },
       { type: "h2", text: "Start With What's Already Working" },

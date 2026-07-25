@@ -270,7 +270,7 @@ export default function BrandStrategyPage() {
       {/* ── HERO ───────────────────────────────────────────── */}
       <section className="bs-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <video
-          src="/Tree Animation.mp4"
+          src="/videos/brand-strategy/hero.mp4"
           autoPlay muted loop playsInline preload="auto"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }}
         />
@@ -374,7 +374,7 @@ export default function BrandStrategyPage() {
       {/* ── S3: FROM BUSINESS STRATEGY TO MARKET IMPACT ─────── */}
       <section id="framework" style={{
         position: "relative", overflow: "hidden", padding: "120px 40px",
-        backgroundImage: "url('/images/hero-haybales.webp')",
+        backgroundImage: "url('/images/brand-strategy/hero-haybales.webp')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
         <div style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.85)" }} />
@@ -710,7 +710,7 @@ export default function BrandStrategyPage() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div ref={ctaView.ref} className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{
             position: "relative", overflow: "hidden", borderRadius: 20,
-            backgroundImage: "url('/images/bg-hero-lake.png')", backgroundSize: "cover", backgroundPosition: "center",
+            backgroundImage: "url('/images/brand-strategy/cta-lake.png')", backgroundSize: "cover", backgroundPosition: "center",
           }}>
             <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
             <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>

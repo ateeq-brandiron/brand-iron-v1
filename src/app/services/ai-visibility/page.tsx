@@ -111,7 +111,7 @@ export default function AIVisibilityPage() {
       {/* ── HERO ─────────────────────────────────────────────── */}
       <section className="ai-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <video
-          src="/Animate_this_image_and_these_d.mp4"
+          src="/videos/ai-visibility/hero.mp4"
           autoPlay muted loop playsInline preload="auto"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }}
         />
@@ -242,7 +242,7 @@ export default function AIVisibilityPage() {
           overflow: "hidden", borderTop: "3px solid #d87307",
         }}>
           <video
-            src="/Animate_this_image_and_these_d (3).mp4"
+            src="/videos/ai-visibility/search-has-changed.mp4"
             autoPlay muted loop playsInline preload="auto"
             style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}
           />
@@ -344,7 +344,7 @@ export default function AIVisibilityPage() {
       {/* ── S4: STRATEGIC FRAMEWORK ─────────────────────────── */}
       <section style={{
         position: "relative", overflow: "hidden", padding: "120px 40px 48px",
-        backgroundImage: "url('/images/brand iron blacksmith and tech lines.png')",
+        backgroundImage: "url('/images/shared/blacksmith-tech-lines.png')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
         <div style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.88)" }} />
@@ -632,7 +632,7 @@ export default function AIVisibilityPage() {
         <div className={`reveal${s5View.inView ? ' visible' : ''}`} style={{
           position: "relative", width: "100vw", marginLeft: "calc(50% - 50vw)", marginTop: 56,
           overflow: "hidden", borderTop: "3px solid #d87307",
-          backgroundImage: "url('/images/Brand Iron Techy Horse Mane.png')",
+          backgroundImage: "url('/images/shared/horse-mane-circuit-lines.png')",
           backgroundSize: "cover", backgroundPosition: "center",
         }}>
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(10,12,8,0.6) 0%, rgba(10,12,8,0.72) 100%)" }} />
