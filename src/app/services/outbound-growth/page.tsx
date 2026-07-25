@@ -143,7 +143,7 @@ export default function OutboundGrowthPage() {
           backgroundImage: "url('/images/outbound-growth/hero-prairie-sky.jpg')",
           backgroundSize: "cover", backgroundPosition: "center",
         }} />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.35) 0%, rgba(8,16,36,0.25) 45%, rgba(8,16,36,0.65) 100%)" }} />
+        <div role="img" aria-label="Wide-open prairie grassland under a dramatic sky of streaking storm clouds, with distant mesas on the horizon" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.35) 0%, rgba(8,16,36,0.25) 45%, rgba(8,16,36,0.65) 100%)" }} />
 
         <div className="og-hero-wrap" style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", padding: "88px 24px 24px" }}>
           <div className="og-hero-grid" style={{ maxWidth: 1200, margin: "0 auto", width: "100%", display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 56, alignItems: "center" }}>
@@ -354,7 +354,7 @@ export default function OutboundGrowthPage() {
         backgroundImage: "url('/images/outbound-growth/process-mountain-peak.jpg')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
-        <div style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.45)" }} />
+        <div role="img" aria-label="Sunlit mountain peak glowing orange at sunset above layered ridgelines" style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.45)" }} />
         <div ref={s4View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 16, textAlign: "left" }}>
             How It Works
@@ -440,7 +440,7 @@ export default function OutboundGrowthPage() {
             position: "relative", overflow: "hidden", borderRadius: 20,
             backgroundImage: "url('/images/outbound-growth/cta-pink-meadow-sunset.jpg')", backgroundSize: "cover", backgroundPosition: "center",
           }}>
-            <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
+            <div role="img" aria-label="Mountain meadow covered in pink wildflowers under a vivid sunset sky" style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
             <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>
               <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(28px, 4.2vw, 52px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.05, marginBottom: 20 }}>
                 Stop Prospecting Like It&apos;s a Numbers Game

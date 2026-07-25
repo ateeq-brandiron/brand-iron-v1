@@ -81,6 +81,7 @@ export default function GTMPage() {
       <section className="gtm-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <video
           src="/videos/gtm/hero.mp4"
+          aria-label="Glowing iron bar being forged on an anvil with mountain silhouettes at dusk, representing a go-to-market strategy framework being built"
           autoPlay muted loop playsInline preload="auto"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }}
         />
@@ -226,7 +227,7 @@ export default function GTMPage() {
         backgroundImage: "url('/images/shared/sagebrush-circuit-lines.png')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
-        <div style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.68)" }} />
+        <div role="img" aria-label="Desert butte landscape at sunset with sagebrush replaced by glowing computer-chip circuit patterns, representing a go-to-market strategy framework" style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.68)" }} />
         <CircuitOverlay />
         <div ref={s3View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
@@ -683,7 +684,7 @@ export default function GTMPage() {
         backgroundImage: "url('/images/shared/wood-grain-texture.jpg')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
-        <div style={{ position: "absolute", inset: 0, background: "rgba(248,242,232,0.91)" }} />
+        <div role="img" aria-label="Close-up of weathered gray wood grain texture with lichen speckles" style={{ position: "absolute", inset: 0, background: "rgba(248,242,232,0.91)" }} />
         <div ref={s7View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
             <h2 className={`section-heading reveal${s7View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>

@@ -68,7 +68,7 @@ export default function Footer() {
           backgroundImage: "url('/images/shared/forest-mist.jpg')",
           backgroundSize: "cover", backgroundPosition: "center 30%",
         }}>
-          <div style={{ position: "absolute", inset: 0, background: "rgba(8,16,30,0.68)" }} />
+          <div role="img" aria-label="Misty pine forest hillside with a sunlit rocky outcrop, representing Brand Iron's growth marketing roots" style={{ position: "absolute", inset: 0, background: "rgba(8,16,30,0.68)" }} />
           <div style={{ position: "relative", zIndex: 1, padding: "40px 48px", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
 
             {/* Nav links */}

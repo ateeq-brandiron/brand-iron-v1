@@ -184,6 +184,7 @@ export default function CapitalRaisePage() {
       <section className="cr-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <video
           src="/videos/capital-raise/hero.mp4"
+          aria-label="Cattle grazing on an open prairie under a dramatic sunset sky, representing steady investor outreach and capital raise support"
           autoPlay muted loop playsInline preload="auto"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 100%" }}
         />
@@ -266,7 +267,7 @@ export default function CapitalRaisePage() {
         position: "relative", overflow: "hidden", padding: "120px 40px 48px",
         backgroundImage: "url('/images/shared/haybales-field.jpg')", backgroundSize: "cover", backgroundPosition: "center",
       }}>
-        <div style={{ position: "absolute", inset: 0, background: "rgba(255,255,255,0.87)" }} />
+        <div role="img" aria-label="Close-up of a saddle with coiled rope resting on a horse's back" style={{ position: "absolute", inset: 0, background: "rgba(255,255,255,0.87)" }} />
         <div ref={s2View.ref} style={{ position: "relative", zIndex: 1, maxWidth: 1200, margin: "0 auto" }}>
           <h2 className={`section-heading reveal${s2View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 24, textAlign: "left" }}>
             Investors Don&apos;t Invest in Slides. They Invest in Confidence.
@@ -333,7 +334,7 @@ export default function CapitalRaisePage() {
         backgroundImage: "url('/images/shared/fence-pasture.jpg')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
-        <div style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.72)" }} />
+        <div role="img" aria-label="Dark, misty mountain ridge landscape at dusk" style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.72)" }} />
         <CircuitOverlay />
         <div ref={s3View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
@@ -744,7 +745,7 @@ export default function CapitalRaisePage() {
             position: "relative", overflow: "hidden", borderRadius: 20,
             backgroundImage: "url('/images/shared/mountain-peaks.png')", backgroundSize: "cover", backgroundPosition: "center",
           }}>
-            <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.55)" }} />
+            <div role="img" aria-label="Rocky mountain trail along a ridge crest at sunset" style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.55)" }} />
             <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>
               <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(28px, 4.2vw, 52px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.05, marginBottom: 20 }}>
                 Let&apos;s Build Your Capital Raise Strategy.

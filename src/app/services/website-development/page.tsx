@@ -211,6 +211,7 @@ export default function WebsiteDevelopmentPage() {
       <section className="wd-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <video
           src="/videos/website-development/hero.mp4"
+          aria-label="Computer chip embedded in a grassy hillside with glowing circuit lines, representing an AI visibility website foundation"
           autoPlay muted loop playsInline preload="auto"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 35%" }}
         />
@@ -325,7 +326,7 @@ export default function WebsiteDevelopmentPage() {
         backgroundImage: "url('/images/shared/wood-grain-texture.jpg')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
-        <div style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.85)" }} />
+        <div role="img" aria-label="Close-up of weathered gray wood grain texture with lichen speckles" style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.85)" }} />
         <CircuitOverlay />
         <div ref={s3View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 64 }}>
@@ -535,7 +536,7 @@ export default function WebsiteDevelopmentPage() {
         backgroundImage: "url('/images/shared/outcomes-texture.png')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
-        <div style={{ position: "absolute", inset: 0, background: "rgba(248,242,232,0.93)" }} />
+        <div role="img" aria-label="Hay bale field at sunset with warm golden light" style={{ position: "absolute", inset: 0, background: "rgba(248,242,232,0.93)" }} />
         <div ref={s6View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ marginBottom: 48 }}>
             <h2 className={`section-heading reveal${s6View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
@@ -599,7 +600,7 @@ export default function WebsiteDevelopmentPage() {
             position: "relative", overflow: "hidden", borderRadius: 20,
             backgroundImage: "url('/images/shared/grass-prairie-circuit-lines.png')", backgroundSize: "cover", backgroundPosition: "center",
           }}>
-            <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.55)" }} />
+            <div role="img" aria-label="Grass prairie at sunset with a computer chip and glowing network lines woven through the field, representing a connected website technology foundation" style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.55)" }} />
             <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>
               <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(28px, 4.2vw, 52px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.05, marginBottom: 20 }}>
                 Build a Website Designed for Growth

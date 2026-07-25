@@ -5,6 +5,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ChunkErrorRecovery from "@/components/ChunkErrorRecovery";
+import OrganizationSchema from "@/components/OrganizationSchema";
 
 const montserrat = localFont({
   src: "../../public/fonts/Montserrat-variable.woff2",
@@ -25,9 +26,10 @@ const burfordInline = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Brand Iron | Forging Brands. Driving Revenue.",
+  metadataBase: new URL("https://brandiron.net"),
+  title: "Brand Iron | Brand Strategy & Growth Marketing Agency",
   description:
-    "Helping organizations become discoverable, trusted, and chosen in today's AI-driven buying landscape.",
+    "Brand Iron helps organizations become discoverable, trusted, and chosen through brand strategy, AI visibility, and connected growth systems.",
 };
 
 export default function RootLayout({
@@ -41,6 +43,7 @@ export default function RootLayout({
       className={`${montserrat.variable} ${burfordBlack.variable} ${burfordInline.variable}`}
     >
       <body>
+        <OrganizationSchema />
         <ChunkErrorRecovery />
         <Navbar />
         {children}

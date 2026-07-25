@@ -98,7 +98,7 @@ export default function ServicesPage() {
           backgroundImage: "url('/images/services-hub/barn-sunset.jpg')",
           backgroundSize: "cover", backgroundPosition: "center",
         }} />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.35) 0%, rgba(8,16,36,0.25) 45%, rgba(8,16,36,0.65) 100%)" }} />
+        <div role="img" aria-label="Rustic barn in a green field under a dramatic storm-lit sunset sky" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.35) 0%, rgba(8,16,36,0.25) 45%, rgba(8,16,36,0.65) 100%)" }} />
 
         <div className="svc-hero-wrap" style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", padding: "88px 24px 24px" }}>
           <div className="svc-hero-grid" style={{ maxWidth: 1200, margin: "0 auto", width: "100%", display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 56, alignItems: "center" }}>
@@ -215,7 +215,7 @@ export default function ServicesPage() {
             position: "relative", overflow: "hidden", borderRadius: 20,
             backgroundImage: "url('/images/services-hub/horse-portrait.jpg')", backgroundSize: "cover", backgroundPosition: "center",
           }}>
-            <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
+            <div role="img" aria-label="Black-and-white portrait of a shaggy-maned draft horse facing the camera in a field" style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
             <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>
               <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 20 }}>
                 Ready to Start?

@@ -271,6 +271,7 @@ export default function BrandStrategyPage() {
       <section className="bs-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <video
           src="/videos/brand-strategy/hero.mp4"
+          aria-label="A solitary oak tree in a sunlit field with glowing circuit-root lines at its base, representing strong brand positioning roots"
           autoPlay muted loop playsInline preload="auto"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }}
         />
@@ -377,7 +378,7 @@ export default function BrandStrategyPage() {
         backgroundImage: "url('/images/brand-strategy/hero-haybales.webp')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
-        <div style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.85)" }} />
+        <div role="img" aria-label="Golden hay bale field at sunset with rolled bales and sun flare" style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.85)" }} />
         <CircuitOverlay />
         <div ref={s3View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 56 }}>
@@ -712,7 +713,7 @@ export default function BrandStrategyPage() {
             position: "relative", overflow: "hidden", borderRadius: 20,
             backgroundImage: "url('/images/brand-strategy/cta-lake.png')", backgroundSize: "cover", backgroundPosition: "center",
           }}>
-            <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
+            <div role="img" aria-label="Snow-capped mountain range reflected in a still lake surrounded by golden autumn aspen trees" style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
             <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>
               <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(28px, 4.2vw, 52px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.05, marginBottom: 20 }}>
                 Build a Brand That Supports Everything That Comes Next

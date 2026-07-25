@@ -135,6 +135,34 @@ const testimonials = [
   },
 ];
 
+// Draft copy — replace with final Q&A once provided.
+const homeFaqs = [
+  {
+    q: "What does Brand Iron do?",
+    a: "Brand Iron is a growth marketing agency that helps organizations become discoverable, trusted, and chosen. We connect brand strategy, go-to-market planning, AI visibility, website development, and revenue engineering into one system instead of treating them as separate projects.",
+  },
+  {
+    q: "How is Brand Iron's brand strategy work different from a typical branding agency?",
+    a: "We build branding as a business system, not just a visual refresh. Brand strategy work is connected directly to messaging, go-to-market execution, and revenue goals, so the brand actually supports growth instead of sitting on a shelf.",
+  },
+  {
+    q: "What is a go-to-market (GTM) strategy, and does my business need one?",
+    a: "A GTM strategy is the plan for how you bring a product or service to market: audience, positioning, channels, and execution. Most businesses launching something new, entering a new market, or seeing stalled growth benefit from a structured GTM strategy rather than ad hoc campaigns.",
+  },
+  {
+    q: "What is AI visibility, and why does it matter now?",
+    a: "AI visibility is how discoverable your business is across AI platforms, search engines, and the other places modern buyers research before ever contacting you. As AI-driven search grows, businesses that aren't optimized for it become harder to find, even if their traditional SEO is strong.",
+  },
+  {
+    q: "Do you build websites, or only handle strategy and marketing?",
+    a: "Both. Brand Iron's website development services connect your brand, messaging, and AI visibility strategy directly into the site itself, so the website functions as a growth asset rather than a standalone design project.",
+  },
+  {
+    q: "How do I get started with Brand Iron?",
+    a: "Book a strategy session. We'll discuss your business, current challenges, and goals, then recommend which service, or combination of services, fits where you are right now.",
+  },
+];
+
 export default function Home() {
   const router = useRouter();
   const [auditOpen, setAuditOpen] = useState(false);
@@ -178,6 +206,8 @@ export default function Home() {
   const s6 = useInView();
   const s7 = useInView();
   const [testimonialIndex, setTestimonialIndex] = useState(0);
+  const s7faq = useInView();
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
   const s8 = useInView();
 
   return (
@@ -189,6 +219,7 @@ export default function Home() {
       <section style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <video
           src="/videos/home/hero.mp4"
+          aria-label="Rustic wooden barn in a green field beneath a dramatic sunset sky, representing Brand Iron's growth marketing agency roots"
           autoPlay muted playsInline preload="auto"
           onLoadedMetadata={e => { e.currentTarget.currentTime = 2; }}
           onEnded={e => { e.currentTarget.currentTime = 2; e.currentTarget.play(); }}
@@ -364,6 +395,7 @@ export default function Home() {
             <div className={`reveal${s3.inView ? " visible" : ""}`}>
               <video
                 src="/videos/home/buying-journey.mp4"
+                aria-label="Laptop displaying a Brand Iron marketing analytics dashboard tracking leads and calls, illustrating revenue growth reporting"
                 autoPlay muted loop playsInline preload="auto"
                 style={{ width: "100%", height: "auto", display: "block", boxShadow: "0 24px 60px rgba(0,0,0,0.18)" }}
               />
@@ -496,7 +528,7 @@ export default function Home() {
 
       {/* ── S3C: PROBLEM CARDS ───────────────────────────── */}
       <section style={{ position: "relative", overflow: "hidden", padding: "80px 24px", backgroundImage: "url('/images/home/saddle-rope-texture.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
-        <div style={{ position: "absolute", inset: 0, background: "rgba(245,240,232,0.93)" }} />
+        <div role="img" aria-label="Hay bale field at sunset with warm golden light" style={{ position: "absolute", inset: 0, background: "rgba(245,240,232,0.93)" }} />
         <div style={{ position: "absolute", inset: 0, backgroundImage: "url('/images/home/dark-mountains-pattern.webp')", backgroundSize: "60% auto", backgroundPosition: "center bottom", backgroundRepeat: "no-repeat", opacity: 0.06 }} />
         <div ref={s3problems.ref} style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto" }}>
           <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 32, textAlign: "left" }}>Common Growth Challenges</h2>
@@ -532,7 +564,7 @@ export default function Home() {
       <section style={{ position: "relative", overflow: "hidden" }}>
         {/* Grit & Gumption banner */}
         <div style={{ position: "relative", height: 180, overflow: "hidden" }}>
-          <img src="/images/home/grit-and-gumption-banner.png" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 30%" }} />
+          <img src="/images/home/grit-and-gumption-banner.png" alt="Wide mountain range panorama at sunset, representing Brand Iron's brand strategy and growth marketing agency roots" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 30%" }} />
           <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.35)" }} />
           <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "center", textAlign: "left", padding: "0 24px", maxWidth: 1132, margin: "0 auto" }}>
             <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(32px, 6vw, 80px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#FFFFFF", lineHeight: 1, marginBottom: 8 }}>
@@ -567,7 +599,7 @@ export default function Home() {
 
               {/* Image — right */}
               <div className={`reveal${s4.inView ? " visible" : ""}`}>
-                <img src="/images/home/presentation-image.jpeg" alt="" style={{ width: "100%", height: "auto", display: "block", boxShadow: "0 24px 60px rgba(0,0,0,0.18)" }} />
+                <img src="/images/home/presentation-image.jpeg" alt="Brand Iron team presenting a growth strategy plan to clients in a conference room" style={{ width: "100%", height: "auto", display: "block", boxShadow: "0 24px 60px rgba(0,0,0,0.18)" }} />
               </div>
             </div>
 
@@ -792,6 +824,7 @@ export default function Home() {
           width: "100vw", marginLeft: "calc(50% - 50vw)",
           backgroundImage: "url('/images/shared/outcomes-texture.png')", backgroundSize: "cover", backgroundPosition: "center",
         }}>
+          <div role="img" aria-label="Hay bale field at sunset with warm golden light" style={{ position: "absolute", inset: 0, pointerEvents: "none" }} />
           <div style={{ maxWidth: 1148, margin: "0 auto", padding: "0 24px" }}>
             <div style={{ textAlign: "left", padding: "40px 48px" }}>
               <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: "clamp(14px, 1.6vw, 17px)", fontWeight: 500, color: "#1a1a1a", marginBottom: 10 }}>
@@ -812,6 +845,7 @@ export default function Home() {
       <section style={{ position: "relative", overflow: "hidden", padding: "72px 24px" }}>
         <video
           src="/videos/home/strategic-partner-tech-river.mp4"
+          aria-label="Rushing forested river with glowing connective lines woven through the rapids, symbolizing connected growth systems"
           autoPlay muted loop playsInline preload="auto"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 55%" }}
           onLoadedMetadata={e => { e.currentTarget.currentTime = 1; }}
@@ -935,6 +969,57 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── S7B: FAQ ─────────────────────────────────────── */}
+      <section style={{ background: "#F8F5EF", padding: "100px 24px" }}>
+        <div ref={s7faq.ref} style={{ maxWidth: 900, margin: "0 auto" }}>
+          <h2 className={`section-heading reveal${s7faq.inView ? " visible" : ""}`} style={{ color: "#1a1a1a", marginBottom: 8, textAlign: "left" }}>
+            Frequently Asked Questions
+          </h2>
+          <p className={`reveal${s7faq.inView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", maxWidth: 640, margin: "0 0 32px" }}>
+            Common questions about working with Brand Iron.
+          </p>
+          <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+            {homeFaqs.map(({ q, a }, i) => (
+              <div key={i}
+                className={`reveal${s7faq.inView ? " visible" : ""}`}
+                style={{ background: "rgba(255,255,255,0.9)", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 10, overflow: "hidden", transition: "box-shadow 0.2s, border-color 0.2s" }}
+                onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.borderColor = "rgba(216,115,7,0.3)"; el.style.boxShadow = "0 8px 24px rgba(0,0,0,0.06)"; }}
+                onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.borderColor = "rgba(15,27,45,0.08)"; el.style.boxShadow = "none"; }}
+              >
+                <button
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  style={{ width: "100%", background: "none", border: "none", cursor: "pointer", padding: "20px 24px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16, textAlign: "left" }}
+                >
+                  <span style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, fontWeight: 600, color: "#1a1a1a", lineHeight: 1.5 }}>{q}</span>
+                  <div style={{ width: 28, height: 28, borderRadius: "50%", background: openFaq === i ? "#d87307" : "rgba(216,115,7,0.1)", border: "1px solid rgba(216,115,7,0.3)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, transition: "background 0.2s, transform 0.2s", transform: openFaq === i ? "rotate(45deg)" : "rotate(0)" }}>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke={openFaq === i ? "#FFFFFF" : "#d87307"} strokeWidth="2" strokeLinecap="round"/></svg>
+                  </div>
+                </button>
+                {openFaq === i && (
+                  <div style={{ padding: "0 24px 20px" }}>
+                    <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.8, color: "#555", margin: 0 }}>{a}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: homeFaqs.map(({ q, a }) => ({
+                "@type": "Question",
+                name: q,
+                acceptedAnswer: { "@type": "Answer", text: a },
+              })),
+            }),
+          }}
+        />
+      </section>
+
       {/* ── S8: FINAL CTA ────────────────────────────────── */}
       <section style={{ background: "#F0EEEA", padding: "80px 24px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
@@ -942,7 +1027,7 @@ export default function Home() {
             position: "relative", overflow: "hidden", borderRadius: 20,
             backgroundImage: "url('/images/shared/cta-banner-scene.jpg')", backgroundSize: "cover", backgroundPosition: "center 40%",
           }}>
-            <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.5)" }} />
+            <div role="img" aria-label="Rugged mountain ridge trail at golden-hour sunset" style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.5)" }} />
             <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>
               <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(28px, 4.2vw, 52px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.05, marginBottom: 20 }}>
                 Get Found.<br />Get Trusted.<br />Generate Revenue.

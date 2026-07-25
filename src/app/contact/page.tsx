@@ -128,7 +128,7 @@ export default function ContactPage() {
         backgroundImage: "url('/images/shared/fence-pasture.jpg')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(10,20,35,0.3) 0%, rgba(10,20,35,0.22) 45%, rgba(10,20,35,0.62) 100%)" }} />
+        <div role="img" aria-label="Dark, misty mountain ridge landscape at dusk" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(10,20,35,0.3) 0%, rgba(10,20,35,0.22) 45%, rgba(10,20,35,0.62) 100%)" }} />
         <div style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto", padding: "140px 24px 80px", textAlign: "center" }}>
           <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 500, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>Get In Touch</p>
           <h1 className="hero-h1-anim" style={{
@@ -271,7 +271,7 @@ export default function ContactPage() {
           {/* Info */}
           <div className={`reveal${sMain.inView ? ' visible' : ''}`} style={{ transitionDelay: "0.1s" }}>
             <div style={{ backgroundImage: "url('/images/shared/haybales-field.jpg')", backgroundSize: "cover", backgroundPosition: "center", borderRadius: 10, overflow: "hidden", height: 220, position: "relative", marginBottom: 24 }}>
-              <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, transparent 40%, rgba(28,54,82,0.75) 100%)" }} />
+              <div role="img" aria-label="Close-up of a saddle with coiled rope resting on a horse's back" style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, transparent 40%, rgba(28,54,82,0.75) 100%)" }} />
               <div style={{ position: "absolute", bottom: 20, left: 20 }}>
                 <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 18, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#FFFFFF" }}>Executive-Level Strategy</p>
                 <p style={{ fontSize: 13, color: "rgba(255,255,255,0.8)", marginTop: 4 }}>25+ years of growth experience, applied to your business.</p>

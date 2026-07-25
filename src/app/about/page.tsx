@@ -130,7 +130,7 @@ export default function AboutPage() {
         position: "relative", height: "100vh", minHeight: 600, overflow: "hidden",
         backgroundImage: "url('/images/about/hero-saddle.jpg')", backgroundSize: "cover", backgroundPosition: "center",
       }}>
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.35) 0%, rgba(8,16,36,0.25) 45%, rgba(8,16,36,0.65) 100%)" }} />
+        <div role="img" aria-label="Snow-capped mountain range reflected in a still lake surrounded by golden autumn aspen trees" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.35) 0%, rgba(8,16,36,0.25) 45%, rgba(8,16,36,0.65) 100%)" }} />
 
         <div className="ab-hero-wrap" style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", padding: "88px 24px 24px" }}>
           <div className="ab-hero-grid" style={{ maxWidth: 1200, margin: "0 auto", width: "100%", display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 56, alignItems: "center" }}>
@@ -444,7 +444,7 @@ export default function AboutPage() {
             position: "relative", overflow: "hidden", borderRadius: 20,
             backgroundImage: "url('/images/about/hero-barn.webp')", backgroundSize: "cover", backgroundPosition: "center",
           }}>
-            <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.55)" }} />
+            <div role="img" aria-label="Rustic wooden barn in a green field beneath a dramatic orange sunset sky" style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.55)" }} />
             <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>
               <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(28px, 4.2vw, 52px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.05, marginBottom: 20 }}>
                 Ready to Work With Brand Iron?

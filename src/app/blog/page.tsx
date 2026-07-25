@@ -93,7 +93,7 @@ export default function InsightsPage() {
           backgroundImage: "url('/images/shared/fence-pasture.jpg')",
           backgroundSize: "cover", backgroundPosition: "center",
         }} />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.35) 0%, rgba(8,16,36,0.25) 45%, rgba(8,16,36,0.65) 100%)" }} />
+        <div role="img" aria-label="Dark, misty mountain ridge landscape at dusk" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.35) 0%, rgba(8,16,36,0.25) 45%, rgba(8,16,36,0.65) 100%)" }} />
 
         <div className="blog-hero-wrap" style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", padding: "88px 24px 24px" }}>
           <div className="blog-hero-grid" style={{ maxWidth: 1200, margin: "0 auto", width: "100%", display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 56, alignItems: "center" }}>
@@ -282,7 +282,7 @@ export default function InsightsPage() {
           backgroundImage: "url('/images/shared/mountain-peaks.png')",
           backgroundSize: "cover", backgroundPosition: "center",
         }} />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.5) 0%, rgba(8,16,36,0.42) 50%, rgba(8,16,36,0.6) 100%)" }} />
+        <div role="img" aria-label="Rocky mountain trail along a ridge crest at sunset" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.5) 0%, rgba(8,16,36,0.42) 50%, rgba(8,16,36,0.6) 100%)" }} />
         <div ref={resourcesView.ref} className={`reveal${resourcesView.inView ? " visible" : ""}`} style={{ position: "relative", zIndex: 2, maxWidth: 780, margin: "0 auto", textAlign: "center" }}>
           <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(24px, 3vw, 34px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", marginBottom: 16, lineHeight: 1.2 }}>
             Featured Resources
@@ -355,7 +355,7 @@ export default function InsightsPage() {
             position: "relative", overflow: "hidden", borderRadius: 20,
             backgroundImage: "url('/images/blog/wood-logs-texture.jpg')", backgroundSize: "cover", backgroundPosition: "center",
           }}>
-            <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
+            <div role="img" aria-label="Close-up of weathered gray wooden log siding with orange lichen patches" style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
             <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>
               <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 20 }}>
                 Ready to Start?

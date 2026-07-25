@@ -139,6 +139,7 @@ export default function RevenueEngineeringPage() {
       <section className="re-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <video
           src="/videos/revenue-engineering/hero.mp4"
+          aria-label="Animated wildflower meadow at sunset with glowing connective lines, representing a connected revenue operations system"
           autoPlay muted loop playsInline preload="auto"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 40%" }}
         />
@@ -342,7 +343,7 @@ export default function RevenueEngineeringPage() {
         backgroundImage: "url('/images/revenue-engineering/process-grass-circuit-lines.jpg')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
-        <div style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.45)" }} />
+        <div role="img" aria-label="Grassy hillside at sunset with glowing digital circuit lines and a computer chip woven through the grass, representing a connected revenue operations system" style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.45)" }} />
         <div ref={s4View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 48, textAlign: "left" }}>
             Our Process
@@ -448,7 +449,7 @@ export default function RevenueEngineeringPage() {
             position: "relative", overflow: "hidden", borderRadius: 20,
             backgroundImage: "url('/images/revenue-engineering/cta-river-sunset.jpg')", backgroundSize: "cover", backgroundPosition: "center",
           }}>
-            <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
+            <div role="img" aria-label="Winding river with scattered stones flowing past a red cabin beneath a sunset sky" style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
             <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>
               <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(28px, 4.2vw, 52px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.05, marginBottom: 20 }}>
                 Stop Losing Revenue Between the Cracks

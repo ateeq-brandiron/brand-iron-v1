@@ -112,6 +112,7 @@ export default function AIVisibilityPage() {
       <section className="ai-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <video
           src="/videos/ai-visibility/hero.mp4"
+          aria-label="Close-up of a horse's mane blending into glowing circuit-line branches, representing AI search optimization and discoverability"
           autoPlay muted loop playsInline preload="auto"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }}
         />
@@ -243,6 +244,7 @@ export default function AIVisibilityPage() {
         }}>
           <video
             src="/videos/ai-visibility/search-has-changed.mp4"
+            aria-label="A solitary oak tree in a sunlit field with glowing circuit-root lines, representing how AI-driven search has changed discovery"
             autoPlay muted loop playsInline preload="auto"
             style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}
           />
@@ -347,7 +349,7 @@ export default function AIVisibilityPage() {
         backgroundImage: "url('/images/shared/blacksmith-tech-lines.png')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
-        <div style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.88)" }} />
+        <div role="img" aria-label="Blacksmith hammering molten metal on an anvil with glowing AI data-line visualizations exploding from the impact point" style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.88)" }} />
         <div ref={s4View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
             <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 24, textAlign: "left" }}>
@@ -635,7 +637,7 @@ export default function AIVisibilityPage() {
           backgroundImage: "url('/images/shared/horse-mane-circuit-lines.png')",
           backgroundSize: "cover", backgroundPosition: "center",
         }}>
-          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(10,12,8,0.6) 0%, rgba(10,12,8,0.72) 100%)" }} />
+          <div role="img" aria-label="Close-up black-and-white photo of a horse's mane blending into glowing circuit-board line patterns and logic-gate symbols" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(10,12,8,0.6) 0%, rgba(10,12,8,0.72) 100%)" }} />
           <div style={{ position: "relative", zIndex: 1, maxWidth: 1200, margin: "0 auto", padding: "64px 24px" }}>
             <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.9)", margin: "0 0 28px" }}>
               Not sure where to start? Talk through your goals with a strategist and find the right AI Visibility solution for your business. Explore each solution in detail to understand what&apos;s included, who it&apos;s designed for, and the business outcomes you can expect.

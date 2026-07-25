@@ -29,11 +29,15 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
       {/* ── HEADER ───────────────────────────────────────────── */}
       <section style={{ position: "relative", overflow: "hidden", padding: "160px 24px 72px" }}>
-        <div style={{
-          position: "absolute", inset: 0,
-          backgroundImage: `url('${article.headerImage}')`,
-          backgroundSize: "cover", backgroundPosition: "center",
-        }} />
+        <div
+          role="img"
+          aria-label={article.headerImageAlt}
+          style={{
+            position: "absolute", inset: 0,
+            backgroundImage: `url('${article.headerImage}')`,
+            backgroundSize: "cover", backgroundPosition: "center",
+          }}
+        />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.55) 0%, rgba(8,16,36,0.5) 45%, rgba(8,16,36,0.8) 100%)" }} />
         <div style={{ position: "relative", zIndex: 2, maxWidth: 820, margin: "0 auto" }}>
           <Link href="/blog" className="back-link" style={{
@@ -243,7 +247,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             position: "relative", overflow: "hidden", borderRadius: 20,
             backgroundImage: "url('/images/shared/cta-banner-scene.jpg')", backgroundSize: "cover", backgroundPosition: "center",
           }}>
-            <div style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
+            <div role="img" aria-label="Rugged mountain ridge trail at golden-hour sunset" style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
             <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>
               <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 20 }}>
                 Ready to Start?
