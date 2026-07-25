@@ -374,7 +374,7 @@ export default function AboutPage() {
                 }}
               >
                 <div style={{ position: "relative", width: "100%", aspectRatio: "1 / 1", overflow: "hidden" }}>
-                  <img src={photo} alt={name} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }} />
+                  <img loading="lazy" src={photo} alt={name} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }} />
                   <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 4, background: "#d87307" }} />
                 </div>
                 <div style={{ padding: "24px 24px 28px", flex: 1, display: "flex", flexDirection: "column" }}>

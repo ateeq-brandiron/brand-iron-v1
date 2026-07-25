@@ -68,7 +68,7 @@ const solutions = [
     bestFor: ["Startups preparing for investor meetings", "Companies seeking funding", "Leadership teams refining their investment story"],
     outcome: "A clear, investor-ready presentation that builds confidence and supports productive fundraising conversations.",
     cta: "Learn More", href: "/contact",
-    icon: (<img src="/images/icons/icon-briefcase.svg" alt="" style={{ width: 26, height: 26 }} />),
+    icon: (<img loading="lazy" src="/images/icons/icon-briefcase.svg" alt="" style={{ width: 26, height: 26 }} />),
   },
   {
     num: "02", name: "Investor Database", tagline: "Connect with investors who align with your opportunity.",
@@ -76,7 +76,7 @@ const solutions = [
     bestFor: ["Companies beginning investor outreach", "Teams expanding fundraising efforts", "Organizations seeking targeted investor research"],
     outcome: "A qualified investor pipeline aligned with your fundraising objectives.",
     cta: "Explore Investor Database", href: "/contact",
-    icon: (<img src="/images/icons/icon-barchart.svg" alt="" style={{ width: 26, height: 26 }} />),
+    icon: (<img loading="lazy" src="/images/icons/icon-barchart.svg" alt="" style={{ width: 26, height: 26 }} />),
   },
   {
     num: "03", name: "Investor Outreach Campaigns", tagline: "Turn investor research into meaningful conversations.",
@@ -84,7 +84,7 @@ const solutions = [
     bestFor: ["Active fundraising campaigns", "Companies ready to engage investors", "Teams seeking structured outreach support"],
     outcome: "More strategic investor conversations and stronger fundraising momentum.",
     cta: "Learn More", href: "/contact",
-    icon: (<img src="/images/icons/icon-chat.svg" alt="" style={{ width: 26, height: 26 }} />),
+    icon: (<img loading="lazy" src="/images/icons/icon-chat.svg" alt="" style={{ width: 26, height: 26 }} />),
   },
   {
     num: "04", name: "Investor GTM Support", tagline: "Build a fundraising strategy that creates long-term momentum.",
@@ -92,7 +92,7 @@ const solutions = [
     bestFor: ["Growth-stage companies", "Leadership teams managing ongoing fundraising", "Organizations seeking strategic fundraising guidance"],
     outcome: "A coordinated fundraising strategy that supports long-term investor engagement and capital raise success.",
     cta: "Explore Investor GTM Support", href: "/services/gtm",
-    icon: (<img src="/images/icons/icon-lightning.svg" alt="" style={{ width: 26, height: 26 }} />),
+    icon: (<img loading="lazy" src="/images/icons/icon-lightning.svg" alt="" style={{ width: 26, height: 26 }} />),
   },
 ];
 
@@ -353,25 +353,25 @@ export default function CapitalRaisePage() {
                 num: "01", title: "Strategic Foundation",
                 lead: "Build the clarity behind your fundraising story.",
                 focuses: ["BrandStorm™ Strategy Session", "Investor Messaging", "Value Proposition", "Company Positioning", "Investment Narrative"],
-                icon: (<img src="/images/icons/icon-lightbulb.svg" alt="" style={{ width: 26, height: 26 }} />),
+                icon: (<img loading="lazy" src="/images/icons/icon-lightbulb.svg" alt="" style={{ width: 26, height: 26 }} />),
               },
               {
                 num: "02", title: "Investor Readiness",
                 lead: "Transform your strategy into investor-ready materials.",
                 focuses: ["Capital Raise Deck", "Executive Deck", "Teaser Piece", "Proforma", "Investor Storytelling"],
-                icon: (<img src="/images/icons/icon-briefcase.svg" alt="" style={{ width: 26, height: 26 }} />),
+                icon: (<img loading="lazy" src="/images/icons/icon-briefcase.svg" alt="" style={{ width: 26, height: 26 }} />),
               },
               {
                 num: "03", title: "Investor Access",
                 lead: "Identify and prioritize the investors most aligned with your opportunity.",
                 focuses: ["Investor Database", "Investor Research", "Segmentation", "Qualification", "Target Lists"],
-                icon: (<img src="/images/icons/icon-barchart.svg" alt="" style={{ width: 26, height: 26 }} />),
+                icon: (<img loading="lazy" src="/images/icons/icon-barchart.svg" alt="" style={{ width: 26, height: 26 }} />),
               },
               {
                 num: "04", title: "Investor Engagement",
                 lead: "Create meaningful conversations that build fundraising momentum.",
                 focuses: ["Investor Outreach", "Follow-up Strategy", "Investor GTM Support", "Relationship Management", "Campaign Tracking"],
-                icon: (<img src="/images/icons/icon-chat.svg" alt="" style={{ width: 26, height: 26 }} />),
+                icon: (<img loading="lazy" src="/images/icons/icon-chat.svg" alt="" style={{ width: 26, height: 26 }} />),
               },
             ].map(({ num, title, lead, focuses, icon }) => (
               <div key={num}
@@ -580,7 +580,7 @@ export default function CapitalRaisePage() {
                   <div key={step.name} style={{ display: "flex", alignItems: "center", gap: 8 }}>
                     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10, width: 130 }}>
                       <div style={{ position: "relative", width: 56, height: 56, borderRadius: "50%", background: "rgba(216,115,7,0.15)", border: "1px solid rgba(216,115,7,0.35)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                        <img src={step.icon} alt="" style={{ width: 24, height: 24 }} />
+                        <img loading="lazy" src={step.icon} alt="" style={{ width: 24, height: 24 }} />
                         <span style={{ position: "absolute", top: -6, right: -6, width: 20, height: 20, borderRadius: "50%", background: "#d87307", color: "#FFFFFF", fontFamily: "var(--font-montserrat), sans-serif", fontSize: 10, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center" }}>{i + 1}</span>
                       </div>
                       <span style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11.5, fontWeight: 600, color: "rgba(255,255,255,0.75)", textAlign: "center", lineHeight: 1.3 }}>{step.name}</span>
@@ -743,7 +743,7 @@ export default function CapitalRaisePage() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div ref={ctaView.ref} className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{
             position: "relative", overflow: "hidden", borderRadius: 20,
-            backgroundImage: "url('/images/shared/shared-mountain-peaks.png')", backgroundSize: "cover", backgroundPosition: "center",
+            backgroundImage: "url('/images/shared/shared-mountain-peaks.jpg')", backgroundSize: "cover", backgroundPosition: "center",
           }}>
             <div role="img" aria-label="Rocky mountain trail along a ridge crest at sunset" style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.55)" }} />
             <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>

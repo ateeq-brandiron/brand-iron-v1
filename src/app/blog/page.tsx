@@ -279,7 +279,7 @@ export default function InsightsPage() {
       <section style={{ position: "relative", overflow: "hidden", padding: "88px 24px" }}>
         <div style={{
           position: "absolute", inset: 0,
-          backgroundImage: "url('/images/shared/shared-mountain-peaks.png')",
+          backgroundImage: "url('/images/shared/shared-mountain-peaks.jpg')",
           backgroundSize: "cover", backgroundPosition: "center",
         }} />
         <div role="img" aria-label="Rocky mountain trail along a ridge crest at sunset" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.5) 0%, rgba(8,16,36,0.42) 50%, rgba(8,16,36,0.6) 100%)" }} />

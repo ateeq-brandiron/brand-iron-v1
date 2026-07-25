@@ -305,7 +305,7 @@ export default function Home() {
           {/* B-icon logo mask */}
           <div className={`reveal${s2.inView ? " visible" : ""}`} style={{ marginTop: -24, marginBottom: -10, perspective: 1200 }}>
             <div className="logo-3d-float">
-              <img src="/images/home/home-logo-mask.png" alt="Brand Iron" style={{ width: 340, height: "auto", display: "block", transition: "transform 0.35s ease" }}
+              <img loading="lazy" src="/images/home/home-logo-mask.png" alt="Brand Iron" style={{ width: 340, height: "auto", display: "block", transition: "transform 0.35s ease" }}
                 onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.05) rotate(-3deg)")}
                 onMouseLeave={e => (e.currentTarget.style.transform = "scale(1) rotate(0deg)")}
               />
@@ -406,7 +406,7 @@ export default function Home() {
 
         {/* Journey cards — full-bleed, dark-to-light gradient panels */}
         <div ref={s3cards.ref} style={{ position: "relative", overflow: "hidden", display: "flex", marginBottom: 56 }}>
-          <img src="/images/home/home-dark-mountains-pattern.webp" alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.5 }} />
+          <img loading="lazy" src="/images/home/home-dark-mountains-pattern.webp" alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.5 }} />
           {journeyStages.map(({ stage, body }, i) => {
             const overlays = ["rgba(8,8,8,0.95)", "rgba(38,36,34,0.92)", "rgba(90,84,76,0.88)", "rgba(180,170,156,0.82)", "rgba(245,240,232,0.94)"];
             const textColor = i < 3 ? "#FFFFFF" : "#1a1a1a";
@@ -476,7 +476,7 @@ export default function Home() {
 
       {/* ── S3B: YOU'RE THE COMPETITION ──────────────────── */}
       <section style={{ position: "relative", overflow: "hidden", minHeight: 340 }}>
-        <img src="/images/home/home-competition-banner.png" alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
+        <img loading="lazy" src="/images/home/home-competition-banner.jpg" alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
         <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.18)" }} />
         <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "center", justifyContent: "center", minHeight: 340, padding: "44px 24px" }}>
           {/* White card with corner brackets */}
@@ -496,8 +496,8 @@ export default function Home() {
           }}
           >
             {/* Corner brackets */}
-            <img src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 8, right: 8, width: 42, height: 42 }} />
-            <img src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 8, left: 8, width: 42, height: 42 }} />
+            <img loading="lazy" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 8, right: 8, width: 42, height: 42 }} />
+            <img loading="lazy" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 8, left: 8, width: 42, height: 42 }} />
 
             <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 3vw, 36px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.1, marginBottom: 20 }}>
               Why Great Companies Still Struggle to Grow
@@ -540,8 +540,8 @@ export default function Home() {
                 borderBottom: "4px solid transparent",
               }}
               >
-                <img className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 6, right: 6, width: 28, height: 28, opacity: 0 }} />
-                <img className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 6, left: 6, width: 28, height: 28, opacity: 0 }} />
+                <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 6, right: 6, width: 28, height: 28, opacity: 0 }} />
+                <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 6, left: 6, width: 28, height: 28, opacity: 0 }} />
                 <h3 style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 800, fontSize: 13, color: "#1a1a1a", marginBottom: 10, lineHeight: 1.4 }}>{heading}</h3>
                 <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.75, color: "#666" }}>{body}</p>
               </div>
@@ -564,7 +564,7 @@ export default function Home() {
       <section style={{ position: "relative", overflow: "hidden" }}>
         {/* Grit & Gumption banner */}
         <div style={{ position: "relative", height: 180, overflow: "hidden" }}>
-          <img src="/images/home/home-grit-and-gumption-banner.png" alt="Wide mountain range panorama at sunset, representing Brand Iron's brand strategy and growth marketing agency roots" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 30%" }} />
+          <img loading="lazy" src="/images/home/home-grit-and-gumption-banner.png" alt="Wide mountain range panorama at sunset, representing Brand Iron's brand strategy and growth marketing agency roots" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 30%" }} />
           <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.35)" }} />
           <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "center", textAlign: "left", padding: "0 24px", maxWidth: 1132, margin: "0 auto" }}>
             <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(32px, 6vw, 80px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#FFFFFF", lineHeight: 1, marginBottom: 8 }}>
@@ -599,7 +599,7 @@ export default function Home() {
 
               {/* Image — right */}
               <div className={`reveal${s4.inView ? " visible" : ""}`}>
-                <img src="/images/home/home-presentation-image.jpeg" alt="Brand Iron team presenting a growth strategy plan to clients in a conference room" style={{ width: "100%", height: "auto", display: "block", boxShadow: "0 24px 60px rgba(0,0,0,0.18)" }} />
+                <img loading="lazy" src="/images/home/home-presentation-image.jpeg" alt="Brand Iron team presenting a growth strategy plan to clients in a conference room" style={{ width: "100%", height: "auto", display: "block", boxShadow: "0 24px 60px rgba(0,0,0,0.18)" }} />
               </div>
             </div>
 
@@ -626,9 +626,9 @@ export default function Home() {
                   e.currentTarget.querySelectorAll<HTMLImageElement>(".corner-bracket").forEach(img => (img.style.opacity = "0"));
                 }}
                 >
-                  <img className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 6, right: 6, width: 26, height: 26, opacity: 0, transition: "opacity 0.25s ease" }} />
-                  <img className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 6, left: 6, width: 26, height: 26, opacity: 0, transition: "opacity 0.25s ease" }} />
-                  <img className="diff-icon" src={icon} alt="" style={{ width: 34, height: 34, marginBottom: 18, transition: "transform 0.3s ease" }} />
+                  <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 6, right: 6, width: 26, height: 26, opacity: 0, transition: "opacity 0.25s ease" }} />
+                  <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 6, left: 6, width: 26, height: 26, opacity: 0, transition: "opacity 0.25s ease" }} />
+                  <img loading="lazy" className="diff-icon" src={icon} alt="" style={{ width: 34, height: 34, marginBottom: 18, transition: "transform 0.3s ease" }} />
                   <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", color: "#d87307", marginBottom: 8 }}>{num}</p>
                   <h3 style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 12, lineHeight: 1.4 }}>{title}</h3>
                   <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.75, color: "#666" }}>{body}</p>
@@ -822,7 +822,7 @@ export default function Home() {
         <div className={`reveal${s5.inView ? " visible" : ""}`} style={{
           position: "relative", overflow: "hidden",
           width: "100vw", marginLeft: "calc(50% - 50vw)",
-          backgroundImage: "url('/images/shared/shared-outcomes-texture.png')", backgroundSize: "cover", backgroundPosition: "center",
+          backgroundImage: "url('/images/shared/shared-outcomes-texture.jpg')", backgroundSize: "cover", backgroundPosition: "center",
         }}>
           <div role="img" aria-label="Hay bale field at sunset with warm golden light" style={{ position: "absolute", inset: 0, pointerEvents: "none" }} />
           <div style={{ maxWidth: 1148, margin: "0 auto", padding: "0 24px" }}>
@@ -904,8 +904,8 @@ export default function Home() {
             e.currentTarget.querySelectorAll<HTMLImageElement>(".corner-bracket").forEach(img => (img.style.opacity = "0"));
           }}
           >
-            <img className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 18, right: 18, width: 40, height: 40, opacity: 0, transition: "opacity 0.25s ease" }} />
-            <img className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 18, left: 18, width: 40, height: 40, opacity: 0, transition: "opacity 0.25s ease" }} />
+            <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 18, right: 18, width: 40, height: 40, opacity: 0, transition: "opacity 0.25s ease" }} />
+            <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 18, left: 18, width: 40, height: 40, opacity: 0, transition: "opacity 0.25s ease" }} />
             <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase", color: "#999", marginBottom: 24 }}>
               {testimonials[testimonialIndex].title}
             </p>

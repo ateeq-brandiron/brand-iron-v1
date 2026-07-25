@@ -62,7 +62,7 @@ const pillars = [
   {
     num: "01", title: "Strategy",
     body: "Clarify goals, audience, messaging, and website structure.",
-    icon: (<img src="/images/icons/icon-lightbulb.svg" alt="" style={{ width: 24, height: 24 }} />),
+    icon: (<img loading="lazy" src="/images/icons/icon-lightbulb.svg" alt="" style={{ width: 24, height: 24 }} />),
   },
   {
     num: "02", title: "User Experience",
@@ -82,7 +82,7 @@ const pillars = [
   {
     num: "05", title: "Growth",
     body: "Connect your website to your business through analytics, lead capture, CRM integrations, and scalable content management.",
-    icon: (<img src="/images/icons/icon-lightning.svg" alt="" style={{ width: 24, height: 24 }} />),
+    icon: (<img loading="lazy" src="/images/icons/icon-lightning.svg" alt="" style={{ width: 24, height: 24 }} />),
   },
 ];
 
@@ -95,7 +95,7 @@ const processSteps = [
   {
     title: "Strategy",
     body: "Define the site's structure, messaging priorities, and success metrics.",
-    icon: (<img src="/images/icons/icon-lightbulb.svg" alt="" style={{ width: 20, height: 20 }} />),
+    icon: (<img loading="lazy" src="/images/icons/icon-lightbulb.svg" alt="" style={{ width: 20, height: 20 }} />),
   },
   {
     title: "UX Planning",
@@ -125,7 +125,7 @@ const processSteps = [
   {
     title: "Growth",
     body: "Monitor, optimize, and evolve the site as your business grows.",
-    icon: (<img src="/images/icons/icon-lightning.svg" alt="" style={{ width: 20, height: 20 }} />),
+    icon: (<img loading="lazy" src="/images/icons/icon-lightning.svg" alt="" style={{ width: 20, height: 20 }} />),
   },
 ];
 
@@ -533,7 +533,7 @@ export default function WebsiteDevelopmentPage() {
       {/* ── S6: WHAT SUCCESS LOOKS LIKE + FAQ ────────────────── */}
       <section style={{
         position: "relative", overflow: "hidden", padding: "120px 40px 48px",
-        backgroundImage: "url('/images/shared/shared-outcomes-texture.png')",
+        backgroundImage: "url('/images/shared/shared-outcomes-texture.jpg')",
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
         <div role="img" aria-label="Hay bale field at sunset with warm golden light" style={{ position: "absolute", inset: 0, background: "rgba(248,242,232,0.93)" }} />
@@ -598,7 +598,7 @@ export default function WebsiteDevelopmentPage() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div ref={ctaView.ref} className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{
             position: "relative", overflow: "hidden", borderRadius: 20,
-            backgroundImage: "url('/images/shared/shared-grass-prairie-circuit-lines.png')", backgroundSize: "cover", backgroundPosition: "center",
+            backgroundImage: "url('/images/shared/shared-grass-prairie-circuit-lines.jpg')", backgroundSize: "cover", backgroundPosition: "center",
           }}>
             <div role="img" aria-label="Grass prairie at sunset with a computer chip and glowing network lines woven through the field, representing a connected website technology foundation" style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.55)" }} />
             <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>

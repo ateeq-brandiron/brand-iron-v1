@@ -28,12 +28,12 @@ const processSteps = [
   {
     title: "Align",
     body: "We begin with BrandStorm™, bringing key decision-makers together to clarify your brand's direction, audience, differentiation, market position, and priorities before the work begins.",
-    icon: (<img src="/images/icons/icon-chat.svg" alt="" style={{ width: 20, height: 20 }} />),
+    icon: (<img loading="lazy" src="/images/icons/icon-chat.svg" alt="" style={{ width: 20, height: 20 }} />),
   },
   {
     title: "Define",
     body: "We transform strategic insights into a messaging platform, positioning framework, value proposition, and, when needed, a new brand name.",
-    icon: (<img src="/images/icons/icon-lightbulb.svg" alt="" style={{ width: 20, height: 20 }} />),
+    icon: (<img loading="lazy" src="/images/icons/icon-lightbulb.svg" alt="" style={{ width: 20, height: 20 }} />),
   },
   {
     title: "Design",
@@ -43,7 +43,7 @@ const processSteps = [
   {
     title: "Build",
     body: "Whether it's a website, capital raise deck, sales collateral, or everyday brand touchpoint, we bring your brand to life through digital experiences, presentation systems, graphic standards, and practical tools your team can use to move the business forward.",
-    icon: (<img src="/images/icons/icon-gear.svg" alt="" style={{ width: 20, height: 20 }} />),
+    icon: (<img loading="lazy" src="/images/icons/icon-gear.svg" alt="" style={{ width: 20, height: 20 }} />),
   },
   {
     title: "Launch",
@@ -53,7 +53,7 @@ const processSteps = [
   {
     title: "Strengthen",
     body: "Throughout the engagement, weekly meetings, reports, agendas, and client check-ins keep priorities aligned and decisions moving forward.",
-    icon: (<img src="/images/icons/icon-trending.svg" alt="" style={{ width: 20, height: 20 }} />),
+    icon: (<img loading="lazy" src="/images/icons/icon-trending.svg" alt="" style={{ width: 20, height: 20 }} />),
   },
 ];
 
@@ -95,7 +95,7 @@ const coreServices = [
     deliverable: "A strategic direction summary that guides messaging, naming, visual identity, website development, rollout, and launch planning.",
     outcome: "A shared foundation for confident decision-making.",
     scope: undefined,
-    icon: (<img src="/images/icons/icon-chat.svg" alt="" style={{ width: 24, height: 24 }} />),
+    icon: (<img loading="lazy" src="/images/icons/icon-chat.svg" alt="" style={{ width: 24, height: 24 }} />),
   },
   {
     num: "02", title: "Messaging and Positioning",
@@ -103,7 +103,7 @@ const coreServices = [
     deliverable: "A clear positioning direction that strengthens the organization's market narrative.",
     outcome: "Greater clarity, consistency, and differentiation.",
     scope: undefined,
-    icon: (<img src="/images/icons/icon-lightbulb.svg" alt="" style={{ width: 24, height: 24 }} />),
+    icon: (<img loading="lazy" src="/images/icons/icon-lightbulb.svg" alt="" style={{ width: 24, height: 24 }} />),
   },
   {
     num: "03", title: "Messaging Platform",
@@ -111,7 +111,7 @@ const coreServices = [
     deliverable: "A branded messaging presentation deck.",
     outcome: "A reusable communication system that helps teams speak with one clear voice.",
     scope: undefined,
-    icon: (<img src="/images/icons/icon-briefcase.svg" alt="" style={{ width: 24, height: 24 }} />),
+    icon: (<img loading="lazy" src="/images/icons/icon-briefcase.svg" alt="" style={{ width: 24, height: 24 }} />),
   },
   {
     num: "04", title: "Name Development",
@@ -119,14 +119,14 @@ const coreServices = [
     deliverable: "Curated naming options, strategic themes, preliminary availability findings, tagline exploration, and a recommended naming direction.",
     outcome: "A clear and ownable brand name direction built to support the company's long-term identity.",
     scope: undefined,
-    icon: (<img src="/images/icons/icon-arrow.svg" alt="" style={{ width: 24, height: 24 }} />),
+    icon: (<img loading="lazy" src="/images/icons/icon-arrow.svg" alt="" style={{ width: 24, height: 24 }} />),
   },
   {
     num: "05", title: "Brand Development",
     body: "We bring the full brand identity together in one connected system, from the name and logo to the overall look, feel, and standards that guide how the brand is used.",
     deliverable: undefined, outcome: undefined,
     scope: ["Name development", "Logo development", "Visual direction", "Mood and application boards", "Color palette", "Typography", "Graphic style", "Brand guidelines", "Practical application guidance"],
-    icon: (<img src="/images/icons/icon-gear.svg" alt="" style={{ width: 24, height: 24 }} />),
+    icon: (<img loading="lazy" src="/images/icons/icon-gear.svg" alt="" style={{ width: 24, height: 24 }} />),
   },
   {
     num: "06", title: "Logo, Mood, and Application Boards",
@@ -141,7 +141,7 @@ const coreServices = [
     body: "Consistency becomes easier when teams have the right tools. We create a branded presentation template and a practical standards manual that explains how the identity should be used.",
     deliverable: undefined, outcome: undefined,
     scope: ["Six to eight branded slide layouts", "Logo usage", "Color specifications", "Typography", "Graphic elements", "Supporting visual styles", "Sample applications", "Brand usage guidance"],
-    icon: (<img src="/images/icons/icon-barchart.svg" alt="" style={{ width: 24, height: 24 }} />),
+    icon: (<img loading="lazy" src="/images/icons/icon-barchart.svg" alt="" style={{ width: 24, height: 24 }} />),
   },
   {
     num: "08", title: "Multi-Page Website Design and Development",
@@ -155,7 +155,7 @@ const coreServices = [
     body: "A successful brand launch begins inside the organization. We help leadership introduce the new brand, explain why it matters, and give employees the clarity and tools needed to represent it consistently.",
     deliverable: undefined, outcome: undefined,
     scope: ["Internal brand rollout presentation", "Brand Iron-led presentation", "Internal communication plan", "Staff incentive brainstorming", "Employee engagement ideas", "Two internal communication pieces", "Email announcements", "Staff letters", "Office posters or launch materials"],
-    icon: (<img src="/images/icons/icon-lightning.svg" alt="" style={{ width: 24, height: 24 }} />),
+    icon: (<img loading="lazy" src="/images/icons/icon-lightning.svg" alt="" style={{ width: 24, height: 24 }} />),
   },
   {
     num: "10", title: "Go-to-Market Launch Plan",
@@ -711,7 +711,7 @@ export default function BrandStrategyPage() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div ref={ctaView.ref} className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{
             position: "relative", overflow: "hidden", borderRadius: 20,
-            backgroundImage: "url('/images/brand-strategy/brand-strategy-cta-lake.png')", backgroundSize: "cover", backgroundPosition: "center",
+            backgroundImage: "url('/images/brand-strategy/brand-strategy-cta-lake.jpg')", backgroundSize: "cover", backgroundPosition: "center",
           }}>
             <div role="img" aria-label="Snow-capped mountain range reflected in a still lake surrounded by golden autumn aspen trees" style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
             <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>
