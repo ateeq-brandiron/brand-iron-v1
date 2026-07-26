@@ -138,12 +138,13 @@ export default function OutboundGrowthPage() {
 
       {/* ── HERO ───────────────────────────────────────────── */}
       <section className="og-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
-        <div style={{
-          position: "absolute", inset: 0,
-          backgroundImage: "url('/images/outbound-growth/outbound-growth-hero-prairie-sky.jpg')",
-          backgroundSize: "cover", backgroundPosition: "center",
-        }} />
-        <div role="img" aria-label="Wide-open prairie grassland under a dramatic sky of streaking storm clouds, with distant mesas on the horizon" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.35) 0%, rgba(8,16,36,0.25) 45%, rgba(8,16,36,0.65) 100%)" }} />
+        <video
+          src="/videos/outbound-growth/outbound-growth-hero.mp4"
+          aria-label="Wide-open prairie grassland under a dramatic sky of drifting storm clouds, with distant mesas on the horizon"
+          autoPlay muted loop playsInline preload="auto"
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}
+        />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.35) 0%, rgba(8,16,36,0.25) 45%, rgba(8,16,36,0.65) 100%)" }} />
 
         <div className="og-hero-wrap" style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", padding: "88px 24px 24px" }}>
           <div className="og-hero-grid" style={{ maxWidth: 1200, margin: "0 auto", width: "100%", display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 56, alignItems: "center" }}>
