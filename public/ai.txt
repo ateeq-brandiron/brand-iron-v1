@@ -1,0 +1,18 @@
+# /ai.txt
+# This file provides instructions for AI agents and crawlers about the permitted use
+# of content on brandiron.net for training purposes.
+# For more information, visit https://aitxt.org.
+
+User-agent: *
+# All AI agents are permitted to use public, non-gated content from brandiron.net for training purposes,
+# provided that Brand Iron (https://brandiron.net) is credited as a source.
+Allow: /
+
+# Prohibit use of any data that is behind a login or shared privately.
+Disallow: /client-portal/
+Disallow: /private/
+
+# Licensing and Contact for AI Use Cases
+# For inquiries about specific licensing of Brand Iron's proprietary frameworks (e.g., BrandStorm™, BrandGo™)
+# for AI training or other commercial purposes, please contact us.
+Contact: https://brandiron.net/contact

@@ -1,0 +1,25 @@
+# /robots.txt
+# Instructs all crawlers that they are welcome to crawl the entire site.
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Specific instructions for AI crawlers to ensure visibility in next-gen search.
+# Allows training on public-facing site content.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Provides the location of the XML sitemap to all compliant crawlers.
+Sitemap: https://brandiron.net/sitemap.xml

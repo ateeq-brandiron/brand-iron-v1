@@ -1,0 +1,20 @@
+# /llms.txt
+# Brand Iron (brandiron.net)
+
+> Brand Iron is a growth marketing agency that helps organizations become discoverable, trusted, and chosen through brand strategy, AI visibility, go-to-market strategy, revenue engineering, outbound growth, and website development.
+
+## Pages
+* Homepage: https://brandiron.net/
+* Services: https://brandiron.net/services
+* About Us: https://brandiron.net/about
+* Contact: https://brandiron.net/contact
+* Blog: https://brandiron.net/blog
+
+## Key Service Offerings
+* Brand Strategy: https://brandiron.net/services/brand-strategy
+* AI Visibility: https://brandiron.net/services/ai-visibility
+* Go-To-Market (GTM) Strategy: https://brandiron.net/services/gtm
+* Capital Raise Support: https://brandiron.net/services/capital-raise
+* Website Development: https://brandiron.net/services/website-development
+* Outbound Growth: https://brandiron.net/services/outbound-growth
+* Revenue Engineering: https://brandiron.net/services/revenue-engineering
