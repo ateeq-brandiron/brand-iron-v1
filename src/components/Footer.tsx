@@ -73,7 +73,7 @@ export default function Footer() {
 
             {/* Nav links */}
             <nav className="footer-nav" style={{ display: "flex", flexWrap: "nowrap", justifyContent: "space-between", gap: "0 2px", marginBottom: 28, overflowX: "auto" }}>
-              {navLinks.map(([label, href], i) => (
+              {navLinks.map(([label, href]) => (
                 <span key={label} style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
                   <Link href={href} style={{
                     fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700,
@@ -84,7 +84,6 @@ export default function Footer() {
                   onMouseEnter={e => (e.currentTarget.style.color = "#d87307")}
                   onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.85)")}
                   >{label}</Link>
-                  {i < navLinks.length - 1 && <span style={{ display: "inline-block", width: 1, height: 12, background: "rgba(255,255,255,0.25)" }} />}
                 </span>
               ))}
             </nav>
