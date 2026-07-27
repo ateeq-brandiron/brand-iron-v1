@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import CircuitOverlay from "@/components/CircuitOverlay";
 
 const services = [
   {
@@ -209,13 +208,12 @@ export default function ServicesPage() {
 
       {/* ── FINAL CTA ────────────────────────────────────────── */}
       <section style={{ background: "#F0EEEA", padding: "80px 24px", position: "relative", overflow: "hidden" }}>
-        <CircuitOverlay />
         <div style={{ maxWidth: 1100, margin: "0 auto", position: "relative", zIndex: 1 }}>
           <div ref={ctaView.ref} className={`reveal${ctaView.inView ? " visible" : ""}`} style={{
             position: "relative", overflow: "hidden", borderRadius: 20,
-            backgroundImage: "url('/images/services-hub/services-hub-horse-portrait.jpg')", backgroundSize: "cover", backgroundPosition: "center",
+            backgroundImage: "url('/images/services-hub/services-hub-cta-mountain-meadow.jpg')", backgroundSize: "cover", backgroundPosition: "center",
           }}>
-            <div role="img" aria-label="Black-and-white portrait of a shaggy-maned draft horse facing the camera in a field" style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
+            <div role="img" aria-label="Mountain range with a wildflower meadow in the foreground at sunset" style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
             <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>
               <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 20 }}>
                 Ready to Start?
