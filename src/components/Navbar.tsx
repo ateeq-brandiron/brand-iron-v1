@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 
 const servicesMenu = [
@@ -21,31 +21,17 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
     <nav style={{
-      position: "fixed", top: 0, left: 0, right: 0, zIndex: 1000,
-      background: scrolled ? "rgba(10,14,24,0.94)" : "transparent",
-      backdropFilter: scrolled ? "blur(10px)" : "none",
-      boxShadow: scrolled ? "0 4px 24px rgba(0,0,0,0.2)" : "none",
-      transition: "background 0.3s ease, box-shadow 0.3s ease",
+      position: "absolute", top: 0, left: 0, right: 0, zIndex: 1000,
+      background: "transparent",
     }}>
-      <div style={{
-        maxWidth: 1360, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between",
-        minHeight: scrolled ? 72 : 92, transition: "min-height 0.3s ease",
-      }}>
+      <div style={{ maxWidth: 1360, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between", minHeight: 92 }}>
 
         {/* Logo */}
-        <Link href="/" style={{ display: "flex", alignItems: "center", flexShrink: 0, paddingTop: scrolled ? 0 : 14, transition: "padding 0.3s ease" }}>
-          <img src="/images/shared/shared-logo-white.png" alt="Brand Iron" style={{ height: scrolled ? 52 : 68, width: "auto", transition: "transform 0.25s ease, opacity 0.25s ease, height 0.3s ease" }}
+        <Link href="/" style={{ display: "flex", alignItems: "center", flexShrink: 0, paddingTop: 14 }}>
+          <img src="/images/shared/shared-logo-white.png" alt="Brand Iron" style={{ height: 68, width: "auto", transition: "transform 0.25s ease, opacity 0.25s ease" }}
             onMouseEnter={e => { e.currentTarget.style.transform = "scale(1.05)"; e.currentTarget.style.opacity = "0.85"; }}
             onMouseLeave={e => { e.currentTarget.style.transform = "scale(1)"; e.currentTarget.style.opacity = "1"; }}
           />
