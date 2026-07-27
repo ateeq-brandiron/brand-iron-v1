@@ -27,7 +27,7 @@ const services = [
     href: "/services/gtm",
     description: "Go-to-market strategies built for how buyers make decisions today, connecting strategy, visibility, authority, demand generation, sales, automation, and revenue into one cohesive growth engine.",
     icon: (
-      <svg width="30" height="30" viewBox="0 0 32 32" fill="none"><path d="M17.3333 22.6668H28M28 22.6668V12.0002M28 22.6668L17.3333 12.0002L12 17.3335L4 9.3335" stroke="#D87307" strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
+      <svg width="30" height="30" viewBox="0 0 32 32" fill="none"><path d="M17.3333 9.3332H28M28 9.3332V19.9998M28 9.3332L17.3333 19.9998L12 14.6665L4 22.6665" stroke="#D87307" strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
     ),
   },
   {

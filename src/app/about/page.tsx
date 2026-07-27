@@ -21,7 +21,7 @@ function useInView(threshold = 0.1) {
 // ── SVG Icons ────────────────────────────────────────────────────────────
 function IconRevenueFirst() {
   return (
-    <svg width="26" height="26" viewBox="0 0 32 32" fill="none"><polyline points="2,26 10,16 16,20 24,8 30,8" stroke="#d87307" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /><polyline points="24,8 30,8 30,14" stroke="#d87307" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+    <svg width="26" height="26" viewBox="0 0 32 32" fill="none"><path d="M17.3333 9.3332H28M28 9.3332V19.9998M28 9.3332L17.3333 19.9998L12 14.6665L4 22.6665" stroke="#d87307" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
   );
 }
 function IconIntegratedThinking() {
