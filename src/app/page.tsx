@@ -882,7 +882,7 @@ export default function Home() {
       </section>
 
       {/* ── S7: TESTIMONIALS ─────────────────────────────── */}
-      <section style={{ background: "#F7F4EE", padding: "88px 24px" }}>
+      <section style={{ background: "#F7F4EE", padding: "88px 24px 56px" }}>
         <div ref={s7.ref} style={{ maxWidth: 1100, margin: "0 auto", textAlign: "center" }}>
         <div style={{ maxWidth: 720, margin: "0 auto" }}>
           <p className={`reveal${s7.inView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 32 }}>
@@ -970,7 +970,7 @@ export default function Home() {
       </section>
 
       {/* ── S7B: FAQ ─────────────────────────────────────── */}
-      <section style={{ background: "#F8F5EF", padding: "100px 24px" }}>
+      <section style={{ background: "#F8F5EF", padding: "56px 24px 100px" }}>
         <div ref={s7faq.ref} style={{ maxWidth: 900, margin: "0 auto" }}>
           <h2 className={`section-heading reveal${s7faq.inView ? " visible" : ""}`} style={{ color: "#1a1a1a", marginBottom: 8, textAlign: "left" }}>
             Frequently Asked Questions
