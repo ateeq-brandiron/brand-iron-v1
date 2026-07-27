@@ -18,6 +18,28 @@ function useInView(threshold = 0.15) {
   return { ref, inView };
 }
 
+// Counts up from 0 to `value` once `trigger` becomes true, then holds.
+function AnimatedStat({ value, suffix = "", trigger }: { value: number; suffix?: string; trigger: boolean }) {
+  const [display, setDisplay] = useState(0);
+  const startedRef = useRef(false);
+  useEffect(() => {
+    if (!trigger || startedRef.current) return;
+    startedRef.current = true;
+    const duration = 1400;
+    const start = performance.now();
+    let raf: number;
+    const tick = (now: number) => {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setDisplay(Math.round(value * eased));
+      if (progress < 1) raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [trigger, value]);
+  return <>{display.toLocaleString()}{suffix}</>;
+}
+
 const services = [
   { label: "Brand Strategy", href: "/services/brand-strategy" },
   { label: "AI Visibility", href: "/services/ai-visibility" },
@@ -321,11 +343,11 @@ export default function Home() {
             {/* Stats */}
             <div className="trust-stats-row" style={{ display: "flex", gap: "20px 24px" }}>
               {[
-                { key: "briefcase", num: "50+", label: "Brands Supported" },
-                { key: "trending", num: "150,000+", label: "Investor Network" },
+                { key: "briefcase", value: 50, suffix: "+", label: "Brands Supported" },
+                { key: "trending", value: 150000, suffix: "+", label: "Investor Network" },
                 { key: "lightbulb", num: "AI-First", label: "Growth Strategies" },
                 { key: "gear", num: "Brand Strategy", label: "GTM • Revenue Engineering" },
-              ].map(({ key, num, label }, i) => {
+              ].map(({ key, num, value, suffix, label }, i) => {
                 const statIcons: Record<string, ReactNode> = {
                   briefcase: <svg width="30" height="30" viewBox="0 0 48 48" fill="none"><path d="M38 22H10M38 22C39.0609 22 40.0783 22.4214 40.8284 23.1716C41.5786 23.9217 42 24.9391 42 26V38C42 39.0609 41.5786 40.0783 40.8284 40.8284C40.0783 41.5786 39.0609 42 38 42H10C8.93913 42 7.92172 41.5786 7.17157 40.8284C6.42143 40.0783 6 39.0609 6 38V26C6 24.9391 6.42143 23.9217 7.17157 23.1716C7.92172 22.4214 8.93913 22 10 22M38 22V18C38 16.9391 37.5786 15.9217 36.8284 15.1716C36.0783 14.4214 35.0609 14 34 14M10 22V18C10 16.9391 10.4214 15.9217 11.1716 15.1716C11.9217 14.4214 12.9391 14 14 14M34 14V10C34 8.93913 33.5786 7.92172 32.8284 7.17157C32.0783 6.42143 31.0609 6 30 6H18C16.9391 6 15.9217 6.42143 15.1716 7.17157C14.4214 7.92172 14 8.93913 14 10V14M34 14H14" stroke="#D87307" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round"/></svg>,
                   trending: <svg width="30" height="30" viewBox="0 0 32 32" fill="none"><path d="M17.3333 22.6668H28M28 22.6668V12.0002M28 22.6668L17.3333 12.0002L12 17.3335L4 9.3335" stroke="#D87307" strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round"/></svg>,
@@ -356,7 +378,9 @@ export default function Home() {
                     {statIcons[key]}
                   </div>
                   <div>
-                    <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 25, fontWeight: 900, color: "#1a1a1a", letterSpacing: "0.02em", lineHeight: 1.15, whiteSpace: "nowrap", transition: "color 0.25s ease" }}>{num}</p>
+                    <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 25, fontWeight: 900, color: "#1a1a1a", letterSpacing: "0.02em", lineHeight: 1.15, whiteSpace: "nowrap", transition: "color 0.25s ease" }}>
+                      {typeof value === "number" ? <AnimatedStat value={value} suffix={suffix} trigger={s2.inView} /> : num}
+                    </p>
                     <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, color: "#555", fontWeight: 500, marginTop: 4 }}>{label}</p>
                   </div>
                 </div>
