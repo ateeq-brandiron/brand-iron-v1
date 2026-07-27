@@ -888,8 +888,9 @@ export default function Home() {
           <p className={`reveal${s7.inView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 32 }}>
             What Our Clients Say
           </p>
-          <div className={`reveal${s7.inView ? " visible" : ""}`} style={{
-            background: "#FFFFFF", borderRadius: 20, padding: "52px 56px", position: "relative",
+          <div className={`reveal${s7.inView ? " visible" : ""} testimonial-card`} style={{
+            background: "#FFFFFF", borderRadius: 20, position: "relative",
+            display: "flex", flexDirection: "column", justifyContent: "center",
             boxShadow: "0 24px 60px rgba(26,20,10,0.08)", border: "1px solid rgba(26,20,10,0.04)",
             transition: "transform 0.35s ease, box-shadow 0.35s ease",
           }}
@@ -967,6 +968,12 @@ export default function Home() {
           </div>
         </div>
         </div>
+        <style>{`
+          .testimonial-card { padding: 52px 56px; min-height: 440px; }
+          @media (max-width: 640px) {
+            .testimonial-card { padding: 32px 24px; min-height: 610px; }
+          }
+        `}</style>
       </section>
 
       {/* ── S7B: FAQ ─────────────────────────────────────── */}
