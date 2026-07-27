@@ -86,7 +86,7 @@ export default function Navbar() {
             )}
           </div>
 
-          <span style={{ color: "rgba(255,255,255,0.3)", fontSize: 12 }}>|</span>
+          <span style={{ display: "inline-block", width: 1, height: 14, background: "rgba(255,255,255,0.3)" }} />
 
           {navLinks.map(l => (
             <span key={l.href} style={{ display: "flex", alignItems: "center", gap: 18 }}>
@@ -99,7 +99,7 @@ export default function Navbar() {
               onMouseEnter={e => (e.currentTarget.style.color = "#d87307")}
               onMouseLeave={e => (e.currentTarget.style.color = "#FFFFFF")}
               >{l.label}</Link>
-              <span style={{ color: "rgba(255,255,255,0.3)", fontSize: 12 }}>|</span>
+              <span style={{ display: "inline-block", width: 1, height: 14, background: "rgba(255,255,255,0.3)" }} />
             </span>
           ))}
 
