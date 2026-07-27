@@ -84,7 +84,7 @@ export default function Footer() {
                   onMouseEnter={e => (e.currentTarget.style.color = "#d87307")}
                   onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.85)")}
                   >{label}</Link>
-                  {i < navLinks.length - 1 && <span style={{ color: "rgba(255,255,255,0.25)", fontSize: 11 }}>|</span>}
+                  {i < navLinks.length - 1 && <span style={{ display: "inline-block", width: 1, height: 12, background: "rgba(255,255,255,0.25)" }} />}
                 </span>
               ))}
             </nav>
