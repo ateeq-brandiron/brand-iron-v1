@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Brand Strategy Services | Brand Iron",
   description: "Build a brand that earns trust and holds its ground. Brand Iron's brand strategy services connect positioning, messaging, and visual identity into one system.",
+  alternates: { canonical: "/services/brand-strategy" },
+  openGraph: { type: "article" },
 };
 
 export default function BrandStrategyLayout({ children }: { children: React.ReactNode }) {

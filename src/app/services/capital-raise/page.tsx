@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import CircuitOverlay from "@/components/CircuitOverlay";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import ServiceSchema from "@/components/ServiceSchema";
 
 function useInView(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null);
@@ -186,6 +187,11 @@ export default function CapitalRaisePage() {
           { name: "Services", url: "https://brandiron.net/services" },
           { name: "Capital Raise Support", url: "https://brandiron.net/services/capital-raise" },
         ]}
+      />
+      <ServiceSchema
+        name="Capital Raise Support Service"
+        serviceType="Capital Raise & Investor Relations Support"
+        description="Brand Iron helps founders prepare for investment with compelling pitch decks, fundraising strategy, and targeted investor outreach for capital raise support."
       />
 
       {/* ── HERO ───────────────────────────────────────────── */}

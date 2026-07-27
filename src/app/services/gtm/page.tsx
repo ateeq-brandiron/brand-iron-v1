@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, Fragment } from "react";
 import CircuitOverlay from "@/components/CircuitOverlay";
 import GrowthReviewModal from "@/components/GrowthReviewModal";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import ServiceSchema from "@/components/ServiceSchema";
 
 function useInView(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null);
@@ -81,6 +82,11 @@ export default function GTMPage() {
           { name: "Services", url: "https://brandiron.net/services" },
           { name: "GTM Strategy", url: "https://brandiron.net/services/gtm" },
         ]}
+      />
+      <ServiceSchema
+        name="GTM Strategy Service"
+        serviceType="Go-to-Market Strategy"
+        description="Brand Iron's go-to-market strategy services align positioning, messaging, and execution into a connected GTM framework built for AI-driven buyers."
       />
 
       {growthReviewOpen && <GrowthReviewModal onClose={() => setGrowthReviewOpen(false)} />}

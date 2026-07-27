@@ -14,6 +14,7 @@ export type Article = {
   excerpt: string;
   readTime: string;
   date: string;
+  publishedISO: string;
   headerImage: string;
   headerImageAlt: string;
   body: ArticleBlock[];
@@ -24,6 +25,7 @@ export type Article = {
 export const articles: Article[] = [
   {
     slug: "when-to-hire-a-go-to-market-strategy-consultant",
+    publishedISO: "2026-07-01",
     category: "GTM Strategy",
     title: "When to Hire a Go-To-Market Strategy Consultant",
     excerpt: "A go-to-market (GTM) strategy consultant is essential when your business needs expert guidance to launch new products, enter new markets, or significantly improve market penetration and revenue, especially for founders, CEOs, and business owners facing unclear market paths or stalled growth.",
@@ -166,6 +168,7 @@ export const articles: Article[] = [
   },
   {
     slug: "gtm-strategy-partner",
+    publishedISO: "2026-07-01",
     category: "GTM Strategy",
     title: "Brand Iron: Your GTM Strategy & Growth Partner",
     excerpt: "Brand Iron is more than a marketing agency — it's a GTM strategy partner that helps companies plan, launch, and scale with clarity and precision.",
@@ -350,6 +353,7 @@ export const articles: Article[] = [
   },
   {
     slug: "why-ai-implementations-fail",
+    publishedISO: "2026-06-01",
     category: "AI Transformation",
     title: "Why 90% of AI Implementations Fail to Create Business Value",
     excerpt: "Most organizations approach AI as a technology project. The ones that succeed treat it as a business transformation initiative with technology as the enabler.",
@@ -372,6 +376,7 @@ export const articles: Article[] = [
   },
   {
     slug: "revenue-system-problem",
+    publishedISO: "2026-05-01",
     category: "Revenue Strategy",
     title: "The Revenue System Problem: Why Disconnected Teams Destroy Growth",
     excerpt: "Marketing, sales, and operations all working hard but growth is stagnant. The problem isn't effort, it's architecture.",
@@ -393,6 +398,7 @@ export const articles: Article[] = [
   },
   {
     slug: "crm-as-revenue-engine",
+    publishedISO: "2026-05-01",
     category: "Revenue Operations",
     title: "CRM as a Revenue Engine: Beyond Contact Management",
     excerpt: "A CRM that only tracks deals is a missed opportunity. Here's how the highest-performing revenue teams use their CRM to accelerate growth.",
@@ -413,6 +419,7 @@ export const articles: Article[] = [
   },
   {
     slug: "what-investors-want-in-pitch-deck-2026",
+    publishedISO: "2026-04-01",
     category: "Capital Raise",
     title: "What Investors Actually Want to See in Your Pitch Deck in 2026",
     excerpt: "The bar has changed. In a market with more scrutiny and less capital chasing deals, your story needs to be airtight.",
@@ -433,6 +440,7 @@ export const articles: Article[] = [
   },
   {
     slug: "death-of-the-mql",
+    publishedISO: "2026-04-01",
     category: "Demand Generation",
     title: "The Death of the MQL: How to Measure Marketing in a Revenue-Focused World",
     excerpt: "Marketing qualified leads are a vanity metric that disconnects marketing from revenue outcomes. Here's what to measure instead.",
@@ -453,6 +461,7 @@ export const articles: Article[] = [
   },
   {
     slug: "ai-agents-for-revenue-teams",
+    publishedISO: "2026-03-01",
     category: "AI Transformation",
     title: "AI Agents for Revenue Teams: What Works and What Doesn't",
     excerpt: "We've deployed AI agents across dozens of revenue organizations. Here's what we've learned about where they create real value.",
@@ -472,6 +481,7 @@ export const articles: Article[] = [
   },
   {
     slug: "revenue-automation-framework",
+    publishedISO: "2026-03-01",
     category: "Automation",
     title: "Revenue Automation That Actually Works: A Practical Framework",
     excerpt: "Stop automating tasks and start automating outcomes. The difference determines whether automation creates leverage or just activity.",
@@ -491,6 +501,7 @@ export const articles: Article[] = [
   },
   {
     slug: "ceo-guide-to-revenue-transformation-2026",
+    publishedISO: "2026-02-01",
     category: "Executive Leadership",
     title: "The CEO's Guide to Revenue Transformation in 2026",
     excerpt: "What separates companies that compound growth from those that plateau isn't strategy, it's the system they use to execute it.",
@@ -510,6 +521,7 @@ export const articles: Article[] = [
   },
   {
     slug: "integrating-ai-without-starting-over",
+    publishedISO: "2026-02-01",
     category: "Digital Transformation",
     title: "Integrating AI Into Your Revenue Stack Without Starting Over",
     excerpt: "You don't need to replace your existing technology to transform with AI. Here's how to layer intelligence on what you already have.",

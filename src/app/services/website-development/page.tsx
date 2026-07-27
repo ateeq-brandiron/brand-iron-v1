@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import CircuitOverlay from "@/components/CircuitOverlay";
 import WebsiteInquiryModal from "@/components/WebsiteInquiryModal";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import ServiceSchema from "@/components/ServiceSchema";
 
 function useInView(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null);
@@ -211,6 +212,11 @@ export default function WebsiteDevelopmentPage() {
           { name: "Services", url: "https://brandiron.net/services" },
           { name: "Website Development", url: "https://brandiron.net/services/website-development" },
         ]}
+      />
+      <ServiceSchema
+        name="Website Development Service"
+        serviceType="Website Development"
+        description="Brand Iron builds strategic websites that connect brand, messaging, and AI visibility into one platform designed to make your business discoverable and trusted."
       />
 
       {inquiryOpen && <WebsiteInquiryModal onClose={() => setInquiryOpen(false)} />}

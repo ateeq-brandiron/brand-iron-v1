@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import OutboundStrategyReviewModal from "@/components/OutboundStrategyReviewModal";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import ServiceSchema from "@/components/ServiceSchema";
 
 function useInView(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null);
@@ -140,6 +141,11 @@ export default function OutboundGrowthPage() {
           { name: "Services", url: "https://brandiron.net/services" },
           { name: "Outbound Growth", url: "https://brandiron.net/services/outbound-growth" },
         ]}
+      />
+      <ServiceSchema
+        name="Outbound Growth Service"
+        serviceType="Outbound Growth (LinkedIn, Email, SDR)"
+        description="Build a stronger B2B pipeline with Brand Iron's LinkedIn outreach, email campaigns, SDR programs, appointment setting, and sales enablement services."
       />
 
       {reviewOpen && <OutboundStrategyReviewModal onClose={() => setReviewOpen(false)} />}

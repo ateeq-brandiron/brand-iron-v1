@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import CircuitOverlay from "@/components/CircuitOverlay";
 import BrandingProposalModal from "@/components/BrandingProposalModal";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import ServiceSchema from "@/components/ServiceSchema";
 
 function useInView(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null);
@@ -271,6 +272,11 @@ export default function BrandStrategyPage() {
           { name: "Services", url: "https://brandiron.net/services" },
           { name: "Brand Strategy", url: "https://brandiron.net/services/brand-strategy" },
         ]}
+      />
+      <ServiceSchema
+        name="Brand Strategy Service"
+        serviceType="Brand Strategy & Positioning"
+        description="Build a brand that earns trust and holds its ground. Brand Iron's brand strategy services connect positioning, messaging, and visual identity into one system."
       />
 
       {proposalOpen && <BrandingProposalModal onClose={() => setProposalOpen(false)} />}

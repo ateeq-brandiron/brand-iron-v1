@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import RevenueStrategistModal from "@/components/RevenueStrategistModal";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import ServiceSchema from "@/components/ServiceSchema";
 
 function useInView(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null);
@@ -139,6 +140,11 @@ export default function RevenueEngineeringPage() {
           { name: "Services", url: "https://brandiron.net/services" },
           { name: "Revenue Engineering", url: "https://brandiron.net/services/revenue-engineering" },
         ]}
+      />
+      <ServiceSchema
+        name="Revenue Engineering Service"
+        serviceType="Revenue Operations & Engineering"
+        description="Build a stronger revenue system with CRM optimization, marketing automation, funnel improvement, RevOps, reporting, and attribution from Brand Iron."
       />
 
       {reviewOpen && <RevenueStrategistModal onClose={() => setReviewOpen(false)} />}

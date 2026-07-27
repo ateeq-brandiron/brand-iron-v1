@@ -12,9 +12,19 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const article = articles.find(a => a.slug === slug);
   if (!article) return {};
+  const title = article.seoTitle ?? article.title;
+  const description = article.metaDescription ?? article.excerpt;
   return {
-    title: article.seoTitle ?? article.title,
-    description: article.metaDescription ?? article.excerpt,
+    title,
+    description,
+    alternates: { canonical: `/blog/${article.slug}` },
+    openGraph: {
+      type: "article",
+      title,
+      description,
+      publishedTime: article.publishedISO,
+      authors: ["Michael Doyle"],
+    },
   };
 }
 

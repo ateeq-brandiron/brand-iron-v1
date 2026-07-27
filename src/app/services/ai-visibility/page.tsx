@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import AuditModal from "@/components/AuditModal";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import ServiceSchema from "@/components/ServiceSchema";
 
 function useInView(threshold = 0.12) {
   const ref = useRef<HTMLDivElement>(null);
@@ -112,6 +113,11 @@ export default function AIVisibilityPage() {
           { name: "Services", url: "https://brandiron.net/services" },
           { name: "AI Visibility & Discoverability", url: "https://brandiron.net/services/ai-visibility" },
         ]}
+      />
+      <ServiceSchema
+        name="AI Visibility Service"
+        serviceType="AI Engine Optimization (AEO)"
+        description="Our AI Visibility service ensures your business becomes discoverable, trusted, and chosen in today's AI-driven buying landscape."
       />
 
       {auditOpen && <AuditModal onClose={() => setAuditOpen(false)} />}

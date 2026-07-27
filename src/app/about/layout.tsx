@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Brand Iron | Our Team & Growth Marketing Approach",
-  description: "Meet the Brand Iron team and see how our brand strategy approach helps growth marketing agency clients become discoverable, trusted, and chosen.",
+  title: "About Brand Iron | Our Story & Mission",
+  description: "Learn about Brand Iron's approach to forging brands and driving revenue for growth-focused businesses.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutLayout({ children }: { children: React.ReactNode }) {
