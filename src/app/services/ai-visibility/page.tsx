@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import AuditModal from "@/components/AuditModal";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 function useInView(threshold = 0.12) {
   const ref = useRef<HTMLDivElement>(null);
@@ -105,6 +106,13 @@ export default function AIVisibilityPage() {
 
   return (
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://brandiron.net" },
+          { name: "Services", url: "https://brandiron.net/services" },
+          { name: "AI Visibility & Discoverability", url: "https://brandiron.net/services/ai-visibility" },
+        ]}
+      />
 
       {auditOpen && <AuditModal onClose={() => setAuditOpen(false)} />}
 

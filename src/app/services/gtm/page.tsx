@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState, useEffect, useRef, Fragment } from "react";
 import CircuitOverlay from "@/components/CircuitOverlay";
 import GrowthReviewModal from "@/components/GrowthReviewModal";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 function useInView(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null);
@@ -74,6 +75,13 @@ export default function GTMPage() {
 
   return (
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://brandiron.net" },
+          { name: "Services", url: "https://brandiron.net/services" },
+          { name: "GTM Strategy", url: "https://brandiron.net/services/gtm" },
+        ]}
+      />
 
       {growthReviewOpen && <GrowthReviewModal onClose={() => setGrowthReviewOpen(false)} />}
 

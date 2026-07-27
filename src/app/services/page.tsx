@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 const services = [
   {
@@ -89,6 +90,12 @@ export default function ServicesPage() {
 
   return (
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://brandiron.net" },
+          { name: "Services", url: "https://brandiron.net/services" },
+        ]}
+      />
 
       {/* ── HERO ───────────────────────────────────────────── */}
       <section className="svc-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>

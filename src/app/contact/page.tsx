@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 function useInView(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);
@@ -122,6 +123,12 @@ export default function ContactPage() {
 
   return (
     <main>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://brandiron.net" },
+          { name: "Contact", url: "https://brandiron.net/contact" },
+        ]}
+      />
       {/* Hero */}
       <section style={{
         position: "relative", minHeight: "50vh", display: "flex", alignItems: "center",

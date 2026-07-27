@@ -1,0 +1,30 @@
+# /llms-full.txt
+# Full-Site Content for Brand Iron (https://brandiron.net)
+
+## Homepage: Forging Brands. Driving Revenue.
+
+Helping organizations become discoverable, trusted, and chosen in today's AI-driven buying landscape.
+
+### What We Do
+Brand Iron is a strategic branding and marketing agency that specializes in transforming businesses, from startups to large firms, into market leaders.
+
+### The Modern Buying Journey
+Today's buyers complete much of their decision-making before ever speaking with your team. They search Google, ask AI assistants, and evaluate options independently.
+
+1. **Discover:** Be present where discovery starts — search engines, AI assistants, social platforms.
+2. **Evaluate:** Reinforce confidence with clear messaging, expertise, and a professional website.
+3. **Trust:** Earn trust with thought leadership, case studies, reviews, and consistent branding.
+4. **Engage:** Convert interest into conversations with effortless user experiences.
+5. **Choose:** Become the most discoverable, credible, and trusted choice.
+
+### Our Solutions
+* **Brand Strategy:** Forging a unique market position so your business is not interchangeable.
+* **AI Visibility:** Ensuring you are found and trusted by both human buyers and AI assistants.
+* **GTM Strategy:** Aligning brand, marketing, sales, and technology for cohesive growth.
+* **Capital Raise Support:** Crafting compelling investor narratives and decks.
+* **Website Development:** Building sites that convert discovery into engagement.
+* **Outbound Growth:** LinkedIn, email, and SDR programs that build a stronger B2B pipeline.
+* **Revenue Engineering:** Connecting CRM, automation, and reporting into one revenue system.
+
+### Contact
+Book a Strategy Session: https://brandiron.net/contact

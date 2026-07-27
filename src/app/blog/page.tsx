@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { articles } from "@/data/articles";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 const AUTHOR = "Michael Doyle";
 
@@ -85,6 +86,12 @@ export default function InsightsPage() {
 
   return (
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://brandiron.net" },
+          { name: "Blog", url: "https://brandiron.net/blog" },
+        ]}
+      />
 
       {/* ── HERO ───────────────────────────────────────────── */}
       <section className="blog-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>

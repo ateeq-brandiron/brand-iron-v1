@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import CircuitOverlay from "@/components/CircuitOverlay";
 import BrandingProposalModal from "@/components/BrandingProposalModal";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 function useInView(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null);
@@ -264,6 +265,13 @@ export default function BrandStrategyPage() {
 
   return (
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://brandiron.net" },
+          { name: "Services", url: "https://brandiron.net/services" },
+          { name: "Brand Strategy", url: "https://brandiron.net/services/brand-strategy" },
+        ]}
+      />
 
       {proposalOpen && <BrandingProposalModal onClose={() => setProposalOpen(false)} />}
 

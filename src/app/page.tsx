@@ -135,31 +135,26 @@ const testimonials = [
   },
 ];
 
-// Draft copy — replace with final Q&A once provided.
 const homeFaqs = [
   {
-    q: "What does Brand Iron do?",
-    a: "Brand Iron is a growth marketing agency that helps organizations become discoverable, trusted, and chosen. We connect brand strategy, go-to-market planning, AI visibility, website development, and revenue engineering into one system instead of treating them as separate projects.",
+    q: "What is Brand Iron?",
+    a: "Brand Iron is a strategic branding and marketing agency that helps businesses become discoverable, trusted, and chosen in today's AI-driven buying landscape.",
   },
   {
-    q: "How is Brand Iron's brand strategy work different from a typical branding agency?",
-    a: "We build branding as a business system, not just a visual refresh. Brand strategy work is connected directly to messaging, go-to-market execution, and revenue goals, so the brand actually supports growth instead of sitting on a shelf.",
+    q: "What makes Brand Iron different?",
+    a: "Our unique approach and proprietary frameworks like BrandStorm™ and BrandGo™ position clients for measurable growth.",
   },
   {
-    q: "What is a go-to-market (GTM) strategy, and does my business need one?",
-    a: "A GTM strategy is the plan for how you bring a product or service to market: audience, positioning, channels, and execution. Most businesses launching something new, entering a new market, or seeing stalled growth benefit from a structured GTM strategy rather than ad hoc campaigns.",
+    q: "Who does Brand Iron work with?",
+    a: "We serve entrepreneurs, founders, executives, investors, and growth-focused organizations, from startups to established firms.",
   },
   {
-    q: "What is AI visibility, and why does it matter now?",
-    a: "AI visibility is how discoverable your business is across AI platforms, search engines, and the other places modern buyers research before ever contacting you. As AI-driven search grows, businesses that aren't optimized for it become harder to find, even if their traditional SEO is strong.",
+    q: "How does Brand Iron help with fundraising?",
+    a: "We create bespoke Capital Raise Decks and provide strategic support to help clients secure funding.",
   },
   {
-    q: "Do you build websites, or only handle strategy and marketing?",
-    a: "Both. Brand Iron's website development services connect your brand, messaging, and AI visibility strategy directly into the site itself, so the website functions as a growth asset rather than a standalone design project.",
-  },
-  {
-    q: "How do I get started with Brand Iron?",
-    a: "Book a strategy session. We'll discuss your business, current challenges, and goals, then recommend which service, or combination of services, fits where you are right now.",
+    q: "Why is being visible in the “AI-driven buying landscape” important?",
+    a: "Today's buyers use search engines and AI assistants to research and evaluate options before ever contacting a company directly.",
   },
 ];
 

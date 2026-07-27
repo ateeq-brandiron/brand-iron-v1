@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import CircuitOverlay from "@/components/CircuitOverlay";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 function useInView(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null);
@@ -124,6 +125,12 @@ export default function AboutPage() {
 
   return (
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://brandiron.net" },
+          { name: "About", url: "https://brandiron.net/about" },
+        ]}
+      />
 
       {/* ── HERO ───────────────────────────────────────────── */}
       <section className="ab-hero-section" style={{

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import CircuitOverlay from "@/components/CircuitOverlay";
 import { articles } from "@/data/articles";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export function generateStaticParams() {
   return articles.map(a => ({ slug: a.slug }));
@@ -26,6 +27,13 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
   return (
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://brandiron.net" },
+          { name: "Blog", url: "https://brandiron.net/blog" },
+          { name: article.title, url: `https://brandiron.net/blog/${article.slug}` },
+        ]}
+      />
 
       {/* ── HEADER ───────────────────────────────────────────── */}
       <section style={{ position: "relative", overflow: "hidden", padding: "160px 24px 72px" }}>

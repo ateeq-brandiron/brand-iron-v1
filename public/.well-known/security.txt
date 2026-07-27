@@ -1,0 +1,5 @@
+# /.well-known/security.txt
+Contact: mailto:contact@brandiron.net
+Expires: 2027-07-22T12:00:00.000Z
+Preferred-Languages: en
+Canonical: https://brandiron.net/.well-known/security.txt

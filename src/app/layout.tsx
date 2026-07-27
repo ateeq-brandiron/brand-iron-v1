@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ChunkErrorRecovery from "@/components/ChunkErrorRecovery";
 import OrganizationSchema from "@/components/OrganizationSchema";
+import WebSiteSchema from "@/components/WebSiteSchema";
 
 const montserrat = localFont({
   src: "../../public/fonts/Montserrat-variable.woff2",
@@ -25,11 +26,38 @@ const burfordInline = localFont({
   display: "swap",
 });
 
+const HOME_TITLE = "Strategic Branding & GTM Agency | Forging Brands | Brand Iron";
+const HOME_DESCRIPTION =
+  "We're a branding & marketing agency specializing in GTM strategy, AI visibility, and capital raise support for growth-focused businesses.";
+// Interim OG/Twitter image - the site doesn't have a dedicated 1200x630 social
+// card graphic yet, so this reuses the embossed-logo footer image (dark
+// background, full wordmark, reads fine as a link-preview thumbnail). Swap
+// for a purpose-built social card image when one exists.
+const HOME_SOCIAL_IMAGE = "/images/shared/shared-footer-logo.jpeg";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://brandiron.net"),
-  title: "Brand Iron | Brand Strategy & Growth Marketing Agency",
-  description:
-    "Brand Iron helps organizations become discoverable, trusted, and chosen through brand strategy, AI visibility, and connected growth systems.",
+  title: HOME_TITLE,
+  description: HOME_DESCRIPTION,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://brandiron.net/",
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
+    images: [HOME_SOCIAL_IMAGE],
+    siteName: "Brand Iron",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@BrandIron",
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
+    images: [HOME_SOCIAL_IMAGE],
+  },
 };
 
 export default function RootLayout({
@@ -44,6 +72,7 @@ export default function RootLayout({
     >
       <body>
         <OrganizationSchema />
+        <WebSiteSchema />
         <ChunkErrorRecovery />
         <Navbar />
         {children}

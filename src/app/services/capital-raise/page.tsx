@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import CircuitOverlay from "@/components/CircuitOverlay";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 function useInView(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null);
@@ -179,6 +180,13 @@ export default function CapitalRaisePage() {
 
   return (
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://brandiron.net" },
+          { name: "Services", url: "https://brandiron.net/services" },
+          { name: "Capital Raise Support", url: "https://brandiron.net/services/capital-raise" },
+        ]}
+      />
 
       {/* ── HERO ───────────────────────────────────────────── */}
       <section className="cr-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
