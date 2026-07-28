@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Script from "next/script";
 import "./globals.css";
 
 import Navbar from "@/components/Navbar";
@@ -71,6 +72,18 @@ export default function RootLayout({
       className={`${montserrat.variable} ${burfordBlack.variable} ${burfordInline.variable}`}
     >
       <body>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-BDTVFDLTDK"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-BDTVFDLTDK');
+          `}
+        </Script>
         <OrganizationSchema />
         <WebSiteSchema />
         <ChunkErrorRecovery />
