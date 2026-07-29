@@ -53,7 +53,7 @@ function IconExecutionOverTheory() {
 
 // ── Data ─────────────────────────────────────────────────────────────────
 const VALUES = [
-  { title: "Revenue First", body: "Every decision is evaluated through the lens of revenue impact. We don't do things that look good. We do things that work.", icon: <IconRevenueFirst /> },
+  { title: "Outcomes First", body: "Every decision is measured by real business outcomes: brand equity, growth, or capital raised. We don't do things that look good. We do things that work.", icon: <IconRevenueFirst /> },
   { title: "Integrated Thinking", body: "We connect strategy to execution, marketing to sales, technology to outcomes. Silos are the enemy of revenue.", icon: <IconIntegratedThinking /> },
   { title: "AI-Augmented Excellence", body: "We combine the power of AI with the judgment of experienced operators to deliver outcomes neither could achieve alone.", icon: <IconAIAugmented /> },
   { title: "Radical Transparency", body: "We tell you what you need to hear, not what you want to hear. Our clients grow because we hold them to a higher standard.", icon: <IconRadicalTransparency /> },
@@ -101,11 +101,11 @@ const TEAM = [
 ];
 
 const APPROACH_STEPS = [
-  { step: "01", title: "Diagnose", body: "We start by understanding how revenue actually flows through your business, not how it's supposed to work, but how it does." },
-  { step: "02", title: "Design", body: "We design the integrated revenue system your business needs, strategy, positioning, technology, and processes aligned to outcomes." },
-  { step: "03", title: "Build", body: "We build the infrastructure: CRM systems, AI automation, demand generation engines, and revenue intelligence platforms." },
-  { step: "04", title: "Deploy", body: "We deploy the system with your team, ensuring adoption, training, and the organizational buy-in that determines success." },
-  { step: "05", title: "Optimize", body: "We continuously monitor performance, identify optimization opportunities, and iterate based on real revenue data." },
+  { step: "01", title: "Diagnose", body: "We start by understanding how your brand, market position, and growth systems actually work today, not how they're supposed to." },
+  { step: "02", title: "Design", body: "We design the strategy your business needs: brand, go-to-market, AI visibility, and the systems that connect them to outcomes." },
+  { step: "03", title: "Build", body: "We build what it takes to execute: brand assets, websites, GTM campaigns, automation, and investor-ready materials." },
+  { step: "04", title: "Deploy", body: "We deploy it with your team, ensuring adoption, training, and the buy-in that determines whether it sticks." },
+  { step: "05", title: "Optimize", body: "We continuously monitor performance, identify what's working, and iterate based on real results." },
 ];
 
 const STATS = [
@@ -218,13 +218,13 @@ export default function AboutPage() {
             <div>
               <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 12 }}>Who We Are</p>
               <h2 className={`section-heading reveal${s2View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
-                A Different Kind of Growth Partner
+                A Different Kind of Brand &amp; Growth Partner
               </h2>
               <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#555", marginBottom: 16 }}>
-                We combine strategy, branding, go-to-market, AI, automation, CRM, and revenue operations into integrated systems that drive compounding, measurable growth.
+                We bring brand strategy, go-to-market, AI visibility, capital raise support, and website development together under one roof, working from a single playbook.
               </p>
               <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#555" }}>
-                Companies don&apos;t fail because they lack effort. They fail because their revenue systems are fragmented: marketing, sales, technology, and data all operating in separate lanes.
+                Companies don&apos;t fail because they lack effort. They fail because their brand, marketing, sales, and technology all operate in separate lanes instead of one system.
               </p>
             </div>
             <div className={`reveal-group${s2View.inView ? ' visible' : ''}`} style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
@@ -317,13 +317,13 @@ export default function AboutPage() {
             <div className={`reveal${s4View.inView ? ' visible' : ''}`}>
               <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 12 }}>Vision</p>
               <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(20px, 2.4vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.2, marginBottom: 20 }}>
-                A World Where Revenue Is Engineered, Not Hoped For
+                A World Where Brands Are Forged, Not Left to Chance
               </h3>
               <p style={{ fontSize: 15.5, lineHeight: 1.85, color: "#555", marginBottom: 16 }}>
-                We envision a future where every revenue-generating organization operates with complete alignment: strategy, brand, technology, and talent working as a single compounding system rather than competing factions.
+                We envision a future where every business we touch operates with complete alignment: brand, strategy, technology, and talent working as one system instead of competing factions.
               </p>
               <p style={{ fontSize: 15.5, lineHeight: 1.85, color: "#555" }}>
-                In that world, growth is predictable. Pipelines are engineered. And revenue becomes a function of design, not luck.
+                In that world, growth is predictable, brands are unmistakable, and success becomes a function of design, not luck.
               </p>
             </div>
             {/* Divider */}
@@ -332,13 +332,13 @@ export default function AboutPage() {
             <div className={`reveal${s4View.inView ? ' visible' : ''}`}>
               <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 12 }}>Mission</p>
               <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(20px, 2.4vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.2, marginBottom: 20 }}>
-                Transform How Companies Generate Revenue
+                Transform How Companies Build Their Brand
               </h3>
               <p style={{ fontSize: 15.5, lineHeight: 1.85, color: "#555", marginBottom: 16 }}>
-                We combine strategy, brand, go-to-market, AI automation, CRM, and revenue operations into integrated systems that produce compounding, measurable growth.
+                We combine brand strategy, go-to-market execution, AI visibility, capital raise support, and website development into one integrated system built around your business.
               </p>
               <p style={{ fontSize: 15.5, lineHeight: 1.85, color: "#555" }}>
-                Our work is not advisory. We build, deploy, and optimize the revenue infrastructure our clients need, and we stay accountable to results, not deliverables.
+                Our work is not advisory. We build, deploy, and optimize the brand and growth infrastructure our clients need, and we stay accountable to results, not deliverables.
               </p>
             </div>
           </div>
@@ -457,7 +457,7 @@ export default function AboutPage() {
                 Ready to Work With Brand Iron?
               </h2>
               <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", fontStyle: "italic", maxWidth: 600, margin: "0 auto 40px" }}>
-                Book a strategy session and let&apos;s design the revenue system your business deserves.
+                Book a strategy session and let&apos;s design the brand and growth system your business deserves.
               </p>
               <Link href="/contact" style={{
                 display: "inline-flex", alignItems: "center",
