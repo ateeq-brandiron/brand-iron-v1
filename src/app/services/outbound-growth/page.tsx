@@ -186,7 +186,7 @@ export default function OutboundGrowthPage() {
                 onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
                 onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
                 >
-                  Build Your Outbound Growth Engine
+                  Build Your Outbound Engine
                 </Link>
                 <Link href="#services" style={{
                   display: "inline-flex", alignItems: "center",
