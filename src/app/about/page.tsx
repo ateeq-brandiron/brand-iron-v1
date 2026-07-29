@@ -151,11 +151,11 @@ export default function AboutPage() {
                 color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))",
                 marginBottom: 20,
               }}>
-                We Build Revenue Engines.
+                We Build Brands. We Engineer Growth.
               </h1>
 
               <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, fontWeight: 700, color: "#FFFFFF", lineHeight: 1.5, marginBottom: 20, textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}>
-                BrandIron exists because too many organizations invest in disconnected strategies, tools, and agencies, and wonder why growth doesn&apos;t compound.
+                Brand Iron exists because most businesses grow in pieces: a logo here, a funnel there, a deck built the night before it matters. We forge it into one brand, built to be discoverable, trusted, and chosen.
               </p>
 
               <div className="hero-btns-anim" style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center" }}>
@@ -193,10 +193,10 @@ export default function AboutPage() {
               padding: "clamp(20px, 2.6vw, 32px)",
             }}>
               <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.85)", marginBottom: 14 }}>
-                We combine strategy, branding, go-to-market, AI, automation, CRM, and revenue operations into integrated systems that drive compounding, measurable growth.
+                We&apos;re a full-service strategic branding and marketing agency: brand strategy, go-to-market execution, AI visibility, capital raise support, and website development, all under one roof.
               </p>
               <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.8)" }}>
-                We&apos;re operators, not just advisors. We build and run the revenue systems ourselves, alongside our clients, and stay accountable to results.
+                We&apos;re operators, not just advisors. We build alongside our clients, stand behind the work, and measure ourselves by the same outcomes they do.
               </p>
             </div>
           </div>
