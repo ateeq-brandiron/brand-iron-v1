@@ -151,7 +151,7 @@ export default function AboutPage() {
                 color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))",
                 marginBottom: 20,
               }}>
-                We Build Brands. We Engineer Growth.
+                We Build Brands Engineered for Growth.
               </h1>
 
               <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, fontWeight: 700, color: "#FFFFFF", lineHeight: 1.5, marginBottom: 20, textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}>
