@@ -217,6 +217,32 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         </article>
       </section>
 
+      {/* ── AUTHOR ───────────────────────────────────────────── */}
+      <section style={{ background: "#F9F8F6", padding: "56px 24px" }}>
+        <div style={{ maxWidth: 720, margin: "0 auto" }}>
+          <div className="author-card" style={{
+            position: "relative", overflow: "hidden", display: "flex", gap: 24, alignItems: "center",
+            background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 14, padding: "28px 32px",
+          }}>
+            <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
+            <img loading="lazy" src="/images/team/Brand Iron Team_Michael.jpg" alt="Michael Doyle" style={{ width: 72, height: 72, borderRadius: "50%", objectFit: "cover", flexShrink: 0 }} />
+            <div>
+              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.16em", textTransform: "uppercase", color: "#d87307", marginBottom: 6 }}>Written By</p>
+              <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 18, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", marginBottom: 8 }}>Michael Doyle</h3>
+              <p style={{ fontSize: 13.5, lineHeight: 1.7, color: "#666", margin: 0 }}>
+                A trailblazer in brand marketing for 20+ years, Michael launched Brand Iron in 2002 after building and selling a multi-million dollar advertising agency. His precision has steered businesses across industries to success worldwide.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <style>{`
+          @media (max-width: 560px) {
+            .author-card { flex-direction: column; align-items: flex-start !important; text-align: left; }
+          }
+        `}</style>
+      </section>
+
       {/* ── MORE INSIGHTS ────────────────────────────────────── */}
       <section style={{ position: "relative", overflow: "hidden", background: "#0F1B2D", padding: "80px 24px" }}>
         <CircuitOverlay />
