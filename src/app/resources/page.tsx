@@ -148,10 +148,6 @@ export default function ResourcesPage() {
                 Insights Forged Through Experience
               </h1>
 
-              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, fontWeight: 700, color: "#FFFFFF", lineHeight: 1.5, marginBottom: 20, textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}>
-                Explore interviews, podcasts, and features on branding, leadership, capital raising, and revenue growth.
-              </p>
-
               <div className="hero-btns-anim" style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center" }}>
                 <Link href="/contact" style={{
                   display: "inline-flex", alignItems: "center",
