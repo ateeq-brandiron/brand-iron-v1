@@ -6,6 +6,7 @@ const navLinks = [
   ["Services", "/services"],
   ["About", "/about"],
   ["Blog", "/blog"],
+  ["Resources", "/resources"],
   ["Contact", "/contact"],
 ];
 

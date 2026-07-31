@@ -19,6 +19,7 @@ const PAGES: { path: string; changeFrequency: NonNullable<MetadataRoute.Sitemap[
   { path: "/services/revenue-engineering", changeFrequency: "monthly", priority: 0.8 },
   { path: "/about", changeFrequency: "yearly", priority: 0.7 },
   { path: "/blog", changeFrequency: "weekly", priority: 0.7 },
+  { path: "/resources", changeFrequency: "monthly", priority: 0.7 },
   { path: "/contact", changeFrequency: "yearly", priority: 0.6 },
 ];
 
