@@ -18,42 +18,66 @@ function useInView(threshold = 0.1) {
   return { ref, inView };
 }
 
+function VideoThumb({ videoId, title }: { videoId: string; title: string }) {
+  return (
+    <div style={{ position: "relative", aspectRatio: "16 / 9", background: "#0F1B2D" }}>
+      <img
+        loading="lazy"
+        src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`}
+        alt={`${title} video thumbnail`}
+        style={{ width: "100%", height: "100%", objectFit: "cover" }}
+      />
+      <div style={{ position: "absolute", inset: 0, background: "rgba(8,16,36,0.15)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <div style={{ width: 52, height: 52, borderRadius: "50%", background: "rgba(8,16,36,0.65)", border: "2px solid rgba(255,255,255,0.85)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M8 5v14l11-7z" /></svg>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 const VIDEOS = [
   {
     title: "On the Brink with Michael Doyle",
     body: "A conversation about entrepreneurship, leadership, navigating change, and building organizations that are prepared for what comes next.",
     cta: "Watch Episode",
     href: "https://www.youtube.com/watch?v=YobCPn7-YVQ",
+    videoId: "YobCPn7-YVQ",
   },
   {
     title: "Brand Relationships",
     body: "Explore how successful brands create meaningful relationships with customers, employees, investors, and the communities they serve.",
     cta: "Watch Interview",
     href: "https://www.youtube.com/watch?v=kt18G7nYSzQ",
+    videoId: "kt18G7nYSzQ",
   },
   {
     title: "Build a Brand and Raise Capital",
     body: "Learn how a strong brand, compelling story, and credible market position can help growing companies attract the attention and confidence of investors.",
     cta: "Watch Episode",
     href: "https://www.youtube.com/watch?v=vHIcgPsxny0",
+    videoId: "vHIcgPsxny0",
   },
   {
     title: "Redefining Branding in the Digital Era",
     body: "Michael Doyle discusses how branding has evolved and why modern organizations must connect strategy, digital presence, customer experience, and revenue growth.",
     cta: "Watch Interview",
     href: "https://www.youtube.com/watch?v=WF53bOufTPQ",
+    videoId: "WF53bOufTPQ",
   },
   {
     title: "From Branding to Revenue",
     body: "Discover how Brand Iron connects brand strategy with practical growth initiatives designed to generate demand, strengthen market position, and support revenue.",
     cta: "Watch Interview",
     href: "https://www.youtube.com/watch?v=t_kIwWKqUtk",
+    videoId: "t_kIwWKqUtk",
   },
   {
     title: "Brand Iron: Interview with CEO Michael Doyle",
     body: "Get an inside look at Brand Iron, Michael Doyle's approach to business, and the lessons he has learned from helping companies build stronger and more valuable brands.",
     cta: "Watch Episode",
     href: "https://www.youtube.com/watch?v=OlLJzo_ql9A",
+    videoId: "OlLJzo_ql9A",
   },
 ];
 
@@ -206,30 +230,43 @@ export default function ResourcesPage() {
         <div ref={featuredView.ref} className={`reveal${featuredView.inView ? " visible" : ""}`} style={{ maxWidth: 1000, margin: "0 auto" }}>
           <div style={{
             position: "relative", background: "#FFFFFF", border: "1px solid #EEEBE7",
-            borderRadius: 14, padding: "44px 48px", overflow: "hidden",
+            borderRadius: 14, overflow: "hidden",
           }}>
-            <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
-            <span style={{ display: "inline-block", padding: "4px 12px", background: "#d87307", borderRadius: 4, fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#FFFFFF", marginBottom: 20 }}>
-              Featured Conversation
-            </span>
-            <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 3vw, 32px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", marginBottom: 16, lineHeight: 1.3 }}>
-              The Critical Role of Branding in Business Growth
-            </h2>
-            <p style={{ fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 28, maxWidth: 720 }}>
-              Michael Doyle joins Magnetic Rise to discuss why branding is more than a logo or visual identity. Discover how strong positioning, consistent messaging, and a clearly defined brand can influence customer trust, business growth, and long-term enterprise value.
-            </p>
-            <a href="https://www.youtube.com/watch?v=uteuCEBzWws" target="_blank" rel="noopener noreferrer" style={{
-              fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
-              letterSpacing: "0.08em", textTransform: "uppercase", textDecoration: "none",
-              color: "#d87307", transition: "color 0.2s",
-            }}
-            onMouseEnter={e => (e.currentTarget.style.color = "#b8691f")}
-            onMouseLeave={e => (e.currentTarget.style.color = "#d87307")}
-            >
-              Watch the Interview →
-            </a>
+            <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))", zIndex: 2 }} />
+            <div className="res-featured-grid" style={{ display: "grid", gridTemplateColumns: "0.85fr 1.15fr", alignItems: "center" }}>
+              <a href="https://www.youtube.com/watch?v=uteuCEBzWws" target="_blank" rel="noopener noreferrer" aria-label="Watch the Interview">
+                <VideoThumb videoId="uteuCEBzWws" title="The Critical Role of Branding in Business Growth" />
+              </a>
+              <div style={{ padding: "40px 44px" }}>
+                <span style={{ display: "inline-block", padding: "4px 12px", background: "#d87307", borderRadius: 4, fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#FFFFFF", marginBottom: 20 }}>
+                  Featured Conversation
+                </span>
+                <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 3vw, 32px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", marginBottom: 16, lineHeight: 1.3 }}>
+                  The Critical Role of Branding in Business Growth
+                </h2>
+                <p style={{ fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 28 }}>
+                  Michael Doyle joins Magnetic Rise to discuss why branding is more than a logo or visual identity. Discover how strong positioning, consistent messaging, and a clearly defined brand can influence customer trust, business growth, and long-term enterprise value.
+                </p>
+                <a href="https://www.youtube.com/watch?v=uteuCEBzWws" target="_blank" rel="noopener noreferrer" style={{
+                  fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
+                  letterSpacing: "0.08em", textTransform: "uppercase", textDecoration: "none",
+                  color: "#d87307", transition: "color 0.2s",
+                }}
+                onMouseEnter={e => (e.currentTarget.style.color = "#b8691f")}
+                onMouseLeave={e => (e.currentTarget.style.color = "#d87307")}
+                >
+                  Watch the Interview →
+                </a>
+              </div>
+            </div>
           </div>
         </div>
+
+        <style>{`
+          @media (max-width: 700px) {
+            .res-featured-grid { grid-template-columns: 1fr !important; }
+          }
+        `}</style>
       </section>
 
       {/* ── VIDEOS AND INTERVIEWS ─────────────────────────────── */}
@@ -245,20 +282,23 @@ export default function ResourcesPage() {
             </p>
           </div>
           <div className={`reveal-group${videosView.inView ? " visible" : ""} res-videos-grid`} style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
-            {VIDEOS.map(({ title, body, cta, href }, i) => (
+            {VIDEOS.map(({ title, body, cta, href, videoId }, i) => (
               <a key={title} href={href} target="_blank" rel="noopener noreferrer"
                 className={`res-card reveal${videosView.inView ? " visible" : ""}`}
                 style={{
                   position: "relative", display: "flex", flexDirection: "column", background: "#F9F8F6", border: "1px solid #EEEBE7",
-                  borderRadius: 14, padding: "28px 26px", overflow: "hidden", textDecoration: "none",
+                  borderRadius: 14, overflow: "hidden", textDecoration: "none",
                   transitionDelay: `${(i % 6) * 0.06}s`,
                   transition: "transform 0.25s, box-shadow 0.25s, border-color 0.25s",
                 }}
               >
-                <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.2))" }} />
-                <h3 className="res-card-title" style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 16, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", marginBottom: 12, lineHeight: 1.35, transition: "color 0.2s" }}>{title}</h3>
-                <p style={{ fontSize: 13.5, lineHeight: 1.7, color: "#666", marginBottom: 20, flex: 1 }}>{body}</p>
-                <span className="res-card-cta" style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: "0.08em", textTransform: "uppercase", color: "#d87307", transition: "color 0.2s" }}>{cta} →</span>
+                <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.2))", zIndex: 2 }} />
+                <VideoThumb videoId={videoId} title={title} />
+                <div style={{ padding: "22px 24px 24px", display: "flex", flexDirection: "column", flex: 1 }}>
+                  <h3 className="res-card-title" style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 16, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", marginBottom: 12, lineHeight: 1.35, transition: "color 0.2s" }}>{title}</h3>
+                  <p style={{ fontSize: 13.5, lineHeight: 1.7, color: "#666", marginBottom: 20, flex: 1 }}>{body}</p>
+                  <span className="res-card-cta" style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: "0.08em", textTransform: "uppercase", color: "#d87307", transition: "color 0.2s" }}>{cta} →</span>
+                </div>
               </a>
             ))}
           </div>

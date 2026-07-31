@@ -4,7 +4,7 @@ const CSP = [
   "default-src 'self'",
   "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com",
   "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data:",
+  "img-src 'self' data: https://i.ytimg.com",
   "font-src 'self'",
   "media-src 'self'",
   "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com",
