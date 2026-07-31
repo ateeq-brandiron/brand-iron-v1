@@ -128,10 +128,10 @@ export default function ResourcesPage() {
       <section className="res-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <div style={{
           position: "absolute", inset: 0,
-          backgroundImage: "url('/images/resources/resources-hero-barn-sunset.jpg')",
+          backgroundImage: "url('/images/resources/resources-hero-tech-field.png')",
           backgroundSize: "cover", backgroundPosition: "center",
         }} />
-        <div role="img" aria-label="Rustic barn in a green field beneath a dramatic orange and purple sunset sky" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.4) 0%, rgba(8,16,36,0.3) 45%, rgba(8,16,36,0.68) 100%)" }} />
+        <div role="img" aria-label="Wide agricultural field at dusk with glowing digital circuit-line patterns woven through the crop rows" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.4) 0%, rgba(8,16,36,0.3) 45%, rgba(8,16,36,0.68) 100%)" }} />
 
         <div className="res-hero-wrap" style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", padding: "88px 24px 24px" }}>
           <div className="res-hero-grid" style={{ maxWidth: 1200, margin: "0 auto", width: "100%", display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 56, alignItems: "center" }}>
