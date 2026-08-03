@@ -20,12 +20,12 @@ function useInView(threshold = 0.1) {
 
 function VideoThumb({ videoId, title }: { videoId: string; title: string }) {
   return (
-    <div style={{ position: "relative", aspectRatio: "16 / 9", background: "#0F1B2D", overflow: "hidden" }}>
+    <div style={{ position: "relative", aspectRatio: "4 / 3", background: "#0F1B2D", overflow: "hidden" }}>
       <img
         loading="lazy"
         src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`}
         alt={`${title} video thumbnail`}
-        style={{ width: "100%", height: "100%", objectFit: "contain" }}
+        style={{ width: "100%", height: "100%", objectFit: "cover" }}
       />
       <div style={{ position: "absolute", inset: 0, background: "rgba(8,16,36,0.15)", display: "flex", alignItems: "center", justifyContent: "center" }}>
         <div style={{ width: 52, height: 52, borderRadius: "50%", background: "rgba(8,16,36,0.65)", border: "2px solid rgba(255,255,255,0.85)", display: "flex", alignItems: "center", justifyContent: "center" }}>
