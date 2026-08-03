@@ -464,9 +464,9 @@ export default function ResourcesPage() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div ref={ctaView.ref} className={`reveal${ctaView.inView ? " visible" : ""}`} style={{
             position: "relative", overflow: "hidden", borderRadius: 20,
-            backgroundImage: "url('/images/resources/resources-cta-horse-portrait.jpg')", backgroundSize: "cover", backgroundPosition: "top center",
+            backgroundImage: "url('/images/resources/resources-cta-barn-sunset.jpg')", backgroundSize: "cover", backgroundPosition: "center",
           }}>
-            <div role="img" aria-label="Black-and-white portrait of a horse with a long shaggy mane looking directly at the camera" style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
+            <div role="img" aria-label="Rustic barn in a green field beneath a dramatic orange and purple sunset sky" style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
             <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>
               <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(28px, 4.2vw, 52px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.05, marginBottom: 20 }}>
                 Ready to Build a Stronger Brand?
