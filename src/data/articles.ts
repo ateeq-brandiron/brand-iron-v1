@@ -321,23 +321,23 @@ export const articles: Article[] = [
     publishedISO: "2026-07-01",
     category: "GTM Strategy",
     title: "Brand Iron: Your GTM Strategy & Growth Partner",
-    excerpt: "Brand Iron is more than a marketing agency — it's a GTM strategy partner that helps companies plan, launch, and scale with clarity and precision.",
+    excerpt: "Brand Iron is more than a marketing agency: it's a GTM strategy partner that helps companies plan, launch, and scale with clarity and precision.",
     readTime: "13 min read",
     date: "July 2026",
     headerImage: "/images/blog/gtm-strategy-partner/gtm-strategy-partner-map-and-compass.jpg",
     headerImageAlt: "Vintage compass and map overlaid with glowing network connection lines, representing go-to-market strategy planning",
     seoTitle: "Brand Iron: Your GTM Strategy & Growth Partner | Go-To-Market Consulting",
-    metaDescription: "Brand Iron is more than a marketing agency — it's a GTM strategy partner that helps companies plan, launch, and scale with clarity and precision.",
+    metaDescription: "Brand Iron is more than a marketing agency: it's a GTM strategy partner that helps companies plan, launch, and scale with clarity and precision.",
     body: [
       { type: "p", text: "Most companies don't have a go-to-market problem, they have a go-to-market clarity problem. They know what they're selling, but they can't articulate why anyone should care, who they're really talking to, or how to coordinate brand, messaging, and marketing into a strategy that actually moves the needle." },
       { type: "p", text: "That's where a true GTM strategy partner makes the difference. Brand Iron isn't a traditional marketing agency. It's a strategic growth partner built for companies that need more than a new logo or a paid ad campaign. Brand Iron's proprietary BrandStorm™ process, synchronized end-to-end services, and data-driven approach bring clarity to the full arc of your go-to-market journey, from shaping your brand foundation to launching with precision and scaling with confidence." },
       { type: "p", text: "Whether you're entering a new market, repositioning for growth, or preparing for a capital raise, having the right GTM partner in your corner changes everything." },
 
-      { type: "image", src: "/images/blog/gtm-strategy-partner/gtm-strategy-partner-summary-card.png", alt: "Brand Iron: Your GTM Strategy & Growth Partner — Plan, Launch, Scale with clarity and precision" },
+      { type: "image", src: "/images/blog/gtm-strategy-partner/gtm-strategy-partner-summary-card.png", alt: "Brand Iron: Your GTM Strategy & Growth Partner. Plan. Launch. Scale. With clarity and precision." },
 
       { type: "h2", text: "Key Takeaways" },
       { type: "ul", items: [
-        "A GTM strategy partner is not just a vendor — they are an embedded strategic ally who aligns brand, marketing, and business development toward a unified growth goal.",
+        "A GTM strategy partner is not just a vendor: they are an embedded strategic ally who aligns brand, marketing, and business development toward a unified growth goal.",
         "Brand Iron's BrandStorm™ process defines the brand architecture that underpins every GTM decision, from messaging to market positioning.",
         "Effective GTM strategy requires synchronized end-to-end execution, not disconnected campaign tactics.",
         "The BrandGo™ framework delivers precision impact by connecting brand strategy directly to market activation.",
@@ -358,7 +358,7 @@ export const articles: Article[] = [
         ["Value Proposition", "Strategic partnership + timeless brand experience + results-focused execution"],
       ] },
 
-      { type: "h2", text: "What Is a GTM Strategy Partner — and Why Does It Matter?" },
+      { type: "h2", text: "What Is a GTM Strategy Partner, and Why Does It Matter?" },
       { type: "p", text: "A go-to-market (GTM) strategy defines how a company brings a product or service to market. It encompasses target audience definition, brand positioning, messaging, channel strategy, and the coordinated plan to reach, engage, and convert customers." },
       { type: "p", text: "A GTM strategy partner goes further. Rather than simply executing tactics, a GTM partner embeds itself in your business to:" },
       { type: "ul", items: [
@@ -384,7 +384,7 @@ export const articles: Article[] = [
       { type: "h2", text: "Brand Iron's Approach to GTM Strategy" },
       { type: "p", text: "Brand Iron operates from a core belief: great execution without a great strategy is just expensive noise. That's why every client engagement starts with the foundation, and builds up from there." },
 
-      { type: "h3", text: "Step 1: The BrandStorm™ — Building Your Foundation" },
+      { type: "h3", text: "Step 1: The BrandStorm™: Building Your Foundation" },
       { type: "p", text: "The BrandStorm™ is Brand Iron's proprietary discovery and brand architecture process. It's where GTM strategy begins. During BrandStorm™, Brand Iron works with your leadership team to define:" },
       { type: "ul", items: [
         { bold: "Mission and vision", text: "— why your company exists and where it's going" },
@@ -406,7 +406,7 @@ export const articles: Article[] = [
         "Outbound campaign design and execution",
       ] },
 
-      { type: "h3", text: "Step 3: BrandGo™ — Precision Impact at Launch" },
+      { type: "h3", text: "Step 3: BrandGo™: Precision Impact at Launch" },
       { type: "p", text: "BrandGo™ is Brand Iron's go-to-market activation framework. Once the brand foundation is established, BrandGo™ translates strategy into market-ready execution with precision targeting, channel selection, and performance accountability. BrandGo™ focuses on:" },
       { type: "ul", items: [
         { bold: "Audience precision", text: "— reaching the right people, not just the most people" },
