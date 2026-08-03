@@ -284,7 +284,6 @@ export default function ResourcesPage() {
       <section id="videos" style={{ background: "#FFFFFF", padding: "100px 40px" }}>
         <div ref={videosView.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 48, maxWidth: 720 }}>
-            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 12 }}>Videos &amp; Interviews</p>
             <h2 className={`section-heading reveal${videosView.inView ? " visible" : ""}`} style={{ color: "#1a1a1a", marginBottom: 16, textAlign: "left" }}>
               Real Conversations About Brands, Leadership, and Growth
             </h2>
@@ -332,7 +331,6 @@ export default function ResourcesPage() {
       <section id="podcast" style={{ background: "#F9F8F6", padding: "100px 40px" }}>
         <div ref={podcastView.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 48, maxWidth: 720 }}>
-            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 12 }}>Podcast Appearances</p>
             <h2 className={`section-heading reveal${podcastView.inView ? " visible" : ""}`} style={{ color: "#1a1a1a", marginBottom: 16, textAlign: "left" }}>
               Straight Talk From Industry Leaders
             </h2>
@@ -365,7 +363,6 @@ export default function ResourcesPage() {
       <section style={{ background: "#FFFFFF", padding: "100px 40px" }}>
         <div ref={articlesView.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 48, maxWidth: 720 }}>
-            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 12 }}>Articles &amp; Features</p>
             <h2 className={`section-heading reveal${articlesView.inView ? " visible" : ""}`} style={{ color: "#1a1a1a", marginBottom: 16, textAlign: "left" }}>
               Perspectives on Purpose, Transformation, and Market Leadership
             </h2>
