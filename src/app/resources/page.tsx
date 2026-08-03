@@ -25,7 +25,7 @@ function VideoThumb({ videoId, title }: { videoId: string; title: string }) {
         loading="lazy"
         src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`}
         alt={`${title} video thumbnail`}
-        style={{ width: "100%", height: "100%", objectFit: "cover", transform: "scale(1.35)" }}
+        style={{ width: "100%", height: "100%", objectFit: "contain" }}
       />
       <div style={{ position: "absolute", inset: 0, background: "rgba(8,16,36,0.15)", display: "flex", alignItems: "center", justifyContent: "center" }}>
         <div style={{ width: 52, height: 52, borderRadius: "50%", background: "rgba(8,16,36,0.65)", border: "2px solid rgba(255,255,255,0.85)", display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -234,12 +234,12 @@ export default function ResourcesPage() {
           }}>
             <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))", zIndex: 2 }} />
             <div className="res-featured-grid" style={{ display: "grid", gridTemplateColumns: "0.85fr 1.15fr" }}>
-              <a href="https://www.youtube.com/watch?v=uteuCEBzWws" target="_blank" rel="noopener noreferrer" aria-label="Watch the Interview" className="res-featured-thumb-link" style={{ position: "relative", display: "block", overflow: "hidden" }}>
+              <a href="https://www.youtube.com/watch?v=uteuCEBzWws" target="_blank" rel="noopener noreferrer" aria-label="Watch the Interview" className="res-featured-thumb-link" style={{ position: "relative", display: "block", overflow: "hidden", background: "#0F1B2D" }}>
                 <img
                   loading="lazy"
                   src="https://i.ytimg.com/vi/uteuCEBzWws/hqdefault.jpg"
                   alt="The Critical Role of Branding in Business Growth video thumbnail"
-                  style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", transform: "scale(1.35)" }}
+                  style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "contain" }}
                 />
                 <div style={{ position: "absolute", inset: 0, background: "rgba(8,16,36,0.15)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                   <div style={{ width: 52, height: 52, borderRadius: "50%", background: "rgba(8,16,36,0.65)", border: "2px solid rgba(255,255,255,0.85)", display: "flex", alignItems: "center", justifyContent: "center" }}>
