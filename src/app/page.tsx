@@ -104,7 +104,7 @@ const journeyStages = [
 
 const partners = [
   { name: "Boxsy", href: "https://boxsy.io", logo: "/images/boxsy-logo.svg", height: 30 },
-  { name: "Bellwether", href: "https://mybellwether.com", logo: "/images/bellwether-logo.png", height: 26 },
+  { name: "Bellwether", href: "https://mybellwether.com" },
   { name: "Sage Professional Services", href: "https://sageprosrvs.com", logo: "/images/sage-logo.png", height: 44 },
 ];
 
@@ -911,7 +911,17 @@ export default function Home() {
               >
                 <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 6, right: 6, width: 22, height: 22, opacity: 0, transition: "opacity 0.25s ease" }} />
                 <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 6, left: 6, width: 22, height: 22, opacity: 0, transition: "opacity 0.25s ease" }} />
-                <img loading="lazy" src={p.logo} alt={`${p.name} logo`} style={{ height: p.height, width: "auto", maxWidth: 180, display: "block" }} />
+                {p.name === "Bellwether" ? (
+                  <span style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                      <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                    </svg>
+                    <span style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontSize: 22, color: "#1a1a1a" }}>Bellwether</span>
+                  </span>
+                ) : (
+                  <img loading="lazy" src={p.logo} alt={`${p.name} logo`} style={{ height: p.height, width: "auto", maxWidth: 180, display: "block" }} />
+                )}
               </a>
             ))}
           </div>
