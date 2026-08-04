@@ -102,6 +102,12 @@ const journeyStages = [
   { stage: "Choose", body: "Winning new business isn't about being the loudest voice in the market. It's about becoming the most discoverable, credible, and trusted choice when buyers are ready to decide." },
 ];
 
+const partners = [
+  { name: "Boxsy", href: "https://boxsy.io" },
+  { name: "Bellwether", href: "https://mybellwether.com" },
+  { name: "Sage Pro Services", href: "https://sageprosrvs.com" },
+];
+
 const testimonials = [
   {
     quote: "The AI automation work Brand Iron did for us saved our team 20+ hours a week. More importantly, it gave us visibility into our pipeline that we never had before. I can't imagine operating without the systems they built.",
@@ -872,6 +878,27 @@ export default function Home() {
             onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
             onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
             >Book a Strategy Session</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── S6B: OUR PARTNERS ────────────────────────────── */}
+      <section style={{ background: "#FFFFFF", padding: "64px 24px" }}>
+        <div style={{ maxWidth: 1100, margin: "0 auto", textAlign: "center" }}>
+          <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 40 }}>
+            Our Partners
+          </p>
+          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", gap: 56 }}>
+            {partners.map(p => (
+              <a key={p.name} href={p.href} target="_blank" rel="noopener noreferrer" style={{
+                fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2.2vw, 28px)",
+                fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em",
+                color: "#1a1a1a", opacity: 0.7, transition: "opacity 0.2s, color 0.2s",
+              }}
+              onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.opacity = "1"; (e.currentTarget as HTMLAnchorElement).style.color = "#d87307"; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.opacity = "0.7"; (e.currentTarget as HTMLAnchorElement).style.color = "#1a1a1a"; }}
+              >{p.name}</a>
+            ))}
           </div>
         </div>
       </section>
