@@ -103,9 +103,9 @@ const journeyStages = [
 ];
 
 const partners = [
-  { name: "Boxsy", href: "https://boxsy.io" },
-  { name: "Bellwether", href: "https://mybellwether.com" },
-  { name: "Sage Pro Services", href: "https://sageprosrvs.com" },
+  { name: "Boxsy", href: "https://boxsy.io", logo: "/images/boxsy-logo.svg", height: 30 },
+  { name: "Bellwether", href: "https://mybellwether.com", logo: "/images/bellwether-logo.png", height: 26 },
+  { name: "Sage Professional Services", href: "https://sageprosrvs.com", logo: "/images/sage-logo.png", height: 44 },
 ];
 
 const testimonials = [
@@ -883,21 +883,36 @@ export default function Home() {
       </section>
 
       {/* ── S6B: OUR PARTNERS ────────────────────────────── */}
-      <section style={{ background: "#FFFFFF", padding: "64px 24px" }}>
+      <section style={{ background: "#FFFFFF", padding: "64px 24px 72px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", textAlign: "center" }}>
           <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 40 }}>
             Our Partners
           </p>
-          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", gap: 56 }}>
+          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", gap: 28 }}>
             {partners.map(p => (
-              <a key={p.name} href={p.href} target="_blank" rel="noopener noreferrer" style={{
-                fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2.2vw, 28px)",
-                fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em",
-                color: "#1a1a1a", opacity: 0.7, transition: "opacity 0.2s, color 0.2s",
+              <a key={p.name} href={p.href} target="_blank" rel="noopener noreferrer" aria-label={p.name} style={{
+                display: "flex", alignItems: "center", justifyContent: "center",
+                background: "#FFFFFF", border: "1px solid #ECE5D8", borderRadius: 14,
+                padding: "26px 40px", minWidth: 200, height: 96, position: "relative",
+                transition: "transform 0.25s, box-shadow 0.25s, border-color 0.25s",
               }}
-              onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.opacity = "1"; (e.currentTarget as HTMLAnchorElement).style.color = "#d87307"; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.opacity = "0.7"; (e.currentTarget as HTMLAnchorElement).style.color = "#1a1a1a"; }}
-              >{p.name}</a>
+              onMouseEnter={e => {
+                (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(-4px)";
+                (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 14px 32px rgba(0,0,0,0.1)";
+                (e.currentTarget as HTMLAnchorElement).style.borderColor = "#d87307";
+                e.currentTarget.querySelectorAll<HTMLImageElement>(".corner-bracket").forEach(img => (img.style.opacity = "1"));
+              }}
+              onMouseLeave={e => {
+                (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(0)";
+                (e.currentTarget as HTMLAnchorElement).style.boxShadow = "none";
+                (e.currentTarget as HTMLAnchorElement).style.borderColor = "#ECE5D8";
+                e.currentTarget.querySelectorAll<HTMLImageElement>(".corner-bracket").forEach(img => (img.style.opacity = "0"));
+              }}
+              >
+                <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 6, right: 6, width: 22, height: 22, opacity: 0, transition: "opacity 0.25s ease" }} />
+                <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 6, left: 6, width: 22, height: 22, opacity: 0, transition: "opacity 0.25s ease" }} />
+                <img loading="lazy" src={p.logo} alt={`${p.name} logo`} style={{ height: p.height, width: "auto", maxWidth: 180, display: "block" }} />
+              </a>
             ))}
           </div>
         </div>
