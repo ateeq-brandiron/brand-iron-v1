@@ -34,6 +34,14 @@ const stats = [
   { icon: "⚡", num: "AI-First", label: "Growth Strategies" },
 ];
 
+const clientLogos = [
+  { name: "Artistic Roofing Systems", logo: "/images/client-logos/artistic-roofing-systems-logo.png" },
+  { name: "Ascendancy MC", logo: "/images/client-logos/ascendancy-mc-inc-logo.png" },
+  { name: "Cities Project Global", logo: "/images/client-logos/cities-project-global-logo.svg" },
+  { name: "Lift Out Capital", logo: "/images/client-logos/lift-out-capital-logo.png" },
+  { name: "Offen Petroleum", logo: "/images/client-logos/offen-petroleum-logo.png" },
+];
+
 const problems = [
   { heading: "Buyers can't clearly differentiate your business.", body: "Without a compelling market position, even great companies become interchangeable." },
   { heading: "You're difficult to discover.", body: "Modern buyers search across AI platforms, search engines, communities, and industry resources. If you aren't present where decisions begin, opportunities disappear before they reach your website." },
@@ -364,6 +372,20 @@ export default function Home() {
                 );
               })}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── S2B: CLIENT LOGO MARQUEE ──────────────────────── */}
+      <section style={{ background: "#FFFFFF", padding: "4px 0 48px" }}>
+        <p style={{ textAlign: "center", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 28 }}>
+          Trusted By Growing Brands
+        </p>
+        <div className="client-logo-marquee" style={{ width: "100vw", marginLeft: "calc(50% - 50vw)" }}>
+          <div className="client-logo-track">
+            {[...clientLogos, ...clientLogos].map((c, i) => (
+              <img key={`${c.name}-${i}`} loading="lazy" src={c.logo} alt={c.name} />
+            ))}
           </div>
         </div>
       </section>
