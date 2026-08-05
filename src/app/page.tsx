@@ -35,6 +35,7 @@ const stats = [
 ];
 
 const clientLogos = [
+  { name: "AARDEX Real Estate", logo: "/images/client-logos/aardex-real-estate-logo.png" },
   { name: "Artistic Roofing Systems", logo: "/images/client-logos/artistic-roofing-systems-logo.png" },
   { name: "Ascendancy MC", logo: "/images/client-logos/ascendancy-mc-inc-logo.png" },
   { name: "Cities Project Global", logo: "/images/client-logos/cities-project-global-logo.svg" },
