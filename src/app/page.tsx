@@ -34,10 +34,11 @@ const stats = [
   { icon: "⚡", num: "AI-First", label: "Growth Strategies" },
 ];
 
+const CLIENT_LOGO_BASE_HEIGHT = 48;
 const clientLogos = [
-  { name: "AARDEX Real Estate", logo: "/images/client-logos/aardex-real-estate-logo.png" },
+  { name: "AARDEX Real Estate", logo: "/images/client-logos/aardex-real-estate-logo.png", boost: 1.3 },
   { name: "Artistic Roofing Systems", logo: "/images/client-logos/artistic-roofing-systems-logo.png" },
-  { name: "Ascendancy MC", logo: "/images/client-logos/ascendancy-mc-inc-logo.png" },
+  { name: "Ascendancy MC", logo: "/images/client-logos/ascendancy-mc-inc-logo.png", boost: 1.25 },
   { name: "Cities Project Global", logo: "/images/client-logos/cities-project-global-logo.svg" },
   { name: "Lift Out Capital", logo: "/images/client-logos/lift-out-capital-logo.png" },
   { name: "Offen Petroleum", logo: "/images/client-logos/offen-petroleum-logo.png" },
@@ -48,18 +49,18 @@ const clientLogos = [
   { name: "Strike Flyers", logo: "/images/client-logos/strike-flyers-logo.svg" },
   { name: "MSP Platform Accelerator", logo: "/images/client-logos/msp-platform-accelerator-logo.png" },
   { name: "Innovatix Technology Partners", logo: "/images/client-logos/innovatix-technology-partners-logo.png" },
-  { name: "PUR Evergreen", logo: "/images/client-logos/pur-evergreen-logo.png" },
-  { name: "Volition Hospitality", logo: "/images/client-logos/volition-hospitality-logo.svg" },
+  { name: "PUR Evergreen", logo: "/images/client-logos/pur-evergreen-logo.png", boost: 1.35 },
+  { name: "Volition Hospitality", logo: "/images/client-logos/volition-hospitality-logo.svg", boost: 1.35 },
   { name: "Massive Networks", logo: "/images/client-logos/massive-networks-logo.png" },
   { name: "ScamRocket", logo: "/images/client-logos/scamrocket-logo.png" },
-  { name: "Maadaadizi", logo: "/images/client-logos/maadaadizi-logo.png" },
-  { name: "Black Lake Capital", logo: "/images/client-logos/black-lake-capital-logo.png" },
+  { name: "Maadaadizi", logo: "/images/client-logos/maadaadizi-logo.png", boost: 1.2 },
+  { name: "Black Lake Capital", logo: "/images/client-logos/black-lake-capital-logo.png", boost: 1.3 },
   { name: "Blendification", logo: "/images/client-logos/blendification-logo.png" },
   { name: "US Transport", logo: "/images/client-logos/us-transport-logo.png" },
   { name: "FRD Legacy Advisors", logo: "/images/client-logos/frd-legacy-advisors-logo.png" },
   { name: "Worldwide Vintage Autos", logo: "/images/client-logos/worldwide-vintage-autos-logo.png" },
   { name: "CESA", logo: "/images/client-logos/cesa-logo.png" },
-  { name: "Silver Stag Brewing", logo: "/images/client-logos/silver-stag-brewing-logo.png" },
+  { name: "Silver Stag Brewing", logo: "/images/client-logos/silver-stag-brewing-logo.png", boost: 1.15 },
 ];
 
 const problems = [
@@ -404,7 +405,7 @@ export default function Home() {
         <div className="client-logo-marquee" style={{ width: "100vw", marginLeft: "calc(50% - 50vw)" }}>
           <div className="client-logo-track">
             {[...clientLogos, ...clientLogos].map((c, i) => (
-              <img key={`${c.name}-${i}`} loading="lazy" src={c.logo} alt={c.name} />
+              <img key={`${c.name}-${i}`} loading="lazy" src={c.logo} alt={c.name} style={{ height: CLIENT_LOGO_BASE_HEIGHT * (c.boost ?? 1) }} />
             ))}
           </div>
         </div>
