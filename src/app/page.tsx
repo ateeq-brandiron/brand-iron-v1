@@ -40,6 +40,8 @@ const clientLogos = [
   { name: "Cities Project Global", logo: "/images/client-logos/cities-project-global-logo.svg" },
   { name: "Lift Out Capital", logo: "/images/client-logos/lift-out-capital-logo.png" },
   { name: "Offen Petroleum", logo: "/images/client-logos/offen-petroleum-logo.png" },
+  { name: "Bellwether", logo: "/images/client-logos/bellwether-logo.svg" },
+  { name: "Sage Professional Services", logo: "/images/sage-logo.png" },
 ];
 
 const problems = [
