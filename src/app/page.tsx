@@ -398,7 +398,7 @@ export default function Home() {
       </section>
 
       {/* ── S2B: CLIENT LOGO MARQUEE ──────────────────────── */}
-      <section style={{ background: "#FFFFFF", padding: "4px 0 48px" }}>
+      <section style={{ background: "#FFFFFF", padding: "4px 0 16px" }}>
         <p style={{ textAlign: "center", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 28 }}>
           Trusted By Growing Brands
         </p>
@@ -412,7 +412,7 @@ export default function Home() {
       </section>
 
       {/* ── S3: BUYING JOURNEY ───────────────────────────── */}
-      <section style={{ background: "#FFFFFF", padding: "48px 0 56px" }}>
+      <section style={{ background: "#FFFFFF", padding: "24px 0 56px" }}>
         <div ref={s3.ref} style={{ maxWidth: 1148, margin: "0 auto", padding: "0 24px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 64, alignItems: "center", marginBottom: 56 }}>
             {/* Text — left */}
