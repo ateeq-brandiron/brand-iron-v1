@@ -405,7 +405,7 @@ export default function Home() {
         <div className="client-logo-marquee" style={{ width: "100vw", marginLeft: "calc(50% - 50vw)" }}>
           <div className="client-logo-track">
             {[...clientLogos, ...clientLogos].map((c, i) => (
-              <img key={`${c.name}-${i}`} loading="lazy" src={c.logo} alt={c.name} style={{ height: CLIENT_LOGO_BASE_HEIGHT * (c.boost ?? 1) }} />
+              <img key={`${c.name}-${i}`} loading="eager" src={c.logo} alt={c.name} style={{ height: CLIENT_LOGO_BASE_HEIGHT * (c.boost ?? 1) }} />
             ))}
           </div>
         </div>
