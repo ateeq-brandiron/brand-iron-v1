@@ -53,6 +53,11 @@ const clientLogos = [
   { name: "Massive Networks", logo: "/images/client-logos/massive-networks-logo.png" },
   { name: "ScamRocket", logo: "/images/client-logos/scamrocket-logo.png" },
   { name: "Maadaadizi", logo: "/images/client-logos/maadaadizi-logo.png" },
+  { name: "Black Lake Capital", logo: "/images/client-logos/black-lake-capital-logo.png" },
+  { name: "Blendification", logo: "/images/client-logos/blendification-logo.png" },
+  { name: "US Transport", logo: "/images/client-logos/us-transport-logo.png" },
+  { name: "FRD Legacy Advisors", logo: "/images/client-logos/frd-legacy-advisors-logo.png" },
+  { name: "Worldwide Vintage Autos", logo: "/images/client-logos/worldwide-vintage-autos-logo.png" },
 ];
 
 const problems = [
