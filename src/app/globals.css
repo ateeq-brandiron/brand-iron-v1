@@ -757,7 +757,7 @@ section p, main p, article p {
   align-items: center;
   gap: 72px;
   width: max-content;
-  animation: clientLogoScroll 60s linear infinite;
+  animation: clientLogoScroll 85s linear infinite;
 }
 .client-logo-marquee:hover .client-logo-track {
   animation-play-state: paused;
