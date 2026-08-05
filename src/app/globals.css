@@ -755,37 +755,21 @@ section p, main p, article p {
 .client-logo-track {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 72px;
   width: max-content;
-  animation: clientLogoScroll 52s linear infinite;
+  animation: clientLogoScroll 46s linear infinite;
 }
 .client-logo-marquee:hover .client-logo-track {
   animation-play-state: paused;
 }
-.client-logo-card {
-  flex-shrink: 0;
-  width: 168px;
-  height: 88px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #FFFFFF;
-  border: 1px solid #ECE5D8;
-  border-radius: 14px;
-  box-shadow: 0 2px 10px rgba(26,26,26,0.04);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}
-.client-logo-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 22px rgba(26,26,26,0.1);
-  border-color: #d87307;
-}
-.client-logo-card img {
-  max-width: 72%;
-  max-height: 58%;
+.client-logo-track img {
   width: auto;
-  height: auto;
-  object-fit: contain;
+  flex-shrink: 0;
+  opacity: 0.85;
+  transition: opacity 0.25s ease;
+}
+.client-logo-marquee:hover .client-logo-track img {
+  opacity: 1;
 }
 @keyframes clientLogoScroll {
   from { transform: translateX(0); }
