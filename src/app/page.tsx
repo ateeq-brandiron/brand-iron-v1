@@ -43,6 +43,16 @@ const clientLogos = [
   { name: "Offen Petroleum", logo: "/images/client-logos/offen-petroleum-logo.png" },
   { name: "Bellwether", logo: "/images/client-logos/bellwether-logo.svg" },
   { name: "Sage Professional Services", logo: "/images/sage-logo.png" },
+  { name: "Real International", logo: "/images/client-logos/real-international-logo.png" },
+  { name: "Haefele Flanagan Consulting", logo: "/images/client-logos/haefele-flanagan-consulting-logo.svg" },
+  { name: "Strike Flyers", logo: "/images/client-logos/strike-flyers-logo.svg" },
+  { name: "MSP Platform Accelerator", logo: "/images/client-logos/msp-platform-accelerator-logo.png" },
+  { name: "Innovatix Technology Partners", logo: "/images/client-logos/innovatix-technology-partners-logo.png" },
+  { name: "PUR Evergreen", logo: "/images/client-logos/pur-evergreen-logo.png" },
+  { name: "Volition Hospitality", logo: "/images/client-logos/volition-hospitality-logo.svg" },
+  { name: "Massive Networks", logo: "/images/client-logos/massive-networks-logo.png" },
+  { name: "ScamRocket", logo: "/images/client-logos/scamrocket-logo.png" },
+  { name: "Maadaadizi", logo: "/images/client-logos/maadaadizi-logo.png" },
 ];
 
 const problems = [
