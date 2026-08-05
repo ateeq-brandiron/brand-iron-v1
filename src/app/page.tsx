@@ -135,6 +135,9 @@ const partners = [
   { name: "Boxsy", href: "https://boxsy.io", logo: "/images/boxsy-logo.svg", height: 30 },
   { name: "Bellwether", href: "https://mybellwether.com" },
   { name: "Sage Professional Services", href: "https://sageprosrvs.com", logo: "/images/sage-logo.png", height: 44 },
+  { name: "FRD Legacy Advisors", href: "https://rfdlegacy.com", logo: "/images/client-logos/frd-legacy-advisors-logo.png", height: 38 },
+  { name: "ScamRocket", href: "https://scamrocket.com", logo: "/images/client-logos/scamrocket-logo.png", height: 26 },
+  { name: "Black Lake Capital", href: "https://blacklakecap.com", logo: "/images/client-logos/black-lake-capital-logo.png", height: 34 },
 ];
 
 const testimonials = [
