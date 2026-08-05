@@ -46,7 +46,7 @@ const clientLogos = [
   { name: "Sage Professional Services", logo: "/images/sage-logo.png" },
   { name: "Real International", logo: "/images/client-logos/real-international-logo.png" },
   { name: "Haefele Flanagan Consulting", logo: "/images/client-logos/haefele-flanagan-consulting-logo.svg" },
-  { name: "Strike Flyers", logo: "/images/client-logos/strike-flyers-logo.svg" },
+  { name: "Strike Flyers", logo: "/images/client-logos/strike-flyers-logo.svg", boost: 1.5 },
   { name: "MSP Platform Accelerator", logo: "/images/client-logos/msp-platform-accelerator-logo.png" },
   { name: "Innovatix Technology Partners", logo: "/images/client-logos/innovatix-technology-partners-logo.png" },
   { name: "PUR Evergreen", logo: "/images/client-logos/pur-evergreen-logo.png", boost: 1.35 },
@@ -60,7 +60,7 @@ const clientLogos = [
   { name: "FRD Legacy Advisors", logo: "/images/client-logos/frd-legacy-advisors-logo.png" },
   { name: "Worldwide Vintage Autos", logo: "/images/client-logos/worldwide-vintage-autos-logo.png" },
   { name: "CESA", logo: "/images/client-logos/cesa-logo.png" },
-  { name: "Silver Stag Brewing", logo: "/images/client-logos/silver-stag-brewing-logo.png", boost: 1.15 },
+  { name: "Silver Stag Brewing", logo: "/images/client-logos/silver-stag-brewing-logo.png", boost: 1.3 },
 ];
 
 const problems = [
