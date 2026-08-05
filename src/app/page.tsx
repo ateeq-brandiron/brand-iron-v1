@@ -57,7 +57,7 @@ const clientLogos = [
   { name: "Black Lake Capital", logo: "/images/client-logos/black-lake-capital-logo.png", boost: 1.3 },
   { name: "Blendification", logo: "/images/client-logos/blendification-logo.png" },
   { name: "US Transport", logo: "/images/client-logos/us-transport-logo.png" },
-  { name: "FRD Legacy Advisors", logo: "/images/client-logos/frd-legacy-advisors-logo.png" },
+  { name: "FRD Legacy Advisors", logo: "/images/client-logos/frd-legacy-advisors-logo.png", boost: 1.35 },
   { name: "Worldwide Vintage Autos", logo: "/images/client-logos/worldwide-vintage-autos-logo.png" },
   { name: "CESA", logo: "/images/client-logos/cesa-logo.png" },
   { name: "Silver Stag Brewing", logo: "/images/client-logos/silver-stag-brewing-logo.png", boost: 1.3 },
