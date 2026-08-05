@@ -765,12 +765,11 @@ section p, main p, article p {
 .client-logo-track img {
   width: auto;
   flex-shrink: 0;
-  filter: grayscale(100%);
-  opacity: 0.6;
+  opacity: 0.85;
   transition: opacity 0.25s ease;
 }
 .client-logo-marquee:hover .client-logo-track img {
-  opacity: 0.95;
+  opacity: 1;
 }
 @keyframes clientLogoScroll {
   from { transform: translateX(0); }
