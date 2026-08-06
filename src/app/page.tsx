@@ -42,7 +42,7 @@ const clientLogos = [
   { name: "Lift Out Capital", logo: "/images/client-logos/lift-out-capital-logo.png" },
   { name: "Offen Petroleum", logo: "/images/client-logos/offen-petroleum-logo.png" },
   { name: "Bellwether", logo: "/images/client-logos/bellwether-logo.svg" },
-  { name: "Sage Professional Services", logo: "/images/sage-logo.png" },
+  { name: "Sage Professional Services", logo: "/images/client-logos/sage-logo.png" },
   { name: "Real International", logo: "/images/client-logos/real-international-logo.png" },
   { name: "Haefele Flanagan Consulting", logo: "/images/client-logos/haefele-flanagan-consulting-logo.svg" },
   { name: "Strike Flyers", logo: "/images/client-logos/strike-flyers-logo.svg" },
@@ -131,16 +131,16 @@ const journeyStages = [
 ];
 
 const partners = [
-  { name: "Boxsy", href: "https://boxsy.io", logo: "/images/boxsy-logo.svg", height: 30 },
+  { name: "Boxsy", href: "https://boxsy.io", logo: "/images/partner-logos/boxsy-logo.svg", height: 30 },
   { name: "Bellwether", href: "https://mybellwether.com" },
-  { name: "Sage Professional Services", href: "https://sageprosrvs.com", logo: "/images/sage-logo.png", height: 44 },
+  { name: "Sage Professional Services", href: "https://sageprosrvs.com", logo: "/images/client-logos/sage-logo.png", height: 44 },
   { name: "FRD Legacy Advisors", href: "https://rfdlegacy.com", logo: "/images/client-logos/frd-legacy-advisors-logo.png", height: 38 },
   { name: "ScamRocket", href: "https://scamrocket.com", logo: "/images/client-logos/scamrocket-logo.png", height: 26 },
   { name: "Black Lake Capital", href: "https://blacklakecap.com", logo: "/images/client-logos/black-lake-capital-logo.png", height: 34 },
-  { name: "Empower AI 365", href: "https://www.empowerai365.com", logo: "/images/client-logos/empower-ai-365-logo.png", height: 28 },
-  { name: "Clean Lines Power", href: "https://www.cleanlinespower.com", logo: "/images/client-logos/clean-lines-power-logo.png", height: 30 },
-  { name: "Sharp Spring", href: "https://sharpspring.com", logo: "/images/client-logos/sharpspring-logo.png", height: 32 },
-  { name: "Capital Desk", href: "https://capitaldesk.com", logo: "/images/client-logos/capital-desk-logo.png", height: 26 },
+  { name: "Empower AI 365", href: "https://www.empowerai365.com", logo: "/images/partner-logos/empower-ai-365-logo.png", height: 28 },
+  { name: "Clean Lines Power", href: "https://www.cleanlinespower.com", logo: "/images/partner-logos/clean-lines-power-logo.png", height: 30 },
+  { name: "Sharp Spring", href: "https://sharpspring.com", logo: "/images/partner-logos/sharpspring-logo.png", height: 32 },
+  { name: "Capital Desk", href: "https://capitaldesk.com", logo: "/images/partner-logos/capital-desk-logo.png", height: 26 },
 ];
 
 const testimonials = [
