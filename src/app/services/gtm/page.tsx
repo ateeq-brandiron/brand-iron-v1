@@ -30,6 +30,7 @@ export default function GTMPage() {
   const s5View = useInView();
   const s6View = useInView();
   const s7View = useInView();
+  const ctaView = useInView();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const faqs = [
@@ -909,6 +910,52 @@ export default function GTMPage() {
             }),
           }}
         />
+      </section>
+
+      {/* ── CTA ────────────────────────────────────────────── */}
+      <section style={{ background: "#F0EEEA", padding: "80px 24px" }}>
+        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+          <div ref={ctaView.ref} className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{
+            position: "relative", overflow: "hidden", borderRadius: 20,
+            backgroundImage: "url('/images/gtm/gtm-cta-horse-portrait.jpg')", backgroundSize: "cover", backgroundPosition: "center",
+          }}>
+            <div role="img" aria-label="Close-up black-and-white portrait of a horse with a long, wind-swept mane" style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.62)" }} />
+            <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>
+              <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(28px, 4.2vw, 52px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.05, marginBottom: 20 }}>
+                Build a Go-to-Market System Built to Convert
+              </h2>
+              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", fontStyle: "italic", maxWidth: 680, margin: "0 auto 48px" }}>
+                Align positioning, visibility, authority, demand, revenue, and operations into one connected system built for how buyers decide today.
+              </p>
+              <div style={{ display: "flex", gap: 24, justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
+                <Link href="/contact" style={{
+                  display: "inline-flex", alignItems: "center",
+                  fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 15,
+                  background: "#d87307", color: "#FFFFFF",
+                  padding: "18px 44px", borderRadius: 6,
+                  transition: "background 0.2s",
+                }}
+                onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
+                onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
+                >
+                  Schedule a Go-to-Market Strategy Session
+                </Link>
+                <button onClick={() => setGrowthReviewOpen(true)} style={{
+                  background: "none", border: "none", cursor: "pointer",
+                  fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 14,
+                  letterSpacing: "0.08em", textTransform: "uppercase",
+                  color: "#FFFFFF", borderBottom: "1px solid rgba(255,255,255,0.4)", paddingBottom: 2,
+                  transition: "color 0.2s, border-color 0.2s",
+                }}
+                onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.color = "#f0a860"; (e.currentTarget as HTMLButtonElement).style.borderColor = "rgba(240,168,96,0.6)"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.color = "#FFFFFF"; (e.currentTarget as HTMLButtonElement).style.borderColor = "rgba(255,255,255,0.4)"; }}
+                >
+                  Request a GTM Growth Review
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
     </main>

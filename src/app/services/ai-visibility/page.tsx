@@ -783,72 +783,31 @@ export default function AIVisibilityPage() {
               <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", fontStyle: "italic", maxWidth: 640, margin: "0 auto 48px" }}>
                 Let&apos;s help your business become discoverable, trusted, and recommended across search and AI.
               </p>
-              <div style={{ textAlign: "left" }}>
-                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 28 }}>
-                  Choose Your Next Step
-                </p>
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 32 }}>
-                  <div>
-                    <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(255,255,255,0.85)", marginBottom: 20 }}>
-                      Meet with our team to run an AI Visibility Diagnostic, uncover where your business is missing from AI search results, and identify the right tier to close the gap.
-                    </p>
-                    <Link href="/contact" style={{
-                      display: "inline-flex", alignItems: "center", gap: 10,
-                      fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 800, fontSize: 17,
-                      letterSpacing: "0.02em", textTransform: "uppercase",
-                      color: "#FFFFFF", borderBottom: "3px solid #d87307", paddingBottom: 6,
-                      transition: "color 0.2s",
-                    }}
-                    onMouseEnter={e => {
-                      e.currentTarget.style.color = "#d87307";
-                      const tail = e.currentTarget.querySelector<HTMLElement>(".cta-arrow-tail");
-                      if (tail) tail.style.transform = "scaleX(1)";
-                    }}
-                    onMouseLeave={e => {
-                      e.currentTarget.style.color = "#FFFFFF";
-                      const tail = e.currentTarget.querySelector<HTMLElement>(".cta-arrow-tail");
-                      if (tail) tail.style.transform = "scaleX(0.3)";
-                    }}
-                    >
-                      <span>Schedule an AI Visibility Strategy Session</span>
-                      <span className="cta-arrow" style={{ display: "inline-flex", alignItems: "center" }}>
-                        <span className="cta-arrow-tail" style={{ display: "inline-block", height: 2.4, width: 24, background: "currentColor", transform: "scaleX(0.35)", transformOrigin: "right center", transition: "transform 0.3s cubic-bezier(0.22,1,0.36,1)" }} />
-                        <svg width="6" height="12" viewBox="0 6 6 12" fill="none" style={{ flexShrink: 0, display: "block" }}><path d="M0 6l6 6-6 6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                      </span>
-                    </Link>
-                  </div>
-                  <div>
-                    <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(255,255,255,0.85)", marginBottom: 20 }}>
-                      AI Visibility works best as part of a connected Go-to-Market strategy that turns discoverability into qualified pipeline. See how the two fit together.
-                    </p>
-                    <Link href="/services/gtm" style={{
-                      display: "inline-flex", alignItems: "center", gap: 10,
-                      fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 800, fontSize: 17,
-                      letterSpacing: "0.02em", textTransform: "uppercase",
-                      color: "#FFFFFF", borderBottom: "3px solid rgba(255,255,255,0.5)", paddingBottom: 6,
-                      transition: "color 0.2s, border-color 0.2s",
-                    }}
-                    onMouseEnter={e => {
-                      e.currentTarget.style.color = "#d87307";
-                      e.currentTarget.style.borderBottomColor = "#d87307";
-                      const tail = e.currentTarget.querySelector<HTMLElement>(".cta-arrow-tail");
-                      if (tail) tail.style.transform = "scaleX(1)";
-                    }}
-                    onMouseLeave={e => {
-                      e.currentTarget.style.color = "#FFFFFF";
-                      e.currentTarget.style.borderBottomColor = "rgba(255,255,255,0.5)";
-                      const tail = e.currentTarget.querySelector<HTMLElement>(".cta-arrow-tail");
-                      if (tail) tail.style.transform = "scaleX(0.3)";
-                    }}
-                    >
-                      <span>Explore Our Go-to-Market Strategy Services</span>
-                      <span className="cta-arrow" style={{ display: "inline-flex", alignItems: "center" }}>
-                        <span className="cta-arrow-tail" style={{ display: "inline-block", height: 2.4, width: 24, background: "currentColor", transform: "scaleX(0.35)", transformOrigin: "right center", transition: "transform 0.3s cubic-bezier(0.22,1,0.36,1)" }} />
-                        <svg width="6" height="12" viewBox="0 6 6 12" fill="none" style={{ flexShrink: 0, display: "block" }}><path d="M0 6l6 6-6 6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                      </span>
-                    </Link>
-                  </div>
-                </div>
+              <div style={{ display: "flex", gap: 24, justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
+                <Link href="/contact" style={{
+                  display: "inline-flex", alignItems: "center",
+                  fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 15,
+                  background: "#d87307", color: "#FFFFFF",
+                  padding: "18px 44px", borderRadius: 6,
+                  transition: "background 0.2s",
+                }}
+                onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
+                onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
+                >
+                  Schedule an AI Visibility Strategy Session
+                </Link>
+                <button onClick={() => setAuditOpen(true)} style={{
+                  background: "none", border: "none", cursor: "pointer",
+                  fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 14,
+                  letterSpacing: "0.08em", textTransform: "uppercase",
+                  color: "#FFFFFF", borderBottom: "1px solid rgba(255,255,255,0.4)", paddingBottom: 2,
+                  transition: "color 0.2s, border-color 0.2s",
+                }}
+                onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.color = "#f0a860"; (e.currentTarget as HTMLButtonElement).style.borderColor = "rgba(240,168,96,0.6)"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.color = "#FFFFFF"; (e.currentTarget as HTMLButtonElement).style.borderColor = "rgba(255,255,255,0.4)"; }}
+                >
+                  Get Free AI Visibility Audit
+                </button>
               </div>
             </div>
           </div>

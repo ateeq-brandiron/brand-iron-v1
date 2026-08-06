@@ -689,18 +689,32 @@ export default function WebsiteDevelopmentPage() {
               <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", fontStyle: "italic", maxWidth: 640, margin: "0 auto 48px" }}>
                 Whether you&apos;re launching a new website or transforming an existing one, Brand Iron helps you create a digital experience that supports your brand, strengthens credibility, and drives measurable business outcomes.
               </p>
-              <Link href="/contact" style={{
-                display: "inline-flex", alignItems: "center",
-                fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 15,
-                background: "#d87307", color: "#FFFFFF",
-                padding: "18px 44px", borderRadius: 6,
-                transition: "background 0.2s",
-              }}
-              onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
-              onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
-              >
-                Schedule a Website Strategy Session
-              </Link>
+              <div style={{ display: "flex", gap: 24, justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
+                <Link href="/contact" style={{
+                  display: "inline-flex", alignItems: "center",
+                  fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 15,
+                  background: "#d87307", color: "#FFFFFF",
+                  padding: "18px 44px", borderRadius: 6,
+                  transition: "background 0.2s",
+                }}
+                onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
+                onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
+                >
+                  Schedule a Website Strategy Session
+                </Link>
+                <button onClick={() => setInquiryOpen(true)} style={{
+                  background: "none", border: "none", cursor: "pointer",
+                  fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 14,
+                  letterSpacing: "0.08em", textTransform: "uppercase",
+                  color: "#FFFFFF", borderBottom: "1px solid rgba(255,255,255,0.4)", paddingBottom: 2,
+                  transition: "color 0.2s, border-color 0.2s",
+                }}
+                onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.color = "#f0a860"; (e.currentTarget as HTMLButtonElement).style.borderColor = "rgba(240,168,96,0.6)"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.color = "#FFFFFF"; (e.currentTarget as HTMLButtonElement).style.borderColor = "rgba(255,255,255,0.4)"; }}
+                >
+                  Request a Website Optimization Review
+                </button>
+              </div>
             </div>
           </div>
         </div>
