@@ -763,10 +763,11 @@ section p, main p, article p {
 .client-logo-marquee:hover .client-logo-track {
   animation-play-state: paused;
 }
-.client-logo-card {
+/* Shared uniform logo card -- same fixed box for the client marquee and Our Partners */
+.logo-card {
   flex-shrink: 0;
-  height: 88px;
-  padding: 0 28px;
+  width: 290px;
+  height: 110px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -776,19 +777,28 @@ section p, main p, article p {
   box-shadow: 0 2px 10px rgba(26,26,26,0.04);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
-.client-logo-card:hover {
+.logo-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 22px rgba(26,26,26,0.1);
   border-color: #d87307;
 }
-.client-logo-card img {
-  height: 50px;
+.logo-card img {
+  max-width: 85%;
+  max-height: 62%;
   width: auto;
-  max-width: 260px;
+  height: auto;
   object-fit: contain;
+}
+.logo-card-mono img {
   filter: grayscale(100%);
   opacity: 0.75;
   transition: opacity 0.25s ease;
+}
+.logo-card-mono:hover img {
+  opacity: 1;
+}
+.logo-card:hover .corner-bracket {
+  opacity: 1 !important;
 }
 .client-logo-card:hover img {
   opacity: 1;

@@ -131,16 +131,16 @@ const journeyStages = [
 ];
 
 const partners = [
-  { name: "Boxsy", href: "https://boxsy.io", logo: "/images/partner-logos/boxsy-logo.svg", height: 30 },
+  { name: "Boxsy", href: "https://boxsy.io", logo: "/images/partner-logos/boxsy-logo.svg" },
   { name: "Bellwether", href: "https://mybellwether.com" },
-  { name: "Sage Professional Services", href: "https://sageprosrvs.com", logo: "/images/client-logos/sage-logo.png", height: 44 },
-  { name: "FRD Legacy Advisors", href: "https://rfdlegacy.com", logo: "/images/client-logos/frd-legacy-advisors-logo.png", height: 38 },
-  { name: "ScamRocket", href: "https://scamrocket.com", logo: "/images/client-logos/scamrocket-logo.png", height: 26 },
-  { name: "Black Lake Capital", href: "https://blacklakecap.com", logo: "/images/client-logos/black-lake-capital-logo.png", height: 34 },
-  { name: "Empower AI 365", href: "https://www.empowerai365.com", logo: "/images/partner-logos/empower-ai-365-logo.png", height: 28 },
-  { name: "Clean Lines Power", href: "https://www.cleanlinespower.com", logo: "/images/partner-logos/clean-lines-power-logo.png", height: 30 },
-  { name: "Sharp Spring", href: "https://sharpspring.com", logo: "/images/partner-logos/sharpspring-logo.png", height: 32 },
-  { name: "Capital Desk", href: "https://capitaldesk.com", logo: "/images/partner-logos/capital-desk-logo.png", height: 26 },
+  { name: "Sage Professional Services", href: "https://sageprosrvs.com", logo: "/images/client-logos/sage-logo.png" },
+  { name: "FRD Legacy Advisors", href: "https://rfdlegacy.com", logo: "/images/client-logos/frd-legacy-advisors-logo.png" },
+  { name: "ScamRocket", href: "https://scamrocket.com", logo: "/images/client-logos/scamrocket-logo.png" },
+  { name: "Black Lake Capital", href: "https://blacklakecap.com", logo: "/images/client-logos/black-lake-capital-logo.png" },
+  { name: "Empower AI 365", href: "https://www.empowerai365.com", logo: "/images/partner-logos/empower-ai-365-logo.png" },
+  { name: "Clean Lines Power", href: "https://www.cleanlinespower.com", logo: "/images/partner-logos/clean-lines-power-logo.png" },
+  { name: "Sharp Spring", href: "https://sharpspring.com", logo: "/images/partner-logos/sharpspring-logo.png" },
+  { name: "Capital Desk", href: "https://capitaldesk.com", logo: "/images/partner-logos/capital-desk-logo.png" },
 ];
 
 const testimonials = [
@@ -411,7 +411,7 @@ export default function Home() {
         <div className="client-logo-marquee" style={{ width: "100vw", marginLeft: "calc(50% - 50vw)" }}>
           <div className="client-logo-track">
             {[...clientLogos, ...clientLogos].map((c, i) => (
-              <div key={`${c.name}-${i}`} className="client-logo-card">
+              <div key={`${c.name}-${i}`} className="logo-card logo-card-mono">
                 <img loading="eager" src={c.logo} alt={c.name} />
               </div>
             ))}
@@ -941,37 +941,19 @@ export default function Home() {
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", gap: 28 }}>
             {partners.map(p => (
-              <a key={p.name} href={p.href} target="_blank" rel="noopener noreferrer" aria-label={p.name} style={{
-                display: "flex", alignItems: "center", justifyContent: "center",
-                background: "#FFFFFF", border: "1px solid #ECE5D8", borderRadius: 14,
-                padding: "26px 40px", minWidth: 200, height: 96, position: "relative",
-                transition: "transform 0.25s, box-shadow 0.25s, border-color 0.25s",
-              }}
-              onMouseEnter={e => {
-                (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(-4px)";
-                (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 14px 32px rgba(0,0,0,0.1)";
-                (e.currentTarget as HTMLAnchorElement).style.borderColor = "#d87307";
-                e.currentTarget.querySelectorAll<HTMLImageElement>(".corner-bracket").forEach(img => (img.style.opacity = "1"));
-              }}
-              onMouseLeave={e => {
-                (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(0)";
-                (e.currentTarget as HTMLAnchorElement).style.boxShadow = "none";
-                (e.currentTarget as HTMLAnchorElement).style.borderColor = "#ECE5D8";
-                e.currentTarget.querySelectorAll<HTMLImageElement>(".corner-bracket").forEach(img => (img.style.opacity = "0"));
-              }}
-              >
+              <a key={p.name} href={p.href} target="_blank" rel="noopener noreferrer" aria-label={p.name} className="logo-card" style={{ position: "relative" }}>
                 <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 6, right: 6, width: 22, height: 22, opacity: 0, transition: "opacity 0.25s ease" }} />
                 <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 6, left: 6, width: 22, height: 22, opacity: 0, transition: "opacity 0.25s ease" }} />
                 {p.name === "Bellwether" ? (
-                  <span style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                  <span style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
                       <path d="M13.73 21a2 2 0 0 1-3.46 0" />
                     </svg>
-                    <span style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontSize: 22, fontWeight: 700, color: "#1a1a1a" }}>Bellwether</span>
+                    <span style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontSize: 34, fontWeight: 700, color: "#1a1a1a" }}>Bellwether</span>
                   </span>
                 ) : (
-                  <img loading="lazy" src={p.logo} alt={`${p.name} logo`} style={{ height: p.height, width: "auto", maxWidth: 180, display: "block" }} />
+                  <img loading="lazy" src={p.logo} alt={`${p.name} logo`} />
                 )}
               </a>
             ))}
