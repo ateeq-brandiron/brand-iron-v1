@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI Visibility Service | AI Engine Optimization | Brand Iron",
-  description: "Our AI Visibility service ensures your brand is discoverable, trusted, and chosen by AI assistants and search engines.",
+  title: "AI Visibility, AEO & GEO Services | Brand Iron",
+  description: "Improve your visibility across Google, ChatGPT, Gemini, Claude, and Perplexity with integrated SEO, AEO, GEO, content, and authority building.",
   alternates: { canonical: "/services/ai-visibility" },
   openGraph: { type: "article" },
 };

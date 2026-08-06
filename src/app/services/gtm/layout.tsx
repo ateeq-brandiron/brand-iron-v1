@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Go-to-Market Strategy Services | Brand Iron",
-  description: "Brand Iron's go-to-market strategy services align positioning, messaging, and execution into a connected GTM framework built for AI-driven buyers.",
+  title: "Go-to-Market Strategy Consulting | Brand Iron",
+  description: "Build a go-to-market strategy that aligns positioning, demand generation, sales, and operations to create qualified pipeline and sustainable growth.",
   alternates: { canonical: "/services/gtm" },
   openGraph: { type: "article" },
 };

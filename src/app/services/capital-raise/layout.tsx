@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Capital Raise Support Services | Brand Iron",
-  description: "Brand Iron helps founders prepare for investment with compelling pitch decks, fundraising strategy, and targeted investor outreach for capital raise support.",
+  title: "Capital Raise & Investor Outreach Services | Brand Iron",
+  description: "Prepare for fundraising with an investor-ready pitch deck, compelling investment story, targeted investor research, and strategic outreach support.",
   alternates: { canonical: "/services/capital-raise" },
   openGraph: { type: "article" },
 };

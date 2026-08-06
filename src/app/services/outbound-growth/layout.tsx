@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Outbound Growth Services | LinkedIn, Email and SDR Programs",
-  description: "Build a stronger B2B pipeline with Brand Iron's LinkedIn outreach, email campaigns, SDR programs, appointment setting, and sales enablement services.",
+  title: "B2B Outbound Lead Generation Services | Brand Iron",
+  description: "Generate qualified B2B opportunities with targeted prospecting, LinkedIn outreach, email campaigns, follow-up systems, and campaign optimization.",
   alternates: { canonical: "/services/outbound-growth" },
   openGraph: { type: "article" },
 };

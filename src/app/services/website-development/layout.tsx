@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Website Development Services | Brand Iron",
-  description: "Brand Iron builds strategic websites that connect brand, messaging, and AI visibility into one platform designed to make your business discoverable and trusted.",
+  title: "Conversion-Focused Website Development | Brand Iron",
+  description: "Get a strategic, responsive, SEO-ready website designed to strengthen credibility, improve AI visibility, and generate more qualified leads.",
   alternates: { canonical: "/services/website-development" },
   openGraph: { type: "article" },
 };
