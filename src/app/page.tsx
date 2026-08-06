@@ -945,12 +945,12 @@ export default function Home() {
                 <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 6, right: 6, width: 22, height: 22, opacity: 0, transition: "opacity 0.25s ease" }} />
                 <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 6, left: 6, width: 22, height: 22, opacity: 0, transition: "opacity 0.25s ease" }} />
                 {p.name === "Bellwether" ? (
-                  <span style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                  <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
                       <path d="M13.73 21a2 2 0 0 1-3.46 0" />
                     </svg>
-                    <span style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontSize: 34, fontWeight: 700, color: "#1a1a1a" }}>Bellwether</span>
+                    <span style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontSize: 20, fontWeight: 700, color: "#1a1a1a" }}>Bellwether</span>
                   </span>
                 ) : (
                   <img loading="lazy" src={p.logo} alt={`${p.name} logo`} />
