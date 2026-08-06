@@ -13,9 +13,11 @@ export async function POST(request: Request) {
 
   // Name and email are the only fields this route truly requires - name a
   // missing field explicitly rather than a generic "invalid form" message,
-  // so a visitor can fix it and resubmit without guessing.
+  // so a visitor can fix it and resubmit without guessing. The newsletter
+  // signup (footer) only ever collects an email address, so it's the one
+  // form exempt from the name requirement.
   const missing: string[] = [];
-  if (!name || !String(name).trim()) missing.push("your name");
+  if (formId !== "newsletter" && (!name || !String(name).trim())) missing.push("your name");
   if (!email || !String(email).trim()) missing.push("your email address");
   if (missing.length > 0) {
     return Response.json(
@@ -47,6 +49,7 @@ export async function POST(request: Request) {
     branding_proposal: "Branding Proposal",
     outbound_strategy_review: "Outbound Strategy Review",
     revenue_strategist_review: "Revenue Engineering Strategist Review",
+    newsletter: "Newsletter Signup",
   };
   const formLabel = FORM_LABELS[formId as string] || "Website Form";
 
@@ -58,6 +61,7 @@ export async function POST(request: Request) {
     branding_proposal: process.env.SHARPSPRING_BRANDING_PROPOSAL_LIST_ID,
     outbound_strategy_review: process.env.SHARPSPRING_OUTBOUND_STRATEGY_REVIEW_LIST_ID,
     revenue_strategist_review: process.env.SHARPSPRING_REVENUE_STRATEGIST_LIST_ID,
+    newsletter: process.env.SHARPSPRING_NEWSLETTER_LIST_ID,
   };
   const listID = LIST_ID_BY_FORM[formId as string] || process.env.SHARPSPRING_CONTACT_FORM_LIST_ID;
 
@@ -69,7 +73,8 @@ export async function POST(request: Request) {
     );
   }
 
-  const [firstName, ...rest] = String(name).trim().split(/\s+/);
+  const trimmedName = name ? String(name).trim() : "";
+  const [firstName, ...rest] = trimmedName ? trimmedName.split(/\s+/) : [""];
   const lastName = rest.join(" ") || firstName;
 
   // Company size, interest, investment range, and timeline aren't standard

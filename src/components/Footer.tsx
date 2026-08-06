@@ -19,6 +19,33 @@ const socialLinks = [
 
 export default function Footer() {
   const [email, setEmail] = useState("");
+  const [newsletterStatus, setNewsletterStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [newsletterError, setNewsletterError] = useState("");
+
+  async function handleNewsletterSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (!email.trim() || newsletterStatus === "loading") return;
+    setNewsletterStatus("loading");
+    setNewsletterError("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, formId: "newsletter" }),
+      });
+      const data = await res.json().catch(() => null);
+      if (data?.success) {
+        setNewsletterStatus("success");
+        setEmail("");
+      } else {
+        setNewsletterStatus("error");
+        setNewsletterError(data?.error || "Something went wrong. Please try again.");
+      }
+    } catch {
+      setNewsletterStatus("error");
+      setNewsletterError("Something went wrong. Please try again.");
+    }
+  }
 
   return (
     <footer style={{ position: "relative", color: "#FFFFFF", overflow: "hidden" }}>
@@ -119,10 +146,11 @@ export default function Footer() {
                 <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.9)", marginBottom: 16, lineHeight: 1.9 }}>
                   Subscribe To Our Newsletter
                 </p>
-                <form onSubmit={e => { e.preventDefault(); setEmail(""); }} style={{ display: "flex" }}>
+                <form onSubmit={handleNewsletterSubmit} style={{ display: "flex" }}>
                   <input
-                    type="email" placeholder="Email" value={email}
-                    onChange={e => setEmail(e.target.value)}
+                    type="email" placeholder="Email" value={email} required
+                    disabled={newsletterStatus === "loading"}
+                    onChange={e => { setEmail(e.target.value); if (newsletterStatus !== "idle") setNewsletterStatus("idle"); }}
                     style={{
                       flex: 1, padding: "12px 18px",
                       fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13,
@@ -134,22 +162,39 @@ export default function Footer() {
                     onFocus={e => { e.currentTarget.style.borderColor = "#d87307"; e.currentTarget.style.background = "rgba(216,115,7,0.1)"; }}
                     onBlur={e => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.35)"; e.currentTarget.style.background = "rgba(255,255,255,0.08)"; }}
                   />
-                  <button type="submit" style={{
+                  <button type="submit" disabled={newsletterStatus === "loading"} style={{
                     width: 48, height: 48, borderRadius: "0 40px 40px 0",
                     background: "rgba(255,255,255,0.15)",
                     border: "1px solid rgba(255,255,255,0.35)", borderLeft: "none",
                     display: "flex", alignItems: "center", justifyContent: "center",
-                    cursor: "pointer", transition: "background 0.2s",
+                    cursor: newsletterStatus === "loading" ? "default" : "pointer", transition: "background 0.2s",
+                    opacity: newsletterStatus === "loading" ? 0.6 : 1,
                   }}
-                  onMouseEnter={e => ((e.currentTarget as HTMLButtonElement).style.background = "rgba(216,115,7,0.55)")}
+                  onMouseEnter={e => { if (newsletterStatus !== "loading") (e.currentTarget as HTMLButtonElement).style.background = "rgba(216,115,7,0.55)"; }}
                   onMouseLeave={e => ((e.currentTarget as HTMLButtonElement).style.background = "rgba(255,255,255,0.15)")}
                   >
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                      <circle cx="12" cy="12" r="10" stroke="white" strokeWidth="2"/>
-                      <path d="M10 8l4 4-4 4" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
+                    {newsletterStatus === "success" ? (
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 13l4 4L19 7" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    ) : (
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10" stroke="white" strokeWidth="2"/>
+                        <path d="M10 8l4 4-4 4" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    )}
                   </button>
                 </form>
+                {newsletterStatus === "success" && (
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, color: "#f0a860", marginTop: 10 }}>
+                    You&apos;re subscribed. Thanks for joining!
+                  </p>
+                )}
+                {newsletterStatus === "error" && (
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, color: "#ff9b9b", marginTop: 10 }}>
+                    {newsletterError}
+                  </p>
+                )}
               </div>
               </div>
             </div>
