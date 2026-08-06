@@ -749,6 +749,7 @@ section p, main p, article p {
 .client-logo-marquee {
   overflow: hidden;
   position: relative;
+  padding: 18px 0;
   -webkit-mask-image: linear-gradient(90deg, transparent, black 6%, black 94%, transparent);
   mask-image: linear-gradient(90deg, transparent, black 6%, black 94%, transparent);
 }
@@ -764,8 +765,8 @@ section p, main p, article p {
 }
 .client-logo-card {
   flex-shrink: 0;
-  width: 168px;
   height: 88px;
+  padding: 0 28px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -781,10 +782,9 @@ section p, main p, article p {
   border-color: #d87307;
 }
 .client-logo-card img {
-  max-width: 72%;
-  max-height: 58%;
+  height: 50px;
   width: auto;
-  height: auto;
+  max-width: 260px;
   object-fit: contain;
   filter: grayscale(100%);
   opacity: 0.75;

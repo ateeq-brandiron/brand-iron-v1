@@ -404,7 +404,7 @@ export default function Home() {
       </section>
 
       {/* ── S2B: CLIENT LOGO MARQUEE ──────────────────────── */}
-      <section style={{ background: "#F7F4EE", padding: "36px 0 44px" }}>
+      <section style={{ background: "#F7F4EE", padding: "24px 0 30px" }}>
         <p style={{ textAlign: "center", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 28 }}>
           Trusted By Growing Brands
         </p>
