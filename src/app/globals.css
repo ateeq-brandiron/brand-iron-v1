@@ -766,8 +766,8 @@ section p, main p, article p {
 /* Shared uniform logo card -- same fixed box for the client marquee and Our Partners */
 .logo-card {
   flex-shrink: 0;
-  width: 290px;
-  height: 110px;
+  width: 168px;
+  height: 88px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -783,8 +783,8 @@ section p, main p, article p {
   border-color: #d87307;
 }
 .logo-card img {
-  max-width: 85%;
-  max-height: 62%;
+  max-width: 92%;
+  max-height: 80%;
   width: auto;
   height: auto;
   object-fit: contain;
