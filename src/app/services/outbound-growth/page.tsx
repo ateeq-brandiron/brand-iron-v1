@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import OutboundStrategyReviewModal from "@/components/OutboundStrategyReviewModal";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import ServiceSchema from "@/components/ServiceSchema";
+import HowToSchema from "@/components/HowToSchema";
 
 function useInView(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null);
@@ -124,6 +125,10 @@ const faqs = [
   {
     q: "How does Outbound Growth connect to your other services like Revenue Engineering or GTM Strategy?",
     a: "Outbound Growth generates the top-of-funnel pipeline. Revenue Engineering ensures the leads outbound generates are captured, routed, and followed up properly in your CRM. GTM Strategy defines the market approach and target segments that outbound campaigns execute against. Together, the services form a connected pipeline system.",
+    related: [
+      { href: "/services/revenue-engineering", label: "Explore Our Revenue Engineering Services" },
+      { href: "/services/gtm", label: "Explore Our Go-to-Market Strategy Services" },
+    ],
   },
   {
     q: "How do you measure success in an outbound campaign?",
@@ -170,6 +175,19 @@ export default function OutboundGrowthPage() {
         name="Outbound Growth Service"
         serviceType="Outbound Growth (LinkedIn, Email, SDR)"
         description="Build a stronger B2B pipeline with Brand Iron's LinkedIn outreach, email campaigns, SDR programs, appointment setting, and sales enablement services."
+      />
+      {coreServices.map(s => (
+        <ServiceSchema
+          key={s.num}
+          name={s.title}
+          serviceType="Outbound Growth (LinkedIn, Email, SDR)"
+          description={s.body}
+        />
+      ))}
+      <HowToSchema
+        name="Brand Iron's Outbound Growth Process"
+        description="How Brand Iron finds, engages, qualifies, and books meetings with target accounts."
+        steps={howItWorks.map(s => ({ name: s.title, text: s.body }))}
       />
 
       {reviewOpen && <OutboundStrategyReviewModal onClose={() => setReviewOpen(false)} />}
@@ -445,7 +463,7 @@ export default function OutboundGrowthPage() {
             Common questions we hear from teams considering an outbound engagement.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-            {faqs.map(({ q, a }, i) => (
+            {faqs.map(({ q, a, related }, i) => (
               <div key={i}
                 className={`reveal${s6View.inView ? ' visible' : ''}`}
                 style={{ background: "rgba(255,255,255,0.9)", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 10, overflow: "hidden", transition: "box-shadow 0.2s, border-color 0.2s" }}
@@ -464,6 +482,15 @@ export default function OutboundGrowthPage() {
                 <div style={{ maxHeight: openFaq === i ? 600 : 0, opacity: openFaq === i ? 1 : 0, overflow: "hidden", transition: "max-height 0.3s ease, opacity 0.25s ease" }}>
                   <div style={{ padding: "0 24px 20px" }}>
                     <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.8, color: "#555", margin: 0 }}>{a}</p>
+                    {related && (
+                      <div style={{ display: "flex", flexWrap: "wrap", gap: 16, marginTop: 12 }}>
+                        {related.map(r => (
+                          <Link key={r.href} href={r.href} style={{ display: "inline-block", fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, color: "#d87307", textDecoration: "none", borderBottom: "1px solid rgba(216,115,7,0.4)" }}>
+                            {r.label} →
+                          </Link>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

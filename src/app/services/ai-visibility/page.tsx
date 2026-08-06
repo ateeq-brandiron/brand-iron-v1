@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import AuditModal from "@/components/AuditModal";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import ServiceSchema from "@/components/ServiceSchema";
+import HowToSchema from "@/components/HowToSchema";
 
 function useInView(threshold = 0.12) {
   const ref = useRef<HTMLDivElement>(null);
@@ -33,6 +34,7 @@ export default function AIVisibilityPage() {
   const s4View = useInView();
   const s5View = useInView();
   const s6View = useInView();
+  const ctaView = useInView();
 
   const tiers = [
     {
@@ -170,6 +172,24 @@ export default function AIVisibilityPage() {
         name="AI Visibility Service"
         serviceType="AI Engine Optimization (AEO)"
         description="Our AI Visibility service ensures your business becomes discoverable, trusted, and chosen in today's AI-driven buying landscape."
+      />
+      {tiers.map(t => (
+        <ServiceSchema
+          key={t.number}
+          name={t.name}
+          serviceType="AI Engine Optimization (AEO)"
+          description={`${t.tagline}. ${t.description}`}
+        />
+      ))}
+      <HowToSchema
+        name="Brand Iron's AI Visibility Framework"
+        description="How Brand Iron improves discoverability across search engines and AI-powered search experiences."
+        steps={[
+          { name: "Diagnose", text: "Understand how search engines and AI platforms currently see your business, and identify visibility gaps, technical issues, and missed opportunities." },
+          { name: "Build", text: "Strengthen your SEO, technical foundation, structured data, and entity optimization to create the infrastructure AI and search engines rely on." },
+          { name: "Grow", text: "Expand your authority through strategic content, citations, digital PR, reviews, and brand mentions to increase trust, relevance, and AI recommendations." },
+          { name: "Dominate", text: "Continuously optimize your digital presence to become a recognized authority in your market and lead the conversation." },
+        ]}
       />
 
       {auditOpen && <AuditModal onClose={() => setAuditOpen(false)} />}
@@ -695,32 +715,6 @@ export default function AIVisibilityPage() {
             </div>
           </div>
         </div>
-
-        {/* Not sure which path — full-bleed photo panel */}
-        <div className={`reveal${s5View.inView ? ' visible' : ''}`} style={{
-          position: "relative", width: "100vw", marginLeft: "calc(50% - 50vw)", marginTop: 56,
-          overflow: "hidden", borderTop: "3px solid #d87307",
-          backgroundImage: "url('/images/shared/shared-horse-mane-circuit-lines.jpg')",
-          backgroundSize: "cover", backgroundPosition: "center",
-        }}>
-          <div role="img" aria-label="Close-up black-and-white photo of a horse's mane blending into glowing circuit-board line patterns and logic-gate symbols" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(10,12,8,0.6) 0%, rgba(10,12,8,0.72) 100%)" }} />
-          <div style={{ position: "relative", zIndex: 1, maxWidth: 1200, margin: "0 auto", padding: "64px 24px" }}>
-            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.9)", margin: "0 0 28px" }}>
-              Not sure where to start? Talk through your goals with a strategist and find the right AI Visibility solution for your business. Explore each solution in detail to understand what&apos;s included, who it&apos;s designed for, and the business outcomes you can expect.
-            </p>
-            <Link href="/contact" style={{
-              display: "inline-block", padding: "14px 32px", borderRadius: 8,
-              fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
-              letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none",
-              background: "#d87307", color: "#FFFFFF", transition: "background 0.2s",
-            }}
-            onMouseEnter={e => (e.currentTarget.style.background = "#b8691f")}
-            onMouseLeave={e => (e.currentTarget.style.background = "#d87307")}
-            >
-              Talk to a Strategist →
-            </Link>
-          </div>
-        </div>
       </section>
 
       {/* ── S7: FAQ ───────────────────────────────────────────── */}
@@ -772,6 +766,93 @@ export default function AIVisibilityPage() {
             }),
           }}
         />
+      </section>
+
+      {/* ── CTA ────────────────────────────────────────────── */}
+      <section style={{ background: "#F0EEEA", padding: "80px 24px" }}>
+        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+          <div ref={ctaView.ref} className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{
+            position: "relative", overflow: "hidden", borderRadius: 20,
+            backgroundImage: "url('/images/ai-visibility/ai-visibility-cta-cowboy-tech-rope.png')", backgroundSize: "cover", backgroundPosition: "center",
+          }}>
+            <div role="img" aria-label="Rancher coiling a lasso woven with glowing circuit lines against a hazy countryside" style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
+            <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>
+              <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(28px, 4.2vw, 52px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.05, marginBottom: 20 }}>
+                Let&apos;s Build Your AI Visibility Strategy.
+              </h2>
+              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", fontStyle: "italic", maxWidth: 640, margin: "0 auto 48px" }}>
+                Let&apos;s help your business become discoverable, trusted, and recommended across search and AI.
+              </p>
+              <div style={{ textAlign: "left" }}>
+                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 28 }}>
+                  Choose Your Next Step
+                </p>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 32 }}>
+                  <div>
+                    <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(255,255,255,0.85)", marginBottom: 20 }}>
+                      Meet with our team to run an AI Visibility Diagnostic, uncover where your business is missing from AI search results, and identify the right tier to close the gap.
+                    </p>
+                    <Link href="/contact" style={{
+                      display: "inline-flex", alignItems: "center", gap: 10,
+                      fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 800, fontSize: 17,
+                      letterSpacing: "0.02em", textTransform: "uppercase",
+                      color: "#FFFFFF", borderBottom: "3px solid #d87307", paddingBottom: 6,
+                      transition: "color 0.2s",
+                    }}
+                    onMouseEnter={e => {
+                      e.currentTarget.style.color = "#d87307";
+                      const tail = e.currentTarget.querySelector<HTMLElement>(".cta-arrow-tail");
+                      if (tail) tail.style.transform = "scaleX(1)";
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.color = "#FFFFFF";
+                      const tail = e.currentTarget.querySelector<HTMLElement>(".cta-arrow-tail");
+                      if (tail) tail.style.transform = "scaleX(0.3)";
+                    }}
+                    >
+                      <span>Schedule an AI Visibility Strategy Session</span>
+                      <span className="cta-arrow" style={{ display: "inline-flex", alignItems: "center" }}>
+                        <span className="cta-arrow-tail" style={{ display: "inline-block", height: 2.4, width: 24, background: "currentColor", transform: "scaleX(0.35)", transformOrigin: "right center", transition: "transform 0.3s cubic-bezier(0.22,1,0.36,1)" }} />
+                        <svg width="6" height="12" viewBox="0 6 6 12" fill="none" style={{ flexShrink: 0, display: "block" }}><path d="M0 6l6 6-6 6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      </span>
+                    </Link>
+                  </div>
+                  <div>
+                    <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(255,255,255,0.85)", marginBottom: 20 }}>
+                      AI Visibility works best as part of a connected Go-to-Market strategy that turns discoverability into qualified pipeline. See how the two fit together.
+                    </p>
+                    <Link href="/services/gtm" style={{
+                      display: "inline-flex", alignItems: "center", gap: 10,
+                      fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 800, fontSize: 17,
+                      letterSpacing: "0.02em", textTransform: "uppercase",
+                      color: "#FFFFFF", borderBottom: "3px solid rgba(255,255,255,0.5)", paddingBottom: 6,
+                      transition: "color 0.2s, border-color 0.2s",
+                    }}
+                    onMouseEnter={e => {
+                      e.currentTarget.style.color = "#d87307";
+                      e.currentTarget.style.borderBottomColor = "#d87307";
+                      const tail = e.currentTarget.querySelector<HTMLElement>(".cta-arrow-tail");
+                      if (tail) tail.style.transform = "scaleX(1)";
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.color = "#FFFFFF";
+                      e.currentTarget.style.borderBottomColor = "rgba(255,255,255,0.5)";
+                      const tail = e.currentTarget.querySelector<HTMLElement>(".cta-arrow-tail");
+                      if (tail) tail.style.transform = "scaleX(0.3)";
+                    }}
+                    >
+                      <span>Explore Our Go-to-Market Strategy Services</span>
+                      <span className="cta-arrow" style={{ display: "inline-flex", alignItems: "center" }}>
+                        <span className="cta-arrow-tail" style={{ display: "inline-block", height: 2.4, width: 24, background: "currentColor", transform: "scaleX(0.35)", transformOrigin: "right center", transition: "transform 0.3s cubic-bezier(0.22,1,0.36,1)" }} />
+                        <svg width="6" height="12" viewBox="0 6 6 12" fill="none" style={{ flexShrink: 0, display: "block" }}><path d="M0 6l6 6-6 6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      </span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
     </main>

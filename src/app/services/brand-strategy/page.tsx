@@ -253,10 +253,12 @@ export default function BrandStrategyPage() {
     {
       q: "Can Brand Iron support the external market launch?",
       a: "Yes. The Brand Foundation + Market Launch solution includes a go-to-market launch plan covering ideal customers, market and competitor insights, positioning, sales strategy, marketing channels, KPIs, and launch coordination.",
+      related: [{ href: "/services/gtm", label: "Explore Our Go-to-Market Strategy Services" }],
     },
     {
       q: "How does brand strategy support AI visibility?",
       a: "AI systems rely on clear, consistent, and credible information to understand and recommend organizations. A strong brand strategy improves messaging consistency, entity clarity, authority signals, content alignment, and digital trust across the website and other online touchpoints. Branding alone does not guarantee AI visibility, but it creates an important strategic foundation for SEO, AEO, GEO, entity optimization, and AI discoverability.",
+      related: [{ href: "/services/ai-visibility", label: "Explore Our AI Visibility Services" }],
     },
     {
       q: "Is Brand Iron a traditional branding agency?",
@@ -278,6 +280,14 @@ export default function BrandStrategyPage() {
         serviceType="Brand Strategy & Positioning"
         description="Build a brand that earns trust and holds its ground. Brand Iron's brand strategy services connect positioning, messaging, and visual identity into one system."
       />
+      {solutions.map(s => (
+        <ServiceSchema
+          key={s.name}
+          name={s.name}
+          serviceType="Brand Strategy & Positioning"
+          description={`${s.tagline} ${s.outcome}`}
+        />
+      ))}
 
       {proposalOpen && <BrandingProposalModal onClose={() => setProposalOpen(false)} />}
 
@@ -693,7 +703,7 @@ export default function BrandStrategyPage() {
               Frequently Asked Questions
             </h3>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-              {faqs.map(({ q, a }, i) => (
+              {faqs.map(({ q, a, related }, i) => (
                 <div key={i}
                   style={{ background: "rgba(255,255,255,0.9)", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 10, overflow: "hidden", transition: "box-shadow 0.2s, border-color 0.2s" }}
                   onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.borderColor = "rgba(216,115,7,0.3)"; el.style.boxShadow = "0 8px 24px rgba(0,0,0,0.06)"; }}
@@ -711,6 +721,15 @@ export default function BrandStrategyPage() {
                   <div style={{ maxHeight: openFaq === i ? 600 : 0, opacity: openFaq === i ? 1 : 0, overflow: "hidden", transition: "max-height 0.3s ease, opacity 0.25s ease" }}>
                     <div style={{ padding: "0 24px 20px" }}>
                       <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.8, color: "#555", margin: 0 }}>{a}</p>
+                      {related && (
+                        <div style={{ display: "flex", flexWrap: "wrap", gap: 16, marginTop: 12 }}>
+                          {related.map(r => (
+                            <Link key={r.href} href={r.href} style={{ display: "inline-block", fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, color: "#d87307", textDecoration: "none", borderBottom: "1px solid rgba(216,115,7,0.4)" }}>
+                              {r.label} →
+                            </Link>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>

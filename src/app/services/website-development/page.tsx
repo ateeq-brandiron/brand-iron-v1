@@ -5,6 +5,7 @@ import CircuitOverlay from "@/components/CircuitOverlay";
 import WebsiteInquiryModal from "@/components/WebsiteInquiryModal";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import ServiceSchema from "@/components/ServiceSchema";
+import HowToSchema from "@/components/HowToSchema";
 
 function useInView(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null);
@@ -217,6 +218,12 @@ export default function WebsiteDevelopmentPage() {
     {
       q: "How does Website Development connect to your other services like Brand Strategy or AI Visibility?",
       a: "Brand Strategy defines the positioning and messaging the website communicates. AI Visibility ensures the site is discoverable across search and AI platforms. GTM Strategy defines the conversion paths the site supports, and Revenue Engineering connects the site's lead capture to CRM and reporting systems. Website Development is the digital home where all of these come together.",
+      related: [
+        { href: "/services/brand-strategy", label: "Explore Our Brand Strategy Services" },
+        { href: "/services/ai-visibility", label: "Explore Our AI Visibility Services" },
+        { href: "/services/gtm", label: "Explore Our Go-to-Market Strategy Services" },
+        { href: "/services/revenue-engineering", label: "Explore Our Revenue Engineering Services" },
+      ],
     },
     {
       q: "Is the website mobile responsive and accessible?",
@@ -241,6 +248,19 @@ export default function WebsiteDevelopmentPage() {
         name="Website Development Service"
         serviceType="Website Development"
         description="Brand Iron builds strategic websites that connect brand, messaging, and AI visibility into one platform designed to make your business discoverable and trusted."
+      />
+      {solutions.map(s => (
+        <ServiceSchema
+          key={s.name}
+          name={s.name}
+          serviceType="Website Development"
+          description={`${s.body} ${s.bestFor}.`}
+        />
+      ))}
+      <HowToSchema
+        name="Brand Iron's Website Development Process"
+        description="How Brand Iron takes a website from discovery through launch and ongoing growth."
+        steps={processSteps.map(p => ({ name: p.title, text: p.body }))}
       />
 
       {inquiryOpen && <WebsiteInquiryModal onClose={() => setInquiryOpen(false)} />}
@@ -604,7 +624,7 @@ export default function WebsiteDevelopmentPage() {
               Common Questions About Website Development
             </h3>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-              {faqs.map(({ q, a }, i) => (
+              {faqs.map(({ q, a, related }, i) => (
                 <div key={i}
                   style={{ background: "rgba(255,255,255,0.9)", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 10, overflow: "hidden", transition: "box-shadow 0.2s, border-color 0.2s" }}
                   onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.borderColor = "rgba(216,115,7,0.3)"; el.style.boxShadow = "0 8px 24px rgba(0,0,0,0.06)"; }}
@@ -622,6 +642,15 @@ export default function WebsiteDevelopmentPage() {
                   <div style={{ maxHeight: openFaq === i ? 600 : 0, opacity: openFaq === i ? 1 : 0, overflow: "hidden", transition: "max-height 0.3s ease, opacity 0.25s ease" }}>
                     <div style={{ padding: "0 24px 20px" }}>
                       <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.8, color: "#555", margin: 0 }}>{a}</p>
+                      {related && (
+                        <div style={{ display: "flex", flexWrap: "wrap", gap: 16, marginTop: 12 }}>
+                          {related.map(r => (
+                            <Link key={r.href} href={r.href} style={{ display: "inline-block", fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, color: "#d87307", textDecoration: "none", borderBottom: "1px solid rgba(216,115,7,0.4)" }}>
+                              {r.label} →
+                            </Link>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>

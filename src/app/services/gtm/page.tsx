@@ -5,6 +5,7 @@ import CircuitOverlay from "@/components/CircuitOverlay";
 import GrowthReviewModal from "@/components/GrowthReviewModal";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import ServiceSchema from "@/components/ServiceSchema";
+import HowToSchema from "@/components/HowToSchema";
 
 function useInView(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null);
@@ -43,6 +44,7 @@ export default function GTMPage() {
     {
       q: "Why does AI Visibility matter in a Go-to-Market strategy?",
       a: "Today's buyers don't rely solely on search engines. They ask AI platforms, compare competitors, read reviews, explore thought leadership, and validate organizations before reaching out. AI Visibility helps your organization become discoverable across this modern buying journey by strengthening semantic search, entity optimization, structured data, knowledge graph signals, and answer-ready content. As AI continues to influence purchasing decisions, discoverability extends far beyond traditional SEO.",
+      related: [{ href: "/services/ai-visibility", label: "Explore Our AI Visibility Services" }],
     },
     {
       q: "Which Go-to-Market tier is right for my organization?",
@@ -55,6 +57,7 @@ export default function GTMPage() {
     {
       q: "When should an organization invest in a Go-to-Market strategy?",
       a: "Organizations often benefit from a GTM strategy when they are launching a new company, product, or service; entering a new market; repositioning their brand; experiencing inconsistent pipeline growth; expanding into new geographic regions; preparing to scale revenue operations; or looking to improve alignment between marketing and sales. The earlier strategic alignment is established, the easier it becomes to build sustainable growth.",
+      related: [{ href: "/services/capital-raise", label: "Preparing to Raise Capital? Explore Our Capital Raise Support" }],
     },
     {
       q: "How do you measure success?",
@@ -87,6 +90,27 @@ export default function GTMPage() {
         name="GTM Strategy Service"
         serviceType="Go-to-Market Strategy"
         description="Brand Iron's go-to-market strategy services align positioning, messaging, and execution into a connected GTM framework built for AI-driven buyers."
+      />
+      {[
+        { name: "Foundation", desc: "Designed for organizations establishing market positioning, improving discoverability, and creating the systems needed to generate consistent opportunities." },
+        { name: "Growth Engine", desc: "Designed for organizations ready to strengthen market presence, generate qualified pipeline, and connect marketing, sales, and operations through more advanced execution." },
+        { name: "Revenue Accelerator", desc: "Designed for organizations with mature Go-to-Market operations that require advanced automation, executive thought leadership, AI visibility leadership, and multi-channel growth initiatives." },
+      ].map(tier => (
+        <ServiceSchema
+          key={tier.name}
+          name={tier.name}
+          serviceType="Go-to-Market Strategy"
+          description={tier.desc}
+        />
+      ))}
+      <HowToSchema
+        name="Brand Iron's Go-to-Market Growth Model"
+        description="How Brand Iron phases a Go-to-Market engagement from foundation through acceleration."
+        steps={[
+          { name: "Foundation", text: "Build strategic clarity and digital visibility, resulting in stronger positioning and discoverability." },
+          { name: "Growth", text: "Expand authority and generate qualified demand, resulting in increased pipeline and market presence." },
+          { name: "Acceleration", text: "Optimize revenue systems and operational efficiency, resulting in scalable, predictable business growth." },
+        ]}
       />
 
       {growthReviewOpen && <GrowthReviewModal onClose={() => setGrowthReviewOpen(false)} />}
@@ -837,7 +861,7 @@ export default function GTMPage() {
               Every organization approaches Go-to-Market strategy from a different starting point. Below are some of the most common questions we receive from leadership teams.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-              {faqs.map(({ q, a }, i) => (
+              {faqs.map(({ q, a, related }, i) => (
                 <div key={i}
                   style={{ background: "rgba(255,255,255,0.88)", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 10, overflow: "hidden", transition: "box-shadow 0.2s, border-color 0.2s" }}
                   onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.borderColor = "rgba(216,115,7,0.3)"; el.style.boxShadow = "0 8px 24px rgba(0,0,0,0.06)"; }}
@@ -855,6 +879,15 @@ export default function GTMPage() {
                   <div style={{ maxHeight: openFaq === i ? 600 : 0, opacity: openFaq === i ? 1 : 0, overflow: "hidden", transition: "max-height 0.3s ease, opacity 0.25s ease" }}>
                     <div style={{ padding: "0 24px 20px" }}>
                       <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.8, color: "#555", margin: 0 }}>{a}</p>
+                      {related && (
+                        <div style={{ display: "flex", flexWrap: "wrap", gap: 16, marginTop: 12 }}>
+                          {related.map(r => (
+                            <Link key={r.href} href={r.href} style={{ display: "inline-block", fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, color: "#d87307", textDecoration: "none", borderBottom: "1px solid rgba(216,115,7,0.4)" }}>
+                              {r.label} →
+                            </Link>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>

@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import RevenueStrategistModal from "@/components/RevenueStrategistModal";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import ServiceSchema from "@/components/ServiceSchema";
+import HowToSchema from "@/components/HowToSchema";
 
 function useInView(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null);
@@ -122,6 +123,10 @@ const faqs = [
   {
     q: "How does Revenue Engineering connect to your other services like GTM Strategy or AI Visibility?",
     a: "Revenue Engineering handles what happens after prospects enter your funnel: capture, routing, follow-up, conversion, and reporting. GTM Strategy defines the market approach and demand generation that fills the funnel, and AI Visibility ensures buyers can discover you across search and AI platforms before they even enter it. Together, the three services form Brand Iron's connected growth system.",
+    related: [
+      { href: "/services/gtm", label: "Explore Our Go-to-Market Strategy Services" },
+      { href: "/services/ai-visibility", label: "Explore Our AI Visibility Services" },
+    ],
   },
   {
     q: "What tools and platforms do you work with?",
@@ -169,6 +174,19 @@ export default function RevenueEngineeringPage() {
         name="Revenue Engineering Service"
         serviceType="Revenue Operations & Engineering"
         description="Build a stronger revenue system with CRM optimization, marketing automation, funnel improvement, RevOps, reporting, and attribution from Brand Iron."
+      />
+      {coreServices.map(s => (
+        <ServiceSchema
+          key={s.num}
+          name={s.title}
+          serviceType="Revenue Operations & Engineering"
+          description={s.body}
+        />
+      ))}
+      <HowToSchema
+        name="Brand Iron's Revenue Engineering Process"
+        description="How Brand Iron audits, builds, and maintains a connected revenue system."
+        steps={process.map(p => ({ name: p.title, text: p.body }))}
       />
 
       {reviewOpen && <RevenueStrategistModal onClose={() => setReviewOpen(false)} />}
@@ -453,7 +471,7 @@ export default function RevenueEngineeringPage() {
             Common questions we hear from teams considering a Revenue Engineering engagement.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-            {faqs.map(({ q, a }, i) => (
+            {faqs.map(({ q, a, related }, i) => (
               <div key={i}
                 className={`reveal${s7View.inView ? ' visible' : ''}`}
                 style={{ background: "rgba(255,255,255,0.9)", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 10, overflow: "hidden", transition: "box-shadow 0.2s, border-color 0.2s" }}
@@ -472,6 +490,15 @@ export default function RevenueEngineeringPage() {
                 <div style={{ maxHeight: openFaq === i ? 600 : 0, opacity: openFaq === i ? 1 : 0, overflow: "hidden", transition: "max-height 0.3s ease, opacity 0.25s ease" }}>
                   <div style={{ padding: "0 24px 20px" }}>
                     <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.8, color: "#555", margin: 0 }}>{a}</p>
+                    {related && (
+                      <div style={{ display: "flex", flexWrap: "wrap", gap: 16, marginTop: 12 }}>
+                        {related.map(r => (
+                          <Link key={r.href} href={r.href} style={{ display: "inline-block", fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, color: "#d87307", textDecoration: "none", borderBottom: "1px solid rgba(216,115,7,0.4)" }}>
+                            {r.label} →
+                          </Link>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

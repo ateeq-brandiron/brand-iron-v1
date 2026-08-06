@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import CircuitOverlay from "@/components/CircuitOverlay";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import ServiceSchema from "@/components/ServiceSchema";
+import HowToSchema from "@/components/HowToSchema";
 
 function useInView(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null);
@@ -164,6 +165,7 @@ export default function CapitalRaisePage() {
     {
       q: "Do you help after the deck is complete?",
       a: "Yes. Many organizations continue working with Brand Iron through Investor Outreach and Investor GTM Support to help manage fundraising activities, refine messaging based on investor feedback, and maintain momentum throughout the capital raise process.",
+      related: [{ href: "/services/gtm", label: "Explore Our Go-to-Market Strategy Services" }],
     },
     {
       q: "Do you create financial projections?",
@@ -192,6 +194,26 @@ export default function CapitalRaisePage() {
         name="Capital Raise Support Service"
         serviceType="Capital Raise & Investor Relations Support"
         description="Brand Iron helps founders prepare for investment with compelling pitch decks, fundraising strategy, and targeted investor outreach for capital raise support."
+      />
+      {solutions.map(s => (
+        <ServiceSchema
+          key={s.num}
+          name={s.name}
+          serviceType="Capital Raise & Investor Relations Support"
+          description={`${s.tagline} ${s.desc}`}
+        />
+      ))}
+      <HowToSchema
+        name="Brand Iron's Capital Raise Journey"
+        description="How Brand Iron guides founders from strategic positioning to investor engagement."
+        steps={[
+          { name: "Discover Your Story", text: "Define your vision, market opportunity, and investment thesis." },
+          { name: "Build Your Foundation", text: "Develop a clear investment narrative and messaging strategy." },
+          { name: "Prepare Investor-Ready Assets", text: "Create the materials investors expect to see." },
+          { name: "Identify the Right Investors", text: "Focus on investors aligned with your stage, industry, and goals." },
+          { name: "Engage Investors", text: "Support outreach, follow-up, and relationship building." },
+          { name: "Maintain Momentum", text: "Refine your messaging and sustain fundraising progress as conversations evolve." },
+        ]}
       />
 
       {/* ── HERO ───────────────────────────────────────────── */}
@@ -725,7 +747,7 @@ export default function CapitalRaisePage() {
               Preparing for a capital raise often raises as many questions as it answers. Below are some of the most common questions founders and leadership teams ask as they prepare for investor conversations.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-              {faqs.map(({ q, a }, i) => (
+              {faqs.map(({ q, a, related }, i) => (
                 <div key={i}
                   style={{ background: "rgba(255,255,255,0.9)", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 10, overflow: "hidden", transition: "box-shadow 0.2s, border-color 0.2s" }}
                   onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.borderColor = "rgba(216,115,7,0.3)"; el.style.boxShadow = "0 8px 24px rgba(0,0,0,0.06)"; }}
@@ -743,6 +765,15 @@ export default function CapitalRaisePage() {
                   <div style={{ maxHeight: openFaq === i ? 600 : 0, opacity: openFaq === i ? 1 : 0, overflow: "hidden", transition: "max-height 0.3s ease, opacity 0.25s ease" }}>
                     <div style={{ padding: "0 24px 20px" }}>
                       <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.8, color: "#555", margin: 0 }}>{a}</p>
+                      {related && (
+                        <div style={{ display: "flex", flexWrap: "wrap", gap: 16, marginTop: 12 }}>
+                          {related.map(r => (
+                            <Link key={r.href} href={r.href} style={{ display: "inline-block", fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, color: "#d87307", textDecoration: "none", borderBottom: "1px solid rgba(216,115,7,0.4)" }}>
+                              {r.label} →
+                            </Link>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
