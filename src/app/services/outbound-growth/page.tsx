@@ -87,23 +87,47 @@ const builtFor = [
 const faqs = [
   {
     q: "What is Outbound Growth?",
-    a: "Outbound Growth is a structured process for identifying, contacting, qualifying, and converting potential customers through channels such as LinkedIn, email, and direct sales outreach.",
+    a: "Outbound Growth is Brand Iron's structured B2B pipeline system that puts your business in front of specific decision-makers through targeted LinkedIn outreach, email campaigns, SDR programs, appointment setting, and sales enablement. Done right, it's a strategic pipeline system built on the right target list, sharp messaging, and disciplined follow-up, not spray-and-pray prospecting.",
   },
   {
     q: "Does Brand Iron provide prospect lists?",
-    a: "Yes. Prospect research, lead-list development, verification, enrichment, and segmentation may be included based on the engagement.",
+    a: "Yes. Every engagement starts with defining the right target: companies, markets, and decision-makers worth pursuing based on your ideal customer profile. We build qualified prospect lists using research, segmentation, and contact verification rather than pulling generic lists off a data broker's shelf. Bad targeting kills outbound faster than bad messaging.",
   },
   {
     q: "Can Brand Iron manage the campaign?",
-    a: "Yes. Managed engagements may include campaign setup, outreach execution, reply management, qualification, appointment setting, reporting, and optimization.",
+    a: "Yes. Depending on the engagement, we can run the campaign end-to-end, from list building and messaging through daily outreach, reply management, follow-up sequences, qualification, and appointment setting, or build the outbound system and hand it off to your internal SDR team. Fully managed and hybrid models both work.",
   },
   {
     q: "Do you guarantee sales?",
-    a: "No. We help generate qualified conversations and pipeline opportunities. Closing results depend on the offer, pricing, market, sales process, and sales-team performance.",
+    a: "No, nobody credible does. What we commit to is a well-targeted campaign, sharp messaging, disciplined execution, and qualified appointment activity. Sales conversions depend on your product-market fit, sales team's closing ability, and pricing. What we can guarantee is that the campaign will be run properly and the pipeline activity will be qualified against clear criteria.",
   },
   {
     q: "Can you work with our internal sales team?",
-    a: "Yes. We can support internal teams with outbound strategy, messaging, SDR systems, sales materials, workflows, documentation, and reporting.",
+    a: "Yes, and that's the most common engagement structure. Brand Iron handles the outbound prospecting engine (list, messaging, outreach, appointment setting) while your internal sales team takes qualified meetings, runs discovery, and closes. The handoff process is defined upfront so qualified prospects move cleanly into your pipeline.",
+  },
+  {
+    q: "How is Outbound Growth different from a general marketing agency's outbound service?",
+    a: "Most agencies bolt outbound onto content or paid media as an add-on. Brand Iron treats outbound as a discrete discipline with its own process and expertise: five defined services (LinkedIn, email, SDR programs, appointment setting, sales enablement) run through a structured seven-step process. Most outbound fails because it's run as an afterthought; ours is built with accountability at every stage.",
+  },
+  {
+    q: "How long does an outbound campaign take to produce results?",
+    a: "Initial setup, targeting, list building, messaging, and sequence configuration typically runs 3 to 6 weeks. First responses and meetings usually land within the first 30 to 45 days after launch, but predictable pipeline typically requires 60 to 90 days of consistent execution as messaging gets refined.",
+  },
+  {
+    q: "What tools and platforms do you use for outbound?",
+    a: "We use industry-standard outbound tech: LinkedIn Sales Navigator for prospecting, sales engagement platforms like Outreach, Salesloft, Apollo, Instantly, and Smartlead for email cadences, contact verification tools for list hygiene, and CRM integrations for pipeline handoff. We're platform-agnostic and adapt to your existing stack when relevant.",
+  },
+  {
+    q: "What industries or company sizes do you work with best?",
+    a: "Brand Iron works with B2B professional services firms, SaaS and technology companies, consulting businesses, agencies, financial services firms, and high-value B2B companies where the average deal size justifies structured outbound investment. What matters most is a clear ideal customer profile and enough sales capacity to close the meetings we book.",
+  },
+  {
+    q: "How does Outbound Growth connect to your other services like Revenue Engineering or GTM Strategy?",
+    a: "Outbound Growth generates the top-of-funnel pipeline. Revenue Engineering ensures the leads outbound generates are captured, routed, and followed up properly in your CRM. GTM Strategy defines the market approach and target segments that outbound campaigns execute against. Together, the services form a connected pipeline system.",
+  },
+  {
+    q: "How do you measure success in an outbound campaign?",
+    a: "Success is measured in qualified meeting activity and pipeline generated, not in raw activity metrics like emails sent or connection requests accepted. Every campaign includes baseline metrics upfront, qualified meetings booked, response rates, meeting-to-opportunity conversion, and pipeline value generated, with transparent reporting on what's working.",
   },
 ];
 
@@ -437,15 +461,29 @@ export default function OutboundGrowthPage() {
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke={openFaq === i ? "#FFFFFF" : "#d87307"} strokeWidth="2" strokeLinecap="round"/></svg>
                   </div>
                 </button>
-                {openFaq === i && (
+                <div style={{ maxHeight: openFaq === i ? 600 : 0, opacity: openFaq === i ? 1 : 0, overflow: "hidden", transition: "max-height 0.3s ease, opacity 0.25s ease" }}>
                   <div style={{ padding: "0 24px 20px" }}>
                     <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.8, color: "#555", margin: 0 }}>{a}</p>
                   </div>
-                )}
+                </div>
               </div>
             ))}
           </div>
         </div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: faqs.map(({ q, a }) => ({
+                "@type": "Question",
+                name: q,
+                acceptedAnswer: { "@type": "Answer", text: a },
+              })),
+            }),
+          }}
+        />
       </section>
 
       {/* ── S7: FINAL CTA ─────────────────────────────────────── */}

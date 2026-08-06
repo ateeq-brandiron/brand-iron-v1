@@ -85,23 +85,47 @@ const builtFor = [
 const faqs = [
   {
     q: "Is Revenue Engineering software?",
-    a: "No. It is a strategic and technical service that improves how your CRM, automation, funnels, sales processes, and reporting work together.",
+    a: "No. Revenue Engineering is Brand Iron's service that connects marketing, sales, CRM, automation, funnels, and reporting into one coordinated revenue system, using tools you likely already have. We audit, optimize, and integrate what's in place rather than sell you another platform. Most companies don't need more software; they need what they already own to actually pull its weight.",
   },
   {
     q: "Is this the same as marketing automation?",
-    a: "No. Marketing automation is one piece of the system. Revenue Engineering also includes CRM optimization, revenue operations, funnel improvement, and attribution.",
+    a: "No. Marketing automation is one capability within Revenue Engineering. The full service also covers CRM optimization, revenue operations, funnel optimization, and reporting & attribution. Automation on its own can move leads through email sequences, but if your CRM data is messy or attribution is broken, automation just moves the problems faster.",
   },
   {
     q: "Do we need a new CRM?",
-    a: "Not always. We first determine whether your current CRM can be cleaned up, reconfigured, and improved.",
+    a: "Usually not. Most engagements start with cleaning up, restructuring, and optimizing the CRM you already have, whether that's HubSpot, Salesforce, Zoho, or another platform. New CRM migrations are expensive and disruptive and often don't fix the underlying problem, which is usually process and data quality rather than the tool itself.",
   },
   {
     q: "Can you work with our current tools?",
-    a: "Yes. We make the most of what you already have before recommending anything new.",
+    a: "Yes, that's typically how engagements start. We audit what's already deployed, your CRM, marketing automation platform, sales engagement tools, and reporting dashboards, then optimize, connect, and clean up what's in place. We're platform-agnostic and focused on making your existing revenue tech stack pull its weight before recommending any additions.",
   },
   {
     q: "What happens after setup?",
-    a: "Ongoing monitoring, reporting, workflow refinement, and optimization can be added based on your needs.",
+    a: "Once the system is built and tested, ongoing support keeps it running. That typically includes performance monitoring, workflow adjustments as processes evolve, quarterly optimization reviews, and troubleshooting when handoffs break down. Revenue systems drift over time, so the ongoing engagement keeps the machinery tuned rather than letting it degrade.",
+  },
+  {
+    q: "How is Revenue Engineering different from a traditional marketing agency?",
+    a: "Traditional marketing agencies focus on generating more leads and running campaigns. Revenue Engineering focuses on what happens to those leads after they enter your system: how they're captured, routed, followed up, tracked, and converted. Most companies don't have a lead volume problem; they have a lead handling and system integration problem.",
+  },
+  {
+    q: "How long does a Revenue Engineering engagement take?",
+    a: "Initial system audits and configuration typically run 4 to 8 weeks depending on CRM complexity and integration requirements. Full revenue system builds, including funnel optimization, RevOps alignment, and reporting infrastructure, often run 3 to 6 months, with ongoing optimization support continuing monthly as the system evolves with your business.",
+  },
+  {
+    q: "What kind of results should we expect?",
+    a: "Common outcomes include faster lead follow-up, cleaner CRM data, better sales and marketing alignment, reduced funnel drop-offs, and clearer visibility into what's actually driving revenue. Specific results depend on your starting point, and we define baseline metrics upfront so improvements are measurable.",
+  },
+  {
+    q: "Do we need a large sales or marketing team to benefit from Revenue Engineering?",
+    a: "No. Revenue Engineering scales to the team size you have. Smaller teams often benefit the most because automation and system optimization directly reduce manual work, freeing limited team capacity to focus on higher-value activities. Larger teams benefit through better alignment, cleaner reporting, and reduced coordination overhead.",
+  },
+  {
+    q: "How does Revenue Engineering connect to your other services like GTM Strategy or AI Visibility?",
+    a: "Revenue Engineering handles what happens after prospects enter your funnel: capture, routing, follow-up, conversion, and reporting. GTM Strategy defines the market approach and demand generation that fills the funnel, and AI Visibility ensures buyers can discover you across search and AI platforms before they even enter it. Together, the three services form Brand Iron's connected growth system.",
+  },
+  {
+    q: "What tools and platforms do you work with?",
+    a: "We're platform-agnostic and work with the major revenue tech stacks, including HubSpot, Salesforce, Zoho, Pipedrive, ActiveCampaign, Marketo, and Klaviyo. We also integrate with the connected tools around the CRM: email platforms, scheduling tools, sales engagement platforms, analytics platforms, and business intelligence dashboards.",
   },
 ];
 
@@ -445,15 +469,29 @@ export default function RevenueEngineeringPage() {
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke={openFaq === i ? "#FFFFFF" : "#d87307"} strokeWidth="2" strokeLinecap="round"/></svg>
                   </div>
                 </button>
-                {openFaq === i && (
+                <div style={{ maxHeight: openFaq === i ? 600 : 0, opacity: openFaq === i ? 1 : 0, overflow: "hidden", transition: "max-height 0.3s ease, opacity 0.25s ease" }}>
                   <div style={{ padding: "0 24px 20px" }}>
                     <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.8, color: "#555", margin: 0 }}>{a}</p>
                   </div>
-                )}
+                </div>
               </div>
             ))}
           </div>
         </div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: faqs.map(({ q, a }) => ({
+                "@type": "Question",
+                name: q,
+                acceptedAnswer: { "@type": "Answer", text: a },
+              })),
+            }),
+          }}
+        />
       </section>
 
       {/* ── S8: FINAL CTA ─────────────────────────────────────── */}

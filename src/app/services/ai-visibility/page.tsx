@@ -22,6 +22,7 @@ function useInView(threshold = 0.12) {
 
 export default function AIVisibilityPage() {
   const [auditOpen, setAuditOpen] = useState(false);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
     if (new URLSearchParams(window.location.search).get("openAudit")) setAuditOpen(true);
@@ -102,6 +103,57 @@ export default function AIVisibilityPage() {
           <path d="M18 4l3.6 7.6 8.4 1.1-6.1 5.9 1.5 8.3L18 23l-7.4 3.9 1.5-8.3-6.1-5.9 8.4-1.1z" stroke="#d87307" strokeWidth="2" strokeLinejoin="round" fill="rgba(216,115,7,0.12)"/>
         </svg>
       ),
+    },
+  ];
+
+  const faqs = [
+    {
+      q: "What is AI Visibility and why does it matter for my business?",
+      a: "AI Visibility is how discoverable, trusted, and recommended your business is across AI-powered search experiences, including ChatGPT, Gemini, Claude, and Perplexity, as well as Google, voice assistants, and industry platforms. Buyers now research through AI conversations long before contacting a company. If AI platforms don't recognize your business as a trusted source, competitors become the answer buyers see first.",
+    },
+    {
+      q: "How is AI Visibility different from traditional SEO?",
+      a: "Traditional SEO focuses on ranking higher for keywords on Google. AI Visibility focuses on being understood, trusted, and recommended across AI platforms and search engines. SEO measures clicks; AI Visibility measures discoverability, authority, citations, and qualified demand. SEO is still essential, but it's now one layer inside a broader visibility strategy.",
+    },
+    {
+      q: "Which AI platforms and search engines does Brand Iron optimize for?",
+      a: "Brand Iron optimizes for the full ecosystem where modern buyers research: Google search, ChatGPT, Gemini, Claude, Perplexity, and voice assistants. We also account for indirect discovery through LinkedIn, industry reviews, and community platforms that AI systems cite as sources, integrating SEO, AEO, GEO, technical optimization, entity development, and authority building into one connected approach.",
+    },
+    {
+      q: "What's the difference between SEO, AEO, and GEO?",
+      a: "SEO (Search Engine Optimization) helps your business rank on Google and other traditional search engines. AEO (Answer Engine Optimization) helps AI answer engines like ChatGPT, Perplexity, and Google AI Overviews retrieve and cite your content directly. GEO (Generative Engine Optimization) focuses on how generative AI systems synthesize and recommend your business within their responses. Brand Iron integrates all three into a single AI Visibility strategy.",
+    },
+    {
+      q: "How do you measure AI Visibility results?",
+      a: "AI Visibility is measured across four dimensions: discoverability (does AI find your business?), citations (does AI reference your content?), authority (do AI systems treat you as credible?), and qualified demand (are AI recommendations driving real inquiries?). Traditional metrics like keyword rankings still matter, but the primary indicators are how often your business appears in AI-generated answers.",
+    },
+    {
+      q: "What is included in the AI Visibility Diagnostic?",
+      a: "The AI Visibility Diagnostic is a one-time audit that shows how search engines and AI platforms currently see your business. It identifies visibility gaps, technical issues, entity recognition problems, content weaknesses, and missed opportunities across Google, ChatGPT, Gemini, Claude, and Perplexity, with a clear roadmap for improvement and prioritized recommendations.",
+    },
+    {
+      q: "How long does it take to see AI Visibility improvements?",
+      a: "Technical foundation improvements from Tier 1 often show measurable results within 30 to 60 days as search engines and AI systems re-index optimized content. Authority building from Tier 2 typically produces meaningful AI citation lift within 90 to 180 days. Market leadership through Tier 3 is a longer commitment, 12 months or more.",
+    },
+    {
+      q: "Which of the four AI Visibility service tiers is right for my business?",
+      a: "Start with Tier 0 (AI Visibility Diagnostic) if you're unsure how visible your business currently is. Move to Tier 1 (SEO & AI Foundation) if your website needs technical and structural improvements. Tier 2 (AI Authority Growth System) is for organizations ready to actively build authority and AI recommendations. Tier 3 (AI Market Dominance Engine) is for businesses committed to becoming the recognized category leader.",
+    },
+    {
+      q: "What is entity optimization and why does it matter for AI Visibility?",
+      a: "Entity optimization helps AI systems and search engines recognize your business as a distinct, well-defined entity with clear relationships to its industry, people, services, and expertise. AI platforms don't just read pages; they map entities and how those entities relate to concepts and other entities. Entity optimization is a core pillar of the Tier 1 SEO & AI Foundation work.",
+    },
+    {
+      q: "How does authority building improve AI recommendations?",
+      a: "AI platforms recommend businesses they trust, and trust comes from authority signals accumulated across the web. Authority building strengthens digital PR, third-party citations, reviews, expert quotes, backlinks from credible sources, and consistent presence in industry conversations. The AI Authority Growth System is designed specifically to build these signals systematically.",
+    },
+    {
+      q: "Can Brand Iron work alongside our existing SEO agency or marketing team?",
+      a: "Yes. Many engagements are structured as strategic AI Visibility partnerships that complement existing SEO, content, or marketing teams rather than replace them. Brand Iron brings the AI Visibility framework, AEO, GEO, entity development, and authority building, while your internal team or agency continues executing traditional channels.",
+    },
+    {
+      q: "What kinds of businesses see the biggest AI Visibility gains?",
+      a: "Businesses in complex or consultative categories, including B2B services, professional services, enterprise software, healthcare, and financial services, tend to see the most dramatic gains because their buyers rely heavily on research and validation before purchase. Newer challenger brands often outperform larger incumbents because they can move faster on structured content and entity development.",
     },
   ];
 
@@ -669,6 +721,57 @@ export default function AIVisibilityPage() {
             </Link>
           </div>
         </div>
+      </section>
+
+      {/* ── S7: FAQ ───────────────────────────────────────────── */}
+      <section style={{ background: "#F8F5EF", padding: "120px 40px" }}>
+        <div ref={s6View.ref} style={{ maxWidth: 900, margin: "0 auto" }}>
+          <h3 className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 8 }}>
+            Frequently Asked Questions
+          </h3>
+          <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", maxWidth: 640, margin: "0 0 32px" }}>
+            Common questions we hear from teams evaluating AI Visibility.
+          </p>
+          <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+            {faqs.map(({ q, a }, i) => (
+              <div key={i}
+                className={`reveal${s6View.inView ? ' visible' : ''}`}
+                style={{ background: "rgba(255,255,255,0.9)", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 10, overflow: "hidden", transition: "box-shadow 0.2s, border-color 0.2s" }}
+                onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.borderColor = "rgba(216,115,7,0.3)"; el.style.boxShadow = "0 8px 24px rgba(0,0,0,0.06)"; }}
+                onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.borderColor = "rgba(15,27,45,0.08)"; el.style.boxShadow = "none"; }}
+              >
+                <button
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  style={{ width: "100%", background: "none", border: "none", cursor: "pointer", padding: "20px 24px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16, textAlign: "left" }}
+                >
+                  <span style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, fontWeight: 600, color: "#1a1a1a", lineHeight: 1.5 }}>{q}</span>
+                  <div style={{ width: 28, height: 28, borderRadius: "50%", background: openFaq === i ? "#d87307" : "rgba(216,115,7,0.1)", border: "1px solid rgba(216,115,7,0.3)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, transition: "background 0.2s, transform 0.2s", transform: openFaq === i ? "rotate(45deg)" : "rotate(0)" }}>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke={openFaq === i ? "#FFFFFF" : "#d87307"} strokeWidth="2" strokeLinecap="round"/></svg>
+                  </div>
+                </button>
+                <div style={{ maxHeight: openFaq === i ? 600 : 0, opacity: openFaq === i ? 1 : 0, overflow: "hidden", transition: "max-height 0.3s ease, opacity 0.25s ease" }}>
+                  <div style={{ padding: "0 24px 20px" }}>
+                    <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.8, color: "#555", margin: 0 }}>{a}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: faqs.map(({ q, a }) => ({
+                "@type": "Question",
+                name: q,
+                acceptedAnswer: { "@type": "Answer", text: a },
+              })),
+            }),
+          }}
+        />
       </section>
 
     </main>

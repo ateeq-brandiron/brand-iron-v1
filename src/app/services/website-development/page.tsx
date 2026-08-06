@@ -184,23 +184,47 @@ export default function WebsiteDevelopmentPage() {
   const faqs = [
     {
       q: "What platforms do you develop websites on?",
-      a: "We build websites on platforms such as Webflow, WordPress, Shopify, and other CMS solutions based on your project requirements.",
+      a: "Brand Iron builds websites on the platforms best suited to your business, most commonly WordPress for content-driven sites requiring flexibility and scale, Webflow for design-forward marketing sites, and HubSpot CMS for organizations already running HubSpot for marketing and CRM. We're platform-agnostic; the goal is the right platform for your business.",
     },
     {
       q: "Will my website be SEO-ready?",
-      a: "Yes. Every website includes a technical SEO foundation, responsive development, and best practices to support search visibility from launch.",
+      a: "Yes. Every Brand Iron website is built on a technical foundation optimized for search and AI Visibility from day one: clean semantic HTML, proper heading hierarchy, schema markup, fast page speed, mobile responsiveness, XML sitemaps, and image optimization. SEO isn't an add-on we bolt on after launch; it's built into the development process.",
     },
     {
       q: "Can you redesign my existing website?",
-      a: "Absolutely. We can modernize your current website while improving messaging, user experience, technical performance, and conversion opportunities.",
+      a: "Yes. Website redesigns are one of the most common engagement types, for organizations with dated design, poor performance, weak conversion paths, or platforms that no longer fit their business. We evaluate what's working on your current site and preserve it, replace what isn't, and rebuild the technical foundation for search and AI Visibility.",
     },
     {
       q: "Do you provide website copywriting?",
-      a: "Yes. We offer website copywriting and messaging refinement as optional services to help ensure your website communicates your value clearly and consistently.",
+      a: "Yes. Website copywriting is included in most engagements: messaging, headlines, page content, calls to action, and metadata all developed from the strategic foundation we build during discovery. Copywriting scales with the tier, from focused copy for core pages up to full content architecture across a scalable platform.",
     },
     {
       q: "Do you provide support after launch?",
-      a: "Yes. We recommend post-launch support to assist with minor refinements, stabilization, and knowledge transfer following your website launch.",
+      a: "Yes. Post-launch support keeps the website performing after go-live, including performance monitoring, security updates, content updates, technical maintenance, and continuous optimization as your business evolves. Post-launch support is available as a retainer or on an as-needed project basis, depending on your team's capacity.",
+    },
+    {
+      q: "How is Brand Iron's website development different from other web agencies?",
+      a: "Most web agencies build websites as standalone creative projects: design, functional pages, launch, done. Brand Iron builds websites as strategic business assets connected to messaging, brand positioning, AI Visibility, and revenue systems. A pretty website that doesn't produce leads is a liability, not an asset.",
+    },
+    {
+      q: "How long does a website development project typically take?",
+      a: "Website Essentials (up to 5 pages) typically runs 6 to 10 weeks from kickoff to launch. Website Growth (up to 8 pages) typically runs 10 to 14 weeks. Website Advanced (up to 12 pages) with integrations and advanced functionality typically runs 14 to 20 weeks, depending on discovery depth and content readiness.",
+    },
+    {
+      q: "Which website tier is right for my organization?",
+      a: "Website Essentials fits smaller businesses or focused relaunches needing a professional online presence with up to 5 pages. Website Growth fits marketing-ready businesses that need stronger messaging and deeper content across up to 8 pages. Website Advanced fits growing organizations needing scalable platforms with advanced functionality across up to 12 pages.",
+    },
+    {
+      q: "How does Website Development connect to your other services like Brand Strategy or AI Visibility?",
+      a: "Brand Strategy defines the positioning and messaging the website communicates. AI Visibility ensures the site is discoverable across search and AI platforms. GTM Strategy defines the conversion paths the site supports, and Revenue Engineering connects the site's lead capture to CRM and reporting systems. Website Development is the digital home where all of these come together.",
+    },
+    {
+      q: "Is the website mobile responsive and accessible?",
+      a: "Yes. Every Brand Iron website is built mobile-responsive by default, adapting to phone, tablet, and desktop viewports. Accessibility is also built in: semantic HTML structure, appropriate color contrast, keyboard navigation, and alt text on images. For organizations with specific compliance requirements, we scope those into the project explicitly.",
+    },
+    {
+      q: "Who owns the website and content after launch?",
+      a: "You do. Brand Iron builds websites you own outright: the code, content, design assets, and domain are all your property once the project is complete. We don't hold hosting hostage or lock you into a proprietary platform you can't leave. The only exceptions are third-party licenses (fonts, stock images, plugins), which we document clearly at handoff.",
     },
   ];
 
@@ -595,16 +619,30 @@ export default function WebsiteDevelopmentPage() {
                       <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke={openFaq === i ? "#FFFFFF" : "#d87307"} strokeWidth="2" strokeLinecap="round"/></svg>
                     </div>
                   </button>
-                  {openFaq === i && (
+                  <div style={{ maxHeight: openFaq === i ? 600 : 0, opacity: openFaq === i ? 1 : 0, overflow: "hidden", transition: "max-height 0.3s ease, opacity 0.25s ease" }}>
                     <div style={{ padding: "0 24px 20px" }}>
                       <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.8, color: "#555", margin: 0 }}>{a}</p>
                     </div>
-                  )}
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: faqs.map(({ q, a }) => ({
+                "@type": "Question",
+                name: q,
+                acceptedAnswer: { "@type": "Answer", text: a },
+              })),
+            }),
+          }}
+        />
       </section>
 
       {/* ── CTA ────────────────────────────────────────────── */}
