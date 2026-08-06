@@ -137,6 +137,10 @@ const partners = [
   { name: "FRD Legacy Advisors", href: "https://rfdlegacy.com", logo: "/images/client-logos/frd-legacy-advisors-logo.png", height: 38 },
   { name: "ScamRocket", href: "https://scamrocket.com", logo: "/images/client-logos/scamrocket-logo.png", height: 26 },
   { name: "Black Lake Capital", href: "https://blacklakecap.com", logo: "/images/client-logos/black-lake-capital-logo.png", height: 34 },
+  { name: "Empower AI 365", href: "https://www.empowerai365.com", logo: "/images/client-logos/empower-ai-365-logo.png", height: 28 },
+  { name: "Clean Lines Power", href: "https://www.cleanlinespower.com", logo: "/images/client-logos/clean-lines-power-logo.png", height: 30 },
+  { name: "Sharp Spring", href: "https://sharpspring.com", logo: "/images/client-logos/sharpspring-logo.png", height: 32 },
+  { name: "Capital Desk", href: "https://capitaldesk.com", logo: "/images/client-logos/capital-desk-logo.png", height: 26 },
 ];
 
 const testimonials = [
