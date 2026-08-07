@@ -31,8 +31,8 @@ export const articles: Article[] = [
     excerpt: "AI search engines synthesize answers instead of listing links, and a generic brand is easy to leave out of that synthesis. Here's what differentiated brand positioning actually requires when the audience evaluating your brand includes machines as well as buyers.",
     readTime: "9 min read",
     date: "August 2026",
-    headerImage: "/images/shared/shared-horse-mane-circuit-lines.jpg",
-    headerImageAlt: "Close-up black and white photo of a horse's mane blending into glowing circuit-line branches, representing a brand standing out through AI-driven search",
+    headerImage: "/images/blog/brand-positioning-ai-search-differentiation/brand-positioning-ai-search-differentiation-hero.png",
+    headerImageAlt: "A hand reaches toward one distinct orange, wheat-emblem tile glowing among a wall of generic dark app icons, representing a brand standing out through differentiation",
     seoTitle: "Brand Positioning in AI Search: Differentiation is Key | Brand Iron",
     metaDescription: "Discover why strong brand positioning and differentiation are more critical than ever for B2B success in the age of AI search. Learn to stand out effectively.",
     body: [
@@ -764,8 +764,8 @@ export const articles: Article[] = [
     excerpt: "You don't need to replace your existing technology to transform with AI. Here's how to layer intelligence on what you already have.",
     readTime: "11 min read",
     date: "February 2026",
-    headerImage: "/images/blog/shared/shared-hay-bale-circuit-lines.jpg",
-    headerImageAlt: "Round hay bale in a harvested field at sunset with a faint circuit-board pattern overlaid on its face, representing automated revenue systems",
+    headerImage: "/images/blog/integrating-ai-without-starting-over/integrating-ai-without-starting-over-hero.png",
+    headerImageAlt: "Two colleagues at a rustic wood desk reviewing AI-driven revenue dashboards across three monitors, with connected data overlays projected above the screens",
     seoTitle: "Integrating AI Into Your Revenue Stack Without Starting Over | Brand Iron",
     metaDescription: "Learn how to add AI to your existing CRM, email, and reporting tools without a costly platform migration, and when a rebuild is actually the right call.",
     body: [
