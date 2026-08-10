@@ -130,13 +130,13 @@ const TOPICS = [
 ];
 
 export default function ResourcesPage() {
-  const featuredView = useInView(0.15);
-  const videosView = useInView(0.05);
-  const podcastView = useInView(0.05);
-  const articlesView = useInView(0.1);
-  const topicsView = useInView(0.15);
-  const subscribeView = useInView(0.1);
-  const ctaView = useInView(0.1);
+  const { ref: featuredViewRef, inView: featuredViewInView } = useInView(0.15);
+  const { ref: videosViewRef, inView: videosViewInView } = useInView(0.05);
+  const { ref: podcastViewRef, inView: podcastViewInView } = useInView(0.05);
+  const { ref: articlesViewRef, inView: articlesViewInView } = useInView(0.1);
+  const { ref: topicsViewRef, inView: topicsViewInView } = useInView(0.15);
+  const { ref: subscribeViewRef, inView: subscribeViewInView } = useInView(0.1);
+  const { ref: ctaViewRef, inView: ctaViewInView } = useInView(0.1);
   const [subscribeEmail, setSubscribeEmail] = useState("");
 
   return (
@@ -227,7 +227,7 @@ export default function ResourcesPage() {
 
       {/* ── FEATURED CONVERSATION ─────────────────────────────── */}
       <section id="featured" style={{ background: "#F9F8F6", padding: "100px 40px" }}>
-        <div ref={featuredView.ref} className={`reveal${featuredView.inView ? " visible" : ""}`} style={{ maxWidth: 1000, margin: "0 auto" }}>
+        <div ref={featuredViewRef} className={`reveal${featuredViewInView ? " visible" : ""}`} style={{ maxWidth: 1000, margin: "0 auto" }}>
           <div style={{
             position: "relative", background: "#FFFFFF", border: "1px solid #EEEBE7",
             borderRadius: 14, overflow: "hidden",
@@ -282,19 +282,19 @@ export default function ResourcesPage() {
 
       {/* ── VIDEOS AND INTERVIEWS ─────────────────────────────── */}
       <section id="videos" style={{ background: "#FFFFFF", padding: "100px 40px" }}>
-        <div ref={videosView.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
+        <div ref={videosViewRef} style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 48, maxWidth: 720 }}>
-            <h2 className={`section-heading reveal${videosView.inView ? " visible" : ""}`} style={{ color: "#1a1a1a", marginBottom: 16, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${videosViewInView ? " visible" : ""}`} style={{ color: "#1a1a1a", marginBottom: 16, textAlign: "left" }}>
               Real Conversations About Brands, Leadership, and Growth
             </h2>
-            <p className={`reveal${videosView.inView ? " visible" : ""}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#555" }}>
+            <p className={`reveal${videosViewInView ? " visible" : ""}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#555" }}>
               Hear Michael Doyle share insights from decades of experience helping entrepreneurs, executives, and organizations strengthen their brands and build more valuable businesses.
             </p>
           </div>
-          <div className={`reveal-group${videosView.inView ? " visible" : ""} res-videos-grid`} style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
+          <div className={`reveal-group${videosViewInView ? " visible" : ""} res-videos-grid`} style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
             {VIDEOS.map(({ title, body, cta, href, videoId }, i) => (
               <a key={title} href={href} target="_blank" rel="noopener noreferrer"
-                className={`res-card reveal${videosView.inView ? " visible" : ""}`}
+                className={`res-card reveal${videosViewInView ? " visible" : ""}`}
                 style={{
                   position: "relative", display: "flex", flexDirection: "column", background: "#F9F8F6", border: "1px solid #EEEBE7",
                   borderRadius: 14, overflow: "hidden", textDecoration: "none",
@@ -329,19 +329,19 @@ export default function ResourcesPage() {
 
       {/* ── PODCAST APPEARANCES ───────────────────────────────── */}
       <section id="podcast" style={{ background: "#F9F8F6", padding: "100px 40px" }}>
-        <div ref={podcastView.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
+        <div ref={podcastViewRef} style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 48, maxWidth: 720 }}>
-            <h2 className={`section-heading reveal${podcastView.inView ? " visible" : ""}`} style={{ color: "#1a1a1a", marginBottom: 16, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${podcastViewInView ? " visible" : ""}`} style={{ color: "#1a1a1a", marginBottom: 16, textAlign: "left" }}>
               Straight Talk From Industry Leaders
             </h2>
-            <p className={`reveal${podcastView.inView ? " visible" : ""}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#555" }}>
+            <p className={`reveal${podcastViewInView ? " visible" : ""}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#555" }}>
               Listen to conversations about entrepreneurship, customer insight, leadership, positioning, revenue, and the realities of building a business in a rapidly changing market.
             </p>
           </div>
-          <div className={`reveal-group${podcastView.inView ? " visible" : ""} res-podcast-grid`} style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
+          <div className={`reveal-group${podcastViewInView ? " visible" : ""} res-podcast-grid`} style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
             {PODCASTS.map(({ title, body, cta, href }, i) => (
               <a key={title} href={href} target="_blank" rel="noopener noreferrer"
-                className={`res-card reveal${podcastView.inView ? " visible" : ""}`}
+                className={`res-card reveal${podcastViewInView ? " visible" : ""}`}
                 style={{
                   position: "relative", display: "flex", flexDirection: "column", background: "#FFFFFF", border: "1px solid #EEEBE7",
                   borderRadius: 14, padding: "28px 26px", overflow: "hidden", textDecoration: "none",
@@ -361,19 +361,19 @@ export default function ResourcesPage() {
 
       {/* ── ARTICLES AND FEATURES ─────────────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "100px 40px" }}>
-        <div ref={articlesView.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
+        <div ref={articlesViewRef} style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 48, maxWidth: 720 }}>
-            <h2 className={`section-heading reveal${articlesView.inView ? " visible" : ""}`} style={{ color: "#1a1a1a", marginBottom: 16, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${articlesViewInView ? " visible" : ""}`} style={{ color: "#1a1a1a", marginBottom: 16, textAlign: "left" }}>
               Perspectives on Purpose, Transformation, and Market Leadership
             </h2>
-            <p className={`reveal${articlesView.inView ? " visible" : ""}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#555" }}>
+            <p className={`reveal${articlesViewInView ? " visible" : ""}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#555" }}>
               Read interviews and company features highlighting Brand Iron&apos;s work, leadership philosophy, and impact within the branding and growth industry.
             </p>
           </div>
-          <div className={`reveal-group${articlesView.inView ? " visible" : ""} res-articles-grid`} style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 24 }}>
+          <div className={`reveal-group${articlesViewInView ? " visible" : ""} res-articles-grid`} style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 24 }}>
             {ARTICLES.map(({ title, body, cta, href }, i) => (
               <a key={title} href={href} target="_blank" rel="noopener noreferrer"
-                className={`res-card reveal${articlesView.inView ? " visible" : ""}`}
+                className={`res-card reveal${articlesViewInView ? " visible" : ""}`}
                 style={{
                   position: "relative", display: "flex", flexDirection: "column", background: "#F9F8F6", border: "1px solid #EEEBE7",
                   borderRadius: 14, padding: "32px 28px", overflow: "hidden", textDecoration: "none",
@@ -399,7 +399,7 @@ export default function ResourcesPage() {
           backgroundSize: "cover", backgroundPosition: "center",
         }} />
         <div role="img" aria-label="Rocky mountain trail along a ridge crest at sunset" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.5) 0%, rgba(8,16,36,0.42) 50%, rgba(8,16,36,0.6) 100%)" }} />
-        <div ref={topicsView.ref} className={`reveal${topicsView.inView ? " visible" : ""}`} style={{ position: "relative", zIndex: 2, maxWidth: 780, margin: "0 auto", textAlign: "center" }}>
+        <div ref={topicsViewRef} className={`reveal${topicsViewInView ? " visible" : ""}`} style={{ position: "relative", zIndex: 2, maxWidth: 780, margin: "0 auto", textAlign: "center" }}>
           <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(24px, 3vw, 34px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", marginBottom: 16, lineHeight: 1.2 }}>
             Practical Insight for Every Stage of Growth
           </h2>
@@ -419,7 +419,7 @@ export default function ResourcesPage() {
 
       {/* ── STAY CONNECTED ────────────────────────────────────── */}
       <section style={{ background: "#F9F8F6", padding: "88px 24px" }}>
-        <div ref={subscribeView.ref} className={`reveal${subscribeView.inView ? " visible" : ""}`} style={{ maxWidth: 600, margin: "0 auto", textAlign: "center" }}>
+        <div ref={subscribeViewRef} className={`reveal${subscribeViewInView ? " visible" : ""}`} style={{ maxWidth: 600, margin: "0 auto", textAlign: "center" }}>
           <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 2.8vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 16, lineHeight: 1.2 }}>
             Keep Your Edge Sharp
           </h2>
@@ -459,7 +459,7 @@ export default function ResourcesPage() {
       {/* ── CTA ────────────────────────────────────────────── */}
       <section style={{ background: "#F0EEEA", padding: "80px 24px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <div ref={ctaView.ref} className={`reveal${ctaView.inView ? " visible" : ""}`} style={{
+          <div ref={ctaViewRef} className={`reveal${ctaViewInView ? " visible" : ""}`} style={{
             position: "relative", overflow: "hidden", borderRadius: 20,
             backgroundImage: "url('/images/resources/resources-cta-barn-sunset.jpg')", backgroundSize: "cover", backgroundPosition: "center",
           }}>

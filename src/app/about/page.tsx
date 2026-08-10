@@ -117,12 +117,12 @@ const STATS = [
 ];
 
 export default function AboutPage() {
-  const s2View = useInView();
-  const s3View = useInView();
-  const s4View = useInView();
-  const s5View = useInView();
-  const s6View = useInView();
-  const ctaView = useInView();
+  const { ref: s2ViewRef, inView: s2ViewInView } = useInView();
+  const { ref: s3ViewRef, inView: s3ViewInView } = useInView();
+  const { ref: s4ViewRef, inView: s4ViewInView } = useInView();
+  const { ref: s5ViewRef, inView: s5ViewInView } = useInView();
+  const { ref: s6ViewRef, inView: s6ViewInView } = useInView();
+  const { ref: ctaViewRef, inView: ctaViewInView } = useInView();
 
   return (
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
@@ -214,25 +214,25 @@ export default function AboutPage() {
 
       {/* ── S2: WHO WE ARE + STATS ───────────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "120px 40px" }}>
-        <div ref={s2View.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
+        <div ref={s2ViewRef} style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1.1fr 0.9fr", gap: 64, alignItems: "center" }} className="ab-mission-grid">
             <div>
               <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 12 }}>Who We Are</p>
-              <h2 className={`section-heading reveal${s2View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
+              <h2 className={`section-heading reveal${s2ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
                 A Different Kind of Brand &amp; Growth Partner
               </h2>
-              <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#555", marginBottom: 16 }}>
+              <p className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#555", marginBottom: 16 }}>
                 We bring brand strategy, go-to-market, AI visibility, capital raise support, and website development together under one roof, working from a single playbook.
               </p>
-              <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#555" }}>
+              <p className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#555" }}>
                 Companies don&apos;t fail because they lack effort. They fail because their brand, marketing, sales, and technology all operate in separate lanes instead of one system.
               </p>
             </div>
-            <div className={`reveal-group${s2View.inView ? ' visible' : ''}`} style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+            <div className={`reveal-group${s2ViewInView ? ' visible' : ''}`} style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
               {STATS.map(({ num, label }) => (
                 <div
                   key={num}
-                  className={`reveal${s2View.inView ? ' visible' : ''}`}
+                  className={`reveal${s2ViewInView ? ' visible' : ''}`}
                   style={{ position: "relative", background: "#F9F8F6", border: "1px solid #EEEBE7", borderRadius: 12, padding: "32px 20px", textAlign: "center", overflow: "hidden", transition: "transform 0.25s, box-shadow 0.25s, border-color 0.25s" }}
                   onMouseEnter={e => {
                     const el = e.currentTarget as HTMLDivElement;
@@ -266,18 +266,18 @@ export default function AboutPage() {
 
       {/* ── S3: CORE VALUES ──────────────────────────────────── */}
       <section style={{ background: "#F9F8F6", padding: "120px 40px" }}>
-        <div ref={s3View.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
+        <div ref={s3ViewRef} style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 56, maxWidth: 700 }}>
             <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 12 }}>Core Values</p>
-            <h2 className={`section-heading reveal${s3View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 0, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${s3ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 0, textAlign: "left" }}>
               What We Stand For
             </h2>
           </div>
-          <div className={`reveal-group${s3View.inView ? ' visible' : ''} ab-values-grid`} style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
+          <div className={`reveal-group${s3ViewInView ? ' visible' : ''} ab-values-grid`} style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
             {VALUES.map(({ title, body, icon }) => (
               <div
                 key={title}
-                className={`reveal${s3View.inView ? ' visible' : ''}`}
+                className={`reveal${s3ViewInView ? ' visible' : ''}`}
                 style={{ position: "relative", background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 14, padding: "32px 28px", overflow: "hidden", transition: "transform 0.25s, box-shadow 0.25s" }}
                 onMouseEnter={e => {
                   const el = e.currentTarget as HTMLDivElement;
@@ -312,10 +312,10 @@ export default function AboutPage() {
 
       {/* ── S4: VISION & MISSION ──────────────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "120px 40px" }}>
-        <div ref={s4View.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
+        <div ref={s4ViewRef} style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div className="ab-vm-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1px 1fr", gap: "0 56px", alignItems: "start" }}>
             {/* Vision */}
-            <div className={`reveal${s4View.inView ? ' visible' : ''}`}>
+            <div className={`reveal${s4ViewInView ? ' visible' : ''}`}>
               <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 12 }}>Vision</p>
               <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(20px, 2.4vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.2, marginBottom: 20 }}>
                 A World Where Brands Are Forged, Not Left to Chance
@@ -330,7 +330,7 @@ export default function AboutPage() {
             {/* Divider */}
             <div className="ab-vm-divider" style={{ background: "rgba(216,115,7,0.25)", alignSelf: "stretch" }} />
             {/* Mission */}
-            <div className={`reveal${s4View.inView ? ' visible' : ''}`}>
+            <div className={`reveal${s4ViewInView ? ' visible' : ''}`}>
               <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 12 }}>Mission</p>
               <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(20px, 2.4vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.2, marginBottom: 20 }}>
                 Transform How Companies Build Their Brand
@@ -355,18 +355,18 @@ export default function AboutPage() {
 
       {/* ── S5: TEAM ──────────────────────────────────────────── */}
       <section style={{ background: "#F5F0E8", padding: "120px 40px" }}>
-        <div ref={s5View.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
+        <div ref={s5ViewRef} style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 56, maxWidth: 700 }}>
             <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 12 }}>Our People</p>
-            <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 0, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${s5ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 0, textAlign: "left" }}>
               Meet The Team
             </h2>
           </div>
-          <div className={`reveal-group${s5View.inView ? ' visible' : ''} ab-team-grid`} style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 28 }}>
+          <div className={`reveal-group${s5ViewInView ? ' visible' : ''} ab-team-grid`} style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 28 }}>
             {TEAM.map(({ name, title, photo, bio }) => (
               <div
                 key={name}
-                className={`reveal${s5View.inView ? ' visible' : ''}`}
+                className={`reveal${s5ViewInView ? ' visible' : ''}`}
                 style={{ background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 14, overflow: "hidden", display: "flex", flexDirection: "column", transition: "transform 0.25s, box-shadow 0.25s, border-color 0.25s" }}
                 onMouseEnter={e => {
                   const el = e.currentTarget as HTMLDivElement;
@@ -408,18 +408,18 @@ export default function AboutPage() {
       {/* ── S6: APPROACH ──────────────────────────────────────── */}
       <section style={{ position: "relative", overflow: "hidden", padding: "120px 40px", background: "#0F1B2D" }}>
         <CircuitOverlay />
-        <div ref={s6View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
+        <div ref={s6ViewRef} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 56, maxWidth: 700 }}>
             <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 12 }}>Our Approach</p>
-            <h2 className={`section-heading reveal${s6View.inView ? ' visible' : ''}`} style={{ color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))", marginBottom: 0, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${s6ViewInView ? ' visible' : ''}`} style={{ color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))", marginBottom: 0, textAlign: "left" }}>
               How We Work
             </h2>
           </div>
-          <div className={`reveal-group${s6View.inView ? ' visible' : ''} ab-approach-grid`} style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 16 }}>
+          <div className={`reveal-group${s6ViewInView ? ' visible' : ''} ab-approach-grid`} style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 16 }}>
             {APPROACH_STEPS.map(({ step, title, body }) => (
               <div
                 key={step}
-                className={`reveal${s6View.inView ? ' visible' : ''}`}
+                className={`reveal${s6ViewInView ? ' visible' : ''}`}
                 style={{ position: "relative", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 14, padding: "28px 22px", overflow: "hidden", transition: "background 0.25s, border-color 0.25s, transform 0.25s" }}
                 onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-5px)"; el.style.background = "rgba(216,115,7,0.07)"; el.style.borderColor = "rgba(216,115,7,0.25)"; }}
                 onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.background = "rgba(255,255,255,0.04)"; el.style.borderColor = "rgba(255,255,255,0.08)"; }}
@@ -448,7 +448,7 @@ export default function AboutPage() {
       {/* ── CTA ────────────────────────────────────────────── */}
       <section style={{ background: "#F0EEEA", padding: "80px 24px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <div ref={ctaView.ref} className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{
+          <div ref={ctaViewRef} className={`reveal${ctaViewInView ? ' visible' : ''}`} style={{
             position: "relative", overflow: "hidden", borderRadius: 20,
             backgroundImage: "url('/images/about/about-hero-barn.webp')", backgroundSize: "cover", backgroundPosition: "center",
           }}>

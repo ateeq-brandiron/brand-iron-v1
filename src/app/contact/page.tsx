@@ -87,11 +87,13 @@ export default function ContactPage() {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
   const [form, setForm] = useState({ name: "", email: "", company: "", phone: "", size: "", interest: "", investment: "", timeline: "", message: "" });
-  const sOptions = useInView();
-  const sMain = useInView();
+  const { ref: sOptionsRef, inView: sOptionsInView } = useInView();
+  const { ref: sMainRef, inView: sMainInView } = useInView();
 
   useEffect(() => {
+    // window is unavailable during SSR, so this can't be a useState lazy initializer.
     const interest = new URLSearchParams(window.location.search).get("interest");
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (interest) setForm(f => ({ ...f, interest }));
   }, []);
 
@@ -155,9 +157,9 @@ export default function ContactPage() {
 
       {/* Contact options */}
       <section style={{ background: "#FFFFFF", padding: "60px 24px" }}>
-        <div ref={sOptions.ref} className="reveal-group" style={{ maxWidth: 1400, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 16 }}>
+        <div ref={sOptionsRef} className="reveal-group" style={{ maxWidth: 1400, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 16 }}>
           {contactOptions.map(({ icon, title, desc }) => (
-            <div key={title} className={`contact-opt reveal${sOptions.inView ? ' visible' : ''}`} style={{ background: "#F9F8F6", border: "1px solid #EEEBE7", borderTop: "3px solid #d87307", borderRadius: 10, padding: "24px 20px", textAlign: "center" }}>
+            <div key={title} className={`contact-opt reveal${sOptionsInView ? ' visible' : ''}`} style={{ background: "#F9F8F6", border: "1px solid #EEEBE7", borderTop: "3px solid #d87307", borderRadius: 10, padding: "24px 20px", textAlign: "center" }}>
               <div style={{ display: "flex", justifyContent: "center", marginBottom: 12 }}>
                 <div style={{ width: 64, height: 64, borderRadius: "50%", background: "rgba(216,115,7,0.1)", display: "flex", alignItems: "center", justifyContent: "center" }}>{icon}</div>
               </div>
@@ -170,10 +172,10 @@ export default function ContactPage() {
 
       {/* Form + Info */}
       <section style={{ background: "#F5F0E8", padding: "60px 24px 80px" }}>
-        <div ref={sMain.ref} className="contact-main-grid" style={{ maxWidth: 1400, margin: "0 auto", display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 48, alignItems: "start" }}>
+        <div ref={sMainRef} className="contact-main-grid" style={{ maxWidth: 1400, margin: "0 auto", display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 48, alignItems: "start" }}>
 
           {/* Form */}
-          <div className={`reveal${sMain.inView ? ' visible' : ''}`} style={{ background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 12, padding: "40px 36px", boxShadow: "0 4px 20px rgba(0,0,0,0.06)" }}>
+          <div className={`reveal${sMainInView ? ' visible' : ''}`} style={{ background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 12, padding: "40px 36px", boxShadow: "0 4px 20px rgba(0,0,0,0.06)" }}>
             <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontWeight: 900, fontSize: 36, textTransform: "uppercase", letterSpacing: "0.04em", color: "#1a1a1a", marginBottom: 8 }}>Send Us A Message</h2>
             <p style={{ fontSize: 14, color: "#666", marginBottom: 32 }}>We typically respond within one business day.</p>
 
@@ -276,7 +278,7 @@ export default function ContactPage() {
           </div>
 
           {/* Info */}
-          <div className={`reveal${sMain.inView ? ' visible' : ''}`} style={{ transitionDelay: "0.1s" }}>
+          <div className={`reveal${sMainInView ? ' visible' : ''}`} style={{ transitionDelay: "0.1s" }}>
             <div style={{ backgroundImage: "url('/images/shared/shared-haybales-field.jpg')", backgroundSize: "cover", backgroundPosition: "center", borderRadius: 10, overflow: "hidden", height: 220, position: "relative", marginBottom: 24 }}>
               <div role="img" aria-label="Close-up of a saddle with coiled rope resting on a horse's back" style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, transparent 40%, rgba(28,54,82,0.75) 100%)" }} />
               <div style={{ position: "absolute", bottom: 20, left: 20 }}>

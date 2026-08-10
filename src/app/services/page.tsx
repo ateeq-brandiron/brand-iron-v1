@@ -70,10 +70,10 @@ const services = [
 ];
 
 function useInView(threshold = 0.12) {
-  const ref = useRef<HTMLDivElement>(null);
+  const elementRef = useRef<HTMLDivElement>(null);
   const [inView, setInView] = useState(false);
   useEffect(() => {
-    const el = ref.current;
+    const el = elementRef.current;
     if (!el) return;
     const obs = new IntersectionObserver(([e]) => {
       if (e.isIntersecting) { setInView(true); obs.disconnect(); }
@@ -81,12 +81,12 @@ function useInView(threshold = 0.12) {
     obs.observe(el);
     return () => obs.disconnect();
   }, [threshold]);
-  return { ref, inView };
+  return { elementRef, inView };
 }
 
 export default function ServicesPage() {
-  const listView = useInView(0.05);
-  const ctaView = useInView(0.1);
+  const { elementRef: listRef, inView: listInView } = useInView(0.05);
+  const { elementRef: ctaRef, inView: ctaInView } = useInView(0.1);
 
   return (
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
@@ -176,9 +176,9 @@ export default function ServicesPage() {
 
       {/* ── SERVICES LIST ────────────────────────────────────── */}
       <section id="services-list" style={{ background: "#FFFFFF", padding: "120px 40px" }}>
-        <div ref={listView.ref} style={{ maxWidth: 1100, margin: "0 auto", display: "flex", flexDirection: "column", gap: 24 }}>
+        <div ref={listRef} style={{ maxWidth: 1100, margin: "0 auto", display: "flex", flexDirection: "column", gap: 24 }}>
           {services.map(({ number, title, href, description, icon }, i) => (
-            <Link key={href} href={href} className={`reveal${listView.inView ? " visible" : ""}`} style={{
+            <Link key={href} href={href} className={`reveal${listInView ? " visible" : ""}`} style={{
               textDecoration: "none", transitionDelay: `${i * 0.08}s`,
             }}>
               <div className="svc-list-card" style={{
@@ -216,7 +216,7 @@ export default function ServicesPage() {
       {/* ── FINAL CTA ────────────────────────────────────────── */}
       <section style={{ background: "#F0EEEA", padding: "80px 24px", position: "relative", overflow: "hidden" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", position: "relative", zIndex: 1 }}>
-          <div ref={ctaView.ref} className={`reveal${ctaView.inView ? " visible" : ""}`} style={{
+          <div ref={ctaRef} className={`reveal${ctaInView ? " visible" : ""}`} style={{
             position: "relative", overflow: "hidden", borderRadius: 20,
             backgroundImage: "url('/images/services-hub/services-hub-cta-mountain-meadow.jpg')", backgroundSize: "cover", backgroundPosition: "center",
           }}>

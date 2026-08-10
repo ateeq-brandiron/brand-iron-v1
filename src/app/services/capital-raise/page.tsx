@@ -129,12 +129,12 @@ const ArrowConnector = () => (
 );
 
 export default function CapitalRaisePage() {
-  const s2View = useInView();
-  const s3View = useInView();
-  const s4View = useInView();
-  const s5View = useInView();
-  const s6View = useInView();
-  const ctaView = useInView();
+  const { ref: s2ViewRef, inView: s2ViewInView } = useInView();
+  const { ref: s3ViewRef, inView: s3ViewInView } = useInView();
+  const { ref: s4ViewRef, inView: s4ViewInView } = useInView();
+  const { ref: s5ViewRef, inView: s5ViewInView } = useInView();
+  const { ref: s6ViewRef, inView: s6ViewInView } = useInView();
+  const { ref: ctaViewRef, inView: ctaViewInView } = useInView();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const faqs = [
@@ -309,22 +309,22 @@ export default function CapitalRaisePage() {
         backgroundImage: "url('/images/shared/shared-haybales-field.jpg')", backgroundSize: "cover", backgroundPosition: "center",
       }}>
         <div role="img" aria-label="Close-up of a saddle with coiled rope resting on a horse's back" style={{ position: "absolute", inset: 0, background: "rgba(255,255,255,0.87)" }} />
-        <div ref={s2View.ref} style={{ position: "relative", zIndex: 1, maxWidth: 1200, margin: "0 auto" }}>
-          <h2 className={`section-heading reveal${s2View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 24, textAlign: "left" }}>
+        <div ref={s2ViewRef} style={{ position: "relative", zIndex: 1, maxWidth: 1200, margin: "0 auto" }}>
+          <h2 className={`section-heading reveal${s2ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 24, textAlign: "left" }}>
             Investors Don&apos;t Invest in Slides. They Invest in Confidence.
           </h2>
 
           <div style={{ margin: "0 0 72px" }}>
-            <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 16 }}>
+            <p className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 16 }}>
               Investors review countless opportunities, but only a few move forward. The difference is rarely the idea alone, it&apos;s the confidence founders create in their vision, leadership, market opportunity, and ability to execute.
             </p>
-            <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#666" }}>
+            <p className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#666" }}>
               Successful fundraising isn&apos;t about sharing more information. It&apos;s about delivering the right story to build trust, reduce uncertainty, and inspire investment.
             </p>
           </div>
 
           {/* What investors are evaluating — icon grid */}
-          <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ marginBottom: 56 }}>
+          <div className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ marginBottom: 56 }}>
             <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 12 }}>
               What Investors Are Really Evaluating
             </h3>
@@ -350,7 +350,7 @@ export default function CapitalRaisePage() {
           </div>
 
           {/* Beyond the pitch deck */}
-          <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ maxWidth: 800, margin: "0 0 56px" }}>
+          <div className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ maxWidth: 800, margin: "0 0 56px" }}>
             <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 16 }}>
               Beyond the Pitch Deck
             </h3>
@@ -360,7 +360,7 @@ export default function CapitalRaisePage() {
           </div>
 
           {/* Key insight */}
-          <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ textAlign: "center", maxWidth: 820, margin: "0 auto" }}>
+          <div className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ textAlign: "center", maxWidth: 820, margin: "0 auto" }}>
             <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>Key Insight</p>
             <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(20px, 2.6vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.4, margin: 0 }}>
               The strongest fundraising presentations don&apos;t try to answer every question. They answer the questions that matter most: clearly, confidently, and in a way that earns the next conversation.
@@ -377,12 +377,12 @@ export default function CapitalRaisePage() {
       }}>
         <div role="img" aria-label="Dark, misty mountain ridge landscape at dusk" style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.72)" }} />
         <CircuitOverlay />
-        <div ref={s3View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
+        <div ref={s3ViewRef} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
-            <h2 className={`section-heading reveal${s3View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${s3ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               Not a Process. A Strategic Framework.
             </h2>
-            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555" }}>
+            <p className={`reveal${s3ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555" }}>
               Successful fundraising requires more than a pitch deck. Brand Iron connects strategy, investor materials, investor targeting, and outreach into one integrated fundraising system.
             </p>
           </div>
@@ -416,7 +416,7 @@ export default function CapitalRaisePage() {
               },
             ].map(({ num, title, lead, focuses, icon }) => (
               <div key={num}
-                className={`reveal${s3View.inView ? ' visible' : ''}`}
+                className={`reveal${s3ViewInView ? ' visible' : ''}`}
                 style={{ position: "relative", background: "#F9F8F6", border: "1px solid #EEEBE7", borderRadius: 14, padding: "32px 24px 28px", overflow: "hidden", transition: "transform 0.25s, box-shadow 0.25s" }}
                 onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-5px)"; el.style.boxShadow = "0 16px 48px rgba(0,0,0,0.1)"; }}
                 onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "none"; }}
@@ -441,7 +441,7 @@ export default function CapitalRaisePage() {
           </div>
 
           {/* Closing */}
-          <div className={`reveal${s3View.inView ? ' visible' : ''}`}>
+          <div className={`reveal${s3ViewInView ? ' visible' : ''}`}>
             <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.06em", color: "#1a1a1a", marginBottom: 16, lineHeight: 1.3 }}>
               One Framework. One Investor Journey.
             </p>
@@ -458,12 +458,12 @@ export default function CapitalRaisePage() {
         background: "#0F1B2D",
       }}>
         <CircuitOverlay />
-        <div ref={s4View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1100, margin: "0 auto" }}>
+        <div ref={s4ViewRef} style={{ position: "relative", zIndex: 2, maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
-            <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))", marginBottom: 20, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${s4ViewInView ? ' visible' : ''}`} style={{ color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))", marginBottom: 20, textAlign: "left" }}>
               From Investor Story to Fundraising Momentum
             </h2>
-            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.65)", maxWidth: 720 }}>
+            <p className={`reveal${s4ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.65)", maxWidth: 720 }}>
               Successful fundraising is built on a connected journey. Brand Iron guides founders from strategic positioning to investor engagement through a structured framework that builds confidence at every stage.
             </p>
           </div>
@@ -479,7 +479,7 @@ export default function CapitalRaisePage() {
               { num: "06", title: "Maintain Momentum", body: "Refine your messaging and sustain fundraising progress as conversations evolve." },
             ].map(({ num, title, body }) => (
               <div key={num}
-                className={`reveal${s4View.inView ? ' visible' : ''}`}
+                className={`reveal${s4ViewInView ? ' visible' : ''}`}
                 style={{ position: "relative", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 14, padding: "32px 28px", overflow: "hidden", transition: "background 0.25s, border-color 0.25s" }}
                 onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.background = "rgba(216,115,7,0.07)"; el.style.borderColor = "rgba(216,115,7,0.2)"; }}
                 onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.background = "rgba(255,255,255,0.04)"; el.style.borderColor = "rgba(255,255,255,0.08)"; }}
@@ -501,12 +501,12 @@ export default function CapitalRaisePage() {
       {/* ── S5: CHOOSE THE RIGHT SOLUTION ────────────────────── */}
       <section style={{ background: "linear-gradient(180deg, #FFFFFF 0%, #F6F3EF 100%)", padding: "120px 40px 48px", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, backgroundImage: "radial-gradient(circle at 20% 50%, rgba(216,115,7,0.04) 0%, transparent 60%), radial-gradient(circle at 80% 20%, rgba(15,27,45,0.04) 0%, transparent 50%)", pointerEvents: "none" }} />
-        <div ref={s5View.ref} style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>
+        <div ref={s5ViewRef} style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>
           <div style={{ marginBottom: 72 }}>
-            <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${s5ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               Support for Every Stage of Your Fundraising Journey
             </h2>
-            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555" }}>
+            <p className={`reveal${s5ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555" }}>
               Whether you&apos;re preparing your first investor pitch, refining your story, identifying qualified investors, or executing outreach, Brand Iron offers specialized solutions that can stand alone or work together as a complete fundraising system.
             </p>
           </div>
@@ -515,7 +515,7 @@ export default function CapitalRaisePage() {
           <div className="cr-solutions-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20, marginBottom: 64 }}>
             {solutions.map(({ num, name, tagline, desc, bestFor, outcome, cta, href, icon }) => (
               <div key={name}
-                className={`reveal${s5View.inView ? ' visible' : ''}`}
+                className={`reveal${s5ViewInView ? ' visible' : ''}`}
                 style={{ position: "relative", background: "#FFFFFF", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 14, overflow: "hidden", boxShadow: "0 4px 20px rgba(0,0,0,0.06)", transition: "transform 0.25s, box-shadow 0.25s", display: "flex", flexDirection: "column" }}
                 onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-6px)"; el.style.boxShadow = "0 16px 44px rgba(0,0,0,0.12)"; }}
                 onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "0 4px 20px rgba(0,0,0,0.06)"; }}
@@ -554,7 +554,7 @@ export default function CapitalRaisePage() {
           </div>
 
           {/* Compare capital raise solutions */}
-          <div className={`reveal${s5View.inView ? ' visible' : ''}`}>
+          <div className={`reveal${s5ViewInView ? ' visible' : ''}`}>
             <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 8 }}>
               Compare Capital Raise Solutions
             </h3>
@@ -596,7 +596,7 @@ export default function CapitalRaisePage() {
           </div>
 
           {/* Not sure where to start */}
-          <div className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ position: "relative", background: "#0F1B2D", borderRadius: 16, padding: "48px 56px", marginTop: 64, overflow: "hidden" }}>
+          <div className={`reveal${s5ViewInView ? ' visible' : ''}`} style={{ position: "relative", background: "#0F1B2D", borderRadius: 16, padding: "48px 56px", marginTop: 64, overflow: "hidden" }}>
             <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, transparent, #d87307, transparent)" }} />
 
             <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.05em", color: "#FFFFFF", marginBottom: 20 }}>
@@ -676,15 +676,15 @@ export default function CapitalRaisePage() {
         position: "relative", overflow: "hidden", padding: "120px 40px",
         background: "#F8F2E8",
       }}>
-        <div ref={s6View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
+        <div ref={s6ViewRef} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
-            <h2 className={`section-heading reveal${s6View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${s6ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               Investor Confidence That Creates Fundraising Momentum
             </h2>
-            <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 16 }}>
+            <p className={`reveal${s6ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 16 }}>
               A successful capital raise isn&apos;t measured by the number of presentations you deliver, it&apos;s measured by your ability to build investor confidence, create meaningful conversations, and move your fundraising forward.
             </p>
-            <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666" }}>
+            <p className={`reveal${s6ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666" }}>
               Our Capital Raise Support framework is designed to help you communicate your opportunity with clarity, engage the right investors, and create the momentum needed to support long-term growth.
             </p>
           </div>
@@ -714,7 +714,7 @@ export default function CapitalRaisePage() {
               },
             ].map(({ title, body, impacts }) => (
               <div key={title}
-                className={`reveal${s6View.inView ? ' visible' : ''}`}
+                className={`reveal${s6ViewInView ? ' visible' : ''}`}
                 style={{ position: "relative", background: "rgba(255,255,255,0.92)", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 14, padding: "28px 24px", overflow: "hidden", transition: "transform 0.25s, box-shadow 0.25s" }}
                 onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-4px)"; el.style.boxShadow = "0 14px 40px rgba(0,0,0,0.1)"; }}
                 onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "none"; }}
@@ -736,7 +736,7 @@ export default function CapitalRaisePage() {
           </div>
 
           {/* Strategic insight */}
-          <div className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ textAlign: "center", maxWidth: 820, margin: "0 auto 56px" }}>
+          <div className={`reveal${s6ViewInView ? ' visible' : ''}`} style={{ textAlign: "center", maxWidth: 820, margin: "0 auto 56px" }}>
             <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>Strategic Insight</p>
             <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(20px, 2.6vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.4, margin: 0 }}>
               Capital is the outcome. Investor confidence is what makes it possible.
@@ -744,7 +744,7 @@ export default function CapitalRaisePage() {
           </div>
 
           {/* FAQ Accordion */}
-          <div className={`reveal${s6View.inView ? ' visible' : ''}`}>
+          <div className={`reveal${s6ViewInView ? ' visible' : ''}`}>
             <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 8 }}>
               Common Questions About Capital Raise Support
             </h3>
@@ -805,7 +805,7 @@ export default function CapitalRaisePage() {
       {/* ── CTA ────────────────────────────────────────────── */}
       <section style={{ background: "#F0EEEA", padding: "80px 24px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <div ref={ctaView.ref} className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{
+          <div ref={ctaViewRef} className={`reveal${ctaViewInView ? ' visible' : ''}`} style={{
             position: "relative", overflow: "hidden", borderRadius: 20,
             backgroundImage: "url('/images/shared/shared-mountain-peaks.jpg')", backgroundSize: "cover", backgroundPosition: "center",
           }}>

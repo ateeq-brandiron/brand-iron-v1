@@ -26,15 +26,17 @@ export default function AIVisibilityPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
+    // window is unavailable during SSR, so this can't be a useState lazy initializer.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (new URLSearchParams(window.location.search).get("openAudit")) setAuditOpen(true);
   }, []);
 
-  const s2View = useInView();
-  const s3View = useInView();
-  const s4View = useInView();
-  const s5View = useInView();
-  const s6View = useInView();
-  const ctaView = useInView();
+  const { ref: s2ViewRef, inView: s2ViewInView } = useInView();
+  const { ref: s3ViewRef, inView: s3ViewInView } = useInView();
+  const { ref: s4ViewRef, inView: s4ViewInView } = useInView();
+  const { ref: s5ViewRef, inView: s5ViewInView } = useInView();
+  const { ref: s6ViewRef, inView: s6ViewInView } = useInView();
+  const { ref: ctaViewRef, inView: ctaViewInView } = useInView();
 
   const tiers = [
     {
@@ -284,19 +286,19 @@ export default function AIVisibilityPage() {
 
       {/* ── S2: SEARCH HAS CHANGED ───────────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "120px 40px 0" }}>
-        <div ref={s2View.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <h2 className={`section-heading reveal${s2View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 24, textAlign: "left" }}>
+        <div ref={s2ViewRef} style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <h2 className={`section-heading reveal${s2ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 24, textAlign: "left" }}>
             Search Has Changed. Visibility Has Changed with It.
           </h2>
 
           <div style={{ marginBottom: 80 }}>
-            <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#555" }}>
+            <p className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#555" }}>
               Search has evolved beyond Google. While SEO remains essential, today&apos;s buyers ask AI platforms and search engines for trusted answers long before speaking with a company. Whether they&apos;re using ChatGPT, Gemini, Claude, Perplexity, Google, or industry communities, buying decisions now happen across multiple channels. Your business needs to be visible wherever those conversations begin.
             </p>
           </div>
 
           {/* Then vs Now */}
-          <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ marginBottom: 64 }}>
+          <div className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ marginBottom: 64 }}>
             <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 32 }}>
               Search Has Evolved
             </h3>
@@ -329,7 +331,7 @@ export default function AIVisibilityPage() {
         </div>
 
         {/* Why This Matters — full-bleed video panel */}
-        <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{
+        <div className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{
           position: "relative", width: "100vw", marginLeft: "calc(50% - 50vw)", marginTop: 64,
           overflow: "hidden", borderTop: "3px solid #d87307",
         }}>
@@ -374,16 +376,16 @@ export default function AIVisibilityPage() {
 
       {/* ── S3: THE NEW VISIBILITY EQUATION ─────────────────── */}
       <section style={{ position: "relative", background: "#FFFFFF", padding: "120px 40px" }}>
-        <div ref={s3View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1100, margin: "0 auto" }}>
-          <h2 className={`section-heading reveal${s3View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 16, textAlign: "left" }}>
+        <div ref={s3ViewRef} style={{ position: "relative", zIndex: 2, maxWidth: 1100, margin: "0 auto" }}>
+          <h2 className={`section-heading reveal${s3ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 16, textAlign: "left" }}>
             Visibility Alone Isn&apos;t Enough.
           </h2>
-          <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 64 }}>
+          <p className={`reveal${s3ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 64 }}>
             Modern discoverability requires four connected capabilities working together.
           </p>
 
           {/* Be Found → Be Understood → Be Trusted → Be Recommended */}
-          <div className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ display: "flex", alignItems: "stretch", justifyContent: "center", gap: 0, marginBottom: 64, flexWrap: "wrap" }}>
+          <div className={`reveal${s3ViewInView ? ' visible' : ''}`} style={{ display: "flex", alignItems: "stretch", justifyContent: "center", gap: 0, marginBottom: 64, flexWrap: "wrap" }}>
             {[
               { label: "Be Found", num: "01" },
               { label: "Be Understood", num: "02" },
@@ -417,7 +419,7 @@ export default function AIVisibilityPage() {
             ))}
           </div>
 
-          <div className={`reveal${s3View.inView ? ' visible' : ''}`}>
+          <div className={`reveal${s3ViewInView ? ' visible' : ''}`}>
             <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.8, color: "#444", marginBottom: 32 }}>
               The organizations that win tomorrow aren&apos;t simply easier to find, they&apos;re easier to trust. That&apos;s why Brand Iron goes beyond traditional SEO. We help organizations build the technical foundation, digital authority, and AI readiness needed to become discoverable, trusted, and recommended across today&apos;s evolving search landscape.
             </p>
@@ -441,15 +443,15 @@ export default function AIVisibilityPage() {
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
         <div role="img" aria-label="Blacksmith hammering molten metal on an anvil with glowing AI data-line visualizations exploding from the impact point" style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.88)" }} />
-        <div ref={s4View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
+        <div ref={s4ViewRef} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
-            <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 24, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${s4ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 24, textAlign: "left" }}>
               A Strategic Framework for AI Visibility
             </h2>
-            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 500, fontSize: 18, lineHeight: 1.8, color: "#3a3a3a", marginBottom: 16 }}>
+            <p className={`reveal${s4ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 500, fontSize: 18, lineHeight: 1.8, color: "#3a3a3a", marginBottom: 16 }}>
               AI Visibility isn&apos;t achieved through a single tactic or tool. It requires a connected strategy that strengthens your technical foundation, builds digital authority, and helps AI platforms understand, trust, and recommend your business.
             </p>
-            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 500, fontSize: 16, lineHeight: 1.8, color: "#4a4a4a" }}>
+            <p className={`reveal${s4ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 500, fontSize: 16, lineHeight: 1.8, color: "#4a4a4a" }}>
               At Brand Iron, we guide organizations through a four-stage framework designed to improve discoverability across search engines and AI-powered search experiences.
             </p>
           </div>
@@ -494,7 +496,7 @@ export default function AIVisibilityPage() {
                 color: "#d87307",
               },
             ].map(({ num, title, lines, color }, i) => (
-              <div key={num} className={`reveal${s4View.inView ? ' visible' : ''}`} style={{
+              <div key={num} className={`reveal${s4ViewInView ? ' visible' : ''}`} style={{
                 position: "relative",
                 background: color,
                 borderRadius: 12, padding: "40px 28px",
@@ -519,7 +521,7 @@ export default function AIVisibilityPage() {
           </div>
 
           {/* Closing statement */}
-          <div className={`reveal${s4View.inView ? ' visible' : ''}`}>
+          <div className={`reveal${s4ViewInView ? ' visible' : ''}`}>
             <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 500, fontSize: 17, lineHeight: 1.8, color: "#3a3a3a" }}>
               No matter where you are in your AI Visibility journey, our framework helps you build a stronger digital presence that supports long-term discoverability, authority, and business growth.
             </p>
@@ -529,21 +531,21 @@ export default function AIVisibilityPage() {
 
       {/* ── S5: CHOOSE YOUR SOLUTION ─────────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "48px 40px 0" }}>
-        <div ref={s5View.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
+        <div ref={s5ViewRef} style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 72, textAlign: "center" }}>
-            <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20 }}>
+            <h2 className={`section-heading reveal${s5ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20 }}>
               Choose the Right AI Visibility Solution
             </h2>
-            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 680, margin: "0 auto 16px" }}>
+            <p className={`reveal${s5ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 680, margin: "0 auto 16px" }}>
               Every organization is at a different stage of its AI Visibility journey.
             </p>
-            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 680, margin: "0 auto 16px" }}>
+            <p className={`reveal${s5ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 680, margin: "0 auto 16px" }}>
               Some need to understand why they&apos;re not appearing in AI-powered search results. Others are ready to strengthen their technical foundation, build digital authority, or establish market leadership.
             </p>
-            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 680, margin: "0 auto 32px" }}>
+            <p className={`reveal${s5ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 680, margin: "0 auto 32px" }}>
               Our four-tier framework allows you to start where you are today, and grow as your business grows.
             </p>
-            <Link href="/contact" className={`reveal${s5View.inView ? ' visible' : ''}`} style={{
+            <Link href="/contact" className={`reveal${s5ViewInView ? ' visible' : ''}`} style={{
               display: "inline-block", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
               background: "#d87307", color: "#FFFFFF",
@@ -557,7 +559,7 @@ export default function AIVisibilityPage() {
           {/* Four tier cards */}
           <div className="ai-tiers-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24, marginBottom: 56 }}>
             {tiers.map((tier, i) => (
-              <div key={tier.number} className={`reveal${s5View.inView ? ' visible' : ''}`} style={{
+              <div key={tier.number} className={`reveal${s5ViewInView ? ' visible' : ''}`} style={{
                 position: "relative",
                 background: "#F9F8F6",
                 borderRadius: 12, padding: "32px 24px",
@@ -604,7 +606,7 @@ export default function AIVisibilityPage() {
           </div>
 
           {/* Comparison table */}
-          <div className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ marginBottom: 64 }}>
+          <div className={`reveal${s5ViewInView ? ' visible' : ''}`} style={{ marginBottom: 64 }}>
             <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(20px, 2.5vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 32, textAlign: "center" }}>
               Quick Comparison
             </h3>
@@ -639,7 +641,7 @@ export default function AIVisibilityPage() {
           </div>
 
           {/* Which solution is right for you */}
-          <div className={`reveal${s5View.inView ? ' visible' : ''}`}>
+          <div className={`reveal${s5ViewInView ? ' visible' : ''}`}>
             <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(20px, 2.5vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 40, textAlign: "center" }}>
               Which Solution Is Right for You?
             </h3>
@@ -724,17 +726,17 @@ export default function AIVisibilityPage() {
 
       {/* ── S7: FAQ ───────────────────────────────────────────── */}
       <section style={{ background: "#F8F5EF", padding: "120px 40px" }}>
-        <div ref={s6View.ref} style={{ maxWidth: 900, margin: "0 auto" }}>
-          <h3 className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 8 }}>
+        <div ref={s6ViewRef} style={{ maxWidth: 900, margin: "0 auto" }}>
+          <h3 className={`reveal${s6ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 8 }}>
             Frequently Asked Questions
           </h3>
-          <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", maxWidth: 640, margin: "0 0 32px" }}>
+          <p className={`reveal${s6ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", maxWidth: 640, margin: "0 0 32px" }}>
             Common questions we hear from teams evaluating AI Visibility.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
             {faqs.map(({ q, a }, i) => (
               <div key={i}
-                className={`reveal${s6View.inView ? ' visible' : ''}`}
+                className={`reveal${s6ViewInView ? ' visible' : ''}`}
                 style={{ background: "rgba(255,255,255,0.9)", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 10, overflow: "hidden", transition: "box-shadow 0.2s, border-color 0.2s" }}
                 onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.borderColor = "rgba(216,115,7,0.3)"; el.style.boxShadow = "0 8px 24px rgba(0,0,0,0.06)"; }}
                 onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.borderColor = "rgba(15,27,45,0.08)"; el.style.boxShadow = "none"; }}
@@ -776,7 +778,7 @@ export default function AIVisibilityPage() {
       {/* ── CTA ────────────────────────────────────────────── */}
       <section style={{ background: "#F0EEEA", padding: "80px 24px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <div ref={ctaView.ref} className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{
+          <div ref={ctaViewRef} className={`reveal${ctaViewInView ? ' visible' : ''}`} style={{
             position: "relative", overflow: "hidden", borderRadius: 20,
             backgroundImage: "url('/images/ai-visibility/ai-visibility-cta-cowboy-tech-rope.jpg')", backgroundSize: "cover", backgroundPosition: "center",
           }}>

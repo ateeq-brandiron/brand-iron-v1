@@ -136,13 +136,13 @@ const faqs = [
 
 export default function RevenueEngineeringPage() {
   const [reviewOpen, setReviewOpen] = useState(false);
-  const s2View = useInView();
-  const s3View = useInView();
-  const s4View = useInView();
-  const s5View = useInView();
-  const s6View = useInView();
-  const s7View = useInView();
-  const s8View = useInView();
+  const { ref: s2ViewRef, inView: s2ViewInView } = useInView();
+  const { ref: s3ViewRef, inView: s3ViewInView } = useInView();
+  const { ref: s4ViewRef, inView: s4ViewInView } = useInView();
+  const { ref: s5ViewRef, inView: s5ViewInView } = useInView();
+  const { ref: s6ViewRef, inView: s6ViewInView } = useInView();
+  const { ref: s7ViewRef, inView: s7ViewInView } = useInView();
+  const { ref: s8ViewRef, inView: s8ViewInView } = useInView();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const coreCarouselRef = useRef<HTMLDivElement>(null);
@@ -271,18 +271,18 @@ export default function RevenueEngineeringPage() {
 
       {/* ── S2: STOP LETTING REVENUE SLIP THROUGH THE CRACKS ── */}
       <section style={{ background: "#FFFFFF", padding: "120px 40px 64px" }}>
-        <div ref={s2View.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <h2 className={`section-heading reveal${s2View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 24, textAlign: "left" }}>
+        <div ref={s2ViewRef} style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <h2 className={`section-heading reveal${s2ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 24, textAlign: "left" }}>
             Stop Letting Revenue Slip Through the Cracks
           </h2>
-          <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 16 }}>
+          <p className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 16 }}>
             Most companies already have the tools. The problem? They are not working together. Leads go cold. Follow-ups fall behind. Data gets scattered. Reporting gets muddy.
           </p>
-          <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#1a1a1a", fontWeight: 700, marginBottom: 32 }}>
+          <p className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#1a1a1a", fontWeight: 700, marginBottom: 32 }}>
             We bring the whole operation into line. One system. Clear direction. Better revenue performance.
           </p>
 
-          <button onClick={() => setReviewOpen(true)} className={`reveal${s2View.inView ? ' visible' : ''}`} style={{
+          <button onClick={() => setReviewOpen(true)} className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{
             display: "inline-block", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
             letterSpacing: "0.14em", textTransform: "uppercase",
             background: "#d87307", color: "#FFFFFF", border: "none", cursor: "pointer",
@@ -296,17 +296,17 @@ export default function RevenueEngineeringPage() {
 
       {/* ── S3: WHAT WE ENGINEER (carousel) ──────────────────── */}
       <section id="services" style={{ position: "relative", overflow: "hidden", padding: "64px 0 90px" }}>
-        <div ref={s3View.ref} style={{ position: "relative", maxWidth: 1200, margin: "0 auto", padding: "0 40px" }}>
+        <div ref={s3ViewRef} style={{ position: "relative", maxWidth: 1200, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ marginBottom: 48, display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 24, flexWrap: "wrap" }}>
             <div style={{ maxWidth: 640 }}>
-              <h2 className={`section-heading reveal${s3View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
+              <h2 className={`section-heading reveal${s3ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
                 What We Engineer
               </h2>
-              <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666" }}>
+              <p className={`reveal${s3ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666" }}>
                 Every engagement draws from the same connected set of capabilities, scoped to where your revenue system is leaking.
               </p>
             </div>
-            <div className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ display: "flex", gap: 10, flexShrink: 0 }}>
+            <div className={`reveal${s3ViewInView ? ' visible' : ''}`} style={{ display: "flex", gap: 10, flexShrink: 0 }}>
               <button
                 aria-label="Previous service"
                 onClick={() => scrollCoreCarousel(-1)}
@@ -340,7 +340,7 @@ export default function RevenueEngineeringPage() {
           >
             {coreServices.map(({ num, title, lead, body, items, outcome, icon }, i) => (
               <div key={num}
-                className={`re-service-card reveal${s3View.inView ? ' visible' : ''}`}
+                className={`re-service-card reveal${s3ViewInView ? ' visible' : ''}`}
                 style={{
                   position: "relative", background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 14,
                   padding: "32px 28px", overflow: "hidden", transition: "transform 0.25s, box-shadow 0.25s, border-color 0.25s",
@@ -400,15 +400,15 @@ export default function RevenueEngineeringPage() {
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
         <div role="img" aria-label="Grassy hillside at sunset with glowing digital circuit lines and a computer chip woven through the grass, representing a connected revenue operations system" style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.45)" }} />
-        <div ref={s4View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
-          <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 48, textAlign: "left" }}>
+        <div ref={s4ViewRef} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
+          <h2 className={`section-heading reveal${s4ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 48, textAlign: "left" }}>
             Our Process
           </h2>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 20 }}>
             {process.map(({ num, title, body }, i) => (
               <div key={num}
-                className={`reveal stagger-${(i % 3) + 1}${s4View.inView ? ' visible' : ''}`}
+                className={`reveal stagger-${(i % 3) + 1}${s4ViewInView ? ' visible' : ''}`}
                 style={{ position: "relative", background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 14, padding: "28px 24px", overflow: "hidden", transition: "transform 0.25s, box-shadow 0.25s" }}
                 onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-4px)"; el.style.boxShadow = "0 14px 36px rgba(0,0,0,0.08)"; }}
                 onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "none"; }}
@@ -425,11 +425,11 @@ export default function RevenueEngineeringPage() {
 
       {/* ── S5: BUILT FOR BUSINESSES THAT... ─────────────────── */}
       <section style={{ background: "#F8F5EF", padding: "100px 40px" }}>
-        <div ref={s5View.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 40, textAlign: "left" }}>
+        <div ref={s5ViewRef} style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <h2 className={`section-heading reveal${s5ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 40, textAlign: "left" }}>
             Revenue Engineering Is Built for Businesses That:
           </h2>
-          <div className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ display: "flex", flexWrap: "wrap", justifyContent: "flex-start", gap: 12 }}>
+          <div className={`reveal${s5ViewInView ? ' visible' : ''}`} style={{ display: "flex", flexWrap: "wrap", justifyContent: "flex-start", gap: 12 }}>
             {builtFor.map(item => (
               <div key={item} style={{ display: "flex", alignItems: "center", gap: 8, background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 24, padding: "10px 18px" }}>
                 <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#d87307", flexShrink: 0 }} />
@@ -442,14 +442,14 @@ export default function RevenueEngineeringPage() {
 
       {/* ── S6: GROWTH NEEDS MORE THAN GRIT ──────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "80px 40px" }}>
-        <div ref={s6View.ref} style={{ maxWidth: 780, margin: "0 auto", textAlign: "center" }}>
-          <h2 className={`section-heading reveal${s6View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20 }}>
+        <div ref={s6ViewRef} style={{ maxWidth: 780, margin: "0 auto", textAlign: "center" }}>
+          <h2 className={`section-heading reveal${s6ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20 }}>
             Growth Needs More Than Grit
           </h2>
-          <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontSize: 17, lineHeight: 1.8, color: "#555", marginBottom: 32 }}>
+          <p className={`reveal${s6ViewInView ? ' visible' : ''}`} style={{ fontSize: 17, lineHeight: 1.8, color: "#555", marginBottom: 32 }}>
             You do not need another disconnected tool. You need your current tools, workflows, teams, and data pulling together. Brand Iron engineers the system behind the sale.
           </p>
-          <Link href="/contact" className={`reveal${s6View.inView ? ' visible' : ''}`} style={{
+          <Link href="/contact" className={`reveal${s6ViewInView ? ' visible' : ''}`} style={{
             display: "inline-block", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
             letterSpacing: "0.14em", textTransform: "uppercase",
             background: "#d87307", color: "#FFFFFF",
@@ -463,17 +463,17 @@ export default function RevenueEngineeringPage() {
 
       {/* ── S7: FAQ ───────────────────────────────────────────── */}
       <section style={{ background: "#F8F5EF", padding: "120px 40px" }}>
-        <div ref={s7View.ref} style={{ maxWidth: 900, margin: "0 auto" }}>
-          <h3 className={`reveal${s7View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 8 }}>
+        <div ref={s7ViewRef} style={{ maxWidth: 900, margin: "0 auto" }}>
+          <h3 className={`reveal${s7ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 8 }}>
             Frequently Asked Questions
           </h3>
-          <p className={`reveal${s7View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", maxWidth: 640, margin: "0 0 32px" }}>
+          <p className={`reveal${s7ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", maxWidth: 640, margin: "0 0 32px" }}>
             Common questions we hear from teams considering a Revenue Engineering engagement.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
             {faqs.map(({ q, a, related }, i) => (
               <div key={i}
-                className={`reveal${s7View.inView ? ' visible' : ''}`}
+                className={`reveal${s7ViewInView ? ' visible' : ''}`}
                 style={{ background: "rgba(255,255,255,0.9)", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 10, overflow: "hidden", transition: "box-shadow 0.2s, border-color 0.2s" }}
                 onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.borderColor = "rgba(216,115,7,0.3)"; el.style.boxShadow = "0 8px 24px rgba(0,0,0,0.06)"; }}
                 onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.borderColor = "rgba(15,27,45,0.08)"; el.style.boxShadow = "none"; }}
@@ -524,7 +524,7 @@ export default function RevenueEngineeringPage() {
       {/* ── S8: FINAL CTA ─────────────────────────────────────── */}
       <section style={{ background: "#F0EEEA", padding: "80px 24px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <div ref={s8View.ref} className={`reveal${s8View.inView ? ' visible' : ''}`} style={{
+          <div ref={s8ViewRef} className={`reveal${s8ViewInView ? ' visible' : ''}`} style={{
             position: "relative", overflow: "hidden", borderRadius: 20,
             backgroundImage: "url('/images/revenue-engineering/revenue-engineering-cta-river-sunset.jpg')", backgroundSize: "cover", backgroundPosition: "center",
           }}>

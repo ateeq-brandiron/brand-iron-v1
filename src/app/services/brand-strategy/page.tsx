@@ -210,12 +210,12 @@ export default function BrandStrategyPage() {
   };
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-  const s2View = useInView();
-  const s3View = useInView();
-  const s4View = useInView();
-  const s5View = useInView();
-  const s6View = useInView();
-  const ctaView = useInView();
+  const { ref: s2ViewRef, inView: s2ViewInView } = useInView();
+  const { ref: s3ViewRef, inView: s3ViewInView } = useInView();
+  const { ref: s4ViewRef, inView: s4ViewInView } = useInView();
+  const { ref: s5ViewRef, inView: s5ViewInView } = useInView();
+  const { ref: s6ViewRef, inView: s6ViewInView } = useInView();
+  const { ref: ctaViewRef, inView: ctaViewInView } = useInView();
 
   const faqs = [
     {
@@ -371,20 +371,20 @@ export default function BrandStrategyPage() {
 
       {/* ── S2: BRANDING SHOULD RUN DEEPER THAN THE SURFACE ─── */}
       <section style={{ background: "#FFFFFF", padding: "120px 40px" }}>
-        <div ref={s2View.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <h2 className={`section-heading reveal${s2View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 24, textAlign: "left" }}>
+        <div ref={s2ViewRef} style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <h2 className={`section-heading reveal${s2ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 24, textAlign: "left" }}>
             Branding Should Run Deeper Than the Surface.
           </h2>
-          <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 16 }}>
+          <p className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 16 }}>
             Strong branding starts by staking out who you serve, what sets you apart, why the market should believe you, and how the brand should support growth.
           </p>
-          <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 16 }}>
+          <p className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 16 }}>
             Brand Iron builds branding as a business system, not a collection of creative assets.
           </p>
-          <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#444", fontWeight: 600, marginBottom: 32 }}>
+          <p className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#444", fontWeight: 600, marginBottom: 32 }}>
             The goal is a clear, credible market position built to hold its ground and scale.
           </p>
-          <button onClick={() => setProposalOpen(true)} className={`reveal${s2View.inView ? ' visible' : ''}`} style={{
+          <button onClick={() => setProposalOpen(true)} className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{
             display: "inline-block", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
             letterSpacing: "0.14em", textTransform: "uppercase",
             background: "#d87307", color: "#FFFFFF", border: "none", cursor: "pointer",
@@ -404,18 +404,18 @@ export default function BrandStrategyPage() {
       }}>
         <div role="img" aria-label="Golden hay bale field at sunset with rolled bales and sun flare" style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.85)" }} />
         <CircuitOverlay />
-        <div ref={s3View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
+        <div ref={s3ViewRef} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 56 }}>
-            <h2 className={`section-heading reveal${s3View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${s3ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               From Business Strategy to Market Impact
             </h2>
-            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(0,0,0,0.65)" }}>
+            <p className={`reveal${s3ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(0,0,0,0.65)" }}>
               Every engagement follows a structured path from strategic clarity to market execution.
             </p>
           </div>
 
           {/* 7-step process grid */}
-          <div className={`reveal${s3View.inView ? ' visible' : ''} bs-process-grid`} style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, marginBottom: 48 }}>
+          <div className={`reveal${s3ViewInView ? ' visible' : ''} bs-process-grid`} style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, marginBottom: 48 }}>
             {processSteps.map(({ title, body, icon }, i) => {
               const isLast = i === processSteps.length - 1;
               return (
@@ -454,7 +454,7 @@ export default function BrandStrategyPage() {
             })}
           </div>
 
-          <div className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ textAlign: "center" }}>
+          <div className={`reveal${s3ViewInView ? ' visible' : ''}`} style={{ textAlign: "center" }}>
             <Link href="/contact" style={{
               display: "inline-block", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase", textDecoration: "none",
@@ -480,12 +480,12 @@ export default function BrandStrategyPage() {
       {/* ── S4: BRANDING SOLUTIONS ───────────────────────────── */}
       <section id="solutions" style={{ background: "linear-gradient(180deg, #FFFFFF 0%, #F6F3EF 100%)", padding: "120px 40px", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, backgroundImage: "radial-gradient(circle at 20% 50%, rgba(216,115,7,0.04) 0%, transparent 60%), radial-gradient(circle at 80% 20%, rgba(15,27,45,0.04) 0%, transparent 50%)", pointerEvents: "none" }} />
-        <div ref={s4View.ref} style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>
+        <div ref={s4ViewRef} style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>
           <div style={{ marginBottom: 64 }}>
-            <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${s4ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               Branding Solutions
             </h2>
-            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555" }}>
+            <p className={`reveal${s4ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555" }}>
               Every organization has different goals, timelines, and branding requirements. Whether you need a complete brand foundation or a foundation paired with a go-to-market launch plan, Brand Iron provides solutions designed to meet your current needs while supporting future growth.
             </p>
           </div>
@@ -494,7 +494,7 @@ export default function BrandStrategyPage() {
           <div className="bs-solutions-grid" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 24, marginBottom: 64 }}>
             {solutions.map(({ name, tagline, bestFor, includes, timeline, outcome, cta, interest }) => (
               <div key={name}
-                className={`reveal${s4View.inView ? ' visible' : ''}`}
+                className={`reveal${s4ViewInView ? ' visible' : ''}`}
                 style={{ position: "relative", background: "#FFFFFF", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 14, overflow: "hidden", boxShadow: "0 4px 20px rgba(0,0,0,0.06)", transition: "transform 0.25s, box-shadow 0.25s", display: "flex", flexDirection: "column" }}
                 onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-6px)"; el.style.boxShadow = "0 16px 44px rgba(0,0,0,0.12)"; }}
                 onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "0 4px 20px rgba(0,0,0,0.06)"; }}
@@ -535,7 +535,7 @@ export default function BrandStrategyPage() {
           </div>
 
           {/* Comparison table */}
-          <div className={`reveal${s4View.inView ? ' visible' : ''}`}>
+          <div className={`reveal${s4ViewInView ? ' visible' : ''}`}>
             <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 32, textAlign: "center" }}>
               Compare Your Strategic Options
             </h3>
@@ -575,17 +575,17 @@ export default function BrandStrategyPage() {
 
       {/* ── S5: CORE BRANDING SERVICES ───────────────────────── */}
       <section style={{ position: "relative", overflow: "hidden", padding: "120px 0" }}>
-        <div ref={s5View.ref} style={{ position: "relative", maxWidth: 1200, margin: "0 auto", padding: "0 40px" }}>
+        <div ref={s5ViewRef} style={{ position: "relative", maxWidth: 1200, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ marginBottom: 48, display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 24, flexWrap: "wrap" }}>
             <div style={{ maxWidth: 640 }}>
-              <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
+              <h2 className={`section-heading reveal${s5ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
                 Core Branding Services
               </h2>
-              <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666" }}>
+              <p className={`reveal${s5ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666" }}>
                 Every branding engagement draws from the same connected set of capabilities, scoped to what your organization needs.
               </p>
             </div>
-            <div className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ display: "flex", gap: 10, flexShrink: 0 }}>
+            <div className={`reveal${s5ViewInView ? ' visible' : ''}`} style={{ display: "flex", gap: 10, flexShrink: 0 }}>
               <button
                 aria-label="Previous service"
                 onClick={() => scrollCoreCarousel(-1)}
@@ -619,7 +619,7 @@ export default function BrandStrategyPage() {
           >
             {coreServices.map(({ num, title, body, deliverable, outcome, scope, icon }, i) => (
               <div key={num}
-                className={`core-service-card reveal${s5View.inView ? ' visible' : ''}`}
+                className={`core-service-card reveal${s5ViewInView ? ' visible' : ''}`}
                 style={{
                   position: "relative", background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 14,
                   padding: "32px 28px", overflow: "hidden", transition: "transform 0.25s, box-shadow 0.25s, border-color 0.25s",
@@ -682,8 +682,8 @@ export default function BrandStrategyPage() {
 
       {/* ── S6: STATEMENT + FAQ ──────────────────────────────── */}
       <section style={{ background: "#F8F5EF", padding: "120px 40px 48px" }}>
-        <div ref={s6View.ref} style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <p className={`s6-statement reveal${s6View.inView ? ' visible' : ''}`} style={{
+        <div ref={s6ViewRef} style={{ maxWidth: 1100, margin: "0 auto" }}>
+          <p className={`s6-statement reveal${s6ViewInView ? ' visible' : ''}`} style={{
             fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(20px, 2.4vw, 30px)", fontWeight: 900,
             textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.3,
             textAlign: "center", margin: "0 auto 72px", whiteSpace: "nowrap",
@@ -698,7 +698,7 @@ export default function BrandStrategyPage() {
           `}</style>
 
           {/* FAQ Accordion */}
-          <div className={`reveal${s6View.inView ? ' visible' : ''}`}>
+          <div className={`reveal${s6ViewInView ? ' visible' : ''}`}>
             <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 32 }}>
               Frequently Asked Questions
             </h3>
@@ -756,7 +756,7 @@ export default function BrandStrategyPage() {
       {/* ── CTA ────────────────────────────────────────────── */}
       <section style={{ background: "#F0EEEA", padding: "80px 24px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <div ref={ctaView.ref} className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{
+          <div ref={ctaViewRef} className={`reveal${ctaViewInView ? ' visible' : ''}`} style={{
             position: "relative", overflow: "hidden", borderRadius: 20,
             backgroundImage: "url('/images/brand-strategy/brand-strategy-cta-lake.jpg')", backgroundSize: "cover", backgroundPosition: "center",
           }}>

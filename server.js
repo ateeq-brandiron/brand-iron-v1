@@ -8,7 +8,9 @@
 // what causes "reload the page" chunk-load errors right after a deploy. The
 // "postbuild" script in package.json touches that file on every `next build`
 // so Passenger always restarts onto the fresh build.
+// eslint-disable-next-line @typescript-eslint/no-require-imports -- CommonJS entrypoint (no "type": "module" in package.json); Passenger runs this file directly with `node server.js`.
 const { createServer } = require("http");
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const next = require("next");
 
 const port = parseInt(process.env.PORT || "3000", 10);

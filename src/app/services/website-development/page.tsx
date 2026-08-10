@@ -38,7 +38,7 @@ function useHeadlineCrossfade(count: number, pauseMs = 3500, fadeMs = 400) {
 // returns the tallest one, so the visible headline's box never resizes (and
 // nothing below it jumps) no matter which variant is showing or how the
 // viewport wraps its lines.
-function useMaxHeadlineHeight(headlines: string[]) {
+function useMaxHeadlineHeight() {
   const measureRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState<number | null>(null);
   useEffect(() => {
@@ -173,14 +173,14 @@ export default function WebsiteDevelopmentPage() {
   const [inquiryOpen, setInquiryOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const headline = useHeadlineCrossfade(HEADLINES.length);
-  const headlineBox = useMaxHeadlineHeight(HEADLINES);
+  const { measureRef: headlineMeasureRef, height: headlineHeight } = useMaxHeadlineHeight();
 
-  const s2View = useInView();
-  const s3View = useInView();
-  const s4View = useInView();
-  const s5View = useInView();
-  const s6View = useInView();
-  const ctaView = useInView();
+  const { ref: s2ViewRef, inView: s2ViewInView } = useInView();
+  const { ref: s3ViewRef, inView: s3ViewInView } = useInView();
+  const { ref: s4ViewRef, inView: s4ViewInView } = useInView();
+  const { ref: s5ViewRef, inView: s5ViewInView } = useInView();
+  const { ref: s6ViewRef, inView: s6ViewInView } = useInView();
+  const { ref: ctaViewRef, inView: ctaViewInView } = useInView();
 
   const faqs = [
     {
@@ -280,9 +280,9 @@ export default function WebsiteDevelopmentPage() {
 
             {/* LEFT — crossfading headline, CTAs */}
             <div>
-              <div className="hero-h1-anim" style={{ position: "relative", marginBottom: 20, height: headlineBox.height ?? "clamp(79px, 11.6vw, 152px)" }}>
+              <div className="hero-h1-anim" style={{ position: "relative", marginBottom: 20, height: headlineHeight ?? "clamp(79px, 11.6vw, 152px)" }}>
                 {/* Off-screen copies of every variant, measured to size the box above so nothing jumps when the headline swaps */}
-                <div ref={headlineBox.measureRef} aria-hidden style={{ position: "absolute", inset: 0, visibility: "hidden", pointerEvents: "none" }}>
+                <div ref={headlineMeasureRef} aria-hidden style={{ position: "absolute", inset: 0, visibility: "hidden", pointerEvents: "none" }}>
                   {HEADLINES.map(text => (
                     <div key={text} style={{
                       fontFamily: "var(--font-burford-inline), sans-serif",
@@ -362,17 +362,17 @@ export default function WebsiteDevelopmentPage() {
 
       {/* ── S2: WHY MOST BUSINESS WEBSITES UNDERPERFORM ─────── */}
       <section style={{ background: "#FFFFFF", padding: "120px 40px" }}>
-        <div ref={s2View.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <h2 className={`section-heading reveal${s2View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 24, textAlign: "left" }}>
+        <div ref={s2ViewRef} style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <h2 className={`section-heading reveal${s2ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 24, textAlign: "left" }}>
             Why Most Business Websites Underperform
           </h2>
-          <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 16 }}>
+          <p className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 16 }}>
             Most organizations don&apos;t struggle because they lack a website. They struggle because their website isn&apos;t connected to their business strategy.
           </p>
-          <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 16 }}>
+          <p className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 16 }}>
             Many websites are built around pages instead of customer journeys. They lack clear messaging, intuitive navigation, strong calls to action, and the technical foundation needed for search visibility and AI discoverability.
           </p>
-          <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#666" }}>
+          <p className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#666" }}>
             At Brand Iron, every website begins with understanding your organization first. Only then do we design the digital experience that supports it.
           </p>
         </div>
@@ -386,12 +386,12 @@ export default function WebsiteDevelopmentPage() {
       }}>
         <div role="img" aria-label="Close-up of weathered gray wood grain texture with lichen speckles" style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.85)" }} />
         <CircuitOverlay />
-        <div ref={s3View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
+        <div ref={s3ViewRef} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 64 }}>
-            <h2 className={`section-heading reveal${s3View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${s3ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               Every Great Website Starts with Strategy.
             </h2>
-            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555" }}>
+            <p className={`reveal${s3ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555" }}>
               Our approach combines five connected pillars that ensure your website supports both today&apos;s users and tomorrow&apos;s growth.
             </p>
           </div>
@@ -400,7 +400,7 @@ export default function WebsiteDevelopmentPage() {
           <div className="wd-pillars-grid" style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 20, marginBottom: 48 }}>
             {pillars.map(({ num, title, body, icon }) => (
               <div key={num}
-                className={`reveal${s3View.inView ? ' visible' : ''}`}
+                className={`reveal${s3ViewInView ? ' visible' : ''}`}
                 style={{ position: "relative", background: "#F9F8F6", border: "1px solid #EEEBE7", borderRadius: 14, padding: "28px 20px", overflow: "hidden", transition: "transform 0.25s, box-shadow 0.25s" }}
                 onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-5px)"; el.style.boxShadow = "0 16px 48px rgba(0,0,0,0.1)"; }}
                 onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "none"; }}
@@ -416,7 +416,7 @@ export default function WebsiteDevelopmentPage() {
             ))}
           </div>
 
-          <div className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ textAlign: "center" }}>
+          <div className={`reveal${s3ViewInView ? ' visible' : ''}`} style={{ textAlign: "center" }}>
             <button onClick={() => setInquiryOpen(true)} style={{
               display: "inline-block", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
@@ -436,18 +436,18 @@ export default function WebsiteDevelopmentPage() {
         background: "#0F1B2D",
       }}>
         <CircuitOverlay />
-        <div ref={s4View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1100, margin: "0 auto" }}>
+        <div ref={s4ViewRef} style={{ position: "relative", zIndex: 2, maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ marginBottom: 56 }}>
-            <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))", marginBottom: 20, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${s4ViewInView ? ' visible' : ''}`} style={{ color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))", marginBottom: 20, textAlign: "left" }}>
               How We Build Websites
             </h2>
-            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.65)" }}>
+            <p className={`reveal${s4ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.65)" }}>
               Every project follows a structured process designed to reduce risk and create a smoother launch.
             </p>
           </div>
 
           {/* 8-step process grid */}
-          <div className={`reveal${s4View.inView ? ' visible' : ''} wd-process-grid`} style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, marginBottom: 48 }}>
+          <div className={`reveal${s4ViewInView ? ' visible' : ''} wd-process-grid`} style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, marginBottom: 48 }}>
             {processSteps.map(({ title, body, icon }, i) => {
               const isLast = i === processSteps.length - 1;
               return (
@@ -486,7 +486,7 @@ export default function WebsiteDevelopmentPage() {
             })}
           </div>
 
-          <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.7)" }}>
+          <p className={`reveal${s4ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.7)" }}>
             This collaborative approach ensures your website is aligned with your business goals before it goes live.
           </p>
         </div>
@@ -507,12 +507,12 @@ export default function WebsiteDevelopmentPage() {
       {/* ── S5: CHOOSE THE RIGHT WEBSITE SOLUTION ───────────── */}
       <section id="solutions" style={{ background: "linear-gradient(180deg, #FFFFFF 0%, #F6F3EF 100%)", padding: "120px 40px 48px", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, backgroundImage: "radial-gradient(circle at 20% 50%, rgba(216,115,7,0.04) 0%, transparent 60%), radial-gradient(circle at 80% 20%, rgba(15,27,45,0.04) 0%, transparent 50%)", pointerEvents: "none" }} />
-        <div ref={s5View.ref} style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>
+        <div ref={s5ViewRef} style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>
           <div style={{ marginBottom: 64 }}>
-            <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${s5ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               Every Organization Has Different Website Requirements
             </h2>
-            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555" }}>
+            <p className={`reveal${s5ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555" }}>
               Whether you need a focused website refresh, a marketing-ready platform, or a larger website with advanced functionality, Brand Iron provides solutions designed to meet your current needs while supporting future growth.
             </p>
           </div>
@@ -521,7 +521,7 @@ export default function WebsiteDevelopmentPage() {
           <div className="wd-solutions-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24, marginBottom: 64 }}>
             {solutions.map(({ name, body, bestFor, outcome, icon }) => (
               <div key={name}
-                className={`reveal${s5View.inView ? ' visible' : ''}`}
+                className={`reveal${s5ViewInView ? ' visible' : ''}`}
                 style={{ position: "relative", background: "#FFFFFF", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 14, overflow: "hidden", boxShadow: "0 4px 20px rgba(0,0,0,0.06)", transition: "transform 0.25s, box-shadow 0.25s", display: "flex", flexDirection: "column" }}
                 onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-6px)"; el.style.boxShadow = "0 16px 44px rgba(0,0,0,0.12)"; }}
                 onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "0 4px 20px rgba(0,0,0,0.06)"; }}
@@ -543,7 +543,7 @@ export default function WebsiteDevelopmentPage() {
           </div>
 
           {/* Comparison table */}
-          <div className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ marginBottom: 56 }}>
+          <div className={`reveal${s5ViewInView ? ' visible' : ''}`} style={{ marginBottom: 56 }}>
             <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 32, textAlign: "center" }}>
               Compare Website Solutions
             </h3>
@@ -577,7 +577,7 @@ export default function WebsiteDevelopmentPage() {
             </div>
           </div>
 
-          <div className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ textAlign: "center" }}>
+          <div className={`reveal${s5ViewInView ? ' visible' : ''}`} style={{ textAlign: "center" }}>
             <button onClick={() => setInquiryOpen(true)} style={{
               display: "inline-block", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
@@ -598,17 +598,17 @@ export default function WebsiteDevelopmentPage() {
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
         <div role="img" aria-label="Hay bale field at sunset with warm golden light" style={{ position: "absolute", inset: 0, background: "rgba(248,242,232,0.93)" }} />
-        <div ref={s6View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1100, margin: "0 auto" }}>
+        <div ref={s6ViewRef} style={{ position: "relative", zIndex: 2, maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ marginBottom: 48 }}>
-            <h2 className={`section-heading reveal${s6View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${s6ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               A Website That Becomes a Long-Term Business Asset
             </h2>
-            <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.8, color: "#555" }}>
+            <p className={`reveal${s6ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.8, color: "#555" }}>
               A successful website does more than launch. It becomes a long-term business asset. With Brand Iron, your website is designed to:
             </p>
           </div>
 
-          <div className={`wd-success-grid reveal${s6View.inView ? ' visible' : ''}`} style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "16px 40px", marginBottom: 48, background: "rgba(255,255,255,0.85)", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 14, padding: "32px 40px" }}>
+          <div className={`wd-success-grid reveal${s6ViewInView ? ' visible' : ''}`} style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "16px 40px", marginBottom: 48, background: "rgba(255,255,255,0.85)", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 14, padding: "32px 40px" }}>
             {successPoints.map(point => (
               <div key={point} style={{ display: "flex", alignItems: "center", gap: 12 }}>
                 <CheckIcon />
@@ -617,12 +617,12 @@ export default function WebsiteDevelopmentPage() {
             ))}
           </div>
 
-          <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, fontWeight: 700, lineHeight: 1.7, color: "#1a1a1a", textAlign: "center", marginBottom: 64 }}>
+          <p className={`reveal${s6ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, fontWeight: 700, lineHeight: 1.7, color: "#1a1a1a", textAlign: "center", marginBottom: 64 }}>
             A great website doesn&apos;t just represent your business. It helps grow it.
           </p>
 
           {/* FAQ Accordion */}
-          <div className={`reveal${s6View.inView ? ' visible' : ''}`}>
+          <div className={`reveal${s6ViewInView ? ' visible' : ''}`}>
             <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 32 }}>
               Common Questions About Website Development
             </h3>
@@ -680,7 +680,7 @@ export default function WebsiteDevelopmentPage() {
       {/* ── CTA ────────────────────────────────────────────── */}
       <section style={{ background: "#F0EEEA", padding: "80px 24px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <div ref={ctaView.ref} className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{
+          <div ref={ctaViewRef} className={`reveal${ctaViewInView ? ' visible' : ''}`} style={{
             position: "relative", overflow: "hidden", borderRadius: 20,
             backgroundImage: "url('/images/shared/shared-grass-prairie-circuit-lines.jpg')", backgroundSize: "cover", backgroundPosition: "center",
           }}>

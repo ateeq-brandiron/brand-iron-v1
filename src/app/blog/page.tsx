@@ -77,11 +77,11 @@ function useInView(threshold = 0.1) {
 }
 
 export default function InsightsPage() {
-  const categoriesView = useInView(0.05);
-  const articlesView = useInView(0.05);
-  const resourcesView = useInView(0.1);
-  const subscribeView = useInView(0.1);
-  const ctaView = useInView(0.1);
+  const { ref: categoriesViewRef, inView: categoriesViewInView } = useInView(0.05);
+  const { ref: articlesViewRef, inView: articlesViewInView } = useInView(0.05);
+  const { ref: resourcesViewRef, inView: resourcesViewInView } = useInView(0.1);
+  const { ref: subscribeViewRef, inView: subscribeViewInView } = useInView(0.1);
+  const { ref: ctaViewRef, inView: ctaViewInView } = useInView(0.1);
   const [subscribeEmail, setSubscribeEmail] = useState("");
 
   return (
@@ -172,14 +172,14 @@ export default function InsightsPage() {
 
       {/* ── FEATURED ARTICLES (category browse) ─────────────── */}
       <section style={{ background: "#F9F8F6", padding: "120px 40px 80px" }}>
-        <div ref={categoriesView.ref} style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <h2 className={`section-heading reveal${categoriesView.inView ? " visible" : ""}`} style={{ color: "#1a1a1a", marginBottom: 48, textAlign: "left" }}>
+        <div ref={categoriesViewRef} style={{ maxWidth: 1100, margin: "0 auto" }}>
+          <h2 className={`section-heading reveal${categoriesViewInView ? " visible" : ""}`} style={{ color: "#1a1a1a", marginBottom: 48, textAlign: "left" }}>
             Featured Articles
           </h2>
           <div className="category-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
             {categories.map(({ title, body, topics }, i) => (
               <div key={title}
-                className={`category-card reveal${categoriesView.inView ? " visible" : ""}`}
+                className={`category-card reveal${categoriesViewInView ? " visible" : ""}`}
                 style={{
                   position: "relative", background: "#FFFFFF", border: "1px solid #EEEBE7",
                   borderRadius: 14, padding: "32px 28px", display: "flex", flexDirection: "column",
@@ -222,12 +222,12 @@ export default function InsightsPage() {
 
       {/* ── ARTICLES GRID ────────────────────────────────────── */}
       <section id="articles" style={{ background: "#FFFFFF", padding: "80px 40px 120px" }}>
-        <div ref={articlesView.ref} style={{ maxWidth: 1100, margin: "0 auto" }}>
+        <div ref={articlesViewRef} style={{ maxWidth: 1100, margin: "0 auto" }}>
 
           {/* Featured post */}
           {articles[0] && (
             <Link href={`/blog/${articles[0].slug}`}
-              className={`article-card reveal${articlesView.inView ? " visible" : ""}`}
+              className={`article-card reveal${articlesViewInView ? " visible" : ""}`}
               style={{
                 position: "relative", display: "block", background: "#F9F8F6", border: "1px solid #EEEBE7",
                 borderRadius: 14, padding: "40px 44px", marginBottom: 40, overflow: "hidden", textDecoration: "none",
@@ -251,7 +251,7 @@ export default function InsightsPage() {
           <div className="blog-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
             {articles.slice(1).map(({ slug, category, title, excerpt, readTime, date }, i) => (
               <Link key={slug} href={`/blog/${slug}`}
-                className={`article-card reveal${articlesView.inView ? " visible" : ""}`}
+                className={`article-card reveal${articlesViewInView ? " visible" : ""}`}
                 style={{
                   position: "relative", background: "#F9F8F6", border: "1px solid #EEEBE7",
                   borderRadius: 10, padding: "28px 24px", display: "flex", flexDirection: "column",
@@ -290,7 +290,7 @@ export default function InsightsPage() {
           backgroundSize: "cover", backgroundPosition: "center",
         }} />
         <div role="img" aria-label="Rocky mountain trail along a ridge crest at sunset" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.5) 0%, rgba(8,16,36,0.42) 50%, rgba(8,16,36,0.6) 100%)" }} />
-        <div ref={resourcesView.ref} className={`reveal${resourcesView.inView ? " visible" : ""}`} style={{ position: "relative", zIndex: 2, maxWidth: 780, margin: "0 auto", textAlign: "center" }}>
+        <div ref={resourcesViewRef} className={`reveal${resourcesViewInView ? " visible" : ""}`} style={{ position: "relative", zIndex: 2, maxWidth: 780, margin: "0 auto", textAlign: "center" }}>
           <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(24px, 3vw, 34px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", marginBottom: 16, lineHeight: 1.2 }}>
             Featured Resources
           </h2>
@@ -318,7 +318,7 @@ export default function InsightsPage() {
 
       {/* ── SUBSCRIBE TO INSIGHTS ────────────────────────────── */}
       <section style={{ background: "#F9F8F6", padding: "88px 24px" }}>
-        <div ref={subscribeView.ref} className={`reveal${subscribeView.inView ? " visible" : ""}`} style={{ maxWidth: 600, margin: "0 auto", textAlign: "center" }}>
+        <div ref={subscribeViewRef} className={`reveal${subscribeViewInView ? " visible" : ""}`} style={{ maxWidth: 600, margin: "0 auto", textAlign: "center" }}>
           <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 2.8vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 16, lineHeight: 1.2 }}>
             Subscribe to Insights
           </h2>
@@ -358,7 +358,7 @@ export default function InsightsPage() {
       {/* ── FINAL CTA ────────────────────────────────────────── */}
       <section style={{ background: "#F0EEEA", padding: "80px 24px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <div ref={ctaView.ref} className={`reveal${ctaView.inView ? " visible" : ""}`} style={{
+          <div ref={ctaViewRef} className={`reveal${ctaViewInView ? " visible" : ""}`} style={{
             position: "relative", overflow: "hidden", borderRadius: 20,
             backgroundImage: "url('/images/blog/blog-wood-logs-texture.jpg')", backgroundSize: "cover", backgroundPosition: "center",
           }}>

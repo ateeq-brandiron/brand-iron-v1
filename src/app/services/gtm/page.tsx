@@ -24,13 +24,13 @@ function useInView(threshold = 0.1) {
 
 export default function GTMPage() {
   const [growthReviewOpen, setGrowthReviewOpen] = useState(false);
-  const s2View = useInView();
-  const s3View = useInView();
-  const s4View = useInView();
-  const s5View = useInView();
-  const s6View = useInView();
-  const s7View = useInView();
-  const ctaView = useInView();
+  const { ref: s2ViewRef, inView: s2ViewInView } = useInView();
+  const { ref: s3ViewRef, inView: s3ViewInView } = useInView();
+  const { ref: s4ViewRef, inView: s4ViewInView } = useInView();
+  const { ref: s5ViewRef, inView: s5ViewInView } = useInView();
+  const { ref: s6ViewRef, inView: s6ViewInView } = useInView();
+  const { ref: s7ViewRef, inView: s7ViewInView } = useInView();
+  const { ref: ctaViewRef, inView: ctaViewInView } = useInView();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const faqs = [
@@ -201,25 +201,25 @@ export default function GTMPage() {
 
       {/* ── S2: BUYING JOURNEY EVOLVED ─────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "120px 40px" }}>
-        <div ref={s2View.ref} style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <h2 className={`section-heading reveal${s2View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 24, textAlign: "left" }}>
+        <div ref={s2ViewRef} style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <h2 className={`section-heading reveal${s2ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 24, textAlign: "left" }}>
             The Buying Journey Has Evolved. Your Go-to-Market Strategy Should Too.
           </h2>
 
           <div style={{ margin: "0 0 72px" }}>
-            <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 16 }}>
+            <p className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 16 }}>
               Traditional go-to-market strategies still provide the foundation, but today&apos;s buying journey is far more complex. Buyers move between search engines, AI platforms, industry communities, reviews, and peer recommendations long before engaging with sales.
             </p>
-            <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 16 }}>
+            <p className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 16 }}>
               Growth now depends on more than marketing. It requires a connected system that makes your business discoverable, builds trust across every touchpoint, and aligns strategy, visibility, demand generation, sales, automation, and analytics.
             </p>
-            <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#444", fontWeight: 600 }}>
+            <p className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#444", fontWeight: 600 }}>
               The organizations winning market share aren&apos;t simply spending more. They&apos;re executing better through connected growth systems. That&apos;s the advantage of a modern go-to-market strategy.
             </p>
           </div>
 
           {/* Comparison table */}
-          <div className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ marginBottom: 56 }}>
+          <div className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ marginBottom: 56 }}>
             <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 28 }}>
               Traditional GTM vs. Today&apos;s Buying Reality
             </h3>
@@ -250,10 +250,10 @@ export default function GTMPage() {
           </div>
 
           {/* Key insight */}
-          <p className={`reveal${s2View.inView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#1a1a1a", fontWeight: 700, marginBottom: 32 }}>
+          <p className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#1a1a1a", fontWeight: 700, marginBottom: 32 }}>
             Modern Go-to-Market success isn&apos;t about doing more marketing. It&apos;s about creating alignment between strategy, visibility, authority, demand generation, revenue operations, and customer experience so buyers encounter a consistent, trustworthy brand at every stage of their journey.
           </p>
-          <button onClick={() => setGrowthReviewOpen(true)} className={`reveal${s2View.inView ? ' visible' : ''}`} style={{
+          <button onClick={() => setGrowthReviewOpen(true)} className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{
             display: "inline-block", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
             letterSpacing: "0.14em", textTransform: "uppercase",
             background: "#d87307", color: "#FFFFFF", border: "none", cursor: "pointer",
@@ -273,21 +273,21 @@ export default function GTMPage() {
       }}>
         <div role="img" aria-label="Desert butte landscape at sunset with sagebrush replaced by glowing computer-chip circuit patterns, representing a go-to-market strategy framework" style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.68)" }} />
         <CircuitOverlay />
-        <div ref={s3View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
+        <div ref={s3ViewRef} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
-            <h2 className={`section-heading reveal${s3View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${s3ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               Growth Doesn&apos;t Come from More Marketing. It Comes from Better Alignment.
             </h2>
-            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", margin: "0 0 16px" }}>
+            <p className={`reveal${s3ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", margin: "0 0 16px" }}>
               Organizations don&apos;t struggle because they&apos;re doing too little. They struggle because their efforts aren&apos;t connected.
             </p>
-            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 16 }}>
+            <p className={`reveal${s3ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 16 }}>
               A modern go-to-market strategy is more than a collection of tactics. It aligns strategy, visibility, authority, demand generation, sales, automation, and analytics into one connected growth system where every initiative supports measurable business outcomes.
             </p>
-            <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#444", fontWeight: 600, marginBottom: 32 }}>
+            <p className={`reveal${s3ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#444", fontWeight: 600, marginBottom: 32 }}>
               That&apos;s how Brand Iron helps organizations build sustainable growth.
             </p>
-            <Link href="/contact" className={`reveal${s3View.inView ? ' visible' : ''}`} style={{
+            <Link href="/contact" className={`reveal${s3ViewInView ? ' visible' : ''}`} style={{
               display: "inline-block", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
               background: "#d87307", color: "#FFFFFF",
@@ -349,7 +349,7 @@ export default function GTMPage() {
               },
             ].map(({ num, title, lead, body, focuses, icon }, i) => (
               <div key={num}
-                className={`reveal stagger-${(i % 3) + 1}${s3View.inView ? ' visible' : ''}`}
+                className={`reveal stagger-${(i % 3) + 1}${s3ViewInView ? ' visible' : ''}`}
                 style={{ position: "relative", background: "#F9F8F6", border: "1px solid #EEEBE7", borderRadius: 14, padding: "36px 28px 32px", overflow: "hidden", transition: "transform 0.25s, box-shadow 0.25s", display: "flex", flexDirection: "column", minHeight: 480 }}
                 onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-5px)"; el.style.boxShadow = "0 16px 40px rgba(0,0,0,0.1)"; }}
                 onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "none"; }}
@@ -375,10 +375,10 @@ export default function GTMPage() {
           </div>
 
           {/* Philosophy statement */}
-          <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontSize: 20, lineHeight: 1.6, color: "#1a1a1a", fontWeight: 700, marginBottom: 16 }}>
+          <p className={`reveal${s3ViewInView ? ' visible' : ''}`} style={{ fontSize: 20, lineHeight: 1.6, color: "#1a1a1a", fontWeight: 700, marginBottom: 16 }}>
             At Brand Iron, we believe sustainable growth is engineered by connecting these systems into one unified Go-to-Market framework.
           </p>
-          <p className={`reveal${s3View.inView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#2a2318", fontWeight: 500 }}>
+          <p className={`reveal${s3ViewInView ? ' visible' : ''}`} style={{ fontSize: 16, lineHeight: 1.8, color: "#2a2318", fontWeight: 500 }}>
             This holistic approach ensures every initiative contributes to a larger business objective rather than operating in isolation. The result isn&apos;t simply more activity, it&apos;s a stronger foundation for long-term growth, supported by measurable outcomes and a framework that evolves as your organization grows.
           </p>
         </div>
@@ -390,23 +390,23 @@ export default function GTMPage() {
         background: "#0F1B2D",
       }}>
         <CircuitOverlay />
-        <div ref={s4View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
+        <div ref={s4ViewRef} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
-            <h2 className={`section-heading reveal${s4View.inView ? ' visible' : ''}`} style={{ color: "#FFFFFF", marginBottom: 20, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${s4ViewInView ? ' visible' : ''}`} style={{ color: "#FFFFFF", marginBottom: 20, textAlign: "left" }}>
               A Framework Is Only Valuable If It Can Be Executed.
             </h2>
-            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 500, fontSize: 18, lineHeight: 1.8, color: "#FFFFFF", margin: "0 0 12px" }}>
+            <p className={`reveal${s4ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 500, fontSize: 18, lineHeight: 1.8, color: "#FFFFFF", margin: "0 0 12px" }}>
               Strategy sets the direction. Sustainable growth comes from disciplined execution.
             </p>
-            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 500, fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.9)", marginBottom: 12 }}>
+            <p className={`reveal${s4ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 500, fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.9)", marginBottom: 12 }}>
               Rather than following a one-size-fits-all playbook, Brand Iron activates the right capabilities at the right time. Each initiative builds on the last, creating a connected growth system that strengthens visibility, authority, demand, conversion, and revenue.
             </p>
-            <p className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 16, lineHeight: 1.8, color: "#FFFFFF" }}>
+            <p className={`reveal${s4ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 16, lineHeight: 1.8, color: "#FFFFFF" }}>
               Together, these eight execution components transform strategy into measurable growth.
             </p>
           </div>
 
-          <h3 className={`reveal${s4View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#FFFFFF", marginBottom: 28 }}>
+          <h3 className={`reveal${s4ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#FFFFFF", marginBottom: 28 }}>
             The Eight Components of Execution
           </h3>
 
@@ -471,7 +471,7 @@ export default function GTMPage() {
               },
             ].map(({ num, title, lead, body, activities, icon }, i) => (
               <div key={num}
-                className={`reveal stagger-${(i % 2) + 1}${s4View.inView ? ' visible' : ''}`}
+                className={`reveal stagger-${(i % 2) + 1}${s4ViewInView ? ' visible' : ''}`}
                 style={{ position: "relative", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 14, padding: "36px 32px", overflow: "hidden", transition: "background 0.25s, border-color 0.25s" }}
                 onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.background = "rgba(216,115,7,0.07)"; el.style.borderColor = "rgba(216,115,7,0.2)"; }}
                 onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.background = "rgba(255,255,255,0.04)"; el.style.borderColor = "rgba(255,255,255,0.08)"; }}
@@ -501,15 +501,15 @@ export default function GTMPage() {
       {/* ── S5: THREE TIERS ────────────────────────────────── */}
       <section style={{ background: "linear-gradient(180deg, #FFFFFF 0%, #F6F3EF 100%)", padding: "120px 40px", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, backgroundImage: "radial-gradient(circle at 20% 50%, rgba(216,115,7,0.04) 0%, transparent 60%), radial-gradient(circle at 80% 20%, rgba(15,27,45,0.04) 0%, transparent 50%)", pointerEvents: "none" }} />
-        <div ref={s5View.ref} style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>
+        <div ref={s5ViewRef} style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>
           <div style={{ marginBottom: 72 }}>
-            <h2 className={`section-heading reveal${s5View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${s5ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               One Framework. Three Levels of Execution.
             </h2>
-            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", margin: "0 0 16px" }}>
+            <p className={`reveal${s5ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", margin: "0 0 16px" }}>
               Every organization has different growth priorities. Whether you need a stronger foundation, accelerated demand generation, or enterprise-scale revenue systems, Brand Iron offers three progressive Go-to-Market solutions that grow with your business.
             </p>
-            <p className={`reveal${s5View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666" }}>
+            <p className={`reveal${s5ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666" }}>
               Each tier builds on the last, expanding capabilities as your organization evolves.
             </p>
           </div>
@@ -543,7 +543,7 @@ export default function GTMPage() {
               },
             ].map(({ tier, name, tagline, desc, bestFor, outcome, href, highlight }, i) => (
               <div key={tier}
-                className={`reveal stagger-${i + 1}${s5View.inView ? ' visible' : ''}`}
+                className={`reveal stagger-${i + 1}${s5ViewInView ? ' visible' : ''}`}
                 style={{ position: "relative", background: "#FFFFFF", border: highlight ? "2px solid #d87307" : "1px solid #EEEBE7", borderRadius: 14, overflow: "hidden", boxShadow: highlight ? "0 20px 60px rgba(216,115,7,0.15)" : "0 4px 20px rgba(0,0,0,0.06)", transition: "transform 0.25s, box-shadow 0.25s", display: "flex", flexDirection: "column" }}
                 onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-6px)"; el.style.boxShadow = highlight ? "0 28px 72px rgba(216,115,7,0.22)" : "0 12px 40px rgba(0,0,0,0.12)"; }}
                 onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = highlight ? "0 20px 60px rgba(216,115,7,0.15)" : "0 4px 20px rgba(0,0,0,0.06)"; }}
@@ -577,7 +577,7 @@ export default function GTMPage() {
           </div>
 
           {/* At a Glance comparison table */}
-          <div className={`reveal${s5View.inView ? ' visible' : ''}`}>
+          <div className={`reveal${s5ViewInView ? ' visible' : ''}`}>
             <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 24 }}>
               At a Glance
             </h3>
@@ -621,15 +621,15 @@ export default function GTMPage() {
         background: "#0F1B2D",
       }}>
         <CircuitOverlay />
-        <div ref={s6View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
+        <div ref={s6ViewRef} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 64 }}>
-            <h2 className={`section-heading reveal${s6View.inView ? ' visible' : ''}`} style={{ color: "#FFFFFF", marginBottom: 20, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${s6ViewInView ? ' visible' : ''}`} style={{ color: "#FFFFFF", marginBottom: 20, textAlign: "left" }}>
               The Right Strategy Isn&apos;t About More Services. It&apos;s About the Right Capabilities.
             </h2>
-            <p className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", maxWidth: 720, marginBottom: 32 }}>
+            <p className={`reveal${s6ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", maxWidth: 720, marginBottom: 32 }}>
               Rather than overwhelming you with a list of deliverables, this comparison highlights how each engagement expands your organization&apos;s capabilities as it grows. Each tier builds upon the previous one, creating a scalable Go-to-Market system that evolves alongside your business.
             </p>
-            <button onClick={() => setGrowthReviewOpen(true)} className={`reveal${s6View.inView ? ' visible' : ''}`} style={{
+            <button onClick={() => setGrowthReviewOpen(true)} className={`reveal${s6ViewInView ? ' visible' : ''}`} style={{
               display: "inline-block", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
               background: "#d87307", color: "#FFFFFF", border: "none", cursor: "pointer",
@@ -641,7 +641,7 @@ export default function GTMPage() {
           </div>
 
           {/* Capability table */}
-          <div className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ overflowX: "auto", marginBottom: 64 }}>
+          <div className={`reveal${s6ViewInView ? ' visible' : ''}`} style={{ overflowX: "auto", marginBottom: 64 }}>
             <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13 }}>
               <thead>
                 <tr>
@@ -685,7 +685,7 @@ export default function GTMPage() {
           </div>
 
           {/* Capability progression */}
-          <div className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ display: "grid", gridTemplateColumns: "1fr auto 1fr auto 1fr", gap: 0, alignItems: "center", marginBottom: 56 }}>
+          <div className={`reveal${s6ViewInView ? ' visible' : ''}`} style={{ display: "grid", gridTemplateColumns: "1fr auto 1fr auto 1fr", gap: 0, alignItems: "center", marginBottom: 56 }}>
             {[
               { tier: "Foundation", body: "Establish the strategic, technical, and operational systems required to build market visibility and generate consistent opportunities." },
               { tier: "Growth Engine", body: "Expand authority, accelerate demand generation, strengthen revenue intelligence, and improve operational efficiency." },
@@ -702,7 +702,7 @@ export default function GTMPage() {
           </div>
 
           {/* What's included */}
-          <div className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ position: "relative", background: "rgba(216,115,7,0.08)", border: "1px solid rgba(216,115,7,0.2)", borderRadius: 16, padding: "48px 56px", overflow: "hidden" }}>
+          <div className={`reveal${s6ViewInView ? ' visible' : ''}`} style={{ position: "relative", background: "rgba(216,115,7,0.08)", border: "1px solid rgba(216,115,7,0.2)", borderRadius: 16, padding: "48px 56px", overflow: "hidden" }}>
             <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, transparent, #d87307, transparent)" }} />
             <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#FFFFFF", marginBottom: 16, textAlign: "center" }}>
               What&apos;s Included Across Every Engagement
@@ -729,15 +729,15 @@ export default function GTMPage() {
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
         <div role="img" aria-label="Close-up of weathered gray wood grain texture with lichen speckles" style={{ position: "absolute", inset: 0, background: "rgba(248,242,232,0.91)" }} />
-        <div ref={s7View.ref} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
+        <div ref={s7ViewRef} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
-            <h2 className={`section-heading reveal${s7View.inView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
+            <h2 className={`section-heading reveal${s7ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
               A Go-to-Market Strategy Should Create Measurable Business Momentum.
             </h2>
-            <p className={`reveal${s7View.inView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 720, marginBottom: 32 }}>
+            <p className={`reveal${s7ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 720, marginBottom: 32 }}>
               Every initiative within the Brand Iron framework is designed to move your business toward these outcomes.
             </p>
-            <Link href="/contact" className={`reveal${s7View.inView ? ' visible' : ''}`} style={{
+            <Link href="/contact" className={`reveal${s7ViewInView ? ' visible' : ''}`} style={{
               display: "inline-block", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
               background: "#d87307", color: "#FFFFFF",
@@ -768,7 +768,7 @@ export default function GTMPage() {
               },
             ].map(({ title, body, impacts }, i) => (
               <div key={title}
-                className={`reveal stagger-${i + 1}${s7View.inView ? ' visible' : ''}`}
+                className={`reveal stagger-${i + 1}${s7ViewInView ? ' visible' : ''}`}
                 style={{ position: "relative", background: "rgba(255,255,255,0.92)", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 14, padding: "32px 28px", overflow: "hidden", transition: "transform 0.25s, box-shadow 0.25s" }}
                 onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-4px)"; el.style.boxShadow = "0 14px 40px rgba(0,0,0,0.1)"; }}
                 onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "none"; }}
@@ -802,7 +802,7 @@ export default function GTMPage() {
               },
             ].map(({ title, body, impacts }, i) => (
               <div key={title}
-                className={`reveal stagger-${i + 1}${s7View.inView ? ' visible' : ''}`}
+                className={`reveal stagger-${i + 1}${s7ViewInView ? ' visible' : ''}`}
                 style={{ position: "relative", background: "rgba(255,255,255,0.92)", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 14, padding: "32px 28px", flex: 1, overflow: "hidden", transition: "transform 0.25s, box-shadow 0.25s" }}
                 onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-4px)"; el.style.boxShadow = "0 14px 40px rgba(0,0,0,0.1)"; }}
                 onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "none"; }}
@@ -824,7 +824,7 @@ export default function GTMPage() {
           </div>
 
           {/* Growth is built in phases */}
-          <div className={`reveal${s7View.inView ? ' visible' : ''}`} style={{ position: "relative", background: "#F9F8F6", border: "1px solid #EEEBE7", borderRadius: 16, padding: "48px 56px", marginBottom: 56, overflow: "hidden", boxShadow: "0 4px 20px rgba(0,0,0,0.06)" }}>
+          <div className={`reveal${s7ViewInView ? ' visible' : ''}`} style={{ position: "relative", background: "#F9F8F6", border: "1px solid #EEEBE7", borderRadius: 16, padding: "48px 56px", marginBottom: 56, overflow: "hidden", boxShadow: "0 4px 20px rgba(0,0,0,0.06)" }}>
             <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, transparent, #d87307, transparent)" }} />
             <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 16, textAlign: "center" }}>
               Growth Is Built in Phases
@@ -859,7 +859,7 @@ export default function GTMPage() {
           </div>
 
           {/* FAQ Accordion */}
-          <div className={`reveal${s7View.inView ? ' visible' : ''}`}>
+          <div className={`reveal${s7ViewInView ? ' visible' : ''}`}>
             <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 8 }}>
               Common Questions About Our Go-to-Market Strategy Services
             </h3>
@@ -920,7 +920,7 @@ export default function GTMPage() {
       {/* ── CTA ────────────────────────────────────────────── */}
       <section style={{ background: "#F0EEEA", padding: "80px 24px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <div ref={ctaView.ref} className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{
+          <div ref={ctaViewRef} className={`reveal${ctaViewInView ? ' visible' : ''}`} style={{
             position: "relative", overflow: "hidden", borderRadius: 20,
             backgroundImage: "url('/images/gtm/gtm-cta-horse-portrait.jpg')", backgroundSize: "cover", backgroundPosition: "center",
           }}>

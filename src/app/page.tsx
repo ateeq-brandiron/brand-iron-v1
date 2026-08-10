@@ -29,12 +29,6 @@ const services = [
   { label: "Website Development", href: "/services/website-development" },
 ];
 
-const stats = [
-  { icon: "🏢", num: "50+", label: "Brands Supported" },
-  { icon: "💼", num: "150,000+", label: "Investor Network" },
-  { icon: "⚡", num: "AI-First", label: "Growth Strategies" },
-];
-
 const clientLogos = [
   { name: "AARDEX Real Estate", logo: "/images/client-logos/aardex-real-estate-logo.png" },
   { name: "Artistic Roofing Systems", logo: "/images/client-logos/artistic-roofing-systems-logo.png" },
@@ -204,12 +198,12 @@ export default function Home() {
   const router = useRouter();
   const [auditOpen, setAuditOpen] = useState(false);
   const [growthReviewOpen, setGrowthReviewOpen] = useState(false);
-  const s2 = useInView();
-  const s3 = useInView();
-  const s3cards = useInView();
-  const s3problems = useInView();
-  const s4 = useInView();
-  const s5 = useInView();
+  const { ref: s2Ref, inView: s2InView } = useInView();
+  const { ref: s3Ref, inView: s3InView } = useInView();
+  const { ref: s3cardsRef, inView: s3cardsInView } = useInView();
+  const { ref: s3problemsRef } = useInView();
+  const { ref: s4Ref, inView: s4InView } = useInView();
+  const { ref: s5Ref, inView: s5InView } = useInView();
   const [activeService, setActiveService] = useState(0);
   const serviceCardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const carouselRef = useRef<HTMLDivElement>(null);
@@ -225,6 +219,8 @@ export default function Home() {
     }
   };
   useEffect(() => {
+    // selectService scrolls a DOM node via container.scrollTo, which only exists post-mount.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     selectService(2, "instant");
   }, []);
   const startAutoSlide = () => {
@@ -240,12 +236,12 @@ export default function Home() {
     }
   };
   useEffect(() => () => stopAutoSlide(), []);
-  const s6 = useInView();
-  const s7 = useInView();
+  const { ref: s6Ref, inView: s6InView } = useInView();
+  const { ref: s7Ref, inView: s7InView } = useInView();
   const [testimonialIndex, setTestimonialIndex] = useState(0);
-  const s7faq = useInView();
+  const { ref: s7faqRef, inView: s7faqInView } = useInView();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const s8 = useInView();
+  const { ref: s8Ref, inView: s8InView } = useInView();
 
   return (
     <main>
@@ -337,10 +333,10 @@ export default function Home() {
 
       {/* ── S2: TRUST BAR ────────────────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "24px 24px 40px" }}>
-        <div ref={s2.ref} style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "auto 1fr", gap: 64, alignItems: "start" }}>
+        <div ref={s2Ref} style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "auto 1fr", gap: 64, alignItems: "start" }}>
 
           {/* B-icon logo mask */}
-          <div className={`reveal${s2.inView ? " visible" : ""}`} style={{ marginTop: -24, marginBottom: -10, perspective: 1200 }}>
+          <div className={`reveal${s2InView ? " visible" : ""}`} style={{ marginTop: -24, marginBottom: -10, perspective: 1200 }}>
             <div className="logo-3d-float">
               <Image loading="lazy" src="/images/home/home-logo-mask.png" alt="Brand Iron" width={382} height={380} style={{ width: 340, height: "auto", display: "block", transition: "transform 0.35s ease" }}
                 onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.05) rotate(-3deg)")}
@@ -350,7 +346,7 @@ export default function Home() {
           </div>
 
           {/* Text */}
-          <div className={`reveal${s2.inView ? " visible" : ""}`}>
+          <div className={`reveal${s2InView ? " visible" : ""}`}>
             <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.25, marginBottom: 40 }}>
               Trusted by founders, executives, and growth-focused organizations.
             </h2>
@@ -370,7 +366,7 @@ export default function Home() {
                   gear: <svg width="30" height="30" viewBox="0 0 48 48" fill="none"><path d="M20.65 8.634C21.502 5.122 26.498 5.122 27.35 8.634C27.4778 9.1616 27.7284 9.65156 28.0814 10.064C28.4344 10.4764 28.8798 10.7997 29.3813 11.0075C29.8828 11.2153 30.4263 11.3017 30.9676 11.2597C31.5088 11.2178 32.0325 11.0486 32.496 10.766C35.582 8.886 39.116 12.418 37.236 15.506C36.9538 15.9693 36.7849 16.4927 36.743 17.0335C36.7012 17.5744 36.7875 18.1175 36.9951 18.6188C37.2026 19.12 37.5255 19.5652 37.9375 19.9181C38.3494 20.2711 38.8389 20.5218 39.366 20.65C42.878 21.502 42.878 26.498 39.366 27.35C38.8384 27.4778 38.3484 27.7284 37.936 28.0814C37.5236 28.4344 37.2003 28.8798 36.9925 29.3813C36.7847 29.8828 36.6983 30.4263 36.7403 30.9676C36.7822 31.5088 36.9514 32.0325 37.234 32.496C39.114 35.582 35.582 39.116 32.494 37.236C32.0307 36.9538 31.5073 36.7849 30.9665 36.743C30.4256 36.7012 29.8825 36.7875 29.3812 36.9951C28.88 37.2026 28.4348 37.5255 28.0819 37.9375C27.7289 38.3494 27.4782 38.8389 27.35 39.366C26.498 42.878 21.502 42.878 20.65 39.366C20.5222 38.8384 20.2716 38.3484 19.9186 37.936C19.5656 37.5236 19.1202 37.2003 18.6187 36.9925C18.1172 36.7847 17.5737 36.6983 17.0324 36.7403C16.4912 36.7822 15.9675 36.9514 15.504 37.234C12.418 39.114 8.884 35.582 10.764 32.494C11.0462 32.0307 11.2151 31.5073 11.257 30.9665C11.2988 30.4256 11.2125 29.8825 11.0049 29.3812C10.7974 28.88 10.4745 28.4348 10.0625 28.0819C9.65057 27.7289 9.16113 27.4782 8.634 27.35C5.122 26.498 5.122 21.502 8.634 20.65C9.1616 20.5222 9.65156 20.2716 10.064 19.9186C10.4764 19.5656 10.7997 19.1202 11.0075 18.6187C11.2153 18.1172 11.3017 17.5737 11.2597 17.0324C11.2178 16.4912 11.0486 15.9675 10.766 15.504C8.886 12.418 12.418 8.884 15.506 10.764C17.498 11.98 20.098 10.904 20.65 8.634Z" stroke="#D87307" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round"/><path d="M30 24C30 25.5913 29.3679 27.1174 28.2426 28.2426C27.1174 29.3679 25.5913 30 24 30C22.4087 30 20.8826 29.3679 19.7574 28.2426C18.6321 27.1174 18 25.5913 18 24C18 22.4087 18.6321 20.8826 19.7574 19.7574C20.8826 18.6321 22.4087 18 24 18C25.5913 18 27.1174 18.6321 28.2426 19.7574C29.3679 20.8826 30 22.4087 30 24Z" stroke="#D87307" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round"/></svg>,
                 };
                 return (
-                <div key={label} className={`reveal${s2.inView ? " visible" : ""}`} style={{
+                <div key={label} className={`reveal${s2InView ? " visible" : ""}`} style={{
                   display: "flex", alignItems: "flex-start", gap: 12,
                   transitionDelay: `${i * 0.08}s`, cursor: "default",
                 }}
@@ -422,30 +418,30 @@ export default function Home() {
 
       {/* ── S3: BUYING JOURNEY ───────────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "24px 0 56px" }}>
-        <div ref={s3.ref} style={{ maxWidth: 1148, margin: "0 auto", padding: "0 24px" }}>
+        <div ref={s3Ref} style={{ maxWidth: 1148, margin: "0 auto", padding: "0 24px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 64, alignItems: "center", marginBottom: 56 }}>
             {/* Text — left */}
             <div>
-              <h2 className={`reveal${s3.inView ? " visible" : ""}`} style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 28 }}>
+              <h2 className={`reveal${s3InView ? " visible" : ""}`} style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 28 }}>
                 The Buying Journey Has Changed.<br />Has Your Business?
               </h2>
-              <p className={`reveal${s3.inView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", marginBottom: 18 }}>
+              <p className={`reveal${s3InView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", marginBottom: 18 }}>
                 Today&apos;s buyers complete much of their decision-making before ever speaking with your team.
               </p>
-              <p className={`reveal${s3.inView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", marginBottom: 18 }}>
+              <p className={`reveal${s3InView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", marginBottom: 18 }}>
                 They search Google, ask AI assistants, compare competitors, read reviews, visit websites, explore LinkedIn, and look for proof that your organization is the right choice.
               </p>
-              <p className={`reveal${s3.inView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", marginBottom: 36 }}>
+              <p className={`reveal${s3InView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", marginBottom: 36 }}>
                 If your business isn&apos;t visible, credible, and consistent throughout that journey, you&apos;re often eliminated before the first conversation begins.
               </p>
-              <p className={`reveal${s3.inView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a" }}>
+              <p className={`reveal${s3InView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a" }}>
                 Modern growth isn&apos;t about showing up in one place.<br />
                 It&apos;s about showing up everywhere trust is built.
               </p>
             </div>
 
             {/* Video — right */}
-            <div className={`reveal${s3.inView ? " visible" : ""}`}>
+            <div className={`reveal${s3InView ? " visible" : ""}`}>
               <video
                 src="/videos/home/home-buying-journey.mp4"
                 aria-label="Laptop displaying a Brand Iron marketing analytics dashboard tracking leads and calls, illustrating revenue growth reporting"
@@ -458,7 +454,7 @@ export default function Home() {
         </div>
 
         {/* Journey cards — full-bleed, dark-to-light gradient panels */}
-        <div ref={s3cards.ref} style={{ position: "relative", overflow: "hidden", display: "flex", marginBottom: 56 }}>
+        <div ref={s3cardsRef} style={{ position: "relative", overflow: "hidden", display: "flex", marginBottom: 56 }}>
           <Image loading="lazy" src="/images/home/home-dark-mountains-pattern.webp" alt="" fill sizes="100vw" style={{ objectFit: "cover", opacity: 0.5 }} />
           {journeyStages.map(({ stage, body }, i) => {
             const overlays = ["rgba(8,8,8,0.95)", "rgba(38,36,34,0.92)", "rgba(90,84,76,0.88)", "rgba(180,170,156,0.82)", "rgba(245,240,232,0.94)"];
@@ -472,7 +468,7 @@ export default function Home() {
               Choose: <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#FFFFFF" strokeWidth="2"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>,
             };
             return (
-              <div key={stage} className={`reveal${s3cards.inView ? " visible" : ""}`} style={{
+              <div key={stage} className={`reveal${s3cardsInView ? " visible" : ""}`} style={{
                 position: "relative", flex: 1, background: overlays[i],
                 padding: "48px 28px 90px", minHeight: 260,
                 borderRight: i < journeyStages.length - 1 ? "1px solid rgba(255,255,255,0.12)" : "none",
@@ -503,7 +499,7 @@ export default function Home() {
 
         <div style={{ maxWidth: 1148, margin: "0 auto", padding: "0 24px" }}>
           {/* Closing statement */}
-          <div className={`reveal${s3cards.inView ? " visible" : ""}`} style={{ textAlign: "left", paddingTop: 32 }}>
+          <div className={`reveal${s3cardsInView ? " visible" : ""}`} style={{ textAlign: "left", paddingTop: 32 }}>
             <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: "clamp(14px, 1.6vw, 17px)", fontWeight: 500, color: "#777", marginBottom: 10 }}>
               Organizations that win today aren&apos;t simply louder.
             </p>
@@ -583,7 +579,7 @@ export default function Home() {
       <section style={{ position: "relative", overflow: "hidden", padding: "80px 24px", backgroundImage: "url('/images/home/home-saddle-rope-texture.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
         <div role="img" aria-label="Hay bale field at sunset with warm golden light" style={{ position: "absolute", inset: 0, background: "rgba(245,240,232,0.93)" }} />
         <div style={{ position: "absolute", inset: 0, backgroundImage: "url('/images/home/home-dark-mountains-pattern.webp')", backgroundSize: "60% auto", backgroundPosition: "center bottom", backgroundRepeat: "no-repeat", opacity: 0.06 }} />
-        <div ref={s3problems.ref} style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto" }}>
+        <div ref={s3problemsRef} style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto" }}>
           <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 32, textAlign: "left" }}>Common Growth Challenges</h2>
           <div className="home-problems-grid" style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 20 }}>
             {problems.map(({ heading, body }, i) => (
@@ -632,26 +628,26 @@ export default function Home() {
         {/* Cards on cream bg with mountain watermark */}
         <div style={{ position: "relative", background: "#F5F0E8", padding: "56px 24px" }}>
           <div style={{ position: "absolute", inset: 0, backgroundImage: "url('/images/home/home-dark-mountains-pattern.webp')", backgroundSize: "55% auto", backgroundPosition: "center center", backgroundRepeat: "no-repeat", opacity: 0.07 }} />
-          <div ref={s4.ref} style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto" }}>
+          <div ref={s4Ref} style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto" }}>
 
             <div style={{ display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 64, alignItems: "center", marginBottom: 56 }}>
               {/* Text — left */}
               <div>
-                <h2 className={`reveal${s4.inView ? " visible" : ""}`} style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 28 }}>What Makes Brand Iron Different</h2>
-                <p className={`reveal${s4.inView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", marginBottom: 18 }}>
+                <h2 className={`reveal${s4InView ? " visible" : ""}`} style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 28 }}>What Makes Brand Iron Different</h2>
+                <p className={`reveal${s4InView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", marginBottom: 18 }}>
                   AI is transforming how businesses grow, but technology alone has never been a strategy.
                 </p>
-                <p className={`reveal${s4.inView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", marginBottom: 36 }}>
+                <p className={`reveal${s4InView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", marginBottom: 36 }}>
                   At Brand Iron, we combine human expertise with AI-assisted intelligence to help organizations make better decisions, move faster, and execute with greater precision. AI accelerates the work; experienced strategists provide the judgment, creativity, and business insight that drive meaningful outcomes.
                 </p>
-                <p className={`reveal${s4.inView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a" }}>
+                <p className={`reveal${s4InView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a" }}>
                   Because sustainable growth isn&apos;t automated.<br />
                   It&apos;s engineered.
                 </p>
               </div>
 
               {/* Image — right */}
-              <div className={`reveal${s4.inView ? " visible" : ""}`}>
+              <div className={`reveal${s4InView ? " visible" : ""}`}>
                 <Image loading="lazy" src="/images/home/home-presentation-image.jpeg" alt="Brand Iron team presenting a growth strategy plan to clients in a conference room" width={960} height={551} sizes="(max-width: 900px) 100vw, 500px" style={{ width: "100%", height: "auto", display: "block", boxShadow: "0 24px 60px rgba(0,0,0,0.18)" }} />
               </div>
             </div>
@@ -659,7 +655,7 @@ export default function Home() {
             {/* 4 cards — icon + hover lift */}
             <div className="home-differentiators-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20, marginBottom: 40 }}>
               {differentiators.map(({ num, title, body, icon }, i) => (
-                <div key={num} className={`reveal${s4.inView ? " visible" : ""}`} style={{
+                <div key={num} className={`reveal${s4InView ? " visible" : ""}`} style={{
                   background: "#FFFFFF", padding: "32px 24px", position: "relative",
                   border: "1px solid #ece5d8",
                   transitionDelay: `${i * 0.07}s`, transition: "transform 0.25s, box-shadow 0.25s, border-color 0.25s",
@@ -690,7 +686,7 @@ export default function Home() {
             </div>
 
             {/* Commitment + closing */}
-            <div className={`reveal${s4.inView ? " visible" : ""}`} style={{ textAlign: "left", margin: "48px 0 0" }}>
+            <div className={`reveal${s4InView ? " visible" : ""}`} style={{ textAlign: "left", margin: "48px 0 0" }}>
               <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 3.2vw, 36px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", lineHeight: 1.3, marginBottom: 20 }}>
                 Every recommendation is guided by one question: will this create measurable value for your business?
               </h3>
@@ -727,12 +723,12 @@ export default function Home() {
 
       {/* ── S5: SERVICES ─────────────────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "56px 24px 0" }}>
-        <div ref={s5.ref} style={{ maxWidth: 1100, margin: "0 auto" }}>
+        <div ref={s5Ref} style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ textAlign: "left", marginBottom: 56 }}>
-            <h2 className={`reveal${s5.inView ? " visible" : ""}`} style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.25, marginBottom: 16 }}>
+            <h2 className={`reveal${s5InView ? " visible" : ""}`} style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.25, marginBottom: 16 }}>
               Solutions That Move Businesses Forward
             </h2>
-            <p className={`reveal${s5.inView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", margin: "0 0 10px" }}>
+            <p className={`reveal${s5InView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", margin: "0 0 10px" }}>
               Every business faces unique growth challenges, from strengthening its brand and increasing visibility to generating demand, optimizing revenue, or raising capital. Rather than delivering disconnected services, Brand Iron brings these capabilities together into one connected growth system designed to help organizations become discoverable, trusted, and chosen.
             </p>
           </div>
@@ -769,7 +765,7 @@ export default function Home() {
                 <div
                   key={title}
                   ref={el => { serviceCardRefs.current[i] = el; }}
-                  className={`reveal${s5.inView ? " visible" : ""}`}
+                  className={`reveal${s5InView ? " visible" : ""}`}
                   onClick={() => router.push(href)}
                   style={{
                     background: "#FFFFFF",
@@ -872,7 +868,7 @@ export default function Home() {
         </div>
 
         {/* Closing — full-bleed background */}
-        <div className={`reveal${s5.inView ? " visible" : ""}`} style={{
+        <div className={`reveal${s5InView ? " visible" : ""}`} style={{
           position: "relative", overflow: "hidden",
           width: "100vw", marginLeft: "calc(50% - 50vw)",
           backgroundImage: "url('/images/shared/shared-outcomes-texture.jpg')", backgroundSize: "cover", backgroundPosition: "center",
@@ -904,23 +900,23 @@ export default function Home() {
           onLoadedMetadata={e => { e.currentTarget.currentTime = 1; }}
           onTimeUpdate={e => { if (e.currentTarget.currentTime >= 5) e.currentTarget.currentTime = 1; }}
         />
-        <div ref={s6.ref} style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto", textAlign: "left" }}>
-          <h2 className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.25, marginBottom: 12, textShadow: "0 2px 12px rgba(0,0,0,0.85)" }}>
+        <div ref={s6Ref} style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto", textAlign: "left" }}>
+          <h2 className={`reveal${s6InView ? " visible" : ""}`} style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.25, marginBottom: 12, textShadow: "0 2px 12px rgba(0,0,0,0.85)" }}>
             Growth Is a Journey.<br />You Shouldn&apos;t Have to Navigate It Alone.
           </h2>
-          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 800, fontSize: 14, letterSpacing: "0.08em", textTransform: "uppercase", color: "rgba(255,255,255,0.95)", marginBottom: 24, textShadow: "0 2px 10px rgba(0,0,0,0.85)" }}>
+          <p className={`reveal${s6InView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 800, fontSize: 14, letterSpacing: "0.08em", textTransform: "uppercase", color: "rgba(255,255,255,0.95)", marginBottom: 24, textShadow: "0 2px 10px rgba(0,0,0,0.85)" }}>
             We Build Alongside Your Team
           </p>
-          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.85, color: "#FFFFFF", margin: "0 0 14px", textShadow: "0 2px 10px rgba(0,0,0,0.85)" }}>
+          <p className={`reveal${s6InView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.85, color: "#FFFFFF", margin: "0 0 14px", textShadow: "0 2px 10px rgba(0,0,0,0.85)" }}>
             Growth is a team effort. That&apos;s why we work as an extension of your leadership team, helping you make smarter decisions, focus on the right opportunities, and build systems that drive long-term growth. Our success is measured by yours. We&apos;re here to help you build what&apos;s next.
           </p>
-          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.85, color: "#FFFFFF", margin: "0 0 14px", textShadow: "0 2px 10px rgba(0,0,0,0.85)" }}>
+          <p className={`reveal${s6InView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.85, color: "#FFFFFF", margin: "0 0 14px", textShadow: "0 2px 10px rgba(0,0,0,0.85)" }}>
             Whether you&apos;re defining your brand, entering a new market, improving AI visibility, scaling revenue operations, or preparing for your next stage of growth, Brand Iron is ready to help you move forward with clarity, confidence, and purpose.
           </p>
-          <p className={`reveal${s6.inView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.85, color: "#FFFFFF", fontWeight: 600, fontStyle: "italic", margin: "0 0 40px", textShadow: "0 2px 10px rgba(0,0,0,0.85)" }}>
+          <p className={`reveal${s6InView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.85, color: "#FFFFFF", fontWeight: 600, fontStyle: "italic", margin: "0 0 40px", textShadow: "0 2px 10px rgba(0,0,0,0.85)" }}>
             Every successful growth story begins with a conversation. Let&apos;s start yours.
           </p>
-          <div className={`reveal${s6.inView ? " visible" : ""}`} style={{ display: "flex", gap: 16, justifyContent: "flex-start", flexWrap: "wrap" }}>
+          <div className={`reveal${s6InView ? " visible" : ""}`} style={{ display: "flex", gap: 16, justifyContent: "flex-start", flexWrap: "wrap" }}>
             <Link href="/contact" style={{
               fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
@@ -964,12 +960,12 @@ export default function Home() {
 
       {/* ── S7: TESTIMONIALS ─────────────────────────────── */}
       <section style={{ background: "#F7F4EE", padding: "88px 24px 56px" }}>
-        <div ref={s7.ref} style={{ maxWidth: 1100, margin: "0 auto", textAlign: "center" }}>
+        <div ref={s7Ref} style={{ maxWidth: 1100, margin: "0 auto", textAlign: "center" }}>
         <div style={{ maxWidth: 720, margin: "0 auto" }}>
-          <p className={`reveal${s7.inView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 32 }}>
+          <p className={`reveal${s7InView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 32 }}>
             What Our Clients Say
           </p>
-          <div className={`reveal${s7.inView ? " visible" : ""} testimonial-card`} style={{
+          <div className={`reveal${s7InView ? " visible" : ""} testimonial-card`} style={{
             background: "#FFFFFF", borderRadius: 20, position: "relative",
             display: "flex", flexDirection: "column", justifyContent: "center",
             boxShadow: "0 24px 60px rgba(26,20,10,0.08)", border: "1px solid rgba(26,20,10,0.04)",
@@ -1069,17 +1065,17 @@ export default function Home() {
 
       {/* ── S7B: FAQ ─────────────────────────────────────── */}
       <section style={{ background: "#F8F5EF", padding: "56px 24px 100px" }}>
-        <div ref={s7faq.ref} style={{ maxWidth: 900, margin: "0 auto" }}>
-          <h2 className={`section-heading reveal${s7faq.inView ? " visible" : ""}`} style={{ color: "#1a1a1a", marginBottom: 8, textAlign: "left" }}>
+        <div ref={s7faqRef} style={{ maxWidth: 900, margin: "0 auto" }}>
+          <h2 className={`section-heading reveal${s7faqInView ? " visible" : ""}`} style={{ color: "#1a1a1a", marginBottom: 8, textAlign: "left" }}>
             Frequently Asked Questions
           </h2>
-          <p className={`reveal${s7faq.inView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", maxWidth: 640, margin: "0 0 32px" }}>
+          <p className={`reveal${s7faqInView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", maxWidth: 640, margin: "0 0 32px" }}>
             Common questions about working with Brand Iron.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
             {homeFaqs.map(({ q, a }, i) => (
               <div key={i}
-                className={`reveal${s7faq.inView ? " visible" : ""}`}
+                className={`reveal${s7faqInView ? " visible" : ""}`}
                 style={{ background: "rgba(255,255,255,0.9)", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 10, overflow: "hidden", transition: "box-shadow 0.2s, border-color 0.2s" }}
                 onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.borderColor = "rgba(216,115,7,0.3)"; el.style.boxShadow = "0 8px 24px rgba(0,0,0,0.06)"; }}
                 onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.borderColor = "rgba(15,27,45,0.08)"; el.style.boxShadow = "none"; }}
@@ -1121,7 +1117,7 @@ export default function Home() {
       {/* ── S8: FINAL CTA ────────────────────────────────── */}
       <section style={{ background: "#F0EEEA", padding: "80px 24px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <div ref={s8.ref} className={`reveal${s8.inView ? " visible" : ""}`} style={{
+          <div ref={s8Ref} className={`reveal${s8InView ? " visible" : ""}`} style={{
             position: "relative", overflow: "hidden", borderRadius: 20,
             backgroundImage: "url('/images/shared/shared-cta-banner-scene.jpg')", backgroundSize: "cover", backgroundPosition: "center 40%",
           }}>
