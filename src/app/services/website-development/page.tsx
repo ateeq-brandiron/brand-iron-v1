@@ -397,7 +397,7 @@ export default function WebsiteDevelopmentPage() {
           </div>
 
           {/* 5 pillars */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 20, marginBottom: 48 }}>
+          <div className="wd-pillars-grid" style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 20, marginBottom: 48 }}>
             {pillars.map(({ num, title, body, icon }) => (
               <div key={num}
                 className={`reveal${s3View.inView ? ' visible' : ''}`}
@@ -494,9 +494,12 @@ export default function WebsiteDevelopmentPage() {
         <style>{`
           @media (max-width: 900px) {
             .wd-process-grid { grid-template-columns: repeat(2, 1fr) !important; }
+            .wd-pillars-grid { grid-template-columns: repeat(3, 1fr) !important; }
+            .wd-solutions-grid { grid-template-columns: repeat(2, 1fr) !important; }
+            .wd-success-grid { grid-template-columns: 1fr !important; }
           }
           @media (max-width: 520px) {
-            .wd-process-grid { grid-template-columns: 1fr !important; }
+            .wd-process-grid, .wd-pillars-grid, .wd-solutions-grid { grid-template-columns: 1fr !important; }
           }
         `}</style>
       </section>
@@ -515,7 +518,7 @@ export default function WebsiteDevelopmentPage() {
           </div>
 
           {/* 3 solution cards */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24, marginBottom: 64 }}>
+          <div className="wd-solutions-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24, marginBottom: 64 }}>
             {solutions.map(({ name, body, bestFor, outcome, icon }) => (
               <div key={name}
                 className={`reveal${s5View.inView ? ' visible' : ''}`}
@@ -605,7 +608,7 @@ export default function WebsiteDevelopmentPage() {
             </p>
           </div>
 
-          <div className={`reveal${s6View.inView ? ' visible' : ''}`} style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "16px 40px", marginBottom: 48, background: "rgba(255,255,255,0.85)", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 14, padding: "32px 40px" }}>
+          <div className={`wd-success-grid reveal${s6View.inView ? ' visible' : ''}`} style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "16px 40px", marginBottom: 48, background: "rgba(255,255,255,0.85)", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 14, padding: "32px 40px" }}>
             {successPoints.map(point => (
               <div key={point} style={{ display: "flex", alignItems: "center", gap: 12 }}>
                 <CheckIcon />

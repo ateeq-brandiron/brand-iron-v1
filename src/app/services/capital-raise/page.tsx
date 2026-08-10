@@ -294,6 +294,11 @@ export default function CapitalRaisePage() {
             .cr-hero-section { height: auto !important; min-height: 100vh; }
             .cr-hero-wrap { position: relative !important; padding: 140px 20px 48px !important; }
             .cr-hero-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+            .cr-evaluations-grid, .cr-pillars-grid, .cr-solutions-grid, .cr-outcomes-grid { grid-template-columns: repeat(2, 1fr) !important; }
+            .cr-journey-grid { grid-template-columns: repeat(2, 1fr) !important; }
+          }
+          @media (max-width: 600px) {
+            .cr-evaluations-grid, .cr-pillars-grid, .cr-solutions-grid, .cr-outcomes-grid, .cr-journey-grid { grid-template-columns: 1fr !important; }
           }
         `}</style>
       </section>
@@ -326,7 +331,7 @@ export default function CapitalRaisePage() {
             <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", marginBottom: 32 }}>
               A capital raise presentation is only one part of the decision-making process. Behind every investment conversation are a series of questions that determine whether investors move forward.
             </p>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20 }}>
+            <div className="cr-evaluations-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20 }}>
               {evaluations.map(({ title, body, icon }) => (
                 <div key={title}
                   style={{ position: "relative", background: "#F9F8F6", border: "1px solid #EEEBE7", borderRadius: 12, padding: "26px 22px", overflow: "hidden", transition: "transform 0.25s, box-shadow 0.25s" }}
@@ -383,7 +388,7 @@ export default function CapitalRaisePage() {
           </div>
 
           {/* 4 Pillars */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24, marginBottom: 56 }}>
+          <div className="cr-pillars-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24, marginBottom: 56 }}>
             {[
               {
                 num: "01", title: "Strategic Foundation",
@@ -464,7 +469,7 @@ export default function CapitalRaisePage() {
           </div>
 
           {/* 6-step journey */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
+          <div className="cr-journey-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
             {[
               { num: "01", title: "Discover Your Story", body: "Define your vision, market opportunity, and investment thesis." },
               { num: "02", title: "Build Your Foundation", body: "Develop a clear investment narrative and messaging strategy." },
@@ -507,7 +512,7 @@ export default function CapitalRaisePage() {
           </div>
 
           {/* 4 solution cards — single row */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20, marginBottom: 64 }}>
+          <div className="cr-solutions-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20, marginBottom: 64 }}>
             {solutions.map(({ num, name, tagline, desc, bestFor, outcome, cta, href, icon }) => (
               <div key={name}
                 className={`reveal${s5View.inView ? ' visible' : ''}`}
@@ -685,7 +690,7 @@ export default function CapitalRaisePage() {
           </div>
 
           {/* 4 outcome cards */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20, marginBottom: 56 }}>
+          <div className="cr-outcomes-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20, marginBottom: 56 }}>
             {[
               {
                 title: "Strategic Clarity",

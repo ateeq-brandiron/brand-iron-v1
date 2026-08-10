@@ -190,6 +190,11 @@ export default function GTMPage() {
             .gtm-hero-section { height: auto !important; min-height: 100vh; }
             .gtm-hero-wrap { position: relative !important; padding: 140px 20px 48px !important; }
             .gtm-hero-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+            .gtm-pillars-grid, .gtm-tiers-grid, .gtm-outcomes-grid { grid-template-columns: repeat(2, 1fr) !important; }
+            .gtm-execution-grid { grid-template-columns: 1fr !important; }
+          }
+          @media (max-width: 600px) {
+            .gtm-pillars-grid, .gtm-tiers-grid, .gtm-outcomes-grid { grid-template-columns: 1fr !important; }
           }
         `}</style>
       </section>
@@ -298,7 +303,7 @@ export default function GTMPage() {
           </h3>
 
           {/* 6 Pillars */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24, marginBottom: 56 }}>
+          <div className="gtm-pillars-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24, marginBottom: 56 }}>
             {[
               {
                 num: "01", title: "Strategy",
@@ -406,7 +411,7 @@ export default function GTMPage() {
           </h3>
 
           {/* 8 execution components */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20 }}>
+          <div className="gtm-execution-grid" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20 }}>
             {[
               {
                 num: "01", title: "Strategy & Market Intelligence",
@@ -510,7 +515,7 @@ export default function GTMPage() {
           </div>
 
           {/* Three tier cards */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24, marginBottom: 56 }}>
+          <div className="gtm-tiers-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24, marginBottom: 56 }}>
             {[
               {
                 tier: "Tier 1", name: "Foundation", tagline: "Build the strategic foundation for sustainable growth.",
@@ -744,7 +749,7 @@ export default function GTMPage() {
           </div>
 
           {/* 5 outcome cards */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20, marginBottom: 20 }}>
+          <div className="gtm-outcomes-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20, marginBottom: 20 }}>
             {[
               {
                 title: "Become Easier to Discover",

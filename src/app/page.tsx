@@ -584,7 +584,7 @@ export default function Home() {
         <div style={{ position: "absolute", inset: 0, backgroundImage: "url('/images/home/home-dark-mountains-pattern.webp')", backgroundSize: "60% auto", backgroundPosition: "center bottom", backgroundRepeat: "no-repeat", opacity: 0.06 }} />
         <div ref={s3problems.ref} style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto" }}>
           <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 32, textAlign: "left" }}>Common Growth Challenges</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 20 }}>
+          <div className="home-problems-grid" style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 20 }}>
             {problems.map(({ heading, body }, i) => (
               <div key={i} className="growth-card" style={{
                 background: "#FFFFFF", padding: "34px 24px 28px", position: "relative",
@@ -656,7 +656,7 @@ export default function Home() {
             </div>
 
             {/* 4 cards — icon + hover lift */}
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20, marginBottom: 40 }}>
+            <div className="home-differentiators-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20, marginBottom: 40 }}>
               {differentiators.map(({ num, title, body, icon }, i) => (
                 <div key={num} className={`reveal${s4.inView ? " visible" : ""}`} style={{
                   background: "#FFFFFF", padding: "32px 24px", position: "relative",
@@ -1052,6 +1052,16 @@ export default function Home() {
           .testimonial-card { padding: 52px 56px; min-height: 440px; }
           @media (max-width: 640px) {
             .testimonial-card { padding: 32px 24px; min-height: 610px; }
+          }
+        `}</style>
+        <style>{`
+          @media (max-width: 1000px) {
+            .home-problems-grid { grid-template-columns: repeat(3, 1fr) !important; }
+            .home-differentiators-grid { grid-template-columns: repeat(2, 1fr) !important; }
+          }
+          @media (max-width: 640px) {
+            .home-problems-grid { grid-template-columns: 1fr !important; }
+            .home-differentiators-grid { grid-template-columns: 1fr !important; }
           }
         `}</style>
       </section>

@@ -170,7 +170,7 @@ export default function ContactPage() {
 
       {/* Form + Info */}
       <section style={{ background: "#F5F0E8", padding: "60px 24px 80px" }}>
-        <div ref={sMain.ref} style={{ maxWidth: 1400, margin: "0 auto", display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 48, alignItems: "start" }}>
+        <div ref={sMain.ref} className="contact-main-grid" style={{ maxWidth: 1400, margin: "0 auto", display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 48, alignItems: "start" }}>
 
           {/* Form */}
           <div className={`reveal${sMain.inView ? ' visible' : ''}`} style={{ background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 12, padding: "40px 36px", boxShadow: "0 4px 20px rgba(0,0,0,0.06)" }}>
@@ -187,7 +187,7 @@ export default function ContactPage() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+                <div className="contact-field-pair" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
                   <div>
                     <label style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a1a1a", display: "block", marginBottom: 8 }}>Full Name <span style={{ color: "#d87307" }}>*</span></label>
                     <input required value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} placeholder="John Smith" style={inputStyle} />
@@ -197,7 +197,7 @@ export default function ContactPage() {
                     <input value={form.company} onChange={e => setForm({ ...form, company: e.target.value })} placeholder="Your company" style={inputStyle} />
                   </div>
                 </div>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+                <div className="contact-field-pair" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
                   <div>
                     <label style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a1a1a", display: "block", marginBottom: 8 }}>Email <span style={{ color: "#d87307" }}>*</span></label>
                     <input required type="email" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} placeholder="john@company.com" style={inputStyle} />
@@ -238,7 +238,7 @@ export default function ContactPage() {
                     <option style={{ background: "#FFFFFF", color: "#1a1a1a" }}>General Inquiry</option>
                   </select>
                 </div>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+                <div className="contact-field-pair" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
                   <div>
                     <label style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1a1a1a", display: "block", marginBottom: 8 }}>Investment Range</label>
                     <select value={form.investment} onChange={e => setForm({ ...form, investment: e.target.value })} style={{ ...inputStyle, cursor: "pointer" }}>
@@ -309,6 +309,15 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      <style>{`
+        @media (max-width: 900px) {
+          .contact-main-grid { grid-template-columns: 1fr !important; }
+        }
+        @media (max-width: 520px) {
+          .contact-field-pair { grid-template-columns: 1fr !important; }
+        }
+      `}</style>
     </main>
   );
 }

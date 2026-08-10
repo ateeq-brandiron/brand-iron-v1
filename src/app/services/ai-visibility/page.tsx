@@ -273,6 +273,11 @@ export default function AIVisibilityPage() {
             .ai-hero-section { height: auto !important; min-height: 100vh; }
             .ai-hero-wrap { position: relative !important; padding: 140px 20px 48px !important; }
             .ai-hero-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+            .ai-stages-grid, .ai-tiers-grid { grid-template-columns: repeat(2, 1fr) !important; }
+            .ai-solution-grid { grid-template-columns: 1fr !important; }
+          }
+          @media (max-width: 600px) {
+            .ai-stages-grid, .ai-tiers-grid { grid-template-columns: 1fr !important; }
           }
         `}</style>
       </section>
@@ -450,7 +455,7 @@ export default function AIVisibilityPage() {
           </div>
 
           {/* 4 stages */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24, marginBottom: 64 }}>
+          <div className="ai-stages-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24, marginBottom: 64 }}>
             {[
               {
                 num: "1",
@@ -550,7 +555,7 @@ export default function AIVisibilityPage() {
           </div>
 
           {/* Four tier cards */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24, marginBottom: 56 }}>
+          <div className="ai-tiers-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24, marginBottom: 56 }}>
             {tiers.map((tier, i) => (
               <div key={tier.number} className={`reveal${s5View.inView ? ' visible' : ''}`} style={{
                 position: "relative",
@@ -638,7 +643,7 @@ export default function AIVisibilityPage() {
             <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(20px, 2.5vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 40, textAlign: "center" }}>
               Which Solution Is Right for You?
             </h3>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 24, marginBottom: 40 }}>
+            <div className="ai-solution-grid" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 24, marginBottom: 40 }}>
               {[
                 {
                   tier: "AI Visibility Diagnostic",
