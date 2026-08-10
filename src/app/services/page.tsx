@@ -69,6 +69,41 @@ const services = [
   },
 ];
 
+const faqs = [
+  {
+    q: "What services does Brand Iron offer?",
+    a: "Brand Iron offers seven connected growth services: Brand Strategy, AI Visibility & Discoverability, GTM Strategy, Capital Raise Support, Website Development, Outbound Growth, and Revenue Engineering. Each service can stand on its own, but they're designed to work together as one growth engine rather than isolated projects.",
+  },
+  {
+    q: "How do Brand Iron's services work together?",
+    a: "Every engagement starts with understanding the business first, then connects the right combination of brand strategy, visibility, and revenue systems to drive one outcome: sustainable, measurable revenue growth. For example, Website Development and AI Visibility often pair together, while GTM Strategy, Outbound Growth, and Revenue Engineering typically connect to build a full pipeline system.",
+  },
+  {
+    q: "What is AI Visibility & Discoverability, and why does it matter now?",
+    a: "AI Visibility & Discoverability is Brand Iron's service for helping brands get found, trusted, and recommended across both traditional search and AI-driven platforms. It combines SEO, AEO (Answer Engine Optimization), GEO, technical optimization, entity development, and authority building into one strategy, since buyers increasingly discover and vet brands through AI tools, not just search engines.",
+  },
+  {
+    q: "Do I need to use all of Brand Iron's services, or can I start with one?",
+    a: "You can start with a single service. Brand Iron's model is built so each service delivers value independently, while also being designed to connect with the others as your needs grow. A strategy session is used to map out which combination fits your business first.",
+  },
+  {
+    q: "What's the difference between GTM Strategy and Outbound Growth?",
+    a: "GTM Strategy focuses on the overall go-to-market plan: how strategy, visibility, authority, demand generation, and automation connect into one growth engine. Outbound Growth is the execution layer underneath it, running LinkedIn outreach, email campaigns, SDR programs, and appointment setting to fill the pipeline that GTM Strategy defines.",
+  },
+  {
+    q: "How does Revenue Engineering fit with the other services?",
+    a: "Revenue Engineering connects marketing, sales, CRM, automation, funnels, and reporting into one working system. It's typically layered in after GTM Strategy and Outbound Growth are in place, since it's focused on finding leaks, fixing handoffs between teams, and tracking what's actually driving revenue across the other services.",
+  },
+  {
+    q: "Can Brand Iron help with website development and AI visibility together?",
+    a: "Yes. Website Development and AI Visibility & Discoverability are built to connect directly, since a site's structure, content, and technical setup directly affect whether AI platforms and search engines can find, understand, and recommend it.",
+  },
+  {
+    q: "How do I know which service my business needs first?",
+    a: "Brand Iron starts every engagement with a strategy session to evaluate your current brand, visibility, and revenue systems, then recommends which service (or combination) addresses the most urgent gap first, rather than defaulting to a fixed package.",
+  },
+];
+
 function useInView(threshold = 0.12) {
   const elementRef = useRef<HTMLDivElement>(null);
   const [inView, setInView] = useState(false);
@@ -86,7 +121,9 @@ function useInView(threshold = 0.12) {
 
 export default function ServicesPage() {
   const { elementRef: listRef, inView: listInView } = useInView(0.05);
+  const { elementRef: faqRef, inView: faqInView } = useInView(0.05);
   const { elementRef: ctaRef, inView: ctaInView } = useInView(0.1);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
@@ -211,6 +248,57 @@ export default function ServicesPage() {
             .svc-list-card > svg:last-child { display: none; }
           }
         `}</style>
+      </section>
+
+      {/* ── FAQ ────────────────────────────────────────────────── */}
+      <section style={{ background: "#F8F5EF", padding: "100px 24px" }}>
+        <div ref={faqRef} style={{ maxWidth: 900, margin: "0 auto" }}>
+          <h2 className={`section-heading reveal${faqInView ? " visible" : ""}`} style={{ color: "#1a1a1a", marginBottom: 8, textAlign: "left" }}>
+            Frequently Asked Questions
+          </h2>
+          <p className={`reveal${faqInView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.8, color: "#666", maxWidth: 640, margin: "0 0 32px" }}>
+            Common questions about how Brand Iron&apos;s seven services connect.
+          </p>
+          <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+            {faqs.map(({ q, a }, i) => (
+              <div key={i}
+                className={`reveal${faqInView ? " visible" : ""}`}
+                style={{ background: "rgba(255,255,255,0.9)", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 10, overflow: "hidden", transition: "box-shadow 0.2s, border-color 0.2s" }}
+                onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.borderColor = "rgba(216,115,7,0.3)"; el.style.boxShadow = "0 8px 24px rgba(0,0,0,0.06)"; }}
+                onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.borderColor = "rgba(15,27,45,0.08)"; el.style.boxShadow = "none"; }}
+              >
+                <button
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  style={{ width: "100%", background: "none", border: "none", cursor: "pointer", padding: "20px 24px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16, textAlign: "left" }}
+                >
+                  <span style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, fontWeight: 600, color: "#1a1a1a", lineHeight: 1.5 }}>{q}</span>
+                  <div style={{ width: 28, height: 28, borderRadius: "50%", background: openFaq === i ? "#d87307" : "rgba(216,115,7,0.1)", border: "1px solid rgba(216,115,7,0.3)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, transition: "background 0.2s, transform 0.2s", transform: openFaq === i ? "rotate(45deg)" : "rotate(0)" }}>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke={openFaq === i ? "#FFFFFF" : "#d87307"} strokeWidth="2" strokeLinecap="round"/></svg>
+                  </div>
+                </button>
+                <div style={{ maxHeight: openFaq === i ? 600 : 0, opacity: openFaq === i ? 1 : 0, overflow: "hidden", transition: "max-height 0.3s ease, opacity 0.25s ease" }}>
+                  <div style={{ padding: "0 24px 20px" }}>
+                    <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.8, color: "#555", margin: 0 }}>{a}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: faqs.map(({ q, a }) => ({
+                "@type": "Question",
+                name: q,
+                acceptedAnswer: { "@type": "Answer", text: a },
+              })),
+            }),
+          }}
+        />
       </section>
 
       {/* ── FINAL CTA ────────────────────────────────────────── */}
