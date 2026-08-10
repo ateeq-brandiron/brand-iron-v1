@@ -152,7 +152,7 @@ export default function ResourcesPage() {
       <section className="res-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <div style={{
           position: "absolute", inset: 0,
-          backgroundImage: "url('/images/resources/resources-hero-tech-field.png')",
+          backgroundImage: "url('/images/resources/resources-hero-tech-field.jpg')",
           backgroundSize: "cover", backgroundPosition: "center",
         }} />
         <div role="img" aria-label="Wide agricultural field at dusk with glowing digital circuit-line patterns woven through the crop rows" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.4) 0%, rgba(8,16,36,0.3) 45%, rgba(8,16,36,0.68) 100%)" }} />

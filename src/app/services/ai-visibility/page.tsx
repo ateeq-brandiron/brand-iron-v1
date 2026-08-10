@@ -778,7 +778,7 @@ export default function AIVisibilityPage() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div ref={ctaView.ref} className={`reveal${ctaView.inView ? ' visible' : ''}`} style={{
             position: "relative", overflow: "hidden", borderRadius: 20,
-            backgroundImage: "url('/images/ai-visibility/ai-visibility-cta-cowboy-tech-rope.png')", backgroundSize: "cover", backgroundPosition: "center",
+            backgroundImage: "url('/images/ai-visibility/ai-visibility-cta-cowboy-tech-rope.jpg')", backgroundSize: "cover", backgroundPosition: "center",
           }}>
             <div role="img" aria-label="Rancher coiling a lasso woven with glowing circuit lines against a hazy countryside" style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
             <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>
