@@ -15,16 +15,27 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!article) return {};
   const title = article.seoTitle ?? article.title;
   const description = article.metaDescription ?? article.excerpt;
+  const url = `https://brandiron.net/blog/${article.slug}`;
   return {
     title,
     description,
     alternates: { canonical: `/blog/${article.slug}` },
     openGraph: {
       type: "article",
+      url,
       title,
       description,
       publishedTime: article.publishedISO,
       authors: ["Michael Doyle"],
+      images: [article.headerImage],
+      siteName: "Brand Iron",
+    },
+    twitter: {
+      card: "summary_large_image",
+      site: "@BrandIron",
+      title,
+      description,
+      images: [article.headerImage],
     },
   };
 }
