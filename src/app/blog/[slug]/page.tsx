@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import CircuitOverlay from "@/components/CircuitOverlay";
 import { articles } from "@/data/articles";
@@ -169,7 +170,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             if (block.type === "image") {
               return (
                 <div key={i} style={{ margin: "8px 0 32px", textAlign: "center" }}>
-                  <img loading="lazy" src={block.src} alt={block.alt} style={{ maxWidth: "100%", width: "100%", borderRadius: 10, border: "1px solid #EEEBE7" }} />
+                  <Image loading="lazy" src={block.src} alt={block.alt} width={1200} height={675} sizes="(max-width: 720px) 100vw, 720px" style={{ maxWidth: "100%", width: "100%", height: "auto", borderRadius: 10, border: "1px solid #EEEBE7" }} />
                 </div>
               );
             }
@@ -225,7 +226,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 14, padding: "28px 32px",
           }}>
             <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
-            <img loading="lazy" src="/images/team/Brand Iron Team_Michael.jpg" alt="Michael Doyle" style={{ width: 72, height: 72, borderRadius: "50%", objectFit: "cover", flexShrink: 0 }} />
+            <Image loading="lazy" src="/images/team/Brand Iron Team_Michael.jpg" alt="Michael Doyle" width={72} height={72} style={{ width: 72, height: 72, borderRadius: "50%", objectFit: "cover", flexShrink: 0 }} />
             <div>
               <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 11, letterSpacing: "0.16em", textTransform: "uppercase", color: "#d87307", marginBottom: 6 }}>Written By</p>
               <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 18, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", marginBottom: 8 }}>Michael Doyle</h3>

@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import AuditModal from "@/components/AuditModal";
@@ -341,7 +342,7 @@ export default function Home() {
           {/* B-icon logo mask */}
           <div className={`reveal${s2.inView ? " visible" : ""}`} style={{ marginTop: -24, marginBottom: -10, perspective: 1200 }}>
             <div className="logo-3d-float">
-              <img loading="lazy" src="/images/home/home-logo-mask.png" alt="Brand Iron" style={{ width: 340, height: "auto", display: "block", transition: "transform 0.35s ease" }}
+              <Image loading="lazy" src="/images/home/home-logo-mask.png" alt="Brand Iron" width={382} height={380} style={{ width: 340, height: "auto", display: "block", transition: "transform 0.35s ease" }}
                 onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.05) rotate(-3deg)")}
                 onMouseLeave={e => (e.currentTarget.style.transform = "scale(1) rotate(0deg)")}
               />
@@ -458,7 +459,7 @@ export default function Home() {
 
         {/* Journey cards — full-bleed, dark-to-light gradient panels */}
         <div ref={s3cards.ref} style={{ position: "relative", overflow: "hidden", display: "flex", marginBottom: 56 }}>
-          <img loading="lazy" src="/images/home/home-dark-mountains-pattern.webp" alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.5 }} />
+          <Image loading="lazy" src="/images/home/home-dark-mountains-pattern.webp" alt="" fill sizes="100vw" style={{ objectFit: "cover", opacity: 0.5 }} />
           {journeyStages.map(({ stage, body }, i) => {
             const overlays = ["rgba(8,8,8,0.95)", "rgba(38,36,34,0.92)", "rgba(90,84,76,0.88)", "rgba(180,170,156,0.82)", "rgba(245,240,232,0.94)"];
             const textColor = i < 3 ? "#FFFFFF" : "#1a1a1a";
@@ -528,7 +529,7 @@ export default function Home() {
 
       {/* ── S3B: YOU'RE THE COMPETITION ──────────────────── */}
       <section style={{ position: "relative", overflow: "hidden", minHeight: 340 }}>
-        <img loading="lazy" src="/images/home/home-competition-banner.jpg" alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
+        <Image loading="lazy" src="/images/home/home-competition-banner.jpg" alt="" fill sizes="100vw" style={{ objectFit: "cover" }} />
         <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.18)" }} />
         <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "center", justifyContent: "center", minHeight: 340, padding: "44px 24px" }}>
           {/* White card with corner brackets */}
@@ -616,7 +617,7 @@ export default function Home() {
       <section style={{ position: "relative", overflow: "hidden" }}>
         {/* Grit & Gumption banner */}
         <div style={{ position: "relative", height: 180, overflow: "hidden" }}>
-          <img loading="lazy" src="/images/home/home-grit-and-gumption-banner.png" alt="Wide mountain range panorama at sunset, representing Brand Iron's brand strategy and growth marketing agency roots" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 30%" }} />
+          <Image loading="lazy" src="/images/home/home-grit-and-gumption-banner.png" alt="Wide mountain range panorama at sunset, representing Brand Iron's brand strategy and growth marketing agency roots" fill sizes="100vw" style={{ objectFit: "cover", objectPosition: "center 30%" }} />
           <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.35)" }} />
           <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "center", textAlign: "left", padding: "0 24px", maxWidth: 1132, margin: "0 auto" }}>
             <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(32px, 6vw, 80px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.04em", color: "#FFFFFF", lineHeight: 1, marginBottom: 8 }}>
@@ -651,7 +652,7 @@ export default function Home() {
 
               {/* Image — right */}
               <div className={`reveal${s4.inView ? " visible" : ""}`}>
-                <img loading="lazy" src="/images/home/home-presentation-image.jpeg" alt="Brand Iron team presenting a growth strategy plan to clients in a conference room" style={{ width: "100%", height: "auto", display: "block", boxShadow: "0 24px 60px rgba(0,0,0,0.18)" }} />
+                <Image loading="lazy" src="/images/home/home-presentation-image.jpeg" alt="Brand Iron team presenting a growth strategy plan to clients in a conference room" width={960} height={551} sizes="(max-width: 900px) 100vw, 500px" style={{ width: "100%", height: "auto", display: "block", boxShadow: "0 24px 60px rgba(0,0,0,0.18)" }} />
               </div>
             </div>
 

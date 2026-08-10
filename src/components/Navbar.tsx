@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const servicesMenu = [
   { label: "Brand Strategy", href: "/services/brand-strategy" },
@@ -32,7 +33,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link href="/" style={{ display: "flex", alignItems: "center", flexShrink: 0, paddingTop: 14 }}>
-          <img src="/images/shared/shared-logo-white.png" alt="Brand Iron" style={{ height: 68, width: "auto", transition: "transform 0.25s ease, opacity 0.25s ease" }}
+          <Image src="/images/shared/shared-logo-white.png" alt="Brand Iron" width={112} height={80} priority style={{ height: 68, width: "auto", transition: "transform 0.25s ease, opacity 0.25s ease" }}
             onMouseEnter={e => { e.currentTarget.style.transform = "scale(1.05)"; e.currentTarget.style.opacity = "0.85"; }}
             onMouseLeave={e => { e.currentTarget.style.transform = "scale(1)"; e.currentTarget.style.opacity = "1"; }}
           />

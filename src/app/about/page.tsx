@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import CircuitOverlay from "@/components/CircuitOverlay";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
@@ -381,7 +382,7 @@ export default function AboutPage() {
                 }}
               >
                 <div style={{ position: "relative", width: "100%", aspectRatio: "1 / 1", overflow: "hidden" }}>
-                  <img loading="lazy" src={photo} alt={name} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }} />
+                  <Image loading="lazy" src={photo} alt={name} fill sizes="(max-width: 900px) 50vw, 33vw" style={{ objectFit: "cover", objectPosition: "center" }} />
                   <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 4, background: "#d87307" }} />
                 </div>
                 <div style={{ padding: "24px 24px 28px", flex: 1, display: "flex", flexDirection: "column" }}>
