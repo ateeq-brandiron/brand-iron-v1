@@ -200,6 +200,9 @@ export default function GTMPage() {
             .gtm-progression-grid { grid-template-columns: 1fr !important; gap: 12px !important; }
             .gtm-progression-arrow { transform: rotate(90deg); padding: 4px 0 !important; }
           }
+          @media (max-width: 640px) {
+            .gtm-revenue-outcomes-row { flex-direction: column !important; }
+          }
         `}</style>
       </section>
 
@@ -792,7 +795,7 @@ export default function GTMPage() {
               </div>
             ))}
           </div>
-          <div style={{ display: "flex", gap: 20, marginBottom: 56 }}>
+          <div className="gtm-revenue-outcomes-row" style={{ display: "flex", gap: 20, marginBottom: 56 }}>
             {[
               {
                 title: "Improve Revenue Performance",
