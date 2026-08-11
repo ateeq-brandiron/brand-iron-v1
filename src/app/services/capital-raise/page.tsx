@@ -300,6 +300,10 @@ export default function CapitalRaisePage() {
           @media (max-width: 600px) {
             .cr-evaluations-grid, .cr-pillars-grid, .cr-solutions-grid, .cr-outcomes-grid, .cr-journey-grid { grid-template-columns: 1fr !important; }
           }
+          @media (max-width: 640px) {
+            .cr-goalmap-row { grid-template-columns: 1fr !important; gap: 8px !important; text-align: left; padding: 16px 4px !important; }
+            .cr-goalmap-arrow { transform: rotate(90deg); margin: 2px 0; }
+          }
         `}</style>
       </section>
 
@@ -639,12 +643,12 @@ export default function CapitalRaisePage() {
               </h4>
               <div style={{ display: "flex", flexDirection: "column", gap: 1, maxWidth: 880, margin: "0 auto" }}>
                 {goalMap.map(({ goal, solution }) => (
-                  <div key={solution} style={{ display: "grid", gridTemplateColumns: "1fr auto 1fr", alignItems: "center", gap: 20, padding: "18px 4px", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
+                  <div key={solution} className="cr-goalmap-row" style={{ display: "grid", gridTemplateColumns: "1fr auto 1fr", alignItems: "center", gap: 20, padding: "18px 4px", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
                       <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#d87307", flexShrink: 0 }} />
                       <span style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13.5, color: "rgba(255,255,255,0.75)", lineHeight: 1.5 }}>If your goal is to {goal}</span>
                     </div>
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#d87307" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                    <svg className="cr-goalmap-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#d87307" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
                     <span style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, fontWeight: 700, color: "#FFFFFF" }}>Start with {solution}</span>
                   </div>
                 ))}

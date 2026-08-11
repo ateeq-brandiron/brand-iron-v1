@@ -118,7 +118,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile hamburger */}
-        <button onClick={() => setOpen(!open)} className="mobile-menu-btn" style={{ display: "none", background: "none", border: "none", cursor: "pointer", transition: "opacity 0.2s" }} aria-label="Menu"
+        <button onClick={() => setOpen(!open)} className="mobile-menu-btn" style={{ display: "none", alignItems: "center", justifyContent: "center", width: 44, height: 44, margin: "0 -10px", background: "none", border: "none", cursor: "pointer", transition: "opacity 0.2s" }} aria-label="Menu"
           onMouseEnter={e => (e.currentTarget.style.opacity = "0.7")}
           onMouseLeave={e => (e.currentTarget.style.opacity = "1")}
         >

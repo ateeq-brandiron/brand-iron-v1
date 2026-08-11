@@ -333,10 +333,10 @@ export default function Home() {
 
       {/* ── S2: TRUST BAR ────────────────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "24px 24px 40px" }}>
-        <div ref={s2Ref} style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "auto 1fr", gap: 64, alignItems: "start" }}>
+        <div ref={s2Ref} className="home-trustbar-grid" style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "auto 1fr", gap: 64, alignItems: "start" }}>
 
           {/* B-icon logo mask */}
-          <div className={`reveal${s2InView ? " visible" : ""}`} style={{ marginTop: -24, marginBottom: -10, perspective: 1200 }}>
+          <div className={`reveal home-trustbar-icon${s2InView ? " visible" : ""}`} style={{ marginTop: -24, marginBottom: -10, perspective: 1200 }}>
             <div className="logo-3d-float">
               <Image loading="lazy" src="/images/home/home-logo-mask.png" alt="Brand Iron" width={382} height={380} style={{ width: 340, height: "auto", display: "block", transition: "transform 0.35s ease" }}
                 onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.05) rotate(-3deg)")}
@@ -419,7 +419,7 @@ export default function Home() {
       {/* ── S3: BUYING JOURNEY ───────────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "24px 0 56px" }}>
         <div ref={s3Ref} style={{ maxWidth: 1148, margin: "0 auto", padding: "0 24px" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 64, alignItems: "center", marginBottom: 56 }}>
+          <div className="home-journey-grid" style={{ display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 64, alignItems: "center", marginBottom: 56 }}>
             {/* Text — left */}
             <div>
               <h2 className={`reveal${s3InView ? " visible" : ""}`} style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 28 }}>
@@ -630,7 +630,7 @@ export default function Home() {
           <div style={{ position: "absolute", inset: 0, backgroundImage: "url('/images/home/home-dark-mountains-pattern.webp')", backgroundSize: "55% auto", backgroundPosition: "center center", backgroundRepeat: "no-repeat", opacity: 0.07 }} />
           <div ref={s4Ref} style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto" }}>
 
-            <div style={{ display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 64, alignItems: "center", marginBottom: 56 }}>
+            <div className="home-diff-hero-grid" style={{ display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 64, alignItems: "center", marginBottom: 56 }}>
               {/* Text — left */}
               <div>
                 <h2 className={`reveal${s4InView ? " visible" : ""}`} style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 28 }}>What Makes Brand Iron Different</h2>
@@ -1059,6 +1059,12 @@ export default function Home() {
           @media (max-width: 640px) {
             .home-problems-grid { grid-template-columns: 1fr !important; }
             .home-differentiators-grid { grid-template-columns: 1fr !important; }
+          }
+          @media (max-width: 900px) {
+            .home-trustbar-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
+            .home-trustbar-icon { text-align: center; }
+            .home-trustbar-icon img { width: 160px !important; }
+            .home-journey-grid, .home-diff-hero-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
           }
         `}</style>
       </section>

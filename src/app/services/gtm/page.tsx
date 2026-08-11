@@ -196,6 +196,10 @@ export default function GTMPage() {
           @media (max-width: 600px) {
             .gtm-pillars-grid, .gtm-tiers-grid, .gtm-outcomes-grid { grid-template-columns: 1fr !important; }
           }
+          @media (max-width: 700px) {
+            .gtm-progression-grid { grid-template-columns: 1fr !important; gap: 12px !important; }
+            .gtm-progression-arrow { transform: rotate(90deg); padding: 4px 0 !important; }
+          }
         `}</style>
       </section>
 
@@ -685,7 +689,7 @@ export default function GTMPage() {
           </div>
 
           {/* Capability progression */}
-          <div className={`reveal${s6ViewInView ? ' visible' : ''}`} style={{ display: "grid", gridTemplateColumns: "1fr auto 1fr auto 1fr", gap: 0, alignItems: "center", marginBottom: 56 }}>
+          <div className={`reveal gtm-progression-grid${s6ViewInView ? ' visible' : ''}`} style={{ display: "grid", gridTemplateColumns: "1fr auto 1fr auto 1fr", gap: 0, alignItems: "center", marginBottom: 56 }}>
             {[
               { tier: "Foundation", body: "Establish the strategic, technical, and operational systems required to build market visibility and generate consistent opportunities." },
               { tier: "Growth Engine", body: "Expand authority, accelerate demand generation, strengthen revenue intelligence, and improve operational efficiency." },
@@ -696,7 +700,7 @@ export default function GTMPage() {
                   <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 15, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.08em", color: "#d87307", marginBottom: 10 }}>{tier}</p>
                   <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.7, color: "rgba(255,255,255,0.85)", margin: 0 }}>{body}</p>
                 </div>
-                {i < 2 && <div style={{ padding: "0 16px", textAlign: "center" }}><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M14 7l5 5-5 5" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg></div>}
+                {i < 2 && <div className="gtm-progression-arrow" style={{ padding: "0 16px", textAlign: "center" }}><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M14 7l5 5-5 5" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg></div>}
               </Fragment>
             ))}
           </div>
