@@ -454,7 +454,7 @@ export default function Home() {
         </div>
 
         {/* Journey cards — full-bleed, dark-to-light gradient panels */}
-        <div ref={s3cardsRef} style={{ position: "relative", overflow: "hidden", display: "flex", marginBottom: 56 }}>
+        <div ref={s3cardsRef} className="home-journey-cards" style={{ position: "relative", overflow: "hidden", display: "flex", marginBottom: 56 }}>
           <Image loading="lazy" src="/images/home/home-dark-mountains-pattern.webp" alt="" fill sizes="100vw" style={{ objectFit: "cover", opacity: 0.5 }} />
           {journeyStages.map(({ stage, body }, i) => {
             const overlays = ["rgba(8,8,8,0.95)", "rgba(38,36,34,0.92)", "rgba(90,84,76,0.88)", "rgba(180,170,156,0.82)", "rgba(245,240,232,0.94)"];
@@ -1065,6 +1065,8 @@ export default function Home() {
             .home-trustbar-icon { text-align: center; }
             .home-trustbar-icon img { width: 160px !important; }
             .home-journey-grid, .home-diff-hero-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+            .home-journey-cards { flex-direction: column !important; }
+            .home-journey-cards > div { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.12); }
           }
         `}</style>
       </section>
