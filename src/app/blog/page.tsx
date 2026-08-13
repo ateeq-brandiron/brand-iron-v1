@@ -19,7 +19,7 @@ function ArticleMeta({ date }: { date: string }) {
 function ArticlePills({ category, readTime }: { category: string; readTime: string }) {
   return (
     <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: "auto" }}>
-      <span style={{ display: "inline-block", padding: "6px 14px", border: "1px solid #EEEBE7", borderRadius: 20, fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 600, color: "#777" }}>{category}</span>
+      <span style={{ display: "inline-block", padding: "4px 12px", border: "1px solid rgba(216,115,7,0.4)", borderRadius: 4, fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#d87307" }}>{category}</span>
       <span style={{ display: "inline-block", padding: "6px 14px", border: "1px solid #EEEBE7", borderRadius: 20, fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 600, color: "#777" }}>{readTime}</span>
       <span className="read-more-pill" style={{ display: "inline-block", padding: "6px 14px", border: "1px solid rgba(216,115,7,0.4)", borderRadius: 20, fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, color: "#d87307", transition: "background 0.2s, color 0.2s" }}>Read More →</span>
     </div>
