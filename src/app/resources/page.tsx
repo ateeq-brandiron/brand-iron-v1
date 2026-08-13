@@ -233,21 +233,23 @@ export default function ResourcesPage() {
             borderRadius: 14, overflow: "hidden",
           }}>
             <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))", zIndex: 2 }} />
-            <div className="res-featured-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", alignItems: "center" }}>
-              <a href="https://www.youtube.com/watch?v=uteuCEBzWws" target="_blank" rel="noopener noreferrer" aria-label="Watch the Interview" className="res-featured-thumb-link" style={{ position: "relative", display: "block", overflow: "hidden", background: "#0F1B2D", aspectRatio: "16 / 9" }}>
-                <img
-                  loading="lazy"
-                  src="https://i.ytimg.com/vi/uteuCEBzWws/hqdefault.jpg"
-                  alt="The Critical Role of Branding in Business Growth video thumbnail"
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                />
-                <div style={{ position: "absolute", inset: 0, background: "rgba(8,16,36,0.15)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <div style={{ width: 52, height: 52, borderRadius: "50%", background: "rgba(8,16,36,0.65)", border: "2px solid rgba(255,255,255,0.85)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M8 5v14l11-7z" /></svg>
+            <div className="res-featured-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 40, alignItems: "center" }}>
+              <div className="res-featured-thumb-wrap" style={{ padding: "40px 0 40px 40px" }}>
+                <a href="https://www.youtube.com/watch?v=uteuCEBzWws" target="_blank" rel="noopener noreferrer" aria-label="Watch the Interview" className="res-featured-thumb-link" style={{ position: "relative", display: "block", overflow: "hidden", background: "#0F1B2D", aspectRatio: "16 / 9" }}>
+                  <img
+                    loading="lazy"
+                    src="https://i.ytimg.com/vi/uteuCEBzWws/hqdefault.jpg"
+                    alt="The Critical Role of Branding in Business Growth video thumbnail"
+                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  />
+                  <div style={{ position: "absolute", inset: 0, background: "rgba(8,16,36,0.15)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <div style={{ width: 52, height: 52, borderRadius: "50%", background: "rgba(8,16,36,0.65)", border: "2px solid rgba(255,255,255,0.85)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M8 5v14l11-7z" /></svg>
+                    </div>
                   </div>
-                </div>
-              </a>
-              <div style={{ padding: "40px 44px" }}>
+                </a>
+              </div>
+              <div className="res-featured-text-wrap" style={{ padding: "40px 40px 40px 0" }}>
                 <span style={{ display: "inline-block", padding: "4px 12px", background: "#d87307", borderRadius: 4, fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#FFFFFF", marginBottom: 20 }}>
                   Featured Conversation
                 </span>
@@ -257,16 +259,18 @@ export default function ResourcesPage() {
                 <p style={{ fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 28 }}>
                   Michael Doyle joins Magnetic Rise to discuss why branding is more than a logo or visual identity. Discover how strong positioning, consistent messaging, and a clearly defined brand can influence customer trust, business growth, and long-term enterprise value.
                 </p>
-                <a href="https://www.youtube.com/watch?v=uteuCEBzWws" target="_blank" rel="noopener noreferrer" style={{
-                  fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
-                  letterSpacing: "0.08em", textTransform: "uppercase", textDecoration: "none",
-                  color: "#d87307", transition: "color 0.2s",
-                }}
-                onMouseEnter={e => (e.currentTarget.style.color = "#b8691f")}
-                onMouseLeave={e => (e.currentTarget.style.color = "#d87307")}
-                >
-                  Watch the Interview →
-                </a>
+                <div style={{ textAlign: "center" }}>
+                  <a href="https://www.youtube.com/watch?v=uteuCEBzWws" target="_blank" rel="noopener noreferrer" style={{
+                    fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
+                    letterSpacing: "0.08em", textTransform: "uppercase", textDecoration: "none",
+                    color: "#d87307", transition: "color 0.2s",
+                  }}
+                  onMouseEnter={e => (e.currentTarget.style.color = "#b8691f")}
+                  onMouseLeave={e => (e.currentTarget.style.color = "#d87307")}
+                  >
+                    Watch the Interview →
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -274,7 +278,8 @@ export default function ResourcesPage() {
 
         <style>{`
           @media (max-width: 700px) {
-            .res-featured-grid { grid-template-columns: 1fr !important; }
+            .res-featured-grid { grid-template-columns: 1fr !important; gap: 0 !important; }
+            .res-featured-thumb-wrap, .res-featured-text-wrap { padding: 28px 24px !important; }
           }
         `}</style>
       </section>
