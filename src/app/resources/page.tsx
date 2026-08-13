@@ -233,8 +233,8 @@ export default function ResourcesPage() {
             borderRadius: 14, overflow: "hidden",
           }}>
             <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))", zIndex: 2 }} />
-            <div className="res-featured-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
-              <a href="https://www.youtube.com/watch?v=uteuCEBzWws" target="_blank" rel="noopener noreferrer" aria-label="Watch the Interview" className="res-featured-thumb-link" style={{ position: "relative", display: "block", overflow: "hidden", background: "#0F1B2D" }}>
+            <div className="res-featured-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", alignItems: "center" }}>
+              <a href="https://www.youtube.com/watch?v=uteuCEBzWws" target="_blank" rel="noopener noreferrer" aria-label="Watch the Interview" className="res-featured-thumb-link" style={{ position: "relative", display: "block", overflow: "hidden", background: "#0F1B2D", aspectRatio: "16 / 9" }}>
                 <img
                   loading="lazy"
                   src="https://i.ytimg.com/vi/uteuCEBzWws/hqdefault.jpg"
@@ -275,7 +275,6 @@ export default function ResourcesPage() {
         <style>{`
           @media (max-width: 700px) {
             .res-featured-grid { grid-template-columns: 1fr !important; }
-            .res-featured-thumb-link { aspect-ratio: 4 / 3 !important; }
           }
         `}</style>
       </section>
