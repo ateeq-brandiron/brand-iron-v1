@@ -492,7 +492,7 @@ export default function GTMPage() {
                   <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(255,255,255,0.55)", marginBottom: 10 }}>Typical Activities</p>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
                     {activities.map(a => (
-                      <span key={a} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, color: "rgba(255,255,255,0.85)", background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 4, padding: "3px 8px" }}>{a}</span>
+                      <span key={a} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.85)", background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 4, padding: "3px 8px" }}>{a}</span>
                     ))}
                   </div>
                 </div>

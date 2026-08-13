@@ -299,7 +299,7 @@ export default function ServicesPage() {
                   letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none",
                   background: "#d87307", color: "#FFFFFF", transition: "background 0.2s",
                 }}
-                onMouseEnter={e => (e.currentTarget.style.background = "#b8691f")}
+                onMouseEnter={e => (e.currentTarget.style.background = "#c46305")}
                 onMouseLeave={e => (e.currentTarget.style.background = "#d87307")}
                 >
                   Book a Strategy Session

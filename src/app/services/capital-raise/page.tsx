@@ -433,7 +433,7 @@ export default function CapitalRaisePage() {
                   <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: "#aaa", marginBottom: 10 }}>Focus Areas</p>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
                     {focuses.map(f => (
-                      <span key={f} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, color: "#666", background: "rgba(216,115,7,0.08)", borderRadius: 4, padding: "3px 8px" }}>{f}</span>
+                      <span key={f} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 600, color: "#6b5a3e", background: "#F2ECDF", borderRadius: 4, padding: "3px 8px" }}>{f}</span>
                     ))}
                   </div>
                 </div>
@@ -544,7 +544,7 @@ export default function CapitalRaisePage() {
                   <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#d87307", marginBottom: 8 }}>Primary Outcome</p>
                   <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, lineHeight: 1.6, color: "#444", marginBottom: 16, fontStyle: "italic" }}>{outcome}</p>
                   <Link href={href} style={{ display: "inline-flex", alignItems: "center", gap: 8, color: "#d87307", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: "0.08em", textTransform: "uppercase", textDecoration: "none", borderBottom: "1px solid transparent", transition: "color 0.2s, border-color 0.2s" }}
-                    onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = "#a85c05"; (e.currentTarget as HTMLAnchorElement).style.borderBottomColor = "#a85c05"; }}
+                    onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = "#b8691f"; (e.currentTarget as HTMLAnchorElement).style.borderBottomColor = "#b8691f"; }}
                     onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color = "#d87307"; (e.currentTarget as HTMLAnchorElement).style.borderBottomColor = "transparent"; }}
                   >
                     {cta} →
@@ -656,10 +656,10 @@ export default function CapitalRaisePage() {
             <div style={{ textAlign: "center", paddingTop: 32, borderTop: "1px solid rgba(255,255,255,0.08)" }}>
               <Link href="/contact" style={{
                 display: "inline-flex", alignItems: "center", gap: 10,
-                fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
+                fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 14,
                 letterSpacing: "0.1em", textTransform: "uppercase",
                 background: "#d87307", color: "#FFFFFF", textDecoration: "none",
-                padding: "16px 32px", borderRadius: 8, transition: "background 0.2s",
+                padding: "16px 32px", borderRadius: 6, transition: "background 0.2s",
               }}
               onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
               onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}

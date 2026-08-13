@@ -422,7 +422,7 @@ export default function Home() {
           <div className="home-journey-grid" style={{ display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 64, alignItems: "center", marginBottom: 56 }}>
             {/* Text — left */}
             <div>
-              <h2 className={`reveal${s3InView ? " visible" : ""}`} style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 28 }}>
+              <h2 className={`reveal${s3InView ? " visible" : ""}`} style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.25, marginBottom: 28 }}>
                 The Buying Journey Has Changed.<br />Has Your Business?
               </h2>
               <p className={`reveal${s3InView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", marginBottom: 18 }}>
@@ -580,7 +580,7 @@ export default function Home() {
         <div role="img" aria-label="Hay bale field at sunset with warm golden light" style={{ position: "absolute", inset: 0, background: "rgba(245,240,232,0.93)" }} />
         <div style={{ position: "absolute", inset: 0, backgroundImage: "url('/images/home/home-dark-mountains-pattern.webp')", backgroundSize: "60% auto", backgroundPosition: "center bottom", backgroundRepeat: "no-repeat", opacity: 0.06 }} />
         <div ref={s3problemsRef} style={{ position: "relative", zIndex: 1, maxWidth: 1100, margin: "0 auto" }}>
-          <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 32, textAlign: "left" }}>Common Growth Challenges</h2>
+          <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.25, marginBottom: 32, textAlign: "left" }}>Common Growth Challenges</h2>
           <div className="home-problems-grid" style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 20 }}>
             {problems.map(({ heading, body }, i) => (
               <div key={i} className="growth-card" style={{
@@ -633,7 +633,7 @@ export default function Home() {
             <div className="home-diff-hero-grid" style={{ display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 64, alignItems: "center", marginBottom: 56 }}>
               {/* Text — left */}
               <div>
-                <h2 className={`reveal${s4InView ? " visible" : ""}`} style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 28 }}>What Makes Brand Iron Different</h2>
+                <h2 className={`reveal${s4InView ? " visible" : ""}`} style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.25, marginBottom: 28 }}>What Makes Brand Iron Different</h2>
                 <p className={`reveal${s4InView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", marginBottom: 18 }}>
                   AI is transforming how businesses grow, but technology alone has never been a strategy.
                 </p>
@@ -744,13 +744,11 @@ export default function Home() {
               className="services-carousel-arrow"
               style={{
                 position: "absolute", left: -8, top: "50%", transform: "translateY(-50%)", zIndex: 2,
-                width: 44, height: 44, borderRadius: "50%", background: "#FFFFFF",
-                border: "1px solid #ddd", cursor: "pointer",
+                width: 44, height: 44, borderRadius: "50%", background: "#F9F8F6",
+                border: "1px solid #EEEBE7", cursor: "pointer",
                 display: "flex", alignItems: "center", justifyContent: "center",
-                boxShadow: "0 4px 16px rgba(0,0,0,0.1)", transition: "border-color 0.2s",
+                boxShadow: "0 4px 16px rgba(0,0,0,0.1)", transition: "border-color 0.2s, background 0.2s",
               }}
-              onMouseEnter={e => ((e.currentTarget as HTMLButtonElement).style.borderColor = "#d87307")}
-              onMouseLeave={e => ((e.currentTarget as HTMLButtonElement).style.borderColor = "#ddd")}
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </button>
@@ -792,7 +790,7 @@ export default function Home() {
                     <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.65, color: "#555", marginBottom: 14 }}>{body}</p>
                     <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 6, marginBottom: 18 }}>
                       {solutions.map(s => (
-                        <span key={s} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 600, color: "#6b5a3e", background: "#F2ECDF", padding: "5px 11px", borderRadius: 20 }}>
+                        <span key={s} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 600, color: "#6b5a3e", background: "#F2ECDF", padding: "3px 8px", borderRadius: 4 }}>
                           {s}
                         </span>
                       ))}
@@ -835,13 +833,11 @@ export default function Home() {
               className="services-carousel-arrow"
               style={{
                 position: "absolute", right: -8, top: "50%", transform: "translateY(-50%)", zIndex: 2,
-                width: 44, height: 44, borderRadius: "50%", background: "#FFFFFF",
-                border: "1px solid #ddd", cursor: "pointer",
+                width: 44, height: 44, borderRadius: "50%", background: "#F9F8F6",
+                border: "1px solid #EEEBE7", cursor: "pointer",
                 display: "flex", alignItems: "center", justifyContent: "center",
-                boxShadow: "0 4px 16px rgba(0,0,0,0.1)", transition: "border-color 0.2s",
+                boxShadow: "0 4px 16px rgba(0,0,0,0.1)", transition: "border-color 0.2s, background 0.2s",
               }}
-              onMouseEnter={e => ((e.currentTarget as HTMLButtonElement).style.borderColor = "#d87307")}
-              onMouseLeave={e => ((e.currentTarget as HTMLButtonElement).style.borderColor = "#ddd")}
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </button>
@@ -1001,16 +997,15 @@ export default function Home() {
             <button
               aria-label="Previous testimonial"
               onClick={() => setTestimonialIndex(i => (i - 1 + testimonials.length) % testimonials.length)}
+              className="home-testimonial-arrow"
               style={{
-                width: 40, height: 40, borderRadius: "50%", background: "#FFFFFF",
-                border: "1px solid #ddd", cursor: "pointer",
+                width: 44, height: 44, borderRadius: "50%", background: "#F9F8F6",
+                border: "1px solid #EEEBE7", cursor: "pointer",
                 display: "flex", alignItems: "center", justifyContent: "center",
-                transition: "border-color 0.2s",
+                transition: "border-color 0.2s, background 0.2s",
               }}
-              onMouseEnter={e => ((e.currentTarget as HTMLButtonElement).style.borderColor = "#d87307")}
-              onMouseLeave={e => ((e.currentTarget as HTMLButtonElement).style.borderColor = "#ddd")}
             >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </button>
             <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
               {testimonials.map((_, i) => (
@@ -1031,16 +1026,15 @@ export default function Home() {
             <button
               aria-label="Next testimonial"
               onClick={() => setTestimonialIndex(i => (i + 1) % testimonials.length)}
+              className="home-testimonial-arrow"
               style={{
-                width: 40, height: 40, borderRadius: "50%", background: "#FFFFFF",
-                border: "1px solid #ddd", cursor: "pointer",
+                width: 44, height: 44, borderRadius: "50%", background: "#F9F8F6",
+                border: "1px solid #EEEBE7", cursor: "pointer",
                 display: "flex", alignItems: "center", justifyContent: "center",
-                transition: "border-color 0.2s",
+                transition: "border-color 0.2s, background 0.2s",
               }}
-              onMouseEnter={e => ((e.currentTarget as HTMLButtonElement).style.borderColor = "#d87307")}
-              onMouseLeave={e => ((e.currentTarget as HTMLButtonElement).style.borderColor = "#ddd")}
             >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </button>
           </div>
         </div>
@@ -1049,6 +1043,9 @@ export default function Home() {
           .testimonial-card { padding: 52px 56px; min-height: 440px; }
           @media (max-width: 640px) {
             .testimonial-card { padding: 32px 24px; min-height: 610px; }
+          }
+          .services-carousel-arrow:hover, .home-testimonial-arrow:hover {
+            border-color: #d87307 !important; background: rgba(216,115,7,0.08) !important;
           }
         `}</style>
         <style>{`

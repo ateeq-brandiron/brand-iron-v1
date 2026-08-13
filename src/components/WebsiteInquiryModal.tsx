@@ -98,7 +98,7 @@ export default function WebsiteInquiryModal({ onClose }: { onClose: () => void }
               <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 10 }}>
                 Website Optimization Review Form
               </p>
-              <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 3vw, 32px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.15, marginBottom: 8 }}>
+              <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 3vw, 32px)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.04em", color: "#FFFFFF", lineHeight: 1.15, marginBottom: 8 }}>
                 Let&apos;s Build a Website That Supports Your Business Goals
               </h2>
               <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, color: "rgba(255,255,255,0.65)", lineHeight: 1.7, marginBottom: 28, maxWidth: 540 }}>
@@ -184,11 +184,11 @@ export default function WebsiteInquiryModal({ onClose }: { onClose: () => void }
                   <path d="M20 6L9 17l-5-5" stroke="#d87307" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
-              <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 28, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.06em", color: "#FFFFFF", marginBottom: 12 }}>
+              <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 28, fontWeight: 400, textTransform: "uppercase", letterSpacing: "0.06em", color: "#FFFFFF", marginBottom: 12 }}>
                 Request Received!
               </h2>
-              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, color: "rgba(255,255,255,0.75)", lineHeight: 1.75, maxWidth: 440, margin: "0 auto 32px" }}>
-                We&apos;ll review your requirements and follow up with a tailored website optimization review within 1–2 business days.
+              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, color: "rgba(255,255,255,0.75)", lineHeight: 1.75, maxWidth: 420, margin: "0 auto 32px" }}>
+                We&apos;ll review <strong style={{ color: "#d87307" }}>{form.website || "your website"}</strong> and follow up with a tailored website optimization review within 1–2 business days.
               </p>
               <button onClick={onClose} style={{
                 padding: "14px 40px", background: "transparent",

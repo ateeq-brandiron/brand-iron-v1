@@ -237,7 +237,7 @@ export default function AIVisibilityPage() {
                   transition: "background 0.2s, transform 0.15s",
                   boxShadow: "0 4px 20px rgba(216,115,7,0.35)",
                 }}
-                onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.background = "#b8691f"; (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(-2px)"; }}
+                onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.background = "#c46305"; (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(-2px)"; }}
                 onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.background = "#d87307"; (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(0)"; }}
                 >
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
@@ -592,7 +592,7 @@ export default function AIVisibilityPage() {
                     background: "#d87307", display: "flex", alignItems: "center", justifyContent: "center",
                     transition: "background 0.2s, transform 0.2s",
                   }}
-                  onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.background = "#b8691f"; (e.currentTarget as HTMLAnchorElement).style.transform = "translateX(3px)"; }}
+                  onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.background = "#c46305"; (e.currentTarget as HTMLAnchorElement).style.transform = "translateX(3px)"; }}
                   onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.background = "#d87307"; (e.currentTarget as HTMLAnchorElement).style.transform = "translateX(0)"; }}
                   >
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#FFFFFF" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -709,7 +709,7 @@ export default function AIVisibilityPage() {
                     background: "#d87307", color: "#FFFFFF",
                     transition: "background 0.2s",
                   }}
-                    onMouseEnter={e => (e.currentTarget.style.background = "#b8691f")}
+                    onMouseEnter={e => (e.currentTarget.style.background = "#c46305")}
                     onMouseLeave={e => (e.currentTarget.style.background = "#d87307")}
                   >
                     Explore {tier} →
