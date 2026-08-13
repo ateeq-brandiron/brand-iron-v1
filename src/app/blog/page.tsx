@@ -322,11 +322,8 @@ export default function InsightsPage() {
           <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 2.8vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 16, lineHeight: 1.2 }}>
             Subscribe to Insights
           </h2>
-          <p style={{ fontSize: 15, lineHeight: 1.75, color: "#555", marginBottom: 6 }}>
-            Stay informed with expert perspectives on branding, AI visibility, GTM strategy, and revenue growth.
-          </p>
           <p style={{ fontSize: 15, lineHeight: 1.75, color: "#555", marginBottom: 28 }}>
-            Receive the latest articles, industry updates, and strategic insights delivered directly to your inbox.
+            Stay informed with expert perspectives on branding, AI visibility, GTM strategy, and revenue growth. Receive the latest articles, industry updates, and strategic insights delivered directly to your inbox.
           </p>
           <form onSubmit={e => { e.preventDefault(); setSubscribeEmail(""); }} style={{ display: "flex", maxWidth: 420, margin: "0 auto" }}>
             <input
