@@ -427,11 +427,8 @@ export default function ResourcesPage() {
           <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 2.8vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 16, lineHeight: 1.2 }}>
             Keep Your Edge Sharp
           </h2>
-          <p style={{ fontSize: 15, lineHeight: 1.75, color: "#555", marginBottom: 6 }}>
-            Get notified when we release new articles, interviews, podcasts, strategic insights, and educational resources.
-          </p>
           <p style={{ fontSize: 15, lineHeight: 1.75, color: "#555", marginBottom: 28 }}>
-            No noise. No empty marketing talk. Just practical ideas built to help you strengthen your brand and grow your business.
+            Get notified when we release new articles, interviews, podcasts, strategic insights, and educational resources. No noise. No empty marketing talk. Just practical ideas built to help you strengthen your brand and grow your business.
           </p>
           <form onSubmit={e => { e.preventDefault(); setSubscribeEmail(""); }} style={{ display: "flex", maxWidth: 420, margin: "0 auto" }}>
             <input
