@@ -192,11 +192,8 @@ export default function ServicesPage() {
               border: "1px solid rgba(255,255,255,0.15)", borderRadius: 12,
               padding: "clamp(20px, 2.6vw, 32px)",
             }}>
-              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.85)", marginBottom: 14 }}>
-                Strategy, visibility, and revenue systems that work together, not isolated services, but one connected growth engine.
-              </p>
-              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.8)" }}>
-                Every engagement starts with understanding your business first, then connects the right combination of these four capabilities to build toward one outcome: sustainable, measurable revenue growth.
+              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.85)" }}>
+                Strategy, visibility, and revenue systems that work together, not isolated services, but one connected growth engine. Every engagement starts with understanding your business first, then connects the right combination of these four capabilities to build toward one outcome: sustainable, measurable revenue growth.
               </p>
             </div>
           </div>

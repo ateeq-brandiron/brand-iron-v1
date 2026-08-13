@@ -193,11 +193,8 @@ export default function AboutPage() {
               border: "1px solid rgba(255,255,255,0.15)", borderRadius: 12,
               padding: "clamp(20px, 2.6vw, 32px)",
             }}>
-              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.85)", marginBottom: 14 }}>
-                We&apos;re a full-service strategic branding and marketing agency: brand strategy, go-to-market execution, AI visibility, capital raise support, and website development, all under one roof.
-              </p>
-              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.8)" }}>
-                We&apos;re operators, not just advisors. We build alongside our clients, stand behind the work, and measure ourselves by the same outcomes they do.
+              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.85)" }}>
+                We&apos;re a full-service strategic branding and marketing agency: brand strategy, go-to-market execution, AI visibility, capital raise support, and website development, all under one roof. We&apos;re operators, not just advisors. We build alongside our clients, stand behind the work, and measure ourselves by the same outcomes they do.
               </p>
             </div>
           </div>

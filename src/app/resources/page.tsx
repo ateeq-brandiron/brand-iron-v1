@@ -206,11 +206,8 @@ export default function ResourcesPage() {
               border: "1px solid rgba(255,255,255,0.15)", borderRadius: 12,
               padding: "clamp(20px, 2.6vw, 32px)",
             }}>
-              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.85)", marginBottom: 14 }}>
-                Explore interviews, podcasts, videos, and published features covering branding, leadership, capital raising, business transformation, and revenue growth.
-              </p>
-              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.8)" }}>
-                Whether you&apos;re building a company, repositioning an established brand, preparing to raise capital, or looking for your next stage of growth, these conversations offer practical lessons from Brand Iron CEO Michael Doyle and other experienced business leaders.
+              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.85)" }}>
+                Explore interviews, podcasts, videos, and published features covering branding, leadership, capital raising, business transformation, and revenue growth. Whether you&apos;re building a company, repositioning an established brand, preparing to raise capital, or looking for your next stage of growth, these conversations offer practical lessons from Brand Iron CEO Michael Doyle and other experienced business leaders.
               </p>
             </div>
           </div>

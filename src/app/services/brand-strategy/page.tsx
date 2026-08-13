@@ -350,11 +350,8 @@ export default function BrandStrategyPage() {
               border: "1px solid rgba(255,255,255,0.15)", borderRadius: 12,
               padding: "clamp(20px, 2.6vw, 32px)",
             }}>
-              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.85)", marginBottom: 14 }}>
-                A strong brand does more than look the part. It stakes out your position, earns trust, and gives your team a clear direction.
-              </p>
-              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.8)" }}>
-                At Brand Iron, we forge strategy, messaging, identity, digital experiences, and go-to-market execution into one connected brand system built to drive growth.
+              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.85)" }}>
+                A strong brand does more than look the part. It stakes out your position, earns trust, and gives your team a clear direction. At Brand Iron, we forge strategy, messaging, identity, digital experiences, and go-to-market execution into one connected brand system built to drive growth.
               </p>
             </div>
           </div>

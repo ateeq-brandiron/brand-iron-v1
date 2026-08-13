@@ -250,11 +250,8 @@ export default function RevenueEngineeringPage() {
               border: "1px solid rgba(255,255,255,0.15)", borderRadius: 12,
               padding: "clamp(20px, 2.6vw, 32px)",
             }}>
-              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.85)", marginBottom: 14 }}>
-                More leads will not fix a broken system. Revenue Engineering connects your marketing, sales, CRM, automation, funnels, and reporting into one hard-working growth machine.
-              </p>
-              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.8)" }}>
-                We find the leaks. Fix the handoffs. Automate the grind. Track what drives revenue.
+              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.85)" }}>
+                More leads will not fix a broken system. Revenue Engineering connects your marketing, sales, CRM, automation, funnels, and reporting into one hard-working growth machine. We find the leaks. Fix the handoffs. Automate the grind. Track what drives revenue.
               </p>
             </div>
           </div>

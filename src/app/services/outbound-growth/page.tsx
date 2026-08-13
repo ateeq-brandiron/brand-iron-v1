@@ -251,11 +251,8 @@ export default function OutboundGrowthPage() {
               border: "1px solid rgba(255,255,255,0.15)", borderRadius: 12,
               padding: "clamp(20px, 2.6vw, 32px)",
             }}>
-              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.85)", marginBottom: 14 }}>
-                Brand Iron builds outbound growth systems that put your business in front of the right decision-makers: LinkedIn, email, SDR outreach, appointment setting, and sales enablement.
-              </p>
-              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.8)" }}>
-                No random prospecting. No spray-and-pray campaigns. No wasted motion. Just a smarter path from cold prospect to real sales conversation.
+              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.85)" }}>
+                Brand Iron builds outbound growth systems that put your business in front of the right decision-makers: LinkedIn, email, SDR outreach, appointment setting, and sales enablement. No random prospecting. No spray-and-pray campaigns. No wasted motion. Just a smarter path from cold prospect to real sales conversation.
               </p>
             </div>
           </div>

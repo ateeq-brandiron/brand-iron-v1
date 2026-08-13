@@ -256,11 +256,8 @@ export default function AIVisibilityPage() {
               border: "1px solid rgba(255,255,255,0.15)", borderRadius: 12,
               padding: "clamp(20px, 2.6vw, 32px)",
             }}>
-              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.85)", marginBottom: 14 }}>
-                Search behavior has evolved. Today&apos;s buyers research through ChatGPT, Gemini, Claude, Perplexity, voice assistants, industry communities, and search engines long before contacting a company. If your business isn&apos;t visible where those decisions begin, you&apos;re missing opportunities before sales can engage.
-              </p>
-              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.8)", marginBottom: 20 }}>
-                Brand Iron helps organizations improve AI Visibility by integrating SEO, AEO, GEO, technical optimization, entity development, authority building, and strategic content into one connected visibility strategy.
+              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.85)", marginBottom: 20 }}>
+                Search behavior has evolved. Today&apos;s buyers research through ChatGPT, Gemini, Claude, Perplexity, voice assistants, industry communities, and search engines long before contacting a company. If your business isn&apos;t visible where those decisions begin, you&apos;re missing opportunities before sales can engage. Brand Iron helps organizations improve AI Visibility by integrating SEO, AEO, GEO, technical optimization, entity development, authority building, and strategic content into one connected visibility strategy.
               </p>
 
               <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "#FFFFFF", fontWeight: 700 }}>

@@ -175,11 +175,8 @@ export default function GTMPage() {
               border: "1px solid rgba(255,255,255,0.15)", borderRadius: 12,
               padding: "clamp(20px, 2.6vw, 32px)",
             }}>
-              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.85)", marginBottom: 14 }}>
-                Today&apos;s buyers evaluate options long before speaking with sales. They use AI platforms, compare competitors, read reviews, validate expertise, and seek trusted recommendations across multiple channels.
-              </p>
-              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.8)" }}>
-                Growth today requires more than marketing campaigns. It demands a connected go-to-market system that aligns strategy, visibility, demand generation, sales, automation, and revenue.
+              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.85)" }}>
+                Today&apos;s buyers evaluate options long before speaking with sales. They use AI platforms, compare competitors, read reviews, validate expertise, and seek trusted recommendations across multiple channels. Growth today requires more than marketing campaigns. It demands a connected go-to-market system that aligns strategy, visibility, demand generation, sales, automation, and revenue.
               </p>
             </div>
           </div>
