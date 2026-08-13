@@ -565,10 +565,10 @@ export default function AIVisibilityPage() {
                 transition: "transform 0.25s, box-shadow 0.25s",
                 transitionDelay: `${i * 0.07}s`,
                 overflow: "hidden",
-                boxShadow: "0 2px 12px rgba(0,0,0,0.04)",
+                boxShadow: "0 4px 20px rgba(0,0,0,0.06)",
               }}
-              onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(-6px)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 16px 48px rgba(0,0,0,0.12)"; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 2px 12px rgba(0,0,0,0.04)"; }}
+              onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(-6px)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 16px 44px rgba(0,0,0,0.12)"; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 4px 20px rgba(0,0,0,0.06)"; }}
               >
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, transparent, rgba(216,115,7,0.4), transparent)" }} />
                 <div style={{ width: 56, height: 56, borderRadius: "50%", background: "#FFFFFF", border: "1.5px solid rgba(216,115,7,0.35)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 18 }}>
@@ -686,10 +686,10 @@ export default function AIVisibilityPage() {
                   borderLeft: "4px solid #d87307",
                   display: "flex", flexDirection: "column",
                   transition: "box-shadow 0.25s, transform 0.25s",
-                  boxShadow: "0 2px 16px rgba(0,0,0,0.05)",
+                  boxShadow: "0 4px 20px rgba(0,0,0,0.06)",
                 }}
-                onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = "0 12px 40px rgba(216,115,7,0.15)"; (e.currentTarget as HTMLDivElement).style.transform = "translateY(-3px)"; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = "0 2px 16px rgba(0,0,0,0.05)"; (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; }}
+                onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = "0 16px 44px rgba(216,115,7,0.15)"; (e.currentTarget as HTMLDivElement).style.transform = "translateY(-6px)"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = "0 4px 20px rgba(0,0,0,0.06)"; (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; }}
                 >
                   <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#d87307", marginBottom: 8 }}>
                     Choose {tier} if…

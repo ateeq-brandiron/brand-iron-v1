@@ -272,7 +272,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           @media (max-width: 600px) {
             .article-related-grid { grid-template-columns: 1fr !important; }
           }
-          .related-card:hover { background: rgba(216,115,7,0.07) !important; border-color: rgba(216,115,7,0.3) !important; transform: translateY(-3px); }
+          .related-card:hover { background: rgba(216,115,7,0.07) !important; border-color: rgba(216,115,7,0.25) !important; transform: translateY(-4px); }
           .back-link:hover { color: #d87307 !important; }
           .cta-btn-primary:hover { background: #c46305 !important; }
           .cta-btn-secondary:hover { color: #f0a860 !important; border-color: rgba(240,168,96,0.6) !important; }
