@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import CircuitOverlay from "@/components/CircuitOverlay";
 import { articles } from "@/data/articles";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import FaqAccordion from "@/components/FaqAccordion";
 
 export function generateStaticParams() {
   return articles.map(a => ({ slug: a.slug }));
@@ -188,22 +189,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             if (block.type === "faq") {
               return (
                 <div key={i} style={{ marginBottom: 22 }}>
-                  {block.items.map((item, fi) => (
-                    <details key={fi} className="faq-item" style={{
-                      borderBottom: "1px solid #EEEBE7", padding: "18px 0",
-                    }}>
-                      <summary style={{
-                        cursor: "pointer", listStyle: "none", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16,
-                        fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 16, color: "#1a1a1a",
-                      }}>
-                        {item.q}
-                        <span className="faq-icon" style={{ flex: "0 0 auto", color: "#d87307", fontSize: 20, lineHeight: 1, transition: "transform 0.2s" }}>+</span>
-                      </summary>
-                      <p style={{ fontSize: 16, lineHeight: 1.8, color: "#444", marginTop: 14, marginBottom: 0 }}>
-                        {item.a}
-                      </p>
-                    </details>
-                  ))}
+                  <FaqAccordion faqs={block.items} />
                 </div>
               );
             }
@@ -290,9 +276,6 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           .back-link:hover { color: #d87307 !important; }
           .cta-btn-primary:hover { background: #c46305 !important; }
           .cta-btn-secondary:hover { color: #f0a860 !important; border-color: rgba(240,168,96,0.6) !important; }
-          .faq-item summary { outline: none; }
-          .faq-item summary::-webkit-details-marker { display: none; }
-          .faq-item[open] .faq-icon { transform: rotate(45deg); }
         `}</style>
       </section>
 
