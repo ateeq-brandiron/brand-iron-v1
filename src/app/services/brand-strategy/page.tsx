@@ -612,6 +612,7 @@ export default function BrandStrategyPage() {
             style={{
               display: "flex", gap: 20, overflowX: "auto",
               scrollSnapType: "x mandatory", scrollBehavior: "smooth",
+              paddingTop: 12, marginTop: -12,
             }}
           >
             {coreServices.map(({ num, title, body, deliverable, outcome, scope, icon }, i) => (

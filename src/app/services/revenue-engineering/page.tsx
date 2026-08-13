@@ -333,6 +333,7 @@ export default function RevenueEngineeringPage() {
             style={{
               display: "flex", gap: 20, overflowX: "auto",
               scrollSnapType: "x mandatory", scrollBehavior: "smooth",
+              paddingTop: 12, marginTop: -12,
             }}
           >
             {coreServices.map(({ num, title, lead, body, items, outcome, icon }, i) => (
