@@ -3,6 +3,8 @@ import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import CircuitOverlay from "@/components/CircuitOverlay";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import PortfolioGallery from "@/components/PortfolioGallery";
+import { portfolioItems } from "@/data/portfolio";
 
 function useInView(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null);
@@ -24,51 +26,6 @@ const stats = [
   { number: "25+", label: "Industries Served" },
   { number: "20+", label: "Years in the Saddle" },
   { number: "Award-Winning", label: "Strategy & Creative" },
-];
-
-const selectedWork = [
-  {
-    category: "Brand Strategy & Positioning",
-    headline: "Stake Your Claim.",
-    body: "A brand without clear positioning gets lost in the crowd. We help businesses define what they stand for, who they serve, and why the market should pay attention. The result is a sharper position, stronger message, and a brand built to hold its ground.",
-    services: ["Brand Strategy", "Positioning", "Messaging", "Identity"],
-    icon: (<img loading="lazy" src="/images/icons/icon-lightbulb.svg" alt="" style={{ width: 22, height: 22 }} />),
-  },
-  {
-    category: "Website & Digital Experience",
-    headline: "Build a Stronger Front Door.",
-    body: "Your website is often where the first handshake happens. We create digital experiences that make the right first impression, communicate value clearly, and guide visitors toward action. Built for credibility. Built for conversion. Built to keep working long after launch.",
-    services: ["Website Design", "UX", "Messaging", "Conversion Optimization"],
-    icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="#d87307" strokeWidth="1.8"/><path d="M3 9h18" stroke="#d87307" strokeWidth="1.8"/><circle cx="6.5" cy="6.5" r="0.75" fill="#d87307"/><circle cx="9" cy="6.5" r="0.75" fill="#d87307"/></svg>),
-  },
-  {
-    category: "Go-To-Market Strategy",
-    headline: "Know the Territory. Make Your Move.",
-    body: "Going to market without a clear strategy is like riding blind. We help businesses understand the landscape, identify the right audience, sharpen the offer, and build a practical path from market entry to measurable growth.",
-    services: ["Market Research", "ICP Development", "GTM Strategy", "Demand Generation"],
-    icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2c3 2 5 6 5 10 0 2-1 4-2 5l-3 2-3-2c-1-1-2-3-2-5 0-4 2-8 5-10Z" stroke="#d87307" strokeWidth="1.6" strokeLinejoin="round" /><circle cx="12" cy="10" r="2" stroke="#d87307" strokeWidth="1.5" /><path d="M8 16l-3 5M16 16l3 5" stroke="#d87307" strokeWidth="1.6" strokeLinecap="round" /></svg>),
-  },
-  {
-    category: "Capital Raise Strategy",
-    headline: "Make the Story Worth Backing.",
-    body: "Capital follows confidence. We help companies tell a stronger investor story through clear positioning, compelling narratives, and raise materials built to communicate the opportunity with clarity. No smoke. No fluff. Just a stronger case for why the business deserves attention.",
-    services: ["Investor Positioning", "Pitch Decks", "Financial Narrative", "Raise Strategy"],
-    icon: (<img loading="lazy" src="/images/icons/icon-briefcase.svg" alt="" style={{ width: 22, height: 22 }} />),
-  },
-  {
-    category: "AI Visibility & Discoverability",
-    headline: "Be Found Where the Market Is Looking.",
-    body: "Discovery is moving beyond traditional search. We help businesses strengthen the signals that make them easier to find, understand, trust, and recommend across search engines and AI-driven platforms. Because being good isn't enough if nobody can find you.",
-    services: ["AI Visibility", "AEO", "GEO", "Entity Optimization", "Search Strategy"],
-    icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="10" cy="10" r="6.5" stroke="#d87307" strokeWidth="1.8" /><path d="M15 15l5 5" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round" /></svg>),
-  },
-  {
-    category: "Revenue Growth & Automation",
-    headline: "Turn Momentum Into a System.",
-    body: "Growth shouldn't depend on luck. We connect marketing, sales, automation, funnels, and reporting into a more consistent system designed to create demand, improve follow-up, and strengthen revenue performance. Less chasing. More traction.",
-    services: ["Revenue Strategy", "Automation", "CRM", "Funnels", "Reporting"],
-    icon: (<img loading="lazy" src="/images/icons/icon-trending.svg" alt="" style={{ width: 22, height: 22 }} />),
-  },
 ];
 
 const processSteps = [
@@ -147,7 +104,7 @@ export default function PortfolioPage() {
               </h1>
 
               <div className="hero-btns-anim" style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center" }}>
-                <a href="#case-studies" style={{
+                <a href="#gallery" style={{
                   display: "inline-flex", alignItems: "center",
                   fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 14,
                   background: "#d87307", color: "#FFFFFF",
@@ -230,7 +187,7 @@ export default function PortfolioPage() {
           <p className={`reveal${s3ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 32 }}>
             Good-looking work is only part of the job. The real work is creating a brand people understand, trust, and choose. We partner with organizations that are ready to sharpen their story, stake out a stronger position, and build momentum across branding, go-to-market, digital, capital raising, visibility, and revenue growth.
           </p>
-          <a href="#case-studies" className={`reveal${s3ViewInView ? ' visible' : ''}`} style={{
+          <a href="#gallery" className={`reveal${s3ViewInView ? ' visible' : ''}`} style={{
             display: "inline-block", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
             letterSpacing: "0.14em", textTransform: "uppercase", textDecoration: "none",
             background: "#d87307", color: "#FFFFFF",
@@ -242,59 +199,16 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      {/* ── S4: SELECTED WORK ────────────────────────────────── */}
-      <section style={{ background: "#F9F8F6", padding: "80px 40px 120px" }}>
+      {/* ── S4: SELECTED WORK (GALLERY) ──────────────────────── */}
+      <section id="gallery" style={{ background: "#F9F8F6", padding: "80px 40px 120px" }}>
         <div ref={s4ViewRef} style={{ maxWidth: 1200, margin: "0 auto" }}>
           <h2 className={`section-heading reveal${s4ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 48 }}>
             Selected Work
           </h2>
-          <div className="pf-work-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
-            {selectedWork.map(({ category, headline, body, services, icon }, i) => (
-              <div key={category}
-                className={`reveal${s4ViewInView ? ' visible' : ''} pf-work-card`}
-                style={{
-                  position: "relative", background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 14,
-                  padding: "32px 28px", display: "flex", flexDirection: "column", overflow: "hidden",
-                  transitionDelay: `${(i % 6) * 0.06}s`,
-                  transition: "transform 0.25s, box-shadow 0.25s, border-color 0.25s",
-                }}
-              >
-                <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
-                <div style={{ width: 44, height: 44, borderRadius: 10, background: "rgba(216,115,7,0.12)", border: "1px solid rgba(216,115,7,0.2)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 18 }}>
-                  {icon}
-                </div>
-                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#d87307", marginBottom: 10 }}>{category}</p>
-                <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 18, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", marginBottom: 12, lineHeight: 1.25 }}>{headline}</h3>
-                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.7, color: "#666", marginBottom: 20 }}>{body}</p>
-                <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 22 }}>
-                  {services.map(s => (
-                    <span key={s} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 600, color: "#6b5a3e", background: "#F2ECDF", borderRadius: 4, padding: "3px 8px" }}>{s}</span>
-                  ))}
-                </div>
-                <a href="#case-studies" style={{
-                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
-                  fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 12,
-                  letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none",
-                  background: "#d87307", color: "#FFFFFF",
-                  padding: "13px 20px", borderRadius: 6, marginTop: "auto",
-                  transition: "background 0.2s",
-                }}
-                onMouseEnter={e => (e.currentTarget.style.background = "#c46305")}
-                onMouseLeave={e => (e.currentTarget.style.background = "#d87307")}
-                >View the Work →</a>
-              </div>
-            ))}
+          <div className={`reveal${s4ViewInView ? ' visible' : ''}`}>
+            <PortfolioGallery items={portfolioItems} />
           </div>
         </div>
-        <style>{`
-          .pf-work-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(0,0,0,0.1); border-color: rgba(216,115,7,0.3) !important; }
-          @media (max-width: 900px) {
-            .pf-work-grid { grid-template-columns: repeat(2, 1fr) !important; }
-          }
-          @media (max-width: 600px) {
-            .pf-work-grid { grid-template-columns: 1fr !important; }
-          }
-        `}</style>
       </section>
 
       {/* ── S5: BEHIND THE BRAND ─────────────────────────────── */}
@@ -367,7 +281,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* ── S6: CASE STUDIES TEASER ───────────────────────────── */}
-      <section id="case-studies" style={{ background: "#FFFFFF", padding: "120px 40px" }}>
+      <section style={{ background: "#FFFFFF", padding: "120px 40px" }}>
         <div ref={s6ViewRef} style={{ maxWidth: 800, margin: "0 auto", textAlign: "center" }}>
           <h2 className={`section-heading reveal${s6ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20 }}>
             See What Happened After the Dust Settled.
@@ -375,9 +289,15 @@ export default function PortfolioPage() {
           <p className={`reveal${s6ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 32 }}>
             The finished work is only part of the story. Explore selected case studies to see the challenge, thinking, execution, and outcomes behind Brand Iron engagements.
           </p>
-          <p className={`reveal${s6ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 600, letterSpacing: "0.04em", color: "#999", fontStyle: "italic" }}>
-            Case studies are being finalized and will be published here soon.
-          </p>
+          <Link href="/case-studies" className={`reveal${s6ViewInView ? ' visible' : ''}`} style={{
+            display: "inline-block", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
+            letterSpacing: "0.14em", textTransform: "uppercase", textDecoration: "none",
+            background: "#d87307", color: "#FFFFFF",
+            padding: "14px 36px", borderRadius: 6, transition: "background 0.2s",
+          }}
+          onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
+          onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
+          >Explore Case Studies</Link>
         </div>
       </section>
 
