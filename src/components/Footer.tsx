@@ -1,6 +1,9 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
+
+const STANDALONE_ROUTES = ["/growth-review"];
 
 const navLinks = [
   ["Services", "/services"],
@@ -23,6 +26,9 @@ export default function Footer() {
   const [email, setEmail] = useState("");
   const [newsletterStatus, setNewsletterStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [newsletterError, setNewsletterError] = useState("");
+  const pathname = usePathname();
+
+  if (STANDALONE_ROUTES.includes(pathname)) return null;
 
   async function handleNewsletterSubmit(e: React.FormEvent) {
     e.preventDefault();

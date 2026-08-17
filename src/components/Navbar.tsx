@@ -2,6 +2,9 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+
+const STANDALONE_ROUTES = ["/growth-review"];
 
 const servicesMenu = [
   { label: "Brand Strategy", href: "/services/brand-strategy" },
@@ -25,6 +28,9 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const pathname = usePathname();
+
+  if (STANDALONE_ROUTES.includes(pathname)) return null;
 
   return (
     <nav style={{
