@@ -12,6 +12,7 @@ const navLinks = [
   ["Case Studies", "/case-studies"],
   ["Blog", "/blog"],
   ["Resources", "/resources"],
+  ["FAQ", "/faq"],
   ["Contact", "/contact"],
 ];
 
