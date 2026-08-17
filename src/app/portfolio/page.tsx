@@ -130,63 +130,79 @@ export default function PortfolioPage() {
       />
 
       {/* ── HERO ───────────────────────────────────────────── */}
-      <section style={{ background: "#FFFFFF", padding: "160px 40px 72px" }}>
-        <div className="pf-hero-grid" style={{ maxWidth: 1240, margin: "0 auto", display: "grid", gridTemplateColumns: "1.1fr 0.9fr", gap: 40, alignItems: "center" }}>
+      <section className="pf-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
+        <video
+          src="/videos/portfolio/portfolio-hero-blacksmith-forging.mp4"
+          aria-label="A blacksmith forging molten metal on an anvil, sparks flying, representing brands forged through strategy and craft"
+          autoPlay muted loop playsInline preload="auto"
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 55%" }}
+        />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.35) 0%, rgba(8,16,36,0.25) 45%, rgba(8,16,36,0.65) 100%)" }} />
 
-          {/* LEFT — kicker, headline, copy, CTA */}
-          <div>
-            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
-              Portfolio
-            </p>
-            <h1 style={{
-              fontFamily: "var(--font-burford-black), sans-serif",
-              fontWeight: 900, fontSize: "clamp(32px, 4.4vw, 56px)",
-              textTransform: "uppercase", letterSpacing: "0.02em", lineHeight: 1.08,
-              color: "#1a1a1a", marginBottom: 4,
-            }}>
-              Brands Forged<span style={{ color: "#d87307" }}>.</span>
-            </h1>
-            <h1 style={{
-              fontFamily: "var(--font-burford-black), sans-serif",
-              fontWeight: 900, fontSize: "clamp(32px, 4.4vw, 56px)",
-              textTransform: "uppercase", letterSpacing: "0.02em", lineHeight: 1.08,
-              color: "#1a1a1a", marginBottom: 24,
-            }}>
-              Growth Built to Last<span style={{ color: "#d87307" }}>.</span>
-            </h1>
-            <div style={{ width: 56, height: 3, background: "#d87307", marginBottom: 24 }} />
-            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#555", marginBottom: 32, maxWidth: 480 }}>
-              Strong brands aren&apos;t made by accident. They&apos;re built with clarity, grit, and a clear sense of where they&apos;re headed. At Brand Iron, we help companies sharpen their position, strengthen their presence, and build the strategy, creative, and growth systems needed to move forward with confidence. From the first spark to the final execution, our work is built to stand up in the real world.
-            </p>
-            <a href="#selected-work" style={{
-              display: "inline-flex", alignItems: "center", gap: 10,
-              fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
-              letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none",
-              background: "#d87307", color: "#FFFFFF",
-              padding: "16px 32px", borderRadius: 6, transition: "background 0.2s",
-            }}
-            onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
-            onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
-            >
-              Explore the Work
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-            </a>
-          </div>
+        <div className="pf-hero-wrap" style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", padding: "88px 24px 24px" }}>
+          <div className="pf-hero-grid" style={{ maxWidth: 1200, margin: "0 auto", width: "100%", display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 56, alignItems: "center" }}>
 
-          {/* RIGHT — cutout hero image */}
-          <div style={{ position: "relative" }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/portfolio/portfolio-hero-forge-cutout.jpg"
-              alt="A blacksmith's hammer striking glowing forged metal on an anvil, sparks flying"
-              style={{ width: "100%", height: "auto", display: "block" }}
-            />
+            {/* LEFT — kicker, headline, CTAs */}
+            <div>
+              <p className="hero-h1-anim" style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16, textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}>
+                Portfolio
+              </p>
+              <h1 className="hero-h1-anim" style={{
+                fontFamily: "var(--font-burford-inline), sans-serif",
+                fontWeight: 400, fontSize: "clamp(30px, 4.4vw, 58px)",
+                textTransform: "uppercase", letterSpacing: "0.02em", lineHeight: 0.92,
+                color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))",
+                marginBottom: 20,
+              }}>
+                Brands Forged<span style={{ color: "#d87307" }}>.</span><br />Growth Built to Last<span style={{ color: "#d87307" }}>.</span>
+              </h1>
+
+              <div className="hero-btns-anim" style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center" }}>
+                <a href="#selected-work" style={{
+                  display: "inline-flex", alignItems: "center",
+                  fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 14,
+                  background: "#d87307", color: "#FFFFFF",
+                  padding: "15px 32px", borderRadius: 6,
+                  transition: "background 0.2s",
+                }}
+                onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
+                onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
+                >
+                  Explore the Work
+                </a>
+                <Link href="/contact" style={{
+                  display: "inline-flex", alignItems: "center",
+                  fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 14,
+                  background: "transparent", color: "#FFFFFF",
+                  padding: "14px 30px", border: "2px solid rgba(255,255,255,0.7)", borderRadius: 6,
+                  transition: "border-color 0.2s, background 0.2s",
+                }}
+                onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = "#d87307"; (e.currentTarget as HTMLAnchorElement).style.background = "rgba(216,115,7,0.15)"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,255,255,0.7)"; (e.currentTarget as HTMLAnchorElement).style.background = "transparent"; }}
+                >
+                  Book a Strategy Session
+                </Link>
+              </div>
+            </div>
+
+            {/* RIGHT — supporting detail panel */}
+            <div className="hero-body-anim" style={{
+              background: "rgba(8,16,36,0.55)", backdropFilter: "blur(6px)",
+              border: "1px solid rgba(255,255,255,0.15)", borderRadius: 12,
+              padding: "clamp(20px, 2.6vw, 32px)",
+            }}>
+              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.85)" }}>
+                Strong brands aren&apos;t made by accident. They&apos;re built with clarity, grit, and a clear sense of where they&apos;re headed. At Brand Iron, we help companies sharpen their position, strengthen their presence, and build the strategy, creative, and growth systems needed to move forward with confidence. From the first spark to the final execution, our work is built to stand up in the real world.
+              </p>
+            </div>
           </div>
         </div>
 
         <style>{`
           @media (max-width: 900px) {
-            .pf-hero-grid { grid-template-columns: 1fr !important; }
+            .pf-hero-section { height: auto !important; min-height: 100vh; }
+            .pf-hero-wrap { position: relative !important; padding: 140px 20px 48px !important; }
+            .pf-hero-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
           }
         `}</style>
       </section>
@@ -275,6 +291,10 @@ export default function PortfolioPage() {
                 <div style={{ position: "relative", aspectRatio: "4 / 3", overflow: "hidden" }}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={image} alt={imageAlt} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 10, right: 10, width: 28, height: 28, opacity: 0, transition: "opacity 0.25s ease" }} />
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 10, left: 10, width: 28, height: 28, opacity: 0, transition: "opacity 0.25s ease" }} />
                 </div>
                 <div style={{ padding: "20px 22px 24px" }}>
                   <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#d87307", marginBottom: 8 }}>{category}</p>
@@ -292,6 +312,7 @@ export default function PortfolioPage() {
         <style>{`
           .pf-category-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(0,0,0,0.1); border-color: rgba(216,115,7,0.3) !important; }
           .pf-category-card:hover .pf-view-work { text-decoration: underline; }
+          .pf-category-card:hover .corner-bracket { opacity: 1 !important; }
           @media (max-width: 900px) {
             .pf-category-grid { grid-template-columns: repeat(2, 1fr) !important; }
           }
