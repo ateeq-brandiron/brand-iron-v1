@@ -239,7 +239,7 @@ export default function InsightsPage() {
               <h2 className="article-title" style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 3vw, 32px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", textDecoration: "underline", textUnderlineOffset: 4, marginBottom: 16, lineHeight: 1.3, transition: "color 0.2s" }}>
                 {articles[0].title}
               </h2>
-              <p style={{ fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 24, maxWidth: 680 }}>{articles[0].excerpt}</p>
+              <p style={{ fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 24 }}>{articles[0].excerpt}</p>
               <ArticlePills category={articles[0].category} readTime={articles[0].readTime} />
             </Link>
           )}
