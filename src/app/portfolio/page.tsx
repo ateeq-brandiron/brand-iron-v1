@@ -73,7 +73,7 @@ const categoryCards = [
     id: "revenue-growth",
     category: "Revenue Growth",
     headline: "Turn Momentum Into a System.",
-    body: "Growth shouldn't depend on luck. We connect marketing, sales, automation, and reporting into a more consistent system designed to create demand and strengthen revenue performance.",
+    body: "Growth shouldn't depend on luck. We connect marketing, sales, automation, funnels, and reporting into a more consistent system designed to create demand, improve follow-up, and strengthen revenue performance. Less chasing. More traction.",
     image: "/images/portfolio/portfolio-category-revenue-growth-dashboard.jpg",
     imageAlt: "Laptop displaying a Brand Iron revenue and call-performance dashboard, representing revenue growth reporting",
   },
@@ -82,32 +82,26 @@ const categoryCards = [
 const processSteps = [
   {
     title: "Discover",
-    body: "We uncover what's standing between the business and its next stage of growth.",
     icon: (<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="10" cy="10" r="6.5" stroke="#d87307" strokeWidth="1.8" /><path d="M15 15l5 5" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round" /></svg>),
   },
   {
     title: "Position",
-    body: "We sharpen the position so the market understands what the business stands for.",
     icon: (<img loading="lazy" src="/images/icons/icon-lightbulb.svg" alt="" style={{ width: 20, height: 20 }} />),
   },
   {
     title: "Build",
-    body: "We build the right tools, strategy, creative, and systems needed to move forward.",
     icon: (<img loading="lazy" src="/images/icons/icon-gear.svg" alt="" style={{ width: 20, height: 20 }} />),
   },
   {
     title: "Launch",
-    body: "We launch with purpose, bringing the brand and strategy into the real world.",
     icon: (<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2c3 2 5 6 5 10 0 2-1 4-2 5l-3 2-3-2c-1-1-2-3-2-5 0-4 2-8 5-10Z" stroke="#d87307" strokeWidth="1.6" strokeLinejoin="round" /><circle cx="12" cy="10" r="2" stroke="#d87307" strokeWidth="1.5" /><path d="M8 16l-3 5M16 16l3 5" stroke="#d87307" strokeWidth="1.6" strokeLinecap="round" /></svg>),
   },
   {
     title: "Measure",
-    body: "We measure what matters so every engagement is grounded in real performance.",
     icon: (<img loading="lazy" src="/images/icons/icon-barchart.svg" alt="" style={{ width: 20, height: 20 }} />),
   },
   {
     title: "Grow",
-    body: "We keep pushing forward, turning proven work into sustained business growth.",
     icon: (<img loading="lazy" src="/images/icons/icon-trending.svg" alt="" style={{ width: 20, height: 20 }} />),
   },
 ];
@@ -278,6 +272,9 @@ export default function PortfolioPage() {
       {/* ── S4: SELECTED WORK (CATEGORY CARDS) ───────────────── */}
       <section style={{ background: "#FFFFFF", padding: "8px 40px 96px" }}>
         <div ref={s4ViewRef} style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <h2 className={`section-heading reveal${s4ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 40 }}>
+            Selected Work
+          </h2>
           <div className="pf-category-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
             {categoryCards.map(({ id, category, headline, body, image, imageAlt }, i) => (
               <a key={id} href={`#all-projects`}
@@ -346,13 +343,16 @@ export default function PortfolioPage() {
             <p className={`reveal${s5ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.75)", marginBottom: 14 }}>
               Every project starts with a simple question: what&apos;s standing between this business and its next stage of growth?
             </p>
-            <p className={`reveal${s5ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.75)" }}>
+            <p className={`reveal${s5ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.75)", marginBottom: 14 }}>
               From there, we dig in: we uncover the challenge, sharpen the position, build the right tools, launch with purpose, measure what matters, and keep pushing forward.
+            </p>
+            <p className={`reveal${s5ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 14, fontWeight: 900, letterSpacing: "0.05em", textTransform: "uppercase", color: "#d87307" }}>
+              Discover &rarr; Position &rarr; Build &rarr; Launch &rarr; Measure &rarr; Grow
             </p>
           </div>
 
           <div className={`reveal${s5ViewInView ? ' visible' : ''} pf-process-grid`} style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16, marginBottom: 48 }}>
-            {processSteps.map(({ title, body, icon }, i) => {
+            {processSteps.map(({ title, icon }, i) => {
               const isLast = i === processSteps.length - 1;
               return (
                 <div key={title}
@@ -383,8 +383,7 @@ export default function PortfolioPage() {
                     </div>
                     <span style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, color: isLast ? "rgba(255,255,255,0.85)" : "#d87307" }}>{String(i + 1).padStart(2, "0")}</span>
                   </div>
-                  <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 16, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#FFFFFF", marginBottom: 8, lineHeight: 1.25 }}>{title}</h3>
-                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12.5, lineHeight: 1.6, color: isLast ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.7)", margin: 0 }}>{body}</p>
+                  <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 16, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#FFFFFF", marginBottom: 0, lineHeight: 1.25 }}>{title}</h3>
                 </div>
               );
             })}
@@ -428,43 +427,56 @@ export default function PortfolioPage() {
       {/* ── CTA ────────────────────────────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "0 24px 96px" }}>
         <div ref={ctaViewRef} className={`reveal${ctaViewInView ? ' visible' : ''} pf-cta-bar`} style={{
-          maxWidth: 1100, margin: "0 auto", border: "1px solid #EEEBE7", borderRadius: 14,
-          display: "flex", alignItems: "center", gap: 28, padding: "28px 36px",
+          maxWidth: 900, margin: "0 auto", border: "1px solid #EEEBE7", borderRadius: 14,
+          textAlign: "center", padding: "56px 48px",
         }}>
-          <div style={{ flexShrink: 0, width: 56, height: 56, borderRadius: "50%", background: "rgba(216,115,7,0.1)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <div style={{ width: 56, height: 56, borderRadius: "50%", background: "rgba(216,115,7,0.1)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px" }}>
             <svg width="30" height="30" viewBox="0 0 48 48" fill="none">
               <path d="M8 34h32M12 34v-6h8l4-4h8a4 4 0 0 1 4 4v2H12Z" stroke="#d87307" strokeWidth="2" strokeLinejoin="round" />
               <path d="M22 24V16M18 20l4-6 4 6" stroke="#d87307" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               <path d="M30 10l2 2M34 8l1 3M37 12l3 1" stroke="#d87307" strokeWidth="2" strokeLinecap="round" />
             </svg>
           </div>
-          <div style={{ flex: 1 }}>
-            <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2.2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", marginBottom: 4 }}>
-              Ready to Forge What&apos;s Next?
-            </h2>
-            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.6, color: "#666", margin: 0 }}>
-              Bring us the challenge. We&apos;ll help you shape what comes next.
-            </p>
+          <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 3vw, 32px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", marginBottom: 16 }}>
+            Ready to Forge What&apos;s Next?
+          </h2>
+          <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#555", maxWidth: 680, margin: "0 auto 8px" }}>
+            Whether you&apos;re launching a new venture, repositioning an established company, raising capital, entering new territory, or building your next growth engine, Brand Iron can help you create a stronger path forward.
+          </p>
+          <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#555", maxWidth: 680, margin: "0 auto 24px" }}>
+            Bring us the challenge. We&apos;ll help you shape what comes next.
+          </p>
+          <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 14, fontWeight: 900, letterSpacing: "0.05em", textTransform: "uppercase", color: "#d87307", marginBottom: 28 }}>
+            Forging Brands. Driving Revenue.
+          </p>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 24, flexWrap: "wrap" }}>
+            <Link href="/contact" style={{
+              display: "inline-flex", alignItems: "center", gap: 8,
+              fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
+              letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none",
+              background: "#d87307", color: "#FFFFFF",
+              padding: "15px 28px", borderRadius: 6, transition: "background 0.2s",
+            }}
+            onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
+            onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
+            >
+              Book a Strategy Session
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </Link>
+            <Link href="/services" style={{
+              display: "inline-flex", alignItems: "center", gap: 6,
+              fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
+              letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none",
+              color: "#1a1a1a", transition: "color 0.2s",
+            }}
+            onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.color = "#d87307")}
+            onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.color = "#1a1a1a")}
+            >
+              Explore Our Services
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </Link>
           </div>
-          <Link href="/contact" style={{
-            flexShrink: 0, display: "inline-flex", alignItems: "center", gap: 8,
-            fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
-            letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none",
-            background: "#d87307", color: "#FFFFFF",
-            padding: "15px 28px", borderRadius: 6, transition: "background 0.2s",
-          }}
-          onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
-          onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
-          >
-            Book a Strategy Session
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-          </Link>
         </div>
-        <style>{`
-          @media (max-width: 700px) {
-            .pf-cta-bar { flex-direction: column !important; text-align: center; }
-          }
-        `}</style>
       </section>
 
     </main>
