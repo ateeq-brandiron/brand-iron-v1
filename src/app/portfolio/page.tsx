@@ -22,10 +22,61 @@ function useInView(threshold = 0.1) {
 }
 
 const stats = [
-  { number: "100+", label: "Brands Forged" },
-  { number: "25+", label: "Industries Served" },
-  { number: "20+", label: "Years in the Saddle" },
-  { number: "Award-Winning", label: "Strategy & Creative" },
+  { number: "100+", label: "Brands Forged", icon: (<svg width="30" height="30" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#d87307" strokeWidth="1.6" /><circle cx="12" cy="12" r="5" stroke="#d87307" strokeWidth="1.6" /><circle cx="12" cy="12" r="1.5" fill="#d87307" /></svg>) },
+  { number: "25+", label: "Industries Served", icon: (<img loading="lazy" src="/images/icons/icon-trending.svg" alt="" style={{ width: 28, height: 28 }} />) },
+  { number: "20+", label: "Years in the Saddle", icon: (<svg width="30" height="30" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3" stroke="#d87307" strokeWidth="1.6" /><circle cx="17" cy="9" r="2.3" stroke="#d87307" strokeWidth="1.6" /><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#d87307" strokeWidth="1.6" strokeLinecap="round" /><path d="M15 14.2c2.3.4 4 2.3 4 4.8" stroke="#d87307" strokeWidth="1.6" strokeLinecap="round" /></svg>) },
+  { number: "Award-Winning", label: "Strategy & Creative", icon: (<svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z" stroke="#d87307" strokeWidth="1.6" strokeLinejoin="round" /><path d="M7 5H4v2a3 3 0 0 0 3 3M17 5h3v2a3 3 0 0 1-3 3" stroke="#d87307" strokeWidth="1.6" strokeLinecap="round" /><path d="M12 14v3M9 20h6M9.5 17h5" stroke="#d87307" strokeWidth="1.6" strokeLinecap="round" /></svg>) },
+];
+
+const categoryCards = [
+  {
+    id: "websites",
+    category: "Websites",
+    headline: "Build a Stronger Front Door.",
+    body: "Your website is often where the first handshake happens. We create digital experiences that make the right first impression, communicate value clearly, and guide visitors toward action.",
+    image: "/images/about/about-hero-barn.webp",
+    imageAlt: "Warmly lit rustic building exterior at dusk, representing a website as a brand's front door",
+  },
+  {
+    id: "brand-identity",
+    category: "Brand Identity",
+    headline: "Give Your Brand a Face.",
+    body: "A strong identity does more than look good. We build logos, brand guidelines, and visual systems that give your brand a face people recognize, trust, and remember.",
+    image: "/images/portfolio/portfolio-category-brand-identity-horse.jpg",
+    imageAlt: "Striking black and white portrait of a horse with a full mane, representing bold brand identity",
+  },
+  {
+    id: "capital-raise",
+    category: "Capital Raise",
+    headline: "Make the Story Worth Backing.",
+    body: "Capital follows confidence. We help companies tell a stronger investor story through clear positioning, compelling narratives, and raise materials built to communicate the opportunity with clarity.",
+    image: "/images/shared/shared-fence-pasture.jpg",
+    imageAlt: "Wooden fence along a pasture at golden hour, representing staking a claim for capital raise support",
+  },
+  {
+    id: "go-to-market",
+    category: "Go-To-Market",
+    headline: "Know the Territory. Make Your Move.",
+    body: "Going to market without a clear plan is like riding blind. We help businesses map the landscape, sharpen the offer, and build a practical launch roadmap from market entry to measurable growth.",
+    image: "/images/shared/shared-mountain-peaks.jpg",
+    imageAlt: "Rocky mountain range and open valley terrain, representing mapping the market before a go-to-market launch",
+  },
+  {
+    id: "ai-visibility",
+    category: "AI Visibility",
+    headline: "Be Found Where the Market Is Looking.",
+    body: "Discovery is moving beyond traditional search. We help businesses strengthen the signals that make them easier to find, understand, trust, and recommend across search engines and AI-driven platforms.",
+    image: "/images/shared/shared-blacksmith-tech-lines.jpg",
+    imageAlt: "Blacksmith's hands forging metal overlaid with glowing circuit-line data signals, representing AI visibility",
+  },
+  {
+    id: "revenue-growth",
+    category: "Revenue Growth",
+    headline: "Turn Momentum Into a System.",
+    body: "Growth shouldn't depend on luck. We connect marketing, sales, automation, and reporting into a more consistent system designed to create demand and strengthen revenue performance.",
+    image: "/images/portfolio/portfolio-category-revenue-growth-dashboard.jpg",
+    imageAlt: "Laptop displaying a Brand Iron revenue and call-performance dashboard, representing revenue growth reporting",
+  },
 ];
 
 const processSteps = [
@@ -79,135 +130,187 @@ export default function PortfolioPage() {
       />
 
       {/* ── HERO ───────────────────────────────────────────── */}
-      <section className="pf-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
-        <video
-          src="/videos/portfolio/portfolio-hero-blacksmith-forging.mp4"
-          aria-label="A blacksmith forging molten metal on an anvil, sparks flying, representing brands forged through strategy and craft"
-          autoPlay muted loop playsInline preload="auto"
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 55%" }}
-        />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.15) 0%, rgba(8,16,36,0.05) 45%, rgba(8,16,36,0.45) 100%)" }} />
+      <section style={{ background: "#FFFFFF", padding: "160px 40px 72px" }}>
+        <div className="pf-hero-grid" style={{ maxWidth: 1240, margin: "0 auto", display: "grid", gridTemplateColumns: "1.1fr 0.9fr", gap: 40, alignItems: "center" }}>
 
-        <div className="pf-hero-wrap" style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", padding: "88px 24px 24px" }}>
-          <div className="pf-hero-grid" style={{ maxWidth: 1200, margin: "0 auto", width: "100%", display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 56, alignItems: "center" }}>
-
-            {/* LEFT — headline, CTAs */}
-            <div>
-              <h1 className="hero-h1-anim" style={{
-                fontFamily: "var(--font-burford-inline), sans-serif",
-                fontWeight: 400, fontSize: "clamp(30px, 4.4vw, 58px)",
-                textTransform: "uppercase", letterSpacing: "0.02em", lineHeight: 0.92,
-                color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))",
-                marginBottom: 20,
-              }}>
-                Brands Forged. Growth Built to Last.
-              </h1>
-
-              <div className="hero-btns-anim" style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center" }}>
-                <a href="#gallery" style={{
-                  display: "inline-flex", alignItems: "center",
-                  fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 14,
-                  background: "#d87307", color: "#FFFFFF",
-                  padding: "15px 32px", borderRadius: 6,
-                  transition: "background 0.2s",
-                }}
-                onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
-                onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
-                >
-                  Explore the Work
-                </a>
-                <Link href="/contact" style={{
-                  display: "inline-flex", alignItems: "center",
-                  fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 14,
-                  background: "transparent", color: "#FFFFFF",
-                  padding: "14px 30px", border: "2px solid rgba(255,255,255,0.7)", borderRadius: 6,
-                  transition: "border-color 0.2s, background 0.2s",
-                }}
-                onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = "#d87307"; (e.currentTarget as HTMLAnchorElement).style.background = "rgba(216,115,7,0.15)"; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,255,255,0.7)"; (e.currentTarget as HTMLAnchorElement).style.background = "transparent"; }}
-                >
-                  Book a Strategy Session
-                </Link>
-              </div>
-            </div>
-
-            {/* RIGHT — supporting detail panel */}
-            <div className="hero-body-anim" style={{
-              background: "rgba(8,16,36,0.55)", backdropFilter: "blur(6px)",
-              border: "1px solid rgba(255,255,255,0.15)", borderRadius: 12,
-              padding: "clamp(20px, 2.6vw, 32px)",
+          {/* LEFT — kicker, headline, copy, CTA */}
+          <div>
+            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
+              Portfolio
+            </p>
+            <h1 style={{
+              fontFamily: "var(--font-burford-black), sans-serif",
+              fontWeight: 900, fontSize: "clamp(32px, 4.4vw, 56px)",
+              textTransform: "uppercase", letterSpacing: "0.02em", lineHeight: 1.08,
+              color: "#1a1a1a", marginBottom: 4,
             }}>
-              <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.85)" }}>
-                Strong brands aren&apos;t made by accident. They&apos;re built with clarity, grit, and a clear sense of where they&apos;re headed. At Brand Iron, we help companies sharpen their position, strengthen their presence, and build the strategy, creative, and growth systems needed to move forward with confidence. From the first spark to the final execution, our work is built to stand up in the real world.
-              </p>
-            </div>
+              Brands Forged<span style={{ color: "#d87307" }}>.</span>
+            </h1>
+            <h1 style={{
+              fontFamily: "var(--font-burford-black), sans-serif",
+              fontWeight: 900, fontSize: "clamp(32px, 4.4vw, 56px)",
+              textTransform: "uppercase", letterSpacing: "0.02em", lineHeight: 1.08,
+              color: "#1a1a1a", marginBottom: 24,
+            }}>
+              Growth Built to Last<span style={{ color: "#d87307" }}>.</span>
+            </h1>
+            <div style={{ width: 56, height: 3, background: "#d87307", marginBottom: 24 }} />
+            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#555", marginBottom: 32, maxWidth: 480 }}>
+              Strong brands aren&apos;t made by accident. They&apos;re built with clarity, grit, and a clear sense of where they&apos;re headed. At Brand Iron, we help companies sharpen their position, strengthen their presence, and build the strategy, creative, and growth systems needed to move forward with confidence. From the first spark to the final execution, our work is built to stand up in the real world.
+            </p>
+            <a href="#selected-work" style={{
+              display: "inline-flex", alignItems: "center", gap: 10,
+              fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
+              letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none",
+              background: "#d87307", color: "#FFFFFF",
+              padding: "16px 32px", borderRadius: 6, transition: "background 0.2s",
+            }}
+            onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
+            onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
+            >
+              Explore the Work
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </a>
+          </div>
+
+          {/* RIGHT — cutout hero image */}
+          <div style={{ position: "relative" }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/portfolio/portfolio-hero-forge-cutout.jpg"
+              alt="A blacksmith's hammer striking glowing forged metal on an anvil, sparks flying"
+              style={{ width: "100%", height: "auto", display: "block" }}
+            />
           </div>
         </div>
 
         <style>{`
           @media (max-width: 900px) {
-            .pf-hero-section { height: auto !important; min-height: 100vh; }
-            .pf-hero-wrap { position: relative !important; padding: 140px 20px 48px !important; }
-            .pf-hero-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+            .pf-hero-grid { grid-template-columns: 1fr !important; }
           }
         `}</style>
       </section>
 
       {/* ── S2: STATS BAND ───────────────────────────────────── */}
-      <section style={{ background: "#F9F8F6", padding: "88px 40px" }}>
+      <section style={{ background: "#FFFFFF", padding: "16px 40px 56px" }}>
         <div ref={s2ViewRef} style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <h2 className={`section-heading reveal${s2ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 48 }}>
+          <p className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase", color: "#999", textAlign: "center", marginBottom: 24 }}>
             Built With Purpose. Proven in the Field.
-          </h2>
-          <div className={`reveal${s2ViewInView ? ' visible' : ''} pf-stats-grid`} style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20 }}>
-            {stats.map(({ number, label }) => (
-              <div key={label} style={{ background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 12, padding: "32px 20px", textAlign: "center" }}>
-                <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 2.6vw, 34px)", fontWeight: 900, color: "#d87307", lineHeight: 1.1, marginBottom: 10 }}>{number}</p>
-                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: "#555", margin: 0 }}>{label}</p>
+          </p>
+          <div className={`reveal${s2ViewInView ? ' visible' : ''} pf-stats-grid`} style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)" }}>
+            {stats.map(({ number, label, icon }, i) => (
+              <div key={label} style={{
+                textAlign: "center", padding: "0 16px",
+                borderRight: i < stats.length - 1 ? "1px solid #EEEBE7" : "none",
+              }}>
+                <div style={{ display: "flex", justifyContent: "center", marginBottom: 12 }}>{icon}</div>
+                <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(20px, 2.2vw, 28px)", fontWeight: 900, color: "#1a1a1a", lineHeight: 1.1, marginBottom: 6 }}>{number}</p>
+                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: "#777", margin: 0 }}>{label}</p>
               </div>
             ))}
           </div>
         </div>
         <style>{`
           @media (max-width: 900px) {
-            .pf-stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
+            .pf-stats-grid { grid-template-columns: repeat(2, 1fr) !important; row-gap: 32px; }
+            .pf-stats-grid > div:nth-child(2n) { border-right: none !important; }
+            .pf-stats-grid > div:nth-child(1), .pf-stats-grid > div:nth-child(2) { border-bottom: 1px solid #EEEBE7; padding-bottom: 24px; }
           }
           @media (max-width: 520px) {
             .pf-stats-grid { grid-template-columns: 1fr !important; }
+            .pf-stats-grid > div { border-right: none !important; border-bottom: 1px solid #EEEBE7; padding-bottom: 24px !important; }
+            .pf-stats-grid > div:last-child { border-bottom: none; }
           }
         `}</style>
       </section>
 
       {/* ── S3: FEATURED WORK ────────────────────────────────── */}
-      <section style={{ background: "#FFFFFF", padding: "120px 40px 80px" }}>
-        <div ref={s3ViewRef} style={{ maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
-          <h2 className={`section-heading reveal${s3ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20 }}>
-            Strategy With Backbone. Creative With Purpose.
-          </h2>
-          <p className={`reveal${s3ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 32 }}>
-            Good-looking work is only part of the job. The real work is creating a brand people understand, trust, and choose. We partner with organizations that are ready to sharpen their story, stake out a stronger position, and build momentum across branding, go-to-market, digital, capital raising, visibility, and revenue growth.
-          </p>
-          <a href="#gallery" className={`reveal${s3ViewInView ? ' visible' : ''}`} style={{
-            display: "inline-block", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
-            letterSpacing: "0.14em", textTransform: "uppercase", textDecoration: "none",
-            background: "#d87307", color: "#FFFFFF",
-            padding: "14px 36px", borderRadius: 6, transition: "background 0.2s",
+      <section id="selected-work" style={{ background: "#FFFFFF", padding: "40px 40px 48px" }}>
+        <div ref={s3ViewRef} className={`reveal${s3ViewInView ? ' visible' : ''} pf-featured-row`} style={{ maxWidth: 1200, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "flex-end", gap: 24 }}>
+          <div style={{ maxWidth: 720 }}>
+            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase", color: "#d87307", marginBottom: 12 }}>
+              Featured Work
+            </p>
+            <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 3vw, 34px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", lineHeight: 1.2, marginBottom: 14 }}>
+              Strategy With Backbone. Creative With Purpose.
+            </h2>
+            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.75, color: "#666" }}>
+              Good-looking work is only part of the job. The real work is creating a brand people understand, trust, and choose. We partner with organizations that are ready to sharpen their story, stake out a stronger position, and build momentum across branding, go-to-market, digital, capital raising, visibility, and revenue growth.
+            </p>
+          </div>
+          <a href="#all-projects" style={{
+            display: "inline-flex", alignItems: "center", gap: 8, flexShrink: 0,
+            fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 12,
+            letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none",
+            background: "transparent", color: "#1a1a1a", border: "1px solid #d87307",
+            padding: "13px 24px", borderRadius: 6, transition: "background 0.2s, color 0.2s",
           }}
-          onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
-          onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
-          >See All Projects</a>
+          onMouseEnter={e => { e.currentTarget.style.background = "#d87307"; e.currentTarget.style.color = "#FFFFFF"; }}
+          onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#1a1a1a"; }}
+          >
+            See All Projects
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          </a>
         </div>
+        <style>{`
+          @media (max-width: 700px) {
+            .pf-featured-row { flex-direction: column !important; align-items: flex-start !important; }
+          }
+        `}</style>
       </section>
 
-      {/* ── S4: SELECTED WORK (GALLERY) ──────────────────────── */}
-      <section id="gallery" style={{ background: "#F9F8F6", padding: "80px 40px 120px" }}>
+      {/* ── S4: SELECTED WORK (CATEGORY CARDS) ───────────────── */}
+      <section style={{ background: "#FFFFFF", padding: "8px 40px 96px" }}>
         <div ref={s4ViewRef} style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <h2 className={`section-heading reveal${s4ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 48 }}>
-            Selected Work
-          </h2>
-          <div className={`reveal${s4ViewInView ? ' visible' : ''}`}>
-            <PortfolioGallery items={portfolioItems} />
+          <div className="pf-category-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
+            {categoryCards.map(({ id, category, headline, body, image, imageAlt }, i) => (
+              <a key={id} href={`#all-projects`}
+                className={`reveal${s4ViewInView ? ' visible' : ''} pf-category-card`}
+                style={{
+                  display: "block", background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 12,
+                  overflow: "hidden", textDecoration: "none", transitionDelay: `${(i % 6) * 0.06}s`,
+                  transition: "transform 0.25s, box-shadow 0.25s, border-color 0.25s",
+                }}
+              >
+                <div style={{ position: "relative", aspectRatio: "4 / 3", overflow: "hidden" }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={image} alt={imageAlt} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                </div>
+                <div style={{ padding: "20px 22px 24px" }}>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#d87307", marginBottom: 8 }}>{category}</p>
+                  <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 18, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", marginBottom: 10, lineHeight: 1.25 }}>{headline}</h3>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13.5, lineHeight: 1.65, color: "#666", marginBottom: 16 }}>{body}</p>
+                  <span className="pf-view-work" style={{ display: "inline-flex", alignItems: "center", gap: 6, fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: "0.08em", textTransform: "uppercase", color: "#d87307" }}>
+                    View the Work
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  </span>
+                </div>
+              </a>
+            ))}
           </div>
+        </div>
+        <style>{`
+          .pf-category-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(0,0,0,0.1); border-color: rgba(216,115,7,0.3) !important; }
+          .pf-category-card:hover .pf-view-work { text-decoration: underline; }
+          @media (max-width: 900px) {
+            .pf-category-grid { grid-template-columns: repeat(2, 1fr) !important; }
+          }
+          @media (max-width: 600px) {
+            .pf-category-grid { grid-template-columns: 1fr !important; }
+          }
+        `}</style>
+      </section>
+
+      {/* ── S4B: EXPLORE ALL PROJECTS (GALLERY) ──────────────── */}
+      <section id="all-projects" style={{ background: "#F9F8F6", padding: "80px 40px 120px" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <h2 className="section-heading" style={{ color: "#1a1a1a", marginBottom: 16 }}>
+            Explore All Projects
+          </h2>
+          <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.75, color: "#666", maxWidth: 640, margin: "0 auto 40px", textAlign: "center" }}>
+            Filter by category and click any thumbnail for a closer look.
+          </p>
+          <PortfolioGallery items={portfolioItems} />
         </div>
       </section>
 
@@ -302,50 +405,45 @@ export default function PortfolioPage() {
       </section>
 
       {/* ── CTA ────────────────────────────────────────────── */}
-      <section style={{ background: "#F0EEEA", padding: "80px 24px" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <div ref={ctaViewRef} className={`reveal${ctaViewInView ? ' visible' : ''}`} style={{
-            position: "relative", overflow: "hidden", borderRadius: 20,
-            backgroundImage: "url('/images/shared/shared-cta-banner-scene.jpg')", backgroundSize: "cover", backgroundPosition: "center 40%",
-          }}>
-            <div role="img" aria-label="Golden prairie landscape at sunset" style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.55)" }} />
-            <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>
-              <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(28px, 4.2vw, 52px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.05, marginBottom: 20 }}>
-                Ready to Forge What&apos;s Next?
-              </h2>
-              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", fontStyle: "italic", maxWidth: 640, margin: "0 auto 40px" }}>
-                Whether you&apos;re launching a new venture, repositioning an established company, raising capital, entering new territory, or building your next growth engine, bring us the challenge and we&apos;ll help you shape what comes next.
-              </p>
-              <Link href="/contact" style={{
-                display: "inline-flex", alignItems: "center",
-                fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 15,
-                background: "#d87307", color: "#FFFFFF",
-                padding: "18px 44px", borderRadius: 6,
-                transition: "background 0.2s", marginBottom: 20,
-              }}
-              onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
-              onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
-              >
-                Book Strategy Session
-              </Link>
-              <div style={{ marginBottom: 24 }}>
-                <Link href="/services" style={{
-                  fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase",
-                  color: "rgba(255,255,255,0.7)", textDecoration: "none", borderBottom: "1px solid rgba(255,255,255,0.3)", paddingBottom: 2,
-                  transition: "color 0.2s, border-color 0.2s",
-                }}
-                onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = "#f0a860"; (e.currentTarget as HTMLAnchorElement).style.borderBottomColor = "rgba(240,168,96,0.6)"; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.7)"; (e.currentTarget as HTMLAnchorElement).style.borderBottomColor = "rgba(255,255,255,0.3)"; }}
-                >
-                  Explore Our Services →
-                </Link>
-              </div>
-              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(255,255,255,0.45)" }}>
-                Forging Brands. Driving Revenue.
-              </p>
-            </div>
+      <section style={{ background: "#FFFFFF", padding: "0 24px 96px" }}>
+        <div ref={ctaViewRef} className={`reveal${ctaViewInView ? ' visible' : ''} pf-cta-bar`} style={{
+          maxWidth: 1100, margin: "0 auto", border: "1px solid #EEEBE7", borderRadius: 14,
+          display: "flex", alignItems: "center", gap: 28, padding: "28px 36px",
+        }}>
+          <div style={{ flexShrink: 0, width: 56, height: 56, borderRadius: "50%", background: "rgba(216,115,7,0.1)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <svg width="30" height="30" viewBox="0 0 48 48" fill="none">
+              <path d="M8 34h32M12 34v-6h8l4-4h8a4 4 0 0 1 4 4v2H12Z" stroke="#d87307" strokeWidth="2" strokeLinejoin="round" />
+              <path d="M22 24V16M18 20l4-6 4 6" stroke="#d87307" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M30 10l2 2M34 8l1 3M37 12l3 1" stroke="#d87307" strokeWidth="2" strokeLinecap="round" />
+            </svg>
           </div>
+          <div style={{ flex: 1 }}>
+            <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2.2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", marginBottom: 4 }}>
+              Ready to Forge What&apos;s Next?
+            </h2>
+            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.6, color: "#666", margin: 0 }}>
+              Bring us the challenge. We&apos;ll help you shape what comes next.
+            </p>
+          </div>
+          <Link href="/contact" style={{
+            flexShrink: 0, display: "inline-flex", alignItems: "center", gap: 8,
+            fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
+            letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none",
+            background: "#d87307", color: "#FFFFFF",
+            padding: "15px 28px", borderRadius: 6, transition: "background 0.2s",
+          }}
+          onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
+          onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
+          >
+            Book a Strategy Session
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          </Link>
         </div>
+        <style>{`
+          @media (max-width: 700px) {
+            .pf-cta-bar { flex-direction: column !important; text-align: center; }
+          }
+        `}</style>
       </section>
 
     </main>
