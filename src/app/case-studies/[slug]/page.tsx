@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import CircuitOverlay from "@/components/CircuitOverlay";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import CaseStudyModeToggle from "@/components/CaseStudyModeToggle";
 import { caseStudies } from "@/data/caseStudies";
 import { portfolioCategories } from "@/data/portfolio";
 
@@ -94,6 +95,8 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
           </p>
         </div>
       </section>
+
+      <CaseStudyModeToggle images={cs.images} />
 
       {cs.isPlaceholder && (
         <div style={{ background: "#FFF7E8", borderTop: "1px solid #F0DBA8", borderBottom: "1px solid #F0DBA8", padding: "14px 24px", textAlign: "center" }}>

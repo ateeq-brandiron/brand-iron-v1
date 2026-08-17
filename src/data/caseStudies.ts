@@ -13,6 +13,8 @@ export type CaseStudy = {
   excerpt: string;
   thumbnail: string;
   thumbnailAlt: string;
+  /** Images shown in the "Quick Look" carousel, in order. */
+  images: string[];
   challenge: string;
   solution: string;
   results: CaseStudyStat[];
@@ -34,6 +36,11 @@ const CATEGORY_THUMBNAILS: Record<PortfolioCategoryId, string> = {
   "revenue-growth": "/images/portfolio/placeholders/revenue-growth-sample.jpg",
 };
 
+const PLACEHOLDER_EXTRA_SLIDES = [
+  "/images/portfolio/placeholders/generic-sample-slide-2.jpg",
+  "/images/portfolio/placeholders/generic-sample-slide-3.jpg",
+];
+
 function placeholder(category: PortfolioCategoryId, categoryLabel: string, n: number): CaseStudy {
   return {
     slug: `${category}-case-study-${n}`,
@@ -43,6 +50,7 @@ function placeholder(category: PortfolioCategoryId, categoryLabel: string, n: nu
     excerpt: "This case study is being finalized. Placeholder content shown for layout and review purposes only — not a real client engagement.",
     thumbnail: CATEGORY_THUMBNAILS[category],
     thumbnailAlt: "Placeholder case study thumbnail",
+    images: [CATEGORY_THUMBNAILS[category], ...PLACEHOLDER_EXTRA_SLIDES],
     challenge: "Placeholder challenge summary. Replace with the real business problem this client was facing before the engagement.",
     solution: "Placeholder solution summary. Replace with the real approach, strategy, and work delivered during the engagement.",
     results: PLACEHOLDER_STATS,

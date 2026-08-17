@@ -6,7 +6,6 @@ const navLinks = [
   ["Services", "/services"],
   ["About", "/about"],
   ["Portfolio", "/portfolio"],
-  ["Case Studies", "/case-studies"],
   ["Blog", "/blog"],
   ["Resources", "/resources"],
   ["Contact", "/contact"],
