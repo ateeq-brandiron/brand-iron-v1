@@ -16,6 +16,7 @@ const servicesMenu = [
 const navLinks = [
   { label: "About", href: "/about" },
   { label: "Portfolio", href: "/portfolio" },
+  { label: "Case Studies", href: "/case-studies" },
   { label: "Blog", href: "/blog" },
   { label: "Resources", href: "/resources" },
 ];
