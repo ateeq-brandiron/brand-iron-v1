@@ -21,12 +21,54 @@ function useInView(threshold = 0.1) {
   return { ref, inView };
 }
 
+function useCountUp(target: number | null, inView: boolean, duration = 1400) {
+  const [value, setValue] = useState(0);
+  useEffect(() => {
+    if (!inView || target === null) return;
+    let start: number | null = null;
+    let raf: number;
+    const step = (ts: number) => {
+      if (start === null) start = ts;
+      const progress = Math.min((ts - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setValue(Math.round(eased * target));
+      if (progress < 1) raf = requestAnimationFrame(step);
+    };
+    raf = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(raf);
+  }, [inView, target, duration]);
+  return value;
+}
+
 const stats = [
-  { number: "100+", label: "Brands Forged", icon: (<svg width="30" height="30" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#d87307" strokeWidth="1.6" /><circle cx="12" cy="12" r="5" stroke="#d87307" strokeWidth="1.6" /><circle cx="12" cy="12" r="1.5" fill="#d87307" /></svg>) },
-  { number: "25+", label: "Industries Served", icon: (<img loading="lazy" src="/images/icons/icon-trending.svg" alt="" style={{ width: 28, height: 28 }} />) },
-  { number: "20+", label: "Years in the Saddle", icon: (<svg width="30" height="30" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3" stroke="#d87307" strokeWidth="1.6" /><circle cx="17" cy="9" r="2.3" stroke="#d87307" strokeWidth="1.6" /><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#d87307" strokeWidth="1.6" strokeLinecap="round" /><path d="M15 14.2c2.3.4 4 2.3 4 4.8" stroke="#d87307" strokeWidth="1.6" strokeLinecap="round" /></svg>) },
-  { number: "Award-Winning", label: "Strategy & Creative", icon: (<svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z" stroke="#d87307" strokeWidth="1.6" strokeLinejoin="round" /><path d="M7 5H4v2a3 3 0 0 0 3 3M17 5h3v2a3 3 0 0 1-3 3" stroke="#d87307" strokeWidth="1.6" strokeLinecap="round" /><path d="M12 14v3M9 20h6M9.5 17h5" stroke="#d87307" strokeWidth="1.6" strokeLinecap="round" /></svg>) },
+  { number: "100+", countTo: 100, suffix: "+", label: "Brands Forged", icon: (<svg width="30" height="30" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#d87307" strokeWidth="1.6" /><circle cx="12" cy="12" r="5" stroke="#d87307" strokeWidth="1.6" /><circle cx="12" cy="12" r="1.5" fill="#d87307" /></svg>) },
+  { number: "25+", countTo: 25, suffix: "+", label: "Industries Served", icon: (<img loading="lazy" src="/images/icons/icon-trending.svg" alt="" style={{ width: 28, height: 28 }} />) },
+  { number: "20+", countTo: 20, suffix: "+", label: "Years in the Saddle", icon: (<svg width="30" height="30" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3" stroke="#d87307" strokeWidth="1.6" /><circle cx="17" cy="9" r="2.3" stroke="#d87307" strokeWidth="1.6" /><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#d87307" strokeWidth="1.6" strokeLinecap="round" /><path d="M15 14.2c2.3.4 4 2.3 4 4.8" stroke="#d87307" strokeWidth="1.6" strokeLinecap="round" /></svg>) },
+  { number: "Award-Winning", countTo: null, suffix: "", label: "Strategy & Creative", icon: (<svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z" stroke="#d87307" strokeWidth="1.6" strokeLinejoin="round" /><path d="M7 5H4v2a3 3 0 0 0 3 3M17 5h3v2a3 3 0 0 1-3 3" stroke="#d87307" strokeWidth="1.6" strokeLinecap="round" /><path d="M12 14v3M9 20h6M9.5 17h5" stroke="#d87307" strokeWidth="1.6" strokeLinecap="round" /></svg>) },
 ];
+
+function StatTile({ stat, inView, index, isLast }: {
+  stat: { number: string; countTo: number | null; suffix: string; label: string; icon: React.ReactNode };
+  inView: boolean; index: number; isLast: boolean;
+}) {
+  const count = useCountUp(stat.countTo, inView, 1200 + index * 150);
+  const displayValue = stat.countTo !== null ? `${count}${stat.suffix}` : stat.number;
+  return (
+    <div
+      className={`pf-stat-tile reveal${inView ? ' visible' : ''}`}
+      style={{
+        textAlign: "center", padding: "0 16px",
+        borderRight: isLast ? "none" : "1px solid #EEEBE7",
+        transitionDelay: `${index * 0.1}s`,
+      }}
+    >
+      <div className="pf-stat-icon-wrap">{stat.icon}</div>
+      <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(20px, 2.2vw, 28px)", fontWeight: 900, color: "#1a1a1a", lineHeight: 1.1, marginBottom: 6 }}>{displayValue}</p>
+      <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: "#777", margin: 0 }}>{stat.label}</p>
+      <span className="pf-stat-underline" />
+    </div>
+  );
+}
 
 const categoryCards = [
   {
@@ -207,20 +249,27 @@ export default function PortfolioPage() {
           <p className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase", color: "#999", textAlign: "center", marginBottom: 24 }}>
             Built With Purpose. Proven in the Field.
           </p>
-          <div className={`reveal${s2ViewInView ? ' visible' : ''} pf-stats-grid`} style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)" }}>
-            {stats.map(({ number, label, icon }, i) => (
-              <div key={label} style={{
-                textAlign: "center", padding: "0 16px",
-                borderRight: i < stats.length - 1 ? "1px solid #EEEBE7" : "none",
-              }}>
-                <div style={{ display: "flex", justifyContent: "center", marginBottom: 12 }}>{icon}</div>
-                <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(20px, 2.2vw, 28px)", fontWeight: 900, color: "#1a1a1a", lineHeight: 1.1, marginBottom: 6 }}>{number}</p>
-                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: "#777", margin: 0 }}>{label}</p>
-              </div>
+          <div className="pf-stats-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)" }}>
+            {stats.map((stat, i) => (
+              <StatTile key={stat.label} stat={stat} inView={s2ViewInView} index={i} isLast={i === stats.length - 1} />
             ))}
           </div>
         </div>
         <style>{`
+          .pf-stat-tile { transition: transform 0.3s ease; }
+          .pf-stat-tile:hover { transform: translateY(-4px); }
+          .pf-stat-icon-wrap {
+            display: flex; align-items: center; justify-content: center;
+            width: 52px; height: 52px; border-radius: 50%; margin: 0 auto 12px;
+            background: rgba(216,115,7,0.06);
+            transition: transform 0.3s ease, background 0.3s ease;
+          }
+          .pf-stat-tile:hover .pf-stat-icon-wrap { transform: scale(1.1); background: rgba(216,115,7,0.14); }
+          .pf-stat-underline {
+            display: block; width: 0; height: 2px; background: #d87307;
+            margin: 12px auto 0; transition: width 0.35s ease;
+          }
+          .pf-stat-tile:hover .pf-stat-underline { width: 32px; }
           @media (max-width: 900px) {
             .pf-stats-grid { grid-template-columns: repeat(2, 1fr) !important; row-gap: 32px; }
             .pf-stats-grid > div:nth-child(2n) { border-right: none !important; }
