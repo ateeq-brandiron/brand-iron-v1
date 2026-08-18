@@ -96,4 +96,33 @@ export const portfolioItems: PortfolioItem[] = [
       "/images/portfolio/msp-accelerator/msp-opportunity-slide.jpg",
     ],
   },
+  {
+    slug: "real-international-capital-raise",
+    category: "capital-raise",
+    title: "Real International",
+    client: "Real International",
+    type: "deck",
+    thumbnail: "/images/portfolio/real-international/real-international-cover.jpg",
+    thumbnailAlt: "Real International investors deck cover slide over an Austin skyline photo",
+    description: "An investors deck for a real estate investment firm, pairing a confident visual narrative with the track record and strategy investors need to see.",
+    images: [
+      "/images/portfolio/real-international/real-international-cover.jpg",
+      "/images/portfolio/real-international/real-international-timeline.jpg",
+      "/images/portfolio/real-international/real-international-success.jpg",
+    ],
+  },
+  {
+    slug: "black-lake-capital-raise",
+    category: "capital-raise",
+    title: "Black Lake Capital",
+    client: "Black Lake Capital",
+    type: "deck",
+    thumbnail: "/images/portfolio/black-lake/black-lake-cover.jpg",
+    thumbnailAlt: "Black Lake Capital messaging platform cover slide over a mountain lake photo",
+    description: "A messaging platform for a technology-focused private equity firm, translating its investment track record into a clear, confident growth-partner narrative.",
+    images: [
+      "/images/portfolio/black-lake/black-lake-cover.jpg",
+      "/images/portfolio/black-lake/black-lake-stats.jpg",
+    ],
+  },
 ];
