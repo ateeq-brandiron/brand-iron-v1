@@ -179,6 +179,13 @@ function PortfolioPageContent() {
       container.scrollTo({ left: card.offsetLeft - (container.clientWidth - card.clientWidth) / 2, behavior });
     }
   };
+  useEffect(() => {
+    // selectCategoryCard scrolls a DOM node via container.scrollTo, which only exists post-mount.
+    // Starting on index 2 (instead of 0) leaves cards on both sides visible by default,
+    // matching the homepage carousel instead of stranding the first card against empty space.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    selectCategoryCard(2, "instant");
+  }, []);
   const startCatAutoSlide = () => {
     if (catAutoSlideRef.current) return;
     catAutoSlideRef.current = setInterval(() => {
