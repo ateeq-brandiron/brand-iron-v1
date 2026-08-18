@@ -78,6 +78,7 @@ const categoryCards = [
     headline: "Stake Your Claim.",
     body: "A brand without clear positioning gets lost in the crowd. We help businesses define what they stand for, who they serve, and why the market should pay attention. The result is a sharper position, stronger message, and a brand built to hold its ground.",
     services: ["Brand Strategy", "Positioning", "Messaging", "Identity"],
+    cta: "View Brand Strategy Work",
   },
   {
     id: "websites",
@@ -85,6 +86,7 @@ const categoryCards = [
     headline: "Build a Stronger Front Door.",
     body: "Your website is often where the first handshake happens. We create digital experiences that make the right first impression, communicate value clearly, and guide visitors toward action. Built for credibility. Built for conversion. Built to keep working long after launch.",
     services: ["Website Design", "UX", "Messaging", "Conversion Optimization"],
+    cta: "View Website Work",
   },
   {
     id: "go-to-market",
@@ -92,6 +94,7 @@ const categoryCards = [
     headline: "Know the Territory. Make Your Move.",
     body: "Going to market without a clear strategy is like riding blind. We help businesses understand the landscape, identify the right audience, sharpen the offer, and build a practical path from market entry to measurable growth.",
     services: ["Market Research", "ICP Development", "GTM Strategy", "Demand Generation"],
+    cta: "View GTM Work",
   },
   {
     id: "capital-raise",
@@ -99,6 +102,7 @@ const categoryCards = [
     headline: "Make the Story Worth Backing.",
     body: "Capital follows confidence. We help companies tell a stronger investor story through clear positioning, compelling narratives, and raise materials built to communicate the opportunity with clarity. No smoke. No fluff. Just a stronger case for why the business deserves attention.",
     services: ["Investor Positioning", "Pitch Decks", "Financial Narrative", "Raise Strategy"],
+    cta: "View Capital Raise Work",
   },
   {
     id: "ai-visibility",
@@ -106,6 +110,7 @@ const categoryCards = [
     headline: "Be Found Where the Market Is Looking.",
     body: "Discovery is moving beyond traditional search. We help businesses strengthen the signals that make them easier to find, understand, trust, and recommend across search engines and AI-driven platforms. Because being good isn't enough if nobody can find you.",
     services: ["AI Visibility", "AEO", "GEO", "Entity Optimization", "Search Strategy"],
+    cta: "View AI Visibility Work",
   },
   {
     id: "revenue-growth",
@@ -113,6 +118,7 @@ const categoryCards = [
     headline: "Turn Momentum Into a System.",
     body: "Growth shouldn't depend on luck. We connect marketing, sales, automation, funnels, and reporting into a more consistent system designed to create demand, improve follow-up, and strengthen revenue performance. Less chasing. More traction.",
     services: ["Revenue Strategy", "Automation", "CRM", "Funnels", "Reporting"],
+    cta: "View Revenue Growth Work",
   },
 ];
 
@@ -400,7 +406,7 @@ function PortfolioPageContent() {
               scrollSnapType: "x proximity", scrollBehavior: "smooth",
               padding: "8px calc(50% - 160px)",
             }}>
-              {categoryCards.map(({ id, category, headline, body, services }, i) => (
+              {categoryCards.map(({ id, category, headline, body, services, cta }, i) => (
                 <Link key={id} href={`/portfolio?category=${id}#all-projects`}
                   ref={el => { categoryCardRefs.current[i] = el; }}
                   className={`reveal${s4ViewInView ? ' visible' : ''} pf-category-card`}
@@ -434,7 +440,7 @@ function PortfolioPageContent() {
                     padding: "13px 20px", borderRadius: 6,
                     marginTop: "auto", transition: "background 0.2s",
                   }}>
-                    View the Work
+                    {cta}
                     <span className="pf-view-work-arrow" style={{ display: "inline-flex", alignItems: "center" }}>
                       <span className="pf-view-work-tail" style={{ display: "inline-block", height: 2, width: 18, background: "currentColor", transform: "scaleX(0.3)", transformOrigin: "right center", transition: "transform 0.3s cubic-bezier(0.22,1,0.36,1)" }} />
                       <svg width="5" height="10" viewBox="0 6 6 12" fill="none" style={{ flexShrink: 0, display: "block" }}><path d="M0 6l6 6-6 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
