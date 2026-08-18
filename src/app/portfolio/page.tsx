@@ -493,56 +493,48 @@ function PortfolioPageContent() {
       </section>
 
       {/* ── CTA ────────────────────────────────────────────── */}
-      <section style={{ background: "#FFFFFF", padding: "0 24px 96px" }}>
-        <div ref={ctaViewRef} className={`reveal${ctaViewInView ? ' visible' : ''} pf-cta-bar`} style={{
-          maxWidth: 900, margin: "0 auto", border: "1px solid #EEEBE7", borderRadius: 14,
-          textAlign: "center", padding: "56px 48px",
-        }}>
-          <div style={{ width: 56, height: 56, borderRadius: "50%", background: "rgba(216,115,7,0.1)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px" }}>
-            <svg width="30" height="30" viewBox="0 0 48 48" fill="none">
-              <path d="M8 34h32M12 34v-6h8l4-4h8a4 4 0 0 1 4 4v2H12Z" stroke="#d87307" strokeWidth="2" strokeLinejoin="round" />
-              <path d="M22 24V16M18 20l4-6 4 6" stroke="#d87307" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M30 10l2 2M34 8l1 3M37 12l3 1" stroke="#d87307" strokeWidth="2" strokeLinecap="round" />
-            </svg>
-          </div>
-          <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 3vw, 32px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", marginBottom: 16 }}>
-            Ready to Forge What&apos;s Next?
-          </h2>
-          <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#555", maxWidth: 680, margin: "0 auto 8px" }}>
-            Whether you&apos;re launching a new venture, repositioning an established company, raising capital, entering new territory, or building your next growth engine, Brand Iron can help you create a stronger path forward.
-          </p>
-          <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#555", maxWidth: 680, margin: "0 auto 24px" }}>
-            Bring us the challenge. We&apos;ll help you shape what comes next.
-          </p>
-          <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 14, fontWeight: 900, letterSpacing: "0.05em", textTransform: "uppercase", color: "#d87307", marginBottom: 28 }}>
-            Forging Brands. Driving Revenue.
-          </p>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 24, flexWrap: "wrap" }}>
-            <Link href="/contact" style={{
-              display: "inline-flex", alignItems: "center", gap: 8,
-              fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
-              letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none",
-              background: "#d87307", color: "#FFFFFF",
-              padding: "15px 28px", borderRadius: 6, transition: "background 0.2s",
-            }}
-            onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
-            onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
-            >
-              Book a Strategy Session
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-            </Link>
-            <Link href="/services" style={{
-              display: "inline-flex", alignItems: "center", gap: 6,
-              fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
-              letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none",
-              color: "#1a1a1a", transition: "color 0.2s",
-            }}
-            onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.color = "#d87307")}
-            onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.color = "#1a1a1a")}
-            >
-              Explore Our Services
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-            </Link>
+      <section style={{ background: "#F0EEEA", padding: "80px 24px" }}>
+        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+          <div ref={ctaViewRef} className={`reveal${ctaViewInView ? ' visible' : ''}`} style={{
+            position: "relative", overflow: "hidden", borderRadius: 20,
+            backgroundImage: "url('/images/shared/shared-cta-banner-scene.jpg')", backgroundSize: "cover", backgroundPosition: "center 40%",
+          }}>
+            <div role="img" aria-label="Rugged mountain ridge trail at golden-hour sunset" style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
+            <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>
+              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 20 }}>
+                Ready to Start?
+              </p>
+              <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(28px, 4.2vw, 52px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.05, marginBottom: 20 }}>
+                Ready to Forge What&apos;s Next?
+              </h2>
+              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", fontStyle: "italic", maxWidth: 640, margin: "0 auto 40px" }}>
+                Whether you&apos;re launching a new venture, repositioning an established company, raising capital, entering new territory, or building your next growth engine, Brand Iron can help you create a stronger path forward.
+              </p>
+              <Link href="/contact" style={{
+                display: "inline-flex", alignItems: "center",
+                fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 15,
+                background: "#d87307", color: "#FFFFFF",
+                padding: "18px 44px", borderRadius: 6,
+                transition: "background 0.2s", marginBottom: 20,
+              }}
+              onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
+              onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
+              >
+                Book a Strategy Session
+              </Link>
+              <div>
+                <Link href="/services" style={{
+                  fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase",
+                  color: "rgba(255,255,255,0.7)", textDecoration: "none", borderBottom: "1px solid rgba(255,255,255,0.3)", paddingBottom: 2,
+                  transition: "color 0.2s, border-color 0.2s",
+                }}
+                onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = "#f0a860"; (e.currentTarget as HTMLAnchorElement).style.borderBottomColor = "rgba(240,168,96,0.6)"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.7)"; (e.currentTarget as HTMLAnchorElement).style.borderBottomColor = "rgba(255,255,255,0.3)"; }}
+                >
+                  Explore Our Services →
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
