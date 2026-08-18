@@ -68,6 +68,16 @@ export const portfolioItems: PortfolioItem[] = [
     description: "A brand identity for a scam-prevention platform, pairing a rocket-and-pin mark with a confident, modern wordmark built to signal speed and trust.",
   },
   {
+    slug: "innovatix-brand-identity",
+    category: "brand-identity",
+    title: "Innovatix Technology Partners",
+    client: "Innovatix Technology Partners",
+    type: "logo",
+    thumbnail: "/images/portfolio/innovatix/innovatix-brand-identity.jpg",
+    thumbnailAlt: "Innovatix Technology Partners logo mark and wordmark on a white background",
+    description: "A confident wordmark and tagline lockup for a technology partner brand, paired with a full guideline system for consistent use across every application.",
+  },
+  {
     slug: "msp-platform-accelerator-capital-raise",
     category: "capital-raise",
     title: "MSP Platform Accelerator",
