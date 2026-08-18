@@ -50,6 +50,7 @@ export const portfolioItems: PortfolioItem[] = [
     images: [
       "/images/portfolio/sage/sage-brand-identity.jpg",
       "/images/portfolio/sage/sage-tagline-concepts.jpg",
+      "/images/portfolio/sage/sage-pillars-of-service.jpg",
     ],
   },
   {
@@ -78,8 +79,8 @@ export const portfolioItems: PortfolioItem[] = [
     description: "A confident wordmark and tagline lockup for a technology partner brand, paired with a full guideline system for consistent use across every application.",
     images: [
       "/images/portfolio/innovatix/innovatix-brand-identity.jpg",
-      "/images/portfolio/innovatix/innovatix-badge.jpg",
-      "/images/portfolio/innovatix/innovatix-colors.jpg",
+      "/images/portfolio/innovatix/innovatix-letterhead-card.jpg",
+      "/images/portfolio/innovatix/innovatix-tshirt-mockup.jpg",
     ],
   },
   {
@@ -93,7 +94,7 @@ export const portfolioItems: PortfolioItem[] = [
     description: "A brand identity for a market-intelligence platform, pairing a bell-and-signal mark with a confident wordmark that signals clarity and foresight.",
     images: [
       "/images/portfolio/bellwether/bellwether-logo.jpg",
-      "/images/portfolio/bellwether/bellwether-colors.jpg",
+      "/images/portfolio/bellwether/bellwether-ui-components.jpg",
     ],
   },
   {
@@ -107,7 +108,8 @@ export const portfolioItems: PortfolioItem[] = [
     description: "A brand identity for a global urban development firm, built around a skyline mark that scales cleanly across every application.",
     images: [
       "/images/portfolio/cities-project-global/cpg-logo.jpg",
-      "/images/portfolio/cities-project-global/cpg-colors.jpg",
+      "/images/portfolio/cities-project-global/cpg-logo-usage.jpg",
+      "/images/portfolio/cities-project-global/cpg-colors-applied.jpg",
     ],
   },
   {
@@ -122,7 +124,7 @@ export const portfolioItems: PortfolioItem[] = [
     images: [
       "/images/portfolio/real-international-brand/real-international-icon.jpg",
       "/images/portfolio/real-international-brand/real-international-logo-thumb.jpg",
-      "/images/portfolio/real-international-brand/real-international-colors.jpg",
+      "/images/portfolio/real-international-brand/real-international-colors-applied.jpg",
     ],
   },
   {
@@ -151,7 +153,7 @@ export const portfolioItems: PortfolioItem[] = [
     images: [
       "/images/portfolio/real-international/real-international-cover.jpg",
       "/images/portfolio/real-international/real-international-timeline.jpg",
-      "/images/portfolio/real-international/real-international-success.jpg",
+      "/images/portfolio/real-international/real-international-portfolio-metrics.jpg",
     ],
   },
   {
@@ -165,6 +167,7 @@ export const portfolioItems: PortfolioItem[] = [
     description: "A messaging platform for a technology-focused private equity firm, translating its investment track record into a clear, confident growth-partner narrative.",
     images: [
       "/images/portfolio/black-lake/black-lake-cover.jpg",
+      "/images/portfolio/black-lake/black-lake-differentiators.jpg",
       "/images/portfolio/black-lake/black-lake-stats.jpg",
     ],
   },
@@ -179,7 +182,8 @@ export const portfolioItems: PortfolioItem[] = [
     description: "A pitch deck for an advanced flight training company, translating a military-grade training model into a compelling growth story for investors.",
     images: [
       "/images/portfolio/strike-flyers/strike-flyers-cover.jpg",
-      "/images/portfolio/strike-flyers/strike-flyers-model.jpg",
+      "/images/portfolio/strike-flyers/strike-flyers-use-of-funds.jpg",
+      "/images/portfolio/strike-flyers/strike-flyers-financial-summary.jpg",
     ],
   },
   {
@@ -193,7 +197,8 @@ export const portfolioItems: PortfolioItem[] = [
     description: "An investor deck for a scam-prevention platform, translating a consumer-and-enterprise ecosystem into a clear growth story for investors.",
     images: [
       "/images/portfolio/scamrocket-capital/scamrocket-investor-cover.jpg",
-      "/images/portfolio/scamrocket-capital/scamrocket-ecosystem.jpg",
+      "/images/portfolio/scamrocket-capital/scamrocket-traction.jpg",
+      "/images/portfolio/scamrocket-capital/scamrocket-market-landscape.jpg",
     ],
   },
   {
@@ -207,7 +212,8 @@ export const portfolioItems: PortfolioItem[] = [
     description: "A capital raise deck for a craft brewpub, pairing warm brand photography with a clear market opportunity for prospective investors.",
     images: [
       "/images/portfolio/silver-stag/silver-stag-cover.jpg",
-      "/images/portfolio/silver-stag/silver-stag-opportunity.jpg",
+      "/images/portfolio/silver-stag/silver-stag-capital-ask.jpg",
+      "/images/portfolio/silver-stag/silver-stag-financial-overview.jpg",
     ],
   },
   {
@@ -237,6 +243,7 @@ export const portfolioItems: PortfolioItem[] = [
     images: [
       "/images/portfolio/ascendancy-mc/ascendancy-cover.jpg",
       "/images/portfolio/ascendancy-mc/ascendancy-acquisition.jpg",
+      "/images/portfolio/ascendancy-mc/ascendancy-capital-raise-terms.jpg",
     ],
   },
 ];
