@@ -72,9 +72,18 @@ export default function PortfolioGallery({ items }: { items: PortfolioItem[] }) 
                   transition: "transform 0.25s, box-shadow 0.25s, border-color 0.25s",
                 }}
               >
+                <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 10, right: 10, width: 26, height: 26, opacity: 0, transition: "opacity 0.25s ease", zIndex: 3 }} />
+                <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 10, left: 10, width: 26, height: 26, opacity: 0, transition: "opacity 0.25s ease", zIndex: 3 }} />
                 <div style={{ position: "relative", aspectRatio: "4 / 3", overflow: "hidden", background: "#F0EEEA" }}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={item.thumbnail} alt={item.thumbnailAlt} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                  <img src={item.thumbnail} alt={item.thumbnailAlt} className="pf-gallery-img" style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.4s ease" }} />
+                  <div className="pf-gallery-scrim" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, transparent 55%, rgba(8,16,36,0.75) 100%)", opacity: 0, transition: "opacity 0.25s ease" }} />
+                  <span className="pf-gallery-view" style={{
+                    position: "absolute", left: 20, bottom: 14, transform: "translateY(10px)", opacity: 0, transition: "transform 0.25s ease, opacity 0.25s ease",
+                    fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#FFFFFF",
+                  }}>
+                    View Project →
+                  </span>
                   {item.isPlaceholder && (
                     <span style={{ position: "absolute", top: 10, right: 10, background: "rgba(15,27,45,0.85)", color: "#FFFFFF", fontSize: 10, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", padding: "4px 9px", borderRadius: 4 }}>
                       Placeholder
@@ -139,6 +148,10 @@ export default function PortfolioGallery({ items }: { items: PortfolioItem[] }) 
 
       <style>{`
         .pf-gallery-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(0,0,0,0.1); border-color: rgba(216,115,7,0.3) !important; }
+        .pf-gallery-card:hover .corner-bracket { opacity: 1 !important; }
+        .pf-gallery-card:hover .pf-gallery-img { transform: scale(1.08); }
+        .pf-gallery-card:hover .pf-gallery-scrim { opacity: 1 !important; }
+        .pf-gallery-card:hover .pf-gallery-view { opacity: 1 !important; transform: translateY(0) !important; }
         @media (max-width: 900px) {
           .pf-gallery-grid { grid-template-columns: repeat(2, 1fr) !important; }
         }

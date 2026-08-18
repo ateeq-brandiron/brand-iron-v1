@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import CircuitOverlay from "@/components/CircuitOverlay";
 import { portfolioCategories, PortfolioCategoryId } from "@/data/portfolio";
 import { caseStudies } from "@/data/caseStudies";
 
@@ -22,6 +23,7 @@ function useInView(threshold = 0.1) {
 
 export default function CaseStudiesPage() {
   const { ref: gridViewRef, inView: gridViewInView } = useInView();
+  const { ref: ctaViewRef, inView: ctaViewInView } = useInView();
   const [activeCategory, setActiveCategory] = useState<PortfolioCategoryId | "all">("all");
 
   const filtered = activeCategory === "all" ? caseStudies : caseStudies.filter(c => c.category === activeCategory);
@@ -150,18 +152,34 @@ export default function CaseStudiesPage() {
           <div className="cs-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
             {filtered.map((cs, i) => {
               const catLabel = portfolioCategories.find(c => c.id === cs.category)?.label ?? cs.category;
+              const headlineStat = cs.results.find(r => r.value !== "—");
               return (
                 <Link key={cs.slug} href={`/case-studies/${cs.slug}`}
                   className={`reveal${gridViewInView ? ' visible' : ''} cs-card`}
                   style={{
-                    display: "block", background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 14,
+                    display: "block", position: "relative", background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 14,
                     overflow: "hidden", textDecoration: "none", transitionDelay: `${(i % 6) * 0.06}s`,
                     transition: "transform 0.25s, box-shadow 0.25s, border-color 0.25s",
                   }}
                 >
-                  <div style={{ position: "relative", aspectRatio: "4 / 3", overflow: "hidden", background: "#F0EEEA" }}>
+                  <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 10, right: 10, width: 26, height: 26, opacity: 0, transition: "opacity 0.25s ease", zIndex: 3 }} />
+                  <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 10, left: 10, width: 26, height: 26, opacity: 0, transition: "opacity 0.25s ease", zIndex: 3 }} />
+
+                  <div className="cs-card-media" style={{ position: "relative", aspectRatio: "4 / 3", overflow: "hidden", background: "#F0EEEA" }}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={cs.thumbnail} alt={cs.thumbnailAlt} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                    <img src={cs.thumbnail} alt={cs.thumbnailAlt} className="cs-card-img" style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.4s ease" }} />
+                    <div className="cs-card-scrim" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, transparent 55%, rgba(8,16,36,0.75) 100%)", opacity: 0, transition: "opacity 0.25s ease" }} />
+                    <span className="cs-card-view" style={{
+                      position: "absolute", left: 20, bottom: 14, transform: "translateY(10px)", opacity: 0, transition: "transform 0.25s ease, opacity 0.25s ease",
+                      fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#FFFFFF",
+                    }}>
+                      View Case Study →
+                    </span>
+                    {headlineStat && (
+                      <span style={{ position: "absolute", top: 10, left: 10, background: "rgba(216,115,7,0.92)", color: "#FFFFFF", fontFamily: "var(--font-burford-black), sans-serif", fontSize: 13, fontWeight: 900, padding: "5px 10px", borderRadius: 4 }}>
+                        {headlineStat.value} {headlineStat.label}
+                      </span>
+                    )}
                     {cs.isPlaceholder && (
                       <span style={{ position: "absolute", top: 10, right: 10, background: "rgba(15,27,45,0.85)", color: "#FFFFFF", fontSize: 10, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", padding: "4px 9px", borderRadius: 4 }}>
                         Placeholder
@@ -180,6 +198,10 @@ export default function CaseStudiesPage() {
         </div>
         <style>{`
           .cs-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(0,0,0,0.1); border-color: rgba(216,115,7,0.3) !important; }
+          .cs-card:hover .corner-bracket { opacity: 1 !important; }
+          .cs-card:hover .cs-card-img { transform: scale(1.08); }
+          .cs-card:hover .cs-card-scrim { opacity: 1 !important; }
+          .cs-card:hover .cs-card-view { opacity: 1 !important; transform: translateY(0) !important; }
           @media (max-width: 900px) {
             .cs-grid { grid-template-columns: repeat(2, 1fr) !important; }
           }
@@ -190,8 +212,9 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* ── CTA ────────────────────────────────────────────── */}
-      <section style={{ background: "#0F1B2D", padding: "88px 24px", textAlign: "center" }}>
-        <div style={{ maxWidth: 700, margin: "0 auto" }}>
+      <section style={{ position: "relative", overflow: "hidden", background: "#0F1B2D", padding: "88px 24px", textAlign: "center" }}>
+        <CircuitOverlay />
+        <div ref={ctaViewRef} className={`reveal${ctaViewInView ? ' visible' : ''}`} style={{ position: "relative", zIndex: 2, maxWidth: 700, margin: "0 auto" }}>
           <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(24px, 3.5vw, 40px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.15, marginBottom: 20 }}>
             Ready to Become Our Next Success Story?
           </h2>
