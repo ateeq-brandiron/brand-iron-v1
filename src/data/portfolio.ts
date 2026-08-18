@@ -33,6 +33,8 @@ export type PortfolioItem = {
   isPlaceholder?: boolean;
   /** Only for type: "website" — tall full-page image used by the scroll-simulation preview. */
   fullPageImage?: string;
+  /** Additional real deliverable pages shown as a gallery in the expand modal (logo/deck items). Falls back to [thumbnail] if omitted. */
+  images?: string[];
 };
 
 export const portfolioItems: PortfolioItem[] = [
@@ -56,6 +58,10 @@ export const portfolioItems: PortfolioItem[] = [
     thumbnail: "/images/portfolio/sage/sage-brand-identity.jpg",
     thumbnailAlt: "Sage Professional Services LLP logo mark and wordmark on a dark green textured background",
     description: "A brand identity built around a leaf-inspired mark for a professional services firm, giving Sage a distinct, trustworthy visual presence across every touchpoint.",
+    images: [
+      "/images/portfolio/sage/sage-brand-identity.jpg",
+      "/images/portfolio/sage/sage-tagline-concepts.jpg",
+    ],
   },
   {
     slug: "scamrocket-brand-identity",
@@ -66,6 +72,11 @@ export const portfolioItems: PortfolioItem[] = [
     thumbnail: "/images/portfolio/scamrocket/scamrocket-brand-identity.jpg",
     thumbnailAlt: "ScamRocket logo mark and wordmark on a deep navy nebula background",
     description: "A brand identity for a scam-prevention platform, pairing a rocket-and-pin mark with a confident, modern wordmark built to signal speed and trust.",
+    images: [
+      "/images/portfolio/scamrocket/scamrocket-brand-identity.jpg",
+      "/images/portfolio/scamrocket/scamrocket-logo-usage.jpg",
+      "/images/portfolio/scamrocket/scamrocket-colors.jpg",
+    ],
   },
   {
     slug: "innovatix-brand-identity",
@@ -76,6 +87,11 @@ export const portfolioItems: PortfolioItem[] = [
     thumbnail: "/images/portfolio/innovatix/innovatix-brand-identity.jpg",
     thumbnailAlt: "Innovatix Technology Partners logo mark and wordmark on a white background",
     description: "A confident wordmark and tagline lockup for a technology partner brand, paired with a full guideline system for consistent use across every application.",
+    images: [
+      "/images/portfolio/innovatix/innovatix-brand-identity.jpg",
+      "/images/portfolio/innovatix/innovatix-badge.jpg",
+      "/images/portfolio/innovatix/innovatix-colors.jpg",
+    ],
   },
   {
     slug: "msp-platform-accelerator-capital-raise",
@@ -86,6 +102,10 @@ export const portfolioItems: PortfolioItem[] = [
     thumbnail: "/images/portfolio/msp-accelerator/msp-capital-raise-cover.jpg",
     thumbnailAlt: "MSP Platform Accelerator capital raise pitch deck cover slide",
     description: "A capital raise deck built to help MSP Platform Accelerator communicate its acquisition strategy and growth plan clearly to prospective investors.",
+    images: [
+      "/images/portfolio/msp-accelerator/msp-capital-raise-cover.jpg",
+      "/images/portfolio/msp-accelerator/msp-opportunity-slide.jpg",
+    ],
   },
   {
     slug: "sample-go-to-market-project",
