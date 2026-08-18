@@ -211,6 +211,21 @@ export const portfolioItems: PortfolioItem[] = [
     ],
   },
   {
+    slug: "haefele-flanagan-go-to-market",
+    category: "go-to-market",
+    title: "Haefele Flanagan & Co.",
+    client: "Haefele Flanagan & Co.",
+    type: "deck",
+    thumbnail: "/images/portfolio/haefele-flanagan/haefele-cover.jpg",
+    thumbnailAlt: "Haefele Flanagan & Co. capabilities pitchbook cover slide with the HF diamond mark over a glass office building",
+    description: "A go-to-market capabilities pitchbook for a middle-market M&A advisory firm, translating a deep track record in buy-side and sell-side deals into a clear, confident story for prospective clients and referral partners.",
+    images: [
+      "/images/portfolio/haefele-flanagan/haefele-cover.jpg",
+      "/images/portfolio/haefele-flanagan/haefele-achievements.jpg",
+      "/images/portfolio/haefele-flanagan/haefele-acquisition-strategy.jpg",
+    ],
+  },
+  {
     slug: "ascendancy-mc-capital-raise",
     category: "capital-raise",
     title: "Ascendancy MC Inc.",
