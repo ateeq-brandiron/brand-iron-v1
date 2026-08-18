@@ -1,10 +1,11 @@
 "use client";
 import Link from "next/link";
-import { useState, useEffect, useRef } from "react";
+import { useSearchParams } from "next/navigation";
+import { Suspense, useState, useEffect, useRef } from "react";
 import CircuitOverlay from "@/components/CircuitOverlay";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import PortfolioGallery from "@/components/PortfolioGallery";
-import { portfolioItems } from "@/data/portfolio";
+import { portfolioItems, portfolioCategories, PortfolioCategoryId } from "@/data/portfolio";
 
 function useInView(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null);
@@ -149,12 +150,26 @@ const processSteps = [
 ];
 
 export default function PortfolioPage() {
+  return (
+    <Suspense fallback={null}>
+      <PortfolioPageContent />
+    </Suspense>
+  );
+}
+
+function PortfolioPageContent() {
   const { ref: s2ViewRef, inView: s2ViewInView } = useInView();
   const { ref: s3ViewRef, inView: s3ViewInView } = useInView();
   const { ref: s4ViewRef, inView: s4ViewInView } = useInView();
   const { ref: s5ViewRef, inView: s5ViewInView } = useInView();
   const { ref: s6ViewRef, inView: s6ViewInView } = useInView();
   const { ref: ctaViewRef, inView: ctaViewInView } = useInView();
+
+  const searchParams = useSearchParams();
+  const categoryParam = searchParams.get("category");
+  const initialCategory = portfolioCategories.some(c => c.id === categoryParam)
+    ? (categoryParam as PortfolioCategoryId)
+    : undefined;
 
   return (
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
@@ -326,7 +341,7 @@ export default function PortfolioPage() {
           </h2>
           <div className="pf-category-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
             {categoryCards.map(({ id, category, headline, body, image, imageAlt }, i) => (
-              <a key={id} href={`#all-projects`}
+              <Link key={id} href={`/portfolio?category=${id}#all-projects`}
                 className={`reveal${s4ViewInView ? ' visible' : ''} pf-category-card`}
                 style={{
                   display: "block", background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 12,
@@ -351,7 +366,7 @@ export default function PortfolioPage() {
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                   </span>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -377,7 +392,7 @@ export default function PortfolioPage() {
           <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.75, color: "#666", maxWidth: 640, margin: "0 auto 40px", textAlign: "center" }}>
             Filter by category and click any thumbnail for a closer look.
           </p>
-          <PortfolioGallery items={portfolioItems} />
+          <PortfolioGallery key={initialCategory ?? "all"} items={portfolioItems} initialCategory={initialCategory} />
         </div>
       </section>
 

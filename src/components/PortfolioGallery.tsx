@@ -3,8 +3,8 @@ import { useState } from "react";
 import { portfolioCategories, PortfolioCategoryId, PortfolioItem } from "@/data/portfolio";
 import WebsiteScrollPreview from "@/components/WebsiteScrollPreview";
 
-export default function PortfolioGallery({ items }: { items: PortfolioItem[] }) {
-  const [activeCategory, setActiveCategory] = useState<PortfolioCategoryId | "all">("all");
+export default function PortfolioGallery({ items, initialCategory }: { items: PortfolioItem[]; initialCategory?: PortfolioCategoryId | "all" }) {
+  const [activeCategory, setActiveCategory] = useState<PortfolioCategoryId | "all">(initialCategory ?? "all");
   const [expanded, setExpanded] = useState<PortfolioItem | null>(null);
   const [galleryIndex, setGalleryIndex] = useState(0);
 
