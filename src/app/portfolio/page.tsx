@@ -171,6 +171,34 @@ function PortfolioPageContent() {
   const { ref: s6ViewRef, inView: s6ViewInView } = useInView();
   const { ref: ctaViewRef, inView: ctaViewInView } = useInView();
 
+  const [activeCategoryCard, setActiveCategoryCard] = useState(0);
+  const categoryCardRefs = useRef<(HTMLAnchorElement | null)[]>([]);
+  const categoryCarouselRef = useRef<HTMLDivElement>(null);
+  const activeCategoryCardRef = useRef(activeCategoryCard);
+  const catAutoSlideRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const selectCategoryCard = (i: number, behavior: ScrollBehavior = "smooth") => {
+    setActiveCategoryCard(i);
+    activeCategoryCardRef.current = i;
+    const container = categoryCarouselRef.current;
+    const card = categoryCardRefs.current[i];
+    if (container && card) {
+      container.scrollTo({ left: card.offsetLeft - (container.clientWidth - card.clientWidth) / 2, behavior });
+    }
+  };
+  const startCatAutoSlide = () => {
+    if (catAutoSlideRef.current) return;
+    catAutoSlideRef.current = setInterval(() => {
+      selectCategoryCard((activeCategoryCardRef.current + 1) % categoryCards.length);
+    }, 5000);
+  };
+  const stopCatAutoSlide = () => {
+    if (catAutoSlideRef.current) {
+      clearInterval(catAutoSlideRef.current);
+      catAutoSlideRef.current = null;
+    }
+  };
+  useEffect(() => () => stopCatAutoSlide(), []);
+
   const searchParams = useSearchParams();
   const categoryParam = searchParams.get("category");
   const initialCategory = portfolioCategories.some(c => c.id === categoryParam)
@@ -339,52 +367,126 @@ function PortfolioPageContent() {
         `}</style>
       </section>
 
-      {/* ── S4: SELECTED WORK (CATEGORY CARDS) ───────────────── */}
+      {/* ── S4: SELECTED WORK (CATEGORY CAROUSEL) ───────────────── */}
       <section style={{ background: "#FFFFFF", padding: "8px 40px 96px" }}>
         <div ref={s4ViewRef} style={{ maxWidth: 1200, margin: "0 auto" }}>
           <h2 className={`section-heading reveal${s4ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 40 }}>
             Selected Work
           </h2>
-          <div className="pf-category-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
-            {categoryCards.map(({ id, category, headline, body, image, imageAlt }, i) => (
-              <Link key={id} href={`/portfolio?category=${id}#all-projects`}
-                className={`reveal${s4ViewInView ? ' visible' : ''} pf-category-card`}
-                style={{
-                  display: "block", background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 12,
-                  overflow: "hidden", textDecoration: "none", transitionDelay: `${(i % 6) * 0.06}s`,
-                  transition: "transform 0.25s, box-shadow 0.25s, border-color 0.25s",
-                }}
-              >
-                <div style={{ position: "relative", aspectRatio: "4 / 3", overflow: "hidden" }}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={image} alt={imageAlt} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 10, right: 10, width: 28, height: 28, opacity: 0, transition: "opacity 0.25s ease" }} />
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 10, left: 10, width: 28, height: 28, opacity: 0, transition: "opacity 0.25s ease" }} />
-                </div>
-                <div style={{ padding: "20px 22px 24px" }}>
-                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#d87307", marginBottom: 8 }}>{category}</p>
-                  <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 18, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", marginBottom: 10, lineHeight: 1.25 }}>{headline}</h3>
-                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13.5, lineHeight: 1.65, color: "#666", marginBottom: 16 }}>{body}</p>
-                  <span className="pf-view-work" style={{ display: "inline-flex", alignItems: "center", gap: 6, fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: "0.08em", textTransform: "uppercase", color: "#d87307" }}>
-                    View the Work
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                  </span>
-                </div>
-              </Link>
-            ))}
+
+          <div
+            style={{ position: "relative", marginBottom: 32 }}
+            onMouseEnter={startCatAutoSlide}
+            onMouseLeave={stopCatAutoSlide}
+          >
+            <button
+              aria-label="Previous category"
+              onClick={() => selectCategoryCard((activeCategoryCard - 1 + categoryCards.length) % categoryCards.length)}
+              className="pf-category-carousel-arrow"
+              style={{
+                position: "absolute", left: -8, top: "50%", transform: "translateY(-50%)", zIndex: 2,
+                width: 44, height: 44, borderRadius: "50%", background: "#F9F8F6",
+                border: "1px solid #EEEBE7", cursor: "pointer",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                boxShadow: "0 4px 16px rgba(0,0,0,0.1)", transition: "border-color 0.2s, background 0.2s",
+              }}
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </button>
+
+            <div ref={categoryCarouselRef} className="pf-category-carousel" style={{
+              display: "flex", gap: 24, overflowX: "auto",
+              scrollSnapType: "x proximity", scrollBehavior: "smooth",
+              padding: "8px calc(50% - 170px)",
+            }}>
+              {categoryCards.map(({ id, category, headline, body, image, imageAlt }, i) => (
+                <Link key={id} href={`/portfolio?category=${id}#all-projects`}
+                  ref={el => { categoryCardRefs.current[i] = el; }}
+                  className={`reveal${s4ViewInView ? ' visible' : ''} pf-category-card`}
+                  style={{
+                    display: "flex", flexDirection: "column",
+                    background: "#FFFFFF", border: "1px solid #ECE5D8", borderRadius: 18,
+                    overflow: "hidden", textDecoration: "none", transitionDelay: `${(i % 6) * 0.06}s`,
+                    flex: "0 0 340px", width: 340, scrollSnapAlign: "center",
+                    boxShadow: "0 4px 16px rgba(0,0,0,0.05)",
+                    transition: "transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease",
+                  }}
+                >
+                  <div style={{ position: "relative", aspectRatio: "4 / 3", overflow: "hidden" }}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={image} alt={imageAlt} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 10, right: 10, width: 28, height: 28, opacity: 0, transition: "opacity 0.25s ease" }} />
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 10, left: 10, width: 28, height: 28, opacity: 0, transition: "opacity 0.25s ease" }} />
+                  </div>
+                  <div style={{ padding: "22px 24px 26px", display: "flex", flexDirection: "column", flex: 1 }}>
+                    <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#d87307", marginBottom: 8 }}>{category}</p>
+                    <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 17, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", marginBottom: 10, lineHeight: 1.25 }}>{headline}</h3>
+                    <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.65, color: "#666", marginBottom: 18 }}>{body}</p>
+                    <span className="pf-view-work" style={{
+                      display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+                      fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 12,
+                      letterSpacing: "0.12em", textTransform: "uppercase",
+                      background: "#d87307", color: "#FFFFFF",
+                      padding: "13px 20px", borderRadius: 6,
+                      marginTop: "auto", transition: "background 0.2s",
+                    }}>
+                      View the Work
+                      <span className="pf-view-work-arrow" style={{ display: "inline-flex", alignItems: "center" }}>
+                        <span className="pf-view-work-tail" style={{ display: "inline-block", height: 2, width: 18, background: "currentColor", transform: "scaleX(0.3)", transformOrigin: "right center", transition: "transform 0.3s cubic-bezier(0.22,1,0.36,1)" }} />
+                        <svg width="5" height="10" viewBox="0 6 6 12" fill="none" style={{ flexShrink: 0, display: "block" }}><path d="M0 6l6 6-6 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      </span>
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+
+            <button
+              aria-label="Next category"
+              onClick={() => selectCategoryCard((activeCategoryCard + 1) % categoryCards.length)}
+              className="pf-category-carousel-arrow"
+              style={{
+                position: "absolute", right: -8, top: "50%", transform: "translateY(-50%)", zIndex: 2,
+                width: 44, height: 44, borderRadius: "50%", background: "#F9F8F6",
+                border: "1px solid #EEEBE7", cursor: "pointer",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                boxShadow: "0 4px 16px rgba(0,0,0,0.1)", transition: "border-color 0.2s, background 0.2s",
+              }}
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </button>
+
+            {/* Dot pagination */}
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, marginTop: 32 }}>
+              {categoryCards.map((c, i) => (
+                <button
+                  key={c.id}
+                  aria-label={`Go to ${c.category}`}
+                  onClick={() => selectCategoryCard(i)}
+                  style={{
+                    width: i === activeCategoryCard ? 24 : 8, height: 8, borderRadius: 4,
+                    background: i === activeCategoryCard ? "#d87307" : "#ddd",
+                    border: "none", cursor: "pointer", transition: "width 0.2s, background 0.2s", padding: 0,
+                  }}
+                  onMouseEnter={e => { if (i !== activeCategoryCard) (e.currentTarget as HTMLButtonElement).style.background = "#d87307"; }}
+                  onMouseLeave={e => { if (i !== activeCategoryCard) (e.currentTarget as HTMLButtonElement).style.background = "#ddd"; }}
+                />
+              ))}
+            </div>
           </div>
         </div>
         <style>{`
-          .pf-category-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(0,0,0,0.1); border-color: rgba(216,115,7,0.3) !important; }
-          .pf-category-card:hover .pf-view-work { text-decoration: underline; }
+          .pf-category-carousel { scrollbar-width: none; -ms-overflow-style: none; }
+          .pf-category-carousel::-webkit-scrollbar { display: none; }
+          .pf-category-card:hover { transform: translateY(-4px); box-shadow: 0 14px 28px rgba(0,0,0,0.1); border-color: rgba(216,115,7,0.3) !important; }
+          .pf-category-card:hover .pf-view-work { background: #c46305; }
+          .pf-category-card:hover .pf-view-work-tail { transform: scaleX(1); }
           .pf-category-card:hover .corner-bracket { opacity: 1 !important; }
-          @media (max-width: 900px) {
-            .pf-category-grid { grid-template-columns: repeat(2, 1fr) !important; }
-          }
-          @media (max-width: 600px) {
-            .pf-category-grid { grid-template-columns: 1fr !important; }
+          .pf-category-carousel-arrow:hover { border-color: #d87307 !important; background: rgba(216,115,7,0.08) !important; }
+          @media (max-width: 640px) {
+            .pf-category-carousel-arrow { display: none !important; }
           }
         `}</style>
       </section>
