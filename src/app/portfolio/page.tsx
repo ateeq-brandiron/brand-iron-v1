@@ -125,27 +125,33 @@ const categoryCards = [
 const processSteps = [
   {
     title: "Discover",
-    icon: (<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="10" cy="10" r="6.5" stroke="#d87307" strokeWidth="1.8" /><path d="M15 15l5 5" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round" /></svg>),
+    caption: "Uncover the real challenge.",
+    icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="10" cy="10" r="6.5" stroke="#d87307" strokeWidth="1.8" /><path d="M15 15l5 5" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round" /></svg>),
   },
   {
     title: "Position",
-    icon: (<img loading="lazy" src="/images/icons/icon-lightbulb.svg" alt="" style={{ width: 20, height: 20 }} />),
+    caption: "Sharpen the strategic position.",
+    icon: (<img loading="lazy" src="/images/icons/icon-lightbulb.svg" alt="" style={{ width: 22, height: 22 }} />),
   },
   {
     title: "Build",
-    icon: (<img loading="lazy" src="/images/icons/icon-gear.svg" alt="" style={{ width: 20, height: 20 }} />),
+    caption: "Build the right tools.",
+    icon: (<img loading="lazy" src="/images/icons/icon-gear.svg" alt="" style={{ width: 22, height: 22 }} />),
   },
   {
     title: "Launch",
-    icon: (<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2c3 2 5 6 5 10 0 2-1 4-2 5l-3 2-3-2c-1-1-2-3-2-5 0-4 2-8 5-10Z" stroke="#d87307" strokeWidth="1.6" strokeLinejoin="round" /><circle cx="12" cy="10" r="2" stroke="#d87307" strokeWidth="1.5" /><path d="M8 16l-3 5M16 16l3 5" stroke="#d87307" strokeWidth="1.6" strokeLinecap="round" /></svg>),
+    caption: "Launch with purpose.",
+    icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2c3 2 5 6 5 10 0 2-1 4-2 5l-3 2-3-2c-1-1-2-3-2-5 0-4 2-8 5-10Z" stroke="#d87307" strokeWidth="1.6" strokeLinejoin="round" /><circle cx="12" cy="10" r="2" stroke="#d87307" strokeWidth="1.5" /><path d="M8 16l-3 5M16 16l3 5" stroke="#d87307" strokeWidth="1.6" strokeLinecap="round" /></svg>),
   },
   {
     title: "Measure",
-    icon: (<img loading="lazy" src="/images/icons/icon-barchart.svg" alt="" style={{ width: 20, height: 20 }} />),
+    caption: "Measure what matters.",
+    icon: (<img loading="lazy" src="/images/icons/icon-barchart.svg" alt="" style={{ width: 22, height: 22 }} />),
   },
   {
     title: "Grow",
-    icon: (<img loading="lazy" src="/images/icons/icon-trending.svg" alt="" style={{ width: 20, height: 20 }} />),
+    caption: "Keep pushing forward.",
+    icon: (<img loading="lazy" src="/images/icons/icon-trending.svg" alt="" style={{ width: 22, height: 22 }} />),
   },
 ];
 
@@ -407,62 +413,60 @@ function PortfolioPageContent() {
             <p className={`reveal${s5ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.75)", marginBottom: 14 }}>
               Every project starts with a simple question: what&apos;s standing between this business and its next stage of growth?
             </p>
-            <p className={`reveal${s5ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.75)", marginBottom: 14 }}>
+            <p className={`reveal${s5ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.75)", marginBottom: 0 }}>
               From there, we dig in: we uncover the challenge, sharpen the position, build the right tools, launch with purpose, measure what matters, and keep pushing forward.
             </p>
-            <p className={`reveal${s5ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 14, fontWeight: 900, letterSpacing: "0.05em", textTransform: "uppercase", color: "#d87307" }}>
-              Discover &rarr; Position &rarr; Build &rarr; Launch &rarr; Measure &rarr; Grow
-            </p>
           </div>
 
-          <div className={`reveal${s5ViewInView ? ' visible' : ''} pf-process-grid`} style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16, marginBottom: 48 }}>
-            {processSteps.map(({ title, icon }, i) => {
-              const isLast = i === processSteps.length - 1;
-              return (
-                <div key={title}
-                  style={{
-                    position: "relative", borderRadius: 14, padding: "26px 20px", overflow: "hidden",
-                    background: isLast ? "#d87307" : "rgba(255,255,255,0.04)",
-                    border: isLast ? "none" : "1px solid rgba(255,255,255,0.08)",
-                    boxShadow: isLast ? "0 10px 32px rgba(216,115,7,0.3)" : "none",
-                    transition: "transform 0.25s, box-shadow 0.25s, border-color 0.25s, background 0.25s",
-                  }}
-                  onMouseEnter={e => {
-                    const el = e.currentTarget as HTMLDivElement;
-                    el.style.transform = "translateY(-4px)";
-                    if (isLast) { el.style.boxShadow = "0 16px 44px rgba(216,115,7,0.45)"; }
-                    else { el.style.background = "rgba(216,115,7,0.07)"; el.style.borderColor = "rgba(216,115,7,0.25)"; }
-                  }}
-                  onMouseLeave={e => {
-                    const el = e.currentTarget as HTMLDivElement;
-                    el.style.transform = "translateY(0)";
-                    if (isLast) { el.style.boxShadow = "0 10px 32px rgba(216,115,7,0.3)"; }
-                    else { el.style.background = "rgba(255,255,255,0.04)"; el.style.borderColor = "rgba(255,255,255,0.08)"; }
-                  }}
-                >
-                  <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: isLast ? "rgba(255,255,255,0.35)" : "linear-gradient(to right, #d87307, rgba(216,115,7,0.2))" }} />
-                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 14 }}>
-                    <div style={{ width: 38, height: 38, borderRadius: "50%", background: isLast ? "rgba(255,255,255,0.95)" : "rgba(216,115,7,0.15)", border: isLast ? "none" : "1px solid rgba(216,115,7,0.3)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                      {icon}
-                    </div>
-                    <span style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, color: isLast ? "rgba(255,255,255,0.85)" : "#d87307" }}>{String(i + 1).padStart(2, "0")}</span>
+          <div className={`reveal${s5ViewInView ? ' visible' : ''} pf-flow-row`}>
+            {processSteps.map(({ title, caption, icon }, i) => (
+              <div className="pf-flow-item" key={title}>
+                <div className="pf-flow-step">
+                  <div className="pf-flow-icon-wrap">
+                    <div className="pf-flow-icon">{icon}</div>
+                    <span className="pf-flow-num">{String(i + 1).padStart(2, "0")}</span>
                   </div>
-                  <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 16, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#FFFFFF", marginBottom: 0, lineHeight: 1.25 }}>{title}</h3>
+                  <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 15, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#FFFFFF", margin: "16px 0 6px", lineHeight: 1.25 }}>{title}</h3>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12.5, lineHeight: 1.6, color: "rgba(255,255,255,0.55)", margin: 0, maxWidth: 130 }}>{caption}</p>
                 </div>
-              );
-            })}
+                {i < processSteps.length - 1 && (
+                  <div className="pf-flow-connector" style={{ opacity: 0.4 + i * 0.12 }}>
+                    <svg className="pf-arrow-h" width="20" height="14" viewBox="0 0 20 14" fill="none"><path d="M1 7h16M11 1l6 6-6 6" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                    <svg className="pf-arrow-v" width="14" height="20" viewBox="0 0 14 20" fill="none"><path d="M7 1v16M1 11l6 6 6-6" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
 
-          <p className={`reveal${s5ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.8, color: "rgba(255,255,255,0.6)", textAlign: "center", maxWidth: 700, margin: "0 auto" }}>
+          <p className={`reveal${s5ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.8, color: "rgba(255,255,255,0.6)", textAlign: "center", maxWidth: 700, margin: "56px auto 0" }}>
             We don&apos;t believe in strategy that sits on a shelf or creative that only looks good in a presentation. We build work designed to earn its keep.
           </p>
         </div>
         <style>{`
-          @media (max-width: 900px) {
-            .pf-process-grid { grid-template-columns: repeat(2, 1fr) !important; }
+          .pf-flow-row { display: flex; align-items: flex-start; justify-content: center; margin-bottom: 8px; }
+          .pf-flow-item { display: flex; align-items: flex-start; flex: 1; min-width: 0; }
+          .pf-flow-step { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center; text-align: center; }
+          .pf-flow-icon-wrap { position: relative; width: 56px; height: 56px; flex-shrink: 0; }
+          .pf-flow-icon {
+            width: 56px; height: 56px; border-radius: 50%; background: rgba(216,115,7,0.1); border: 1px solid rgba(216,115,7,0.3);
+            display: flex; align-items: center; justify-content: center; transition: background 0.25s, border-color 0.25s, transform 0.25s;
           }
-          @media (max-width: 520px) {
-            .pf-process-grid { grid-template-columns: 1fr !important; }
+          .pf-flow-step:hover .pf-flow-icon { background: rgba(216,115,7,0.2); border-color: rgba(216,115,7,0.6); transform: translateY(-3px); }
+          .pf-flow-num {
+            position: absolute; top: -6px; right: -6px; width: 20px; height: 20px; border-radius: 50%;
+            background: #d87307; border: 2px solid #0F1B2D; color: #FFFFFF;
+            font-family: var(--font-montserrat), sans-serif; font-size: 9px; font-weight: 700;
+            display: flex; align-items: center; justify-content: center;
+          }
+          .pf-flow-connector { flex-shrink: 0; display: flex; align-items: center; justify-content: center; padding-top: 17px; margin: 0 4px; }
+          .pf-arrow-v { display: none; }
+          @media (max-width: 900px) {
+            .pf-flow-row { flex-direction: column; align-items: stretch; }
+            .pf-flow-item { flex-direction: column; align-items: center; }
+            .pf-flow-connector { padding-top: 0; margin: 10px 0; }
+            .pf-arrow-h { display: none; }
+            .pf-arrow-v { display: block; }
           }
         `}</style>
       </section>
