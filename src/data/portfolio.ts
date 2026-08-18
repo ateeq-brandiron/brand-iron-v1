@@ -125,4 +125,32 @@ export const portfolioItems: PortfolioItem[] = [
       "/images/portfolio/black-lake/black-lake-stats.jpg",
     ],
   },
+  {
+    slug: "strike-flyers-capital-raise",
+    category: "capital-raise",
+    title: "Strike Flyers",
+    client: "Strike Flyers LLC",
+    type: "deck",
+    thumbnail: "/images/portfolio/strike-flyers/strike-flyers-cover.jpg",
+    thumbnailAlt: "Strike Flyers pitch deck cover slide with a fighter jet and squadron crest",
+    description: "A pitch deck for an advanced flight training company, translating a military-grade training model into a compelling growth story for investors.",
+    images: [
+      "/images/portfolio/strike-flyers/strike-flyers-cover.jpg",
+      "/images/portfolio/strike-flyers/strike-flyers-model.jpg",
+    ],
+  },
+  {
+    slug: "ascendancy-mc-capital-raise",
+    category: "capital-raise",
+    title: "Ascendancy MC Inc.",
+    client: "Ascendancy MC Inc.",
+    type: "deck",
+    thumbnail: "/images/portfolio/ascendancy-mc/ascendancy-cover.jpg",
+    thumbnailAlt: "Ascendancy MC Inc. pitch deck cover slide over a city skyline at dusk",
+    description: "A pitch deck for a small-business acquisition holding company, framing its buy-and-build strategy clearly for prospective investors.",
+    images: [
+      "/images/portfolio/ascendancy-mc/ascendancy-cover.jpg",
+      "/images/portfolio/ascendancy-mc/ascendancy-acquisition.jpg",
+    ],
+  },
 ];
