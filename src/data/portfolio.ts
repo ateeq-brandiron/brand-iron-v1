@@ -39,17 +39,6 @@ export type PortfolioItem = {
 
 export const portfolioItems: PortfolioItem[] = [
   {
-    slug: "sample-website-project",
-    category: "websites",
-    title: "Sample Website Project",
-    type: "website",
-    thumbnail: "/images/portfolio/placeholders/website-sample-thumb.jpg",
-    thumbnailAlt: "Placeholder website mockup screenshot",
-    description: "Placeholder entry standing in for a real website project. Swap in an actual client site, screenshot, and description.",
-    isPlaceholder: true,
-    fullPageImage: "/images/portfolio/placeholders/website-sample-fullpage.jpg",
-  },
-  {
     slug: "sage-professional-services-brand-identity",
     category: "brand-identity",
     title: "Sage Professional Services LLP",
@@ -69,11 +58,11 @@ export const portfolioItems: PortfolioItem[] = [
     title: "ScamRocket",
     client: "ScamRocket",
     type: "logo",
-    thumbnail: "/images/portfolio/scamrocket/scamrocket-brand-identity.jpg",
-    thumbnailAlt: "ScamRocket logo mark and wordmark on a deep navy nebula background",
+    thumbnail: "/images/portfolio/scamrocket/scamrocket-icon-mark.jpg",
+    thumbnailAlt: "ScamRocket rocket-and-pin icon mark on a deep navy background",
     description: "A brand identity for a scam-prevention platform, pairing a rocket-and-pin mark with a confident, modern wordmark built to signal speed and trust.",
     images: [
-      "/images/portfolio/scamrocket/scamrocket-brand-identity.jpg",
+      "/images/portfolio/scamrocket/scamrocket-wordmark.jpg",
       "/images/portfolio/scamrocket/scamrocket-logo-usage.jpg",
       "/images/portfolio/scamrocket/scamrocket-colors.jpg",
     ],
@@ -106,25 +95,5 @@ export const portfolioItems: PortfolioItem[] = [
       "/images/portfolio/msp-accelerator/msp-capital-raise-cover.jpg",
       "/images/portfolio/msp-accelerator/msp-opportunity-slide.jpg",
     ],
-  },
-  {
-    slug: "sample-go-to-market-project",
-    category: "go-to-market",
-    title: "Sample Go-To-Market Project",
-    type: "other",
-    thumbnail: "/images/portfolio/placeholders/go-to-market-sample.jpg",
-    thumbnailAlt: "Placeholder go-to-market roadmap mockup",
-    description: "Placeholder entry standing in for a real go-to-market engagement. Swap in an actual launch plan visual or outcome summary.",
-    isPlaceholder: true,
-  },
-  {
-    slug: "sample-revenue-growth-project",
-    category: "revenue-growth",
-    title: "Sample Revenue Growth Project",
-    type: "other",
-    thumbnail: "/images/portfolio/placeholders/revenue-growth-sample.jpg",
-    thumbnailAlt: "Placeholder revenue performance dashboard mockup",
-    description: "Placeholder entry standing in for a real revenue growth engagement. Swap in an actual dashboard or performance summary.",
-    isPlaceholder: true,
   },
 ];
