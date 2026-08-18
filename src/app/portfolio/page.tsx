@@ -73,52 +73,46 @@ function StatTile({ stat, inView, index, isLast }: {
 
 const categoryCards = [
   {
-    id: "websites",
-    category: "Websites",
-    headline: "Build a Stronger Front Door.",
-    body: "Your website is often where the first handshake happens. We create digital experiences that make the right first impression, communicate value clearly, and guide visitors toward action.",
-    image: "/images/about/about-hero-barn.webp",
-    imageAlt: "Warmly lit rustic building exterior at dusk, representing a website as a brand's front door",
-  },
-  {
     id: "brand-identity",
-    category: "Brand Identity",
-    headline: "Give Your Brand a Face.",
-    body: "A strong identity does more than look good. We build logos, brand guidelines, and visual systems that give your brand a face people recognize, trust, and remember.",
-    image: "/images/portfolio/portfolio-category-brand-identity-horse.jpg",
-    imageAlt: "Striking black and white portrait of a horse with a full mane, representing bold brand identity",
+    category: "Brand Strategy & Positioning",
+    headline: "Stake Your Claim.",
+    body: "A brand without clear positioning gets lost in the crowd. We help businesses define what they stand for, who they serve, and why the market should pay attention. The result is a sharper position, stronger message, and a brand built to hold its ground.",
+    services: ["Brand Strategy", "Positioning", "Messaging", "Identity"],
   },
   {
-    id: "capital-raise",
-    category: "Capital Raise",
-    headline: "Make the Story Worth Backing.",
-    body: "Capital follows confidence. We help companies tell a stronger investor story through clear positioning, compelling narratives, and raise materials built to communicate the opportunity with clarity.",
-    image: "/images/shared/shared-fence-pasture.jpg",
-    imageAlt: "Wooden fence along a pasture at golden hour, representing staking a claim for capital raise support",
+    id: "websites",
+    category: "Website & Digital Experience",
+    headline: "Build a Stronger Front Door.",
+    body: "Your website is often where the first handshake happens. We create digital experiences that make the right first impression, communicate value clearly, and guide visitors toward action. Built for credibility. Built for conversion. Built to keep working long after launch.",
+    services: ["Website Design", "UX", "Messaging", "Conversion Optimization"],
   },
   {
     id: "go-to-market",
-    category: "Go-To-Market",
+    category: "Go-To-Market Strategy",
     headline: "Know the Territory. Make Your Move.",
-    body: "Going to market without a clear plan is like riding blind. We help businesses map the landscape, sharpen the offer, and build a practical launch roadmap from market entry to measurable growth.",
-    image: "/images/shared/shared-mountain-peaks.jpg",
-    imageAlt: "Rocky mountain range and open valley terrain, representing mapping the market before a go-to-market launch",
+    body: "Going to market without a clear strategy is like riding blind. We help businesses understand the landscape, identify the right audience, sharpen the offer, and build a practical path from market entry to measurable growth.",
+    services: ["Market Research", "ICP Development", "GTM Strategy", "Demand Generation"],
+  },
+  {
+    id: "capital-raise",
+    category: "Capital Raise Strategy",
+    headline: "Make the Story Worth Backing.",
+    body: "Capital follows confidence. We help companies tell a stronger investor story through clear positioning, compelling narratives, and raise materials built to communicate the opportunity with clarity. No smoke. No fluff. Just a stronger case for why the business deserves attention.",
+    services: ["Investor Positioning", "Pitch Decks", "Financial Narrative", "Raise Strategy"],
   },
   {
     id: "ai-visibility",
-    category: "AI Visibility",
+    category: "AI Visibility & Discoverability",
     headline: "Be Found Where the Market Is Looking.",
-    body: "Discovery is moving beyond traditional search. We help businesses strengthen the signals that make them easier to find, understand, trust, and recommend across search engines and AI-driven platforms.",
-    image: "/images/shared/shared-blacksmith-tech-lines.jpg",
-    imageAlt: "Blacksmith's hands forging metal overlaid with glowing circuit-line data signals, representing AI visibility",
+    body: "Discovery is moving beyond traditional search. We help businesses strengthen the signals that make them easier to find, understand, trust, and recommend across search engines and AI-driven platforms. Because being good isn't enough if nobody can find you.",
+    services: ["AI Visibility", "AEO", "GEO", "Entity Optimization", "Search Strategy"],
   },
   {
     id: "revenue-growth",
-    category: "Revenue Growth",
+    category: "Revenue Growth & Automation",
     headline: "Turn Momentum Into a System.",
     body: "Growth shouldn't depend on luck. We connect marketing, sales, automation, funnels, and reporting into a more consistent system designed to create demand, improve follow-up, and strengthen revenue performance. Less chasing. More traction.",
-    image: "/images/portfolio/portfolio-category-revenue-growth-dashboard.jpg",
-    imageAlt: "Laptop displaying a Brand Iron revenue and call-performance dashboard, representing revenue growth reporting",
+    services: ["Revenue Strategy", "Automation", "CRM", "Funnels", "Reporting"],
   },
 ];
 
@@ -397,48 +391,48 @@ function PortfolioPageContent() {
             <div ref={categoryCarouselRef} className="pf-category-carousel" style={{
               display: "flex", gap: 24, overflowX: "auto",
               scrollSnapType: "x proximity", scrollBehavior: "smooth",
-              padding: "8px calc(50% - 170px)",
+              padding: "8px calc(50% - 160px)",
             }}>
-              {categoryCards.map(({ id, category, headline, body, image, imageAlt }, i) => (
+              {categoryCards.map(({ id, category, headline, body, services }, i) => (
                 <Link key={id} href={`/portfolio?category=${id}#all-projects`}
                   ref={el => { categoryCardRefs.current[i] = el; }}
                   className={`reveal${s4ViewInView ? ' visible' : ''} pf-category-card`}
                   style={{
+                    background: "#FFFFFF",
+                    border: "1px solid #ECE5D8",
+                    borderRadius: 18, padding: "30px 26px", position: "relative",
                     display: "flex", flexDirection: "column",
-                    background: "#FFFFFF", border: "1px solid #ECE5D8", borderRadius: 18,
-                    overflow: "hidden", textDecoration: "none", transitionDelay: `${(i % 6) * 0.06}s`,
-                    flex: "0 0 340px", width: 340, scrollSnapAlign: "center",
+                    flex: "0 0 320px", width: 320, scrollSnapAlign: "center",
+                    textDecoration: "none", transitionDelay: `${(i % 6) * 0.06}s`,
                     boxShadow: "0 4px 16px rgba(0,0,0,0.05)",
                     transition: "transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease",
                   }}
                 >
-                  <div style={{ position: "relative", aspectRatio: "4 / 3", overflow: "hidden" }}>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={image} alt={imageAlt} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 10, right: 10, width: 28, height: 28, opacity: 0, transition: "opacity 0.25s ease" }} />
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 10, left: 10, width: 28, height: 28, opacity: 0, transition: "opacity 0.25s ease" }} />
-                  </div>
-                  <div style={{ padding: "22px 24px 26px", display: "flex", flexDirection: "column", flex: 1 }}>
-                    <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#d87307", marginBottom: 8 }}>{category}</p>
-                    <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 17, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", marginBottom: 10, lineHeight: 1.25 }}>{headline}</h3>
-                    <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.65, color: "#666", marginBottom: 18 }}>{body}</p>
-                    <span className="pf-view-work" style={{
-                      display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
-                      fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 12,
-                      letterSpacing: "0.12em", textTransform: "uppercase",
-                      background: "#d87307", color: "#FFFFFF",
-                      padding: "13px 20px", borderRadius: 6,
-                      marginTop: "auto", transition: "background 0.2s",
-                    }}>
-                      View the Work
-                      <span className="pf-view-work-arrow" style={{ display: "inline-flex", alignItems: "center" }}>
-                        <span className="pf-view-work-tail" style={{ display: "inline-block", height: 2, width: 18, background: "currentColor", transform: "scaleX(0.3)", transformOrigin: "right center", transition: "transform 0.3s cubic-bezier(0.22,1,0.36,1)" }} />
-                        <svg width="5" height="10" viewBox="0 6 6 12" fill="none" style={{ flexShrink: 0, display: "block" }}><path d="M0 6l6 6-6 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  <div style={{ width: 40, height: 4, borderRadius: 2, background: "#d87307", marginBottom: 16 }} />
+                  <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 17, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", marginBottom: 10, lineHeight: 1.25 }}>{category}</h3>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12.5, fontWeight: 700, color: "#d87307", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 12 }}>{headline}</p>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.65, color: "#555", marginBottom: 14 }}>{body}</p>
+                  <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 6, marginBottom: 18 }}>
+                    {services.map(s => (
+                      <span key={s} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 600, color: "#6b5a3e", background: "#F2ECDF", padding: "3px 8px", borderRadius: 4 }}>
+                        {s}
                       </span>
-                    </span>
+                    ))}
                   </div>
+                  <span className="pf-view-work" style={{
+                    display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+                    fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 12,
+                    letterSpacing: "0.12em", textTransform: "uppercase",
+                    background: "#d87307", color: "#FFFFFF",
+                    padding: "13px 20px", borderRadius: 6,
+                    marginTop: "auto", transition: "background 0.2s",
+                  }}>
+                    View the Work
+                    <span className="pf-view-work-arrow" style={{ display: "inline-flex", alignItems: "center" }}>
+                      <span className="pf-view-work-tail" style={{ display: "inline-block", height: 2, width: 18, background: "currentColor", transform: "scaleX(0.3)", transformOrigin: "right center", transition: "transform 0.3s cubic-bezier(0.22,1,0.36,1)" }} />
+                      <svg width="5" height="10" viewBox="0 6 6 12" fill="none" style={{ flexShrink: 0, display: "block" }}><path d="M0 6l6 6-6 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    </span>
+                  </span>
                 </Link>
               ))}
             </div>
@@ -483,7 +477,6 @@ function PortfolioPageContent() {
           .pf-category-card:hover { transform: translateY(-4px); box-shadow: 0 14px 28px rgba(0,0,0,0.1); border-color: rgba(216,115,7,0.3) !important; }
           .pf-category-card:hover .pf-view-work { background: #c46305; }
           .pf-category-card:hover .pf-view-work-tail { transform: scaleX(1); }
-          .pf-category-card:hover .corner-bracket { opacity: 1 !important; }
           .pf-category-carousel-arrow:hover { border-color: #d87307 !important; background: rgba(216,115,7,0.08) !important; }
           @media (max-width: 640px) {
             .pf-category-carousel-arrow { display: none !important; }
