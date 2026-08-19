@@ -168,11 +168,20 @@ const processSteps = [
 ];
 
 export default function PortfolioPage() {
-  return (
-    <Suspense fallback={null}>
-      <PortfolioPageContent />
-    </Suspense>
-  );
+  return <PortfolioPageContent />;
+}
+
+// useSearchParams() forces this piece to bail out to client-side rendering during
+// static generation. Keeping it isolated (instead of wrapping the whole page) means
+// only the gallery itself waits on hydration - the hero, stats, carousel, and
+// everything else render immediately in the static HTML.
+function PortfolioGalleryWithCategoryParam() {
+  const searchParams = useSearchParams();
+  const categoryParam = searchParams.get("category");
+  const initialCategory = portfolioCategories.some(c => c.id === categoryParam)
+    ? (categoryParam as PortfolioCategoryId)
+    : undefined;
+  return <PortfolioGallery key={initialCategory ?? "all"} items={portfolioItems} initialCategory={initialCategory} />;
 }
 
 function PortfolioPageContent() {
@@ -217,12 +226,6 @@ function PortfolioPageContent() {
     }
   };
   useEffect(() => () => stopCatAutoSlide(), []);
-
-  const searchParams = useSearchParams();
-  const categoryParam = searchParams.get("category");
-  const initialCategory = portfolioCategories.some(c => c.id === categoryParam)
-    ? (categoryParam as PortfolioCategoryId)
-    : undefined;
 
   return (
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
@@ -490,7 +493,9 @@ function PortfolioPageContent() {
           <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.75, color: "#666", maxWidth: 640, margin: "0 auto 40px", textAlign: "center" }}>
             Filter by category and click any thumbnail for a closer look.
           </p>
-          <PortfolioGallery key={initialCategory ?? "all"} items={portfolioItems} initialCategory={initialCategory} />
+          <Suspense fallback={<PortfolioGallery items={portfolioItems} />}>
+            <PortfolioGalleryWithCategoryParam />
+          </Suspense>
         </div>
       </section>
 
