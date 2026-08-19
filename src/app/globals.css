@@ -630,7 +630,7 @@ section p, main p, article p {
 
 /* ── Hero entrance animations ──────────────────────────── */
 .hero-h1-anim {
-  animation: heroSlideUp 0.9s cubic-bezier(0.22,1,0.36,1) 0.15s both;
+  animation: heroSlideUp 0.9s cubic-bezier(0.22,1,0.36,1) 0s both;
 }
 .hero-body-anim {
   animation: heroSlideUp 0.9s cubic-bezier(0.22,1,0.36,1) 0.3s both;

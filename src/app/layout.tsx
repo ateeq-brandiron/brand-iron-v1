@@ -72,6 +72,9 @@ export default function RootLayout({
       className={`${montserrat.variable} ${burfordBlack.variable} ${burfordInline.variable}`}
     >
       <body>
+        <Script id="scroll-restoration" strategy="beforeInteractive">
+          {`try { history.scrollRestoration = "manual"; } catch (e) {}`}
+        </Script>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-BDTVFDLTDK"
           strategy="afterInteractive"
