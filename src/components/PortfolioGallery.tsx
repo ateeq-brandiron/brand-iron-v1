@@ -148,9 +148,13 @@ export default function PortfolioGallery({ items, initialCategory }: { items: Po
               position: "absolute", top: 18, right: 18, width: 36, height: 36, borderRadius: 8,
               background: "rgba(0,0,0,0.06)", border: "none", color: "#555", fontSize: 20, cursor: "pointer",
               display: "flex", alignItems: "center", justifyContent: "center", lineHeight: 1, zIndex: 2,
-            }}>×</button>
+              transition: "background 0.2s, color 0.2s",
+            }}
+            onMouseEnter={e => { e.currentTarget.style.background = "rgba(216,115,7,0.30)"; e.currentTarget.style.color = "#d87307"; }}
+            onMouseLeave={e => { e.currentTarget.style.background = "rgba(0,0,0,0.06)"; e.currentTarget.style.color = "#555"; }}
+            >×</button>
 
-            <div style={{ padding: "36px 40px 40px" }}>
+            <div style={{ padding: "64px 40px 40px" }}>
               <div style={{ marginBottom: 24 }}>
                 {expanded.type === "website" && expanded.fullPageImage ? (
                   <WebsiteScrollPreview src={expanded.fullPageImage} alt={expanded.thumbnailAlt} />
