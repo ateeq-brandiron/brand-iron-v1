@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import CircuitOverlay from "@/components/CircuitOverlay";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import FaqAccordion from "@/components/FaqAccordion";
 import { faqCategories, faqs, FaqCategoryId } from "@/data/faqs";
@@ -122,27 +121,46 @@ export default function FaqPage() {
       </section>
 
       {/* ── CTA ────────────────────────────────────────────── */}
-      <section style={{ position: "relative", overflow: "hidden", background: "#0F1B2D", padding: "88px 24px", textAlign: "center" }}>
-        <CircuitOverlay />
-        <div ref={ctaViewRef} className={`reveal${ctaViewInView ? ' visible' : ''}`} style={{ position: "relative", zIndex: 2, maxWidth: 700, margin: "0 auto" }}>
-          <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(24px, 3.5vw, 40px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.15, marginBottom: 16 }}>
-            Still Have Questions?
-          </h2>
-          <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.7)", maxWidth: 560, margin: "0 auto 32px" }}>
-            Every successful growth story begins with a conversation. Let&apos;s talk about where your business stands today and where it can go next.
-          </p>
-          <Link href="/contact" style={{
-            display: "inline-flex", alignItems: "center",
-            fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 14,
-            letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none",
-            background: "#d87307", color: "#FFFFFF",
-            padding: "16px 40px", borderRadius: 6, transition: "background 0.2s",
-          }}
-          onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
-          onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
-          >
-            Book a Strategy Session
-          </Link>
+      <section style={{ background: "#F0EEEA", padding: "80px 24px" }}>
+        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+          <div ref={ctaViewRef} className={`reveal${ctaViewInView ? ' visible' : ''}`} style={{
+            position: "relative", overflow: "hidden", borderRadius: 20,
+            backgroundImage: "url('/images/shared/shared-mountain-peaks.jpg')", backgroundSize: "cover", backgroundPosition: "center",
+          }}>
+            <div role="img" aria-label="Rocky mountain trail along a ridge crest at sunset" style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
+            <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>
+              <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(28px, 4.2vw, 52px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.05, marginBottom: 20 }}>
+                Still Have Questions?
+              </h2>
+              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", fontStyle: "italic", maxWidth: 640, margin: "0 auto 40px" }}>
+                Every successful growth story begins with a conversation. Let&apos;s talk about where your business stands today and where it can go next.
+              </p>
+              <Link href="/contact" style={{
+                display: "inline-flex", alignItems: "center",
+                fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 15,
+                background: "#d87307", color: "#FFFFFF",
+                padding: "18px 44px", borderRadius: 6,
+                transition: "background 0.2s", marginBottom: 20,
+              }}
+              onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
+              onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
+              >
+                Book a Strategy Session
+              </Link>
+              <div>
+                <Link href="/services" style={{
+                  fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase",
+                  color: "rgba(255,255,255,0.7)", textDecoration: "none", borderBottom: "1px solid rgba(255,255,255,0.3)", paddingBottom: 2,
+                  transition: "color 0.2s, border-color 0.2s",
+                }}
+                onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = "#f0a860"; (e.currentTarget as HTMLAnchorElement).style.borderBottomColor = "rgba(240,168,96,0.6)"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.7)"; (e.currentTarget as HTMLAnchorElement).style.borderBottomColor = "rgba(255,255,255,0.3)"; }}
+                >
+                  Explore Our Services →
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

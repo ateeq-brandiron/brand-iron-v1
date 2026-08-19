@@ -76,6 +76,8 @@ function useInView(threshold = 0.1) {
   return { ref, inView };
 }
 
+const INITIAL_LIMIT = 6;
+
 export default function InsightsPage() {
   const { ref: categoriesViewRef, inView: categoriesViewInView } = useInView(0.05);
   const { ref: articlesViewRef, inView: articlesViewInView } = useInView(0.05);
@@ -83,6 +85,10 @@ export default function InsightsPage() {
   const { ref: subscribeViewRef, inView: subscribeViewInView } = useInView(0.1);
   const { ref: ctaViewRef, inView: ctaViewInView } = useInView(0.1);
   const [subscribeEmail, setSubscribeEmail] = useState("");
+  const [showAllArticles, setShowAllArticles] = useState(false);
+  const remainingArticles = articles.slice(1);
+  const visibleArticles = showAllArticles ? remainingArticles : remainingArticles.slice(0, INITIAL_LIMIT);
+  const remainingCount = remainingArticles.length - visibleArticles.length;
 
   return (
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
@@ -246,7 +252,7 @@ export default function InsightsPage() {
 
           {/* Remaining posts */}
           <div className="blog-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
-            {articles.slice(1).map(({ slug, category, title, excerpt, readTime, date }, i) => (
+            {visibleArticles.map(({ slug, category, title, excerpt, readTime, date }, i) => (
               <Link key={slug} href={`/blog/${slug}`}
                 className={`article-card reveal${articlesViewInView ? " visible" : ""}`}
                 style={{
@@ -264,6 +270,26 @@ export default function InsightsPage() {
               </Link>
             ))}
           </div>
+
+          {remainingCount > 0 && (
+            <div style={{ textAlign: "center", marginTop: 40 }}>
+              <button
+                onClick={() => setShowAllArticles(true)}
+                style={{
+                  display: "inline-flex", alignItems: "center", gap: 8,
+                  fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 12,
+                  letterSpacing: "0.1em", textTransform: "uppercase", cursor: "pointer",
+                  background: "transparent", color: "#1a1a1a", border: "1px solid #d87307",
+                  padding: "13px 24px", borderRadius: 6, transition: "background 0.2s, color 0.2s",
+                }}
+                onMouseEnter={e => { e.currentTarget.style.background = "#d87307"; e.currentTarget.style.color = "#FFFFFF"; }}
+                onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#1a1a1a"; }}
+              >
+                See All Blogs
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </button>
+            </div>
+          )}
         </div>
 
         <style>{`
@@ -358,9 +384,6 @@ export default function InsightsPage() {
           }}>
             <div role="img" aria-label="Close-up of weathered gray wooden log siding with orange lichen patches" style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
             <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>
-              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 20 }}>
-                Ready to Start?
-              </p>
               <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(28px, 4.2vw, 52px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.05, marginBottom: 20 }}>
                 Ready to Put These Insights Into Action?
               </h2>
