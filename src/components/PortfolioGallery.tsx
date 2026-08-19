@@ -79,6 +79,7 @@ export default function PortfolioGallery({ items, initialCategory }: { items: Po
                   position: "relative", background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 14,
                   overflow: "hidden", textAlign: "left", cursor: "pointer", padding: 0,
                   transition: "transform 0.25s, box-shadow 0.25s, border-color 0.25s",
+                  display: "flex", flexDirection: "column", justifyContent: "flex-start",
                 }}
               >
                 <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 10, right: 10, width: 26, height: 26, opacity: 0, transition: "opacity 0.25s ease", zIndex: 3 }} />
