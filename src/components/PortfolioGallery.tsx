@@ -95,7 +95,8 @@ export default function PortfolioGallery({ items, initialCategory }: { items: Po
                 </div>
                 <div style={{ padding: "18px 20px" }}>
                   <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#d87307", marginBottom: 6 }}>{catLabel}</p>
-                  <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 16, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", margin: 0, lineHeight: 1.3 }}>{item.title}</h3>
+                  <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 16, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", marginBottom: 10, lineHeight: 1.3 }}>{item.title}</h3>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.65, color: "#666", margin: 0 }}>{item.description}</p>
                 </div>
               </button>
             );
