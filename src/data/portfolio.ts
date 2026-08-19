@@ -117,7 +117,7 @@ export const portfolioItems: PortfolioItem[] = [
     client: "MSP Platform Accelerator",
     type: "deck",
     thumbnail: "/images/portfolio/msp-accelerator/msp-accelerator-logo-card.jpg",
-    thumbnailAlt: "MSP Platform Accelerator logo",
+    thumbnailAlt: "MSP Platform Accelerator logo over a navy circuit-line background",
     description: "A capital raise deck built to help MSP Platform Accelerator communicate its acquisition strategy and growth plan clearly to prospective investors.",
     images: [
       "/images/portfolio/msp-accelerator/msp-accelerator-logo-card.jpg",
@@ -132,7 +132,7 @@ export const portfolioItems: PortfolioItem[] = [
     client: "Real International",
     type: "deck",
     thumbnail: "/images/portfolio/real-international/real-international-logo-card.jpg",
-    thumbnailAlt: "Real International logo",
+    thumbnailAlt: "Real International logo below an Austin skyline photo at dusk",
     description: "An investors deck for a real estate investment firm, pairing a confident visual narrative with the track record and strategy investors need to see.",
     images: [
       "/images/portfolio/real-international/real-international-logo-card.jpg",
@@ -149,7 +149,7 @@ export const portfolioItems: PortfolioItem[] = [
     client: "Black Lake Capital",
     type: "deck",
     thumbnail: "/images/portfolio/black-lake/black-lake-logo-card.jpg",
-    thumbnailAlt: "Black Lake Capital logo",
+    thumbnailAlt: "Black Lake Capital logo over a mountain lake at dusk",
     description: "A messaging platform for a technology-focused private equity firm, translating its investment track record into a clear, confident growth-partner narrative.",
     images: [
       "/images/portfolio/black-lake/black-lake-logo-card.jpg",
@@ -183,7 +183,7 @@ export const portfolioItems: PortfolioItem[] = [
     client: "ScamRocket",
     type: "deck",
     thumbnail: "/images/portfolio/scamrocket-capital/scamrocket-capital-logo-card.jpg",
-    thumbnailAlt: "ScamRocket logo",
+    thumbnailAlt: "ScamRocket logo over a starfield background",
     description: "An investor deck for a scam-prevention platform, translating a consumer-and-enterprise ecosystem into a clear growth story for investors.",
     images: [
       "/images/portfolio/scamrocket-capital/scamrocket-capital-logo-card.jpg",
@@ -217,7 +217,7 @@ export const portfolioItems: PortfolioItem[] = [
     client: "Haefele Flanagan & Co.",
     type: "deck",
     thumbnail: "/images/portfolio/haefele-flanagan/haefele-flanagan-logo-card.jpg",
-    thumbnailAlt: "Haefele Flanagan & Co. (hfco) logo",
+    thumbnailAlt: "Haefele Flanagan & Co. diamond HF mark over a converging glass office building",
     description: "A go-to-market capabilities pitchbook for a middle-market M&A advisory firm, translating a deep track record in buy-side and sell-side deals into a clear, confident story for prospective clients and referral partners.",
     images: [
       "/images/portfolio/haefele-flanagan/haefele-flanagan-logo-card.jpg",
@@ -233,7 +233,7 @@ export const portfolioItems: PortfolioItem[] = [
     client: "Ascendancy MC Inc.",
     type: "deck",
     thumbnail: "/images/portfolio/ascendancy-mc/ascendancy-mc-logo-card.jpg",
-    thumbnailAlt: "Ascendancy MC Inc. logo",
+    thumbnailAlt: "Ascendancy MC Inc. logo over a city skyline at dusk",
     description: "A pitch deck for a small-business acquisition holding company, framing its buy-and-build strategy clearly for prospective investors.",
     images: [
       "/images/portfolio/ascendancy-mc/ascendancy-mc-logo-card.jpg",
