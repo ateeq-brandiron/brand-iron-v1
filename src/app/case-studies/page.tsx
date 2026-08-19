@@ -114,7 +114,7 @@ export default function CaseStudiesPage() {
       <section id="case-studies-grid" style={{ background: "#F9F8F6", padding: "100px 40px 120px" }}>
         <div ref={gridViewRef} style={{ maxWidth: 1200, margin: "0 auto" }}>
           <h2 className={`section-heading reveal${gridViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 40 }}>
-            Featured Success Stories
+            Our Success Stories
           </h2>
 
           <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginBottom: 40, justifyContent: "center" }}>
