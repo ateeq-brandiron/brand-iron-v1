@@ -46,9 +46,6 @@ export default function FaqPage() {
       }}>
         <div role="img" aria-label="Desert sagebrush landscape at sunset overlaid with glowing digital circuit-line patterns" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(10,10,14,0.45) 0%, rgba(10,10,14,0.35) 45%, rgba(10,10,14,0.78) 100%)" }} />
         <div style={{ position: "relative", zIndex: 2, maxWidth: 900, margin: "0 auto", padding: "140px 24px 72px", textAlign: "center" }}>
-          <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 500, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>
-            Support &amp; Resources
-          </p>
           <h1 className="hero-h1-anim" style={{
             fontFamily: "var(--font-burford-inline), sans-serif", fontWeight: 400, fontSize: "clamp(38px, 5.4vw, 64px)",
             textTransform: "uppercase", letterSpacing: "0.03em",

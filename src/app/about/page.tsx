@@ -214,7 +214,6 @@ export default function AboutPage() {
         <div ref={s2ViewRef} style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1.1fr 0.9fr", gap: 64, alignItems: "center" }} className="ab-mission-grid">
             <div>
-              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 12 }}>Who We Are</p>
               <h2 className={`section-heading reveal${s2ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
                 A Different Kind of Brand &amp; Growth Partner
               </h2>
@@ -265,7 +264,6 @@ export default function AboutPage() {
       <section style={{ background: "#F9F8F6", padding: "120px 40px" }}>
         <div ref={s3ViewRef} style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 56, maxWidth: 700 }}>
-            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 12 }}>Core Values</p>
             <h2 className={`section-heading reveal${s3ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 0, textAlign: "left" }}>
               What We Stand For
             </h2>
@@ -313,7 +311,6 @@ export default function AboutPage() {
           <div className="ab-vm-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1px 1fr", gap: "0 56px", alignItems: "start" }}>
             {/* Vision */}
             <div className={`reveal${s4ViewInView ? ' visible' : ''}`}>
-              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 12 }}>Vision</p>
               <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(20px, 2.4vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.2, marginBottom: 20 }}>
                 A World Where Brands Are Forged, Not Left to Chance
               </h3>
@@ -328,7 +325,6 @@ export default function AboutPage() {
             <div className="ab-vm-divider" style={{ background: "rgba(216,115,7,0.25)", alignSelf: "stretch" }} />
             {/* Mission */}
             <div className={`reveal${s4ViewInView ? ' visible' : ''}`}>
-              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 12 }}>Mission</p>
               <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(20px, 2.4vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.2, marginBottom: 20 }}>
                 Transform How Companies Build Their Brand
               </h3>
@@ -354,7 +350,6 @@ export default function AboutPage() {
       <section style={{ background: "#F5F0E8", padding: "120px 40px" }}>
         <div ref={s5ViewRef} style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 56, maxWidth: 700 }}>
-            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 12 }}>Our People</p>
             <h2 className={`section-heading reveal${s5ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 0, textAlign: "left" }}>
               Meet The Team
             </h2>
@@ -407,7 +402,6 @@ export default function AboutPage() {
         <CircuitOverlay />
         <div ref={s6ViewRef} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 56, maxWidth: 700 }}>
-            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 12 }}>Our Approach</p>
             <h2 className={`section-heading reveal${s6ViewInView ? ' visible' : ''}`} style={{ color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))", marginBottom: 0, textAlign: "left" }}>
               How We Work
             </h2>
