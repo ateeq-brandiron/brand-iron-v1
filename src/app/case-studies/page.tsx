@@ -48,10 +48,10 @@ export default function CaseStudiesPage() {
       <section className="cs-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <div style={{
           position: "absolute", inset: 0,
-          backgroundImage: "url('/images/case-studies/case-studies-hero-longhorn.jpg')",
-          backgroundSize: "cover", backgroundPosition: "center 35%",
+          backgroundImage: "url('/images/case-studies/case-studies-hero-horses.jpg')",
+          backgroundSize: "cover", backgroundPosition: "center 40%",
         }} />
-        <div role="img" aria-label="A longhorn steer standing in a pasture at sunset, representing grounded, real results" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.4) 0%, rgba(8,16,36,0.3) 45%, rgba(8,16,36,0.7) 100%)" }} />
+        <div role="img" aria-label="Wild horses galloping through dust at sunset near a marsh, representing grounded, real momentum" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.4) 0%, rgba(8,16,36,0.3) 45%, rgba(8,16,36,0.7) 100%)" }} />
 
         <div className="cs-hero-wrap" style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", padding: "88px 24px 24px" }}>
           <div className="cs-hero-grid" style={{ maxWidth: 1200, margin: "0 auto", width: "100%", display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 56, alignItems: "center" }}>
