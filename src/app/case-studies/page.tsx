@@ -20,12 +20,19 @@ function useInView(threshold = 0.1) {
   return { ref, inView };
 }
 
+const INITIAL_LIMIT = 6;
+
 export default function CaseStudiesPage() {
   const { ref: gridViewRef, inView: gridViewInView } = useInView();
   const { ref: ctaViewRef, inView: ctaViewInView } = useInView();
   const [activeCategory, setActiveCategory] = useState<PortfolioCategoryId | "all">("all");
+  const [showAll, setShowAll] = useState(false);
+
+  const selectCategory = (id: PortfolioCategoryId | "all") => { setActiveCategory(id); setShowAll(false); };
 
   const filtered = activeCategory === "all" ? caseStudies : caseStudies.filter(c => c.category === activeCategory);
+  const visibleStudies = showAll ? filtered : filtered.slice(0, INITIAL_LIMIT);
+  const remaining = filtered.length - visibleStudies.length;
   const populatedCategories = portfolioCategories.filter(c => caseStudies.some(cs => cs.category === c.id));
 
   return (
@@ -118,7 +125,7 @@ export default function CaseStudiesPage() {
 
           <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginBottom: 40, justifyContent: "center" }}>
             <button
-              onClick={() => setActiveCategory("all")}
+              onClick={() => selectCategory("all")}
               style={{
                 fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase",
                 padding: "10px 20px", borderRadius: 20, cursor: "pointer",
@@ -133,7 +140,7 @@ export default function CaseStudiesPage() {
             {populatedCategories.map(cat => (
               <button
                 key={cat.id}
-                onClick={() => setActiveCategory(cat.id)}
+                onClick={() => selectCategory(cat.id)}
                 style={{
                   fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase",
                   padding: "10px 20px", borderRadius: 20, cursor: "pointer",
@@ -149,7 +156,7 @@ export default function CaseStudiesPage() {
           </div>
 
           <div className="cs-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
-            {filtered.map((cs, i) => {
+            {visibleStudies.map((cs, i) => {
               const catLabel = portfolioCategories.find(c => c.id === cs.category)?.label ?? cs.category;
               const headlineStat = cs.results.find(r => r.value !== "—");
               return (
@@ -194,6 +201,26 @@ export default function CaseStudiesPage() {
               );
             })}
           </div>
+
+          {remaining > 0 && (
+            <div style={{ textAlign: "center", marginTop: 40 }}>
+              <button
+                onClick={() => setShowAll(true)}
+                style={{
+                  display: "inline-flex", alignItems: "center", gap: 8,
+                  fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 12,
+                  letterSpacing: "0.1em", textTransform: "uppercase", cursor: "pointer",
+                  background: "transparent", color: "#1a1a1a", border: "1px solid #d87307",
+                  padding: "13px 24px", borderRadius: 6, transition: "background 0.2s, color 0.2s",
+                }}
+                onMouseEnter={e => { e.currentTarget.style.background = "#d87307"; e.currentTarget.style.color = "#FFFFFF"; }}
+                onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#1a1a1a"; }}
+              >
+                See All Stories
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </button>
+            </div>
+          )}
         </div>
         <style>{`
           .cs-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(0,0,0,0.1); border-color: rgba(216,115,7,0.3) !important; }
