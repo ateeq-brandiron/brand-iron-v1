@@ -80,9 +80,8 @@ export default function PortfolioGallery({ items, initialCategory }: { items: Po
                 <div style={{ position: "relative", aspectRatio: "4 / 3", overflow: "hidden", background: "#F0EEEA" }}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={item.thumbnail} alt={item.thumbnailAlt} className="pf-gallery-img" style={{
-                    width: "100%", height: "100%", boxSizing: "border-box",
-                    objectFit: item.type === "logo" ? "contain" : "cover",
-                    padding: item.type === "logo" ? "14%" : 0,
+                    width: "100%", height: "100%",
+                    objectFit: "cover",
                     transition: "transform 0.4s ease",
                   }} />
                   <div className="pf-gallery-scrim" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, transparent 55%, rgba(8,16,36,0.75) 100%)", opacity: 0, transition: "opacity 0.25s ease" }} />

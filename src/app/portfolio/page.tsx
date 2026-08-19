@@ -138,32 +138,32 @@ const processSteps = [
   {
     title: "Discover",
     caption: "Uncover the real challenge.",
-    icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="10" cy="10" r="6.5" stroke="#d87307" strokeWidth="1.8" /><path d="M15 15l5 5" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round" /></svg>),
+    icon: (<svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="10" cy="10" r="6.5" stroke="#FFFFFF" strokeWidth="1.8" /><path d="M15 15l5 5" stroke="#FFFFFF" strokeWidth="1.8" strokeLinecap="round" /></svg>),
   },
   {
     title: "Position",
     caption: "Sharpen the strategic position.",
-    icon: (<img loading="lazy" src="/images/icons/icon-lightbulb.svg" alt="" style={{ width: 22, height: 22 }} />),
+    icon: (<img loading="lazy" src="/images/icons/icon-lightbulb.svg" alt="" style={{ width: 32, height: 32, filter: "brightness(0) invert(1)" }} />),
   },
   {
     title: "Build",
     caption: "Build the right tools.",
-    icon: (<img loading="lazy" src="/images/icons/icon-gear.svg" alt="" style={{ width: 22, height: 22 }} />),
+    icon: (<img loading="lazy" src="/images/icons/icon-gear.svg" alt="" style={{ width: 32, height: 32, filter: "brightness(0) invert(1)" }} />),
   },
   {
     title: "Launch",
     caption: "Launch with purpose.",
-    icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2c3 2 5 6 5 10 0 2-1 4-2 5l-3 2-3-2c-1-1-2-3-2-5 0-4 2-8 5-10Z" stroke="#d87307" strokeWidth="1.6" strokeLinejoin="round" /><circle cx="12" cy="10" r="2" stroke="#d87307" strokeWidth="1.5" /><path d="M8 16l-3 5M16 16l3 5" stroke="#d87307" strokeWidth="1.6" strokeLinecap="round" /></svg>),
+    icon: (<svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M12 2c3 2 5 6 5 10 0 2-1 4-2 5l-3 2-3-2c-1-1-2-3-2-5 0-4 2-8 5-10Z" stroke="#FFFFFF" strokeWidth="1.6" strokeLinejoin="round" /><circle cx="12" cy="10" r="2" stroke="#FFFFFF" strokeWidth="1.5" /><path d="M8 16l-3 5M16 16l3 5" stroke="#FFFFFF" strokeWidth="1.6" strokeLinecap="round" /></svg>),
   },
   {
     title: "Measure",
     caption: "Measure what matters.",
-    icon: (<img loading="lazy" src="/images/icons/icon-barchart.svg" alt="" style={{ width: 22, height: 22 }} />),
+    icon: (<img loading="lazy" src="/images/icons/icon-barchart.svg" alt="" style={{ width: 32, height: 32, filter: "brightness(0) invert(1)" }} />),
   },
   {
     title: "Grow",
     caption: "Keep pushing forward.",
-    icon: (<img loading="lazy" src="/images/icons/icon-trending.svg" alt="" style={{ width: 22, height: 22 }} />),
+    icon: (<img loading="lazy" src="/images/icons/icon-trending.svg" alt="" style={{ width: 32, height: 32, filter: "brightness(0) invert(1)" }} />),
   },
 ];
 
@@ -247,9 +247,6 @@ function PortfolioPageContent() {
 
             {/* LEFT — kicker, headline, CTAs */}
             <div>
-              <p className="hero-h1-anim" style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16, textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}>
-                Portfolio
-              </p>
               <h1 className="hero-h1-anim" style={{
                 fontFamily: "var(--font-burford-inline), sans-serif",
                 fontWeight: 400, fontSize: "clamp(30px, 4.4vw, 58px)",
@@ -313,9 +310,9 @@ function PortfolioPageContent() {
       {/* ── S2: STATS BAND ───────────────────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "16px 40px 56px" }}>
         <div ref={s2ViewRef} style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <p className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase", color: "#999", textAlign: "center", marginBottom: 28 }}>
+          <h2 className={`section-heading reveal${s2ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", maxWidth: 780, margin: "0 auto 40px" }}>
             Built With Purpose. Proven in the Field.
-          </p>
+          </h2>
           <div className="trust-stats-row" style={{ display: "flex", gap: "24px 40px", justifyContent: "center" }}>
             {stats.map((stat, i) => (
               <StatTile key={stat.label} stat={stat} inView={s2ViewInView} index={i} />
@@ -326,20 +323,15 @@ function PortfolioPageContent() {
 
       {/* ── S3: FEATURED WORK ────────────────────────────────── */}
       <section id="selected-work" style={{ background: "#FFFFFF", padding: "40px 40px 48px" }}>
-        <div ref={s3ViewRef} className={`reveal${s3ViewInView ? ' visible' : ''} pf-featured-row`} style={{ maxWidth: 1200, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "flex-end", gap: 24 }}>
-          <div style={{ maxWidth: 720 }}>
-            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase", color: "#d87307", marginBottom: 12 }}>
-              Featured Work
-            </p>
-            <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 3vw, 34px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", lineHeight: 1.2, marginBottom: 14 }}>
-              Strategy With Backbone. Creative With Purpose.
-            </h2>
-            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.75, color: "#666" }}>
-              Good-looking work is only part of the job. The real work is creating a brand people understand, trust, and choose. We partner with organizations that are ready to sharpen their story, stake out a stronger position, and build momentum across branding, go-to-market, digital, capital raising, visibility, and revenue growth.
-            </p>
-          </div>
+        <div ref={s3ViewRef} className={`reveal${s3ViewInView ? ' visible' : ''}`} style={{ maxWidth: 780, margin: "0 auto", textAlign: "center" }}>
+          <h2 className="section-heading" style={{ color: "#1a1a1a", marginBottom: 18 }}>
+            Strategy With Backbone. Creative With Purpose.
+          </h2>
+          <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.75, color: "#666", marginBottom: 28 }}>
+            Good-looking work is only part of the job. The real work is creating a brand people understand, trust, and choose. We partner with organizations that are ready to sharpen their story, stake out a stronger position, and build momentum across branding, go-to-market, digital, capital raising, visibility, and revenue growth.
+          </p>
           <a href="#all-projects" style={{
-            display: "inline-flex", alignItems: "center", gap: 8, flexShrink: 0,
+            display: "inline-flex", alignItems: "center", gap: 8,
             fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 12,
             letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none",
             background: "transparent", color: "#1a1a1a", border: "1px solid #d87307",
@@ -352,11 +344,6 @@ function PortfolioPageContent() {
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </a>
         </div>
-        <style>{`
-          @media (max-width: 700px) {
-            .pf-featured-row { flex-direction: column !important; align-items: flex-start !important; }
-          }
-        `}</style>
       </section>
 
       {/* ── S4: SELECTED WORK (CATEGORY CAROUSEL) ───────────────── */}
@@ -504,15 +491,12 @@ function PortfolioPageContent() {
         }} />
         <div role="img" aria-label="A blacksmith striking molten metal on an anvil with sparks flying, overlaid with a glowing circuit-line pattern representing strategy and technology" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.88) 0%, rgba(8,16,36,0.82) 45%, rgba(8,16,36,0.92) 100%)" }} />
         <div ref={s5ViewRef} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
-          <div style={{ maxWidth: 720, margin: "0 auto 56px", textAlign: "center" }}>
+          <div style={{ maxWidth: 900, margin: "0 auto 64px", textAlign: "center" }}>
             <h2 className={`section-heading reveal${s5ViewInView ? ' visible' : ''}`} style={{ color: "#FFFFFF", marginBottom: 20 }}>
               Forged From Strategy. Built for the Real World.
             </h2>
-            <p className={`reveal${s5ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.75)", marginBottom: 14 }}>
-              Every project starts with a simple question: what&apos;s standing between this business and its next stage of growth?
-            </p>
             <p className={`reveal${s5ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.75)", marginBottom: 0 }}>
-              From there, we dig in: we uncover the challenge, sharpen the position, build the right tools, launch with purpose, measure what matters, and keep pushing forward.
+              Every project starts with a simple question: what&apos;s standing between this business and its next stage of growth? From there, we dig in: we uncover the challenge, sharpen the position, build the right tools, launch with purpose, measure what matters, and keep pushing forward.
             </p>
           </div>
 
@@ -524,13 +508,13 @@ function PortfolioPageContent() {
                     <div className="pf-flow-icon">{icon}</div>
                     <span className="pf-flow-num">{String(i + 1).padStart(2, "0")}</span>
                   </div>
-                  <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 15, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#FFFFFF", margin: "16px 0 6px", lineHeight: 1.25 }}>{title}</h3>
-                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12.5, lineHeight: 1.6, color: "rgba(255,255,255,0.55)", margin: 0, maxWidth: 130 }}>{caption}</p>
+                  <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 19, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#FFFFFF", margin: "18px 0 8px", lineHeight: 1.25 }}>{title}</h3>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13.5, lineHeight: 1.6, color: "rgba(255,255,255,0.65)", margin: 0, maxWidth: 165 }}>{caption}</p>
                 </div>
                 {i < processSteps.length - 1 && (
                   <div className="pf-flow-connector" style={{ opacity: 0.4 + i * 0.12 }}>
-                    <svg className="pf-arrow-h" width="20" height="14" viewBox="0 0 20 14" fill="none"><path d="M1 7h16M11 1l6 6-6 6" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                    <svg className="pf-arrow-v" width="14" height="20" viewBox="0 0 14 20" fill="none"><path d="M7 1v16M1 11l6 6 6-6" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                    <svg className="pf-arrow-h" width="26" height="18" viewBox="0 0 20 14" fill="none"><path d="M1 7h16M11 1l6 6-6 6" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                    <svg className="pf-arrow-v" width="18" height="26" viewBox="0 0 14 20" fill="none"><path d="M7 1v16M1 11l6 6 6-6" stroke="#d87307" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>
                   </div>
                 )}
               </div>
@@ -545,24 +529,24 @@ function PortfolioPageContent() {
           .pf-flow-row { display: flex; align-items: flex-start; justify-content: center; margin-bottom: 8px; }
           .pf-flow-item { display: flex; align-items: flex-start; flex: 1; min-width: 0; }
           .pf-flow-step { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center; text-align: center; }
-          .pf-flow-icon-wrap { position: relative; width: 56px; height: 56px; flex-shrink: 0; }
+          .pf-flow-icon-wrap { position: relative; width: 76px; height: 76px; flex-shrink: 0; }
           .pf-flow-icon {
-            width: 56px; height: 56px; border-radius: 50%; background: rgba(216,115,7,0.1); border: 1px solid rgba(216,115,7,0.3);
-            display: flex; align-items: center; justify-content: center; transition: background 0.25s, border-color 0.25s, transform 0.25s;
+            width: 76px; height: 76px; border-radius: 50%; background: #d87307; box-shadow: 0 8px 20px rgba(216,115,7,0.35);
+            display: flex; align-items: center; justify-content: center; transition: transform 0.25s, box-shadow 0.25s;
           }
-          .pf-flow-step:hover .pf-flow-icon { background: rgba(216,115,7,0.2); border-color: rgba(216,115,7,0.6); transform: translateY(-3px); }
+          .pf-flow-step:hover .pf-flow-icon { transform: translateY(-4px) scale(1.06); box-shadow: 0 12px 26px rgba(216,115,7,0.5); }
           .pf-flow-num {
-            position: absolute; top: -6px; right: -6px; width: 20px; height: 20px; border-radius: 50%;
-            background: #d87307; border: 2px solid #0F1B2D; color: #FFFFFF;
-            font-family: var(--font-montserrat), sans-serif; font-size: 9px; font-weight: 700;
+            position: absolute; top: -4px; right: -4px; width: 24px; height: 24px; border-radius: 50%;
+            background: #FFFFFF; border: 2px solid #0F1B2D; color: #0F1B2D;
+            font-family: var(--font-montserrat), sans-serif; font-size: 10px; font-weight: 700;
             display: flex; align-items: center; justify-content: center;
           }
-          .pf-flow-connector { flex-shrink: 0; display: flex; align-items: center; justify-content: center; padding-top: 17px; margin: 0 4px; }
+          .pf-flow-connector { flex-shrink: 0; display: flex; align-items: center; justify-content: center; padding-top: 27px; margin: 0 6px; }
           .pf-arrow-v { display: none; }
           @media (max-width: 900px) {
             .pf-flow-row { flex-direction: column; align-items: stretch; }
             .pf-flow-item { flex-direction: column; align-items: center; }
-            .pf-flow-connector { padding-top: 0; margin: 10px 0; }
+            .pf-flow-connector { padding-top: 0; margin: 14px 0; }
             .pf-arrow-h { display: none; }
             .pf-arrow-v { display: block; }
           }
@@ -599,9 +583,6 @@ function PortfolioPageContent() {
           }}>
             <div role="img" aria-label="Rugged mountain ridge trail at golden-hour sunset" style={{ position: "absolute", inset: 0, background: "rgba(8,14,28,0.6)" }} />
             <div style={{ position: "relative", zIndex: 1, padding: "72px clamp(24px, 6vw, 48px)", textAlign: "center" }}>
-              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 20 }}>
-                Ready to Start?
-              </p>
               <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(28px, 4.2vw, 52px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", lineHeight: 1.05, marginBottom: 20 }}>
                 Ready to Forge What&apos;s Next?
               </h2>
