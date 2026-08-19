@@ -18,7 +18,6 @@ export type CaseStudy = {
   challenge: string;
   solution: string;
   results: CaseStudyStat[];
-  isPlaceholder?: boolean;
 };
 
 const PLACEHOLDER_STATS: CaseStudyStat[] = [
@@ -26,37 +25,6 @@ const PLACEHOLDER_STATS: CaseStudyStat[] = [
   { value: "—", label: "Metric Pending" },
   { value: "—", label: "Metric Pending" },
 ];
-
-const CATEGORY_THUMBNAILS: Record<PortfolioCategoryId, string> = {
-  websites: "/images/portfolio/placeholders/website-sample-thumb.jpg",
-  "brand-identity": "/images/portfolio/placeholders/brand-identity-sample.jpg",
-  "capital-raise": "/images/portfolio/placeholders/capital-raise-sample.jpg",
-  "go-to-market": "/images/portfolio/placeholders/go-to-market-sample.jpg",
-  "ai-visibility": "/images/portfolio/placeholders/website-sample-thumb.jpg",
-  "revenue-growth": "/images/portfolio/placeholders/revenue-growth-sample.jpg",
-};
-
-const PLACEHOLDER_EXTRA_SLIDES = [
-  "/images/portfolio/placeholders/generic-sample-slide-2.jpg",
-  "/images/portfolio/placeholders/generic-sample-slide-3.jpg",
-];
-
-function placeholder(category: PortfolioCategoryId, categoryLabel: string, n: number): CaseStudy {
-  return {
-    slug: `${category}-case-study-${n}`,
-    category,
-    client: "Client Name Pending",
-    title: `${categoryLabel} Case Study ${n} (Placeholder)`,
-    excerpt: "This case study is being finalized. Placeholder content shown for layout and review purposes only — not a real client engagement.",
-    thumbnail: CATEGORY_THUMBNAILS[category],
-    thumbnailAlt: "Placeholder case study thumbnail",
-    images: [CATEGORY_THUMBNAILS[category], ...PLACEHOLDER_EXTRA_SLIDES],
-    challenge: "Placeholder challenge summary. Replace with the real business problem this client was facing before the engagement.",
-    solution: "Placeholder solution summary. Replace with the real approach, strategy, and work delivered during the engagement.",
-    results: PLACEHOLDER_STATS,
-    isPlaceholder: true,
-  };
-}
 
 export const caseStudies: CaseStudy[] = [
   {
@@ -123,10 +91,4 @@ export const caseStudies: CaseStudy[] = [
     solution: "Brand Iron developed a comprehensive messaging platform and capital raise deck for Union Chill Cannabis Company, effectively communicating their unique value proposition while addressing industry-specific considerations. These strategic materials positioned Union Chill as a professional investment opportunity in the evolving cannabis market, showcasing their growth potential and business fundamentals.",
     results: PLACEHOLDER_STATS,
   },
-  placeholder("brand-identity", "Brand Identity", 2),
-  placeholder("capital-raise", "Capital Raise", 2),
-  placeholder("go-to-market", "Go-To-Market", 1),
-  placeholder("go-to-market", "Go-To-Market", 2),
-  placeholder("revenue-growth", "Revenue Growth", 1),
-  placeholder("revenue-growth", "Revenue Growth", 2),
 ];

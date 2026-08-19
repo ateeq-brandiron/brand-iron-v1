@@ -186,11 +186,6 @@ export default function CaseStudiesPage() {
                         {headlineStat.value} {headlineStat.label}
                       </span>
                     )}
-                    {cs.isPlaceholder && (
-                      <span style={{ position: "absolute", top: 10, right: 10, background: "rgba(15,27,45,0.85)", color: "#FFFFFF", fontSize: 10, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", padding: "4px 9px", borderRadius: 4 }}>
-                        Placeholder
-                      </span>
-                    )}
                   </div>
                   <div style={{ padding: "22px 24px" }}>
                     <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#d87307", marginBottom: 8 }}>{catLabel}</p>

@@ -98,14 +98,6 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
 
       <CaseStudyModeToggle images={cs.images} />
 
-      {cs.isPlaceholder && (
-        <div style={{ background: "#FFF7E8", borderTop: "1px solid #F0DBA8", borderBottom: "1px solid #F0DBA8", padding: "14px 24px", textAlign: "center" }}>
-          <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 600, color: "#8a6416", margin: 0 }}>
-            This is a placeholder case study for layout and review purposes — not a real client engagement.
-          </p>
-        </div>
-      )}
-
       {/* ── CHALLENGE / SOLUTION ─────────────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "80px 24px" }}>
         <div style={{ maxWidth: 820, margin: "0 auto" }}>
