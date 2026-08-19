@@ -402,6 +402,9 @@ export default function Home() {
 
       {/* ── S2B: CLIENT LOGO MARQUEE ──────────────────────── */}
       <section style={{ background: "#F7F4EE", padding: "24px 0 30px" }}>
+        <p style={{ textAlign: "center", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 28 }}>
+          Trusted By Growing Brands
+        </p>
         <div className="client-logo-marquee" style={{ width: "100vw", marginLeft: "calc(50% - 50vw)" }}>
           <div className="client-logo-track">
             {[...clientLogos, ...clientLogos].map((c, i) => (
@@ -926,6 +929,9 @@ export default function Home() {
       {/* ── S6B: OUR PARTNERS ────────────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "64px 24px 72px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", textAlign: "center" }}>
+          <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 40 }}>
+            Our Partners
+          </p>
           <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", gap: 28 }}>
             {partners.map(p => (
               <a key={p.name} href={p.href} target="_blank" rel="noopener noreferrer" aria-label={p.name} className="logo-card" style={{ position: "relative" }}>
@@ -952,6 +958,9 @@ export default function Home() {
       <section style={{ background: "#F7F4EE", padding: "88px 24px 56px" }}>
         <div ref={s7Ref} style={{ maxWidth: 1100, margin: "0 auto", textAlign: "center" }}>
         <div style={{ maxWidth: 720, margin: "0 auto" }}>
+          <p className={`reveal${s7InView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 32 }}>
+            What Our Clients Say
+          </p>
           <div className={`reveal${s7InView ? " visible" : ""} testimonial-card`} style={{
             background: "#FFFFFF", borderRadius: 20, position: "relative",
             display: "flex", flexDirection: "column", justifyContent: "center",
@@ -1102,6 +1111,9 @@ export default function Home() {
                 The strongest brands don&apos;t leave growth to chance. They build it with intention.
               </p>
               <div style={{ textAlign: "left" }}>
+                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 28 }}>
+                  Choose Your Next Step
+                </p>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 32 }}>
                   <div>
                     <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(255,255,255,0.85)", marginBottom: 20 }}>

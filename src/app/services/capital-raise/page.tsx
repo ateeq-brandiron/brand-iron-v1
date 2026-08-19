@@ -362,6 +362,7 @@ export default function CapitalRaisePage() {
 
           {/* Key insight */}
           <div className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ textAlign: "center", maxWidth: 820, margin: "0 auto" }}>
+            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>Key Insight</p>
             <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(20px, 2.6vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.4, margin: 0 }}>
               The strongest fundraising presentations don&apos;t try to answer every question. They answer the questions that matter most: clearly, confidently, and in a way that earns the next conversation.
             </p>
@@ -737,6 +738,7 @@ export default function CapitalRaisePage() {
 
           {/* Strategic insight */}
           <div className={`reveal${s6ViewInView ? ' visible' : ''}`} style={{ textAlign: "center", maxWidth: 820, margin: "0 auto 56px" }}>
+            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>Strategic Insight</p>
             <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(20px, 2.6vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.4, margin: 0 }}>
               Capital is the outcome. Investor confidence is what makes it possible.
             </p>
@@ -785,6 +787,9 @@ export default function CapitalRaisePage() {
                 Let&apos;s build a capital raise strategy that helps your organization prepare, connect, and engage with confidence.
               </p>
               <div style={{ textAlign: "left" }}>
+                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 28 }}>
+                  Choose Your Next Step
+                </p>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 32 }}>
                   <div>
                     <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(255,255,255,0.85)", marginBottom: 20 }}>

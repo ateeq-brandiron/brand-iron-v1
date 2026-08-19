@@ -29,6 +29,9 @@ export default function GrowthReviewPage() {
 
           {/* LEFT: value proposition */}
           <div>
+            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: "0.18em", textTransform: "uppercase", color: "#d87307", marginBottom: 18 }}>
+              Free GTM Growth Review
+            </p>
             <h1 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontWeight: 900, fontSize: "clamp(32px, 5vw, 54px)", textTransform: "uppercase", letterSpacing: "0.01em", color: "#FFFFFF", lineHeight: 1.1, marginBottom: 22 }}>
               Find Out Where Your<br />Growth Strategy<span style={{ color: "#d87307" }}>.</span> Stands<span style={{ color: "#d87307" }}>.</span>
             </h1>

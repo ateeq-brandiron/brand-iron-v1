@@ -139,6 +139,7 @@ export default function ContactPage() {
       }}>
         <div role="img" aria-label="Dark, misty mountain ridge landscape at dusk" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(10,20,35,0.3) 0%, rgba(10,20,35,0.22) 45%, rgba(10,20,35,0.62) 100%)" }} />
         <div style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto", padding: "140px 24px 80px", textAlign: "center" }}>
+          <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 500, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>Get In Touch</p>
           <h1 className="hero-h1-anim" style={{
             fontFamily: "var(--font-burford-inline), sans-serif", fontWeight: 400, fontSize: "clamp(44px, 6vw, 72px)",
             textTransform: "uppercase", letterSpacing: "0.03em",
