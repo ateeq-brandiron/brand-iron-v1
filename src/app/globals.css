@@ -652,6 +652,16 @@ section p, main p, article p {
   }
 }
 
+/* ── Headlines that should hold a single line once there's room ── */
+.pf-nowrap-heading {
+  white-space: nowrap;
+}
+@media (max-width: 480px) {
+  .pf-nowrap-heading {
+    white-space: normal;
+  }
+}
+
 /* ── Scroll progress bar animate on visible ────────────── */
 .progress-bar-animate {
   width: 0%;

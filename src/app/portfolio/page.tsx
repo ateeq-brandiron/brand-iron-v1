@@ -310,7 +310,7 @@ function PortfolioPageContent() {
       {/* ── S2: STATS BAND ───────────────────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "16px 40px 56px" }}>
         <div ref={s2ViewRef} style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <h2 className={`section-heading reveal${s2ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", maxWidth: 780, margin: "0 auto 40px" }}>
+          <h2 className={`section-heading pf-nowrap-heading reveal${s2ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", margin: "0 auto 40px", fontSize: "clamp(18px, 2.5vw, 40px)" }}>
             Built With Purpose. Proven in the Field.
           </h2>
           <div className="trust-stats-row" style={{ display: "flex", gap: "24px 40px", justifyContent: "center" }}>
@@ -323,11 +323,11 @@ function PortfolioPageContent() {
 
       {/* ── S3: FEATURED WORK ────────────────────────────────── */}
       <section id="selected-work" style={{ background: "#FFFFFF", padding: "40px 40px 48px" }}>
-        <div ref={s3ViewRef} className={`reveal${s3ViewInView ? ' visible' : ''}`} style={{ maxWidth: 780, margin: "0 auto", textAlign: "center" }}>
-          <h2 className="section-heading" style={{ color: "#1a1a1a", marginBottom: 18 }}>
+        <div ref={s3ViewRef} className={`reveal${s3ViewInView ? ' visible' : ''}`} style={{ maxWidth: 1100, margin: "0 auto", textAlign: "left" }}>
+          <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.25, marginBottom: 16 }}>
             Strategy With Backbone. Creative With Purpose.
           </h2>
-          <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.75, color: "#666", marginBottom: 28 }}>
+          <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", maxWidth: 760, marginBottom: 28 }}>
             Good-looking work is only part of the job. The real work is creating a brand people understand, trust, and choose. We partner with organizations that are ready to sharpen their story, stake out a stronger position, and build momentum across branding, go-to-market, digital, capital raising, visibility, and revenue growth.
           </p>
           <a href="#all-projects" style={{
@@ -348,13 +348,15 @@ function PortfolioPageContent() {
 
       {/* ── S4: SELECTED WORK (CATEGORY CAROUSEL) ───────────────── */}
       <section style={{ background: "#FFFFFF", padding: "8px 40px 96px" }}>
-        <div ref={s4ViewRef} style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <h2 className={`section-heading reveal${s4ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 40 }}>
-            Selected Work
-          </h2>
+        <div ref={s4ViewRef} style={{ maxWidth: 1100, margin: "0 auto" }}>
+          <div style={{ textAlign: "left", marginBottom: 56 }}>
+            <h2 className={`reveal${s4ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.25, marginBottom: 0 }}>
+              Selected Work
+            </h2>
+          </div>
 
           <div
-            style={{ position: "relative", marginBottom: 32 }}
+            style={{ position: "relative", marginBottom: 40 }}
             onMouseEnter={startCatAutoSlide}
             onMouseLeave={stopCatAutoSlide}
           >
@@ -459,7 +461,7 @@ function PortfolioPageContent() {
         <style>{`
           .pf-category-carousel { scrollbar-width: none; -ms-overflow-style: none; }
           .pf-category-carousel::-webkit-scrollbar { display: none; }
-          .pf-category-card:hover { transform: translateY(-4px); box-shadow: 0 14px 28px rgba(0,0,0,0.1); border-color: rgba(216,115,7,0.3) !important; }
+          .pf-category-card:hover { transform: translateY(-4px); box-shadow: 0 14px 28px rgba(0,0,0,0.1); }
           .pf-category-card:hover .pf-view-work { background: #c46305; }
           .pf-category-card:hover .pf-view-work-tail { transform: scaleX(1); }
           .pf-category-carousel-arrow:hover { border-color: #d87307 !important; background: rgba(216,115,7,0.08) !important; }
@@ -491,11 +493,11 @@ function PortfolioPageContent() {
         }} />
         <div role="img" aria-label="A blacksmith striking molten metal on an anvil with sparks flying, overlaid with a glowing circuit-line pattern representing strategy and technology" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.88) 0%, rgba(8,16,36,0.82) 45%, rgba(8,16,36,0.92) 100%)" }} />
         <div ref={s5ViewRef} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
-          <div style={{ maxWidth: 900, margin: "0 auto 64px", textAlign: "center" }}>
-            <h2 className={`section-heading reveal${s5ViewInView ? ' visible' : ''}`} style={{ color: "#FFFFFF", marginBottom: 20 }}>
+          <div style={{ margin: "0 auto 64px", textAlign: "center" }}>
+            <h2 className={`section-heading pf-nowrap-heading reveal${s5ViewInView ? ' visible' : ''}`} style={{ color: "#FFFFFF", marginBottom: 20, fontSize: "clamp(18px, 2.9vw, 44px)" }}>
               Forged From Strategy. Built for the Real World.
             </h2>
-            <p className={`reveal${s5ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.75)", marginBottom: 0 }}>
+            <p className={`reveal${s5ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,0.75)", maxWidth: 900, margin: "0 auto" }}>
               Every project starts with a simple question: what&apos;s standing between this business and its next stage of growth? From there, we dig in: we uncover the challenge, sharpen the position, build the right tools, launch with purpose, measure what matters, and keep pushing forward.
             </p>
           </div>
