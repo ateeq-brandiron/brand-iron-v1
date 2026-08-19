@@ -254,7 +254,7 @@ function PortfolioPageContent() {
                 color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))",
                 marginBottom: 20,
               }}>
-                Brands Forged<span style={{ color: "#d87307" }}>.</span><br />Growth Built to Last<span style={{ color: "#d87307" }}>.</span>
+                Brands Forged.<br />Growth Built to Last.
               </h1>
 
               <div className="hero-btns-anim" style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center" }}>
