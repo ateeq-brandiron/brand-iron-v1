@@ -3,22 +3,28 @@ import { useState } from "react";
 import { portfolioCategories, PortfolioCategoryId, PortfolioItem } from "@/data/portfolio";
 import WebsiteScrollPreview from "@/components/WebsiteScrollPreview";
 
+const INITIAL_LIMIT = 6;
+
 export default function PortfolioGallery({ items, initialCategory }: { items: PortfolioItem[]; initialCategory?: PortfolioCategoryId | "all" }) {
   const [activeCategory, setActiveCategory] = useState<PortfolioCategoryId | "all">(initialCategory ?? "all");
+  const [showAll, setShowAll] = useState(false);
   const [expanded, setExpanded] = useState<PortfolioItem | null>(null);
   const [galleryIndex, setGalleryIndex] = useState(0);
 
+  const selectCategory = (id: PortfolioCategoryId | "all") => { setActiveCategory(id); setShowAll(false); };
   const openItem = (item: PortfolioItem) => { setExpanded(item); setGalleryIndex(0); };
 
   const activeCategoryMeta = activeCategory === "all" ? null : portfolioCategories.find(c => c.id === activeCategory);
   const filtered = activeCategory === "all" ? items : items.filter(i => i.category === activeCategory);
+  const visibleItems = showAll ? filtered : filtered.slice(0, INITIAL_LIMIT);
+  const remaining = filtered.length - visibleItems.length;
 
   return (
     <div>
       {/* Category filter tabs */}
       <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginBottom: 40, justifyContent: "center" }}>
         <button
-          onClick={() => setActiveCategory("all")}
+          onClick={() => selectCategory("all")}
           style={{
             fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase",
             padding: "10px 20px", borderRadius: 20, cursor: "pointer", transition: "background 0.2s, color 0.2s, border-color 0.2s",
@@ -32,7 +38,7 @@ export default function PortfolioGallery({ items, initialCategory }: { items: Po
         {portfolioCategories.map(cat => (
           <button
             key={cat.id}
-            onClick={() => setActiveCategory(cat.id)}
+            onClick={() => selectCategory(cat.id)}
             style={{
               fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase",
               padding: "10px 20px", borderRadius: 20, cursor: "pointer", transition: "background 0.2s, color 0.2s, border-color 0.2s",
@@ -62,7 +68,7 @@ export default function PortfolioGallery({ items, initialCategory }: { items: Po
         </div>
       ) : (
         <div className="pf-gallery-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
-          {filtered.map(item => {
+          {visibleItems.map(item => {
             const catLabel = portfolioCategories.find(c => c.id === item.category)?.label ?? item.category;
             return (
               <button
@@ -105,6 +111,26 @@ export default function PortfolioGallery({ items, initialCategory }: { items: Po
               </button>
             );
           })}
+        </div>
+      )}
+
+      {remaining > 0 && (
+        <div style={{ textAlign: "center", marginTop: 40 }}>
+          <button
+            onClick={() => setShowAll(true)}
+            style={{
+              display: "inline-flex", alignItems: "center", gap: 8,
+              fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 12,
+              letterSpacing: "0.1em", textTransform: "uppercase", cursor: "pointer",
+              background: "transparent", color: "#1a1a1a", border: "1px solid #d87307",
+              padding: "13px 24px", borderRadius: 6, transition: "background 0.2s, color 0.2s",
+            }}
+            onMouseEnter={e => { e.currentTarget.style.background = "#d87307"; e.currentTarget.style.color = "#FFFFFF"; }}
+            onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#1a1a1a"; }}
+          >
+            See {remaining} More Project{remaining === 1 ? "" : "s"}
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          </button>
         </div>
       )}
 
