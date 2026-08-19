@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { Suspense, useState, useEffect, useRef } from "react";
-import CircuitOverlay from "@/components/CircuitOverlay";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import PortfolioGallery from "@/components/PortfolioGallery";
 import { portfolioItems, portfolioCategories, PortfolioCategoryId } from "@/data/portfolio";
@@ -236,13 +235,12 @@ function PortfolioPageContent() {
 
       {/* ── HERO ───────────────────────────────────────────── */}
       <section className="pf-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
-        <video
-          src="/videos/portfolio/portfolio-hero-blacksmith-forging.mp4"
-          aria-label="A blacksmith forging molten metal on an anvil, sparks flying, representing brands forged through strategy and craft"
-          autoPlay muted loop playsInline preload="auto"
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 55%" }}
-        />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.35) 0%, rgba(8,16,36,0.25) 45%, rgba(8,16,36,0.65) 100%)" }} />
+        <div style={{
+          position: "absolute", inset: 0,
+          backgroundImage: "url('/images/portfolio/portfolio-hero-wild-horses.jpg')",
+          backgroundSize: "cover", backgroundPosition: "center 55%",
+        }} />
+        <div role="img" aria-label="A herd of wild horses running along a shoreline at sunset, representing momentum and growth built to last" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.35) 0%, rgba(8,16,36,0.25) 45%, rgba(8,16,36,0.65) 100%)" }} />
 
         <div className="pf-hero-wrap" style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", padding: "88px 24px 24px" }}>
           <div className="pf-hero-grid" style={{ maxWidth: 1200, margin: "0 auto", width: "100%", display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: 56, alignItems: "center" }}>
@@ -499,7 +497,12 @@ function PortfolioPageContent() {
 
       {/* ── S5: BEHIND THE BRAND ─────────────────────────────── */}
       <section style={{ position: "relative", overflow: "hidden", background: "#0F1B2D", padding: "120px 40px" }}>
-        <CircuitOverlay />
+        <div style={{
+          position: "absolute", inset: 0,
+          backgroundImage: "url('/images/portfolio/portfolio-forged-strategy-bg.jpg')",
+          backgroundSize: "cover", backgroundPosition: "center 40%",
+        }} />
+        <div role="img" aria-label="A blacksmith striking molten metal on an anvil with sparks flying, overlaid with a glowing circuit-line pattern representing strategy and technology" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.88) 0%, rgba(8,16,36,0.82) 45%, rgba(8,16,36,0.92) 100%)" }} />
         <div ref={s5ViewRef} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ maxWidth: 720, margin: "0 auto 56px", textAlign: "center" }}>
             <h2 className={`section-heading reveal${s5ViewInView ? ' visible' : ''}`} style={{ color: "#FFFFFF", marginBottom: 20 }}>
