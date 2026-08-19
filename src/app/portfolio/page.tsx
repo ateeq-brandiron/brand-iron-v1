@@ -327,7 +327,7 @@ function PortfolioPageContent() {
           <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(24px, 3.5vw, 44px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.25, marginBottom: 16 }}>
             Strategy With Backbone. Creative With Purpose.
           </h2>
-          <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", maxWidth: 760, marginBottom: 28 }}>
+          <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", marginBottom: 28 }}>
             Good-looking work is only part of the job. The real work is creating a brand people understand, trust, and choose. We partner with organizations that are ready to sharpen their story, stake out a stronger position, and build momentum across branding, go-to-market, digital, capital raising, visibility, and revenue growth.
           </p>
           <a href="#all-projects" style={{
@@ -393,6 +393,18 @@ function PortfolioPageContent() {
                     textDecoration: "none", transitionDelay: `${(i % 6) * 0.06}s`,
                     boxShadow: "0 4px 16px rgba(0,0,0,0.05)",
                     transition: "transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease",
+                  }}
+                  onMouseEnter={e => {
+                    const btn = e.currentTarget.querySelector<HTMLElement>(".pf-view-work");
+                    const tail = e.currentTarget.querySelector<HTMLElement>(".pf-view-work-tail");
+                    if (btn) btn.style.background = "#c46305";
+                    if (tail) tail.style.transform = "scaleX(1)";
+                  }}
+                  onMouseLeave={e => {
+                    const btn = e.currentTarget.querySelector<HTMLElement>(".pf-view-work");
+                    const tail = e.currentTarget.querySelector<HTMLElement>(".pf-view-work-tail");
+                    if (btn) btn.style.background = "#d87307";
+                    if (tail) tail.style.transform = "scaleX(0.3)";
                   }}
                 >
                   <div style={{ width: 40, height: 4, borderRadius: 2, background: "#d87307", marginBottom: 16 }} />
@@ -462,8 +474,6 @@ function PortfolioPageContent() {
           .pf-category-carousel { scrollbar-width: none; -ms-overflow-style: none; }
           .pf-category-carousel::-webkit-scrollbar { display: none; }
           .pf-category-card:hover { transform: translateY(-4px); box-shadow: 0 14px 28px rgba(0,0,0,0.1); }
-          .pf-category-card:hover .pf-view-work { background: #c46305; }
-          .pf-category-card:hover .pf-view-work-tail { transform: scaleX(1); }
           .pf-category-carousel-arrow:hover { border-color: #d87307 !important; background: rgba(216,115,7,0.08) !important; }
           @media (max-width: 640px) {
             .pf-category-carousel-arrow { display: none !important; }
@@ -557,11 +567,11 @@ function PortfolioPageContent() {
 
       {/* ── S6: CASE STUDIES TEASER ───────────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "120px 40px" }}>
-        <div ref={s6ViewRef} style={{ maxWidth: 800, margin: "0 auto", textAlign: "center" }}>
-          <h2 className={`section-heading reveal${s6ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20 }}>
+        <div ref={s6ViewRef} style={{ maxWidth: 1100, margin: "0 auto", textAlign: "center" }}>
+          <h2 className={`section-heading pf-nowrap-heading reveal${s6ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, fontSize: "clamp(18px, 2.9vw, 40px)" }}>
             See What Happened After the Dust Settled.
           </h2>
-          <p className={`reveal${s6ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", marginBottom: 32 }}>
+          <p className={`reveal${s6ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 700, margin: "0 auto 32px" }}>
             The finished work is only part of the story. Explore selected case studies to see the challenge, thinking, execution, and outcomes behind Brand Iron engagements.
           </p>
           <Link href="/case-studies" className={`reveal${s6ViewInView ? ' visible' : ''}`} style={{
