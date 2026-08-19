@@ -79,7 +79,12 @@ export default function PortfolioGallery({ items, initialCategory }: { items: Po
                 <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 10, left: 10, width: 26, height: 26, opacity: 0, transition: "opacity 0.25s ease", zIndex: 3 }} />
                 <div style={{ position: "relative", aspectRatio: "4 / 3", overflow: "hidden", background: "#F0EEEA" }}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={item.thumbnail} alt={item.thumbnailAlt} className="pf-gallery-img" style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.4s ease" }} />
+                  <img src={item.thumbnail} alt={item.thumbnailAlt} className="pf-gallery-img" style={{
+                    width: "100%", height: "100%", boxSizing: "border-box",
+                    objectFit: item.type === "logo" ? "contain" : "cover",
+                    padding: item.type === "logo" ? "14%" : 0,
+                    transition: "transform 0.4s ease",
+                  }} />
                   <div className="pf-gallery-scrim" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, transparent 55%, rgba(8,16,36,0.75) 100%)", opacity: 0, transition: "opacity 0.25s ease" }} />
                   <span className="pf-gallery-view" style={{
                     position: "absolute", left: 20, bottom: 14, transform: "translateY(10px)", opacity: 0, transition: "transform 0.25s ease, opacity 0.25s ease",

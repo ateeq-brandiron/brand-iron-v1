@@ -42,31 +42,44 @@ function useCountUp(target: number | null, inView: boolean, duration = 1400) {
 }
 
 const stats = [
-  { number: "100+", countTo: 100, suffix: "+", label: "Brands Forged", icon: (<svg width="30" height="30" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#d87307" strokeWidth="1.6" /><circle cx="12" cy="12" r="5" stroke="#d87307" strokeWidth="1.6" /><circle cx="12" cy="12" r="1.5" fill="#d87307" /></svg>) },
-  { number: "25+", countTo: 25, suffix: "+", label: "Industries Served", icon: (<img loading="lazy" src="/images/icons/icon-trending.svg" alt="" style={{ width: 28, height: 28 }} />) },
-  { number: "20+", countTo: 20, suffix: "+", label: "Years in the Saddle", icon: (<svg width="30" height="30" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3" stroke="#d87307" strokeWidth="1.6" /><circle cx="17" cy="9" r="2.3" stroke="#d87307" strokeWidth="1.6" /><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#d87307" strokeWidth="1.6" strokeLinecap="round" /><path d="M15 14.2c2.3.4 4 2.3 4 4.8" stroke="#d87307" strokeWidth="1.6" strokeLinecap="round" /></svg>) },
-  { number: "Award-Winning", countTo: null, suffix: "", label: "Strategy & Creative", icon: (<svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z" stroke="#d87307" strokeWidth="1.6" strokeLinejoin="round" /><path d="M7 5H4v2a3 3 0 0 0 3 3M17 5h3v2a3 3 0 0 1-3 3" stroke="#d87307" strokeWidth="1.6" strokeLinecap="round" /><path d="M12 14v3M9 20h6M9.5 17h5" stroke="#d87307" strokeWidth="1.6" strokeLinecap="round" /></svg>) },
+  { number: "100+", countTo: 100, suffix: "+", label: "Brands Forged", icon: (<svg width="30" height="30" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#D87307" strokeWidth="1.6" /><circle cx="12" cy="12" r="5" stroke="#D87307" strokeWidth="1.6" /><circle cx="12" cy="12" r="1.5" fill="#D87307" /></svg>) },
+  { number: "25+", countTo: 25, suffix: "+", label: "Industries Served", icon: (<svg width="30" height="30" viewBox="0 0 32 32" fill="none"><path d="M17.3333 9.3332H28M28 9.3332V19.9998M28 9.3332L17.3333 19.9998L12 14.6665L4 22.6665" stroke="#D87307" strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round" /></svg>) },
+  { number: "20+", countTo: 20, suffix: "+", label: "Years in the Saddle", icon: (<svg width="30" height="30" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3" stroke="#D87307" strokeWidth="1.6" /><circle cx="17" cy="9" r="2.3" stroke="#D87307" strokeWidth="1.6" /><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#D87307" strokeWidth="1.6" strokeLinecap="round" /><path d="M15 14.2c2.3.4 4 2.3 4 4.8" stroke="#D87307" strokeWidth="1.6" strokeLinecap="round" /></svg>) },
+  { number: "Award-Winning", countTo: null, suffix: "", label: "Strategy & Creative", icon: (<svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z" stroke="#D87307" strokeWidth="1.6" strokeLinejoin="round" /><path d="M7 5H4v2a3 3 0 0 0 3 3M17 5h3v2a3 3 0 0 1-3 3" stroke="#D87307" strokeWidth="1.6" strokeLinecap="round" /><path d="M12 14v3M9 20h6M9.5 17h5" stroke="#D87307" strokeWidth="1.6" strokeLinecap="round" /></svg>) },
 ];
 
-function StatTile({ stat, inView, index, isLast }: {
+function StatTile({ stat, inView, index }: {
   stat: { number: string; countTo: number | null; suffix: string; label: string; icon: React.ReactNode };
-  inView: boolean; index: number; isLast: boolean;
+  inView: boolean; index: number;
 }) {
   const count = useCountUp(stat.countTo, inView, 1200 + index * 150);
   const displayValue = stat.countTo !== null ? `${count}${stat.suffix}` : stat.number;
   return (
     <div
-      className={`pf-stat-tile reveal${inView ? ' visible' : ''}`}
-      style={{
-        textAlign: "center", padding: "0 16px",
-        borderRight: isLast ? "none" : "1px solid #EEEBE7",
-        transitionDelay: `${index * 0.1}s`,
+      className={`reveal${inView ? ' visible' : ''}`}
+      style={{ display: "flex", alignItems: "flex-start", gap: 12, transitionDelay: `${index * 0.08}s`, cursor: "default" }}
+      onMouseEnter={e => {
+        const el = e.currentTarget as HTMLDivElement;
+        (el.firstElementChild as HTMLDivElement).style.background = "#d87307";
+        (el.firstElementChild as HTMLDivElement).style.transform = "scale(1.08)";
+        (el.querySelectorAll("svg path, svg circle") as NodeListOf<SVGElement>).forEach(p => { p.setAttribute("stroke", "#FFFFFF"); if (p.getAttribute("fill") && p.getAttribute("fill") !== "none") p.setAttribute("fill", "#FFFFFF"); });
+        (el.lastElementChild!.firstElementChild as HTMLElement).style.color = "#d87307";
+      }}
+      onMouseLeave={e => {
+        const el = e.currentTarget as HTMLDivElement;
+        (el.firstElementChild as HTMLDivElement).style.background = "#EFEDE7";
+        (el.firstElementChild as HTMLDivElement).style.transform = "scale(1)";
+        (el.querySelectorAll("svg path, svg circle") as NodeListOf<SVGElement>).forEach(p => { p.setAttribute("stroke", "#D87307"); if (p.getAttribute("fill") && p.getAttribute("fill") !== "none") p.setAttribute("fill", "#D87307"); });
+        (el.lastElementChild!.firstElementChild as HTMLElement).style.color = "#1a1a1a";
       }}
     >
-      <div className="pf-stat-icon-wrap">{stat.icon}</div>
-      <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(20px, 2.2vw, 28px)", fontWeight: 900, color: "#1a1a1a", lineHeight: 1.1, marginBottom: 6 }}>{displayValue}</p>
-      <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: "#777", margin: 0 }}>{stat.label}</p>
-      <span className="pf-stat-underline" />
+      <div style={{ width: 52, height: 52, borderRadius: "50%", background: "#EFEDE7", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, transition: "background 0.25s ease, transform 0.25s ease" }}>
+        {stat.icon}
+      </div>
+      <div>
+        <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 25, fontWeight: 900, color: "#1a1a1a", letterSpacing: "0.02em", lineHeight: 1.15, whiteSpace: "nowrap", transition: "color 0.25s ease" }}>{displayValue}</p>
+        <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, color: "#555", fontWeight: 500, marginTop: 4 }}>{stat.label}</p>
+      </div>
     </div>
   );
 }
@@ -302,41 +315,15 @@ function PortfolioPageContent() {
       {/* ── S2: STATS BAND ───────────────────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "16px 40px 56px" }}>
         <div ref={s2ViewRef} style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <p className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase", color: "#999", textAlign: "center", marginBottom: 24 }}>
+          <p className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase", color: "#999", textAlign: "center", marginBottom: 28 }}>
             Built With Purpose. Proven in the Field.
           </p>
-          <div className="pf-stats-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)" }}>
+          <div className="trust-stats-row" style={{ display: "flex", gap: "24px 40px", justifyContent: "center" }}>
             {stats.map((stat, i) => (
-              <StatTile key={stat.label} stat={stat} inView={s2ViewInView} index={i} isLast={i === stats.length - 1} />
+              <StatTile key={stat.label} stat={stat} inView={s2ViewInView} index={i} />
             ))}
           </div>
         </div>
-        <style>{`
-          .pf-stat-tile { transition: transform 0.3s ease; }
-          .pf-stat-tile:hover { transform: translateY(-4px); }
-          .pf-stat-icon-wrap {
-            display: flex; align-items: center; justify-content: center;
-            width: 52px; height: 52px; border-radius: 50%; margin: 0 auto 12px;
-            background: rgba(216,115,7,0.06);
-            transition: transform 0.3s ease, background 0.3s ease;
-          }
-          .pf-stat-tile:hover .pf-stat-icon-wrap { transform: scale(1.1); background: rgba(216,115,7,0.14); }
-          .pf-stat-underline {
-            display: block; width: 0; height: 2px; background: #d87307;
-            margin: 12px auto 0; transition: width 0.35s ease;
-          }
-          .pf-stat-tile:hover .pf-stat-underline { width: 32px; }
-          @media (max-width: 900px) {
-            .pf-stats-grid { grid-template-columns: repeat(2, 1fr) !important; row-gap: 32px; }
-            .pf-stats-grid > div:nth-child(2n) { border-right: none !important; }
-            .pf-stats-grid > div:nth-child(1), .pf-stats-grid > div:nth-child(2) { border-bottom: 1px solid #EEEBE7; padding-bottom: 24px; }
-          }
-          @media (max-width: 520px) {
-            .pf-stats-grid { grid-template-columns: 1fr !important; }
-            .pf-stats-grid > div { border-right: none !important; border-bottom: 1px solid #EEEBE7; padding-bottom: 24px !important; }
-            .pf-stats-grid > div:last-child { border-bottom: none; }
-          }
-        `}</style>
       </section>
 
       {/* ── S3: FEATURED WORK ────────────────────────────────── */}
