@@ -151,13 +151,6 @@ export default function PortfolioGallery({ items, initialCategory }: { items: Po
             }}>×</button>
 
             <div style={{ padding: "36px 40px 40px" }}>
-              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#d87307", marginBottom: 10 }}>
-                {portfolioCategories.find(c => c.id === expanded.category)?.label}
-              </p>
-              <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(20px, 2.6vw, 28px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", marginBottom: 20 }}>
-                {expanded.title}
-              </h2>
-
               <div style={{ marginBottom: 24 }}>
                 {expanded.type === "website" && expanded.fullPageImage ? (
                   <WebsiteScrollPreview src={expanded.fullPageImage} alt={expanded.thumbnailAlt} />
@@ -195,6 +188,13 @@ export default function PortfolioGallery({ items, initialCategory }: { items: Po
                   );
                 })()}
               </div>
+
+              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#d87307", marginBottom: 10 }}>
+                {portfolioCategories.find(c => c.id === expanded.category)?.label}
+              </p>
+              <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(20px, 2.6vw, 28px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", marginBottom: 20 }}>
+                {expanded.title}
+              </h2>
 
               <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, lineHeight: 1.75, color: "#555", marginBottom: expanded.isPlaceholder ? 20 : 0 }}>
                 {expanded.description}
