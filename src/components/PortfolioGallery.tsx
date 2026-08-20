@@ -161,27 +161,27 @@ export default function PortfolioGallery({ items, initialCategory }: { items: Po
                 ) : (() => {
                   const gallery = expanded.images && expanded.images.length > 0 ? expanded.images : [expanded.thumbnail];
                   return (
-                    <div style={{ position: "relative" }}>
+                    <div style={{ position: "relative", padding: gallery.length > 1 ? "0 44px" : 0 }}>
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img src={gallery[galleryIndex]} alt={expanded.thumbnailAlt} style={{ width: "100%", borderRadius: 12, border: "1px solid #EEEBE7", display: "block" }} />
                       {gallery.length > 1 && (
                         <>
                           <button onClick={() => setGalleryIndex(i => (i - 1 + gallery.length) % gallery.length)} aria-label="Previous image" style={{
-                            position: "absolute", left: 12, top: "50%", transform: "translateY(-50%)", width: 40, height: 40, borderRadius: "50%",
-                            background: "rgba(255,255,255,0.9)", border: "1px solid #EEEBE7", cursor: "pointer",
+                            position: "absolute", left: 0, top: "50%", transform: "translateY(-50%)", width: 40, height: 40, borderRadius: "50%",
+                            background: "#FFFFFF", border: "1px solid #EEEBE7", cursor: "pointer",
                             display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 4px 12px rgba(0,0,0,0.12)",
                           }}>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="#1a1a1a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                           </button>
                           <button onClick={() => setGalleryIndex(i => (i + 1) % gallery.length)} aria-label="Next image" style={{
-                            position: "absolute", right: 12, top: "50%", transform: "translateY(-50%)", width: 40, height: 40, borderRadius: "50%",
-                            background: "rgba(255,255,255,0.9)", border: "1px solid #EEEBE7", cursor: "pointer",
+                            position: "absolute", right: 0, top: "50%", transform: "translateY(-50%)", width: 40, height: 40, borderRadius: "50%",
+                            background: "#FFFFFF", border: "1px solid #EEEBE7", cursor: "pointer",
                             display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 4px 12px rgba(0,0,0,0.12)",
                           }}>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="#1a1a1a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                           </button>
                           <span style={{
-                            position: "absolute", bottom: 12, right: 12, background: "rgba(15,27,45,0.75)", color: "#FFFFFF",
+                            position: "absolute", bottom: 12, right: 56, background: "rgba(15,27,45,0.75)", color: "#FFFFFF",
                             fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, fontWeight: 700, padding: "4px 10px", borderRadius: 20,
                           }}>
                             {galleryIndex + 1} / {gallery.length}
