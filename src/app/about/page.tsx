@@ -400,7 +400,12 @@ export default function AboutPage() {
       </section>
 
       {/* ── S6: APPROACH ──────────────────────────────────────── */}
-      <section style={{ position: "relative", overflow: "hidden", padding: "120px 40px", background: "#0F1B2D" }}>
+      <section style={{
+        position: "relative", overflow: "hidden", padding: "120px 40px",
+        backgroundImage: "url('/images/shared/shared-horse-mane-circuit-lines.jpg')",
+        backgroundSize: "cover", backgroundPosition: "center",
+      }}>
+        <div role="img" aria-label="Horse mane texture overlaid with glowing digital circuit-line patterns" style={{ position: "absolute", inset: 0, background: "rgba(15,27,45,0.82)" }} />
         <CircuitOverlay />
         <div ref={s6ViewRef} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 56, maxWidth: 700 }}>
@@ -412,12 +417,12 @@ export default function AboutPage() {
             {APPROACH_STEPS.map(({ step, title, body }) => (
               <div
                 key={step}
-                className={`reveal${s6ViewInView ? ' visible' : ''}`}
-                style={{ position: "relative", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 14, padding: "28px 22px", overflow: "hidden", transition: "background 0.25s, border-color 0.25s, transform 0.25s" }}
-                onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-4px)"; el.style.background = "rgba(216,115,7,0.07)"; el.style.borderColor = "rgba(216,115,7,0.25)"; }}
-                onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.background = "rgba(255,255,255,0.04)"; el.style.borderColor = "rgba(255,255,255,0.08)"; }}
+                className={`reveal${s6ViewInView ? ' visible' : ''} approach-card`}
+                style={{ position: "relative", background: "rgba(255,255,255,0.04)", border: "1px solid transparent", borderRadius: 16, padding: "28px 22px", overflow: "hidden" }}
               >
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.2))" }} />
+                <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 8, right: 8, width: 22, height: 22, opacity: 0, filter: "brightness(0) invert(1)", transition: "opacity 0.25s ease" }} />
+                <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 8, left: 8, width: 22, height: 22, opacity: 0, filter: "brightness(0) invert(1)", transition: "opacity 0.25s ease" }} />
                 <div style={{ width: 40, height: 40, borderRadius: "50%", background: "rgba(216,115,7,0.15)", border: "1px solid rgba(216,115,7,0.3)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 16 }}>
                   <span style={{ fontFamily: "var(--font-burford-black), sans-serif", fontWeight: 900, fontSize: 13, color: "#d87307" }}>{step}</span>
                 </div>
@@ -429,6 +434,18 @@ export default function AboutPage() {
         </div>
 
         <style>{`
+          .approach-card {
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+          }
+          .approach-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 36px rgba(0,0,0,0.35) !important;
+            border-color: #d87307 !important;
+            background: rgba(216,115,7,0.08) !important;
+          }
+          .approach-card:hover .corner-bracket {
+            opacity: 1 !important;
+          }
           @media (max-width: 1000px) {
             .ab-approach-grid { grid-template-columns: repeat(3, 1fr) !important; }
           }
