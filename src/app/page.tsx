@@ -410,7 +410,9 @@ export default function Home() {
         <div className="client-logo-marquee" style={{ width: "100vw", marginLeft: "calc(50% - 50vw)" }}>
           <div className="client-logo-track">
             {[...clientLogos, ...clientLogos].map((c, i) => (
-              <div key={`${c.name}-${i}`} className="logo-card logo-card-mono">
+              <div key={`${c.name}-${i}`} className="logo-card logo-card-mono" style={{ position: "relative" }}>
+                <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 6, right: 6, width: 22, height: 22, opacity: 0, transition: "opacity 0.25s ease" }} />
+                <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 6, left: 6, width: 22, height: 22, opacity: 0, transition: "opacity 0.25s ease" }} />
                 <img loading="eager" src={c.logo} alt={c.name} />
               </div>
             ))}
