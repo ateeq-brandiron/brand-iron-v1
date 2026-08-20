@@ -64,6 +64,7 @@ export const portfolioItems: PortfolioItem[] = [
     images: [
       "/images/portfolio/scamrocket/scamrocket-wordmark-padded.jpg",
       "/images/portfolio/scamrocket/scamrocket-icon-mark.jpg",
+      "/images/portfolio/scamrocket/scamrocket-color-palette.jpg",
     ],
   },
   {
@@ -75,6 +76,12 @@ export const portfolioItems: PortfolioItem[] = [
     thumbnail: "/images/portfolio/innovatix/innovatix-brand-identity.jpg",
     thumbnailAlt: "Innovatix Technology Partners logo mark and wordmark on a white background",
     description: "A confident wordmark and tagline lockup for a technology partner brand, built for consistent use across every application.",
+    images: [
+      "/images/portfolio/innovatix/innovatix-brand-identity.jpg",
+      "/images/portfolio/innovatix/innovatix-badge-backgrounds.jpg",
+      "/images/portfolio/innovatix/innovatix-logo-badge-mockup.jpg",
+      "/images/portfolio/innovatix/innovatix-color-palette.jpg",
+    ],
   },
   {
     slug: "bellwether-brand-identity",
@@ -85,6 +92,13 @@ export const portfolioItems: PortfolioItem[] = [
     thumbnail: "/images/portfolio/bellwether/bellwether-logo.jpg",
     thumbnailAlt: "Bellwether logo mark and wordmark on a dark navy circuit-line background",
     description: "A brand identity for a market-intelligence platform, pairing a bell-and-signal mark with a confident wordmark that signals clarity and foresight.",
+    images: [
+      "/images/portfolio/bellwether/bellwether-logo.jpg",
+      "/images/portfolio/bellwether/bellwether-logo-usage.jpg",
+      "/images/portfolio/bellwether/bellwether-color-palette.jpg",
+      "/images/portfolio/bellwether/bellwether-typography.jpg",
+      "/images/portfolio/bellwether/bellwether-shapes-components.jpg",
+    ],
   },
   {
     slug: "cities-project-global-brand-identity",
@@ -95,6 +109,11 @@ export const portfolioItems: PortfolioItem[] = [
     thumbnail: "/images/portfolio/cities-project-global/cpg-logo.jpg",
     thumbnailAlt: "Cities Project Global logo mark of a stylized city skyline",
     description: "A brand identity for a global urban development firm, built around a skyline mark that scales cleanly across every application.",
+    images: [
+      "/images/portfolio/cities-project-global/cpg-logo.jpg",
+      "/images/portfolio/cities-project-global/cpg-logo-usage.jpg",
+      "/images/portfolio/cities-project-global/cpg-color-lockups.jpg",
+    ],
   },
   {
     slug: "real-international-brand-identity",
@@ -108,6 +127,9 @@ export const portfolioItems: PortfolioItem[] = [
     images: [
       "/images/portfolio/real-international-brand/real-international-icon.jpg",
       "/images/portfolio/real-international-brand/real-international-logo-thumb.jpg",
+      "/images/portfolio/real-international-brand/real-international-website-mockup.jpg",
+      "/images/portfolio/real-international-brand/real-international-primary-colors.jpg",
+      "/images/portfolio/real-international-brand/real-international-iconology.jpg",
     ],
   },
   {
@@ -138,7 +160,7 @@ export const portfolioItems: PortfolioItem[] = [
       "/images/portfolio/real-international/real-international-logo-card.jpg",
       "/images/portfolio/real-international/real-international-cover.jpg",
       "/images/portfolio/real-international/real-international-our-story.jpg",
-      "/images/portfolio/real-international/real-international-our-success.jpg",
+      "/images/portfolio/real-international/real-international-case-study-lantern.jpg",
       "/images/portfolio/real-international/real-international-capabilities.jpg",
     ],
   },
@@ -155,7 +177,7 @@ export const portfolioItems: PortfolioItem[] = [
       "/images/portfolio/black-lake/black-lake-logo-card.jpg",
       "/images/portfolio/black-lake/black-lake-cover.jpg",
       "/images/portfolio/black-lake/black-lake-vision.jpg",
-      "/images/portfolio/black-lake/black-lake-company-voice.jpg",
+      "/images/portfolio/black-lake/black-lake-long-term-success.jpg",
       "/images/portfolio/black-lake/black-lake-nimble-funding.jpg",
     ],
   },
@@ -173,7 +195,7 @@ export const portfolioItems: PortfolioItem[] = [
       "/images/portfolio/strike-flyers/strike-flyers-cover.jpg",
       "/images/portfolio/strike-flyers/strike-flyers-intro.jpg",
       "/images/portfolio/strike-flyers/strike-flyers-model-v2.jpg",
-      "/images/portfolio/strike-flyers/strike-flyers-faqs.jpg",
+      "/images/portfolio/strike-flyers/strike-flyers-thank-you.jpg",
     ],
   },
   {
@@ -187,7 +209,7 @@ export const portfolioItems: PortfolioItem[] = [
     description: "An investor deck for a scam-prevention platform, translating a consumer-and-enterprise ecosystem into a clear growth story for investors.",
     images: [
       "/images/portfolio/scamrocket-capital/scamrocket-capital-logo-card.jpg",
-      "/images/portfolio/scamrocket-capital/scamrocket-investor-cover.jpg",
+      "/images/portfolio/scamrocket-capital/scamrocket-market-opportunity.jpg",
       "/images/portfolio/scamrocket-capital/scamrocket-ecosystem-v2.jpg",
       "/images/portfolio/scamrocket-capital/scamrocket-app-mockup.jpg",
       "/images/portfolio/scamrocket-capital/scamrocket-trust-handshake.jpg",
@@ -205,7 +227,7 @@ export const portfolioItems: PortfolioItem[] = [
     images: [
       "/images/portfolio/silver-stag/silver-stag-logo-card.jpg",
       "/images/portfolio/silver-stag/silver-stag-cover.jpg",
-      "/images/portfolio/silver-stag/silver-stag-imagine-this.jpg",
+      "/images/portfolio/silver-stag/silver-stag-our-traction.jpg",
       "/images/portfolio/silver-stag/silver-stag-why-now.jpg",
       "/images/portfolio/silver-stag/silver-stag-our-story.jpg",
     ],
@@ -224,6 +246,7 @@ export const portfolioItems: PortfolioItem[] = [
       "/images/portfolio/haefele-flanagan/haefele-cover.jpg",
       "/images/portfolio/haefele-flanagan/haefele-achievements.jpg",
       "/images/portfolio/haefele-flanagan/haefele-acquisition-strategy.jpg",
+      "/images/portfolio/haefele-flanagan/haefele-deal-experience.jpg",
     ],
   },
   {
