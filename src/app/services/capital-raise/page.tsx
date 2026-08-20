@@ -361,8 +361,8 @@ export default function CapitalRaisePage() {
           </div>
 
           {/* Key insight */}
-          <div className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ textAlign: "center", maxWidth: 820, margin: "0 auto" }}>
-            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>Key Insight</p>
+          <div className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ textAlign: "left" }}>
+            <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 16 }}>Key Insight</h3>
             <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(20px, 2.6vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.4, margin: 0 }}>
               The strongest fundraising presentations don&apos;t try to answer every question. They answer the questions that matter most: clearly, confidently, and in a way that earns the next conversation.
             </p>
