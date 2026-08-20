@@ -402,9 +402,9 @@ export default function Home() {
 
       {/* ── S2B: CLIENT LOGO MARQUEE ──────────────────────── */}
       <section style={{ background: "#F7F4EE", padding: "24px 0 30px" }}>
-        <p style={{ textAlign: "center", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 28 }}>
+        <h2 style={{ textAlign: "center", fontFamily: "var(--font-burford-black), sans-serif", fontWeight: 900, fontSize: "clamp(24px, 3.5vw, 44px)", textTransform: "uppercase", letterSpacing: "0.03em", lineHeight: 1.25, color: "#1a1a1a", marginBottom: 28 }}>
           Trusted By Growing Brands
-        </p>
+        </h2>
         <div className="client-logo-marquee" style={{ width: "100vw", marginLeft: "calc(50% - 50vw)" }}>
           <div className="client-logo-track">
             {[...clientLogos, ...clientLogos].map((c, i) => (
@@ -586,7 +586,7 @@ export default function Home() {
               <div key={i} className="growth-card" style={{
                 background: "#FFFFFF", padding: "34px 24px 28px", position: "relative",
                 boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
-                borderBottom: "4px solid transparent",
+                borderBottom: "4px solid transparent", borderRadius: 16,
               }}
               >
                 <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 6, right: 6, width: 28, height: 28, opacity: 0 }} />
@@ -655,24 +655,11 @@ export default function Home() {
             {/* 4 cards — icon + hover lift */}
             <div className="home-differentiators-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20, marginBottom: 40 }}>
               {differentiators.map(({ num, title, body, icon }, i) => (
-                <div key={num} className={`reveal${s4InView ? " visible" : ""}`} style={{
+                <div key={num} className={`reveal${s4InView ? " visible" : ""} diff-card`} style={{
                   background: "#FFFFFF", padding: "32px 24px", position: "relative",
-                  border: "1px solid #ece5d8",
-                  transitionDelay: `${i * 0.07}s`, transition: "transform 0.25s, box-shadow 0.25s, border-color 0.25s",
-                }}
-                onMouseEnter={e => {
-                  (e.currentTarget as HTMLDivElement).style.transform = "translateY(-6px)";
-                  (e.currentTarget as HTMLDivElement).style.boxShadow = "0 14px 36px rgba(0,0,0,0.1)";
-                  (e.currentTarget as HTMLDivElement).style.borderColor = "#d87307";
-                  (e.currentTarget.querySelector(".diff-icon") as HTMLImageElement).style.transform = "scale(1.15)";
-                  e.currentTarget.querySelectorAll<HTMLImageElement>(".corner-bracket").forEach(img => (img.style.opacity = "1"));
-                }}
-                onMouseLeave={e => {
-                  (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
-                  (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
-                  (e.currentTarget as HTMLDivElement).style.borderColor = "#ece5d8";
-                  (e.currentTarget.querySelector(".diff-icon") as HTMLImageElement).style.transform = "scale(1)";
-                  e.currentTarget.querySelectorAll<HTMLImageElement>(".corner-bracket").forEach(img => (img.style.opacity = "0"));
+                  boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
+                  borderBottom: "4px solid transparent", borderRadius: 16,
+                  transitionDelay: `${i * 0.07}s`,
                 }}
                 >
                   <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 6, right: 6, width: 26, height: 26, opacity: 0, transition: "opacity 0.25s ease" }} />
@@ -929,9 +916,9 @@ export default function Home() {
       {/* ── S6B: OUR PARTNERS ────────────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "64px 24px 72px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", textAlign: "center" }}>
-          <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 40 }}>
+          <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontWeight: 900, fontSize: "clamp(24px, 3.5vw, 44px)", textTransform: "uppercase", letterSpacing: "0.03em", lineHeight: 1.25, color: "#1a1a1a", marginBottom: 40 }}>
             Our Partners
-          </p>
+          </h2>
           <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", gap: 28 }}>
             {partners.map(p => (
               <a key={p.name} href={p.href} target="_blank" rel="noopener noreferrer" aria-label={p.name} className="logo-card" style={{ position: "relative" }}>
@@ -958,9 +945,9 @@ export default function Home() {
       <section style={{ background: "#F7F4EE", padding: "88px 24px 56px" }}>
         <div ref={s7Ref} style={{ maxWidth: 1100, margin: "0 auto", textAlign: "center" }}>
         <div style={{ maxWidth: 720, margin: "0 auto" }}>
-          <p className={`reveal${s7InView ? " visible" : ""}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 32 }}>
+          <h2 className={`reveal${s7InView ? " visible" : ""}`} style={{ fontFamily: "var(--font-burford-black), sans-serif", fontWeight: 900, fontSize: "clamp(24px, 3.5vw, 44px)", textTransform: "uppercase", letterSpacing: "0.03em", lineHeight: 1.25, color: "#1a1a1a", marginBottom: 32 }}>
             What Our Clients Say
-          </p>
+          </h2>
           <div className={`reveal${s7InView ? " visible" : ""} testimonial-card`} style={{
             background: "#FFFFFF", borderRadius: 20, position: "relative",
             display: "flex", flexDirection: "column", justifyContent: "center",

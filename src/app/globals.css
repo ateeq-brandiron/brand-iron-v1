@@ -422,6 +422,25 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1 !important;
 }
 
+/* ── Differentiator cards (same hover treatment as growth-card) ── */
+.diff-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.diff-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.14) !important;
+  border-bottom-color: #d87307 !important;
+}
+.diff-card .corner-bracket {
+  transition: opacity 0.25s ease;
+}
+.diff-card:hover .corner-bracket {
+  opacity: 1 !important;
+}
+.diff-card:hover .diff-icon {
+  transform: scale(1.15);
+}
+
 /* ── Team cards ──────────────────────────────────────────── */
 .team-card {
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
