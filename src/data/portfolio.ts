@@ -243,4 +243,21 @@ export const portfolioItems: PortfolioItem[] = [
       "/images/portfolio/ascendancy-mc/ascendancy-faqs.jpg",
     ],
   },
+  {
+    slug: "ares-capital-raise",
+    category: "capital-raise",
+    title: "Aardex Real Estate Services (ARES)",
+    client: "Aardex Real Estate Services (ARES)",
+    type: "deck",
+    thumbnail: "/images/portfolio/ares/ares-logo-card.jpg",
+    thumbnailAlt: "ARES mountain-peak logo over an aerial night view of Golden, Colorado",
+    description: "An investor's deck for a boutique real estate developer, translating a 20-year track record and a luxury condominium opportunity in downtown Golden, Colorado into a clear growth story for investors.",
+    images: [
+      "/images/portfolio/ares/ares-logo-card.jpg",
+      "/images/portfolio/ares/ares-intro.jpg",
+      "/images/portfolio/ares/ares-opportunity.jpg",
+      "/images/portfolio/ares/ares-why-golden.jpg",
+      "/images/portfolio/ares/ares-project-intro.jpg",
+    ],
+  },
 ];

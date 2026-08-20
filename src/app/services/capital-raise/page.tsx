@@ -351,7 +351,7 @@ export default function CapitalRaisePage() {
           </div>
 
           {/* Beyond the pitch deck */}
-          <div className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ maxWidth: 800, margin: "0 0 56px" }}>
+          <div className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ margin: "0 0 56px" }}>
             <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 16 }}>
               Beyond the Pitch Deck
             </h3>
