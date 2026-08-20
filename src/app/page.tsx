@@ -285,18 +285,20 @@ export default function Home() {
           </p>
           <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
             <Link href="/contact" style={{
-              fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 15,
+              fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
+              letterSpacing: "0.14em", textTransform: "uppercase",
               background: "#d87307", color: "#FFFFFF",
-              padding: "15px 32px", borderRadius: 6,
+              padding: "14px 32px", borderRadius: 6,
               transition: "background 0.2s",
             }}
             onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
             onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
             >Book a Strategy Session</Link>
             <Link href="/services" style={{
-              fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 15,
+              fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
+              letterSpacing: "0.14em", textTransform: "uppercase",
               background: "transparent", color: "#FFFFFF",
-              padding: "15px 32px", border: "2px solid rgba(255,255,255,0.7)", borderRadius: 6,
+              padding: "14px 32px", border: "2px solid rgba(255,255,255,0.7)", borderRadius: 6,
               transition: "border-color 0.2s, background 0.2s",
             }}
             onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = "#d87307"; (e.currentTarget as HTMLAnchorElement).style.background = "rgba(216,115,7,0.15)"; }}
@@ -503,7 +505,7 @@ export default function Home() {
             <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: "clamp(14px, 1.6vw, 17px)", fontWeight: 500, color: "#777", marginBottom: 10 }}>
               Organizations that win today aren&apos;t simply louder.
             </p>
-            <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 3.2vw, 36px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.2, marginBottom: 28 }}>
+            <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 3.2vw, 36px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", lineHeight: 1.2, marginBottom: 28 }}>
               They&apos;re easier to find, easier to trust, and easier to choose.
             </p>
             <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", marginBottom: 20 }}>
@@ -513,7 +515,7 @@ export default function Home() {
               fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
               background: "#d87307", color: "#FFFFFF", border: "none", cursor: "pointer",
-              padding: "14px 36px", borderRadius: 6,
+              padding: "14px 32px", borderRadius: 6,
               display: "inline-block", transition: "background 0.2s",
             }}
             onMouseEnter={e => ((e.currentTarget as HTMLButtonElement).style.background = "#c46305")}
@@ -532,17 +534,20 @@ export default function Home() {
           <div style={{
             background: "#FFFFFF", maxWidth: 720, width: "100%",
             padding: "48px 56px", position: "relative", borderRadius: 16,
+            border: "1px solid transparent",
             boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
-            transition: "transform 0.3s ease, box-shadow 0.3s ease",
+            transition: "transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease",
           }}
           onMouseEnter={e => {
             (e.currentTarget as HTMLDivElement).style.transform = "translateY(-6px)";
             (e.currentTarget as HTMLDivElement).style.boxShadow = "0 20px 48px rgba(0,0,0,0.18)";
+            (e.currentTarget as HTMLDivElement).style.borderColor = "#d87307";
             e.currentTarget.querySelectorAll<HTMLImageElement>(".corner-bracket").forEach(img => (img.style.opacity = "1"));
           }}
           onMouseLeave={e => {
             (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
             (e.currentTarget as HTMLDivElement).style.boxShadow = "0 4px 20px rgba(0,0,0,0.08)";
+            (e.currentTarget as HTMLDivElement).style.borderColor = "transparent";
             e.currentTarget.querySelectorAll<HTMLImageElement>(".corner-bracket").forEach(img => (img.style.opacity = "0"));
           }}
           >
@@ -588,7 +593,7 @@ export default function Home() {
               <div key={i} className="growth-card" style={{
                 background: "#FFFFFF", padding: "34px 24px 28px", position: "relative",
                 boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
-                borderBottom: "4px solid transparent", borderRadius: 16,
+                border: "1px solid transparent", borderRadius: 16,
               }}
               >
                 <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 6, right: 6, width: 28, height: 28, opacity: 0 }} />
@@ -601,7 +606,7 @@ export default function Home() {
 
           {/* Closing */}
           <div style={{ textAlign: "left", marginTop: 48 }}>
-            <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 3.2vw, 36px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a" }}>
+            <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 3.2vw, 36px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a" }}>
               Growth shouldn&apos;t depend on disconnected tactics.
             </p>
             <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, color: "#1a1a1a", fontWeight: 600, marginTop: 6 }}>
@@ -660,7 +665,7 @@ export default function Home() {
                 <div key={num} className={`reveal${s4InView ? " visible" : ""} diff-card`} style={{
                   background: "#FFFFFF", padding: "32px 24px", position: "relative",
                   boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
-                  borderBottom: "4px solid transparent", borderRadius: 16,
+                  border: "1px solid transparent", borderRadius: 16,
                   transitionDelay: `${i * 0.07}s`,
                 }}
                 >
@@ -756,16 +761,16 @@ export default function Home() {
                   onClick={() => router.push(href)}
                   style={{
                     background: "#FFFFFF",
-                    border: "1px solid #ECE5D8",
-                    borderRadius: 18, padding: "30px 26px", position: "relative",
+                    border: "1px solid #EEEBE7",
+                    borderRadius: 16, padding: "30px 26px", position: "relative",
                     display: "flex", flexDirection: "column",
                     flex: "0 0 320px", width: 320, scrollSnapAlign: "center",
                     cursor: "pointer",
-                    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                    transition: "transform 0.25s ease, box-shadow 0.25s ease",
                     boxShadow: "0 4px 16px rgba(0,0,0,0.05)",
                   }}
                   onMouseEnter={e => {
-                    e.currentTarget.style.transform = "translateY(-4px)";
+                    e.currentTarget.style.transform = "translateY(-6px)";
                     e.currentTarget.style.boxShadow = "0 14px 28px rgba(0,0,0,0.1)";
                   }}
                   onMouseLeave={e => {
@@ -906,7 +911,7 @@ export default function Home() {
               fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
               background: "#d87307", color: "#FFFFFF",
-              padding: "14px 36px", borderRadius: 6, transition: "background 0.2s",
+              padding: "14px 32px", borderRadius: 6, transition: "background 0.2s",
             }}
             onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
             onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
@@ -991,7 +996,7 @@ export default function Home() {
                 width: 44, height: 44, borderRadius: "50%", background: "#F9F8F6",
                 border: "1px solid #EEEBE7", cursor: "pointer",
                 display: "flex", alignItems: "center", justifyContent: "center",
-                transition: "border-color 0.2s, background 0.2s",
+                boxShadow: "0 4px 16px rgba(0,0,0,0.1)", transition: "border-color 0.2s, background 0.2s",
               }}
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -1020,7 +1025,7 @@ export default function Home() {
                 width: 44, height: 44, borderRadius: "50%", background: "#F9F8F6",
                 border: "1px solid #EEEBE7", cursor: "pointer",
                 display: "flex", alignItems: "center", justifyContent: "center",
-                transition: "border-color 0.2s, background 0.2s",
+                boxShadow: "0 4px 16px rgba(0,0,0,0.1)", transition: "border-color 0.2s, background 0.2s",
               }}
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -1058,7 +1063,7 @@ export default function Home() {
       </section>
 
       {/* ── S7B: FAQ ─────────────────────────────────────── */}
-      <section style={{ background: "#F8F5EF", padding: "56px 24px 100px" }}>
+      <section style={{ background: "#F7F4EE", padding: "56px 24px 100px" }}>
         <div ref={s7faqRef} style={{ maxWidth: 900, margin: "0 auto" }}>
           <h2 className={`section-heading reveal${s7faqInView ? " visible" : ""}`} style={{ color: "#1a1a1a", marginBottom: 8, textAlign: "left" }}>
             Frequently Asked Questions
@@ -1100,9 +1105,6 @@ export default function Home() {
                 The strongest brands don&apos;t leave growth to chance. They build it with intention.
               </p>
               <div style={{ textAlign: "left" }}>
-                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: "0.2em", textTransform: "uppercase", color: "#d87307", marginBottom: 28 }}>
-                  Choose Your Next Step
-                </p>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 32 }}>
                   <div>
                     <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(255,255,255,0.85)", marginBottom: 20 }}>

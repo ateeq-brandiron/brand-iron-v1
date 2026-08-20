@@ -407,7 +407,7 @@ h1, h2, h3, h4, h5, h6 {
 .growth-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 16px 36px rgba(0,0,0,0.14) !important;
-  border-bottom-color: #d87307 !important;
+  border-color: #d87307 !important;
 }
 .growth-card .corner-tr, .growth-card .corner-bl {
   transition: border-color 0.25s ease;
@@ -429,7 +429,7 @@ h1, h2, h3, h4, h5, h6 {
 .diff-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 16px 36px rgba(0,0,0,0.14) !important;
-  border-bottom-color: #d87307 !important;
+  border-color: #d87307 !important;
 }
 .diff-card .corner-bracket {
   transition: opacity 0.25s ease;
@@ -801,7 +801,7 @@ section p, main p, article p {
   align-items: center;
   justify-content: center;
   background: #FFFFFF;
-  border: 1px solid #ECE5D8;
+  border: 1px solid #EEEBE7;
   border-radius: 14px;
   box-shadow: 0 2px 10px rgba(26,26,26,0.04);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
