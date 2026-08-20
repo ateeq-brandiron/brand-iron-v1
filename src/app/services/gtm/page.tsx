@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { useState, useEffect, useRef, Fragment } from "react";
-import CircuitOverlay from "@/components/CircuitOverlay";
 import GrowthReviewModal from "@/components/GrowthReviewModal";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import ServiceSchema from "@/components/ServiceSchema";
@@ -276,7 +275,6 @@ export default function GTMPage() {
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
         <div role="img" aria-label="Desert butte landscape at sunset with sagebrush replaced by glowing computer-chip circuit patterns, representing a go-to-market strategy framework" style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.68)" }} />
-        <CircuitOverlay />
         <div ref={s3ViewRef} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
             <h2 className={`section-heading reveal${s3ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
@@ -393,7 +391,6 @@ export default function GTMPage() {
         position: "relative", overflow: "hidden", padding: "120px 40px",
         background: "#0F1B2D",
       }}>
-        <CircuitOverlay />
         <div ref={s4ViewRef} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
             <h2 className={`section-heading reveal${s4ViewInView ? ' visible' : ''}`} style={{ color: "#FFFFFF", marginBottom: 20, textAlign: "left" }}>
@@ -624,7 +621,6 @@ export default function GTMPage() {
         position: "relative", overflow: "hidden", padding: "120px 40px",
         background: "#0F1B2D",
       }}>
-        <CircuitOverlay />
         <div ref={s6ViewRef} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 64 }}>
             <h2 className={`section-heading reveal${s6ViewInView ? ' visible' : ''}`} style={{ color: "#FFFFFF", marginBottom: 20, textAlign: "left" }}>

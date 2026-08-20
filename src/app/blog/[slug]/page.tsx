@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import CircuitOverlay from "@/components/CircuitOverlay";
 import { articles } from "@/data/articles";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import FaqAccordion from "@/components/FaqAccordion";
@@ -243,7 +242,6 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
       {/* ── MORE INSIGHTS ────────────────────────────────────── */}
       <section style={{ position: "relative", overflow: "hidden", background: "#0F1B2D", padding: "80px 24px" }}>
-        <CircuitOverlay />
         <div style={{ position: "relative", zIndex: 2, maxWidth: 1100, margin: "0 auto" }}>
           <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#FFFFFF", marginBottom: 28 }}>
             More Insights

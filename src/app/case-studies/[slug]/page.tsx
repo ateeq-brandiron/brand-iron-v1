@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import CircuitOverlay from "@/components/CircuitOverlay";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import CaseStudyModeToggle from "@/components/CaseStudyModeToggle";
 import { caseStudies } from "@/data/caseStudies";
@@ -115,7 +114,6 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
 
       {/* ── RESULTS ──────────────────────────────────────────── */}
       <section style={{ position: "relative", overflow: "hidden", background: "#0F1B2D", padding: "80px 24px" }}>
-        <CircuitOverlay />
         <div style={{ position: "relative", zIndex: 2, maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
           <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 2.6vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", marginBottom: 40 }}>
             The Results

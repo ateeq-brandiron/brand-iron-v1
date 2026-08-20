@@ -2,7 +2,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
-import CircuitOverlay from "@/components/CircuitOverlay";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 function useInView(threshold = 0.1) {
@@ -406,7 +405,6 @@ export default function AboutPage() {
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
         <div role="img" aria-label="Horse mane texture overlaid with glowing digital circuit-line patterns" style={{ position: "absolute", inset: 0, background: "rgba(15,27,45,0.82)" }} />
-        <CircuitOverlay />
         <div ref={s6ViewRef} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 56, maxWidth: 700 }}>
             <h2 className={`section-heading reveal${s6ViewInView ? ' visible' : ''}`} style={{ color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))", marginBottom: 0, textAlign: "left" }}>

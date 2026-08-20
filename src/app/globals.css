@@ -405,7 +405,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 .growth-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-6px) !important;
   box-shadow: 0 16px 36px rgba(0,0,0,0.14) !important;
   border-color: #d87307 !important;
 }
@@ -427,7 +427,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 .diff-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-6px) !important;
   box-shadow: 0 16px 36px rgba(0,0,0,0.14) !important;
   border-color: #d87307 !important;
 }
@@ -446,7 +446,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
 }
 .approach-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-6px) !important;
   box-shadow: 0 16px 36px rgba(0,0,0,0.35) !important;
   border-color: #d87307 !important;
   background: rgba(216,115,7,0.08) !important;

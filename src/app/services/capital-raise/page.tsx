@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
-import CircuitOverlay from "@/components/CircuitOverlay";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import ServiceSchema from "@/components/ServiceSchema";
 import HowToSchema from "@/components/HowToSchema";
@@ -378,7 +377,6 @@ export default function CapitalRaisePage() {
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
         <div role="img" aria-label="Dark, misty mountain ridge landscape at dusk" style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.72)" }} />
-        <CircuitOverlay />
         <div ref={s3ViewRef} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
             <h2 className={`section-heading reveal${s3ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>
@@ -459,7 +457,6 @@ export default function CapitalRaisePage() {
         position: "relative", overflow: "hidden", padding: "120px 40px",
         background: "#0F1B2D",
       }}>
-        <CircuitOverlay />
         <div ref={s4ViewRef} style={{ position: "relative", zIndex: 2, maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ marginBottom: 72 }}>
             <h2 className={`section-heading reveal${s4ViewInView ? ' visible' : ''}`} style={{ color: "#FFFFFF", filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.4))", marginBottom: 20, textAlign: "left" }}>

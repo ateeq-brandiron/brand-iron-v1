@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
-import CircuitOverlay from "@/components/CircuitOverlay";
 import BrandingProposalModal from "@/components/BrandingProposalModal";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import ServiceSchema from "@/components/ServiceSchema";
@@ -400,7 +399,6 @@ export default function BrandStrategyPage() {
         backgroundSize: "cover", backgroundPosition: "center",
       }}>
         <div role="img" aria-label="Golden hay bale field at sunset with rolled bales and sun flare" style={{ position: "absolute", inset: 0, background: "rgba(240,235,228,0.85)" }} />
-        <CircuitOverlay />
         <div ref={s3ViewRef} style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 56 }}>
             <h2 className={`section-heading reveal${s3ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 20, textAlign: "left" }}>

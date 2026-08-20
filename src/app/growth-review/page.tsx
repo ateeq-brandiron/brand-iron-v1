@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import CircuitOverlay from "@/components/CircuitOverlay";
 import GrowthReviewForm from "@/components/GrowthReviewForm";
 
 const trustPoints = [
@@ -18,8 +17,6 @@ const stats = [
 export default function GrowthReviewPage() {
   return (
     <main style={{ position: "relative", minHeight: "100vh", background: "#0A1220", overflow: "hidden", display: "flex", flexDirection: "column" }}>
-      <CircuitOverlay />
-
       <div style={{ position: "relative", zIndex: 2, padding: "32px 24px 0", display: "flex", justifyContent: "center" }}>
         <Image src="/images/shared/shared-logo-white.png" alt="Brand Iron" width={112} height={80} priority style={{ height: 52, width: "auto" }} />
       </div>
