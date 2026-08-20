@@ -737,8 +737,8 @@ export default function CapitalRaisePage() {
           </div>
 
           {/* Strategic insight */}
-          <div className={`reveal${s6ViewInView ? ' visible' : ''}`} style={{ textAlign: "center", maxWidth: 820, margin: "0 auto 56px" }}>
-            <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "#d87307", marginBottom: 16 }}>Strategic Insight</p>
+          <div className={`reveal${s6ViewInView ? ' visible' : ''}`} style={{ textAlign: "left", margin: "0 0 56px" }}>
+            <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.07em", color: "#1a1a1a", marginBottom: 16 }}>Strategic Insight</h3>
             <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(20px, 2.6vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", lineHeight: 1.4, margin: 0 }}>
               Capital is the outcome. Investor confidence is what makes it possible.
             </p>
