@@ -1,6 +1,14 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
+// The site was resolving live at both brandiron.net and www.brandiron.net
+// with no redirect between them - classic duplicate-content setup that
+// splits ranking signals and leaves search engines to guess which host to
+// index. Every canonical URL, metadataBase, and og:url in this codebase
+// already hardcodes the non-www host, so that's the de facto standard;
+// this enforces it at the edge for any request that arrives on www.
+const CANONICAL_HOST = "brandiron.net";
+
 // Legacy WordPress-era URLs that used to mass-redirect to the homepage
 // instead of their real current equivalent, which both loses topical
 // relevance for SEO and risks Google treating the pattern as a soft 404.
@@ -39,6 +47,13 @@ const NOINDEX_PATTERNS = [
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
+  const host = request.headers.get("host") ?? "";
+  if (host === `www.${CANONICAL_HOST}`) {
+    const url = new URL(request.url);
+    url.hostname = CANONICAL_HOST;
+    return NextResponse.redirect(url, 308);
+  }
+
   const redirect = LEGACY_REDIRECTS.find(({ pattern }) => pattern.test(pathname));
   if (redirect) {
     return NextResponse.redirect(new URL(redirect.destination, request.url), 308);
@@ -52,21 +67,10 @@ export function middleware(request: NextRequest) {
   return NextResponse.next();
 }
 
+// Broad matcher (excludes Next's internal static/image-optimization assets
+// and favicon) so the www -> non-www host check above runs on every route,
+// not just the legacy-URL list. The legacy redirect/noindex checks below
+// still key off their own path patterns within this same function.
 export const config = {
-  matcher: [
-    "/author/:path*",
-    "/tag/:path*",
-    "/branding-2", "/branding-2/",
-    "/gtm-strategy", "/gtm-strategy/",
-    "/cap-raise-decks", "/cap-raise-decks/",
-    "/pitch-deck", "/pitch-deck/",
-    "/pitch-deck-strategies", "/pitch-deck-strategies/",
-    "/pitch-deck-structure-for-success", "/pitch-deck-structure-for-success/",
-    "/website-development", "/website-development/",
-    "/process", "/process/",
-    "/the-4-types-of-pitch-decks", "/the-4-types-of-pitch-decks/",
-    "/why-your-startup-pitch-deck-matters-more-than-you-think", "/why-your-startup-pitch-deck-matters-more-than-you-think/",
-    "/avoid-costly-launch-mistakes-with-go-to-market-strategy-consulting", "/avoid-costly-launch-mistakes-with-go-to-market-strategy-consulting/",
-    "/is-go-to-market-strategy-a-skill-heres-why-it-matters", "/is-go-to-market-strategy-a-skill-heres-why-it-matters/",
-  ],
+  matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"],
 };
