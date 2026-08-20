@@ -556,21 +556,20 @@ export default function AIVisibilityPage() {
           {/* Four tier cards */}
           <div className="ai-tiers-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24, marginBottom: 56 }}>
             {tiers.map((tier, i) => (
-              <div key={tier.number} className={`reveal${s5ViewInView ? ' visible' : ''}`} style={{
+              <div key={tier.number} className={`reveal${s5ViewInView ? ' visible' : ''} growth-card`} style={{
                 position: "relative",
                 background: "#F9F8F6",
                 borderRadius: 12, padding: "32px 24px",
-                border: "1px solid #EEEBE7",
+                border: "1px solid transparent",
                 display: "flex", flexDirection: "column",
-                transition: "transform 0.25s, box-shadow 0.25s",
                 transitionDelay: `${i * 0.07}s`,
                 overflow: "hidden",
                 boxShadow: "0 4px 20px rgba(0,0,0,0.06)",
               }}
-              onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(-6px)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 16px 44px rgba(0,0,0,0.12)"; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 4px 20px rgba(0,0,0,0.06)"; }}
               >
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, transparent, rgba(216,115,7,0.4), transparent)" }} />
+                <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 8, right: 8, width: 20, height: 20, opacity: 0, transition: "opacity 0.25s ease" }} />
+                <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 8, left: 8, width: 20, height: 20, opacity: 0, transition: "opacity 0.25s ease" }} />
                 <div style={{ width: 56, height: 56, borderRadius: "50%", background: "#FFFFFF", border: "1.5px solid rgba(216,115,7,0.35)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 18 }}>
                   {tier.icon}
                 </div>

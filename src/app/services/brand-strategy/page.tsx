@@ -491,12 +491,12 @@ export default function BrandStrategyPage() {
           <div className="bs-solutions-grid" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 24, marginBottom: 64 }}>
             {solutions.map(({ name, tagline, bestFor, includes, timeline, outcome, cta, interest }) => (
               <div key={name}
-                className={`reveal${s4ViewInView ? ' visible' : ''}`}
-                style={{ position: "relative", background: "#FFFFFF", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 14, overflow: "hidden", boxShadow: "0 4px 20px rgba(0,0,0,0.06)", transition: "transform 0.25s, box-shadow 0.25s", display: "flex", flexDirection: "column" }}
-                onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-6px)"; el.style.boxShadow = "0 16px 44px rgba(0,0,0,0.12)"; }}
-                onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "0 4px 20px rgba(0,0,0,0.06)"; }}
+                className={`reveal${s4ViewInView ? ' visible' : ''} growth-card`}
+                style={{ position: "relative", background: "#FFFFFF", border: "1px solid transparent", borderRadius: 14, overflow: "hidden", boxShadow: "0 4px 20px rgba(0,0,0,0.06)", display: "flex", flexDirection: "column" }}
               >
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
+                <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 8, right: 8, width: 20, height: 20, opacity: 0, transition: "opacity 0.25s ease", zIndex: 1 }} />
+                <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 8, left: 8, width: 20, height: 20, opacity: 0, transition: "opacity 0.25s ease", zIndex: 1 }} />
                 <div style={{ padding: "36px 32px 28px", flex: 1 }}>
                   <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 20, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", marginBottom: 12, lineHeight: 1.2 }}>{name}</h3>
                   <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 15, fontWeight: 600, lineHeight: 1.6, color: "#333", marginBottom: 14 }}>{tagline}</p>

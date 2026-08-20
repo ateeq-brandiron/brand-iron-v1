@@ -335,11 +335,12 @@ export default function CapitalRaisePage() {
             <div className="cr-evaluations-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20 }}>
               {evaluations.map(({ title, body, icon }) => (
                 <div key={title}
-                  style={{ position: "relative", background: "#F9F8F6", border: "1px solid #EEEBE7", borderRadius: 12, padding: "26px 22px", overflow: "hidden", transition: "transform 0.25s, box-shadow 0.25s" }}
-                  onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-4px)"; el.style.boxShadow = "0 14px 36px rgba(0,0,0,0.08)"; }}
-                  onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "none"; }}
+                  className="growth-card"
+                  style={{ position: "relative", background: "#F9F8F6", border: "1px solid transparent", borderRadius: 12, padding: "26px 22px", overflow: "hidden" }}
                 >
                   <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
+                  <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 8, right: 8, width: 20, height: 20, opacity: 0, transition: "opacity 0.25s ease" }} />
+                  <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 8, left: 8, width: 20, height: 20, opacity: 0, transition: "opacity 0.25s ease" }} />
                   <div style={{ width: 46, height: 46, borderRadius: "50%", background: "rgba(216,115,7,0.1)", border: "1px solid rgba(216,115,7,0.25)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 16 }}>
                     {icon}
                   </div>
@@ -480,12 +481,12 @@ export default function CapitalRaisePage() {
               { num: "06", title: "Maintain Momentum", body: "Refine your messaging and sustain fundraising progress as conversations evolve." },
             ].map(({ num, title, body }) => (
               <div key={num}
-                className={`reveal${s4ViewInView ? ' visible' : ''}`}
-                style={{ position: "relative", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 14, padding: "32px 28px", overflow: "hidden", transition: "background 0.25s, border-color 0.25s, transform 0.25s" }}
-                onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-4px)"; el.style.background = "rgba(216,115,7,0.07)"; el.style.borderColor = "rgba(216,115,7,0.25)"; }}
-                onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.background = "rgba(255,255,255,0.04)"; el.style.borderColor = "rgba(255,255,255,0.08)"; }}
+                className={`reveal${s4ViewInView ? ' visible' : ''} approach-card`}
+                style={{ position: "relative", background: "rgba(255,255,255,0.04)", border: "1px solid transparent", borderRadius: 14, padding: "32px 28px", overflow: "hidden" }}
               >
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.2))" }} />
+                <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 8, right: 8, width: 20, height: 20, opacity: 0, filter: "brightness(0) invert(1)", transition: "opacity 0.25s ease" }} />
+                <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 8, left: 8, width: 20, height: 20, opacity: 0, filter: "brightness(0) invert(1)", transition: "opacity 0.25s ease" }} />
                 <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 14 }}>
                   <div style={{ width: 38, height: 38, borderRadius: "50%", background: "rgba(216,115,7,0.15)", border: "1px solid rgba(216,115,7,0.3)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                     <span style={{ fontFamily: "var(--font-burford-black), sans-serif", fontWeight: 900, fontSize: 13, color: "#d87307" }}>{num}</span>
@@ -516,12 +517,12 @@ export default function CapitalRaisePage() {
           <div className="cr-solutions-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20, marginBottom: 64 }}>
             {solutions.map(({ num, name, tagline, desc, bestFor, outcome, cta, href, icon }) => (
               <div key={name}
-                className={`reveal${s5ViewInView ? ' visible' : ''}`}
-                style={{ position: "relative", background: "#FFFFFF", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 14, overflow: "hidden", boxShadow: "0 4px 20px rgba(0,0,0,0.06)", transition: "transform 0.25s, box-shadow 0.25s", display: "flex", flexDirection: "column" }}
-                onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-6px)"; el.style.boxShadow = "0 16px 44px rgba(0,0,0,0.12)"; }}
-                onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "0 4px 20px rgba(0,0,0,0.06)"; }}
+                className={`reveal${s5ViewInView ? ' visible' : ''} growth-card`}
+                style={{ position: "relative", background: "#FFFFFF", border: "1px solid transparent", borderRadius: 14, overflow: "hidden", boxShadow: "0 4px 20px rgba(0,0,0,0.06)", display: "flex", flexDirection: "column" }}
               >
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
+                <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 8, right: 8, width: 20, height: 20, opacity: 0, transition: "opacity 0.25s ease", zIndex: 1 }} />
+                <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 8, left: 8, width: 20, height: 20, opacity: 0, transition: "opacity 0.25s ease", zIndex: 1 }} />
                 <div style={{ padding: "28px 22px 22px", flex: 1 }}>
                   <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 16 }}>
                     <div style={{ width: 42, height: 42, borderRadius: 10, background: "rgba(216,115,7,0.12)", border: "1px solid rgba(216,115,7,0.2)", display: "flex", alignItems: "center", justifyContent: "center" }}>{icon}</div>
@@ -715,12 +716,12 @@ export default function CapitalRaisePage() {
               },
             ].map(({ title, body, impacts }) => (
               <div key={title}
-                className={`reveal${s6ViewInView ? ' visible' : ''}`}
-                style={{ position: "relative", background: "rgba(255,255,255,0.92)", border: "1px solid rgba(15,27,45,0.08)", borderRadius: 14, padding: "28px 24px", overflow: "hidden", transition: "transform 0.25s, box-shadow 0.25s" }}
-                onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-4px)"; el.style.boxShadow = "0 14px 36px rgba(0,0,0,0.08)"; }}
-                onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "none"; }}
+                className={`reveal${s6ViewInView ? ' visible' : ''} growth-card`}
+                style={{ position: "relative", background: "rgba(255,255,255,0.92)", border: "1px solid transparent", borderRadius: 14, padding: "28px 24px", overflow: "hidden" }}
               >
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
+                <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 8, right: 8, width: 20, height: 20, opacity: 0, transition: "opacity 0.25s ease" }} />
+                <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 8, left: 8, width: 20, height: 20, opacity: 0, transition: "opacity 0.25s ease" }} />
                 <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 16, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.05em", color: "#1a1a1a", marginBottom: 12, lineHeight: 1.3 }}>{title}</h3>
                 <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.75, color: "#555", marginBottom: 18 }}>{body}</p>
                 <div style={{ borderTop: "1px solid rgba(216,115,7,0.2)", paddingTop: 14 }}>

@@ -441,6 +441,20 @@ h1, h2, h3, h4, h5, h6 {
   transform: scale(1.15);
 }
 
+/* ── Dark process-step cards (About + service-page process/pillar/tier grids) ── */
+.approach-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+.approach-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.35) !important;
+  border-color: #d87307 !important;
+  background: rgba(216,115,7,0.08) !important;
+}
+.approach-card:hover .corner-bracket {
+  opacity: 1 !important;
+}
+
 /* ── Team cards ──────────────────────────────────────────── */
 .team-card {
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;

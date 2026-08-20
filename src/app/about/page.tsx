@@ -434,18 +434,6 @@ export default function AboutPage() {
         </div>
 
         <style>{`
-          .approach-card {
-            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
-          }
-          .approach-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 16px 36px rgba(0,0,0,0.35) !important;
-            border-color: #d87307 !important;
-            background: rgba(216,115,7,0.08) !important;
-          }
-          .approach-card:hover .corner-bracket {
-            opacity: 1 !important;
-          }
           @media (max-width: 1000px) {
             .ab-approach-grid { grid-template-columns: repeat(3, 1fr) !important; }
           }

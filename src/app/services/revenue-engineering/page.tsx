@@ -406,12 +406,12 @@ export default function RevenueEngineeringPage() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 20 }}>
             {process.map(({ num, title, body }, i) => (
               <div key={num}
-                className={`reveal stagger-${(i % 3) + 1}${s4ViewInView ? ' visible' : ''}`}
-                style={{ position: "relative", background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 14, padding: "28px 24px", overflow: "hidden", transition: "transform 0.25s, box-shadow 0.25s" }}
-                onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-4px)"; el.style.boxShadow = "0 14px 36px rgba(0,0,0,0.08)"; }}
-                onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "none"; }}
+                className={`reveal stagger-${(i % 3) + 1}${s4ViewInView ? ' visible' : ''} growth-card`}
+                style={{ position: "relative", background: "#FFFFFF", border: "1px solid transparent", borderRadius: 14, padding: "28px 24px", overflow: "hidden" }}
               >
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
+                <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 8, right: 8, width: 20, height: 20, opacity: 0, transition: "opacity 0.25s ease" }} />
+                <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 8, left: 8, width: 20, height: 20, opacity: 0, transition: "opacity 0.25s ease" }} />
                 <span style={{ fontFamily: "var(--font-burford-black), sans-serif", fontWeight: 900, fontSize: 32, color: "rgba(216,115,7,0.18)", lineHeight: 1, display: "block", marginBottom: 14 }}>{num}</span>
                 <h3 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 15, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.05em", color: "#1a1a1a", marginBottom: 10, lineHeight: 1.3 }}>{title}</h3>
                 <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.7, color: "#666", margin: 0 }}>{body}</p>

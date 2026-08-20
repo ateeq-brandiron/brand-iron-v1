@@ -449,27 +449,32 @@ export default function WebsiteDevelopmentPage() {
               const isLast = i === processSteps.length - 1;
               return (
                 <div key={title}
+                  className={isLast ? "" : "approach-card"}
                   style={{
                     position: "relative", borderRadius: 14, padding: "26px 20px", overflow: "hidden",
                     background: isLast ? "#d87307" : "rgba(255,255,255,0.04)",
-                    border: isLast ? "none" : "1px solid rgba(255,255,255,0.08)",
+                    border: isLast ? "none" : "1px solid transparent",
                     boxShadow: isLast ? "0 10px 32px rgba(216,115,7,0.3)" : "none",
-                    transition: "transform 0.25s, box-shadow 0.25s, border-color 0.25s, background 0.25s",
+                    transition: isLast ? "transform 0.25s, box-shadow 0.25s" : undefined,
                   }}
-                  onMouseEnter={e => {
+                  onMouseEnter={isLast ? e => {
                     const el = e.currentTarget as HTMLDivElement;
                     el.style.transform = "translateY(-5px)";
-                    if (isLast) { el.style.boxShadow = "0 16px 44px rgba(216,115,7,0.45)"; }
-                    else { el.style.background = "rgba(216,115,7,0.08)"; el.style.borderColor = "rgba(216,115,7,0.25)"; el.style.boxShadow = "0 14px 36px rgba(0,0,0,0.25)"; }
-                  }}
-                  onMouseLeave={e => {
+                    el.style.boxShadow = "0 16px 44px rgba(216,115,7,0.45)";
+                  } : undefined}
+                  onMouseLeave={isLast ? e => {
                     const el = e.currentTarget as HTMLDivElement;
                     el.style.transform = "translateY(0)";
-                    if (isLast) { el.style.boxShadow = "0 10px 32px rgba(216,115,7,0.3)"; }
-                    else { el.style.background = "rgba(255,255,255,0.04)"; el.style.borderColor = "rgba(255,255,255,0.08)"; el.style.boxShadow = "none"; }
-                  }}
+                    el.style.boxShadow = "0 10px 32px rgba(216,115,7,0.3)";
+                  } : undefined}
                 >
                   <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: isLast ? "rgba(255,255,255,0.35)" : "linear-gradient(to right, #d87307, rgba(216,115,7,0.2))" }} />
+                  {!isLast && (
+                    <>
+                      <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 8, right: 8, width: 18, height: 18, opacity: 0, filter: "brightness(0) invert(1)", transition: "opacity 0.25s ease" }} />
+                      <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 8, left: 8, width: 18, height: 18, opacity: 0, filter: "brightness(0) invert(1)", transition: "opacity 0.25s ease" }} />
+                    </>
+                  )}
                   <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 14 }}>
                     <div style={{ width: 38, height: 38, borderRadius: "50%", background: isLast ? "rgba(255,255,255,0.95)" : "rgba(216,115,7,0.15)", border: isLast ? "none" : "1px solid rgba(216,115,7,0.3)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                       {icon}

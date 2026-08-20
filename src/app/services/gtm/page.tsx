@@ -475,12 +475,12 @@ export default function GTMPage() {
               },
             ].map(({ num, title, lead, body, activities, icon }, i) => (
               <div key={num}
-                className={`reveal stagger-${(i % 2) + 1}${s4ViewInView ? ' visible' : ''}`}
-                style={{ position: "relative", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 14, padding: "36px 32px", overflow: "hidden", transition: "background 0.25s, border-color 0.25s, transform 0.25s" }}
-                onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-4px)"; el.style.background = "rgba(216,115,7,0.07)"; el.style.borderColor = "rgba(216,115,7,0.25)"; }}
-                onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.background = "rgba(255,255,255,0.04)"; el.style.borderColor = "rgba(255,255,255,0.08)"; }}
+                className={`reveal stagger-${(i % 2) + 1}${s4ViewInView ? ' visible' : ''} approach-card`}
+                style={{ position: "relative", background: "rgba(255,255,255,0.04)", border: "1px solid transparent", borderRadius: 14, padding: "36px 32px", overflow: "hidden" }}
               >
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.2))" }} />
+                <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 8, right: 8, width: 20, height: 20, opacity: 0, filter: "brightness(0) invert(1)", transition: "opacity 0.25s ease" }} />
+                <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 8, left: 8, width: 20, height: 20, opacity: 0, filter: "brightness(0) invert(1)", transition: "opacity 0.25s ease" }} />
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 18 }}>
                   <div style={{ width: 44, height: 44, borderRadius: 10, background: "rgba(216,115,7,0.15)", border: "1px solid rgba(216,115,7,0.3)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>{icon}</div>
                   <span style={{ fontFamily: "var(--font-burford-black), sans-serif", fontWeight: 900, fontSize: 34, color: "rgba(255,255,255,0.08)", lineHeight: 1 }}>{num}</span>
@@ -696,10 +696,10 @@ export default function GTMPage() {
               { tier: "Revenue Accelerator", body: "Scale every aspect of the Go-to-Market system through executive strategy, enterprise automation, advanced AI visibility, and multi-channel growth initiatives." },
             ].map(({ tier, body }, i) => (
               <Fragment key={tier}>
-                <div style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 12, padding: "28px 28px", textAlign: "center", transition: "background 0.25s, border-color 0.25s, transform 0.25s" }}
-                  onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(-4px)"; el.style.background = "rgba(216,115,7,0.07)"; el.style.borderColor = "rgba(216,115,7,0.25)"; }}
-                  onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.transform = "translateY(0)"; el.style.background = "rgba(255,255,255,0.04)"; el.style.borderColor = "rgba(255,255,255,0.08)"; }}
+                <div className="approach-card" style={{ position: "relative", background: "rgba(255,255,255,0.04)", border: "1px solid transparent", borderRadius: 12, padding: "28px 28px", textAlign: "center", overflow: "hidden" }}
                 >
+                  <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 8, right: 8, width: 18, height: 18, opacity: 0, filter: "brightness(0) invert(1)", transition: "opacity 0.25s ease" }} />
+                  <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 8, left: 8, width: 18, height: 18, opacity: 0, filter: "brightness(0) invert(1)", transition: "opacity 0.25s ease" }} />
                   <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 15, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.08em", color: "#d87307", marginBottom: 10 }}>{tier}</p>
                   <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.7, color: "rgba(255,255,255,0.85)", margin: 0 }}>{body}</p>
                 </div>
