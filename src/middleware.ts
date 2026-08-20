@@ -49,14 +49,19 @@ export function middleware(request: NextRequest) {
 
   const host = request.headers.get("host") ?? "";
   if (host === `www.${CANONICAL_HOST}`) {
-    const url = new URL(request.url);
-    url.hostname = CANONICAL_HOST;
+    // Built from fixed values rather than new URL(request.url) - behind the
+    // production reverse proxy, request.url reflects the internal port the
+    // Node process is actually listening on (e.g. :3000), which leaked into
+    // earlier redirects instead of the public-facing https://brandiron.net.
+    const url = new URL(`${pathname}${request.nextUrl.search}`, `https://${CANONICAL_HOST}`);
     return NextResponse.redirect(url, 308);
   }
 
   const redirect = LEGACY_REDIRECTS.find(({ pattern }) => pattern.test(pathname));
   if (redirect) {
-    return NextResponse.redirect(new URL(redirect.destination, request.url), 308);
+    // Same fixed-origin approach as the www redirect above - new URL(dest,
+    // request.url) would inherit the same internal-port leak.
+    return NextResponse.redirect(new URL(redirect.destination, `https://${CANONICAL_HOST}`), 308);
   }
 
   if (NOINDEX_PATTERNS.some(pattern => pattern.test(pathname))) {
