@@ -371,6 +371,17 @@ export const portfolioItems: PortfolioItem[] = [
     fullPageImage: "/images/portfolio/innovatix-website/innovatix-website-full.jpg",
   },
   {
+    slug: "black-lake-website",
+    category: "websites",
+    title: "Black Lake Capital",
+    client: "Black Lake Capital",
+    type: "website",
+    thumbnail: "/images/portfolio/black-lake-website/black-lake-website-thumb.jpg",
+    thumbnailAlt: "Black Lake Capital website hero over a fjord landscape with the headline Investors in Technology",
+    description: "A website for a strategic investment firm, pairing moody fjord photography with a confident, founder-first portfolio-company narrative.",
+    fullPageImage: "/images/portfolio/black-lake-website/black-lake-website-full.jpg",
+  },
+  {
     slug: "ares-capital-raise",
     category: "capital-raise",
     title: "Aardex Real Estate Services (ARES)",
