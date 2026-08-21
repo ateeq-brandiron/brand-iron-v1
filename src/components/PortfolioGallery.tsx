@@ -34,26 +34,30 @@ export default function PortfolioGallery({ items, initialCategory }: { items: Po
           }}
         >
           All Work
+          <span style={{ fontSize: 10, fontWeight: 700, color: activeCategory === "all" ? "rgba(255,255,255,0.85)" : "#999" }}> · {items.length}</span>
         </button>
-        {portfolioCategories.map(cat => (
-          <button
-            key={cat.id}
-            onClick={() => selectCategory(cat.id)}
-            style={{
-              fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase",
-              padding: "10px 20px", borderRadius: 20, cursor: "pointer", transition: "background 0.2s, color 0.2s, border-color 0.2s",
-              background: activeCategory === cat.id ? "#d87307" : "#FFFFFF",
-              color: activeCategory === cat.id ? "#FFFFFF" : "#555",
-              border: activeCategory === cat.id ? "1px solid #d87307" : "1px solid #EEEBE7",
-              display: "inline-flex", alignItems: "center", gap: 6,
-            }}
-          >
-            {cat.label}
-            {cat.comingSoon && (
-              <span style={{ fontSize: 10, fontWeight: 700, color: activeCategory === cat.id ? "rgba(255,255,255,0.85)" : "#999" }}>· Soon</span>
-            )}
-          </button>
-        ))}
+        {portfolioCategories.map(cat => {
+          const count = items.filter(i => i.category === cat.id).length;
+          return (
+            <button
+              key={cat.id}
+              onClick={() => selectCategory(cat.id)}
+              style={{
+                fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase",
+                padding: "10px 20px", borderRadius: 20, cursor: "pointer", transition: "background 0.2s, color 0.2s, border-color 0.2s",
+                background: activeCategory === cat.id ? "#d87307" : "#FFFFFF",
+                color: activeCategory === cat.id ? "#FFFFFF" : "#555",
+                border: activeCategory === cat.id ? "1px solid #d87307" : "1px solid #EEEBE7",
+                display: "inline-flex", alignItems: "center", gap: 6,
+              }}
+            >
+              {cat.label}
+              <span style={{ fontSize: 10, fontWeight: 700, color: activeCategory === cat.id ? "rgba(255,255,255,0.85)" : "#999" }}>
+                {cat.comingSoon ? "· Soon" : `· ${count}`}
+              </span>
+            </button>
+          );
+        })}
       </div>
 
       {/* Empty state for a coming-soon category */}
