@@ -123,37 +123,52 @@ export default function CaseStudiesPage() {
             Our Success Stories
           </h2>
 
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginBottom: 40, justifyContent: "center" }}>
+          <div className="cs-category-tabs" style={{ display: "flex", flexWrap: "nowrap", gap: 6, marginBottom: 40, justifyContent: "center", overflowX: "auto" }}>
             <button
               onClick={() => selectCategory("all")}
               style={{
-                fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase",
-                padding: "10px 20px", borderRadius: 20, cursor: "pointer",
+                fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12.5, fontWeight: 700, letterSpacing: "0.04em", textTransform: "uppercase",
+                padding: "10px 14px", borderRadius: 20, cursor: "pointer",
                 background: activeCategory === "all" ? "#d87307" : "#FFFFFF",
                 color: activeCategory === "all" ? "#FFFFFF" : "#555",
                 border: activeCategory === "all" ? "1px solid #d87307" : "1px solid #EEEBE7",
                 transition: "background 0.2s, color 0.2s, border-color 0.2s",
+                whiteSpace: "nowrap", flexShrink: 0,
               }}
             >
               All Stories
+              <span style={{ fontSize: 10, fontWeight: 700, color: activeCategory === "all" ? "rgba(255,255,255,0.85)" : "#999" }}> · {caseStudies.length}</span>
             </button>
-            {populatedCategories.map(cat => (
-              <button
-                key={cat.id}
-                onClick={() => selectCategory(cat.id)}
-                style={{
-                  fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase",
-                  padding: "10px 20px", borderRadius: 20, cursor: "pointer",
-                  background: activeCategory === cat.id ? "#d87307" : "#FFFFFF",
-                  color: activeCategory === cat.id ? "#FFFFFF" : "#555",
-                  border: activeCategory === cat.id ? "1px solid #d87307" : "1px solid #EEEBE7",
-                  transition: "background 0.2s, color 0.2s, border-color 0.2s",
-                }}
-              >
-                {cat.label}
-              </button>
-            ))}
+            {populatedCategories.map(cat => {
+              const count = caseStudies.filter(cs => cs.category === cat.id).length;
+              return (
+                <button
+                  key={cat.id}
+                  onClick={() => selectCategory(cat.id)}
+                  style={{
+                    fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12.5, fontWeight: 700, letterSpacing: "0.04em", textTransform: "uppercase",
+                    padding: "10px 14px", borderRadius: 20, cursor: "pointer",
+                    background: activeCategory === cat.id ? "#d87307" : "#FFFFFF",
+                    color: activeCategory === cat.id ? "#FFFFFF" : "#555",
+                    border: activeCategory === cat.id ? "1px solid #d87307" : "1px solid #EEEBE7",
+                    transition: "background 0.2s, color 0.2s, border-color 0.2s",
+                    display: "inline-flex", alignItems: "center", gap: 5,
+                    whiteSpace: "nowrap", flexShrink: 0,
+                  }}
+                >
+                  {cat.label}
+                  <span style={{ fontSize: 10, fontWeight: 700, color: activeCategory === cat.id ? "rgba(255,255,255,0.85)" : "#999" }}>· {count}</span>
+                </button>
+              );
+            })}
           </div>
+          <style>{`
+            .cs-category-tabs { scrollbar-width: none; -ms-overflow-style: none; }
+            .cs-category-tabs::-webkit-scrollbar { display: none; }
+            @media (max-width: 640px) {
+              .cs-category-tabs { flex-wrap: wrap !important; overflow-x: visible; justify-content: flex-start !important; }
+            }
+          `}</style>
 
           <div className="cs-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
             {visibleStudies.map((cs, i) => {
