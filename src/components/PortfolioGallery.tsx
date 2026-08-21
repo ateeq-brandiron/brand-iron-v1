@@ -22,15 +22,16 @@ export default function PortfolioGallery({ items, initialCategory }: { items: Po
   return (
     <div>
       {/* Category filter tabs */}
-      <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginBottom: 40, justifyContent: "center" }}>
+      <div className="pf-category-tabs" style={{ display: "flex", flexWrap: "nowrap", gap: 6, marginBottom: 40, justifyContent: "center", overflowX: "auto" }}>
         <button
           onClick={() => selectCategory("all")}
           style={{
-            fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase",
-            padding: "10px 20px", borderRadius: 20, cursor: "pointer", transition: "background 0.2s, color 0.2s, border-color 0.2s",
+            fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12.5, fontWeight: 700, letterSpacing: "0.04em", textTransform: "uppercase",
+            padding: "10px 14px", borderRadius: 20, cursor: "pointer", transition: "background 0.2s, color 0.2s, border-color 0.2s",
             background: activeCategory === "all" ? "#d87307" : "#FFFFFF",
             color: activeCategory === "all" ? "#FFFFFF" : "#555",
             border: activeCategory === "all" ? "1px solid #d87307" : "1px solid #EEEBE7",
+            whiteSpace: "nowrap", flexShrink: 0,
           }}
         >
           All Work
@@ -43,12 +44,13 @@ export default function PortfolioGallery({ items, initialCategory }: { items: Po
               key={cat.id}
               onClick={() => selectCategory(cat.id)}
               style={{
-                fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase",
-                padding: "10px 20px", borderRadius: 20, cursor: "pointer", transition: "background 0.2s, color 0.2s, border-color 0.2s",
+                fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12.5, fontWeight: 700, letterSpacing: "0.04em", textTransform: "uppercase",
+                padding: "10px 14px", borderRadius: 20, cursor: "pointer", transition: "background 0.2s, color 0.2s, border-color 0.2s",
                 background: activeCategory === cat.id ? "#d87307" : "#FFFFFF",
                 color: activeCategory === cat.id ? "#FFFFFF" : "#555",
                 border: activeCategory === cat.id ? "1px solid #d87307" : "1px solid #EEEBE7",
-                display: "inline-flex", alignItems: "center", gap: 6,
+                display: "inline-flex", alignItems: "center", gap: 5,
+                whiteSpace: "nowrap", flexShrink: 0,
               }}
             >
               {cat.label}
@@ -59,6 +61,13 @@ export default function PortfolioGallery({ items, initialCategory }: { items: Po
           );
         })}
       </div>
+      <style>{`
+        .pf-category-tabs { scrollbar-width: none; -ms-overflow-style: none; }
+        .pf-category-tabs::-webkit-scrollbar { display: none; }
+        @media (max-width: 640px) {
+          .pf-category-tabs { flex-wrap: wrap !important; overflow-x: visible; justify-content: flex-start !important; }
+        }
+      `}</style>
 
       {/* Empty state for a coming-soon category */}
       {filtered.length === 0 ? (
