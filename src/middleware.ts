@@ -31,6 +31,15 @@ const LEGACY_REDIRECTS: { pattern: RegExp; destination: string }[] = [
   { pattern: /^\/why-your-startup-pitch-deck-matters-more-than-you-think\/?$/, destination: "/services/capital-raise" },
   { pattern: /^\/avoid-costly-launch-mistakes-with-go-to-market-strategy-consulting\/?$/, destination: "/services/gtm" },
   { pattern: /^\/is-go-to-market-strategy-a-skill-heres-why-it-matters\/?$/, destination: "/services/gtm" },
+  // Second batch from Alberto's Search Console broken-link export (Aug 2026).
+  // /industries intentionally omitted - no current page covers it, and
+  // Alberto flagged it as a content decision (rebuild vs. fold into
+  // Case Studies/Portfolio) rather than a redirect-mapping question.
+  { pattern: /^\/automation\/?$/, destination: "/services/revenue-engineering" },
+  { pattern: /^\/brand-champion\/?$/, destination: "/services/brand-strategy" },
+  { pattern: /^\/branding\/?$/, destination: "/services/brand-strategy" },
+  { pattern: /^\/investor-outreach\/?$/, destination: "/services/capital-raise" },
+  { pattern: /^\/result\/?$/, destination: "/case-studies" },
 ];
 
 // Legacy WordPress-era URLs that no longer exist and have no real
