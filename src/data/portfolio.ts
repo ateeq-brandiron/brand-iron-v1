@@ -213,6 +213,20 @@ export const portfolioItems: PortfolioItem[] = [
     ],
   },
   {
+    slug: "volition-hospitality-logo-redesign",
+    category: "brand-identity",
+    title: "Volition Hospitality",
+    client: "Volition Hospitality",
+    type: "logo",
+    thumbnail: "/images/portfolio/volition-hospitality-logo-redesign/volition-hospitality-logo-redesign-mark.jpg",
+    thumbnailAlt: "Volition Hospitality starburst logo mark redesign in teal and gold",
+    description: "A logo redesign exploration for a luxury hospitality investment firm, testing the starburst mark and wordmark across color and weight variations to land on its most confident lockup.",
+    images: [
+      "/images/portfolio/volition-hospitality-logo-redesign/volition-hospitality-logo-redesign-mark.jpg",
+      "/images/portfolio/volition-hospitality-logo-redesign/volition-hospitality-logo-redesign-options.jpg",
+    ],
+  },
+  {
     slug: "ares-website",
     category: "websites",
     title: "Aardex Real Estate Services (ARES)",
