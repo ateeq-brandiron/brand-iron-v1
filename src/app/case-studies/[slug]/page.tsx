@@ -100,7 +100,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
         `}</style>
       </section>
 
-      <CaseStudyModeToggle images={cs.images} />
+      <CaseStudyModeToggle fullPageImage={cs.fullPageImage ?? cs.images[0]} alt={`${cs.client} full website screenshot`} />
 
       {/* ── CHALLENGE / SOLUTION ─────────────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "80px 24px" }}>
