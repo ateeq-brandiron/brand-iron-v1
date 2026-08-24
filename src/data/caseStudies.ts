@@ -15,6 +15,8 @@ export type CaseStudy = {
   thumbnailAlt: string;
   /** Images shown in the "Quick Look" carousel, in order. */
   images: string[];
+  /** Website screenshot revealed on grid-card hover; defaults to images[0] when the hero doesn't crop well at card size. */
+  cardHoverImage?: string;
   challenge: string;
   solution: string;
   results: CaseStudyStat[];
@@ -34,6 +36,7 @@ export const caseStudies: CaseStudy[] = [
       "/images/case-studies/volition-hospitality/volition-hospitality-heart-of-volition.jpg",
       "/images/case-studies/volition-hospitality/volition-hospitality-services.jpg",
     ],
+    cardHoverImage: "/images/case-studies/volition-hospitality/volition-hospitality-card-hover.jpg",
     challenge: "Volition Hospitality urgently needed a brand identity to establish a stronger, more consistent presence across its properties while effectively communicating its unique value proposition in the competitive luxury hospitality market. The brand needed to enhance emotional connections with customers through improved visual identity and storytelling, particularly as they sought to attract investors for their growth strategy. Their business model of transforming underperforming properties in prime locations into unique, locally-inspired destinations had proven successful, but required strategic brand communication to maximize business value and demonstrate market leadership potential.",
     solution: "Brand Iron delivered a complete brand transformation for Volition Hospitality, including visual identity, messaging, a capital raise deck, and a website that showcased their unique value in luxury hospitality while strengthening market presence and investor appeal.",
     results: [],
@@ -102,6 +105,7 @@ export const caseStudies: CaseStudy[] = [
       "/images/case-studies/cesa/cesa-stats.jpg",
       "/images/case-studies/cesa/cesa-difference.jpg",
     ],
+    cardHoverImage: "/images/case-studies/cesa/cesa-stats.jpg",
     challenge: "CESA brings together workers' compensation, risk management, and mental health resources for Colorado's emergency service districts, but needed a website that could make that bundled value proposition immediately clear to district leaders while driving membership applications.",
     solution: "Brand Iron built a website that opens with a direct, mission-driven headline, backs it up with a track-record stat band, and lays out exactly what makes CESA different — supported by clear membership and district-application calls to action throughout.",
     results: [],
@@ -136,6 +140,7 @@ export const caseStudies: CaseStudy[] = [
       "/images/case-studies/us-transport/us-transport-services-row.jpg",
       "/images/case-studies/us-transport/us-transport-dedicated-partner.jpg",
     ],
+    cardHoverImage: "/images/case-studies/us-transport/us-transport-dedicated-partner.jpg",
     challenge: "US Transport serves three distinct audiences — shipping customers, safety-focused stakeholders, and prospective drivers — but its site needed to route each of them to the right information quickly, without diluting its core message of dependable, long-term partnership.",
     solution: "Brand Iron designed a website built around three clear audience paths — Customers, Safety, and Drivers — paired with a straightforward \"long-term dedicated partner\" narrative that reinforces US Transport's commitment to every relationship it builds.",
     results: [],
@@ -153,6 +158,7 @@ export const caseStudies: CaseStudy[] = [
       "/images/case-studies/innovatix/innovatix-solutions.jpg",
       "/images/case-studies/innovatix/innovatix-stats.jpg",
     ],
+    cardHoverImage: "/images/case-studies/innovatix/innovatix-stats.jpg",
     challenge: "As a 30-plus year technology services firm, Innovatix had deep enterprise credibility but needed a website that could reposition it around AI-driven modernization — without losing the track record that makes it trustworthy to large, risk-averse clients.",
     solution: "Brand Iron built a website led by a bold \"We Integrate\" AI-forward positioning statement, organized around Innovatix's five core solution areas, and backed by hard credibility stats — 30+ years, 400+ clients, 10+ countries — to ground the new message in real experience.",
     results: [],

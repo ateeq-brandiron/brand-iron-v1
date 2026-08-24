@@ -174,6 +174,7 @@ export default function CaseStudiesPage() {
             {visibleStudies.map((cs, i) => {
               const catLabel = portfolioCategories.find(c => c.id === cs.category)?.label ?? cs.category;
               const headlineStat = cs.results.find(r => r.value !== "—");
+              const hoverImage = cs.cardHoverImage ?? cs.images[0];
               return (
                 <Link key={cs.slug} href={`/case-studies/${cs.slug}`}
                   className={`reveal${gridViewInView ? ' visible' : ''} cs-card`}
@@ -189,9 +190,9 @@ export default function CaseStudiesPage() {
                   <div className="cs-card-media" style={{ position: "relative", aspectRatio: "4 / 3", overflow: "hidden", background: "#F0EEEA" }}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={cs.thumbnail} alt={cs.thumbnailAlt} className="cs-card-img" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", transition: "opacity 0.4s ease" }} />
-                    {cs.images[0] && (
+                    {hoverImage && (
                       // eslint-disable-next-line @next/next/no-img-element
-                      <img loading="lazy" src={cs.images[0]} alt={`${cs.client} website screenshot`} className="cs-card-hero" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0, transition: "opacity 0.4s ease, transform 0.4s ease" }} />
+                      <img loading="lazy" src={hoverImage} alt={`${cs.client} website screenshot`} className="cs-card-hero" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0, transition: "opacity 0.4s ease, transform 0.4s ease" }} />
                     )}
                     <div className="cs-card-scrim" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, transparent 55%, rgba(8,16,36,0.75) 100%)", opacity: 0, transition: "opacity 0.25s ease" }} />
                     <span className="cs-card-view" style={{
