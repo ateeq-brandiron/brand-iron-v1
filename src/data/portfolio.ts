@@ -33,7 +33,7 @@ export type PortfolioItem = {
   isPlaceholder?: boolean;
   /** Only for type: "website" — tall full-page image used by the scroll-simulation preview. */
   fullPageImage?: string;
-  /** Only for type: "website" — clean client logo shown by default on the grid card; hovering crossfades to `thumbnail`. */
+  /** Clean client logo shown by default on the grid card; hovering crossfades to `thumbnail`. Used for "website" and "deck" items whose thumbnail is a busy hero/cover rather than a plain logo. */
   logoThumbnail?: string;
   /** Additional real deliverable pages shown as a gallery in the expand modal (logo/deck items). Falls back to [thumbnail] if omitted. */
   images?: string[];
@@ -89,6 +89,7 @@ export const portfolioItems: PortfolioItem[] = [
       "/images/portfolio/msp-accelerator/msp-faqs.jpg",
       "/images/portfolio/msp-accelerator/msp-recap-close.jpg",
     ],
+    logoThumbnail: "/images/portfolio/msp-logo-revision/msp-logo-revision-usage.jpg",
   },
   {
     slug: "real-international-capital-raise",
@@ -107,6 +108,7 @@ export const portfolioItems: PortfolioItem[] = [
       "/images/portfolio/real-international/real-international-case-study-lantern.jpg",
       "/images/portfolio/real-international/real-international-capabilities.jpg",
     ],
+    logoThumbnail: "/images/portfolio/real-international-brand/real-international-icon.jpg",
   },
   {
     slug: "haefele-flanagan-capital-raise",
@@ -141,6 +143,7 @@ export const portfolioItems: PortfolioItem[] = [
       "/images/portfolio/volition-hospitality-capital-raise/volition-hospitality-crd-our-vision.jpg",
       "/images/portfolio/volition-hospitality-capital-raise/volition-hospitality-crd-why-volition.jpg",
     ],
+    logoThumbnail: "/images/portfolio/volition-hospitality-logo-redesign/volition-hospitality-logo-redesign-mark.jpg",
   },
   {
     slug: "black-lake-brand-identity",
@@ -170,6 +173,7 @@ export const portfolioItems: PortfolioItem[] = [
       "/images/portfolio/black-lake-sales/black-lake-success-story-1.jpg",
       "/images/portfolio/black-lake-sales/black-lake-success-story-2.jpg",
     ],
+    logoThumbnail: "/images/case-studies/black-lake/black-lake-logo-card.jpg",
   },
   {
     slug: "msp-platform-accelerator-brand-identity",
@@ -304,5 +308,6 @@ export const portfolioItems: PortfolioItem[] = [
       "/images/portfolio/ares/ares-why-golden.jpg",
       "/images/portfolio/ares/ares-project-intro.jpg",
     ],
+    logoThumbnail: "/images/case-studies/ares/ares-logo-card.jpg",
   },
 ];
