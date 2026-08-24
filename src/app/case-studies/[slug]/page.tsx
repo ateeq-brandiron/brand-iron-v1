@@ -61,10 +61,10 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
       <section style={{ position: "relative", overflow: "hidden", padding: "160px 24px 72px" }}>
         <div
           role="img"
-          aria-label={cs.thumbnailAlt}
+          aria-label={cs.images[0] ? `${cs.client} website screenshot` : cs.thumbnailAlt}
           style={{
             position: "absolute", inset: 0,
-            backgroundImage: `url('${cs.thumbnail}')`,
+            backgroundImage: `url('${cs.images[0] ?? cs.thumbnail}')`,
             backgroundSize: "cover", backgroundPosition: "center",
           }}
         />
