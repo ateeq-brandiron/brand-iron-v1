@@ -188,7 +188,11 @@ export default function CaseStudiesPage() {
 
                   <div className="cs-card-media" style={{ position: "relative", aspectRatio: "4 / 3", overflow: "hidden", background: "#F0EEEA" }}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={cs.thumbnail} alt={cs.thumbnailAlt} className="cs-card-img" style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.4s ease" }} />
+                    <img src={cs.thumbnail} alt={cs.thumbnailAlt} className="cs-card-img" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", transition: "opacity 0.4s ease" }} />
+                    {cs.images[0] && (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img loading="lazy" src={cs.images[0]} alt={`${cs.client} website screenshot`} className="cs-card-hero" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0, transition: "opacity 0.4s ease, transform 0.4s ease" }} />
+                    )}
                     <div className="cs-card-scrim" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, transparent 55%, rgba(8,16,36,0.75) 100%)", opacity: 0, transition: "opacity 0.25s ease" }} />
                     <span className="cs-card-view" style={{
                       position: "absolute", left: 20, bottom: 14, transform: "translateY(10px)", opacity: 0, transition: "transform 0.25s ease, opacity 0.25s ease",
@@ -235,7 +239,8 @@ export default function CaseStudiesPage() {
         <style>{`
           .cs-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(0,0,0,0.1); border-color: rgba(216,115,7,0.3) !important; }
           .cs-card:hover .corner-bracket { opacity: 1 !important; }
-          .cs-card:hover .cs-card-img { transform: scale(1.08); }
+          .cs-card:hover .cs-card-img { opacity: 0 !important; }
+          .cs-card:hover .cs-card-hero { opacity: 1 !important; transform: scale(1.08); }
           .cs-card:hover .cs-card-scrim { opacity: 1 !important; }
           .cs-card:hover .cs-card-view { opacity: 1 !important; transform: translateY(0) !important; }
           @media (max-width: 900px) {
