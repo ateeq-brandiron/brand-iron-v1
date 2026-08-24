@@ -108,31 +108,54 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
           <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 2.6vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 16 }}>
             The Solution
           </h2>
-          <p style={{ fontSize: 17, lineHeight: 1.85, color: "#444" }}>{cs.solution}</p>
-        </div>
-      </section>
+          <p style={{ fontSize: 17, lineHeight: 1.85, color: "#444", marginBottom: cs.images.length > 1 ? 56 : 0 }}>{cs.solution}</p>
 
-      {/* ── RESULTS ──────────────────────────────────────────── */}
-      <section style={{ position: "relative", overflow: "hidden", background: "#0F1B2D", padding: "80px 24px" }}>
-        <div style={{ position: "relative", zIndex: 2, maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
-          <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 2.6vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", marginBottom: 40 }}>
-            The Results
-          </h2>
-          <div className="cs-results-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
-            {cs.results.map((r, i) => (
-              <div key={i} style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 14, padding: "32px 20px" }}>
-                <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(28px, 3.4vw, 42px)", fontWeight: 900, color: "#d87307", lineHeight: 1.1, marginBottom: 10 }}>{r.value}</p>
-                <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: "rgba(255,255,255,0.7)", margin: 0 }}>{r.label}</p>
+          {cs.images.length > 1 && (
+            <div>
+              <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 2.6vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 24 }}>
+                A Closer Look
+              </h2>
+              <div className="cs-visuals-grid" style={{ display: "grid", gridTemplateColumns: cs.images.length - 1 === 1 ? "1fr" : "repeat(2, 1fr)", gap: 20 }}>
+                {cs.images.slice(1).map((src, i) => (
+                  <div key={i} style={{ position: "relative", aspectRatio: "16 / 10", overflow: "hidden", borderRadius: 12, border: "1px solid #EEEBE7", background: "#F0EEEA" }}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img loading="lazy" src={src} alt={`${cs.client} website screenshot ${i + 2}`} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
+          )}
         </div>
         <style>{`
           @media (max-width: 700px) {
-            .cs-results-grid { grid-template-columns: 1fr !important; }
+            .cs-visuals-grid { grid-template-columns: 1fr !important; }
           }
         `}</style>
       </section>
+
+      {/* ── RESULTS ──────────────────────────────────────────── */}
+      {cs.results.length > 0 && (
+        <section style={{ position: "relative", overflow: "hidden", background: "#0F1B2D", padding: "80px 24px" }}>
+          <div style={{ position: "relative", zIndex: 2, maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
+            <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 2.6vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", marginBottom: 40 }}>
+              The Results
+            </h2>
+            <div className="cs-results-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
+              {cs.results.map((r, i) => (
+                <div key={i} style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 14, padding: "32px 20px" }}>
+                  <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(28px, 3.4vw, 42px)", fontWeight: 900, color: "#d87307", lineHeight: 1.1, marginBottom: 10 }}>{r.value}</p>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: "rgba(255,255,255,0.7)", margin: 0 }}>{r.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <style>{`
+            @media (max-width: 700px) {
+              .cs-results-grid { grid-template-columns: 1fr !important; }
+            }
+          `}</style>
+        </section>
+      )}
 
       {/* ── MORE CASE STUDIES ────────────────────────────────── */}
       <section style={{ background: "#F9F8F6", padding: "80px 24px" }}>
