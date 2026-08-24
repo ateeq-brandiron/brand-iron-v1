@@ -33,6 +33,8 @@ export type PortfolioItem = {
   isPlaceholder?: boolean;
   /** Only for type: "website" — tall full-page image used by the scroll-simulation preview. */
   fullPageImage?: string;
+  /** Only for type: "website" — clean client logo shown by default on the grid card; hovering crossfades to `thumbnail`. */
+  logoThumbnail?: string;
   /** Additional real deliverable pages shown as a gallery in the expand modal (logo/deck items). Falls back to [thumbnail] if omitted. */
   images?: string[];
 };
@@ -236,6 +238,7 @@ export const portfolioItems: PortfolioItem[] = [
     thumbnailAlt: "ARES website hero showing a commercial real estate interior and the tagline Commercial Real Estate, managed from the ground-up",
     description: "A website for a vertically integrated commercial real estate firm, translating its full-lifecycle development, brokerage, and property management services into a clean, credible digital presence.",
     fullPageImage: "/images/portfolio/ares-website/ares-website-full.jpg",
+    logoThumbnail: "/images/case-studies/ares/ares-logo-card.jpg",
   },
   {
     slug: "real-international-website",
@@ -247,6 +250,7 @@ export const portfolioItems: PortfolioItem[] = [
     thumbnailAlt: "Real International website hero with an aerial photo of the Austin river and skyline at dusk",
     description: "A website redesign for a Texas real estate investment firm, giving its brokerage, asset management, and investor-relations story a confident, editorial digital presence.",
     fullPageImage: "/images/portfolio/real-international-website/real-international-website-full.jpg",
+    logoThumbnail: "/images/portfolio/real-international-brand/real-international-icon.jpg",
   },
   {
     slug: "volition-hospitality-website",
@@ -258,6 +262,7 @@ export const portfolioItems: PortfolioItem[] = [
     thumbnailAlt: "Volition Hospitality website hero showing a luxury hotel room and the headline Elevating Hospitality Experiences",
     description: "A website for a hospitality investment firm, pairing rich property photography with a clear investor-facing pitch for its property-transformation model.",
     fullPageImage: "/images/portfolio/volition-hospitality-website/volition-hospitality-website-full.jpg",
+    logoThumbnail: "/images/portfolio/volition-hospitality-logo-redesign/volition-hospitality-logo-redesign-mark.jpg",
   },
   {
     slug: "innovatix-website",
@@ -269,6 +274,7 @@ export const portfolioItems: PortfolioItem[] = [
     thumbnailAlt: "Innovatix Technology Partners website hero with the headline We Integrate, So You Can Operate Faster, Better and Smarter",
     description: "A website for an AI-driven technology solutions partner, translating deep enterprise modernization expertise into a confident, product-forward digital presence.",
     fullPageImage: "/images/portfolio/innovatix-website/innovatix-website-full.jpg",
+    logoThumbnail: "/images/portfolio/innovatix/innovatix-brand-identity.jpg",
   },
   {
     slug: "black-lake-website",
@@ -280,6 +286,7 @@ export const portfolioItems: PortfolioItem[] = [
     thumbnailAlt: "Black Lake Capital website hero over a fjord landscape with the headline Investors in Technology",
     description: "A website for a strategic investment firm, pairing moody fjord photography with a confident, founder-first portfolio-company narrative.",
     fullPageImage: "/images/portfolio/black-lake-website/black-lake-website-full.jpg",
+    logoThumbnail: "/images/case-studies/black-lake/black-lake-logo-card.jpg",
   },
   {
     slug: "ares-capital-raise",
