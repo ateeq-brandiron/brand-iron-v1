@@ -44,8 +44,8 @@ export const caseStudies: CaseStudy[] = [
     thumbnailAlt: "Volition Hospitality logo, a starburst mark above the wordmark Hospitality Tailored To You",
     images: [
       "/images/case-studies/volition-hospitality/volition-hospitality-hero.jpg",
-      "/images/case-studies/volition-hospitality/volition-hospitality-heart-of-volition.jpg",
-      "/images/case-studies/volition-hospitality/volition-hospitality-services.jpg",
+      "/images/case-studies/volition-hospitality/volition-hospitality-closer-look-1.jpg",
+      "/images/case-studies/volition-hospitality/volition-hospitality-closer-look-2.jpg",
     ],
     cardHoverImage: "/images/case-studies/volition-hospitality/volition-hospitality-card-hover.jpg",
     fullPageImage: "/images/portfolio/volition-hospitality-website/volition-hospitality-website-full.jpg",
@@ -99,8 +99,8 @@ export const caseStudies: CaseStudy[] = [
     thumbnailAlt: "ARES logo, a mountain mark above the wordmark Aardex Real Estate Services",
     images: [
       "/images/case-studies/ares/ares-hero.jpg",
-      "/images/case-studies/ares/ares-development.jpg",
-      "/images/case-studies/ares/ares-property-grid.jpg",
+      "/images/case-studies/ares/ares-closer-look-1.jpg",
+      "/images/case-studies/ares/ares-closer-look-2.jpg",
     ],
     fullPageImage: "/images/portfolio/ares-website/ares-website-full.jpg",
     challenge: "With decades of experience spanning development, brokerage, and property management, ARES needed a website that could make the case for its full-lifecycle, in-house model — handling every phase of a commercial real estate project itself — rather than reading as just another regional brokerage site.",
@@ -173,8 +173,8 @@ export const caseStudies: CaseStudy[] = [
     thumbnailAlt: "Innovatix Technology Partners logo and wordmark",
     images: [
       "/images/case-studies/innovatix/innovatix-hero.jpg",
-      "/images/case-studies/innovatix/innovatix-solutions.jpg",
-      "/images/case-studies/innovatix/innovatix-stats.jpg",
+      "/images/case-studies/innovatix/innovatix-closer-look-1.jpg",
+      "/images/case-studies/innovatix/innovatix-closer-look-2.jpg",
     ],
     cardHoverImage: "/images/case-studies/innovatix/innovatix-stats.jpg",
     fullPageImage: "/images/portfolio/innovatix-website/innovatix-website-full.jpg",
