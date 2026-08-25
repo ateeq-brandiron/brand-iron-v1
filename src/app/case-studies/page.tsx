@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { portfolioCategories, PortfolioCategoryId } from "@/data/portfolio";
-import { caseStudies } from "@/data/caseStudies";
+import { caseStudies, caseStudyCategoryLabel } from "@/data/caseStudies";
 
 function useInView(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null);
@@ -172,7 +172,7 @@ export default function CaseStudiesPage() {
 
           <div className="cs-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
             {visibleStudies.map((cs, i) => {
-              const catLabel = portfolioCategories.find(c => c.id === cs.category)?.label ?? cs.category;
+              const catLabel = caseStudyCategoryLabel(cs.category);
               const headlineStat = cs.results.find(r => r.value !== "—");
               const hoverImage = cs.cardHoverImage ?? cs.images[0];
               return (

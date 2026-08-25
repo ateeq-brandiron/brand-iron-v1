@@ -2,8 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import CaseStudyModeToggle from "@/components/CaseStudyModeToggle";
-import { caseStudies } from "@/data/caseStudies";
-import { portfolioCategories } from "@/data/portfolio";
+import { caseStudies, caseStudyCategoryLabel } from "@/data/caseStudies";
 
 export function generateStaticParams() {
   return caseStudies.map(c => ({ slug: c.slug }));
@@ -44,7 +43,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
   const cs = caseStudies.find(c => c.slug === slug);
   if (!cs) notFound();
 
-  const catLabel = portfolioCategories.find(c => c.id === cs.category)?.label ?? cs.category;
+  const catLabel = caseStudyCategoryLabel(cs.category);
   const related = caseStudies.filter(c => c.slug !== slug).slice(0, 3);
 
   return (
@@ -185,7 +184,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
                 <div style={{ padding: "20px 22px", position: "relative" }}>
                   <div style={{ position: "absolute", top: 0, left: 22, right: 22, height: 2, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.2))" }} />
                   <span style={{ display: "inline-block", padding: "3px 10px", border: "1px solid rgba(216,115,7,0.4)", borderRadius: 4, fontFamily: "var(--font-montserrat), sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#d87307", marginBottom: 12 }}>
-                    {portfolioCategories.find(c => c.id === r.category)?.label ?? r.category}
+                    {caseStudyCategoryLabel(r.category)}
                   </span>
                   <h4 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 14, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", lineHeight: 1.4 }}>{r.title}</h4>
                 </div>

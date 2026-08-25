@@ -1,4 +1,13 @@
-import { PortfolioCategoryId } from "@/data/portfolio";
+import { PortfolioCategoryId, portfolioCategories } from "@/data/portfolio";
+
+/** Case studies show one piece of work at a time, so category badges read better singular (e.g. "Website" not "Websites") - unlike Portfolio's filter tabs, which stay plural. */
+const CASE_STUDY_CATEGORY_LABEL_OVERRIDES: Partial<Record<PortfolioCategoryId, string>> = {
+  websites: "Website",
+};
+
+export function caseStudyCategoryLabel(category: PortfolioCategoryId): string {
+  return CASE_STUDY_CATEGORY_LABEL_OVERRIDES[category] ?? portfolioCategories.find(c => c.id === category)?.label ?? category;
+}
 
 export type CaseStudyStat = {
   value: string;
