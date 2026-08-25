@@ -193,6 +193,13 @@ const CheckIcon = () => (
 
 export default function BrandStrategyPage() {
   const [proposalOpen, setProposalOpen] = useState(false);
+
+  useEffect(() => {
+    // window is unavailable during SSR, so this can't be a useState lazy initializer.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    if (new URLSearchParams(window.location.search).get("openProposal")) setProposalOpen(true);
+  }, []);
+
   const coreCarouselRef = useRef<HTMLDivElement>(null);
   const [coreScrollProgress, setCoreScrollProgress] = useState(0);
   const handleCoreScroll = () => {

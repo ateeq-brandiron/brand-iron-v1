@@ -171,6 +171,13 @@ const CheckIcon = () => (
 
 export default function WebsiteDevelopmentPage() {
   const [inquiryOpen, setInquiryOpen] = useState(false);
+
+  useEffect(() => {
+    // window is unavailable during SSR, so this can't be a useState lazy initializer.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    if (new URLSearchParams(window.location.search).get("openInquiry")) setInquiryOpen(true);
+  }, []);
+
   const headline = useHeadlineCrossfade(HEADLINES.length);
   const { measureRef: headlineMeasureRef, height: headlineHeight } = useMaxHeadlineHeight();
 
