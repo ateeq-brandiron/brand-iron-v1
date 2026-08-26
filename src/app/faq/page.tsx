@@ -33,8 +33,8 @@ export default function FaqPage() {
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://brandiron.net" },
-          { name: "FAQ", url: "https://brandiron.net/faq" },
+          { name: "Home", url: "https://brandiron.net/" },
+          { name: "FAQ", url: "https://brandiron.net/faq/" },
         ]}
       />
 
@@ -132,7 +132,7 @@ export default function FaqPage() {
               <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", fontStyle: "italic", maxWidth: 640, margin: "0 auto 40px" }}>
                 Every successful growth story begins with a conversation. Let&apos;s talk about where your business stands today and where it can go next.
               </p>
-              <Link href="/contact" style={{
+              <Link href="/contact/" style={{
                 display: "inline-flex", alignItems: "center",
                 fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 15,
                 background: "#d87307", color: "#FFFFFF",
@@ -145,7 +145,7 @@ export default function FaqPage() {
                 Book a Strategy Session
               </Link>
               <div>
-                <Link href="/services" style={{
+                <Link href="/services/" style={{
                   fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase",
                   color: "rgba(255,255,255,0.7)", textDecoration: "none", borderBottom: "1px solid rgba(255,255,255,0.3)", paddingBottom: 2,
                   transition: "color 0.2s, border-color 0.2s",

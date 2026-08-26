@@ -143,8 +143,8 @@ export default function ResourcesPage() {
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://brandiron.net" },
-          { name: "Resources", url: "https://brandiron.net/resources" },
+          { name: "Home", url: "https://brandiron.net/" },
+          { name: "Resources", url: "https://brandiron.net/resources/" },
         ]}
       />
 
@@ -173,7 +173,7 @@ export default function ResourcesPage() {
               </h1>
 
               <div className="hero-btns-anim" style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center" }}>
-                <Link href="/contact" style={{
+                <Link href="/contact/" style={{
                   display: "inline-flex", alignItems: "center",
                   fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 14,
                   background: "#d87307", color: "#FFFFFF",
@@ -469,7 +469,7 @@ export default function ResourcesPage() {
               <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", fontStyle: "italic", maxWidth: 640, margin: "0 auto 40px" }}>
                 Brand Iron helps organizations sharpen their positioning, become more discoverable, enter markets with confidence, and build the systems needed to support sustainable revenue growth. Let&apos;s identify what&apos;s holding your business back and build a strategy designed to move it forward.
               </p>
-              <Link href="/contact" style={{
+              <Link href="/contact/" style={{
                 display: "inline-flex", alignItems: "center",
                 fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 15,
                 background: "#d87307", color: "#FFFFFF",
@@ -482,7 +482,7 @@ export default function ResourcesPage() {
                 Book Strategy Session
               </Link>
               <div>
-                <Link href="/services" style={{
+                <Link href="/services/" style={{
                   fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase",
                   color: "rgba(255,255,255,0.7)", textDecoration: "none", borderBottom: "1px solid rgba(255,255,255,0.3)", paddingBottom: 2,
                   transition: "color 0.2s, border-color 0.2s",

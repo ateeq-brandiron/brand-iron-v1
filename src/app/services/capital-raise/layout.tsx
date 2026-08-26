@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 
 const TITLE = "Capital Raise & Investor Outreach Services | Brand Iron";
 const DESCRIPTION = "Prepare for fundraising with an investor-ready pitch deck, compelling investment story, targeted investor research, and strategic outreach support.";
-const URL = "https://brandiron.net/services/capital-raise";
+const URL = "https://brandiron.net/services/capital-raise/";
 const SOCIAL_IMAGE = "/images/shared/shared-footer-logo.jpeg";
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: "/services/capital-raise" },
+  alternates: { canonical: "/services/capital-raise/" },
   openGraph: {
     type: "article",
     url: URL,

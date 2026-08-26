@@ -259,12 +259,12 @@ export default function BrandStrategyPage() {
     {
       q: "Can Brand Iron support the external market launch?",
       a: "Yes. The Brand Foundation + Market Launch solution includes a go-to-market launch plan covering ideal customers, market and competitor insights, positioning, sales strategy, marketing channels, KPIs, and launch coordination.",
-      related: [{ href: "/services/gtm", label: "Explore Our Go-to-Market Strategy Services" }],
+      related: [{ href: "/services/gtm/", label: "Explore Our Go-to-Market Strategy Services" }],
     },
     {
       q: "How does brand strategy support AI visibility?",
       a: "AI systems rely on clear, consistent, and credible information to understand and recommend organizations. A strong brand strategy improves messaging consistency, entity clarity, authority signals, content alignment, and digital trust across the website and other online touchpoints. Branding alone does not guarantee AI visibility, but it creates an important strategic foundation for SEO, AEO, GEO, entity optimization, and AI discoverability.",
-      related: [{ href: "/services/ai-visibility", label: "Explore Our AI Visibility Services" }],
+      related: [{ href: "/services/ai-visibility/", label: "Explore Our AI Visibility Services" }],
     },
     {
       q: "Is Brand Iron a traditional branding agency?",
@@ -276,9 +276,9 @@ export default function BrandStrategyPage() {
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://brandiron.net" },
-          { name: "Services", url: "https://brandiron.net/services" },
-          { name: "Brand Strategy", url: "https://brandiron.net/services/brand-strategy" },
+          { name: "Home", url: "https://brandiron.net/" },
+          { name: "Services", url: "https://brandiron.net/services/" },
+          { name: "Brand Strategy", url: "https://brandiron.net/services/brand-strategy/" },
         ]}
       />
       <ServiceSchema
@@ -323,7 +323,7 @@ export default function BrandStrategyPage() {
               </h1>
 
               <div className="hero-btns-anim" style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center" }}>
-                <Link href="/contact" style={{
+                <Link href="/contact/" style={{
                   display: "inline-flex", alignItems: "center",
                   fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 14,
                   background: "#d87307", color: "#FFFFFF",
@@ -457,7 +457,7 @@ export default function BrandStrategyPage() {
           </div>
 
           <div className={`reveal${s3ViewInView ? ' visible' : ''}`} style={{ textAlign: "center" }}>
-            <Link href="/contact" style={{
+            <Link href="/contact/" style={{
               display: "inline-block", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase", textDecoration: "none",
               background: "#d87307", color: "#FFFFFF",
@@ -522,7 +522,7 @@ export default function BrandStrategyPage() {
                   <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, fontWeight: 600, color: "#1a1a1a", marginBottom: 16 }}>{timeline}</p>
                   <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#999", marginBottom: 6 }}>Business Outcome</p>
                   <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.6, color: "#d87307", fontWeight: 600, marginBottom: 20 }}>{outcome}</p>
-                  <Link href={`/contact?interest=${encodeURIComponent(interest)}`} style={{
+                  <Link href={`/contact/?interest=${encodeURIComponent(interest)}`} style={{
                     display: "inline-flex", alignItems: "center", gap: 6,
                     fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
                     letterSpacing: "0.06em", textTransform: "uppercase", textDecoration: "none",
@@ -740,7 +740,7 @@ export default function BrandStrategyPage() {
                 Whether you&apos;re launching a new organization, repositioning an established business, preparing for investment, entering a new market, or building the foundation for future growth, your brand should create clarity, not confusion. It should strengthen trust, align your people, clarify your value, support your sales process, and improve your market presence, giving every future growth initiative a stronger place to begin.
               </p>
               <div style={{ display: "flex", gap: 24, justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
-                <Link href="/contact" style={{
+                <Link href="/contact/" style={{
                   display: "inline-flex", alignItems: "center",
                   fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 15,
                   background: "#d87307", color: "#FFFFFF",

@@ -14,12 +14,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!cs) return {};
   const title = `${cs.title} | Brand Iron Case Study`;
   const description = cs.excerpt;
-  const url = `https://brandiron.net/case-studies/${cs.slug}`;
+  const url = `https://brandiron.net/case-studies/${cs.slug}/`;
   const image = "/images/shared/shared-footer-logo.jpeg";
   return {
     title,
     description,
-    alternates: { canonical: `/case-studies/${cs.slug}` },
+    alternates: { canonical: `/case-studies/${cs.slug}/` },
     openGraph: {
       type: "article",
       url,
@@ -50,9 +50,9 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://brandiron.net" },
-          { name: "Case Studies", url: "https://brandiron.net/case-studies" },
-          { name: cs.title, url: `https://brandiron.net/case-studies/${cs.slug}` },
+          { name: "Home", url: "https://brandiron.net/" },
+          { name: "Case Studies", url: "https://brandiron.net/case-studies/" },
+          { name: cs.title, url: `https://brandiron.net/case-studies/${cs.slug}/` },
         ]}
       />
 
@@ -69,7 +69,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
         />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.55) 0%, rgba(8,16,36,0.5) 45%, rgba(8,16,36,0.8) 100%)" }} />
         <div style={{ position: "relative", zIndex: 2, maxWidth: 820, margin: "0 auto" }}>
-          <Link href="/case-studies" className="back-link" style={{
+          <Link href="/case-studies/" className="back-link" style={{
             display: "flex", width: "fit-content", alignItems: "center", gap: 8,
             fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 600,
             color: "#FFFFFF", textDecoration: "none", marginBottom: 32,
@@ -169,7 +169,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
           </h3>
           <div className="cs-related-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
             {related.map(r => (
-              <Link key={r.slug} href={`/case-studies/${r.slug}`} className="related-card" style={{
+              <Link key={r.slug} href={`/case-studies/${r.slug}/`} className="related-card" style={{
                 display: "block", position: "relative", background: "#FFFFFF",
                 border: "1px solid #EEEBE7", borderRadius: 10,
                 textDecoration: "none", overflow: "hidden", transition: "border-color 0.2s, background 0.2s, transform 0.2s",
@@ -220,7 +220,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
               <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", fontStyle: "italic", maxWidth: 640, margin: "0 auto 40px" }}>
                 Every success story starts with a conversation. Let&apos;s talk about where your business stands today, what&apos;s holding it back, and how Brand Iron can help you build a stronger path forward.
               </p>
-              <Link href="/contact" className="cta-btn-primary" style={{
+              <Link href="/contact/" className="cta-btn-primary" style={{
                 display: "inline-flex", alignItems: "center",
                 fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 15,
                 background: "#d87307", color: "#FFFFFF",
@@ -230,7 +230,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
                 Book a Strategy Session
               </Link>
               <div>
-                <Link href="/case-studies" className="cta-btn-secondary" style={{
+                <Link href="/case-studies/" className="cta-btn-secondary" style={{
                   fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase",
                   color: "rgba(255,255,255,0.7)", textDecoration: "none", borderBottom: "1px solid rgba(255,255,255,0.3)", paddingBottom: 2,
                   transition: "color 0.2s, border-color 0.2s",

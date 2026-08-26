@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 
 const TITLE = "Revenue Engineering & RevOps Consulting | Brand Iron";
 const DESCRIPTION = "Connect marketing, sales, CRM, automation, and analytics into a measurable revenue system built to improve conversion and accelerate growth.";
-const URL = "https://brandiron.net/services/revenue-engineering";
+const URL = "https://brandiron.net/services/revenue-engineering/";
 const SOCIAL_IMAGE = "/images/shared/shared-footer-logo.jpeg";
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: "/services/revenue-engineering" },
+  alternates: { canonical: "/services/revenue-engineering/" },
   openGraph: {
     type: "article",
     url: URL,

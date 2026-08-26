@@ -7,21 +7,21 @@ import { usePathname } from "next/navigation";
 const STANDALONE_ROUTES = ["/growth-review"];
 
 const servicesMenu = [
-  { label: "Brand Strategy", href: "/services/brand-strategy" },
-  { label: "AI Visibility & Discoverability", href: "/services/ai-visibility" },
-  { label: "GTM Strategy", href: "/services/gtm" },
-  { label: "Capital Raise Support", href: "/services/capital-raise" },
-  { label: "Revenue Engineering", href: "/services/revenue-engineering" },
-  { label: "Outbound Growth", href: "/services/outbound-growth" },
-  { label: "Website Development", href: "/services/website-development" },
+  { label: "Brand Strategy", href: "/services/brand-strategy/" },
+  { label: "AI Visibility & Discoverability", href: "/services/ai-visibility/" },
+  { label: "GTM Strategy", href: "/services/gtm/" },
+  { label: "Capital Raise Support", href: "/services/capital-raise/" },
+  { label: "Revenue Engineering", href: "/services/revenue-engineering/" },
+  { label: "Outbound Growth", href: "/services/outbound-growth/" },
+  { label: "Website Development", href: "/services/website-development/" },
 ];
 
 const navLinks = [
-  { label: "About", href: "/about" },
-  { label: "Portfolio", href: "/portfolio" },
-  { label: "Case Studies", href: "/case-studies" },
-  { label: "Blog", href: "/blog" },
-  { label: "Resources", href: "/resources" },
+  { label: "About", href: "/about/" },
+  { label: "Portfolio", href: "/portfolio/" },
+  { label: "Case Studies", href: "/case-studies/" },
+  { label: "Blog", href: "/blog/" },
+  { label: "Resources", href: "/resources/" },
 ];
 
 export default function Navbar() {
@@ -56,7 +56,7 @@ export default function Navbar() {
             onMouseEnter={() => setServicesOpen(true)}
             onMouseLeave={() => setServicesOpen(false)}
           >
-            <Link href="/services" style={{
+            <Link href="/services/" style={{
               display: "flex", alignItems: "center", gap: 5,
               fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.1em", textTransform: "uppercase",
@@ -113,7 +113,7 @@ export default function Navbar() {
             </span>
           ))}
 
-          <Link href="/contact" style={{
+          <Link href="/contact/" style={{
             fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
             letterSpacing: "0.1em", textTransform: "uppercase",
             background: "#d87307", color: "#FFFFFF",
@@ -176,7 +176,7 @@ export default function Navbar() {
           ))}
 
           <div style={{ paddingTop: 16 }}>
-            <Link href="/contact" onClick={() => setOpen(false)} style={{
+            <Link href="/contact/" onClick={() => setOpen(false)} style={{
               display: "inline-block",
               fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.1em", textTransform: "uppercase",

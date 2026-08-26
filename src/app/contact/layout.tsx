@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 
 const TITLE = "Contact Brand Iron | Book a Strategy Session";
 const DESCRIPTION = "Get in touch with Brand Iron's growth marketing team. Book a strategy session to discuss brand strategy, GTM, AI visibility, or website development.";
-const URL = "https://brandiron.net/contact";
+const URL = "https://brandiron.net/contact/";
 const SOCIAL_IMAGE = "/images/shared/shared-footer-logo.jpeg";
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: "/contact" },
+  alternates: { canonical: "/contact/" },
   openGraph: {
     type: "website",
     url: URL,

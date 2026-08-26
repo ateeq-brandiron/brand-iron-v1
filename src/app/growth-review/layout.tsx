@@ -8,10 +8,10 @@ const SOCIAL_IMAGE = "/images/shared/shared-footer-logo.jpeg";
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: "/growth-review" },
+  alternates: { canonical: "/growth-review/" },
   openGraph: {
     type: "website",
-    url: "https://brandiron.net/growth-review",
+    url: "https://brandiron.net/growth-review/",
     title: TITLE,
     description: DESCRIPTION,
     images: [SOCIAL_IMAGE],

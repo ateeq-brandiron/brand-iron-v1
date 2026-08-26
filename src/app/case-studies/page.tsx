@@ -39,8 +39,8 @@ export default function CaseStudiesPage() {
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://brandiron.net" },
-          { name: "Case Studies", url: "https://brandiron.net/case-studies" },
+          { name: "Home", url: "https://brandiron.net/" },
+          { name: "Case Studies", url: "https://brandiron.net/case-studies/" },
         ]}
       />
 
@@ -80,7 +80,7 @@ export default function CaseStudiesPage() {
                 >
                   Explore Case Studies
                 </a>
-                <Link href="/portfolio" style={{
+                <Link href="/portfolio/" style={{
                   display: "inline-flex", alignItems: "center",
                   fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 14,
                   background: "transparent", color: "#FFFFFF",
@@ -176,7 +176,7 @@ export default function CaseStudiesPage() {
               const headlineStat = cs.results.find(r => r.value !== "—");
               const hoverImage = cs.cardHoverImage ?? cs.images[0];
               return (
-                <Link key={cs.slug} href={`/case-studies/${cs.slug}`}
+                <Link key={cs.slug} href={`/case-studies/${cs.slug}/`}
                   className={`reveal${gridViewInView ? ' visible' : ''} cs-card`}
                   style={{
                     display: "block", position: "relative", background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 14,
@@ -268,7 +268,7 @@ export default function CaseStudiesPage() {
               <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", fontStyle: "italic", maxWidth: 640, margin: "0 auto 40px" }}>
                 Every success story starts with a conversation. Let&apos;s talk about where your business stands today, what&apos;s holding it back, and how Brand Iron can help you build a stronger path forward.
               </p>
-              <Link href="/contact" style={{
+              <Link href="/contact/" style={{
                 display: "inline-flex", alignItems: "center",
                 fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 15,
                 background: "#d87307", color: "#FFFFFF",
@@ -281,7 +281,7 @@ export default function CaseStudiesPage() {
                 Book a Strategy Session
               </Link>
               <div>
-                <Link href="/services" style={{
+                <Link href="/services/" style={{
                   fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase",
                   color: "rgba(255,255,255,0.7)", textDecoration: "none", borderBottom: "1px solid rgba(255,255,255,0.3)", paddingBottom: 2,
                   transition: "color 0.2s, border-color 0.2s",

@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 
 const TITLE = "Portfolio | Brand Strategy, GTM & Growth Work | Brand Iron";
 const DESCRIPTION = "Explore Brand Iron's portfolio across brand strategy, website development, go-to-market strategy, capital raise support, AI visibility, and revenue growth.";
-const URL = "https://brandiron.net/portfolio";
+const URL = "https://brandiron.net/portfolio/";
 const SOCIAL_IMAGE = "/images/shared/shared-footer-logo.jpeg";
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: "/portfolio" },
+  alternates: { canonical: "/portfolio/" },
   openGraph: {
     type: "website",
     url: URL,

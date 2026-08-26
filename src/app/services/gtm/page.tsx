@@ -44,7 +44,7 @@ export default function GTMPage() {
     {
       q: "Why does AI Visibility matter in a Go-to-Market strategy?",
       a: "Today's buyers don't rely solely on search engines. They ask AI platforms, compare competitors, read reviews, explore thought leadership, and validate organizations before reaching out. AI Visibility helps your organization become discoverable across this modern buying journey by strengthening semantic search, entity optimization, structured data, knowledge graph signals, and answer-ready content. As AI continues to influence purchasing decisions, discoverability extends far beyond traditional SEO.",
-      related: [{ href: "/services/ai-visibility", label: "Explore Our AI Visibility Services" }],
+      related: [{ href: "/services/ai-visibility/", label: "Explore Our AI Visibility Services" }],
     },
     {
       q: "Which Go-to-Market tier is right for my organization?",
@@ -57,7 +57,7 @@ export default function GTMPage() {
     {
       q: "When should an organization invest in a Go-to-Market strategy?",
       a: "Organizations often benefit from a GTM strategy when they are launching a new company, product, or service; entering a new market; repositioning their brand; experiencing inconsistent pipeline growth; expanding into new geographic regions; preparing to scale revenue operations; or looking to improve alignment between marketing and sales. The earlier strategic alignment is established, the easier it becomes to build sustainable growth.",
-      related: [{ href: "/services/capital-raise", label: "Preparing to Raise Capital? Explore Our Capital Raise Support" }],
+      related: [{ href: "/services/capital-raise/", label: "Preparing to Raise Capital? Explore Our Capital Raise Support" }],
     },
     {
       q: "How do you measure success?",
@@ -81,9 +81,9 @@ export default function GTMPage() {
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://brandiron.net" },
-          { name: "Services", url: "https://brandiron.net/services" },
-          { name: "GTM Strategy", url: "https://brandiron.net/services/gtm" },
+          { name: "Home", url: "https://brandiron.net/" },
+          { name: "Services", url: "https://brandiron.net/services/" },
+          { name: "GTM Strategy", url: "https://brandiron.net/services/gtm/" },
         ]}
       />
       <ServiceSchema
@@ -141,7 +141,7 @@ export default function GTMPage() {
               </h1>
 
               <div className="hero-btns-anim" style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center" }}>
-                <Link href="/contact" style={{
+                <Link href="/contact/" style={{
                   display: "inline-flex", alignItems: "center",
                   fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 14,
                   background: "#d87307", color: "#FFFFFF",
@@ -289,7 +289,7 @@ export default function GTMPage() {
             <p className={`reveal${s3ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#444", fontWeight: 600, marginBottom: 32 }}>
               That&apos;s how Brand Iron helps organizations build sustainable growth.
             </p>
-            <Link href="/contact" className={`reveal${s3ViewInView ? ' visible' : ''}`} style={{
+            <Link href="/contact/" className={`reveal${s3ViewInView ? ' visible' : ''}`} style={{
               display: "inline-block", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
               background: "#d87307", color: "#FFFFFF",
@@ -523,7 +523,7 @@ export default function GTMPage() {
                 desc: "Designed for organizations establishing market positioning, improving discoverability, and creating the systems needed to generate consistent opportunities.",
                 bestFor: ["Early-stage companies", "Local and regional businesses", "Organizations formalizing their GTM strategy", "Teams building marketing and sales alignment"],
                 outcome: "Create a strong foundation for visibility, credibility, and predictable growth.",
-                href: "/contact",
+                href: "/contact/",
                 highlight: false,
               },
               {
@@ -531,7 +531,7 @@ export default function GTMPage() {
                 desc: "Designed for organizations ready to strengthen market presence, generate qualified pipeline, and connect marketing, sales, and operations through more advanced execution.",
                 bestFor: ["Growing B2B organizations", "Companies entering new markets", "Businesses seeking predictable pipeline growth", "Teams ready to scale beyond foundational marketing"],
                 outcome: "Increase qualified demand, strengthen authority, and improve revenue performance.",
-                href: "/contact",
+                href: "/contact/",
                 highlight: true,
               },
               {
@@ -539,7 +539,7 @@ export default function GTMPage() {
                 desc: "Designed for organizations with mature Go-to-Market operations that require advanced automation, executive thought leadership, AI visibility leadership, and multi-channel growth initiatives.",
                 bestFor: ["Established organizations", "Multi-location businesses", "Enterprise teams", "Companies pursuing aggressive growth initiatives"],
                 outcome: "Scale market leadership while improving operational efficiency and revenue performance.",
-                href: "/contact",
+                href: "/contact/",
                 highlight: false,
               },
             ].map(({ tier, name, tagline, desc, bestFor, outcome, href, highlight }, i) => (
@@ -740,7 +740,7 @@ export default function GTMPage() {
             <p className={`reveal${s7ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 18, lineHeight: 1.8, color: "#555", maxWidth: 720, marginBottom: 32 }}>
               Every initiative within the Brand Iron framework is designed to move your business toward these outcomes.
             </p>
-            <Link href="/contact" className={`reveal${s7ViewInView ? ' visible' : ''}`} style={{
+            <Link href="/contact/" className={`reveal${s7ViewInView ? ' visible' : ''}`} style={{
               display: "inline-block", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
               background: "#d87307", color: "#FFFFFF",
@@ -904,7 +904,7 @@ export default function GTMPage() {
                 Align positioning, visibility, authority, demand, revenue, and operations into one connected system built for how buyers decide today.
               </p>
               <div style={{ display: "flex", gap: 24, justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
-                <Link href="/contact" style={{
+                <Link href="/contact/" style={{
                   display: "inline-flex", alignItems: "center",
                   fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 15,
                   background: "#d87307", color: "#FFFFFF",

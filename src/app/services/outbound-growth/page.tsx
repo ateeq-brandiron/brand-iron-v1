@@ -127,8 +127,8 @@ const faqs = [
     q: "How does Outbound Growth connect to your other services like Revenue Engineering or GTM Strategy?",
     a: "Outbound Growth generates the top-of-funnel pipeline. Revenue Engineering ensures the leads outbound generates are captured, routed, and followed up properly in your CRM. GTM Strategy defines the market approach and target segments that outbound campaigns execute against. Together, the services form a connected pipeline system.",
     related: [
-      { href: "/services/revenue-engineering", label: "Explore Our Revenue Engineering Services" },
-      { href: "/services/gtm", label: "Explore Our Go-to-Market Strategy Services" },
+      { href: "/services/revenue-engineering/", label: "Explore Our Revenue Engineering Services" },
+      { href: "/services/gtm/", label: "Explore Our Go-to-Market Strategy Services" },
     ],
   },
   {
@@ -173,9 +173,9 @@ export default function OutboundGrowthPage() {
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://brandiron.net" },
-          { name: "Services", url: "https://brandiron.net/services" },
-          { name: "Outbound Growth", url: "https://brandiron.net/services/outbound-growth" },
+          { name: "Home", url: "https://brandiron.net/" },
+          { name: "Services", url: "https://brandiron.net/services/" },
+          { name: "Outbound Growth", url: "https://brandiron.net/services/outbound-growth/" },
         ]}
       />
       <ServiceSchema
@@ -225,7 +225,7 @@ export default function OutboundGrowthPage() {
               </h1>
 
               <div className="hero-btns-anim" style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center" }}>
-                <Link href="/contact" style={{
+                <Link href="/contact/" style={{
                   display: "inline-flex", alignItems: "center",
                   fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 14,
                   background: "#d87307", color: "#FFFFFF",
@@ -501,7 +501,7 @@ export default function OutboundGrowthPage() {
                 More names do not always create more pipeline. The right market, message, and system do. Brand Iron helps you build outbound campaigns with more focus, more structure, and more firepower. Ready to put more qualified opportunities in the pipeline?
               </p>
               <div style={{ display: "flex", gap: 24, justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
-                <Link href="/contact" style={{
+                <Link href="/contact/" style={{
                   display: "inline-flex", alignItems: "center",
                   fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 15,
                   background: "#d87307", color: "#FFFFFF",

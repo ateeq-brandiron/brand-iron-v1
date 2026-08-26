@@ -127,8 +127,8 @@ export default function ContactPage() {
     <main>
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://brandiron.net" },
-          { name: "Contact", url: "https://brandiron.net/contact" },
+          { name: "Home", url: "https://brandiron.net/" },
+          { name: "Contact", url: "https://brandiron.net/contact/" },
         ]}
       />
       {/* Hero */}

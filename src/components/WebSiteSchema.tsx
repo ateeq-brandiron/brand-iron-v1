@@ -8,7 +8,7 @@ export default function WebSiteSchema() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Brand Iron",
-    url: "https://brandiron.net",
+    url: "https://brandiron.net/",
   };
   return (
     <script

@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 
 const TITLE = "B2B Outbound Lead Generation Services | Brand Iron";
 const DESCRIPTION = "Generate qualified B2B opportunities with targeted prospecting, LinkedIn outreach, email campaigns, follow-up systems, and campaign optimization.";
-const URL = "https://brandiron.net/services/outbound-growth";
+const URL = "https://brandiron.net/services/outbound-growth/";
 const SOCIAL_IMAGE = "/images/shared/shared-footer-logo.jpeg";
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: "/services/outbound-growth" },
+  alternates: { canonical: "/services/outbound-growth/" },
   openGraph: {
     type: "article",
     url: URL,

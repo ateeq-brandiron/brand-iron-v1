@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 
 const TITLE = "About Brand Iron | Our Story & Mission";
 const DESCRIPTION = "Learn about Brand Iron's approach to forging brands and driving revenue for growth-focused businesses.";
-const URL = "https://brandiron.net/about";
+const URL = "https://brandiron.net/about/";
 const SOCIAL_IMAGE = "/images/shared/shared-footer-logo.jpeg";
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: "/about" },
+  alternates: { canonical: "/about/" },
   openGraph: {
     type: "website",
     url: URL,

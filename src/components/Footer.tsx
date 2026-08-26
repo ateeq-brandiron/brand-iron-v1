@@ -6,14 +6,14 @@ import { usePathname } from "next/navigation";
 const STANDALONE_ROUTES = ["/growth-review"];
 
 const navLinks = [
-  ["Services", "/services"],
-  ["About", "/about"],
-  ["Portfolio", "/portfolio"],
-  ["Case Studies", "/case-studies"],
-  ["Blog", "/blog"],
-  ["Resources", "/resources"],
-  ["FAQ", "/faq"],
-  ["Contact", "/contact"],
+  ["Services", "/services/"],
+  ["About", "/about/"],
+  ["Portfolio", "/portfolio/"],
+  ["Case Studies", "/case-studies/"],
+  ["Blog", "/blog/"],
+  ["Resources", "/resources/"],
+  ["FAQ", "/faq/"],
+  ["Contact", "/contact/"],
 ];
 
 const socialLinks = [

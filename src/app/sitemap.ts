@@ -27,14 +27,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
   const staticRoutes = PAGES.map(({ path, changeFrequency, priority }) => ({
-    url: `${BASE_URL}${path}`,
+    url: `${BASE_URL}${path}/`,
     lastModified: now,
     changeFrequency,
     priority,
   }));
 
   const articleRoutes = articles.map(article => ({
-    url: `${BASE_URL}/blog/${article.slug}`,
+    url: `${BASE_URL}/blog/${article.slug}/`,
     lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.6,

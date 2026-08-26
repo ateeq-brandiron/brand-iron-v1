@@ -125,8 +125,8 @@ const faqs = [
     q: "How does Revenue Engineering connect to your other services like GTM Strategy or AI Visibility?",
     a: "Revenue Engineering handles what happens after prospects enter your funnel: capture, routing, follow-up, conversion, and reporting. GTM Strategy defines the market approach and demand generation that fills the funnel, and AI Visibility ensures buyers can discover you across search and AI platforms before they even enter it. Together, the three services form Brand Iron's connected growth system.",
     related: [
-      { href: "/services/gtm", label: "Explore Our Go-to-Market Strategy Services" },
-      { href: "/services/ai-visibility", label: "Explore Our AI Visibility Services" },
+      { href: "/services/gtm/", label: "Explore Our Go-to-Market Strategy Services" },
+      { href: "/services/ai-visibility/", label: "Explore Our AI Visibility Services" },
     ],
   },
   {
@@ -172,9 +172,9 @@ export default function RevenueEngineeringPage() {
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://brandiron.net" },
-          { name: "Services", url: "https://brandiron.net/services" },
-          { name: "Revenue Engineering", url: "https://brandiron.net/services/revenue-engineering" },
+          { name: "Home", url: "https://brandiron.net/" },
+          { name: "Services", url: "https://brandiron.net/services/" },
+          { name: "Revenue Engineering", url: "https://brandiron.net/services/revenue-engineering/" },
         ]}
       />
       <ServiceSchema
@@ -224,7 +224,7 @@ export default function RevenueEngineeringPage() {
               </h1>
 
               <div className="hero-btns-anim" style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center" }}>
-                <Link href="/contact" style={{
+                <Link href="/contact/" style={{
                   display: "inline-flex", alignItems: "center",
                   fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 14,
                   background: "#d87307", color: "#FFFFFF",
@@ -454,7 +454,7 @@ export default function RevenueEngineeringPage() {
           <p className={`reveal${s6ViewInView ? ' visible' : ''}`} style={{ fontSize: 17, lineHeight: 1.8, color: "#555", marginBottom: 32 }}>
             You do not need another disconnected tool. You need your current tools, workflows, teams, and data pulling together. Brand Iron engineers the system behind the sale.
           </p>
-          <Link href="/contact" className={`reveal${s6ViewInView ? ' visible' : ''}`} style={{
+          <Link href="/contact/" className={`reveal${s6ViewInView ? ' visible' : ''}`} style={{
             display: "inline-block", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
             letterSpacing: "0.14em", textTransform: "uppercase",
             background: "#d87307", color: "#FFFFFF",
@@ -509,7 +509,7 @@ export default function RevenueEngineeringPage() {
                 Build a revenue system with stronger handoffs, faster follow-up, and clearer visibility.
               </p>
               <div style={{ display: "flex", gap: 24, justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
-                <Link href="/contact" style={{
+                <Link href="/contact/" style={{
                   display: "inline-flex", alignItems: "center",
                   fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 15,
                   background: "#d87307", color: "#FFFFFF",

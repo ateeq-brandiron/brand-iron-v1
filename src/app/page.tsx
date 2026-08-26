@@ -21,13 +21,13 @@ function useInView(threshold = 0.15) {
 }
 
 const services = [
-  { label: "Brand Strategy", href: "/services/brand-strategy" },
-  { label: "AI Visibility", href: "/services/ai-visibility" },
-  { label: "GTM Strategy", href: "/services/gtm" },
-  { label: "Capital Raise Support", href: "/services/capital-raise" },
-  { label: "Revenue Engineering", href: "/services/revenue-engineering" },
-  { label: "Outbound Growth", href: "/services/outbound-growth" },
-  { label: "Website Development", href: "/services/website-development" },
+  { label: "Brand Strategy", href: "/services/brand-strategy/" },
+  { label: "AI Visibility", href: "/services/ai-visibility/" },
+  { label: "GTM Strategy", href: "/services/gtm/" },
+  { label: "Capital Raise Support", href: "/services/capital-raise/" },
+  { label: "Revenue Engineering", href: "/services/revenue-engineering/" },
+  { label: "Outbound Growth", href: "/services/outbound-growth/" },
+  { label: "Website Development", href: "/services/website-development/" },
 ];
 
 const clientLogos = [
@@ -78,43 +78,43 @@ const coreServices = [
     title: "Brand Strategy", sub: "Forge a Brand That Gets Chosen",
     body: "We build branding as a business system, connecting strategy, messaging, visual identity, and go-to-market execution into one foundation designed to earn trust and hold its ground.",
     solutions: ["Brand Foundation", "Brand Foundation + Market Launch"],
-    cta: "Explore Brand Strategy", href: "/services/brand-strategy",
+    cta: "Explore Brand Strategy", href: "/services/brand-strategy/",
   },
   {
     title: "AI Visibility & Discoverability", sub: "Be Found Where Buyers Search",
     body: "Modern buyers use search engines, AI assistants, and digital channels to evaluate their options. We help your business increase visibility where buying decisions begin.",
     solutions: ["AI Visibility Diagnostic", "SEO & AI Foundation", "AI Authority Growth System", "AI Market Dominance Engine"],
-    cta: "Explore AI Visibility", href: "/services/ai-visibility",
+    cta: "Explore AI Visibility", href: "/services/ai-visibility/",
   },
   {
     title: "Go-to-Market Strategy", sub: "Turn Strategy Into Growth",
     body: "We align positioning, messaging, channels, and execution to help your organization launch with confidence and create predictable commercial momentum.",
     solutions: ["GTM Foundation", "Growth Engine", "Revenue Accelerator"],
-    cta: "Explore GTM Strategy", href: "/services/gtm",
+    cta: "Explore GTM Strategy", href: "/services/gtm/",
   },
   {
     title: "Capital Raise Support", sub: "Build Investor Confidence",
     body: "We help founders prepare for investment with compelling pitch decks, fundraising strategy, and targeted investor outreach.",
     solutions: ["Capital Raise Decks", "150K+ Investor Database", "Investor Outreach", "Investor GTM Support"],
-    cta: "Explore Capital Raise Support", href: "/services/capital-raise",
+    cta: "Explore Capital Raise Support", href: "/services/capital-raise/",
   },
   {
     title: "Revenue Engineering", sub: "Connect the Systems Behind Your Revenue",
     body: "We align your marketing automation, CRM, and revenue operations into one connected system, so leads move smoothly through the funnel and every stage of the buyer journey is visible and measurable.",
     solutions: ["Marketing Automation", "CRM Optimization", "Revenue Operations", "Funnel Optimization", "Reporting & Attribution"],
-    cta: "Explore Revenue Engineering", href: "/services/revenue-engineering",
+    cta: "Explore Revenue Engineering", href: "/services/revenue-engineering/",
   },
   {
     title: "Outbound Growth", sub: "Turn Cold Outreach Into Warm Pipeline",
     body: "We build and run LinkedIn, email, and SDR-driven outbound programs that put your business in front of the right buyers, with the messaging and follow-through to turn conversations into qualified opportunities.",
     solutions: ["LinkedIn Outreach", "Email Outreach", "SDR Programs", "Appointment Setting", "Sales Enablement"],
-    cta: "Explore Outbound Growth", href: "/services/outbound-growth",
+    cta: "Explore Outbound Growth", href: "/services/outbound-growth/",
   },
   {
     title: "Website Development", sub: "Your Strongest Growth Asset",
     body: "We build strategic digital experiences that connect your brand, messaging, user experience, and AI Visibility into one platform designed to help you become discoverable, trusted, and chosen.",
     solutions: ["Website Essentials", "Website Growth", "Website Advanced"],
-    cta: "Explore Website Development", href: "/services/website-development",
+    cta: "Explore Website Development", href: "/services/website-development/",
   },
 ];
 
@@ -284,7 +284,7 @@ export default function Home() {
             Helping organizations become discoverable, trusted,<br />and chosen in today&apos;s AI-driven buying landscape.
           </p>
           <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
-            <Link href="/contact" style={{
+            <Link href="/contact/" style={{
               fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
               background: "#d87307", color: "#FFFFFF",
@@ -294,7 +294,7 @@ export default function Home() {
             onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#c46305")}
             onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.background = "#d87307")}
             >Book a Strategy Session</Link>
-            <Link href="/services" style={{
+            <Link href="/services/" style={{
               fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
               background: "transparent", color: "#FFFFFF",
@@ -701,7 +701,7 @@ export default function Home() {
               <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, fontWeight: 600, lineHeight: 1.8, color: "#1a1a1a", marginBottom: 20 }}>
                 See How We Engineer Growth
               </p>
-              <Link href="/services" style={{
+              <Link href="/services/" style={{
                 display: "inline-block",
                 fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
                 letterSpacing: "0.14em", textTransform: "uppercase",
@@ -909,7 +909,7 @@ export default function Home() {
             Every successful growth story begins with a conversation. Let&apos;s start yours.
           </p>
           <div className={`reveal${s6InView ? " visible" : ""}`} style={{ display: "flex", gap: 16, justifyContent: "flex-start", flexWrap: "wrap" }}>
-            <Link href="/contact" style={{
+            <Link href="/contact/" style={{
               fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.14em", textTransform: "uppercase",
               background: "#d87307", color: "#FFFFFF",
@@ -1112,7 +1112,7 @@ export default function Home() {
                     <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(255,255,255,0.85)", marginBottom: 20 }}>
                       Let&apos;s discuss your business goals, current challenges, and opportunities for growth. Together, we&apos;ll identify where your greatest opportunities lie and outline practical next steps.
                     </p>
-                    <Link href="/contact" style={{
+                    <Link href="/contact/" style={{
                       display: "inline-flex", alignItems: "center", gap: 10,
                       fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 800, fontSize: 17,
                       letterSpacing: "0.02em", textTransform: "uppercase",
@@ -1141,7 +1141,7 @@ export default function Home() {
                     <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(255,255,255,0.85)", marginBottom: 20 }}>
                       Learn how Brand Strategy, AI Visibility, Go-to-Market Strategy, Revenue Engineering, Outbound Growth, Website Development, and Capital Raise Support work together to create measurable business outcomes.
                     </p>
-                    <Link href="/services" style={{
+                    <Link href="/services/" style={{
                       display: "inline-flex", alignItems: "center", gap: 10,
                       fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 800, fontSize: 17,
                       letterSpacing: "0.02em", textTransform: "uppercase",

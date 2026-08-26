@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 
 const TITLE = "Brand Strategy & Rebranding Services | Brand Iron";
 const DESCRIPTION = "Clarify your positioning, messaging, and visual identity with a brand strategy built to earn trust and drive growth. Request a branding proposal.";
-const URL = "https://brandiron.net/services/brand-strategy";
+const URL = "https://brandiron.net/services/brand-strategy/";
 const SOCIAL_IMAGE = "/images/shared/shared-footer-logo.jpeg";
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: "/services/brand-strategy" },
+  alternates: { canonical: "/services/brand-strategy/" },
   openGraph: {
     type: "article",
     url: URL,

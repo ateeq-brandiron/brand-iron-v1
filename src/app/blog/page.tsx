@@ -94,8 +94,8 @@ export default function InsightsPage() {
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://brandiron.net" },
-          { name: "Blog", url: "https://brandiron.net/blog" },
+          { name: "Home", url: "https://brandiron.net/" },
+          { name: "Blog", url: "https://brandiron.net/blog/" },
         ]}
       />
 
@@ -124,7 +124,7 @@ export default function InsightsPage() {
               </h1>
 
               <div className="hero-btns-anim" style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center" }}>
-                <Link href="/contact" style={{
+                <Link href="/contact/" style={{
                   display: "inline-flex", alignItems: "center",
                   fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 14,
                   background: "#d87307", color: "#FFFFFF",
@@ -229,7 +229,7 @@ export default function InsightsPage() {
 
           {/* Featured post */}
           {articles[0] && (
-            <Link href={`/blog/${articles[0].slug}`}
+            <Link href={`/blog/${articles[0].slug}/`}
               className={`article-card reveal${articlesViewInView ? " visible" : ""}`}
               style={{
                 position: "relative", display: "block", background: "#F9F8F6", border: "1px solid #EEEBE7",
@@ -253,7 +253,7 @@ export default function InsightsPage() {
           {/* Remaining posts */}
           <div className="blog-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
             {visibleArticles.map(({ slug, category, title, excerpt, readTime, date }, i) => (
-              <Link key={slug} href={`/blog/${slug}`}
+              <Link key={slug} href={`/blog/${slug}/`}
                 className={`article-card reveal${articlesViewInView ? " visible" : ""}`}
                 style={{
                   position: "relative", background: "#F9F8F6", border: "1px solid #EEEBE7",
@@ -325,7 +325,7 @@ export default function InsightsPage() {
               <span key={r} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, fontWeight: 600, color: "#f0a860", background: "rgba(216,115,7,0.12)", border: "1px solid rgba(216,115,7,0.25)", borderRadius: 20, padding: "7px 16px" }}>{r}</span>
             ))}
           </div>
-          <Link href="/contact" className="cta-btn-outline" style={{
+          <Link href="/contact/" className="cta-btn-outline" style={{
             display: "inline-block", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
             letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none",
             background: "transparent", color: "#FFFFFF", border: "2px solid rgba(255,255,255,0.4)",
@@ -391,7 +391,7 @@ export default function InsightsPage() {
                 Whether you&apos;re building a stronger brand, improving visibility, launching a new initiative, or scaling growth, Brand Iron can help.
               </p>
               <div style={{ display: "flex", gap: 24, justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
-                <Link href="/contact" style={{
+                <Link href="/contact/" style={{
                   display: "inline-block", padding: "16px 40px", borderRadius: 6,
                   fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 14,
                   letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none",

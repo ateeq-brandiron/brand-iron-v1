@@ -15,12 +15,15 @@ const CSP = [
 ].join("; ");
 
 const nextConfig: NextConfig = {
+  // Canonical URL structure is trailing-slash (domain.com/services/, per
+  // Alberto/SEO) - this makes next/link render hrefs that already include
+  // it, so internal navigation doesn't take an extra redirect hop.
+  trailingSlash: true,
   // Next's automatic trailing-slash redirect fires before middleware ever
-  // sees the request, so a URL requested with a trailing slash (the form
-  // Google has almost always indexed) chains through that redirect first,
-  // then middleware's own redirect - two hops instead of one. This hands
-  // trailing-slash handling to middleware instead, which already redirects
-  // both slash variants directly to their final destination.
+  // sees the request, so a no-slash URL chains through that redirect first,
+  // then middleware's own www/host redirect (or vice versa) - two hops
+  // instead of one. This hands trailing-slash enforcement to middleware
+  // instead, which combines it with the www check into a single redirect.
   skipTrailingSlashRedirect: true,
   async headers() {
     return [

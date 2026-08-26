@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 
 const TITLE = "AI Visibility, AEO & GEO Services | Brand Iron";
 const DESCRIPTION = "Improve your visibility across Google, ChatGPT, Gemini, Claude, and Perplexity with integrated SEO, AEO, GEO, content, and authority building.";
-const URL = "https://brandiron.net/services/ai-visibility";
+const URL = "https://brandiron.net/services/ai-visibility/";
 const SOCIAL_IMAGE = "/images/shared/shared-footer-logo.jpeg";
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: "/services/ai-visibility" },
+  alternates: { canonical: "/services/ai-visibility/" },
   openGraph: {
     type: "article",
     url: URL,

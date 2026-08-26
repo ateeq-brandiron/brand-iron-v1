@@ -70,7 +70,7 @@ const solutions = [
     desc: "We develop investor presentations that clearly communicate your vision, market opportunity, competitive advantage, and growth potential, helping you present with confidence.",
     bestFor: ["Startups preparing for investor meetings", "Companies seeking funding", "Leadership teams refining their investment story"],
     outcome: "A clear, investor-ready presentation that builds confidence and supports productive fundraising conversations.",
-    cta: "Learn More", href: "/contact",
+    cta: "Learn More", href: "/contact/",
     icon: (<img loading="lazy" src="/images/icons/icon-briefcase.svg" alt="" style={{ width: 26, height: 26 }} />),
   },
   {
@@ -78,7 +78,7 @@ const solutions = [
     desc: "Successful fundraising isn’t measured by how many investors you contact. It’s measured by how many are the right fit. Our Investor Database helps identify, organize, and prioritize investors based on industry focus, investment stage, geographic preferences, and funding interests, giving your outreach strategy greater precision and efficiency.",
     bestFor: ["Companies beginning investor outreach", "Teams expanding fundraising efforts", "Organizations seeking targeted investor research"],
     outcome: "A qualified investor pipeline aligned with your fundraising objectives.",
-    cta: "Explore Investor Database", href: "/contact",
+    cta: "Explore Investor Database", href: "/contact/",
     icon: (<img loading="lazy" src="/images/icons/icon-barchart.svg" alt="" style={{ width: 26, height: 26 }} />),
   },
   {
@@ -86,7 +86,7 @@ const solutions = [
     desc: "Finding the right investors is only the beginning. Building relationships requires thoughtful communication, consistent follow-up, and a structured outreach strategy. We help develop investor outreach campaigns designed to introduce your opportunity, generate interest, and create qualified fundraising conversations.",
     bestFor: ["Active fundraising campaigns", "Companies ready to engage investors", "Teams seeking structured outreach support"],
     outcome: "More strategic investor conversations and stronger fundraising momentum.",
-    cta: "Learn More", href: "/contact",
+    cta: "Learn More", href: "/contact/",
     icon: (<img loading="lazy" src="/images/icons/icon-chat.svg" alt="" style={{ width: 26, height: 26 }} />),
   },
   {
@@ -94,7 +94,7 @@ const solutions = [
     desc: "Fundraising follows many of the same principles as a successful Go-to-Market strategy. It requires the right positioning, targeted outreach, consistent messaging, measurable progress, and continuous refinement. Investor GTM Support brings these elements together into a coordinated fundraising strategy, helping organizations manage investor engagement while adapting to feedback and maintaining momentum throughout the capital raise process.",
     bestFor: ["Growth-stage companies", "Leadership teams managing ongoing fundraising", "Organizations seeking strategic fundraising guidance"],
     outcome: "A coordinated fundraising strategy that supports long-term investor engagement and capital raise success.",
-    cta: "Explore Investor GTM Support", href: "/services/gtm",
+    cta: "Explore Investor GTM Support", href: "/services/gtm/",
     icon: (<img loading="lazy" src="/images/icons/icon-lightning.svg" alt="" style={{ width: 26, height: 26 }} />),
   },
 ];
@@ -164,7 +164,7 @@ export default function CapitalRaisePage() {
     {
       q: "Do you help after the deck is complete?",
       a: "Yes. Many organizations continue working with Brand Iron through Investor Outreach and Investor GTM Support to help manage fundraising activities, refine messaging based on investor feedback, and maintain momentum throughout the capital raise process.",
-      related: [{ href: "/services/gtm", label: "Explore Our Go-to-Market Strategy Services" }],
+      related: [{ href: "/services/gtm/", label: "Explore Our Go-to-Market Strategy Services" }],
     },
     {
       q: "Do you create financial projections?",
@@ -184,9 +184,9 @@ export default function CapitalRaisePage() {
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://brandiron.net" },
-          { name: "Services", url: "https://brandiron.net/services" },
-          { name: "Capital Raise Support", url: "https://brandiron.net/services/capital-raise" },
+          { name: "Home", url: "https://brandiron.net/" },
+          { name: "Services", url: "https://brandiron.net/services/" },
+          { name: "Capital Raise Support", url: "https://brandiron.net/services/capital-raise/" },
         ]}
       />
       <ServiceSchema
@@ -245,7 +245,7 @@ export default function CapitalRaisePage() {
               </p>
 
               <div className="hero-btns-anim" style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center", marginBottom: 14 }}>
-                <Link href="/contact" style={{
+                <Link href="/contact/" style={{
                   display: "inline-flex", alignItems: "center",
                   fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 14,
                   background: "#d87307", color: "#FFFFFF",
@@ -652,7 +652,7 @@ export default function CapitalRaisePage() {
 
             {/* CTA — closes the section */}
             <div style={{ textAlign: "center", paddingTop: 32, borderTop: "1px solid rgba(255,255,255,0.08)" }}>
-              <Link href="/contact" style={{
+              <Link href="/contact/" style={{
                 display: "inline-flex", alignItems: "center", gap: 10,
                 fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 14,
                 letterSpacing: "0.1em", textTransform: "uppercase",
@@ -793,7 +793,7 @@ export default function CapitalRaisePage() {
                     <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(255,255,255,0.85)", marginBottom: 20 }}>
                       Meet with our team to evaluate your investor readiness, identify opportunities to strengthen your fundraising strategy, and determine the right Capital Raise Support solutions for your business.
                     </p>
-                    <Link href="/contact" style={{
+                    <Link href="/contact/" style={{
                       display: "inline-flex", alignItems: "center", gap: 10,
                       fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 800, fontSize: 17,
                       letterSpacing: "0.02em", textTransform: "uppercase",
@@ -822,7 +822,7 @@ export default function CapitalRaisePage() {
                     <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, lineHeight: 1.75, color: "rgba(255,255,255,0.85)", marginBottom: 20 }}>
                       Raising capital is only one part of sustainable growth. Discover how our Go-to-Market Strategy helps organizations become discoverable, trusted, and chosen while building predictable revenue systems.
                     </p>
-                    <Link href="/services/gtm" style={{
+                    <Link href="/services/gtm/" style={{
                       display: "inline-flex", alignItems: "center", gap: 10,
                       fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 800, fontSize: 17,
                       letterSpacing: "0.02em", textTransform: "uppercase",

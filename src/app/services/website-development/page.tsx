@@ -225,10 +225,10 @@ export default function WebsiteDevelopmentPage() {
       q: "How does Website Development connect to your other services like Brand Strategy or AI Visibility?",
       a: "Brand Strategy defines the positioning and messaging the website communicates. AI Visibility ensures the site is discoverable across search and AI platforms. GTM Strategy defines the conversion paths the site supports, and Revenue Engineering connects the site's lead capture to CRM and reporting systems. Website Development is the digital home where all of these come together.",
       related: [
-        { href: "/services/brand-strategy", label: "Explore Our Brand Strategy Services" },
-        { href: "/services/ai-visibility", label: "Explore Our AI Visibility Services" },
-        { href: "/services/gtm", label: "Explore Our Go-to-Market Strategy Services" },
-        { href: "/services/revenue-engineering", label: "Explore Our Revenue Engineering Services" },
+        { href: "/services/brand-strategy/", label: "Explore Our Brand Strategy Services" },
+        { href: "/services/ai-visibility/", label: "Explore Our AI Visibility Services" },
+        { href: "/services/gtm/", label: "Explore Our Go-to-Market Strategy Services" },
+        { href: "/services/revenue-engineering/", label: "Explore Our Revenue Engineering Services" },
       ],
     },
     {
@@ -245,9 +245,9 @@ export default function WebsiteDevelopmentPage() {
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://brandiron.net" },
-          { name: "Services", url: "https://brandiron.net/services" },
-          { name: "Website Development", url: "https://brandiron.net/services/website-development" },
+          { name: "Home", url: "https://brandiron.net/" },
+          { name: "Services", url: "https://brandiron.net/services/" },
+          { name: "Website Development", url: "https://brandiron.net/services/website-development/" },
         ]}
       />
       <ServiceSchema
@@ -314,7 +314,7 @@ export default function WebsiteDevelopmentPage() {
               </div>
 
               <div className="hero-btns-anim" style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center" }}>
-                <Link href="/contact" style={{
+                <Link href="/contact/" style={{
                   display: "inline-flex", alignItems: "center",
                   fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 14,
                   background: "#d87307", color: "#FFFFFF",
@@ -667,7 +667,7 @@ export default function WebsiteDevelopmentPage() {
                 Whether you&apos;re launching a new website or transforming an existing one, Brand Iron helps you create a digital experience that supports your brand, strengthens credibility, and drives measurable business outcomes.
               </p>
               <div style={{ display: "flex", gap: 24, justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
-                <Link href="/contact" style={{
+                <Link href="/contact/" style={{
                   display: "inline-flex", alignItems: "center",
                   fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 15,
                   background: "#d87307", color: "#FFFFFF",

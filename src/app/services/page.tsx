@@ -8,7 +8,7 @@ const services = [
   {
     number: "01",
     title: "Brand Strategy",
-    href: "/services/brand-strategy",
+    href: "/services/brand-strategy/",
     description: "We forge brands that get chosen, connecting strategy, messaging, identity, digital experiences, and go-to-market execution into one connected brand system built to drive growth.",
     icon: (
       <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="#D87307" strokeWidth="2" strokeLinejoin="round"/><path d="M12 8v6M9 11h6" stroke="#D87307" strokeWidth="2" strokeLinecap="round"/></svg>
@@ -17,7 +17,7 @@ const services = [
   {
     number: "02",
     title: "AI Visibility & Discoverability",
-    href: "/services/ai-visibility",
+    href: "/services/ai-visibility/",
     description: "Helping brands become discoverable, trusted, and recommended across search and AI, integrating SEO, AEO, GEO, technical optimization, entity development, authority building, and strategic content into one connected visibility strategy.",
     icon: (
       <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#D87307" strokeWidth="2"/><path d="M21 21l-4.5-4.5" stroke="#D87307" strokeWidth="2" strokeLinecap="round"/></svg>
@@ -26,7 +26,7 @@ const services = [
   {
     number: "03",
     title: "GTM Strategy",
-    href: "/services/gtm",
+    href: "/services/gtm/",
     description: "Go-to-market strategies built for how buyers make decisions today, connecting strategy, visibility, authority, demand generation, sales, automation, and revenue into one cohesive growth engine.",
     icon: (
       <svg width="30" height="30" viewBox="0 0 32 32" fill="none"><path d="M17.3333 9.3332H28M28 9.3332V19.9998M28 9.3332L17.3333 19.9998L12 14.6665L4 22.6665" stroke="#D87307" strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -35,7 +35,7 @@ const services = [
   {
     number: "04",
     title: "Capital Raise Support",
-    href: "/services/capital-raise",
+    href: "/services/capital-raise/",
     description: "Raising capital requires more than a great pitch deck. We help founders prepare for every stage of the fundraising journey through strategic positioning, investor storytelling, presentation development, investor targeting, and outreach.",
     icon: (
       <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="#D87307" strokeWidth="2" strokeLinejoin="round"/><path d="M9 12l2 2 4-4" stroke="#D87307" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -44,7 +44,7 @@ const services = [
   {
     number: "05",
     title: "Website Development",
-    href: "/services/website-development",
+    href: "/services/website-development/",
     description: "Strategic digital experiences that connect your brand, messaging, user experience, and AI Visibility into one platform designed to help your organization become discoverable, trusted, and chosen.",
     icon: (
       <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="#D87307" strokeWidth="2"/><path d="M3 9h18" stroke="#D87307" strokeWidth="2"/><circle cx="6.5" cy="6.5" r="0.75" fill="#D87307"/><circle cx="9" cy="6.5" r="0.75" fill="#D87307"/></svg>
@@ -53,7 +53,7 @@ const services = [
   {
     number: "06",
     title: "Outbound Growth",
-    href: "/services/outbound-growth",
+    href: "/services/outbound-growth/",
     description: "Outbound growth systems that put your business in front of the right decision-makers, connecting LinkedIn outreach, email campaigns, SDR programs, appointment setting, and sales enablement into one connected pipeline engine.",
     icon: (
       <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#D87307" strokeWidth="2"/><circle cx="12" cy="12" r="4.5" stroke="#D87307" strokeWidth="2"/><circle cx="12" cy="12" r="0.9" fill="#D87307"/></svg>
@@ -62,7 +62,7 @@ const services = [
   {
     number: "07",
     title: "Revenue Engineering",
-    href: "/services/revenue-engineering",
+    href: "/services/revenue-engineering/",
     description: "Revenue Engineering connects your marketing, sales, CRM, automation, funnels, and reporting into one hard-working growth machine, finding the leaks, fixing the handoffs, and tracking what actually drives revenue.",
     icon: (
       <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M4 20V10M11 20V4M18 20v-7" stroke="#D87307" strokeWidth="2" strokeLinecap="round"/><path d="M3 20h18" stroke="#D87307" strokeWidth="2" strokeLinecap="round"/></svg>
@@ -129,8 +129,8 @@ export default function ServicesPage() {
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://brandiron.net" },
-          { name: "Services", url: "https://brandiron.net/services" },
+          { name: "Home", url: "https://brandiron.net/" },
+          { name: "Services", url: "https://brandiron.net/services/" },
         ]}
       />
 
@@ -159,7 +159,7 @@ export default function ServicesPage() {
               </h1>
 
               <div className="hero-btns-anim" style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center" }}>
-                <Link href="/contact" style={{
+                <Link href="/contact/" style={{
                   display: "inline-flex", alignItems: "center",
                   fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 14,
                   background: "#d87307", color: "#FFFFFF",
@@ -290,7 +290,7 @@ export default function ServicesPage() {
                 Book a strategy session and we&apos;ll map the exact services your business needs to build a complete revenue engine.
               </p>
               <div style={{ display: "flex", gap: 24, justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
-                <Link href="/contact" style={{
+                <Link href="/contact/" style={{
                   display: "inline-block", padding: "16px 40px", borderRadius: 6,
                   fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 14,
                   letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none",
@@ -301,7 +301,7 @@ export default function ServicesPage() {
                 >
                   Book a Strategy Session
                 </Link>
-                <Link href="/about" style={{
+                <Link href="/about/" style={{
                   fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 14,
                   letterSpacing: "0.08em", textTransform: "uppercase", textDecoration: "none",
                   color: "#FFFFFF", borderBottom: "1px solid rgba(255,255,255,0.4)", paddingBottom: 2,

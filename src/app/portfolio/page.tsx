@@ -231,8 +231,8 @@ function PortfolioPageContent() {
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://brandiron.net" },
-          { name: "Portfolio", url: "https://brandiron.net/portfolio" },
+          { name: "Home", url: "https://brandiron.net/" },
+          { name: "Portfolio", url: "https://brandiron.net/portfolio/" },
         ]}
       />
 
@@ -273,7 +273,7 @@ function PortfolioPageContent() {
                 >
                   Explore the Work
                 </a>
-                <Link href="/contact" style={{
+                <Link href="/contact/" style={{
                   display: "inline-flex", alignItems: "center",
                   fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 14,
                   background: "transparent", color: "#FFFFFF",
@@ -384,7 +384,7 @@ function PortfolioPageContent() {
               padding: "8px calc(50% - 160px)",
             }}>
               {categoryCards.map(({ id, category, headline, body, services, cta }, i) => (
-                <Link key={id} href={`/portfolio?category=${id}#all-projects`}
+                <Link key={id} href={`/portfolio/?category=${id}#all-projects`}
                   ref={el => { categoryCardRefs.current[i] = el; }}
                   className={`reveal${s4ViewInView ? ' visible' : ''} pf-category-card`}
                   style={{
@@ -579,7 +579,7 @@ function PortfolioPageContent() {
           <p className={`reveal${s6ViewInView ? ' visible' : ''}`} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 16, lineHeight: 1.8, color: "#666", maxWidth: 700, margin: "0 auto 32px" }}>
             The finished work is only part of the story. Explore selected case studies to see the challenge, thinking, execution, and outcomes behind Brand Iron engagements.
           </p>
-          <Link href="/case-studies" className={`reveal${s6ViewInView ? ' visible' : ''}`} style={{
+          <Link href="/case-studies/" className={`reveal${s6ViewInView ? ' visible' : ''}`} style={{
             display: "inline-block", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
             letterSpacing: "0.14em", textTransform: "uppercase", textDecoration: "none",
             background: "#d87307", color: "#FFFFFF",
@@ -606,7 +606,7 @@ function PortfolioPageContent() {
               <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, lineHeight: 1.8, color: "rgba(255,255,255,0.85)", fontStyle: "italic", maxWidth: 640, margin: "0 auto 40px" }}>
                 Whether you&apos;re launching a new venture, repositioning an established company, raising capital, entering new territory, or building your next growth engine, Brand Iron can help you create a stronger path forward.
               </p>
-              <Link href="/contact" style={{
+              <Link href="/contact/" style={{
                 display: "inline-flex", alignItems: "center",
                 fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 15,
                 background: "#d87307", color: "#FFFFFF",
@@ -619,7 +619,7 @@ function PortfolioPageContent() {
                 Book a Strategy Session
               </Link>
               <div>
-                <Link href="/services" style={{
+                <Link href="/services/" style={{
                   fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase",
                   color: "rgba(255,255,255,0.7)", textDecoration: "none", borderBottom: "1px solid rgba(255,255,255,0.3)", paddingBottom: 2,
                   transition: "color 0.2s, border-color 0.2s",

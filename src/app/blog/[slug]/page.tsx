@@ -15,11 +15,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!article) return {};
   const title = article.seoTitle ?? article.title;
   const description = article.metaDescription ?? article.excerpt;
-  const url = `https://brandiron.net/blog/${article.slug}`;
+  const url = `https://brandiron.net/blog/${article.slug}/`;
   return {
     title,
     description,
-    alternates: { canonical: `/blog/${article.slug}` },
+    alternates: { canonical: `/blog/${article.slug}/` },
     openGraph: {
       type: "article",
       url,
@@ -51,9 +51,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://brandiron.net" },
-          { name: "Blog", url: "https://brandiron.net/blog" },
-          { name: article.title, url: `https://brandiron.net/blog/${article.slug}` },
+          { name: "Home", url: "https://brandiron.net/" },
+          { name: "Blog", url: "https://brandiron.net/blog/" },
+          { name: article.title, url: `https://brandiron.net/blog/${article.slug}/` },
         ]}
       />
 
@@ -70,7 +70,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.55) 0%, rgba(8,16,36,0.5) 45%, rgba(8,16,36,0.8) 100%)" }} />
         <div style={{ position: "relative", zIndex: 2, maxWidth: 820, margin: "0 auto" }}>
-          <Link href="/blog" className="back-link" style={{
+          <Link href="/blog/" className="back-link" style={{
             display: "flex", width: "fit-content", alignItems: "center", gap: 8,
             fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 600,
             color: "rgba(255,255,255,0.6)", textDecoration: "none", marginBottom: 32,
@@ -201,7 +201,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           })}
 
           <div style={{ marginTop: 48, paddingTop: 32, borderTop: "1px solid #EEEBE7" }}>
-            <Link href="/contact" className="cta-btn-primary" style={{
+            <Link href="/contact/" className="cta-btn-primary" style={{
               display: "inline-flex", alignItems: "center",
               fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 600, fontSize: 14,
               background: "#d87307", color: "#FFFFFF",
@@ -248,7 +248,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           </h3>
           <div className="article-related-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
             {related.map(({ slug: rSlug, category, title, readTime }) => (
-              <Link key={rSlug} href={`/blog/${rSlug}`} className="related-card" style={{
+              <Link key={rSlug} href={`/blog/${rSlug}/`} className="related-card" style={{
                 display: "block", position: "relative", background: "rgba(255,255,255,0.04)",
                 border: "1px solid rgba(255,255,255,0.08)", borderRadius: 10, padding: "24px 22px",
                 textDecoration: "none", overflow: "hidden", transition: "border-color 0.2s, background 0.2s, transform 0.2s",
@@ -293,7 +293,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 Book a strategy session and we&apos;ll map what&apos;s actually working, and what to fix first, for your business.
               </p>
               <div style={{ display: "flex", gap: 24, justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
-                <Link href="/contact" className="cta-btn-primary" style={{
+                <Link href="/contact/" className="cta-btn-primary" style={{
                   display: "inline-block", padding: "16px 40px", borderRadius: 6,
                   fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 14,
                   letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none",
@@ -301,7 +301,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 }}>
                   Book a Strategy Session
                 </Link>
-                <Link href="/blog" className="cta-btn-secondary" style={{
+                <Link href="/blog/" className="cta-btn-secondary" style={{
                   fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 14,
                   letterSpacing: "0.08em", textTransform: "uppercase", textDecoration: "none",
                   color: "#FFFFFF", borderBottom: "1px solid rgba(255,255,255,0.4)", paddingBottom: 2,
