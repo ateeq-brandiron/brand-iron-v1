@@ -21,6 +21,15 @@ export const portfolioCategories: PortfolioCategory[] = [
   { id: "revenue-growth", label: "Revenue Growth" },
 ];
 
+/** Each card/expand-modal shows one piece of work, so its category badge reads better singular (e.g. "Website" not "Websites") - unlike the filter tabs, which pair the label with a count and stay plural. */
+const PORTFOLIO_ITEM_CATEGORY_LABEL_OVERRIDES: Partial<Record<PortfolioCategoryId, string>> = {
+  websites: "Website",
+};
+
+export function portfolioItemCategoryLabel(category: PortfolioCategoryId): string {
+  return PORTFOLIO_ITEM_CATEGORY_LABEL_OVERRIDES[category] ?? portfolioCategories.find(c => c.id === category)?.label ?? category;
+}
+
 export type PortfolioItem = {
   slug: string;
   category: PortfolioCategoryId;

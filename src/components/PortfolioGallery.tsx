@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { portfolioCategories, PortfolioCategoryId, PortfolioItem } from "@/data/portfolio";
+import { portfolioCategories, portfolioItemCategoryLabel, PortfolioCategoryId, PortfolioItem } from "@/data/portfolio";
 import WebsiteScrollPreview from "@/components/WebsiteScrollPreview";
 
 const INITIAL_LIMIT = 6;
@@ -82,7 +82,7 @@ export default function PortfolioGallery({ items, initialCategory }: { items: Po
       ) : (
         <div className="pf-gallery-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
           {visibleItems.map(item => {
-            const catLabel = portfolioCategories.find(c => c.id === item.category)?.label ?? item.category;
+            const catLabel = portfolioItemCategoryLabel(item.category);
             return (
               <button
                 key={item.slug}
@@ -214,7 +214,7 @@ export default function PortfolioGallery({ items, initialCategory }: { items: Po
               </div>
 
               <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#d87307", marginBottom: 10 }}>
-                {portfolioCategories.find(c => c.id === expanded.category)?.label}
+                {portfolioItemCategoryLabel(expanded.category)}
               </p>
               <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(20px, 2.6vw, 28px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", marginBottom: 20 }}>
                 {expanded.title}
