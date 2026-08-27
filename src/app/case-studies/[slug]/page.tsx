@@ -123,7 +123,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
                 {cs.images.slice(1).map((src, i) => (
                   <div key={i} style={{ position: "relative", aspectRatio: "16 / 10", overflow: "hidden", borderRadius: 12, border: "1px solid #EEEBE7", background: "#F0EEEA" }}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img loading="lazy" src={src} alt={`${cs.client} website screenshot ${i + 2}`} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                    <img loading="lazy" src={src} alt={`${cs.client} website screenshot ${i + 2}`} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
                   </div>
                 ))}
               </div>
