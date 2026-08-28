@@ -326,11 +326,11 @@ export const portfolioItems: PortfolioItem[] = [
     title: "Ascendancy MC Inc.",
     client: "Ascendancy MC Inc.",
     type: "logo",
-    thumbnail: "/images/portfolio/ascendancy-mc/ascendancy-mc-logo.png",
+    thumbnail: "/images/client-logos/ascendancy-mc-inc-logo.png",
     thumbnailAlt: "Ascendancy MC Inc. logo, a green concentric ring mark with wordmark and tagline on navy",
     description: "A brand identity for a management consulting firm, pairing a concentric ring mark with a confident wordmark built for credibility with institutional clients.",
     images: [
-      "/images/portfolio/ascendancy-mc/ascendancy-mc-logo.png",
+      "/images/client-logos/ascendancy-mc-inc-logo.png",
     ],
   },
   {
@@ -348,7 +348,7 @@ export const portfolioItems: PortfolioItem[] = [
       "/images/portfolio/ascendancy-mc/ascendancy-positioning.jpg",
       "/images/portfolio/ascendancy-mc/ascendancy-faqs.jpg",
     ],
-    logoThumbnail: "/images/portfolio/ascendancy-mc/ascendancy-mc-logo.png",
+    logoThumbnail: "/images/client-logos/ascendancy-mc-inc-logo.png",
   },
   {
     slug: "bellwether-brand-identity",
@@ -360,13 +360,13 @@ export const portfolioItems: PortfolioItem[] = [
     thumbnailAlt: "Bellwether bell mark and wordmark on solid dark background",
     description: "A brand identity for a signals platform, pairing a bell mark with a deep-space color system and confident typography built for a technical, trust-driven audience.",
     images: [
-      "/images/portfolio/bellwether/bellwether-logo.jpg",
+      "/images/client-logos/bellwether-logo.svg",
       "/images/portfolio/bellwether/bellwether-brand-signature.jpg",
       "/images/portfolio/bellwether/bellwether-color-palette.jpg",
       "/images/portfolio/bellwether/bellwether-typography.jpg",
       "/images/portfolio/bellwether/bellwether-logo-usage.jpg",
     ],
-    logoThumbnail: "/images/portfolio/bellwether/bellwether-logo.jpg",
+    logoThumbnail: "/images/client-logos/bellwether-logo.svg",
   },
   {
     slug: "sage-brand-identity",
@@ -378,10 +378,10 @@ export const portfolioItems: PortfolioItem[] = [
     thumbnailAlt: "Sage Professional Services logo mark and wordmark with tagline",
     description: "A brand identity for a revenue growth advisory, exploring mark and wordmark pairings to land on a confident, professional lockup with tagline treatment.",
     images: [
-      "/images/portfolio/sage/sage-logo-clean.png",
+      "/images/client-logos/sage-logo.png",
       "/images/portfolio/sage/sage-logo-design.png",
     ],
-    logoThumbnail: "/images/portfolio/sage/sage-logo-clean.png",
+    logoThumbnail: "/images/client-logos/sage-logo.png",
   },
   {
     slug: "sage-messaging-platform",
@@ -393,10 +393,10 @@ export const portfolioItems: PortfolioItem[] = [
     thumbnailAlt: "Sage Professional Services core positioning statement slide",
     description: "A messaging platform for a revenue growth advisory, defining its core positioning and Chief Revenue Officer-led model into a clear story for the market.",
     images: [
-      "/images/portfolio/sage/sage-logo-clean.png",
+      "/images/client-logos/sage-logo.png",
       "/images/portfolio/sage/sage-messaging-platform.png",
     ],
-    logoThumbnail: "/images/portfolio/sage/sage-logo-clean.png",
+    logoThumbnail: "/images/client-logos/sage-logo.png",
   },
   {
     slug: "scamrocket-brand-identity",
@@ -408,12 +408,12 @@ export const portfolioItems: PortfolioItem[] = [
     thumbnailAlt: "ScamRocket rocket mark and wordmark on a deep-space background",
     description: "A brand identity for a scam-prevention platform, pairing a rocket mark with a deep-space color system built to feel modern, alert, and trustworthy.",
     images: [
-      "/images/portfolio/scamrocket/scamrocket-wordmark.jpg",
+      "/images/client-logos/scamrocket-logo.png",
       "/images/portfolio/scamrocket/scamrocket-branding-guidelines.png",
       "/images/portfolio/scamrocket/scamrocket-icon-mark.jpg",
       "/images/portfolio/scamrocket/scamrocket-color-palette.jpg",
     ],
-    logoThumbnail: "/images/portfolio/scamrocket/scamrocket-wordmark.jpg",
+    logoThumbnail: "/images/client-logos/scamrocket-logo.png",
   },
   {
     slug: "scamrocket-capital-raise",
@@ -431,7 +431,7 @@ export const portfolioItems: PortfolioItem[] = [
       "/images/portfolio/scamrocket-capital/scamrocket-ecosystem-v2.jpg",
       "/images/portfolio/scamrocket-capital/scamrocket-trust-handshake.jpg",
     ],
-    logoThumbnail: "/images/portfolio/scamrocket/scamrocket-wordmark.jpg",
+    logoThumbnail: "/images/client-logos/scamrocket-logo.png",
   },
   {
     slug: "silver-stag-brewing-capital-raise",
@@ -448,7 +448,7 @@ export const portfolioItems: PortfolioItem[] = [
       "/images/portfolio/silver-stag/silver-stag-our-traction.jpg",
       "/images/portfolio/silver-stag/silver-stag-why-now.jpg",
     ],
-    logoThumbnail: "/images/portfolio/silver-stag/silver-stag-logo-card.jpg",
+    logoThumbnail: "/images/client-logos/silver-stag-brewing-logo.png",
   },
   {
     slug: "strike-flyers-capital-raise",
@@ -464,7 +464,7 @@ export const portfolioItems: PortfolioItem[] = [
       "/images/portfolio/strike-flyers/strike-flyers-intro.jpg",
       "/images/portfolio/strike-flyers/strike-flyers-model-v2.jpg",
     ],
-    logoThumbnail: "/images/portfolio/strike-flyers/strike-flyers-logo-card.jpg",
+    logoThumbnail: "/images/client-logos/strike-flyers-logo.svg",
   },
   {
     slug: "rfd-legacy-advisors-brand-identity",
@@ -521,10 +521,10 @@ export const portfolioItems: PortfolioItem[] = [
     thumbnailAlt: "CESA logo, a shield mark beside the wordmark Colorado Emergency Services Association",
     description: "A brand identity for a nonprofit emergency services association, pairing a shield mark with a confident wordmark built for trust with Colorado's first responders.",
     images: [
-      "/images/portfolio/cesa/cesa-logo.png",
+      "/images/client-logos/cesa-logo.png",
       "/images/portfolio/cesa/cesa-signage-mockup.jpg",
     ],
-    logoThumbnail: "/images/portfolio/cesa/cesa-logo.png",
+    logoThumbnail: "/images/client-logos/cesa-logo.png",
   },
   {
     slug: "cesa-messaging-platform",
@@ -539,7 +539,7 @@ export const portfolioItems: PortfolioItem[] = [
       "/images/portfolio/cesa/cesa-messaging.png",
       "/images/portfolio/cesa/cesa-messaging-value-proposition.png",
     ],
-    logoThumbnail: "/images/case-studies/cesa/cesa-logo-card.jpg",
+    logoThumbnail: "/images/client-logos/cesa-logo.png",
   },
   {
     slug: "legacy-relief-project-messaging",

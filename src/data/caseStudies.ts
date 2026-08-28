@@ -113,7 +113,7 @@ export const caseStudies: CaseStudy[] = [
     client: "Colorado Emergency Services Association (CESA)",
     title: "Colorado Emergency Services Association",
     excerpt: "CESA is a nonprofit membership organization giving Colorado emergency service districts a single, trusted source for risk reduction, workers' comp, and safety resources.",
-    thumbnail: "/images/case-studies/cesa/cesa-logo-card.jpg",
+    thumbnail: "/images/client-logos/cesa-logo.png",
     thumbnailAlt: "CESA logo, a shield mark beside the wordmark Colorado Emergency Services Association",
     images: [
       "/images/case-studies/cesa/cesa-hero.jpg",
