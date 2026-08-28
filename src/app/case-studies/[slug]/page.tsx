@@ -168,7 +168,9 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
             More Success Stories
           </h3>
           <div className="cs-related-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
-            {related.map(r => (
+            {related.map(r => {
+              const hoverImage = r.cardHoverImage ?? r.images[0];
+              return (
               <Link key={r.slug} href={`/case-studies/${r.slug}/`} className="related-card" style={{
                 display: "block", position: "relative", background: "#FFFFFF",
                 border: "1px solid #EEEBE7", borderRadius: 10,
@@ -179,7 +181,11 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
                 <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 10, left: 10, width: 24, height: 24, opacity: 0, transition: "opacity 0.25s ease", zIndex: 3 }} />
                 <div style={{ position: "relative", aspectRatio: "16 / 10", overflow: "hidden", background: "#F0EEEA" }}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={r.thumbnail} alt={r.thumbnailAlt} className="related-card-img" style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.4s ease" }} />
+                  <img src={r.thumbnail} alt={r.thumbnailAlt} className="related-card-img" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "contain", padding: 20, transition: "opacity 0.4s ease" }} />
+                  {hoverImage && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={hoverImage} alt={`${r.client} website screenshot`} className="related-card-hero" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "contain", opacity: 0, transition: "opacity 0.4s ease" }} />
+                  )}
                 </div>
                 <div style={{ padding: "20px 22px", position: "relative" }}>
                   <div style={{ position: "absolute", top: 0, left: 22, right: 22, height: 2, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.2))" }} />
@@ -189,13 +195,15 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
                   <h4 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 14, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", lineHeight: 1.4 }}>{r.title}</h4>
                 </div>
               </Link>
-            ))}
+              );
+            })}
           </div>
         </div>
         <style>{`
           .related-card:hover { transform: translateY(-4px); border-color: rgba(216,115,7,0.3) !important; box-shadow: 0 16px 40px rgba(0,0,0,0.08); }
           .related-card:hover .corner-bracket { opacity: 1 !important; }
-          .related-card:hover .related-card-img { transform: scale(1.08); }
+          .related-card:hover .related-card-img { opacity: 0 !important; }
+          .related-card:hover .related-card-hero { opacity: 1 !important; }
           @media (max-width: 900px) {
             .cs-related-grid { grid-template-columns: repeat(2, 1fr) !important; }
           }

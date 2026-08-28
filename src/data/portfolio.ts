@@ -125,7 +125,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: "Haefele Flanagan & Co.",
     client: "Haefele Flanagan & Co.",
     type: "deck",
-    thumbnail: "/images/portfolio/haefele-flanagan/haefele-flanagan-logo-card.jpg",
+    thumbnail: "/images/portfolio/haefele-flanagan/haefele-timeline.jpg",
     thumbnailAlt: "Haefele Flanagan & Co. diamond HF mark over a converging glass office building",
     description: "A buy-side/sell-side M&A pitchbook for a middle-market advisory firm, translating decades of deal experience and a disciplined acquisition process into a clear, confident story for prospective clients.",
     images: [
@@ -135,6 +135,7 @@ export const portfolioItems: PortfolioItem[] = [
       "/images/portfolio/haefele-flanagan/haefele-our-process.jpg",
       "/images/portfolio/haefele-flanagan/haefele-our-promise.jpg",
     ],
+    logoThumbnail: "/images/portfolio/haefele-flanagan/haefele-flanagan-logo-card.jpg",
   },
   {
     slug: "volition-hospitality-capital-raise",
@@ -356,15 +357,16 @@ export const portfolioItems: PortfolioItem[] = [
     client: "Bellwether",
     type: "logo",
     thumbnail: "/images/portfolio/bellwether/bellwether-brand-signature.jpg",
-    thumbnailAlt: "Bellwether logo lockup and color variants on the brand's dotted-signal dark background",
+    thumbnailAlt: "Bellwether bell mark and wordmark on solid dark background",
     description: "A brand identity for a signals platform, pairing a bell mark with a deep-space color system and confident typography built for a technical, trust-driven audience.",
     images: [
-      "/images/portfolio/bellwether/bellwether-brand-signature.jpg",
       "/images/portfolio/bellwether/bellwether-logo.jpg",
+      "/images/portfolio/bellwether/bellwether-brand-signature.jpg",
       "/images/portfolio/bellwether/bellwether-color-palette.jpg",
       "/images/portfolio/bellwether/bellwether-typography.jpg",
       "/images/portfolio/bellwether/bellwether-logo-usage.jpg",
     ],
+    logoThumbnail: "/images/portfolio/bellwether/bellwether-logo.jpg",
   },
   {
     slug: "sage-brand-identity",
@@ -373,11 +375,13 @@ export const portfolioItems: PortfolioItem[] = [
     client: "Sage Professional Services",
     type: "logo",
     thumbnail: "/images/portfolio/sage/sage-logo-design.png",
-    thumbnailAlt: "Sage Professional Services logo concepts with tagline over a sagebrush photo",
+    thumbnailAlt: "Sage Professional Services logo mark and wordmark with tagline",
     description: "A brand identity for a revenue growth advisory, exploring mark and wordmark pairings to land on a confident, professional lockup with tagline treatment.",
     images: [
+      "/images/portfolio/sage/sage-logo-clean.png",
       "/images/portfolio/sage/sage-logo-design.png",
     ],
+    logoThumbnail: "/images/portfolio/sage/sage-logo-clean.png",
   },
   {
     slug: "sage-messaging-platform",
@@ -389,8 +393,10 @@ export const portfolioItems: PortfolioItem[] = [
     thumbnailAlt: "Sage Professional Services core positioning statement slide",
     description: "A messaging platform for a revenue growth advisory, defining its core positioning and Chief Revenue Officer-led model into a clear story for the market.",
     images: [
+      "/images/portfolio/sage/sage-logo-clean.png",
       "/images/portfolio/sage/sage-messaging-platform.png",
     ],
+    logoThumbnail: "/images/portfolio/sage/sage-logo-clean.png",
   },
   {
     slug: "scamrocket-brand-identity",
@@ -399,14 +405,15 @@ export const portfolioItems: PortfolioItem[] = [
     client: "ScamRocket",
     type: "logo",
     thumbnail: "/images/portfolio/scamrocket/scamrocket-branding-guidelines.png",
-    thumbnailAlt: "ScamRocket brand guidelines cover with rocket mark and wordmark on a deep-space background",
+    thumbnailAlt: "ScamRocket rocket mark and wordmark on a deep-space background",
     description: "A brand identity for a scam-prevention platform, pairing a rocket mark with a deep-space color system built to feel modern, alert, and trustworthy.",
     images: [
-      "/images/portfolio/scamrocket/scamrocket-branding-guidelines.png",
       "/images/portfolio/scamrocket/scamrocket-wordmark.jpg",
+      "/images/portfolio/scamrocket/scamrocket-branding-guidelines.png",
       "/images/portfolio/scamrocket/scamrocket-icon-mark.jpg",
       "/images/portfolio/scamrocket/scamrocket-color-palette.jpg",
     ],
+    logoThumbnail: "/images/portfolio/scamrocket/scamrocket-wordmark.jpg",
   },
   {
     slug: "scamrocket-capital-raise",
@@ -465,7 +472,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: "RFD Legacy Advisors",
     client: "RFD Legacy Advisors",
     type: "logo",
-    thumbnail: "/images/portfolio/rfd-legacy-advisors/rfd-legacy-advisors-logo.png",
+    thumbnail: "/images/portfolio/rfd-legacy-advisors/rfd-legacy-advisors-signage-mockup.jpg",
     thumbnailAlt: "RFD Legacy Advisors logo, a golden leaping antelope mark above the navy wordmark RFD Legacy Advisors",
     description: "A brand identity for a business brokerage and M&A advisory, pairing a leaping mark with a confident wordmark built for trust with business owners in transition.",
     images: [
@@ -473,6 +480,7 @@ export const portfolioItems: PortfolioItem[] = [
       "/images/portfolio/rfd-legacy-advisors/rfd-legacy-advisors-color-palette.jpg",
       "/images/portfolio/rfd-legacy-advisors/rfd-legacy-advisors-signage-mockup.jpg",
     ],
+    logoThumbnail: "/images/portfolio/rfd-legacy-advisors/rfd-legacy-advisors-logo.png",
   },
   {
     slug: "cities-project-global-sales-deck",
@@ -495,11 +503,13 @@ export const portfolioItems: PortfolioItem[] = [
     client: "Cities Project Global",
     type: "logo",
     thumbnail: "/images/portfolio/cities-project-global/cities-project-global-brand-guidelines.png",
-    thumbnailAlt: "Cities Project Global logo shown across its Deep Denim, True Blue, and Lawn color palette",
+    thumbnailAlt: "Cities Project Global mountain-and-hand mark and wordmark",
     description: "A brand identity for a global ministry organization, defining a full color and logo system built for consistent use across every application.",
     images: [
+      "/images/client-logos/cities-project-global-logo.svg",
       "/images/portfolio/cities-project-global/cities-project-global-brand-guidelines.png",
     ],
+    logoThumbnail: "/images/client-logos/cities-project-global-logo.svg",
   },
   {
     slug: "cesa-brand-identity",
@@ -507,13 +517,14 @@ export const portfolioItems: PortfolioItem[] = [
     title: "Colorado Emergency Services Association (CESA)",
     client: "Colorado Emergency Services Association (CESA)",
     type: "logo",
-    thumbnail: "/images/portfolio/cesa/cesa-logo.png",
+    thumbnail: "/images/portfolio/cesa/cesa-signage-mockup.jpg",
     thumbnailAlt: "CESA logo, a shield mark beside the wordmark Colorado Emergency Services Association",
     description: "A brand identity for a nonprofit emergency services association, pairing a shield mark with a confident wordmark built for trust with Colorado's first responders.",
     images: [
       "/images/portfolio/cesa/cesa-logo.png",
       "/images/portfolio/cesa/cesa-signage-mockup.jpg",
     ],
+    logoThumbnail: "/images/portfolio/cesa/cesa-logo.png",
   },
   {
     slug: "cesa-messaging-platform",

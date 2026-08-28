@@ -101,14 +101,14 @@ export default function PortfolioGallery({ items, initialCategory }: { items: Po
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={item.logoThumbnail ?? item.thumbnail} alt={item.thumbnailAlt} className={`pf-gallery-img${item.logoThumbnail ? " pf-gallery-img--crossfade" : ""}`} style={{
                     position: "absolute", inset: 0, width: "100%", height: "100%",
-                    objectFit: "cover",
-                    transition: item.logoThumbnail ? "opacity 0.4s ease" : "transform 0.4s ease",
+                    objectFit: "contain", padding: item.logoThumbnail ? 24 : 0,
+                    transition: "opacity 0.4s ease",
                   }} />
                   {item.logoThumbnail && (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img loading="lazy" src={item.thumbnail} alt={item.thumbnailAlt} className="pf-gallery-hero" style={{
-                      position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover",
-                      opacity: 0, transition: "opacity 0.4s ease, transform 0.4s ease",
+                    <img src={item.thumbnail} alt={item.thumbnailAlt} className="pf-gallery-hero" style={{
+                      position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "contain",
+                      opacity: 0, transition: "opacity 0.4s ease",
                     }} />
                   )}
                   <div className="pf-gallery-scrim" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, transparent 55%, rgba(8,16,36,0.75) 100%)", opacity: 0, transition: "opacity 0.25s ease" }} />
@@ -237,9 +237,8 @@ export default function PortfolioGallery({ items, initialCategory }: { items: Po
       <style>{`
         .pf-gallery-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(0,0,0,0.1); border-color: rgba(216,115,7,0.3) !important; }
         .pf-gallery-card:hover .corner-bracket { opacity: 1 !important; }
-        .pf-gallery-card:hover .pf-gallery-img { transform: scale(1.08); }
         .pf-gallery-card:hover .pf-gallery-img--crossfade { opacity: 0 !important; }
-        .pf-gallery-card:hover .pf-gallery-hero { opacity: 1 !important; transform: scale(1.08); }
+        .pf-gallery-card:hover .pf-gallery-hero { opacity: 1 !important; }
         .pf-gallery-card:hover .pf-gallery-scrim { opacity: 1 !important; }
         .pf-gallery-card:hover .pf-gallery-view { opacity: 1 !important; transform: translateY(0) !important; }
         @media (max-width: 900px) {
