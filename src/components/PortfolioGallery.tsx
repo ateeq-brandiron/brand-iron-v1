@@ -101,7 +101,7 @@ export default function PortfolioGallery({ items, initialCategory }: { items: Po
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={item.logoThumbnail ?? item.thumbnail} alt={item.thumbnailAlt} className={`pf-gallery-img${item.logoThumbnail ? " pf-gallery-img--crossfade" : ""}`} style={{
                     position: "absolute", inset: 0, width: "100%", height: "100%",
-                    objectFit: "contain", padding: item.logoThumbnail ? 24 : 0,
+                    objectFit: "contain", padding: item.logoThumbnail && !item.logoFullBleed ? 24 : 0,
                     transition: "opacity 0.4s ease",
                   }} />
                   {item.logoThumbnail && (

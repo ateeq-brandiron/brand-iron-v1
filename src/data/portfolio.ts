@@ -44,6 +44,8 @@ export type PortfolioItem = {
   fullPageImage?: string;
   /** Clean client logo shown by default on the grid card; hovering crossfades to `thumbnail`. Used for "website" and "deck" items whose thumbnail is a busy hero/cover rather than a plain logo. */
   logoThumbnail?: string;
+  /** Set when `logoThumbnail` is itself a full-bleed photo/design (not a plain logo on white) so the card renders it edge-to-edge instead of with logo breathing-room padding. */
+  logoFullBleed?: boolean;
   /** Additional real deliverable pages shown as a gallery in the expand modal (logo/deck items). Falls back to [thumbnail] if omitted. */
   images?: string[];
 };
@@ -137,6 +139,7 @@ export const portfolioItems: PortfolioItem[] = [
       "/images/portfolio/haefele-flanagan/haefele-our-promise.jpg",
     ],
     logoThumbnail: "/images/portfolio/haefele-flanagan/haefele-flanagan-logo-card.jpg",
+    logoFullBleed: true,
   },
   {
     slug: "volition-hospitality-capital-raise",
@@ -168,6 +171,7 @@ export const portfolioItems: PortfolioItem[] = [
     images: [
       "/images/portfolio/black-lake/black-lake-brand-identity.jpg",
     ],
+    logoThumbnail: "/images/client-logos/black-lake-capital-logo.png",
   },
   {
     slug: "black-lake-sales-deck",
@@ -194,25 +198,13 @@ export const portfolioItems: PortfolioItem[] = [
     type: "logo",
     thumbnail: "/images/portfolio/msp-accelerator/msp-branding-cover.jpg",
     thumbnailAlt: "MSP Platform Accelerator logo over a navy gradient background",
-    description: "A brand identity refresh for an MSP acquisition platform, updating the logo lockup and establishing a clear color and imagery system for consistent use across every application.",
+    description: "A brand identity for an MSP acquisition platform, refining the logo lockup's proportions and spacing, then establishing a clear color and imagery system for consistent use across every application.",
     images: [
       "/images/portfolio/msp-accelerator/msp-branding-cover.jpg",
-      "/images/portfolio/msp-accelerator/msp-logo-options.jpg",
-      "/images/portfolio/msp-accelerator/msp-color-palette.jpg",
-    ],
-  },
-  {
-    slug: "msp-logo-revision",
-    category: "brand-identity",
-    title: "MSP Platform Accelerator",
-    client: "MSP Platform Accelerator",
-    type: "logo",
-    thumbnail: "/images/portfolio/msp-logo-revision/msp-logo-revision-usage.jpg",
-    thumbnailAlt: "Revised MSP Platform Accelerator logo in navy blue over a white background",
-    description: "A logo revision for an MSP acquisition platform, refining the mark's proportions and spacing for sharper reproduction across both light and dark applications.",
-    images: [
       "/images/portfolio/msp-logo-revision/msp-logo-revision-usage.jpg",
       "/images/portfolio/msp-logo-revision/msp-logo-revision-cover.jpg",
+      "/images/portfolio/msp-accelerator/msp-logo-options.jpg",
+      "/images/portfolio/msp-accelerator/msp-color-palette.jpg",
     ],
     logoThumbnail: "/images/client-logos/msp-platform-accelerator-logo.png",
   },
@@ -224,25 +216,13 @@ export const portfolioItems: PortfolioItem[] = [
     type: "logo",
     thumbnail: "/images/portfolio/volition-hospitality/volition-logo-mark.jpg",
     thumbnailAlt: "Volition Hospitality starburst logo mark in teal and gold",
-    description: "A brand identity for a luxury hospitality investment firm, pairing a radiant starburst mark with a warm, confident color palette built for elevated guest experiences.",
+    description: "A brand identity for a luxury hospitality investment firm, testing the starburst mark and wordmark across color and weight variations before pairing the final lockup with a warm, confident color palette built for elevated guest experiences.",
     images: [
       "/images/portfolio/volition-hospitality/volition-logo-mark.jpg",
+      "/images/portfolio/volition-hospitality-logo-redesign/volition-hospitality-logo-redesign-options.jpg",
       "/images/portfolio/volition-hospitality/volition-color-palette.jpg",
     ],
-  },
-  {
-    slug: "volition-hospitality-logo-redesign",
-    category: "brand-identity",
-    title: "Volition Hospitality",
-    client: "Volition Hospitality",
-    type: "logo",
-    thumbnail: "/images/portfolio/volition-hospitality-logo-redesign/volition-hospitality-logo-redesign-mark.jpg",
-    thumbnailAlt: "Volition Hospitality starburst logo mark redesign in teal and gold",
-    description: "A logo redesign exploration for a luxury hospitality investment firm, testing the starburst mark and wordmark across color and weight variations to land on its most confident lockup.",
-    images: [
-      "/images/portfolio/volition-hospitality-logo-redesign/volition-hospitality-logo-redesign-mark.jpg",
-      "/images/portfolio/volition-hospitality-logo-redesign/volition-hospitality-logo-redesign-options.jpg",
-    ],
+    logoThumbnail: "/images/client-logos/volition-hospitality-logo.svg",
   },
   {
     slug: "ares-website",
