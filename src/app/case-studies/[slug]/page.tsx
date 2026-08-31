@@ -119,11 +119,11 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
               <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 2.6vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 24 }}>
                 A Closer Look
               </h2>
-              <div className="cs-visuals-grid" style={{ display: "grid", gridTemplateColumns: cs.images.length - 1 === 1 ? "1fr" : "repeat(2, 1fr)", gap: 20 }}>
+              <div className="cs-visuals-grid" style={{ columns: cs.images.length - 1 === 1 ? 1 : 2, columnGap: 20 }}>
                 {cs.images.slice(1).map((src, i) => (
-                  <div key={i} style={{ position: "relative", aspectRatio: "16 / 10", overflow: "hidden", borderRadius: 12, border: "1px solid #EEEBE7", background: "#F0EEEA" }}>
+                  <div key={i} style={{ breakInside: "avoid", marginBottom: 20, borderRadius: 12, overflow: "hidden", border: "1px solid #EEEBE7" }}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img loading="lazy" src={src} alt={`${cs.client} website screenshot ${i + 2}`} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+                    <img loading="lazy" src={src} alt={`${cs.client} website screenshot ${i + 2}`} style={{ width: "100%", height: "auto", display: "block" }} />
                   </div>
                 ))}
               </div>
@@ -132,7 +132,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
         </div>
         <style>{`
           @media (max-width: 700px) {
-            .cs-visuals-grid { grid-template-columns: 1fr !important; }
+            .cs-visuals-grid { columns: 1 !important; }
           }
         `}</style>
       </section>
