@@ -40,7 +40,7 @@ export const caseStudies: CaseStudy[] = [
     client: "Volition Hospitality",
     title: "Volition Hospitality",
     excerpt: "Volition Hospitality transforms underperforming hotels into high-return investments through strategic renovations and elevated guest experiences.",
-    thumbnail: "/images/case-studies/volition-hospitality/volition-hospitality-logo-card.jpg",
+    thumbnail: "/images/client-logos/volition-hospitality-logo.svg",
     thumbnailAlt: "Volition Hospitality logo, a starburst mark above the wordmark Hospitality Tailored To You",
     images: [
       "/images/case-studies/volition-hospitality/volition-hospitality-hero.jpg",
@@ -59,7 +59,7 @@ export const caseStudies: CaseStudy[] = [
     client: "Black Lake Capital",
     title: "Black Lake Capital",
     excerpt: "Black Lake Capital is a boutique investment firm specializing in early growth companies in software and technology, providing strategic capital and hands-on operational expertise.",
-    thumbnail: "/images/case-studies/black-lake/black-lake-logo-card.jpg",
+    thumbnail: "/images/client-logos/black-lake-capital-logo.png",
     thumbnailAlt: "Black Lake Capital logo mark and wordmark",
     images: [
       "/images/case-studies/black-lake/black-lake-hero.jpg",
@@ -77,7 +77,7 @@ export const caseStudies: CaseStudy[] = [
     client: "Maadaadizi",
     title: "Maadaadizi",
     excerpt: "Maadaadizi is a hospitality investment, development, and management company dedicated to creating meaningful guest experiences across a diverse portfolio of hotels, independent brands, and restaurants.",
-    thumbnail: "/images/case-studies/maadaadizi/maadaadizi-logo-card.jpg",
+    thumbnail: "/images/client-logos/maadaadizi-logo.png",
     thumbnailAlt: "Maadaadizi logo, a flower-shaped mark above the wordmark Maadaadizi",
     images: [
       "/images/case-studies/maadaadizi/maadaadizi-hero.jpg",
@@ -95,7 +95,7 @@ export const caseStudies: CaseStudy[] = [
     client: "Aardex Real Estate Services (ARES)",
     title: "Aardex Real Estate Services (ARES)",
     excerpt: "ARES is a vertically integrated commercial real estate company providing development, design, construction, brokerage, and property management under one roof.",
-    thumbnail: "/images/case-studies/ares/ares-logo-card.jpg",
+    thumbnail: "/images/client-logos/aardex-real-estate-logo.png",
     thumbnailAlt: "ARES logo, a mountain mark above the wordmark Aardex Real Estate Services",
     images: [
       "/images/case-studies/ares/ares-hero.jpg",
@@ -132,7 +132,7 @@ export const caseStudies: CaseStudy[] = [
     client: "Offen Petroleum",
     title: "Offen Petroleum",
     excerpt: "Offen Petroleum is a wholesale distributor of fuel, lubricants, propane, and DEF, serving commercial, industrial, and government customers nationwide.",
-    thumbnail: "/images/case-studies/offen-petroleum/offen-petroleum-logo-card.jpg",
+    thumbnail: "/images/client-logos/offen-petroleum-logo.png",
     thumbnailAlt: "Offen Petroleum logo mark and wordmark",
     images: [
       "/images/case-studies/offen-petroleum/offen-petroleum-hero.jpg",
@@ -150,7 +150,7 @@ export const caseStudies: CaseStudy[] = [
     client: "US Transport",
     title: "US Transport",
     excerpt: "US Transport provides strategic bulk transportation and logistics solutions for mining, construction, manufacturing, and heavy industry.",
-    thumbnail: "/images/case-studies/us-transport/us-transport-logo-card.jpg",
+    thumbnail: "/images/client-logos/us-transport-logo.png",
     thumbnailAlt: "US Transport logo mark and wordmark",
     images: [
       "/images/case-studies/us-transport/us-transport-hero.jpg",
@@ -169,7 +169,7 @@ export const caseStudies: CaseStudy[] = [
     client: "Innovatix Technology Partners",
     title: "Innovatix Technology Partners",
     excerpt: "Innovatix helps organizations modernize legacy systems and adopt cloud and AI technologies, backed by more than 30 years of enterprise delivery experience.",
-    thumbnail: "/images/case-studies/innovatix/innovatix-logo-card.jpg",
+    thumbnail: "/images/client-logos/innovatix-technology-partners-logo.png",
     thumbnailAlt: "Innovatix Technology Partners logo and wordmark",
     images: [
       "/images/case-studies/innovatix/innovatix-hero.jpg",

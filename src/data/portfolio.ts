@@ -55,7 +55,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: "Innovatix Technology Partners",
     client: "Innovatix Technology Partners",
     type: "logo",
-    thumbnail: "/images/portfolio/innovatix/innovatix-brand-identity.jpg",
+    thumbnail: "/images/portfolio/innovatix/innovatix-logo-badge-mockup.jpg",
     thumbnailAlt: "Innovatix Technology Partners logo mark and wordmark on a white background",
     description: "A confident wordmark and tagline lockup for a technology partner brand, built for consistent use across every application.",
     images: [
@@ -64,6 +64,7 @@ export const portfolioItems: PortfolioItem[] = [
       "/images/portfolio/innovatix/innovatix-logo-badge-mockup.jpg",
       "/images/portfolio/innovatix/innovatix-color-palette.jpg",
     ],
+    logoThumbnail: "/images/client-logos/innovatix-technology-partners-logo.png",
   },
   {
     slug: "real-international-brand-identity",
@@ -98,7 +99,7 @@ export const portfolioItems: PortfolioItem[] = [
       "/images/portfolio/msp-accelerator/msp-faqs.jpg",
       "/images/portfolio/msp-accelerator/msp-recap-close.jpg",
     ],
-    logoThumbnail: "/images/portfolio/msp-logo-revision/msp-logo-revision-usage.jpg",
+    logoThumbnail: "/images/client-logos/msp-platform-accelerator-logo.png",
   },
   {
     slug: "real-international-capital-raise",
@@ -183,7 +184,7 @@ export const portfolioItems: PortfolioItem[] = [
       "/images/portfolio/black-lake-sales/black-lake-success-story-1.jpg",
       "/images/portfolio/black-lake-sales/black-lake-success-story-2.jpg",
     ],
-    logoThumbnail: "/images/case-studies/black-lake/black-lake-logo-card.jpg",
+    logoThumbnail: "/images/client-logos/black-lake-capital-logo.png",
   },
   {
     slug: "msp-platform-accelerator-brand-identity",
@@ -213,6 +214,7 @@ export const portfolioItems: PortfolioItem[] = [
       "/images/portfolio/msp-logo-revision/msp-logo-revision-usage.jpg",
       "/images/portfolio/msp-logo-revision/msp-logo-revision-cover.jpg",
     ],
+    logoThumbnail: "/images/client-logos/msp-platform-accelerator-logo.png",
   },
   {
     slug: "volition-hospitality-brand-identity",
@@ -252,7 +254,7 @@ export const portfolioItems: PortfolioItem[] = [
     thumbnailAlt: "ARES website hero showing a commercial real estate interior and the tagline Commercial Real Estate, managed from the ground-up",
     description: "A website for a vertically integrated commercial real estate firm, translating its full-lifecycle development, brokerage, and property management services into a clean, credible digital presence.",
     fullPageImage: "/images/portfolio/ares-website/ares-website-full.jpg",
-    logoThumbnail: "/images/case-studies/ares/ares-logo-card.jpg",
+    logoThumbnail: "/images/client-logos/aardex-real-estate-logo.png",
   },
   {
     slug: "real-international-website",
@@ -288,7 +290,7 @@ export const portfolioItems: PortfolioItem[] = [
     thumbnailAlt: "Innovatix Technology Partners website hero with the headline We Integrate, So You Can Operate Faster, Better and Smarter",
     description: "A website for an AI-driven technology solutions partner, translating deep enterprise modernization expertise into a confident, product-forward digital presence.",
     fullPageImage: "/images/portfolio/innovatix-website/innovatix-website-full.jpg",
-    logoThumbnail: "/images/portfolio/innovatix/innovatix-brand-identity.jpg",
+    logoThumbnail: "/images/client-logos/innovatix-technology-partners-logo.png",
   },
   {
     slug: "black-lake-website",
@@ -300,7 +302,7 @@ export const portfolioItems: PortfolioItem[] = [
     thumbnailAlt: "Black Lake Capital website hero over a fjord landscape with the headline Investors in Technology",
     description: "A website for a strategic investment firm, pairing moody fjord photography with a confident, founder-first portfolio-company narrative.",
     fullPageImage: "/images/portfolio/black-lake-website/black-lake-website-full.jpg",
-    logoThumbnail: "/images/case-studies/black-lake/black-lake-logo-card.jpg",
+    logoThumbnail: "/images/client-logos/black-lake-capital-logo.png",
   },
   {
     slug: "ares-capital-raise",
@@ -318,7 +320,7 @@ export const portfolioItems: PortfolioItem[] = [
       "/images/portfolio/ares/ares-why-golden.jpg",
       "/images/portfolio/ares/ares-project-intro.jpg",
     ],
-    logoThumbnail: "/images/case-studies/ares/ares-logo-card.jpg",
+    logoThumbnail: "/images/client-logos/aardex-real-estate-logo.png",
   },
   {
     slug: "ascendancy-mc-brand-identity",
