@@ -46,6 +46,8 @@ export type PortfolioItem = {
   logoThumbnail?: string;
   /** Set when `logoThumbnail` is itself a full-bleed photo/design (not a plain logo on white) so the card renders it edge-to-edge instead of with logo breathing-room padding. */
   logoFullBleed?: boolean;
+  /** Overrides the card's default white letterbox color — for a widescreen slide image whose own background should show through instead of white. */
+  cardBackgroundColor?: string;
   /** Additional real deliverable pages shown as a gallery in the expand modal (logo/deck items). Falls back to [thumbnail] if omitted. */
   images?: string[];
 };
@@ -529,11 +531,17 @@ export const portfolioItems: PortfolioItem[] = [
     title: "Legacy Relief Project",
     client: "Legacy Relief Project",
     type: "deck",
-    thumbnail: "/images/portfolio/legacy-relief-project/legacy-relief-project-messaging.png",
-    thumbnailAlt: "Legacy Relief Project company voice messaging slide",
+    thumbnail: "/images/portfolio/legacy-relief-project/legacy-relief-project-cover.jpg",
+    thumbnailAlt: "Legacy Relief Project Messaging Platform cover slide",
     description: "A messaging platform for a veteran-owned humanitarian nonprofit, defining its company voice and mission into a clear framework for consistent communication.",
     images: [
+      "/images/portfolio/legacy-relief-project/legacy-relief-project-cover.jpg",
       "/images/portfolio/legacy-relief-project/legacy-relief-project-messaging.png",
+      "/images/portfolio/legacy-relief-project/legacy-relief-project-key-differentiators.jpg",
+      "/images/portfolio/legacy-relief-project/legacy-relief-project-four-pillars.jpg",
+      "/images/portfolio/legacy-relief-project/legacy-relief-project-proven-results.jpg",
+      "/images/portfolio/legacy-relief-project/legacy-relief-project-elevator-pitch.jpg",
     ],
+    cardBackgroundColor: "#040227",
   },
 ];
