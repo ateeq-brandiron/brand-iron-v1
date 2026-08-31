@@ -185,4 +185,28 @@ export const caseStudies: CaseStudy[] = [
     solution: "Brand Iron built a website led by a bold \"We Integrate\" AI-forward positioning statement, organized around Innovatix's five core solution areas, and backed by hard credibility stats — 30+ years, 400+ clients, 10+ countries — to ground the new message in real experience.",
     results: [],
   },
+  {
+    slug: "worldwide-vintage-autos",
+    category: "revenue-growth",
+    client: "Worldwide Vintage Autos",
+    title: "Worldwide Vintage Autos",
+    excerpt: "Worldwide Vintage Autos partnered with Brand Iron to increase awareness of its VIP program, grow its social media following, and generate leads for its vehicle consignment department.",
+    thumbnail: "/images/client-logos/worldwide-vintage-autos-logo.png",
+    thumbnailAlt: "Worldwide Vintage Autos logo mark and wordmark",
+    images: [
+      "/images/case-studies/worldwide-vintage-autos/worldwide-vintage-autos-hero.jpg",
+      "/images/case-studies/worldwide-vintage-autos/worldwide-vintage-autos-cars-coffee.jpg",
+      "/images/case-studies/worldwide-vintage-autos/worldwide-vintage-autos-testimonial.jpg",
+    ],
+    cardHoverImage: "/images/case-studies/worldwide-vintage-autos/worldwide-vintage-autos-hero.jpg",
+    challenge: "Worldwide Vintage Autos brought in Brand Iron with three primary goals: increase awareness and registrations for its VIP program, grow its audience and following across social media, and generate leads for its vehicle consignment department. The opportunity was not simply to attract more attention — Worldwide Vintage Autos needed marketing efforts that could translate that attention into measurable engagement, registrations, leads, and ultimately business growth.",
+    solution: "Brand Iron used an integrated digital marketing approach centered on reaching prospective customers across multiple channels. Search engine advertising helped Worldwide Vintage Autos connect with audiences actively searching online, while social media advertising expanded the company's reach and supported awareness of its VIP program and consignment offering. Email marketing provided an additional channel for keeping customers engaged, promoting inventory, and driving audiences back to the business.",
+    results: [
+      { value: "+180%", label: "VIP Program Registrations" },
+      { value: "47.08%", label: "Email Open Rate" },
+      { value: "33.94%", label: "Email Click-Through Rate" },
+      { value: "200,000+", label: "Messages Sent" },
+      { value: "+55%", label: "First-Quarter YoY Revenue" },
+    ],
+  },
 ];
