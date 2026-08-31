@@ -187,7 +187,7 @@ export default function CaseStudiesPage() {
                   <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 10, right: 10, width: 26, height: 26, opacity: 0, transition: "opacity 0.25s ease", zIndex: 3 }} />
                   <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 10, left: 10, width: 26, height: 26, opacity: 0, transition: "opacity 0.25s ease", zIndex: 3 }} />
 
-                  <div className="cs-card-media" style={{ position: "relative", aspectRatio: "4 / 3", overflow: "hidden", background: "#F0EEEA" }}>
+                  <div className="cs-card-media" style={{ position: "relative", aspectRatio: "4 / 3", overflow: "hidden", background: "#FFFFFF" }}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={cs.thumbnail} alt={cs.thumbnailAlt} className="cs-card-img" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "contain", padding: 24, transition: "opacity 0.4s ease" }} />
                     {hoverImage && (

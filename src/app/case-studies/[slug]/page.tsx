@@ -179,7 +179,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
               >
                 <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 10, right: 10, width: 24, height: 24, opacity: 0, transition: "opacity 0.25s ease", zIndex: 3 }} />
                 <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 10, left: 10, width: 24, height: 24, opacity: 0, transition: "opacity 0.25s ease", zIndex: 3 }} />
-                <div style={{ position: "relative", aspectRatio: "16 / 10", overflow: "hidden", background: "#F0EEEA" }}>
+                <div style={{ position: "relative", aspectRatio: "16 / 10", overflow: "hidden", background: "#FFFFFF" }}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={r.thumbnail} alt={r.thumbnailAlt} className="related-card-img" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "contain", padding: 20, transition: "opacity 0.4s ease" }} />
                   {hoverImage && (
