@@ -82,7 +82,7 @@ export function middleware(request: NextRequest) {
     // the production reverse proxy, request.url reflects the internal port
     // the Node process is actually listening on (e.g. :3000), which leaked
     // into earlier redirects instead of the public-facing https://brandiron.net.
-    return NextResponse.redirect(new URL(redirect.destination, `https://${CANONICAL_HOST}`), 308);
+    return NextResponse.redirect(new URL(redirect.destination, `https://${CANONICAL_HOST}`), 301);
   }
 
   const host = request.headers.get("host") ?? "";
@@ -93,7 +93,7 @@ export function middleware(request: NextRequest) {
     // Same fixed-origin approach as above - new URL(path, request.url)
     // would inherit the same internal-port leak.
     const url = new URL(`${finalPathname}${search}`, `https://${CANONICAL_HOST}`);
-    return NextResponse.redirect(url, 308);
+    return NextResponse.redirect(url, 301);
   }
 
   if (NOINDEX_PATTERNS.some(pattern => pattern.test(pathname))) {
