@@ -173,7 +173,6 @@ export default function CaseStudiesPage() {
           <div className="cs-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
             {visibleStudies.map((cs, i) => {
               const catLabel = caseStudyCategoryLabel(cs.category);
-              const headlineStat = cs.results.find(r => r.value !== "—");
               const hoverImage = cs.cardHoverImage ?? cs.images[0];
               return (
                 <Link key={cs.slug} href={`/case-studies/${cs.slug}/`}
@@ -201,11 +200,6 @@ export default function CaseStudiesPage() {
                     }}>
                       View Case Study →
                     </span>
-                    {headlineStat && (
-                      <span style={{ position: "absolute", top: 10, left: 10, background: "rgba(216,115,7,0.92)", color: "#FFFFFF", fontFamily: "var(--font-burford-black), sans-serif", fontSize: 13, fontWeight: 900, padding: "5px 10px", borderRadius: 4 }}>
-                        {headlineStat.value} {headlineStat.label}
-                      </span>
-                    )}
                   </div>
                   <div style={{ padding: "22px 24px" }}>
                     <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#d87307", marginBottom: 8 }}>{catLabel}</p>
