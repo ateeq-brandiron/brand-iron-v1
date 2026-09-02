@@ -316,6 +316,7 @@ export const portfolioItems: PortfolioItem[] = [
     images: [
       "/images/client-logos/ascendancy-mc-inc-logo.png",
     ],
+    logoThumbnail: "/images/client-logos/ascendancy-mc-inc-logo.png",
   },
   {
     slug: "ascendancy-mc-capital-raise",
