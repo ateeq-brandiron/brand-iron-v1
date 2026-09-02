@@ -545,4 +545,19 @@ export const portfolioItems: PortfolioItem[] = [
     ],
     cardBackgroundColor: "#040227",
   },
+  {
+    slug: "flix-entertainment-teaser-piece",
+    category: "go-to-market",
+    title: "Flix Entertainment",
+    client: "Flix Entertainment",
+    type: "deck",
+    thumbnail: "/images/portfolio/flix-entertainment/flix-entertainment-teaser-vision.jpg",
+    thumbnailAlt: "Project Platformco teaser piece cover, uniting dine-in cinema brands under one platform",
+    description: "A capital raise teaser piece for a dine-in cinema and hospitality platform, framing the opportunity to unite diverse cinema-dining brands under one operational and financial platform for prospective investors.",
+    images: [
+      "/images/portfolio/flix-entertainment/flix-entertainment-teaser-vision.jpg",
+      "/images/portfolio/flix-entertainment/flix-entertainment-teaser-partners.jpg",
+    ],
+    cardBackgroundColor: "#000000",
+  },
 ];
