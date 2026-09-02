@@ -159,7 +159,7 @@ export const portfolioItems: PortfolioItem[] = [
       "/images/portfolio/volition-hospitality-capital-raise/volition-hospitality-crd-our-vision.jpg",
       "/images/portfolio/volition-hospitality-capital-raise/volition-hospitality-crd-why-volition.jpg",
     ],
-    logoThumbnail: "/images/portfolio/volition-hospitality-logo-redesign/volition-hospitality-logo-redesign-mark.jpg",
+    logoThumbnail: "/images/client-logos/volition-hospitality-logo.png",
   },
   {
     slug: "black-lake-brand-identity",
@@ -224,7 +224,7 @@ export const portfolioItems: PortfolioItem[] = [
       "/images/portfolio/volition-hospitality-logo-redesign/volition-hospitality-logo-redesign-options.jpg",
       "/images/portfolio/volition-hospitality/volition-color-palette.jpg",
     ],
-    logoThumbnail: "/images/client-logos/volition-hospitality-logo.svg",
+    logoThumbnail: "/images/client-logos/volition-hospitality-logo.png",
   },
   {
     slug: "ares-website",
@@ -260,7 +260,7 @@ export const portfolioItems: PortfolioItem[] = [
     thumbnailAlt: "Volition Hospitality website hero showing a luxury hotel room and the headline Elevating Hospitality Experiences",
     description: "A website for a hospitality investment firm, pairing rich property photography with a clear investor-facing pitch for its property-transformation model.",
     fullPageImage: "/images/portfolio/volition-hospitality-website/volition-hospitality-website-full.jpg",
-    logoThumbnail: "/images/portfolio/volition-hospitality-logo-redesign/volition-hospitality-logo-redesign-mark.jpg",
+    logoThumbnail: "/images/client-logos/volition-hospitality-logo.png",
   },
   {
     slug: "innovatix-website",

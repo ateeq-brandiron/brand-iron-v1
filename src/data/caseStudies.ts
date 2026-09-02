@@ -40,7 +40,7 @@ export const caseStudies: CaseStudy[] = [
     client: "Volition Hospitality",
     title: "Volition Hospitality",
     excerpt: "Volition Hospitality transforms underperforming hotels into high-return investments through strategic renovations and elevated guest experiences.",
-    thumbnail: "/images/client-logos/volition-hospitality-logo.svg",
+    thumbnail: "/images/client-logos/volition-hospitality-logo.png",
     thumbnailAlt: "Volition Hospitality logo, a starburst mark above the wordmark Hospitality Tailored To You",
     images: [
       "/images/case-studies/volition-hospitality/volition-hospitality-hero.jpg",

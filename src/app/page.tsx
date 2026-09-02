@@ -45,7 +45,7 @@ const clientLogos = [
   { name: "MSP Platform Accelerator", logo: "/images/client-logos/msp-platform-accelerator-logo.png" },
   { name: "Innovatix Technology Partners", logo: "/images/client-logos/innovatix-technology-partners-logo.png" },
   { name: "PUR Evergreen", logo: "/images/client-logos/pur-evergreen-logo.png" },
-  { name: "Volition Hospitality", logo: "/images/client-logos/volition-hospitality-logo.svg" },
+  { name: "Volition Hospitality", logo: "/images/client-logos/volition-hospitality-logo.png" },
   { name: "Massive Networks", logo: "/images/client-logos/massive-networks-logo.png" },
   { name: "ScamRocket", logo: "/images/client-logos/scamrocket-logo.png" },
   { name: "Maadaadizi", logo: "/images/client-logos/maadaadizi-logo.png" },
