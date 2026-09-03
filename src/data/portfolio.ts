@@ -345,13 +345,13 @@ export const portfolioItems: PortfolioItem[] = [
     thumbnailAlt: "Bellwether bell mark and wordmark on solid dark background",
     description: "A brand identity for a signals platform, pairing a bell mark with a deep-space color system and confident typography built for a technical, trust-driven audience.",
     images: [
-      "/images/client-logos/bellwether-logo.svg",
+      "/images/portfolio/bellwether/bellwether-logo-transparent.png",
       "/images/portfolio/bellwether/bellwether-brand-signature.jpg",
       "/images/portfolio/bellwether/bellwether-color-palette.jpg",
       "/images/portfolio/bellwether/bellwether-typography.jpg",
       "/images/portfolio/bellwether/bellwether-logo-usage.jpg",
     ],
-    logoThumbnail: "/images/client-logos/bellwether-logo.svg",
+    logoThumbnail: "/images/portfolio/bellwether/bellwether-logo-transparent.png",
   },
   {
     slug: "sage-brand-identity",

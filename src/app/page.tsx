@@ -37,7 +37,7 @@ const clientLogos = [
   { name: "Cities Project Global", logo: "/images/client-logos/cities-project-global-logo.svg" },
   { name: "Lift Out Capital", logo: "/images/client-logos/lift-out-capital-logo.png" },
   { name: "Offen Petroleum", logo: "/images/client-logos/offen-petroleum-logo.png" },
-  { name: "Bellwether", logo: "/images/client-logos/bellwether-logo.svg" },
+  { name: "Bellwether", logo: "/images/portfolio/bellwether/bellwether-logo-transparent.png" },
   { name: "Sage Professional Services", logo: "/images/client-logos/sage-logo.png" },
   { name: "Real International", logo: "/images/client-logos/real-international-logo.png" },
   { name: "Haefele Flanagan Consulting", logo: "/images/client-logos/haefele-flanagan-consulting-logo.svg" },
@@ -128,7 +128,7 @@ const journeyStages = [
 
 const partners = [
   { name: "Boxsy", href: "https://boxsy.io", logo: "/images/partner-logos/boxsy-logo.svg" },
-  { name: "Bellwether", href: "https://mybellwether.com" },
+  { name: "Bellwether", href: "https://mybellwether.com", logo: "/images/portfolio/bellwether/bellwether-logo-transparent.png" },
   { name: "Sage Professional Services", href: "https://sageprosrvs.com", logo: "/images/client-logos/sage-logo.png" },
   { name: "FRD Legacy Advisors", href: "https://rfdlegacy.com", logo: "/images/client-logos/frd-legacy-advisors-logo.png" },
   { name: "ScamRocket", href: "https://scamrocket.com", logo: "/images/client-logos/scamrocket-logo.png" },
@@ -933,17 +933,7 @@ export default function Home() {
               <a key={p.name} href={p.href} target="_blank" rel="noopener noreferrer" aria-label={p.name} className="logo-card" style={{ position: "relative" }}>
                 <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 6, right: 6, width: 22, height: 22, opacity: 0, transition: "opacity 0.25s ease" }} />
                 <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 6, left: 6, width: 22, height: 22, opacity: 0, transition: "opacity 0.25s ease" }} />
-                {p.name === "Bellwether" ? (
-                  <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
-                      <path d="M13.73 21a2 2 0 0 1-3.46 0" />
-                    </svg>
-                    <span style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontSize: 20, fontWeight: 700, color: "#1a1a1a" }}>Bellwether</span>
-                  </span>
-                ) : (
-                  <img loading="lazy" src={p.logo} alt={`${p.name} logo`} />
-                )}
+                <img loading="lazy" src={p.logo} alt={`${p.name} logo`} />
               </a>
             ))}
           </div>
