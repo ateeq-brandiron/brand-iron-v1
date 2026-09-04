@@ -182,13 +182,13 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
 
       {/* ── RESULTS ──────────────────────────────────────────── */}
       {cs.results.length > 0 && (
-        <section style={{ position: "relative", overflow: "hidden", background: "#0F1B2D", padding: "88px 24px" }}>
-          <div style={{ position: "absolute", top: "-20%", right: "-8%", width: 420, height: 420, borderRadius: "50%", background: "radial-gradient(circle, rgba(216,115,7,0.16) 0%, rgba(216,115,7,0) 70%)" }} />
+        <section style={{ position: "relative", overflow: "hidden", background: "#F7F4EE", padding: "88px 24px" }}>
+          <div style={{ position: "absolute", top: "-20%", right: "-8%", width: 420, height: 420, borderRadius: "50%", background: "radial-gradient(circle, rgba(216,115,7,0.12) 0%, rgba(216,115,7,0) 70%)" }} />
           <div style={{ position: "relative", zIndex: 2, maxWidth: 1100, margin: "0 auto", textAlign: "center" }}>
             <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#d87307", marginBottom: 12 }}>
               By the Numbers
             </p>
-            <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 2.6vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#FFFFFF", marginBottom: 48 }}>
+            <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 2.6vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 48 }}>
               The Results
             </h2>
             <div className="cs-results-row">
@@ -197,7 +197,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
                   <p style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(30px, 3.6vw, 46px)", fontWeight: 900, color: "#d87307", lineHeight: 1.1, marginBottom: 10 }}>
                     {r.value}
                   </p>
-                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: "rgba(255,255,255,0.6)", margin: 0 }}>{r.label}</p>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: "rgba(26,26,26,0.6)", margin: 0 }}>{r.label}</p>
                 </div>
               ))}
             </div>
@@ -207,12 +207,12 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
             .cs-results-item { position: relative; margin: 20px 0; }
             .cs-results-item:not(:last-child)::after {
               content: ""; position: absolute; top: 4px; right: 0; bottom: 4px; width: 1px;
-              background: rgba(255,255,255,0.14);
+              background: rgba(26,26,26,0.12);
             }
             @media (max-width: 700px) {
               .cs-results-item { width: 100%; padding: 0 !important; margin: 0; }
               .cs-results-item:not(:last-child)::after { display: none; }
-              .cs-results-item:not(:last-child) { padding-bottom: 24px !important; margin-bottom: 24px !important; border-bottom: 1px solid rgba(255,255,255,0.14); }
+              .cs-results-item:not(:last-child) { padding-bottom: 24px !important; margin-bottom: 24px !important; border-bottom: 1px solid rgba(26,26,26,0.12); }
             }
           `}</style>
         </section>
