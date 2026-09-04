@@ -213,4 +213,44 @@ export const caseStudies: CaseStudy[] = [
       { value: "+55%", label: "First-Quarter YoY Revenue" },
     ],
   },
+  {
+    slug: "gofresh-homes",
+    category: "capital-raise",
+    client: "GoFresh Homes",
+    title: "GoFresh Homes",
+    excerpt: "GoFresh Homes partnered with Brand Iron to build the brand, messaging, investor materials, website, and go-to-market strategy needed to support the company from startup through multiple stages of fundraising and growth.",
+    thumbnail: "/images/client-logos/gofresh-homes-logo.png",
+    thumbnailAlt: "GoFresh Homes logo, a green house-and-pin mark beside the wordmark GoFresh Homes",
+    // TODO: placeholder hero — swap for a real deck/website screenshot once Shelly/Olivia share one (see Slack thread).
+    images: [
+      "/images/case-studies/gofresh-homes/gofresh-homes-hero-placeholder.jpg",
+    ],
+    challenge: "GoFresh Homes was building the company while also preparing to raise capital across multiple stages. The company needed to clearly define its brand and messaging, establish a professional identity, communicate the investment opportunity to prospective investors, and build the digital and go-to-market infrastructure required to support future growth. Because GoFresh Homes was progressing from startup into successive funding stages, the brand also needed to evolve with the business rather than serve only a single capital raise.",
+    solution: "Brand Iron worked with GoFresh Homes from the early stages of the company to create a strategic brand and growth foundation. Through BrandStorm, Brand Iron helped develop the company's positioning and messaging, then translated that strategy into a cohesive visual identity. The engagement expanded into capital raise materials, website design and development, and go-to-market strategy and implementation — connecting branding, fundraising, and market growth into one platform designed to support GoFresh Homes through the friends and family round, Fund #1, Fund #2, and its progression toward Fund #3.",
+    results: [
+      { value: "$25M", label: "Fund #2 Target" },
+      { value: "$100M", label: "Fund #3 Target" },
+      { value: "4", label: "Funding Stages Supported" },
+    ],
+  },
+  {
+    slug: "bow-river-auc-group",
+    category: "capital-raise",
+    client: "Bow River – AUC Group",
+    title: "Bow River – AUC Group",
+    excerpt: "Bow River partnered with Brand Iron to strengthen the positioning of AUC Group, a wastewater treatment solutions provider, and prepare the company for the market — resulting in a $65 million acquisition and a 3.6x return on the original investment.",
+    thumbnail: "/images/case-studies/bow-river-auc-group/auc-group-thumbnail-placeholder.png",
+    thumbnailAlt: "AUC Group, L.P. placeholder logo mark and wordmark in navy and orange",
+    // TODO: hero is a designed placeholder; auc-group-deck-composite.jpg is real (but low-res, 808x735) deck art found in Drive. Swap both for real assets once Shelly/Olivia share a higher-res deck (see Slack thread).
+    images: [
+      "/images/case-studies/bow-river-auc-group/bow-river-auc-hero-placeholder.jpg",
+      "/images/case-studies/bow-river-auc-group/auc-group-deck-composite.jpg",
+    ],
+    challenge: "AUC had the fundamentals of a strong company, but Bow River needed to ensure those strengths were clearly communicated to the market. The objective was to position AUC as a compelling acquisition opportunity backed by a strong, credible story — showing why AUC was differentiated, where its growth opportunities existed, and how its capabilities could translate into long-term value for a prospective acquirer.",
+    solution: "Brand Iron worked with Bow River to strengthen the way AUC was positioned and presented, combining strategic consulting with a comprehensive acquisition pitch deck. The presentation highlighted AUC's market experience, operating model, geographic reach, and growth opportunity, organizing those elements into a clear and persuasive investment story communicating the business as resilient, repeatable, and expandable.",
+    results: [
+      { value: "$65M", label: "Acquisition Value" },
+      { value: "3.6x", label: "Return on Original Investment" },
+    ],
+  },
 ];
