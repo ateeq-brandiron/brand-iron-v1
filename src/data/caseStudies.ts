@@ -14,6 +14,11 @@ export type CaseStudyStat = {
   label: string;
 };
 
+export type CaseStudyListItem = {
+  title: string;
+  description: string;
+};
+
 export type CaseStudy = {
   slug: string;
   category: PortfolioCategoryId;
@@ -28,9 +33,19 @@ export type CaseStudy = {
   cardHoverImage?: string;
   /** Full top-to-bottom page screenshot shown in the "Quick Look" scrolling preview. */
   fullPageImage?: string;
+  /** "The Client" intro paragraph — source case studies for non-website engagements (capital raise, revenue growth) include this; website case studies don't need it since the hero + challenge cover the same ground. */
+  clientDescription?: string;
   challenge: string;
   solution: string;
+  /** Itemized "What Brand Iron Delivered" list — used by non-website case studies whose source document breaks the engagement into named deliverables. */
+  deliverables?: CaseStudyListItem[];
+  /** A second itemized list for engagements with their own named stages/milestones (e.g. funding rounds), distinct from `deliverables`. */
+  milestones?: CaseStudyListItem[];
+  milestonesTitle?: string;
   results: CaseStudyStat[];
+  /** Closing narrative section shown after the results band, matching the source document's own wrap-up section. */
+  closingTitle?: string;
+  closingNote?: string;
 };
 
 export const caseStudies: CaseStudy[] = [
@@ -203,8 +218,9 @@ export const caseStudies: CaseStudy[] = [
       "/images/case-studies/worldwide-vintage-autos/worldwide-vintage-autos-testimonial.jpg",
     ],
     cardHoverImage: "/images/case-studies/worldwide-vintage-autos/worldwide-vintage-autos-hero.jpg",
+    clientDescription: "Worldwide Vintage Autos is one of the country's foremost sources for classic cars and trucks, helping buyers make the process of purchasing their dream vehicle as painless and enjoyable as possible. With a highly visual product, a passionate customer base, and a constantly changing inventory of classic vehicles, Worldwide Vintage Autos needed a digital marketing approach that could keep customers engaged while creating new opportunities for growth.",
     challenge: "Worldwide Vintage Autos brought in Brand Iron with three primary goals: increase awareness and registrations for its VIP program, grow its audience and following across social media, and generate leads for its vehicle consignment department. The opportunity was not simply to attract more attention — Worldwide Vintage Autos needed marketing efforts that could translate that attention into measurable engagement, registrations, leads, and ultimately business growth.",
-    solution: "Brand Iron used an integrated digital marketing approach centered on reaching prospective customers across multiple channels. Search engine advertising helped Worldwide Vintage Autos connect with audiences actively searching online, while social media advertising expanded the company's reach and supported awareness of its VIP program and consignment offering. Email marketing provided an additional channel for keeping customers engaged, promoting inventory, and driving audiences back to the business.",
+    solution: "Brand Iron used an integrated digital marketing approach centered on reaching prospective customers across multiple channels. Search engine advertising helped Worldwide Vintage Autos connect with audiences actively searching online, while social media advertising expanded the company's reach and supported awareness of its VIP program and consignment offering. Email marketing provided an additional channel for keeping customers engaged, promoting inventory, and driving audiences back to the business. Together, these efforts created a more connected digital presence designed to increase visibility, strengthen engagement, and generate measurable action.",
     results: [
       { value: "+180%", label: "VIP Program Registrations" },
       { value: "47.08%", label: "Email Open Rate" },
@@ -212,6 +228,8 @@ export const caseStudies: CaseStudy[] = [
       { value: "200,000+", label: "Messages Sent" },
       { value: "+55%", label: "First-Quarter YoY Revenue" },
     ],
+    closingTitle: "From Visibility to Measurable Growth",
+    closingNote: "The Worldwide Vintage Autos engagement demonstrates what can happen when digital marketing efforts are connected to clear business objectives. Rather than focusing on reach alone, Brand Iron helped Worldwide Vintage Autos build stronger engagement around its VIP program, connect with prospective customers through digital advertising and email, and support meaningful business growth. The result was not only a larger audience, but measurable increases in registrations, engagement, and revenue.",
   },
   {
     slug: "gofresh-homes",
@@ -225,13 +243,29 @@ export const caseStudies: CaseStudy[] = [
     images: [
       "/images/case-studies/gofresh-homes/gofresh-homes-hero-placeholder.jpg",
     ],
+    clientDescription: "GoFresh Homes operated in the mobile home park ownership space, with several mobile home parks in its portfolio. As the company grew, it needed more than a recognizable brand. It needed a clear market position, compelling investor communications, a professional digital presence, and a go-to-market strategy capable of supporting successive stages of capital raising. The goal was to create a cohesive foundation that could help GoFresh Homes present itself with greater credibility and authority as the business expanded.",
     challenge: "GoFresh Homes was building the company while also preparing to raise capital across multiple stages. The company needed to clearly define its brand and messaging, establish a professional identity, communicate the investment opportunity to prospective investors, and build the digital and go-to-market infrastructure required to support future growth. Because GoFresh Homes was progressing from startup into successive funding stages, the brand also needed to evolve with the business rather than serve only a single capital raise.",
-    solution: "Brand Iron worked with GoFresh Homes from the early stages of the company to create a strategic brand and growth foundation. Through BrandStorm, Brand Iron helped develop the company's positioning and messaging, then translated that strategy into a cohesive visual identity. The engagement expanded into capital raise materials, website design and development, and go-to-market strategy and implementation — connecting branding, fundraising, and market growth into one platform designed to support GoFresh Homes through the friends and family round, Fund #1, Fund #2, and its progression toward Fund #3.",
+    solution: "Brand Iron worked with GoFresh Homes from the early stages of the company to create a strategic brand and growth foundation. Through BrandStorm, Brand Iron helped develop the company's positioning and messaging, then translated that strategy into a cohesive visual identity. The engagement expanded into capital raise materials, website design and development, and go-to-market strategy and implementation. Rather than treating branding, fundraising, and market growth as separate initiatives, Brand Iron helped connect them into one platform designed to support GoFresh Homes as the company advanced through each stage of its development.",
+    deliverables: [
+      { title: "Brand Strategy and Messaging", description: "Brand Iron developed the GoFresh Homes brand foundation, including core messaging and positioning designed to communicate the company's value more clearly and credibly." },
+      { title: "Visual Identity", description: "Moodboards and logo development helped establish a cohesive and professional identity for the growing company." },
+      { title: "Capital Raise Decks", description: "Brand Iron created investor-facing capital raise presentations to help GoFresh Homes communicate its business model, investment opportunity, and growth strategy across multiple fundraising stages." },
+      { title: "Website Design and Development", description: "Brand Iron designed and developed the GoFresh Homes website, giving the company a professional digital platform to support its brand, investor communications, and market presence." },
+      { title: "Go-to-Market Strategy and Implementation", description: "The engagement also included GTM strategy and implementation, helping GoFresh Homes connect its brand and messaging to broader growth and market-development efforts." },
+    ],
+    milestonesTitle: "Supporting Growth Across Multiple Funding Stages",
+    milestones: [
+      { title: "Friends and Family Round", description: "Brand Iron supported GoFresh Homes during its early fundraising stage as the business began establishing its market presence." },
+      { title: "Fund #1", description: "As the company advanced, Brand Iron continued supporting its brand and investor communications through Fund #1." },
+      { title: "Fund #2 — $25M Target", description: "Brand Iron supported the development of the materials, messaging, website, and GTM foundation surrounding Fund #2." },
+      { title: "Fund #3 — $100M Target", description: "At the time of the original case study materials, GoFresh Homes was progressing toward Fund #3 as it continued expanding its position in the mobile home park ownership space." },
+    ],
     results: [
       { value: "$25M", label: "Fund #2 Target" },
       { value: "$100M", label: "Fund #3 Target" },
-      { value: "4", label: "Funding Stages Supported" },
     ],
+    closingTitle: "From Startup Brand to Growth Platform",
+    closingNote: "The GoFresh Homes engagement illustrates how brand strategy can support a company well beyond its initial launch. As organizations move from startup through successive rounds of fundraising, their story becomes more complex — investors need to understand not only the immediate opportunity, but also the company's credibility, business model, market position, and long-term growth potential. Brand Iron helped GoFresh Homes build the brand, investor materials, website, and go-to-market foundation needed to support that progression, resulting in a more cohesive platform designed to grow alongside the company as it advanced through multiple stages of capital raising and expansion.",
   },
   {
     slug: "bow-river-auc-group",
@@ -246,11 +280,20 @@ export const caseStudies: CaseStudy[] = [
       "/images/case-studies/bow-river-auc-group/bow-river-auc-hero-placeholder.jpg",
       "/images/case-studies/bow-river-auc-group/auc-group-deck-composite.jpg",
     ],
-    challenge: "AUC had the fundamentals of a strong company, but Bow River needed to ensure those strengths were clearly communicated to the market. The objective was to position AUC as a compelling acquisition opportunity backed by a strong, credible story — showing why AUC was differentiated, where its growth opportunities existed, and how its capabilities could translate into long-term value for a prospective acquirer.",
-    solution: "Brand Iron worked with Bow River to strengthen the way AUC was positioned and presented, combining strategic consulting with a comprehensive acquisition pitch deck. The presentation highlighted AUC's market experience, operating model, geographic reach, and growth opportunity, organizing those elements into a clear and persuasive investment story communicating the business as resilient, repeatable, and expandable.",
+    clientDescription: "AUC Group was a wastewater treatment total solutions provider with multi-state U.S. and international experience. As part of its broader investment strategy, Bow River needed to clearly communicate AUC's market position, business model, capabilities, and growth potential to prospective buyers.",
+    challenge: "AUC had the fundamentals of a strong company, but Bow River needed to ensure those strengths were clearly communicated to the market. The objective was to position AUC as a compelling acquisition opportunity backed by a strong, credible story. That required more than presenting financial information — the materials needed to show why AUC was differentiated, where its growth opportunities existed, and how its capabilities could translate into long-term value for a prospective acquirer.",
+    solution: "Brand Iron worked with Bow River to strengthen the way AUC was positioned and presented. The engagement included strategic consulting and the development of a comprehensive pitch deck designed to communicate AUC's value to potential buyers. The presentation highlighted key elements of the business, including its market experience, operating model, geographic reach, and growth opportunity, while organizing those elements into a clear and persuasive investment story.",
+    deliverables: [
+      { title: "Strategic Positioning", description: "Brand Iron helped Bow River present AUC as a strong, established company with a clear position in the wastewater treatment market." },
+      { title: "Acquisition Pitch Deck", description: "A comprehensive presentation was developed to give prospective buyers a clear understanding of AUC's business, capabilities, market presence, and potential." },
+      { title: "Growth Story", description: "The materials communicated AUC's business model as resilient, repeatable, and expandable, helping prospective acquirers understand the opportunity beyond the company's current operations." },
+      { title: "Market-Ready Communication", description: "The engagement helped Bow River translate AUC's underlying strengths into a cohesive story designed for a sophisticated acquisition audience." },
+    ],
     results: [
       { value: "$65M", label: "Acquisition Value" },
       { value: "3.6x", label: "Return on Original Investment" },
     ],
+    closingTitle: "From Investment Story to Successful Exit",
+    closingNote: "The AUC Group engagement demonstrates the role strategic positioning can play in a successful transaction. A strong company may already have attractive fundamentals, but those fundamentals still need to be communicated in a way that allows buyers to quickly understand the opportunity, recognize the value, and envision the company's potential. By combining strategic consulting with a focused acquisition pitch deck, Brand Iron helped Bow River position AUC for the market and communicate a stronger investment story. Following the positioning and acquisition preparation work, AUC Group was acquired for $65 million by a private equity fund in the Philadelphia area — a 3.6x return on Bow River's original investment.",
   },
 ];

@@ -106,6 +106,15 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
       {/* ── CHALLENGE / SOLUTION ─────────────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "80px 24px" }}>
         <div style={{ maxWidth: 820, margin: "0 auto" }}>
+          {cs.clientDescription && (
+            <>
+              <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 2.6vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 16 }}>
+                The Client
+              </h2>
+              <p style={{ fontSize: 17, lineHeight: 1.85, color: "#444", marginBottom: 56 }}>{cs.clientDescription}</p>
+            </>
+          )}
+
           <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 2.6vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 16 }}>
             The Challenge
           </h2>
@@ -114,7 +123,39 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
           <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 2.6vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 16 }}>
             The Solution
           </h2>
-          <p style={{ fontSize: 17, lineHeight: 1.85, color: "#444", marginBottom: cs.images.length > 1 ? 56 : 0 }}>{cs.solution}</p>
+          <p style={{ fontSize: 17, lineHeight: 1.85, color: "#444", marginBottom: (cs.deliverables?.length || cs.milestones?.length || cs.images.length > 1) ? 56 : 0 }}>{cs.solution}</p>
+
+          {!!cs.deliverables?.length && (
+            <div style={{ marginBottom: (cs.milestones?.length || cs.images.length > 1) ? 56 : 0 }}>
+              <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 2.6vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 24 }}>
+                What Brand Iron Delivered
+              </h2>
+              <div style={{ display: "grid", gap: 24 }}>
+                {cs.deliverables.map((d, i) => (
+                  <div key={i} style={{ paddingLeft: 20, borderLeft: "3px solid #d87307" }}>
+                    <h3 style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, fontWeight: 700, color: "#1a1a1a", marginBottom: 6 }}>{d.title}</h3>
+                    <p style={{ fontSize: 16, lineHeight: 1.75, color: "#444", margin: 0 }}>{d.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {!!cs.milestones?.length && (
+            <div style={{ marginBottom: cs.images.length > 1 ? 56 : 0 }}>
+              <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 2.6vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 24 }}>
+                {cs.milestonesTitle ?? "The Engagement"}
+              </h2>
+              <div style={{ display: "grid", gap: 24 }}>
+                {cs.milestones.map((m, i) => (
+                  <div key={i} style={{ paddingLeft: 20, borderLeft: "3px solid #d87307" }}>
+                    <h3 style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, fontWeight: 700, color: "#1a1a1a", marginBottom: 6 }}>{m.title}</h3>
+                    <p style={{ fontSize: 16, lineHeight: 1.75, color: "#444", margin: 0 }}>{m.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           {cs.images.length > 1 && (
             <div>
@@ -174,6 +215,20 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
               .cs-results-item:not(:last-child) { padding-bottom: 24px !important; margin-bottom: 24px !important; border-bottom: 1px solid rgba(255,255,255,0.14); }
             }
           `}</style>
+        </section>
+      )}
+
+      {/* ── CLOSING NOTE ─────────────────────────────────────── */}
+      {cs.closingNote && (
+        <section style={{ background: "#FFFFFF", padding: "80px 24px" }}>
+          <div style={{ maxWidth: 820, margin: "0 auto" }}>
+            {cs.closingTitle && (
+              <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 2.6vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 16 }}>
+                {cs.closingTitle}
+              </h2>
+            )}
+            <p style={{ fontSize: 17, lineHeight: 1.85, color: "#444", margin: 0 }}>{cs.closingNote}</p>
+          </div>
         </section>
       )}
 
