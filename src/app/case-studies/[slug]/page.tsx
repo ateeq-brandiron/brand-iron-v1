@@ -243,27 +243,34 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
               const hoverImage = r.cardHoverImage ?? r.images[0];
               return (
               <Link key={r.slug} href={`/case-studies/${r.slug}/`} className="related-card" style={{
-                display: "block", position: "relative", background: "#FFFFFF",
-                border: "1px solid #EEEBE7", borderRadius: 10,
-                textDecoration: "none", overflow: "hidden", transition: "border-color 0.2s, background 0.2s, transform 0.2s",
+                display: "block", position: "relative", background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 14,
+                overflow: "hidden", textDecoration: "none", transition: "transform 0.25s, box-shadow 0.25s, border-color 0.25s",
               }}
               >
-                <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 10, right: 10, width: 24, height: 24, opacity: 0, transition: "opacity 0.25s ease", zIndex: 3 }} />
-                <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 10, left: 10, width: 24, height: 24, opacity: 0, transition: "opacity 0.25s ease", zIndex: 3 }} />
-                <div style={{ position: "relative", aspectRatio: "16 / 10", overflow: "hidden", background: "#FFFFFF" }}>
+                <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-2.svg" alt="" style={{ position: "absolute", top: 10, right: 10, width: 26, height: 26, opacity: 0, transition: "opacity 0.25s ease", zIndex: 3 }} />
+                <img loading="lazy" className="corner-bracket" src="/images/icons/border-corner-1.svg" alt="" style={{ position: "absolute", bottom: 10, left: 10, width: 26, height: 26, opacity: 0, transition: "opacity 0.25s ease", zIndex: 3 }} />
+
+                <div className="related-card-media" style={{ position: "relative", aspectRatio: "4 / 3", overflow: "hidden", background: "#FFFFFF" }}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={r.thumbnail} alt={r.thumbnailAlt} className="related-card-img" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "contain", padding: 20, transition: "opacity 0.4s ease" }} />
+                  <img src={r.thumbnail} alt={r.thumbnailAlt} className="related-card-img" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "contain", padding: 24, transition: "opacity 0.4s ease" }} />
                   {hoverImage && (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src={hoverImage} alt={`${r.client} website screenshot`} className="related-card-hero" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "contain", opacity: 0, transition: "opacity 0.4s ease" }} />
                   )}
-                </div>
-                <div style={{ padding: "20px 22px", position: "relative" }}>
-                  <div style={{ position: "absolute", top: 0, left: 22, right: 22, height: 2, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.2))" }} />
-                  <span style={{ display: "inline-block", padding: "3px 10px", border: "1px solid rgba(216,115,7,0.4)", borderRadius: 4, fontFamily: "var(--font-montserrat), sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#d87307", marginBottom: 12 }}>
-                    {caseStudyCategoryLabel(r.category)}
+                  <div className="related-card-scrim" style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, transparent 55%, rgba(8,16,36,0.75) 100%)", opacity: 0, transition: "opacity 0.25s ease" }} />
+                  <span className="related-card-view" style={{
+                    position: "absolute", left: 20, bottom: 14, transform: "translateY(10px)", opacity: 0, transition: "transform 0.25s ease, opacity 0.25s ease",
+                    fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#FFFFFF",
+                  }}>
+                    View Case Study →
                   </span>
-                  <h4 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 14, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", lineHeight: 1.4 }}>{r.title}</h4>
+                </div>
+                <div style={{ padding: "22px 24px" }}>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#d87307", marginBottom: 8 }}>
+                    {caseStudyCategoryLabel(r.category)}
+                  </p>
+                  <h4 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: 17, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.02em", color: "#1a1a1a", marginBottom: 10, lineHeight: 1.3 }}>{r.title}</h4>
+                  <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, lineHeight: 1.65, color: "#666", margin: 0 }}>{r.excerpt}</p>
                 </div>
               </Link>
               );
@@ -271,10 +278,12 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
           </div>
         </div>
         <style>{`
-          .related-card:hover { transform: translateY(-4px); border-color: rgba(216,115,7,0.3) !important; box-shadow: 0 16px 40px rgba(0,0,0,0.08); }
+          .related-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(0,0,0,0.1); border-color: rgba(216,115,7,0.3) !important; }
           .related-card:hover .corner-bracket { opacity: 1 !important; }
           .related-card:hover .related-card-img { opacity: 0 !important; }
           .related-card:hover .related-card-hero { opacity: 1 !important; }
+          .related-card:hover .related-card-scrim { opacity: 1 !important; }
+          .related-card:hover .related-card-view { opacity: 1 !important; transform: translateY(0) !important; }
           @media (max-width: 900px) {
             .cs-related-grid { grid-template-columns: repeat(2, 1fr) !important; }
           }
