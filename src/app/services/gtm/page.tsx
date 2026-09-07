@@ -24,6 +24,13 @@ function useInView(threshold = 0.1) {
 
 export default function GTMPage() {
   const [growthReviewOpen, setGrowthReviewOpen] = useState(false);
+
+  useEffect(() => {
+    // window is unavailable during SSR, so this can't be a useState lazy initializer.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    if (new URLSearchParams(window.location.search).get("openGrowthReview")) setGrowthReviewOpen(true);
+  }, []);
+
   const { ref: s2ViewRef, inView: s2ViewInView } = useInView();
   const { ref: s3ViewRef, inView: s3ViewInView } = useInView();
   const { ref: s4ViewRef, inView: s4ViewInView } = useInView();

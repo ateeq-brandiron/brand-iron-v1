@@ -199,6 +199,15 @@ export default function Home() {
   const router = useRouter();
   const [auditOpen, setAuditOpen] = useState(false);
   const [growthReviewOpen, setGrowthReviewOpen] = useState(false);
+
+  useEffect(() => {
+    // window is unavailable during SSR, so this can't be a useState lazy initializer.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("openAudit")) setAuditOpen(true);
+    if (params.get("openGrowthReview")) setGrowthReviewOpen(true);
+  }, []);
+
   const { ref: s2Ref, inView: s2InView } = useInView();
   const { ref: s3Ref, inView: s3InView } = useInView();
   const { ref: s3cardsRef, inView: s3cardsInView } = useInView();
