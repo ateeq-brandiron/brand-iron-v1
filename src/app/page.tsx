@@ -258,7 +258,7 @@ export default function Home() {
       {growthReviewOpen && <GrowthReviewModal onClose={() => setGrowthReviewOpen(false)} />}
 
       {/* ── S1: HERO ─────────────────────────────────────── */}
-      <section style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
+      <section className="home-hero-section" style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}>
         <video
           src="/videos/home/home-hero.mp4"
           aria-label="Rustic wooden barn in a green field beneath a dramatic sunset sky, representing Brand Iron's growth marketing agency roots"
@@ -270,7 +270,7 @@ export default function Home() {
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.15) 50%, rgba(0,0,0,0.55) 100%)" }} />
 
         {/* Centered headline */}
-        <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "0 24px" }}>
+        <div className="home-hero-center" style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "0 24px" }}>
           <h1 style={{
             // fontFamily: "var(--font-burford-inline), sans-serif",
             fontFamily: "var(--font-burford-inline), sans-serif",
@@ -285,10 +285,10 @@ export default function Home() {
           <p style={{
             // fontFamily: "var(--font-burford-inline), sans-serif", fontWeight: 400,
             fontFamily: "var(--font-burford-inline), sans-serif",
-            fontSize: 25, letterSpacing: "0.04em",
+            fontSize: "clamp(15px, 2.4vw, 25px)", letterSpacing: "0.04em",
             textTransform: "uppercase",
             lineHeight: 1.6, color: "rgba(255,255,255,0.92)",
-            maxWidth: "92vw", marginBottom: 28, textShadow: "0 1px 8px rgba(0,0,0,0.5)",
+            maxWidth: "min(92vw, 640px)", marginBottom: 28, textShadow: "0 1px 8px rgba(0,0,0,0.5)",
           }}>
             Helping organizations become discoverable, trusted,<br />and chosen in today&apos;s AI-driven buying landscape.
           </p>
@@ -317,7 +317,7 @@ export default function Home() {
         </div>
 
         {/* Service labels at bottom */}
-        <div style={{ position: "absolute", bottom: 64, left: 0, right: 0, display: "flex", justifyContent: "center", padding: "0 32px 20px" }}>
+        <div className="home-hero-services" style={{ position: "absolute", bottom: 64, left: 0, right: 0, display: "flex", justifyContent: "center", padding: "0 32px 20px" }}>
         <div style={{ maxWidth: 1100, width: "100%", display: "flex", flexWrap: "nowrap", justifyContent: "space-between", alignItems: "flex-start", gap: 36, overflowX: "auto" }}>
           {services.map(s => {
             const words = s.label.split(" ");
@@ -340,6 +340,14 @@ export default function Home() {
           })}
         </div>
         </div>
+
+        <style>{`
+          @media (max-width: 900px) {
+            .home-hero-section { height: auto !important; min-height: 100vh; }
+            .home-hero-center { position: relative !important; padding: 140px 20px 40px !important; }
+            .home-hero-services { position: relative !important; bottom: auto !important; padding: 0 20px 48px !important; }
+          }
+        `}</style>
       </section>
 
       {/* ── S2: TRUST BAR ────────────────────────────────── */}
@@ -770,6 +778,14 @@ export default function Home() {
                   ref={el => { serviceCardRefs.current[i] = el; }}
                   className={`reveal${s5InView ? " visible" : ""}`}
                   onClick={() => router.push(href)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={e => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      router.push(href);
+                    }
+                  }}
                   style={{
                     background: "#FFFFFF",
                     border: "1px solid #EEEBE7",
@@ -1041,6 +1057,9 @@ export default function Home() {
           }
           .services-carousel-arrow:hover, .home-testimonial-arrow:hover {
             border-color: #d87307 !important; background: rgba(216,115,7,0.08) !important;
+          }
+          @media (max-width: 640px) {
+            .services-carousel-arrow, .home-testimonial-arrow { display: none !important; }
           }
         `}</style>
         <style>{`

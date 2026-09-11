@@ -1,7 +1,10 @@
 "use client";
 import GrowthReviewForm from "./GrowthReviewForm";
+import { useEscapeClose } from "./useEscapeClose";
+import { modalCloseButtonStyle } from "./modalFormStyles";
 
 export default function GrowthReviewModal({ onClose }: { onClose: () => void }) {
+  useEscapeClose(onClose);
   return (
     <div style={{
       position: "fixed", inset: 0, zIndex: 9999,
@@ -16,13 +19,7 @@ export default function GrowthReviewModal({ onClose }: { onClose: () => void }) 
       }}>
         <div style={{ height: 3, background: "linear-gradient(to right, transparent, #d87307, transparent)" }} />
 
-        <button onClick={onClose} style={{
-          position: "absolute", top: 18, right: 18, width: 36, height: 36,
-          borderRadius: 8, background: "rgba(255,255,255,0.08)", border: "none",
-          color: "rgba(255,255,255,0.70)", fontSize: 20, cursor: "pointer",
-          display: "flex", alignItems: "center", justifyContent: "center",
-          lineHeight: 1, transition: "background 0.2s",
-        }}
+        <button onClick={onClose} aria-label="Close" style={modalCloseButtonStyle}
         onMouseEnter={e => (e.currentTarget.style.background = "rgba(216,115,7,0.30)")}
         onMouseLeave={e => (e.currentTarget.style.background = "rgba(255,255,255,0.08)")}
         >×</button>

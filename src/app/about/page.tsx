@@ -301,6 +301,9 @@ export default function AboutPage() {
           @media (max-width: 900px) {
             .ab-values-grid { grid-template-columns: repeat(2, 1fr) !important; }
           }
+          @media (max-width: 600px) {
+            .ab-values-grid { grid-template-columns: 1fr !important; }
+          }
         `}</style>
       </section>
 
@@ -437,6 +440,9 @@ export default function AboutPage() {
           }
           @media (max-width: 620px) {
             .ab-approach-grid { grid-template-columns: repeat(2, 1fr) !important; }
+          }
+          @media (max-width: 420px) {
+            .ab-approach-grid { grid-template-columns: 1fr !important; }
           }
         `}</style>
       </section>

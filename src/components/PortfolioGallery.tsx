@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { portfolioCategories, portfolioItemCategoryLabel, PortfolioCategoryId, PortfolioItem } from "@/data/portfolio";
 import WebsiteScrollPreview from "@/components/WebsiteScrollPreview";
+import { useEscapeClose } from "./useEscapeClose";
 
 const INITIAL_LIMIT = 6;
 
@@ -10,6 +11,7 @@ export default function PortfolioGallery({ items, initialCategory }: { items: Po
   const [showAll, setShowAll] = useState(false);
   const [expanded, setExpanded] = useState<PortfolioItem | null>(null);
   const [galleryIndex, setGalleryIndex] = useState(0);
+  useEscapeClose(() => setExpanded(null));
 
   const selectCategory = (id: PortfolioCategoryId | "all") => { setActiveCategory(id); setShowAll(false); };
   const openItem = (item: PortfolioItem) => { setExpanded(item); setGalleryIndex(0); };
@@ -165,7 +167,7 @@ export default function PortfolioGallery({ items, initialCategory }: { items: Po
           <div style={{ background: "#FFFFFF", borderRadius: 16, maxWidth: 720, width: "100%", position: "relative", overflow: "hidden" }}>
             <div style={{ height: 3, background: "linear-gradient(to right, #d87307, rgba(216,115,7,0.3))" }} />
             <button onClick={() => setExpanded(null)} aria-label="Close" style={{
-              position: "absolute", top: 18, right: 18, width: 36, height: 36, borderRadius: 8,
+              position: "absolute", top: 18, right: 18, width: 44, height: 44, borderRadius: 8,
               background: "rgba(0,0,0,0.06)", border: "none", color: "#555", fontSize: 20, cursor: "pointer",
               display: "flex", alignItems: "center", justifyContent: "center", lineHeight: 1, zIndex: 2,
               transition: "background 0.2s, color 0.2s",

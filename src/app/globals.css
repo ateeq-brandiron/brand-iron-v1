@@ -675,6 +675,22 @@ section p, main p, article p {
   animation: heroSlideUp 0.9s cubic-bezier(0.22,1,0.36,1) 0.54s both;
 }
 
+/* Reduced-motion users always see final content state immediately — also the
+   fallback if an IntersectionObserver never fires to add .visible. */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.visible,
+  .hero-h1-anim,
+  .hero-body-anim,
+  .hero-stats-anim,
+  .hero-btns-anim {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
 /* ── Trust Bar stats — single line once there's room ── */
 .trust-stats-row {
   flex-wrap: wrap;

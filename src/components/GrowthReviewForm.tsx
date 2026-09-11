@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { labelStyle, inputStyle, selectStyle, optionStyle, fieldPairGrid } from "./modalFormStyles";
 
 export default function GrowthReviewForm({ onClose }: { onClose?: () => void }) {
   const [step, setStep] = useState(1); // 1 = form, 2 = thank you
@@ -92,7 +93,7 @@ export default function GrowthReviewForm({ onClose }: { onClose?: () => void }) 
           Contact Information
         </p>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 14 }}>
+        <div style={fieldPairGrid}>
           <div>
             <label style={labelStyle}>Full Name *</label>
             <input required value={form.name} onChange={e => set("name", e.target.value)} style={inputStyle} placeholder="Your name" />
@@ -103,7 +104,7 @@ export default function GrowthReviewForm({ onClose }: { onClose?: () => void }) 
           </div>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 14 }}>
+        <div style={fieldPairGrid}>
           <div>
             <label style={labelStyle}>Email Address *</label>
             <input required type="email" value={form.email} onChange={e => set("email", e.target.value)} style={inputStyle} placeholder="you@company.com" />
@@ -148,23 +149,3 @@ export default function GrowthReviewForm({ onClose }: { onClose?: () => void }) 
     </>
   );
 }
-
-const labelStyle: React.CSSProperties = {
-  display: "block", fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11,
-  fontWeight: 700, letterSpacing: "0.10em", textTransform: "uppercase",
-  color: "rgba(255,255,255,0.55)", marginBottom: 6,
-};
-const inputStyle: React.CSSProperties = {
-  width: "100%", padding: "11px 14px",
-  background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.15)",
-  borderRadius: 6, color: "#FFFFFF",
-  fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13,
-  outline: "none", boxSizing: "border-box",
-};
-const selectStyle: React.CSSProperties = {
-  ...inputStyle, appearance: "none" as const,
-  backgroundImage: `url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23d87307' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E")`,
-  backgroundRepeat: "no-repeat", backgroundPosition: "right 14px center",
-  paddingRight: 36,
-};
-const optionStyle: React.CSSProperties = { background: "#FFFFFF", color: "#1a1a1a" };
