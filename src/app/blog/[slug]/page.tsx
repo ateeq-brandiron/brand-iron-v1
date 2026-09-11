@@ -1,9 +1,24 @@
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { articles } from "@/data/articles";
+import { articles, ArticleLink } from "@/data/articles";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import FaqAccordion from "@/components/FaqAccordion";
+
+const linkStyle: React.CSSProperties = { color: "#c46305", textDecoration: "underline", textUnderlineOffset: 2 };
+
+function renderWithLinks(text: string, links?: ArticleLink[]) {
+  if (!links || links.length === 0) return text;
+  const escaped = links.map(l => l.text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+  const parts = text.split(new RegExp(`(${escaped.join("|")})`, "g"));
+  return parts.map((part, i) => {
+    const match = links.find(l => l.text === part);
+    if (!match) return part;
+    return /^https?:\/\//.test(match.href)
+      ? <a key={i} href={match.href} target="_blank" rel="noopener noreferrer" style={linkStyle}>{part}</a>
+      : <Link key={i} href={match.href} style={linkStyle}>{part}</Link>;
+  });
+}
 
 export function generateStaticParams() {
   return articles.map(a => ({ slug: a.slug }));
@@ -133,12 +148,20 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 <ul key={i} style={{ margin: "0 0 22px", padding: 0, listStyle: "none" }}>
                   {block.items.map((item, j) => {
                     const isObj = typeof item !== "string";
+                    const obj = isObj ? (item as { bold: string; text: string; boldHref?: string; links?: ArticleLink[] }) : null;
                     return (
                       <li key={j} style={{ display: "flex", gap: 12, marginBottom: 12, fontSize: 17, lineHeight: 1.75, color: "#444" }}>
                         <span style={{ flex: "0 0 auto", color: "#d87307", fontWeight: 700 }}>—</span>
                         <span>
-                          {isObj && <strong style={{ color: "#1a1a1a" }}>{(item as { bold: string; text: string }).bold} </strong>}
-                          {isObj ? (item as { bold: string; text: string }).text : (item as string)}
+                          {obj && (
+                            obj.boldHref
+                              ? (/^https?:\/\//.test(obj.boldHref)
+                                  ? <a href={obj.boldHref} target="_blank" rel="noopener noreferrer" style={{ ...linkStyle, color: "#1a1a1a", fontWeight: 700 }}>{obj.bold}</a>
+                                  : <Link href={obj.boldHref} style={{ ...linkStyle, color: "#1a1a1a", fontWeight: 700 }}>{obj.bold}</Link>)
+                              : <strong style={{ color: "#1a1a1a" }}>{obj.bold}</strong>
+                          )}
+                          {obj && " "}
+                          {obj ? renderWithLinks(obj.text, obj.links) : (item as string)}
                         </span>
                       </li>
                     );
@@ -195,7 +218,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             return (
               <p key={i} style={{ fontSize: 17, lineHeight: 1.85, color: "#444", marginBottom: 22 }}>
                 {block.bold && <strong style={{ color: "#1a1a1a" }}>{block.bold} </strong>}
-                {block.text}
+                {renderWithLinks(block.text, block.links)}
               </p>
             );
           })}
