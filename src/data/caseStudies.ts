@@ -239,9 +239,10 @@ export const caseStudies: CaseStudy[] = [
     excerpt: "GoFresh Homes partnered with Brand Iron to build the brand, messaging, investor materials, website, and go-to-market strategy needed to support the company from startup through multiple stages of fundraising and growth.",
     thumbnail: "/images/client-logos/gofresh-homes-logo.png",
     thumbnailAlt: "GoFresh Homes logo, a green house-and-pin mark beside the wordmark GoFresh Homes",
-    // TODO: placeholder hero — swap for a real deck/website screenshot once Shelly/Olivia share one (see Slack thread).
     images: [
-      "/images/case-studies/gofresh-homes/gofresh-homes-hero-placeholder.jpg",
+      "/images/case-studies/gofresh-homes/gofresh-homes-hero.jpg",
+      "/images/case-studies/gofresh-homes/gofresh-homes-multistate-map.jpg",
+      "/images/case-studies/gofresh-homes/gofresh-homes-growth-model.jpg",
     ],
     clientDescription: "GoFresh Homes operated in the mobile home park ownership space, with several mobile home parks in its portfolio. As the company grew, it needed more than a recognizable brand. It needed a clear market position, compelling investor communications, a professional digital presence, and a go-to-market strategy capable of supporting successive stages of capital raising. The goal was to create a cohesive foundation that could help GoFresh Homes present itself with greater credibility and authority as the business expanded.",
     challenge: "GoFresh Homes was building the company while also preparing to raise capital across multiple stages. The company needed to clearly define its brand and messaging, establish a professional identity, communicate the investment opportunity to prospective investors, and build the digital and go-to-market infrastructure required to support future growth. Because GoFresh Homes was progressing from startup into successive funding stages, the brand also needed to evolve with the business rather than serve only a single capital raise.",
