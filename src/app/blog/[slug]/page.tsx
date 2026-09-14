@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       url,
       title,
       description,
-      publishedTime: article.publishedISO,
+      ...(article.isGuide ? {} : { publishedTime: article.publishedISO }),
       authors: ["Michael Doyle"],
       images: [article.headerImage],
       siteName: "Brand Iron",
@@ -61,6 +61,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   if (!article) notFound();
 
   const related = articles.filter(a => a.slug !== slug).slice(0, 3);
+  const faqItems = article.body.flatMap(b => b.type === "faq" ? b.items : []);
 
   return (
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
@@ -71,6 +72,22 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           { name: article.title, url: `https://brandiron.net/blog/${article.slug}/` },
         ]}
       />
+      {faqItems.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: faqItems.map(({ q, a }) => ({
+                "@type": "Question",
+                name: q,
+                acceptedAnswer: { "@type": "Answer", text: a },
+              })),
+            }),
+          }}
+        />
+      )}
 
       {/* ── HEADER ───────────────────────────────────────────── */}
       <section style={{ position: "relative", overflow: "hidden", padding: "160px 24px 72px" }}>
@@ -106,8 +123,12 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           </h1>
           <div style={{ display: "flex", gap: 16, alignItems: "center", fontSize: 13, color: "rgba(255,255,255,0.55)" }}>
             <span>By Michael Doyle</span>
-            <span style={{ width: 4, height: 4, borderRadius: "50%", background: "rgba(255,255,255,0.35)" }} />
-            <span>{article.date}</span>
+            {!article.isGuide && (
+              <>
+                <span style={{ width: 4, height: 4, borderRadius: "50%", background: "rgba(255,255,255,0.35)" }} />
+                <span>{article.date}</span>
+              </>
+            )}
             <span style={{ width: 4, height: 4, borderRadius: "50%", background: "rgba(255,255,255,0.35)" }} />
             <span style={{ color: "#d87307" }}>{article.readTime}</span>
           </div>

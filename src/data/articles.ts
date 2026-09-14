@@ -22,9 +22,88 @@ export type Article = {
   body: ArticleBlock[];
   seoTitle?: string;
   metaDescription?: string;
+  // Evergreen reference/pillar content: hides the "posted on" date in listings and on
+  // the article page, and omits the OpenGraph publishedTime, since dating it undermines
+  // the evergreen framing this kind of page depends on.
+  isGuide?: boolean;
 };
 
 export const articles: Article[] = [
+  {
+    slug: "ai-visibility-aeo-explained",
+    isGuide: true,
+    publishedISO: "2026-09-14",
+    category: "Guide",
+    title: "AI Visibility (AEO) Explained: How Businesses Get Found by ChatGPT, Gemini, and Google AI",
+    excerpt: "AI Visibility, also known as Answer Engine Optimization (AEO), is the practice of making a business discoverable, understood, and recommended by AI-powered platforms such as ChatGPT, Gemini, Claude, and Perplexity, in addition to traditional search engines like Google.",
+    readTime: "8 min read",
+    date: "September 2026",
+    headerImage: "/images/blog/ai-visibility-aeo-explained/ai-visibility-aeo-explained-hero.jpg",
+    headerImageAlt: "Glowing circuit-line network representing AI platforms mapping and recommending a business",
+    metaDescription: "A complete guide to AI Visibility and Answer Engine Optimization (AEO) — what it is, how it differs from SEO, and how businesses become discoverable across ChatGPT, Gemini, Claude, and Perplexity.",
+    body: [
+      { type: "p", text: "Buyers increasingly ask AI assistants for recommendations before ever visiting a website. A business's presence in those AI-generated answers has become as important as its ranking on a traditional search engine, and it works by different rules." },
+
+      { type: "h2", text: "Why AI Visibility Matters Now" },
+      { type: "ul", items: [
+        "Buyers research through AI conversations, not just search boxes, before contacting a company.",
+        "If AI platforms don't recognize a business as a credible source, competitors become the answer buyers see first.",
+        "AI systems evaluate context, authority, and credibility, not just keyword matching, to decide who gets referenced.",
+      ] },
+
+      { type: "h2", text: "SEO vs. AEO vs. GEO, Explained Simply" },
+      { type: "p", text: "These three disciplines overlap but answer different questions. SEO is still the foundational layer; AEO and GEO build on top of it for how AI systems retrieve, cite, and recommend a business." },
+      { type: "table", headers: ["", "SEO", "AEO", "GEO"], rows: [
+        ["Definition", "Optimizing for search engine rankings (Google, Bing)", "Optimizing for AI answer engines (ChatGPT, Perplexity, Google AI Overviews) to retrieve and cite content directly", "Optimizing for generative AI systems to synthesize and recommend a business within their responses"],
+        ["Goal", "Rank higher for keywords", "Get cited/quoted as a source in AI-generated answers", "Get mentioned/recommended within an AI's synthesized response"],
+        ["Success Metric", "Clicks, rankings, impressions", "Citation frequency, answer inclusion", "Recommendation frequency, brand mention rate"],
+        ["Content Style", "Keyword-optimized pages", "Clear, quotable, structured answers (definitions, lists, FAQs)", "Authoritative, well-sourced, entity-rich content"],
+        ["Still Needed?", "Yes — foundational layer", "Yes — fastest-growing layer", "Yes — emerging layer"],
+      ] },
+
+      { type: "h2", text: "How AI Platforms Decide What to Recommend" },
+      { type: "ul", items: [
+        { bold: "Entity recognition:", text: "AI systems map businesses as distinct entities with clear relationships to their industry, services, and expertise, not just as web pages." },
+        { bold: "Authority signals:", text: "Citations, backlinks from credible sources, reviews, and consistent mentions across the web build the trust AI systems rely on before recommending a business." },
+        { bold: "Structured data:", text: "Schema markup gives AI systems explicit, machine-readable information instead of requiring them to infer it from unstructured text." },
+        { bold: "Content clarity:", text: "Clear, unambiguous, well-organized content is easier for AI systems to retrieve and quote accurately." },
+      ] },
+
+      { type: "h2", text: "A Practical Framework for Building AI Visibility" },
+      { type: "p", text: "The same four-stage approach applies regardless of industry or starting point:" },
+      { type: "ul", items: [
+        { bold: "1. Diagnose:", text: "Understand how search engines and AI platforms currently see the business, and identify visibility gaps and technical issues." },
+        { bold: "2. Build:", text: "Strengthen technical SEO, structured data, and entity optimization to create the infrastructure AI systems rely on." },
+        { bold: "3. Grow:", text: "Expand authority through strategic content, citations, digital PR, and reviews." },
+        { bold: "4. Dominate:", text: "Continuously optimize to become a recognized authority in the market." },
+      ] },
+
+      { type: "h2", text: "AI Visibility Checklist" },
+      { type: "ul", items: [
+        "Clear, single-sentence definitions of what your business does (AI systems favor quotable, unambiguous statements)",
+        "FAQPage schema markup on key service and resource pages",
+        "Consistent NAP (Name, Address, Phone) across all citation directories — inconsistent data confuses entity recognition",
+        "Structured data (Organization, Service, Product schema) so AI systems can map your business as a defined entity",
+        "Server-rendered content — answers and key text must be present in the raw HTML, not injected only after a click or JS execution",
+        "Comparison tables and lists — AI engines pull structured formats more readily than long paragraphs",
+        "Third-party citations and mentions — press, directories, guest content, and reviews that reference your business by name",
+        "Fresh, dated content — AI systems weight recency for fast-moving topics",
+      ] },
+
+      { type: "h2", text: "Frequently Asked Questions" },
+      { type: "faq", items: [
+        { q: "What is AI Visibility (AEO)?", a: "AI Visibility, often called Answer Engine Optimization (AEO), is the practice of making a business discoverable, understood, and recommended by AI-powered platforms like ChatGPT, Gemini, Claude, and Perplexity, in addition to traditional search engines like Google." },
+        { q: "Is AEO replacing SEO?", a: "No. SEO remains the foundational layer of visibility, since AI platforms still rely on well-indexed, well-structured websites. AEO builds on top of SEO, adding the structured content, schema, and citation signals that AI systems specifically need to retrieve and recommend a business." },
+        { q: "How do I know if my business has good AI Visibility?", a: "Try asking ChatGPT, Gemini, or Perplexity a question a potential customer might ask about your category (e.g., \"who are the best [your service] providers in [your city]?\"). If your business doesn't appear, isn't cited, or is described inaccurately, that's a visibility gap worth addressing." },
+        { q: "What's the single biggest factor in getting cited by AI platforms?", a: "Consistency and clarity of entity signals — a business needs a clear, unambiguous definition of what it does, consistent information across the web (name, address, services), and structured data that helps AI systems confidently map who you are and what you offer." },
+        { q: "How long does it take to see AI Visibility results?", a: "Technical foundation work (schema, structured data, consistent NAP) can show measurable indexing improvements within 30–60 days. Authority-building work (citations, content, reviews) typically shows meaningful AI citation lift within 90–180 days, since it depends on accumulating trust signals over time." },
+      ] },
+
+      { type: "h2", text: "Understanding AI Visibility Is the First Step" },
+      { type: "p", text: "Building it into your business is the next. See how Brand Iron helps organizations become discoverable, trusted, and recommended across search and AI.",
+        links: [{ text: "See how Brand Iron helps organizations become discoverable, trusted, and recommended across search and AI.", href: "/services/ai-visibility/" }] },
+    ],
+  },
   {
     slug: "incremental-ai-revenue-growth-not-rebuilds",
     publishedISO: "2026-09-11",
