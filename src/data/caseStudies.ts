@@ -1,5 +1,7 @@
 import { PortfolioCategoryId, portfolioCategories } from "@/data/portfolio";
 
+export type CaseStudyLink = { text: string; href: string };
+
 /** Case studies show one piece of work at a time, so category badges read better singular (e.g. "Website" not "Websites") - unlike Portfolio's filter tabs, which stay plural. */
 const CASE_STUDY_CATEGORY_LABEL_OVERRIDES: Partial<Record<PortfolioCategoryId, string>> = {
   websites: "Website",
@@ -37,6 +39,9 @@ export type CaseStudy = {
   clientDescription?: string;
   challenge: string;
   solution: string;
+  /** Inline links applied to exact substrings of `challenge`/`solution`, same mechanism as blog article body links. */
+  challengeLinks?: CaseStudyLink[];
+  solutionLinks?: CaseStudyLink[];
   /** Itemized "What Brand Iron Delivered" list — used by non-website case studies whose source document breaks the engagement into named deliverables. */
   deliverables?: CaseStudyListItem[];
   /** A second itemized list for engagements with their own named stages/milestones (e.g. funding rounds), distinct from `deliverables`. */
@@ -68,6 +73,11 @@ export const caseStudies: CaseStudy[] = [
     cardHoverImage: "/images/portfolio/volition-hospitality-website/volition-hospitality-website-thumb.jpg",
     fullPageImage: "/images/portfolio/volition-hospitality-website/volition-hospitality-website-full.jpg",
     challenge: "Volition Hospitality urgently needed a brand identity to establish a stronger, more consistent presence across its properties while effectively communicating its unique value proposition in the competitive luxury hospitality market. The brand needed to enhance emotional connections with customers through improved visual identity and storytelling, particularly as they sought to attract investors for their growth strategy. Their business model of transforming underperforming properties in prime locations into unique, locally-inspired destinations had proven successful, but required strategic brand communication to maximize business value and demonstrate market leadership potential.",
+    challengeLinks: [
+      { text: "a brand identity to establish a stronger, more consistent presence", href: "/blog/rebranding-agency-transforms-your-business/" },
+      { text: "unique value proposition in the competitive luxury hospitality market", href: "/blog/brand-positioning-ai-search-differentiation/" },
+      { text: "demonstrate market leadership potential", href: "/blog/go-to-market-consultant-vs-marketing-agency/" },
+    ],
     solution: "Brand Iron delivered a complete brand transformation for Volition Hospitality, including visual identity, messaging, a capital raise deck, and a website that showcased their unique value in luxury hospitality while strengthening market presence and investor appeal.",
     results: [],
   },
@@ -87,7 +97,12 @@ export const caseStudies: CaseStudy[] = [
     cardHoverImage: "/images/portfolio/black-lake-website/black-lake-website-thumb.jpg",
     fullPageImage: "/images/portfolio/black-lake-website/black-lake-website-full.jpg",
     challenge: "The company was challenged with an outdated website that no longer reflected its professional image. There was also a pressing need to realign brand messaging with its current market positioning. In addition, digital engagement was limited, resulting in a poor user experience for visitors. To further complicate matters, the organization lacked marketing automation and analytics tools, which hindered its ability to measure performance and optimize strategies effectively.",
+    challengeLinks: [
+      { text: "outdated website that no longer reflected its professional image", href: "/blog/is-your-website-costing-you-deals/" },
+      { text: "realign brand messaging with its current market positioning", href: "/blog/brand-positioning-ai-search-differentiation/" },
+    ],
     solution: "Brand Iron conducted a comprehensive brand and website audit, then delivered a full rebrand with a sophisticated visual identity and messaging platform, a modern professional website with improved user experience and clear calls to action, and compelling capital raise decks and teaser pieces. Targeted digital marketing — including SEO, content marketing, and marketing automation — was layered on top to increase visibility, nurture leads, and track performance.",
+    solutionLinks: [{ text: "a full rebrand", href: "/blog/rebranding-agency-transforms-your-business/" }],
     results: [],
   },
   {
@@ -106,7 +121,9 @@ export const caseStudies: CaseStudy[] = [
     cardHoverImage: "/images/case-studies/maadaadizi/maadaadizi-card-hover.jpg",
     fullPageImage: "/images/case-studies/maadaadizi/maadaadizi-full.jpg",
     challenge: "Maadaadizi's hospitality portfolio had grown to span branded hotels, independent lifestyle properties, and restaurants, but the company had no unified digital presence to tell its story. Originally founded to manage diversified real estate on behalf of the Mille Lacs Band of Ojibwe, Maadaadizi needed a website that could carry its cultural origin story — the name means \"s/he begins a journey\" in the Ojibwe language — while clearly organizing a growing, varied property portfolio for guests, investors, and partners alike.",
+    challengeLinks: [{ text: "carry its cultural origin story", href: "/blog/rebranding-agency-transforms-your-business/" }],
     solution: "Brand Iron built a website that leads with warm, guest-facing photography and Maadaadizi's founding story, then organizes its full portfolio — branded hotels, independent brands, restaurants, and meetings & events spaces — into a clear, browsable structure that supports both guest discovery and future portfolio growth.",
+    solutionLinks: [{ text: "a clear, browsable structure", href: "/blog/when-to-hire-a-go-to-market-strategy-consultant/" }],
     results: [],
   },
   {
@@ -125,7 +142,9 @@ export const caseStudies: CaseStudy[] = [
     cardHoverImage: "/images/portfolio/ares-website/ares-website-thumb.jpg",
     fullPageImage: "/images/portfolio/ares-website/ares-website-full.jpg",
     challenge: "With decades of experience spanning development, brokerage, and property management, ARES needed a website that could make the case for its full-lifecycle, in-house model — handling every phase of a commercial real estate project itself — rather than reading as just another regional brokerage site.",
+    challengeLinks: [{ text: "reading as just another regional brokerage site", href: "/blog/brand-positioning-ai-search-differentiation/" }],
     solution: "Brand Iron designed a website structured around ARES's three core service lines — Development, Brokerage, and Property Management — anchored by a real portfolio of managed properties and a clear \"Why ARES\" case for its vertically integrated, in-house approach.",
+    solutionLinks: [{ text: "a clear \"Why ARES\" case", href: "/blog/is-your-website-costing-you-deals/" }],
     results: [],
   },
   {
@@ -144,7 +163,9 @@ export const caseStudies: CaseStudy[] = [
     cardHoverImage: "/images/case-studies/cesa/cesa-card-hover.jpg",
     fullPageImage: "/images/case-studies/cesa/cesa-full.jpg",
     challenge: "CESA brings together workers' compensation, risk management, and mental health resources for Colorado's emergency service districts, but needed a website that could make that bundled value proposition immediately clear to district leaders while driving membership applications.",
+    challengeLinks: [{ text: "bundled value proposition immediately clear", href: "/blog/brand-positioning-ai-search-differentiation/" }],
     solution: "Brand Iron built a website that opens with a direct, mission-driven headline, backs it up with a track-record stat band, and lays out exactly what makes CESA different — supported by clear membership and district-application calls to action throughout.",
+    solutionLinks: [{ text: "clear membership and district-application calls to action", href: "/blog/is-your-website-costing-you-deals/" }],
     results: [],
   },
   {
@@ -164,6 +185,10 @@ export const caseStudies: CaseStudy[] = [
     fullPageImage: "/images/case-studies/offen-petroleum/offen-petroleum-full.jpg",
     challenge: "Offen Petroleum's fuel, lubricant, and propane distribution network spans a wide swath of the country, but its site needed to make that multi-state reach and broad product line easy for commercial, industrial, and government buyers to navigate and act on.",
     solution: "Brand Iron built a website around a bold \"Fueling Efficiency\" positioning, an interactive states-served map that shows the true scale of Offen's operation, and a direct inquiry form tailored to fuel, propane, lubricant, and DEF requests.",
+    solutionLinks: [
+      { text: "bold \"Fueling Efficiency\" positioning", href: "/blog/brand-positioning-ai-search-differentiation/" },
+      { text: "a direct inquiry form", href: "/blog/is-your-website-costing-you-deals/" },
+    ],
     results: [],
   },
   {

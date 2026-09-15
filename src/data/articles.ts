@@ -344,6 +344,11 @@ export const articles: Article[] = [
       ] },
       { type: "p", bold: "Why it Costs Deals: The \"Trust Gap\"", text: "" },
       { type: "p", text: "B2B buyers are savvy. They do their research. If your site creates a \"trust gap\" right from the start, they won't bother digging deeper into your valuable content or solutions. They'll simply assume you're not the forward-thinking, reliable partner they need." },
+      { type: "p", text: "Sometimes what you're really looking at is a full brand rebuild, not just a redesign - outdated design is often a brand problem wearing a website's clothes. In one recent rebuild, an outdated site was exactly the kind of trust gap eroding a client's professional image before a full brand and website audit turned it around.",
+        links: [
+          { text: "a full brand rebuild, not just a redesign", href: "/blog/rebranding-agency-transforms-your-business/" },
+          { text: "one recent rebuild", href: "/case-studies/black-lake-capital/" },
+        ] },
 
       { type: "h2", text: "2. Your Website is a Sloth (Slow Loading Times)" },
       { type: "p", text: "Patience is a virtue, but in the digital world, it's a luxury few B2B prospects have." },
@@ -404,6 +409,11 @@ export const articles: Article[] = [
       ] },
       { type: "p", bold: "Why it Costs Deals: The \"Leaky Bucket\" Phenomenon", text: "" },
       { type: "p", text: "Your marketing efforts might be great at driving traffic, but if your website is a \"leaky bucket,\" those hard-earned visitors will just fall out without converting. You're essentially spending money to bring people to a place where they can't easily do business with you. A rebuild can strategically design pathways that nurture prospects and guide them toward a sale." },
+      { type: "p", text: "A rebuild fixes the destination, but pairing it with a modern outbound program gives you a lever to recover pipeline while the new site comes together. For a nonprofit client, fixing exactly this kind of dead end meant rebuilding around clear membership and application calls to action.",
+        links: [
+          { text: "a modern outbound program", href: "/blog/modern-cold-outbound-linkedin-email/" },
+          { text: "a nonprofit client", href: "/case-studies/cesa/" },
+        ] },
 
       { type: "h2", text: "5. You Can't Easily Update or Add Content (CMS Limitations)" },
       { type: "p", text: "Your website should be a dynamic, evolving resource, not a static monument. If updating it feels like pulling teeth, that's a huge problem." },
@@ -445,6 +455,8 @@ export const articles: Article[] = [
       ] },
       { type: "p", bold: "Why it Costs Deals: Inefficient Operations and Missed Personalization", text: "" },
       { type: "p", text: "When your website isn't integrated, your entire lead-to-customer process becomes clunky and inefficient. Leads might get lost, nurtured poorly, or approached without crucial context. In B2B, personalization and a smooth handover from marketing to sales can make or break a deal. Without integration, you're constantly playing catch-up." },
+      { type: "p", text: "The fix isn't just technical. It starts with sales and marketing working from shared data and a shared definition of a qualified lead, so the integration actually gets used once it's built.",
+        links: [{ text: "sales and marketing working from shared data", href: "/blog/gtm-strategy-sales-marketing-alignment/" }] },
 
       { type: "h2", text: "7. You're Embarrassed by Your Website (The Gut Feeling)" },
       { type: "p", text: "Sometimes, all the data and technical analysis in the world can't replace a simple gut feeling." },
@@ -477,6 +489,8 @@ export const articles: Article[] = [
         { bold: "Empower your team:", text: "Provide a dynamic tool that your marketing and sales teams can leverage with confidence." },
       ] },
       { type: "p", text: "Don't let your website be the weakest link in your sales process. If these signs resonate with you, it's time to take action. Brand Iron can help you identify the critical areas for improvement and show you how a strategic website redesign can transform your lead generation and sales efforts." },
+      { type: "p", text: "A rebuild lands best when you get your go-to-market strategy right first, so the new site reinforces a strategy that's already sound rather than trying to compensate for one that isn't.",
+        links: [{ text: "get your go-to-market strategy right first", href: "/blog/when-to-hire-a-go-to-market-strategy-consultant/" }] },
 
       { type: "h2", text: "FAQ: Your B2B Website Redesign Questions Answered" },
       { type: "faq", items: [
@@ -512,7 +526,7 @@ export const articles: Article[] = [
         { bold: "Business Growth & Diversification:", text: "You've expanded your services, products, or entered new markets, and your current brand no longer accurately reflects your broadened scope." },
         { bold: "Mergers & Acquisitions:", text: "Combining entities often necessitates a new, unified brand identity to avoid confusion and project a cohesive future." },
         { bold: "Negative Perception:", text: "Your brand has accumulated negative associations, or its reputation has been damaged, requiring a clean slate." },
-        { bold: "Lack of Differentiation:", text: "You struggle to stand out in a crowded market, and your brand message is generic or easily confused with competitors." },
+        { bold: "Lack of Differentiation:", text: "You struggle to stand out in a crowded market, and your brand message is generic or easily confused with competitors.", links: [{ text: "generic or easily confused with competitors", href: "/blog/brand-positioning-ai-search-differentiation/" }] },
         { bold: "Internal Misalignment:", text: "Your employees don't fully understand or embody your brand, leading to inconsistent customer experiences." },
         { bold: "Technological Shifts:", text: "New technologies have changed how customers interact with brands, requiring a more modern, adaptive brand presence." },
         { bold: "Founder Succession/Leadership Change:", text: "New leadership may bring a fresh vision that requires a new brand identity to symbolize the shift." },
@@ -534,6 +548,11 @@ export const articles: Article[] = [
 
       { type: "h2", text: "The Transformation Journey: How Brand Iron Approaches Rebranding" },
       { type: "p", text: "A rebranding agency doesn't just deliver a new logo; it delivers a comprehensive strategy for your brand's future. Brand Iron's approach typically involves several critical phases, each building upon the last to ensure a holistic and impactful transformation." },
+      { type: "p", text: "You can see this in practice in a recent hospitality rebrand, or in a comprehensive brand and website audit followed by a full rebrand for an investment firm.",
+        links: [
+          { text: "see this in practice", href: "/case-studies/volition-hospitality/" },
+          { text: "a comprehensive brand and website audit followed by a full rebrand", href: "/case-studies/black-lake-capital/" },
+        ] },
 
       { type: "h3", text: "Phase 1: Discovery & Research – The Foundation of Transformation" },
       { type: "p", text: "This initial phase is about deep understanding. It's where the agency becomes intimately familiar with your business, its history, current state, and future aspirations." },
@@ -581,9 +600,9 @@ export const articles: Article[] = [
       { type: "p", text: "A successful rebrand isn't just about creating new assets; it's about seamlessly integrating them across every single touchpoint." },
       { type: "ul", items: [
         { bold: "Internal Launch:", text: "Engaging employees first is crucial. Training sessions, internal communications, and branded merchandise help foster pride and ensure employees become brand ambassadors." },
-        { bold: "Website Redesign/Update:", text: "Implementing the new visual and verbal identity across your digital flagship." },
+        { bold: "Website Redesign/Update:", text: "Implementing the new visual and verbal identity across your digital flagship, sometimes as part of a dedicated website rebuild rather than a simple reskin.", links: [{ text: "a dedicated website rebuild", href: "/blog/is-your-website-costing-you-deals/" }] },
         { bold: "Marketing Collateral:", text: "Redesigning brochures, business cards, presentations, advertising, and other promotional materials." },
-        { bold: "Digital Presence:", text: "Updating social media profiles, email templates, and digital advertising campaigns." },
+        { bold: "Digital Presence:", text: "Updating social media profiles, email templates, and digital advertising campaigns, often alongside a coordinated outbound program that carries the new voice into direct outreach.", links: [{ text: "a coordinated outbound program", href: "/blog/modern-cold-outbound-linkedin-email/" }] },
         { bold: "Physical Assets:", text: "Applying the new brand to signage, vehicle wraps, product packaging, and office interiors." },
         { bold: "Launch Strategy:", text: "Developing a communication plan for how and when to announce the rebrand to external audiences, ensuring a positive reception." },
       ] },
@@ -648,7 +667,8 @@ export const articles: Article[] = [
 
       { type: "h2", text: "Conclusion" },
       { type: "p", text: "A rebrand, when executed strategically by a skilled agency, is far more than a cosmetic update. It is a fundamental transformation of your business's identity, perception, and trajectory. It empowers you to reconnect with your audience, differentiate from competitors, energize your team, and unlock new avenues for growth. By systematically addressing the core elements of your brand - from strategy and messaging to visual identity and implementation - a rebranding agency like Brand Iron can reposition your business for sustained success in an ever-evolving market." },
-      { type: "p", text: "Not sure if your brand needs a refresh or a full rebrand? A consultation with a specialized agency can help you assess your current brand's health and explore the transformative power of a strategic rebrand." },
+      { type: "p", text: "Not sure if your brand needs a refresh or a full rebrand? A consultation with a specialized agency, or with a go-to-market strategy consultant if positioning and market strategy are tangled up in the question, can help you assess your current brand's health and explore the transformative power of a strategic rebrand.",
+        links: [{ text: "a go-to-market strategy consultant", href: "/blog/when-to-hire-a-go-to-market-strategy-consultant/" }] },
 
       { type: "h2", text: "Frequently Asked Questions" },
       { type: "faq", items: [
@@ -689,12 +709,13 @@ export const articles: Article[] = [
 
       { type: "h2", text: "The Foundation: Go-to-Market Strategy Alignment" },
       { type: "p", text: "Before you even think about writing your first message, you need to nail this down. Your outbound efforts are only as good as the strategy they support. Think of it like building a house: you wouldn't start framing the walls without a blueprint, right?" },
-      { type: "p", text: "Go-to-market strategy alignment means ensuring your sales team, marketing messages, product offering, and outbound tactics are all singing from the same hymn sheet. It's about deeply understanding:" },
+      { type: "p", text: "Go-to-market strategy alignment means ensuring your sales team, marketing messages, product offering, and outbound tactics are all singing from the same hymn sheet. It's about deeply understanding:",
+        links: [{ text: "Go-to-market strategy alignment", href: "/blog/gtm-strategy-sales-marketing-alignment/" }] },
       { type: "ul", items: [
         { bold: "Your ideal customer profile (ICP):", text: "What industries are they in? What size are their companies (revenue, employees)? What technologies do they use? What growth stage are they at?" },
         { bold: "Your buyer persona within that ICP:", text: "Their job title and function, daily challenges and pain points, goals and aspirations, what keeps them up at night, how they make purchasing decisions, and where they hang out online." },
         { bold: "The specific problem you solve for that persona:", text: "Be laser-focused – highlight the one or two things that directly address their biggest pain point, and know the cost of that problem if left unsolved (financial, time, opportunity cost, stress)." },
-        { bold: "Your unique value proposition (UVP):", text: "Why you? What makes your solution different or better than alternatives, including doing nothing, and can you articulate that value clearly and concisely?" },
+        { bold: "Your unique value proposition (UVP):", boldHref: "/blog/brand-positioning-ai-search-differentiation/", text: "Why you? What makes your solution different or better than alternatives, including doing nothing, and can you articulate that value clearly and concisely?" },
       ] },
       { type: "p", text: "When you have crystal clear answers to these questions, your outbound messages transform from generic pitches to tailored, problem-aware conversations. This alignment ensures you're not just reaching out, but reaching out to the right people with the right message." },
 
@@ -793,8 +814,8 @@ export const articles: Article[] = [
         { bold: "Being Overly Salesy or Aggressive:", text: "No one likes to feel like a target. Be helpful, not pushy." },
         { bold: "Neglecting Deliverability:", text: "If your emails are landing in spam, none of this matters. Maintain a good sender reputation." },
         { bold: "Lack of Consistency:", text: "Outbound is a marathon, not a sprint. Consistent effort yields results." },
-        { bold: "Not Aligning with Marketing:", text: "Your outbound messaging should complement your broader marketing efforts. If marketing is talking about one thing and sales is talking about another, you're confusing your audience." },
-        { bold: "Ignoring AI Answer Engines:", text: "Your content and messages should be structured so that AI answer engines can easily extract key information and provide concise, helpful responses. Think about clear problem/solution statements." },
+        { bold: "Not Aligning with Marketing:", text: "Your outbound messaging should complement your broader marketing efforts. If marketing is talking about one thing and sales is talking about another, you're confusing your audience. If you're not sure which partner should own that alignment internally, that's worth sorting out before you scale outbound further.", links: [{ text: "which partner should own that alignment", href: "/blog/go-to-market-consultant-vs-marketing-agency/" }] },
+        { bold: "Ignoring AI Answer Engines:", text: "Your content and messages should be structured so that AI answer engines can easily extract key information and provide concise, helpful responses. Think about clear problem/solution statements.", links: [{ text: "AI answer engines", href: "/blog/ai-visibility-aeo-explained/" }] },
       ] },
 
       { type: "h2", text: "Why This Works for B2B Founders and Sales Leaders" },
@@ -839,8 +860,10 @@ export const articles: Article[] = [
       { type: "p", text: "This isn't just about efficiency; it's about survival and truly growing your company. Getting your sales and marketing aligned before you hit the gas pedal on scaling isn't just smart, it's essential. It ensures every dollar spent, every hour worked, and every conversation had moves you closer to your goals." },
 
       { type: "h2", text: "What Is a Go-to-Market (GTM) Strategy?" },
-      { type: "p", text: "Before we talk about alignment, let's make sure we're on the same page about what a go-to-market strategy actually is." },
-      { type: "p", text: "Think of your GTM strategy as your master plan for bringing your product or service to market and getting it into the hands of your ideal customers. It's not just a marketing plan, and it's not just a sales plan. It's the overarching blueprint that details how you'll reach your target audience, how you'll communicate your value, how you'll sell to them, and how you'll support them." },
+      { type: "p", text: "Before we talk about alignment, let's make sure we're on the same page about what a go-to-market strategy actually is. This piece focuses on aligning the teams once that strategy exists — if you're still deciding when it's time to bring in outside GTM expertise to build it in the first place, that's a separate question worth answering first.",
+        links: [{ text: "when it's time to bring in outside GTM expertise", href: "/blog/when-to-hire-a-go-to-market-strategy-consultant/" }] },
+      { type: "p", text: "Think of your GTM strategy as your master plan for bringing your product or service to market and getting it into the hands of your ideal customers. It's not just a marketing plan, and it's not just a sales plan. It's the overarching blueprint that details how you'll reach your target audience, how you'll communicate your value, how you'll sell to them, and how you'll support them. Deciding which partner is actually right for that work, an agency or a dedicated consultant, is worth thinking through deliberately.",
+        links: [{ text: "which partner is actually right for that work", href: "/blog/go-to-market-consultant-vs-marketing-agency/" }] },
       { type: "p", text: "A well-defined GTM strategy answers fundamental questions:" },
       { type: "ul", items: [
         "Who are you selling to? (Target audience, Ideal Customer Profile - ICP)",
@@ -882,7 +905,8 @@ export const articles: Article[] = [
       { type: "p", bold: "Aligned:", text: "Both teams agree: \"Our ICP is a rapidly growing B2B SaaS company (200-1000 employees) in the tech sector, specifically targeting their VP of People or Head of HR, who is overwhelmed by manual employee onboarding processes and actively looking for an automated, integration-friendly solution that scales with their growth.\"" },
 
       { type: "h3", text: "2. Unified Value Proposition and Messaging" },
-      { type: "p", text: "Once you know who you're talking to, you need to agree on what you're saying and why it matters. Inconsistent messaging creates confusion and erodes trust." },
+      { type: "p", text: "Once you know who you're talking to, you need to agree on what you're saying and why it matters, starting with a clear, differentiated value proposition. Inconsistent messaging creates confusion and erodes trust.",
+        links: [{ text: "a clear, differentiated value proposition", href: "/blog/brand-positioning-ai-search-differentiation/" }] },
       { type: "p", text: "What to do:" },
       { type: "ul", items: [
         { bold: "Craft a clear, concise value proposition:", text: "This is the core reason why a customer should choose you. It should articulate the problem you solve, how you solve it, and the unique benefits. It needs to resonate with your ICP." },
@@ -902,7 +926,7 @@ export const articles: Article[] = [
         { bold: "SQL:", text: "Sales accepts the MQL as ready for a direct sales conversation, usually after further qualification (e.g., confirmed budget, authority, need, timeline - BANT or similar framework)." },
         { bold: "Implement clear hand-off procedures:", text: "How does marketing pass the lead to sales? What information is included? Which CRM fields are mandatory?" },
         { bold: "Formalize SLAs:", text: "Create a written agreement between sales and marketing outlining responsibilities and expectations, marketing's delivery volume and quality standard, and sales' follow-up speed and conversion commitments." },
-        { bold: "Use technology effectively:", text: "Your CRM (e.g., Salesforce, HubSpot) should be the single source of truth for lead tracking, status, and communication. Automate lead routing where possible." },
+        { bold: "Use technology effectively:", text: "Your CRM (e.g., Salesforce, HubSpot) should be the single source of truth for lead tracking, status, and communication. Automate lead routing where possible, especially once a coordinated multi-channel outbound program starts feeding the same pipeline.", links: [{ text: "a coordinated multi-channel outbound program", href: "/blog/modern-cold-outbound-linkedin-email/" }] },
       ] },
 
       { type: "table", headers: ["Stage", "Definition", "Marketing Action", "Sales Action"], rows: [
@@ -1034,14 +1058,15 @@ export const articles: Article[] = [
       { type: "p", text: "This shift has profound implications for how your brand is perceived and discovered." },
       { type: "ul", items: [
         { bold: "Contextual Understanding:", text: "AI understands the \"why\" behind a search query, not just the \"what.\" It connects related concepts and identifies nuanced relationships between topics and brands." },
-        { bold: "Synthesized Answers:", text: "Instead of presenting a list of links, AI can generate direct answers, pulling information from various sources. If your brand's unique value isn't explicitly clear, it might not be included or accurately represented in these summaries." },
+        { bold: "Synthesized Answers:", text: "Instead of presenting a list of links, AI can generate direct answers, pulling information from various sources. If your brand's unique value isn't explicitly clear, it might not be included or accurately represented in these summaries. This is the mechanic behind Answer Engine Optimization (AEO).", links: [{ text: "Answer Engine Optimization (AEO)", href: "/blog/ai-visibility-aeo-explained/" }] },
         { bold: "Trust and Authority:", text: "AI evaluates the trustworthiness and authority of sources. A clearly defined and consistently communicated brand identity contributes to its perceived authority." },
       ] },
       { type: "p", text: "If your brand blends in, offering generic solutions or indistinguishable value propositions, AI is less likely to highlight it. The machine, much like a human, seeks clarity and distinction." },
       { type: "h2", text: "Why Differentiation Is Your AI-Proof Armor" },
       { type: "p", text: "In a world where AI can quickly parse countless data points, a generic brand risks being categorized as just another option among many. Differentiation, however, acts as your brand's unique identifier, its signal in the noise." },
       { type: "h3", text: "Standing Out in a Crowded Digital Ecosystem" },
-      { type: "p", text: "Imagine a buyer asking an AI, \"What's the best project management software for creative agencies?\" If your software offers a unique feature set, a specialized user interface tailored for designers, or a reputation for fostering collaboration among creative teams, that differentiation becomes your selling point. Without it, you're just \"project management software,\" indistinguishable from dozens of others." },
+      { type: "p", text: "Imagine a buyer asking an AI, \"What's the best project management software for creative agencies?\" If your software offers a unique feature set, a specialized user interface tailored for designers, or a reputation for fostering collaboration among creative teams, that differentiation becomes your selling point. Without it, you're just \"project management software,\" indistinguishable from dozens of others. A regional commercial real estate firm that needed to avoid blending into a crowded category is a good real-world version of this exact problem.",
+        links: [{ text: "avoid blending into a crowded category", href: "/case-studies/ares-aardex-real-estate-services/" }] },
       { type: "h3", text: "Building Memorable Associations" },
       { type: "p", text: "AI learns patterns and associations. When your brand consistently associates itself with a specific niche, a particular problem solved, or a unique methodology, AI begins to understand and catalog these associations. For example, if your B2B cybersecurity solution consistently emphasizes \"proactive threat detection for IoT devices,\" AI will learn to link your brand with that specific, differentiated capability. This makes your brand more discoverable for highly targeted queries." },
       { type: "h3", text: "Fostering Trust and Credibility" },
@@ -1056,7 +1081,11 @@ export const articles: Article[] = [
         { bold: "Offer a distinct methodology:", text: "Do you have a proprietary process or approach that yields superior results?" },
         { bold: "Emphasize unique strengths:", text: "Is it your speed, precision, scalability, or customer support that sets you apart?" },
       ] },
-      { type: "p", text: "Clearly articulate this UVP. It should be concise, compelling, and consistently communicated across all your brand assets." },
+      { type: "p", text: "Clearly articulate this UVP. It should be concise, compelling, and consistently communicated across all your brand assets. Offen Petroleum's \"Fueling Efficiency\" line is a good example of a bold, named positioning statement doing exactly this work. Getting this right is foundational enough that many B2B leaders bring in outside help to nail down positioning strategy before scaling, rather than guessing and correcting later.",
+        links: [
+          { text: "a bold, named positioning statement", href: "/case-studies/offen-petroleum/" },
+          { text: "positioning strategy before scaling", href: "/blog/when-to-hire-a-go-to-market-strategy-consultant/" },
+        ] },
       { type: "h3", text: "2. Craft a Compelling Brand Story and Narrative" },
       { type: "p", text: "Humans (and increasingly, AI) respond to stories. Your brand narrative should explain why you exist, what problems you're passionate about solving, and what values drive your business. This narrative helps create an emotional connection and makes your brand memorable." },
       { type: "ul", items: [
@@ -1064,7 +1093,8 @@ export const articles: Article[] = [
         { bold: "Mission and Vision:", text: "What future are you striving to create for your clients?" },
         { bold: "Core Values:", text: "What principles guide your actions and decisions?" },
       ] },
-      { type: "p", text: "A well-crafted story allows AI to grasp the human element behind your brand, enhancing its ability to present your brand in a relatable and impactful way." },
+      { type: "p", text: "A well-crafted story allows AI to grasp the human element behind your brand, enhancing its ability to present your brand in a relatable and impactful way. If your narrative itself feels fundamentally off, not just under-told, that's usually a sign you need a full brand identity overhaul rather than a messaging tweak.",
+        links: [{ text: "a full brand identity overhaul", href: "/blog/rebranding-agency-transforms-your-business/" }] },
       { type: "h3", text: "3. Ensure Message Consistency Across All Touchpoints" },
       { type: "p", text: "Inconsistency is the enemy of differentiation, especially with AI. If your website says one thing, your social media another, and your sales team yet another, AI will struggle to form a coherent understanding of your brand." },
       { type: "ul", items: [
@@ -1073,7 +1103,8 @@ export const articles: Article[] = [
         { bold: "Social Media:", text: "Your voice, tone, and positioning should be consistent across platforms." },
         { bold: "Public Relations:", text: "Any media mentions or interviews should reinforce your differentiated message." },
       ] },
-      { type: "p", text: "Consistency helps AI build a robust, singular profile of your brand, making it easier for it to accurately represent your unique value to users." },
+      { type: "p", text: "Consistency helps AI build a robust, singular profile of your brand, making it easier for it to accurately represent your unique value to users. Getting there usually starts with aligning sales and marketing on one message before you touch a single channel.",
+        links: [{ text: "aligning sales and marketing on one message", href: "/blog/gtm-strategy-sales-marketing-alignment/" }] },
       { type: "h3", text: "4. Leverage Specialized Content for Niche Authority" },
       { type: "p", text: "To differentiate effectively, create content that specifically addresses the needs and concerns of your target niche. This demonstrates expertise and establishes authority." },
       { type: "ul", items: [
@@ -1091,6 +1122,8 @@ export const articles: Article[] = [
         { bold: "Develop a Consistent Brand Architecture:", text: "We ensure your messaging, visuals, and values are unified across all channels, making your brand unmistakable." },
         { bold: "Strategize for AI Visibility:", text: "We guide you on creating content and digital assets that not only appeal to humans but are also optimized for AI's understanding and retrieval." },
       ] },
+      { type: "p", text: "Want to see how we've helped brands stand out? Explore our case studies.",
+        links: [{ text: "see how we've helped brands stand out", href: "/case-studies/" }] },
       { type: "p", bold: "In the age of AI search, genericity is invisible. Differentiation is your superpower.", text: "By strategically positioning your brand, you ensure that when AI is asked to find the best solution for a specific B2B need, your brand isn't just an option, it's the clear, compelling answer." },
       { type: "faq", items: [
         { q: "What is brand positioning in the context of AI search?", a: "Brand positioning in the context of AI search refers to the strategic process of defining and communicating your brand's unique value and distinct identity in a way that AI models can easily understand, categorize, and present to users. It ensures your brand stands out from competitors in AI-generated answers and search results." },
@@ -1151,22 +1184,24 @@ export const articles: Article[] = [
       { type: "p", text: "Core deliverables of a go-to-market consultant:" },
       { type: "ul", items: [
         { bold: "Ideal customer profile (ICP) and segmentation —", text: "who to pursue, and explicitly who to ignore" },
-        { bold: "Positioning and differentiation —", text: "the defensible reason a buyer chooses you over the alternative, including \"do nothing\"" },
+        { bold: "Positioning and differentiation —", text: "the defensible reason a buyer chooses you over the alternative, including \"do nothing\"", links: [{ text: "defensible reason a buyer chooses you", href: "/blog/brand-positioning-ai-search-differentiation/" }] },
         { bold: "Messaging and brand architecture —", text: "the claim hierarchy that every campaign, deck, and page inherits" },
         { bold: "Pricing and packaging strategy —", text: "how value is captured, not just communicated" },
         { bold: "Channel and motion selection —", text: "product-led, sales-led, partner-led, or hybrid, with rationale" },
         { bold: "GTM roadmap and success metrics —", text: "sequence, owners, and the leading indicators that prove it's working" },
       ] },
-      { type: "p", bold: "Example use case:", text: "A Series A vertical SaaS company had strong logos but a 9-month sales cycle and a 22% win rate. The instinct was more demand generation. A four-week GTM engagement revealed two distinct buyer segments being served one undifferentiated message: one buying on compliance risk, the other on labor cost. Splitting positioning and rebuilding the messaging architecture around those two motions shortened the cycle materially before a single new campaign dollar was spent." },
+      { type: "p", bold: "Example use case:", text: "A Series A vertical SaaS company had strong logos but a 9-month sales cycle and a 22% win rate. The instinct was more demand generation. A four-week GTM engagement revealed two distinct buyer segments being served one undifferentiated message: one buying on compliance risk, the other on labor cost. Splitting positioning and rebuilding the messaging architecture around those two motions shortened the cycle materially before a single new campaign dollar was spent. We've seen this exact judgment-led scenario play out with a recent hospitality client too.",
+        links: [{ text: "a recent hospitality client", href: "/case-studies/volition-hospitality/" }] },
 
       { type: "h2", text: "What a Marketing Agency Actually Does" },
       { type: "p", text: "A marketing agency is hired to produce and operate. They convert a defined strategy into consistent market presence at a volume your internal team can't sustain alone." },
-      { type: "p", text: "Good agencies are exceptional at throughput, craft, and channel expertise. They have specialists, production systems, and platform certifications that would take you years to build in-house. What they generally are not built to do is originate your positioning: most engagement models don't fund the customer research and executive alignment work that requires." },
+      { type: "p", text: "Good agencies are exceptional at throughput, craft, and channel expertise. They have specialists, production systems, and platform certifications that would take you years to build in-house. What they generally are not built to do is originate your positioning: most engagement models don't fund the customer research and executive alignment work that requires. That's a different service entirely, closer to what it takes to originate a new brand identity from scratch.",
+        links: [{ text: "originate a new brand identity", href: "/blog/rebranding-agency-transforms-your-business/" }] },
       { type: "p", text: "Core deliverables of a marketing agency:" },
       { type: "ul", items: [
         { bold: "Campaign strategy and execution —", text: "paid search, paid social, programmatic, ABM programs" },
         { bold: "Creative production —", text: "design, video, brand systems applied at volume" },
-        { bold: "Content and SEO/AEO programs —", text: "editorial calendars, publishing cadence, technical optimization" },
+        { bold: "Content and SEO/AEO programs —", boldHref: "/blog/ai-visibility-aeo-explained/", text: "editorial calendars, publishing cadence, technical optimization" },
         { bold: "Website design, build, and CRO —", text: "landing pages, funnels, iterative testing" },
         { bold: "Marketing operations and automation —", text: "CRM workflows, lifecycle nurture, attribution reporting" },
         { bold: "Ongoing performance management —", text: "budget pacing, channel optimization, monthly reporting" },
@@ -1195,7 +1230,7 @@ export const articles: Article[] = [
       { type: "h2", text: "How to Decide: A Five-Step Diagnostic" },
       { type: "p", text: "Run this honestly. If you stall on any of the first three questions, you need strategy before execution." },
       { type: "ul", items: [
-        { bold: "1. State your ICP in one sentence —", text: "and name who you refuse to sell to. If three executives give three different answers, you have a positioning problem, not a pipeline problem." },
+        { bold: "1. State your ICP in one sentence —", text: "and name who you refuse to sell to. If three executives give three different answers, you have a positioning problem, not a pipeline problem. Fixing it means building a shared ICP that sales and marketing both work from.", links: [{ text: "a shared ICP that sales and marketing both work from", href: "/blog/gtm-strategy-sales-marketing-alignment/" }] },
         { bold: "2. Articulate why you win, without naming a feature.", text: "If the answer is \"better service\" or \"great team,\" a consultant will find real differentiation your competitors can't copy." },
         { bold: "3. Identify your primary channel and the evidence behind it.", text: "Can you point to CAC, conversion, or velocity data proving that channel works? Or is it just the channel you started with?" },
         { bold: "4. Audit your bottleneck.", text: "Is the constraint knowing what to do (consultant) or getting it done (agency)? Be precise: leaders routinely misdiagnose the first as the second." },
@@ -1286,10 +1321,10 @@ export const articles: Article[] = [
       { type: "h3", text: "Core Components of a GTM Strategy" },
       { type: "ul", items: [
         { bold: "Target Audience —", text: "Who are you trying to reach? Beyond demographics: what are their pain points, their desires, and where do they spend their time?" },
-        { bold: "Value Proposition —", text: "What unique problem do you solve, and why should customers choose you over everyone else?" },
+        { bold: "Value Proposition —", text: "What unique problem do you solve, and why should customers choose you over everyone else?", links: [{ text: "why should customers choose you over everyone else", href: "/blog/brand-positioning-ai-search-differentiation/" }] },
         { bold: "Pricing Strategy —", text: "How will you price your offering to reflect its value, attract customers, and remain profitable?" },
         { bold: "Sales & Distribution Channels —", text: "How will you get your product to customers? Direct sales, partners, online platforms?" },
-        { bold: "Marketing Strategy —", text: "How will you communicate your value proposition and generate demand? Content, social, advertising, PR?" },
+        { bold: "Marketing Strategy —", text: "How will you communicate your value proposition and generate demand? Content, social, advertising, PR?", links: [{ text: "generate demand", href: "/blog/gtm-strategy-sales-marketing-alignment/" }] },
         { bold: "Customer Experience —", text: "What does the full customer journey look like, from first touchpoint to ongoing support?" },
       ] },
       { type: "p", text: "It's a holistic pathway designed to minimize risk, maximize impact, and ensure your offering resonates with the right audience from day one." },
@@ -1305,12 +1340,14 @@ export const articles: Article[] = [
       { type: "h3", text: "2. You're Entering a New Market or Geographic Region" },
       { type: "p", text: "Expansion is exciting but risky. What works in one market can completely fail in another." },
       { type: "p", bold: "Example:", text: "A healthcare practice successful in one state wants to open facilities in another, but regulations, patient expectations, and referral networks differ dramatically by region. Or a residential real estate firm wants to move into commercial property development, where the sales cycle and client base are entirely different." },
-      { type: "p", bold: "Why a Consultant Helps:", text: "They conduct market research, analyze competitive landscapes, and identify local nuances, helping you adapt your offering and pinpoint the best entry points." },
+      { type: "p", bold: "Why a Consultant Helps:", text: "They conduct market research, analyze competitive landscapes, and identify local nuances, helping you adapt your offering and pinpoint the best entry points. A hospitality group managing a growing, diversifying portfolio needing a unified market presence is a real-world version of exactly this challenge.",
+        links: [{ text: "a growing, diversifying portfolio", href: "/case-studies/maadaadizi/" }] },
 
       { type: "h3", text: "3. Your Growth Has Stalled or Isn't Meeting Expectations" },
       { type: "p", text: "You've been in the market a while but momentum has slowed. Sales are flat or acquisition costs are climbing." },
       { type: "p", bold: "Example:", text: "A B2B legal tech company has a steady client base but struggles to expand beyond its niche. Marketing emails go out but open rates are low and leads dry up quickly." },
-      { type: "p", bold: "Why a Consultant Helps:", text: "They audit the existing strategy, identify sales funnel bottlenecks, messaging gaps, and underperforming channels, then help you pivot and optimize the entire GTM engine." },
+      { type: "p", bold: "Why a Consultant Helps:", text: "They audit the existing strategy, identify sales funnel bottlenecks, messaging gaps, and underperforming channels, then help you pivot and optimize the entire GTM engine. Sometimes that pivot surfaces a deeper issue that calls for a full rebrand rather than a strategy tweak.",
+        links: [{ text: "a full rebrand", href: "/blog/rebranding-agency-transforms-your-business/" }] },
 
       { type: "h3", text: "4. You're Facing Increased Competition or Market Disruption" },
       { type: "p", text: "New competitors, technology shifts, or changing customer behavior can quickly erode market position. This is especially true in B2B, where Gartner's buying journey research shows the typical purchase decision now involves six to ten stakeholders, and buyers spend only 17% of their total evaluation time meeting with potential suppliers. If your GTM strategy isn't engineered for that complexity, competitors with a sharper approach will win deals you never even knew you lost." },
@@ -1347,6 +1384,8 @@ export const articles: Article[] = [
       { type: "p", text: "A good consultant brings data, experience, and a structured process. They listen more than they speak initially, asking probing questions before suggesting solutions." },
 
       { type: "h2", text: "GTM Consultant vs. Marketing Consultant: What's the Difference?" },
+      { type: "p", text: "This is a related but different question from GTM consultant vs. marketing agency — that companion piece is worth a read if you're also weighing an agency engagement alongside strategy work.",
+        links: [{ text: "GTM consultant vs. marketing agency", href: "/blog/go-to-market-consultant-vs-marketing-agency/" }] },
       { type: "table", headers: ["Attribute", "GTM Strategy Consultant", "Marketing Consultant"], rows: [
         ["Scope", "Full market-entry plan: audience, pricing, channels, sales, CX", "Primarily promotional activities"],
         ["Core Question Answered", "\"How do we successfully enter or grow in this market?\"", "\"How do we advertise and generate leads?\""],

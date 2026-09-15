@@ -2,7 +2,22 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import CaseStudyModeToggle from "@/components/CaseStudyModeToggle";
-import { caseStudies, caseStudyCategoryLabel } from "@/data/caseStudies";
+import { caseStudies, caseStudyCategoryLabel, CaseStudyLink } from "@/data/caseStudies";
+
+const linkStyle: React.CSSProperties = { color: "#c46305", textDecoration: "underline", textUnderlineOffset: 2 };
+
+function renderWithLinks(text: string, links?: CaseStudyLink[]) {
+  if (!links || links.length === 0) return text;
+  const escaped = links.map(l => l.text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+  const parts = text.split(new RegExp(`(${escaped.join("|")})`, "g"));
+  return parts.map((part, i) => {
+    const match = links.find(l => l.text === part);
+    if (!match) return part;
+    return /^https?:\/\//.test(match.href)
+      ? <a key={i} href={match.href} target="_blank" rel="noopener noreferrer" style={linkStyle}>{part}</a>
+      : <Link key={i} href={match.href} style={linkStyle}>{part}</Link>;
+  });
+}
 
 export function generateStaticParams() {
   return caseStudies.map(c => ({ slug: c.slug }));
@@ -118,12 +133,12 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
           <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 2.6vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 16 }}>
             The Challenge
           </h2>
-          <p style={{ fontSize: 17, lineHeight: 1.85, color: "#444", marginBottom: 56 }}>{cs.challenge}</p>
+          <p style={{ fontSize: 17, lineHeight: 1.85, color: "#444", marginBottom: 56 }}>{renderWithLinks(cs.challenge, cs.challengeLinks)}</p>
 
           <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 2.6vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#1a1a1a", marginBottom: 16 }}>
             The Solution
           </h2>
-          <p style={{ fontSize: 17, lineHeight: 1.85, color: "#444", marginBottom: (cs.deliverables?.length || cs.milestones?.length || cs.images.length > 1) ? 56 : 0 }}>{cs.solution}</p>
+          <p style={{ fontSize: 17, lineHeight: 1.85, color: "#444", marginBottom: (cs.deliverables?.length || cs.milestones?.length || cs.images.length > 1) ? 56 : 0 }}>{renderWithLinks(cs.solution, cs.solutionLinks)}</p>
 
           {!!cs.deliverables?.length && (
             <div style={{ marginBottom: (cs.milestones?.length || cs.images.length > 1) ? 56 : 0 }}>

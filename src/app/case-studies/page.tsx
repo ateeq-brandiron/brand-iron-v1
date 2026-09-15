@@ -101,7 +101,10 @@ export default function CaseStudiesPage() {
               padding: "clamp(20px, 2.6vw, 32px)",
             }}>
               <p style={{ fontSize: "clamp(13px, 1.15vw, 15px)", lineHeight: 1.65, color: "rgba(255,255,255,0.85)" }}>
-                Growth doesn&apos;t happen through tactics alone. It requires a clear strategy, strong execution, and a system that connects visibility, trust, and revenue. Explore how Brand Iron has helped organizations strengthen their brand, improve discoverability, accelerate growth, and create lasting business impact.
+                Growth doesn&apos;t happen through tactics alone. It requires a clear strategy, strong execution, and a system that connects visibility, trust, and revenue. Explore how Brand Iron has helped organizations{" "}
+                <Link href="/blog/rebranding-agency-transforms-your-business/" style={{ color: "#f0a860", textDecoration: "underline", textUnderlineOffset: 2 }}>strengthen their brand</Link>,{" "}
+                <Link href="/blog/ai-visibility-aeo-explained/" style={{ color: "#f0a860", textDecoration: "underline", textUnderlineOffset: 2 }}>improve discoverability</Link>,{" "}
+                <Link href="/blog/when-to-hire-a-go-to-market-strategy-consultant/" style={{ color: "#f0a860", textDecoration: "underline", textUnderlineOffset: 2 }}>accelerate growth</Link>, and create lasting business impact.
               </p>
             </div>
           </div>
