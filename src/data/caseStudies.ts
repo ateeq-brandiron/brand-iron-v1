@@ -335,6 +335,8 @@ export const caseStudies: CaseStudy[] = [
     thumbnailAlt: "Canvas Communities logo, a layered house mark in blue, cream, olive, and gold above the wordmark Canvas Communities",
     images: [
       "/images/case-studies/canvas-communities/canvas-communities-hero.jpg",
+      "/images/case-studies/canvas-communities/canvas-communities-closer-look-1.jpg",
+      "/images/case-studies/canvas-communities/canvas-communities-closer-look-2.jpg",
     ],
     clientDescription: "WaterMark Equity Group was preparing to bring a new residential investment concept to market under a dedicated brand. The opportunity became Canvas Communities, a brand focused on single-family rental home communities. To support the launch, WaterMark needed a professional identity and communication platform capable of representing the opportunity consistently across investor materials and the broader market.",
     challenge: "The business concept was established, but the story surrounding it still needed to be defined. WaterMark needed to translate the opportunity into a clear, credible proposition that prospective investors could quickly understand and evaluate. That meant establishing a distinct identity and position for Canvas Communities, clear messaging around the business and investment opportunity, a cohesive visual system capable of supporting the brand as it grew, and investor-facing materials that communicated the market opportunity and development vision. The challenge was to connect these elements into one unified brand and capital-raise platform.",
