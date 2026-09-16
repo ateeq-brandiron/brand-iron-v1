@@ -233,6 +233,47 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
         </section>
       )}
 
+      {/* ── AT A GLANCE ──────────────────────────────────────── */}
+      {!!cs.glance?.length && (
+        <section style={{ position: "relative", overflow: "hidden", background: "#1a1a1a", padding: "88px 24px" }}>
+          <div style={{ position: "absolute", inset: 0, backgroundImage: "radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px)", backgroundSize: "22px 22px" }} />
+          <div style={{ position: "absolute", bottom: "-25%", left: "-10%", width: 460, height: 460, borderRadius: "50%", background: "radial-gradient(circle, rgba(216,115,7,0.16) 0%, rgba(216,115,7,0) 70%)" }} />
+          <div style={{ position: "relative", zIndex: 2, maxWidth: 820, margin: "0 auto" }}>
+            <h2 style={{ fontFamily: "var(--font-burford-black), sans-serif", fontSize: "clamp(22px, 2.6vw, 30px)", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.03em", color: "#fff", marginBottom: 32, textAlign: "center" }}>
+              {cs.glanceTitle ?? "At a Glance"}
+            </h2>
+            <div style={{ border: "1px solid rgba(255,255,255,0.14)", borderRadius: 14, overflow: "hidden", background: "rgba(255,255,255,0.03)" }}>
+              {cs.glance.map((g, i) => (
+                <div
+                  key={i}
+                  className="cs-glance-row"
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    gap: 24,
+                    padding: "20px 32px",
+                    borderTop: i === 0 ? "none" : "1px solid rgba(255,255,255,0.1)",
+                  }}
+                >
+                  <span style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "rgba(255,255,255,0.55)" }}>
+                    {g.title}
+                  </span>
+                  <span style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 17, fontWeight: 700, color: "#d87307", textAlign: "right" }}>
+                    {g.description}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <style>{`
+            @media (max-width: 560px) {
+              .cs-glance-row { flex-direction: column !important; align-items: flex-start !important; gap: 4px !important; }
+            }
+          `}</style>
+        </section>
+      )}
+
       {/* ── CLOSING NOTE ─────────────────────────────────────── */}
       {cs.closingNote && (
         <section style={{ background: "#FFFFFF", padding: "80px 24px" }}>

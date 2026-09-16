@@ -48,6 +48,9 @@ export type CaseStudy = {
   milestones?: CaseStudyListItem[];
   milestonesTitle?: string;
   results: CaseStudyStat[];
+  /** "Engagement/Results at a Glance" summary table from the source document — rendered as a bordered spec table after the results band, distinct from `deliverables`/`milestones`. */
+  glanceTitle?: string;
+  glance?: CaseStudyListItem[];
   /** Closing narrative section shown after the results band, matching the source document's own wrap-up section. */
   closingTitle?: string;
   closingNote?: string;
@@ -344,8 +347,8 @@ export const caseStudies: CaseStudy[] = [
       { title: "Visual Identity", description: "Moodboards and logo development brought the positioning to life through a cohesive and professional visual system." },
       { title: "Capital Raise Deck", description: "Brand Iron created an investor-facing capital raise presentation designed to communicate the market opportunity, investment story, and vision behind Canvas Communities." },
     ],
-    milestonesTitle: "Engagement at a Glance",
-    milestones: [
+    glanceTitle: "Engagement at a Glance",
+    glance: [
       { title: "Parent Company", description: "WaterMark Equity Group" },
       { title: "Brand", description: "Canvas Communities" },
       { title: "Brand Strategy", description: "The BrandStorm Strategy" },
@@ -385,8 +388,8 @@ export const caseStudies: CaseStudy[] = [
       { title: "Website Design & Development", description: "Creative web design and development helped translate the Colorado Center experience into a digital environment for prospective tenants and other audiences." },
       { title: "Leasing & Print Materials", description: "Brand Iron developed print and property marketing materials designed to communicate available space, property features, amenities, and future development opportunities." },
     ],
-    milestonesTitle: "Results at a Glance",
-    milestones: [
+    glanceTitle: "Results at a Glance",
+    glance: [
       { title: "Occupancy", description: "96%" },
       { title: "Initial Leasing Objective", description: "90% of available office and retail space" },
       { title: "Development Progress", description: "Pre-leasing supported Tower III growth" },
