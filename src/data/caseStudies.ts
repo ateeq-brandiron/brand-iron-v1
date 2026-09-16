@@ -378,6 +378,8 @@ export const caseStudies: CaseStudy[] = [
     thumbnailAlt: "Colorado Center logo, a six-circle pinwheel mark in shades of green beside the wordmark Colorado Center",
     images: [
       "/images/case-studies/colorado-center/colorado-center-hero.jpg",
+      "/images/case-studies/colorado-center/colorado-center-closer-look-1.jpg",
+      "/images/case-studies/colorado-center/colorado-center-closer-look-2.jpg",
     ],
     clientDescription: "Colorado Center is a mixed-use commercial property in Denver offering office, retail, and entertainment space. With existing towers in operation and additional development planned, Colorado Center needed to present itself as more than a collection of buildings. The property required a stronger identity that could communicate its broader tenant experience and support leasing across both existing and future space.",
     challenge: "Colorado Center needed to attract new office and retail tenants for its first two towers while securing the momentum needed to move forward with a third. The property was targeting 90% leasing of available office and retail space before construction of the next tower was complete. Although the property had significant potential, its market presence lacked a distinctive story that could bring the full experience together and differentiate Colorado Center from other commercial developments. The challenge was to create a brand that could appeal to prospective tenants, partners, and the surrounding community while supporting aggressive leasing and development goals.",
