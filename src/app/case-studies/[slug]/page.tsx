@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import CaseStudySchema from "@/components/CaseStudySchema";
 import CaseStudyModeToggle from "@/components/CaseStudyModeToggle";
 import { caseStudies, caseStudyCategoryLabel, CaseStudyLink } from "@/data/caseStudies";
 
@@ -30,7 +31,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const title = `${cs.title} | Brand Iron Case Study`;
   const description = cs.excerpt;
   const url = `https://brandiron.net/case-studies/${cs.slug}/`;
-  const image = "/images/shared/shared-footer-logo.jpeg";
+  const image = cs.images[0] ?? "/images/shared/shared-footer-logo.jpeg";
   return {
     title,
     description,
@@ -69,6 +70,13 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
           { name: "Case Studies", url: "https://brandiron.net/case-studies/" },
           { name: cs.title, url: `https://brandiron.net/case-studies/${cs.slug}/` },
         ]}
+      />
+      <CaseStudySchema
+        name={cs.title}
+        description={cs.excerpt}
+        image={`https://brandiron.net${cs.images[0] ?? cs.thumbnail}`}
+        client={cs.client}
+        url={`https://brandiron.net/case-studies/${cs.slug}/`}
       />
 
       {/* ── HEADER ───────────────────────────────────────────── */}

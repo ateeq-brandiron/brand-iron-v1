@@ -249,6 +249,14 @@ export const caseStudies: CaseStudy[] = [
     clientDescription: "Worldwide Vintage Autos is one of the country's foremost sources for classic cars and trucks, helping buyers make the process of purchasing their dream vehicle as painless and enjoyable as possible. With a highly visual product, a passionate customer base, and a constantly changing inventory of classic vehicles, Worldwide Vintage Autos needed a digital marketing approach that could keep customers engaged while creating new opportunities for growth.",
     challenge: "Worldwide Vintage Autos brought in Brand Iron with three primary goals: increase awareness and registrations for its VIP program, grow its audience and following across social media, and generate leads for its vehicle consignment department. The opportunity was not simply to attract more attention — Worldwide Vintage Autos needed marketing efforts that could translate that attention into measurable engagement, registrations, leads, and ultimately business growth.",
     solution: "Brand Iron used an integrated digital marketing approach centered on reaching prospective customers across multiple channels. Search engine advertising helped Worldwide Vintage Autos connect with audiences actively searching online, while social media advertising expanded the company's reach and supported awareness of its VIP program and consignment offering. Email marketing provided an additional channel for keeping customers engaged, promoting inventory, and driving audiences back to the business. Together, these efforts created a more connected digital presence designed to increase visibility, strengthen engagement, and generate measurable action.",
+    deliverables: [
+      { title: "Search Engine Marketing & Google Ads", description: "Brand Iron used search engine advertising to capture high-intent users actively searching for classic cars, vintage vehicles, consignment opportunities, and related automotive services." },
+      { title: "Social Media Advertising", description: "Paid social campaigns expanded awareness and reach among enthusiasts, collectors, buyers, and sellers, while promoting the VIP program and supporting lead generation." },
+      { title: "VIP Program Growth Campaigns", description: "Digital campaign activity drove awareness and registrations for the VIP program, helping WWVA build a stronger direct audience of engaged prospects." },
+      { title: "Consignment Lead Generation", description: "Messaging and targeting spoke directly to vehicle owners, positioning WWVA as a trusted option for people looking to sell or consign classic cars and trucks." },
+      { title: "Email Marketing Performance", description: "Email became a key channel for keeping WWVA's audience engaged, helping the company exceed industry-standard open and click-through benchmarks across more than 200,000 messages sent." },
+      { title: "Digital Campaign Optimization", description: "Ongoing tracking and optimization connected campaign execution to measurable performance, improving visibility, engagement, registrations, leads, and revenue impact over time." },
+    ],
     results: [
       { value: "+180%", label: "VIP Program Registrations" },
       { value: "47.08%", label: "Email Open Rate" },
@@ -304,11 +312,15 @@ export const caseStudies: CaseStudy[] = [
     excerpt: "Bow River partnered with Brand Iron to strengthen the positioning of AUC Group, a wastewater treatment solutions provider, and prepare the company for the market — resulting in a $65 million acquisition and a 3.6x return on the original investment.",
     thumbnail: "/images/case-studies/bow-river-auc-group/auc-group-thumbnail-placeholder.png",
     thumbnailAlt: "AUC Group, L.P. placeholder logo mark and wordmark in navy and orange",
-    // TODO: hero is a designed placeholder; auc-group-deck-composite.jpg is real (but low-res, 808x735) deck art found in Drive. Swap both for real assets once Shelly/Olivia share a higher-res deck (see Slack thread).
+    // TODO: hero and thumbnail are designed placeholders; auc-group-deck-composite.jpg is real (but low-res, 808x735) deck art found in Drive.
+    // Katrina confirmed (Slack, #bi-internal-team) she searched Drive for an actual AUC Group logo/deck and the only two candidate files
+    // (Bow River Capital RE Fund I 2015 deck, Bow River's own PPT color-guide PDF) are a different engagement entirely - no "AUC" match in
+    // either. Swap thumbnail/hero for real assets once Shelly/Olivia/Katrina locate the actual AUC Group materials.
     images: [
       "/images/case-studies/bow-river-auc-group/bow-river-auc-hero-placeholder.jpg",
       "/images/case-studies/bow-river-auc-group/auc-group-deck-composite.jpg",
     ],
+    cardHoverImage: "/images/case-studies/bow-river-auc-group/auc-group-deck-composite.jpg",
     clientDescription: "AUC Group was a wastewater treatment total solutions provider with multi-state U.S. and international experience. As part of its broader investment strategy, Bow River needed to clearly communicate AUC's market position, business model, capabilities, and growth potential to prospective buyers.",
     challenge: "AUC had the fundamentals of a strong company, but Bow River needed to ensure those strengths were clearly communicated to the market. The objective was to position AUC as a compelling acquisition opportunity backed by a strong, credible story. That required more than presenting financial information — the materials needed to show why AUC was differentiated, where its growth opportunities existed, and how its capabilities could translate into long-term value for a prospective acquirer.",
     solution: "Brand Iron worked with Bow River to strengthen the way AUC was positioned and presented. The engagement included strategic consulting and the development of a comprehensive pitch deck designed to communicate AUC's value to potential buyers. The presentation highlighted key elements of the business, including its market experience, operating model, geographic reach, and growth opportunity, while organizing those elements into a clear and persuasive investment story.",
@@ -338,6 +350,7 @@ export const caseStudies: CaseStudy[] = [
       "/images/case-studies/canvas-communities/canvas-communities-closer-look-1.jpg",
       "/images/case-studies/canvas-communities/canvas-communities-closer-look-2.jpg",
     ],
+    cardHoverImage: "/images/case-studies/canvas-communities/canvas-communities-closer-look-1.jpg",
     clientDescription: "WaterMark Equity Group was preparing to bring a new residential investment concept to market under a dedicated brand. The opportunity became Canvas Communities, a brand focused on single-family rental home communities. To support the launch, WaterMark needed a professional identity and communication platform capable of representing the opportunity consistently across investor materials and the broader market.",
     challenge: "The business concept was established, but the story surrounding it still needed to be defined. WaterMark needed to translate the opportunity into a clear, credible proposition that prospective investors could quickly understand and evaluate. That meant establishing a distinct identity and position for Canvas Communities, clear messaging around the business and investment opportunity, a cohesive visual system capable of supporting the brand as it grew, and investor-facing materials that communicated the market opportunity and development vision. The challenge was to connect these elements into one unified brand and capital-raise platform.",
     challengeLinks: [{ text: "a distinct identity and position", href: "/blog/brand-positioning-ai-search-differentiation/" }],
@@ -381,6 +394,7 @@ export const caseStudies: CaseStudy[] = [
       "/images/case-studies/colorado-center/colorado-center-closer-look-1.jpg",
       "/images/case-studies/colorado-center/colorado-center-closer-look-2.jpg",
     ],
+    cardHoverImage: "/images/case-studies/colorado-center/colorado-center-closer-look-1.jpg",
     clientDescription: "Colorado Center is a mixed-use commercial property in Denver offering office, retail, and entertainment space. With existing towers in operation and additional development planned, Colorado Center needed to present itself as more than a collection of buildings. The property required a stronger identity that could communicate its broader tenant experience and support leasing across both existing and future space.",
     challenge: "Colorado Center needed to attract new office and retail tenants for its first two towers while securing the momentum needed to move forward with a third. The property was targeting 90% leasing of available office and retail space before construction of the next tower was complete. Although the property had significant potential, its market presence lacked a distinctive story that could bring the full experience together and differentiate Colorado Center from other commercial developments. The challenge was to create a brand that could appeal to prospective tenants, partners, and the surrounding community while supporting aggressive leasing and development goals.",
     challengeLinks: [{ text: "a distinctive story", href: "/blog/brand-positioning-ai-search-differentiation/" }],
