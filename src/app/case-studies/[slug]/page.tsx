@@ -90,7 +90,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
             backgroundSize: "cover", backgroundPosition: "center",
           }}
         />
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(8,16,36,0.55) 0%, rgba(8,16,36,0.5) 45%, rgba(8,16,36,0.8) 100%)" }} />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(90deg, rgba(8,16,36,0.9) 0%, rgba(8,16,36,0.82) 38%, rgba(8,16,36,0.6) 58%, rgba(8,16,36,0.28) 78%, rgba(8,16,36,0.05) 100%), linear-gradient(180deg, rgba(8,16,36,0.55) 0%, rgba(8,16,36,0.5) 45%, rgba(8,16,36,0.8) 100%)" }} />
         <div style={{ position: "relative", zIndex: 2, maxWidth: 820, margin: "0 auto" }}>
           <Link href="/case-studies/" className="back-link" style={{
             display: "flex", width: "fit-content", alignItems: "center", gap: 8,
