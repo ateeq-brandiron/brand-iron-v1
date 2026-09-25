@@ -269,8 +269,9 @@ export default function Home() {
         />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.15) 50%, rgba(0,0,0,0.55) 100%)" }} />
 
-        {/* Centered headline */}
-        <div className="home-hero-center" style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "0 24px" }}>
+        {/* Content column: centered headline flexes to fill the space above the service row, so the two can never overlap regardless of viewport height */}
+        <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column" }}>
+        <div className="home-hero-center" style={{ flex: "1 1 auto", minHeight: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "88px 24px 24px" }}>
           <h1 style={{
             // fontFamily: "var(--font-burford-inline), sans-serif",
             fontFamily: "var(--font-burford-inline), sans-serif",
@@ -317,7 +318,7 @@ export default function Home() {
         </div>
 
         {/* Service labels at bottom */}
-        <div className="home-hero-services" style={{ position: "absolute", bottom: 64, left: 0, right: 0, display: "flex", justifyContent: "center", padding: "0 32px 20px" }}>
+        <div className="home-hero-services" style={{ flex: "0 0 auto", display: "flex", justifyContent: "center", padding: "0 32px 20px" }}>
         <div style={{ maxWidth: 1100, width: "100%", display: "flex", flexWrap: "nowrap", justifyContent: "space-between", alignItems: "flex-start", gap: 36, overflowX: "auto" }}>
           {services.map(s => {
             const words = s.label.split(" ");
@@ -340,12 +341,13 @@ export default function Home() {
           })}
         </div>
         </div>
+        </div>
 
         <style>{`
           @media (max-width: 900px) {
             .home-hero-section { height: auto !important; min-height: 100vh; }
-            .home-hero-center { position: relative !important; padding: 140px 20px 40px !important; }
-            .home-hero-services { position: relative !important; bottom: auto !important; padding: 0 20px 48px !important; }
+            .home-hero-center { padding: 140px 20px 40px !important; }
+            .home-hero-services { padding: 0 20px 48px !important; }
           }
         `}</style>
       </section>
