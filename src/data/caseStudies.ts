@@ -492,6 +492,7 @@ export const caseStudies: CaseStudy[] = [
       "/images/case-studies/modern-ir/modern-ir-closer-look-3.jpg",
     ],
     cardHoverImage: "/images/case-studies/modern-ir/modern-ir-brand-activation.jpg",
+    fullPageImage: "/images/case-studies/modern-ir/modern-ir-fullpage.jpg",
     clientDescription: "ModernIR provided market structure analytics and software tools designed to help customers better understand and navigate equity markets. The company had a solid product offering and a positive vision for growth, but its existing brand did not reflect the sophistication of the software or clearly communicate its value to the market. ModernIR needed a stronger brand foundation that could support its marketing efforts and help the company gain traction with prospective customers.",
     challenge: "ModernIR's primary challenge was not the strength of its product — it was how that product was being presented. The company's existing look and feel lacked the consistency and differentiation needed to establish a strong brand identity, and its marketing needed a clearer plan for communicating value, building awareness, and reaching ideal customers.",
     challengeLinks: [{ text: "the consistency and differentiation needed to establish a strong brand identity", href: "/blog/brand-positioning-ai-search-differentiation/" }],
