@@ -22,6 +22,10 @@ export type Article = {
   body: ArticleBlock[];
   seoTitle?: string;
   metaDescription?: string;
+  // Social cards already show the domain, so these are shorter and omit the site name;
+  // falls back to seoTitle/metaDescription when not set.
+  ogTitle?: string;
+  ogDescription?: string;
   // Evergreen reference/pillar content: hides the "posted on" date in listings and on
   // the article page, and omits the OpenGraph publishedTime, since dating it undermines
   // the evergreen framing this kind of page depends on.
@@ -40,7 +44,10 @@ export const articles: Article[] = [
     date: "September 2026",
     headerImage: "/images/blog/ai-visibility-aeo-explained/ai-visibility-aeo-explained-hero.jpg",
     headerImageAlt: "Glowing circuit-line network representing AI platforms mapping and recommending a business",
-    metaDescription: "A complete guide to AI Visibility and Answer Engine Optimization (AEO) — what it is, how it differs from SEO, and how businesses become discoverable across ChatGPT, Gemini, Claude, and Perplexity.",
+    seoTitle: "What Is AEO? AI Visibility Explained | Brand Iron",
+    metaDescription: "Learn what answer engine optimization (AEO) is and how AI visibility works, so your brand gets cited in ChatGPT, Perplexity, and Google AI Overviews.",
+    ogTitle: "What Is AEO? AI Visibility Explained",
+    ogDescription: "How answer engine optimization works and what it takes for your brand to get cited in AI-generated answers.",
     body: [
       { type: "p", text: "Buyers increasingly ask AI assistants for recommendations before ever visiting a website. A business's presence in those AI-generated answers has become as important as its ranking on a traditional search engine, and it works by different rules." },
 
@@ -946,8 +953,10 @@ export const articles: Article[] = [
     date: "August 2026",
     headerImage: "/images/blog/modern-cold-outbound-linkedin-email/modern-cold-outbound-linkedin-email-hero.jpg",
     headerImageAlt: "A magnifying glass hovering over the word personalization highlighted in an outbound sales email on a laptop screen, on a wooden desk with a leather notebook and a mountain skyline visible through the window",
-    seoTitle: "Modern Cold Outbound: LinkedIn + Email for B2B Growth | Brand Iron",
-    metaDescription: "Cold outbound isn't dead. Discover how to build a LinkedIn and email program that converts, optimizing for go-to-market strategy alignment with Brand Iron.",
+    seoTitle: "Cold Outbound: LinkedIn + Cold Email | Brand Iron",
+    metaDescription: "Spray-and-pray outbound is dead. Learn how modern cold outbound pairs LinkedIn and cold email into multichannel sequences that earn replies and meetings.",
+    ogTitle: "Modern Cold Outbound: LinkedIn + Email",
+    ogDescription: "How to combine LinkedIn and cold email into outbound sequences that actually earn replies.",
     body: [
       { type: "p", text: "Let's get one thing straight right off the bat: cold outbound isn't dead. Not by a long shot. Anyone telling you it is probably tried it the old way – blasting generic emails to huge lists, hoping something would stick. That approach? Yeah, that's definitely breathing its last gasp." },
       { type: "p", text: "But the concept of reaching out to a potential customer who doesn't yet know you, and doing it in a way that truly resonates? That's alive, well, and frankly, more powerful than ever. Especially for B2B founders and sales leaders at early-to-growth-stage companies, a thoughtfully constructed, multi-channel outbound program can be your secret weapon for reliable, predictable revenue." },
@@ -1108,8 +1117,10 @@ export const articles: Article[] = [
     date: "August 2026",
     headerImage: "/images/blog/gtm-strategy-sales-marketing-alignment/gtm-strategy-sales-marketing-alignment-hero.jpg",
     headerImageAlt: "A leader points to a whiteboard mapping GTM strategy alignment across market insights, positioning, messaging, sales enablement, and demand generation, with a colleague taking notes in a mountain-view conference room",
-    seoTitle: "GTM Strategy 101: Aligning Sales & Marketing for Scale | Brand Iron",
-    metaDescription: "Learn how to create a go-to-market strategy alignment between sales and marketing. This guide helps B2B SaaS founders scale effectively with Brand Iron.",
+    seoTitle: "Sales & Marketing Alignment in GTM | Brand Iron",
+    metaDescription: "Sales and marketing alignment starts with a shared GTM strategy. Learn the critical capabilities, shared metrics, and handoffs that keep GTM teams aligned.",
+    ogTitle: "GTM Strategy: How to Align Sales and Marketing",
+    ogDescription: "The capabilities, shared metrics, and handoffs that get sales and marketing working from one go-to-market plan.",
     body: [
       { type: "p", text: "You're a B2B SaaS founder, an early-stage startup leader. You've built something cool, something that solves a real problem. Now, you're looking ahead, past the initial hustle, to that exciting, terrifying moment: scaling. You know you can't just throw more money at marketing or hire a bigger sales team and expect magic. No, you need a plan. A solid, foundational plan. And right at the heart of that plan is something we at Brand Iron talk about all the time: go-to-market strategy alignment." },
       { type: "p", text: "We've seen it play out too many times. Founders get so focused on product, fundraising, and the next big feature that they overlook the need for sales and marketing to operate from the same strategy. When these two critical functions aren't aligned, it's like trying to drive a car with one foot on the gas and the other on the brake. You burn fuel, make a lot of noise, and don't get anywhere fast." },
@@ -1304,8 +1315,10 @@ export const articles: Article[] = [
     date: "August 2026",
     headerImage: "/images/blog/brand-positioning-ai-search-differentiation/brand-positioning-ai-search-differentiation-hero.jpg",
     headerImageAlt: "A hand reaches toward one distinct orange, wheat-emblem tile glowing among a wall of generic dark app icons, representing a brand standing out through differentiation",
-    seoTitle: "Brand Positioning in AI Search: Differentiation is Key | Brand Iron",
-    metaDescription: "Discover why strong brand positioning and differentiation are more critical than ever for B2B success in the age of AI search. Learn to stand out effectively.",
+    seoTitle: "Brand Positioning for AI Search | Brand Iron",
+    metaDescription: "When AI search summarizes your category, generic brands disappear. Learn how sharp brand positioning and clear differentiation get your brand named.",
+    ogTitle: "Brand Positioning for AI Search",
+    ogDescription: "Generic brands disappear in AI answers. Here's how clear positioning and differentiation keep yours in the conversation.",
     body: [
       { type: "p", text: "The digital landscape is constantly evolving, and with the rise of sophisticated AI search engines, the rules of engagement are changing dramatically. For B2B founders and marketing leads, this presents both challenges and unparalleled opportunities. In this new era, your brand's ability to differentiate itself isn't just a marketing advantage, it's a fundamental requirement for survival and growth. At Brand Iron, we believe that understanding and mastering brand positioning in the age of AI search is no longer optional, but essential." },
       { type: "h2", text: "The Shifting Sands of Search: From Keywords to Concepts" },
@@ -1401,8 +1414,10 @@ export const articles: Article[] = [
     date: "July 2026",
     headerImage: "/images/blog/go-to-market-consultant-vs-marketing-agency/go-to-market-consultant-vs-marketing-agency-hero.jpg",
     headerImageAlt: "Split comparison graphic showing a go-to-market consultant mapping strategy on a whiteboard beside a marketing agency team running campaign execution",
-    seoTitle: "Go-To-Market Consultant vs Marketing Agency: Which Do You Need? | Brand Iron",
-    metaDescription: "A go-to-market consultant builds strategy. A marketing agency executes it. Learn which one your company needs now, and why buying in the wrong order costs twice.",
+    seoTitle: "Go-to-Market Consultant vs. Agency | Brand Iron",
+    metaDescription: "Deciding between a go-to-market consultant and a marketing agency? Compare roles, scope, and outcomes to choose the right partner for your growth stage.",
+    ogTitle: "GTM Consultant vs. Marketing Agency: Which Do You Need?",
+    ogDescription: "Compare what a go-to-market consultant and a marketing agency actually do, and which one fits where your company is now.",
     body: [
       { type: "p", text: "Most leadership teams don't struggle to find help. They struggle to figure out what kind of help they actually need." },
       { type: "p", text: "You've felt the symptom: pipeline is flat, the website isn't converting, and someone in the room says \"we need to hire an agency.\" Six months and a meaningful retainer later, you have more content, more impressions, more dashboards, and roughly the same revenue. The campaigns weren't bad. They were pointed at the wrong buyer, with the wrong claim, in the wrong channel." },
@@ -1700,8 +1715,10 @@ export const articles: Article[] = [
     date: "July 2026",
     headerImage: "/images/blog/gtm-strategy-partner/gtm-strategy-partner-map-and-compass.jpg",
     headerImageAlt: "Vintage compass and map overlaid with glowing network connection lines, representing go-to-market strategy planning",
-    seoTitle: "Brand Iron: Your GTM Strategy & Growth Partner | Go-To-Market Consulting",
-    metaDescription: "Brand Iron is more than a marketing agency: it's a GTM strategy partner that helps companies plan, launch, and scale with clarity and precision.",
+    seoTitle: "How to Choose a GTM Strategy Partner | Brand Iron",
+    metaDescription: "What to look for in a go-to-market strategy partner: the questions to ask, the red flags to avoid, and how the right partner turns GTM strategy into pipeline.",
+    ogTitle: "How to Choose a GTM Strategy Partner",
+    ogDescription: "The questions to ask and red flags to watch for when hiring a go-to-market strategy partner.",
     body: [
       { type: "p", text: "Most companies don't have a go-to-market problem, they have a go-to-market clarity problem. They know what they're selling, but they can't articulate why anyone should care, who they're really talking to, or how to coordinate brand, messaging, and marketing into a strategy that actually moves the needle." },
       { type: "p", text: "That's where a true GTM strategy partner makes the difference. Brand Iron isn't a traditional marketing agency. It's a strategic growth partner built for companies that need more than a new logo or a paid ad campaign. Brand Iron's proprietary BrandStorm™ process, synchronized end-to-end services, and data-driven approach bring clarity to the full arc of your go-to-market journey, from shaping your brand foundation to launching with precision and scaling with confidence." },
@@ -1972,6 +1989,10 @@ export const articles: Article[] = [
     date: "April 2026",
     headerImage: "/images/blog/death-of-the-mql/death-of-the-mql-tech-river.jpg",
     headerImageAlt: "Forested river canyon with glowing circuit-line data-flow patterns woven through the rapids, representing lead-to-revenue data flow",
+    seoTitle: "The Death of the MQL & What's Next | Brand Iron",
+    metaDescription: "Marketing qualified leads no longer predict revenue. See why the MQL is fading and which pipeline signals B2B marketing and sales teams should track now.",
+    ogTitle: "The Death of the MQL",
+    ogDescription: "Why the marketing qualified lead stopped predicting revenue, and what B2B teams are measuring instead.",
     body: [
       { type: "p", text: "For over a decade, the marketing qualified lead has been the default scoreboard for demand generation. It's also one of the easiest metrics to inflate and one of the least connected to whether the business actually grows." },
       { type: "h2", text: "Why MQLs Disconnect Marketing From Revenue" },
@@ -2053,8 +2074,10 @@ export const articles: Article[] = [
     date: "February 2026",
     headerImage: "/images/blog/integrating-ai-without-starting-over/integrating-ai-without-starting-over-hero.jpg",
     headerImageAlt: "Two colleagues at a rustic wood desk reviewing AI-driven revenue dashboards across three monitors, with connected data overlays projected above the screens",
-    seoTitle: "Integrating AI Into Your Revenue Stack Without Starting Over | Brand Iron",
-    metaDescription: "Learn how to add AI to your existing CRM, email, and reporting tools without a costly platform migration, and when a rebuild is actually the right call.",
+    seoTitle: "Integrating AI Without Starting Over | Brand Iron",
+    metaDescription: "You don't need to rebuild your stack to benefit from AI. Learn how to integrate AI into your existing tools, workflows, and team without starting over.",
+    ogTitle: "Integrating AI Without Starting Over",
+    ogDescription: "A practical approach to adding AI to the tools, workflows, and team you already have.",
     body: [
       { type: "p", text: "The most common reason AI initiatives stall before they start isn't the technology, it's the assumption that AI transformation requires ripping out the existing tech stack and starting over. For most organizations, that assumption is wrong, and expensive enough to talk leadership out of starting at all." },
       { type: "p", text: "A founder we were talking to a few weeks back put it this way: \"We just finished migrating our CRM eighteen months ago. Please don't tell me AI means doing that again.\" He wasn't being difficult — he was bracing for the answer he'd already gotten from two other vendors. Rip it out, start clean, come back in six months. He didn't need to hear that a third time, because it's usually wrong." },

@@ -30,6 +30,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!article) return {};
   const title = article.seoTitle ?? article.title;
   const description = article.metaDescription ?? article.excerpt;
+  const ogTitle = article.ogTitle ?? title;
+  const ogDescription = article.ogDescription ?? description;
   const url = `https://brandiron.net/blog/${article.slug}/`;
   return {
     title,
@@ -38,8 +40,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: {
       type: "article",
       url,
-      title,
-      description,
+      title: ogTitle,
+      description: ogDescription,
       ...(article.isGuide ? {} : { publishedTime: article.publishedISO }),
       authors: ["Michael Doyle"],
       images: [article.headerImage],
@@ -48,8 +50,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     twitter: {
       card: "summary_large_image",
       site: "@BrandIron",
-      title,
-      description,
+      title: ogTitle,
+      description: ogDescription,
       images: [article.headerImage],
     },
   };
