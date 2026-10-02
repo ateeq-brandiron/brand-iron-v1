@@ -145,11 +145,11 @@ export const articles: Article[] = [
         links: [{ text: "Sprout Social's annual Social Media Index", href: "https://sproutsocial.com/insights/index/" }] },
       { type: "p", text: "If the sentiment reports indicate a shift in user needs (as seen in our recent data cycles), your messaging must pivot. If you're still talking about \"Efficiency\" when the market is worried about \"Security,\" your dwell time will hit zero." },
 
-      { type: "h3", text: "2. Strategy: The Outlaw of Ordinary" },
+      { type: "h3", text: "2. Strategy: The Outlaws of Ordinary" },
       { type: "p", text: "Most corporate communication is boring. It's safe. It's \"ordinary.\" And ordinary is invisible." },
-      { type: "p", text: "Our \"Outlaw of Ordinary\" branding methodology is built on the idea that to be remembered, you have to be different. This doesn't mean being loud for the sake of it. It means being strategically distinct. Research from the Ehrenberg-Bass Institute, summarized in Byron Sharp's How Brands Grow, shows that brand distinctiveness — not differentiation — is what drives mental availability, the foundation of being recalled when a buyer is ready to act. When you position a brand as an alternative to the status quo, people naturally pause. That pause is where dwell time begins.",
+      { type: "p", text: "Our \"Outlaws of Ordinary\" branding methodology is built on the idea that to be remembered, you have to be different. This doesn't mean being loud for the sake of it. It means being strategically distinct. Research from the Ehrenberg-Bass Institute, summarized in Byron Sharp's How Brands Grow, shows that brand distinctiveness — not differentiation — is what drives mental availability, the foundation of being recalled when a buyer is ready to act. When you position a brand as an alternative to the status quo, people naturally pause. That pause is where dwell time begins.",
         links: [
-          { text: "Outlaw of Ordinary", href: "/services/brand-strategy/" },
+          { text: "Outlaws of Ordinary", href: "/services/brand-strategy/" },
           { text: "brand distinctiveness — not differentiation — is what drives mental availability", href: "https://www.marketingscience.info/" },
         ] },
 
@@ -185,7 +185,7 @@ export const articles: Article[] = [
         { q: "What is the difference between an impression and dwell time?", a: "An impression simply means your content was displayed, and per the IAB/MRC viewability standard, a display ad counts as \"viewable\" only if at least 50% of its pixels are in view for a minimum of one second. Dwell time measures how long a user actually engages with that content beyond that minimum threshold. High impressions with low dwell time usually indicate that your message isn't resonating or is being ignored.",
           related: [{ label: "IAB/MRC Viewability Standard", href: "https://mediaratingcouncil.org/standards" }] },
         { q: "How does social sentiment affect brand recall?", a: "Social sentiment provides the context for your message. If your brand message aligns with the current mood and needs of your audience, they are more likely to engage with it and remember it. Sentiment is a core intelligence capability that informs better strategy." },
-        { q: "Why is \"Outlaw of Ordinary\" branding important for message retention?", a: "Ordinary branding blends into the background. To capture and hold attention, a brand must be strategically distinct. By rejecting generic approaches, you create a \"pattern interrupt\" that encourages the audience to spend more time with your message. Research on attention capture in advertising confirms that visually and conceptually distinctive ads hold viewer attention significantly longer.",
+        { q: "Why is \"Outlaws of Ordinary\" branding important for message retention?", a: "Ordinary branding blends into the background. To capture and hold attention, a brand must be strategically distinct. By rejecting generic approaches, you create a \"pattern interrupt\" that encourages the audience to spend more time with your message. Research on attention capture in advertising confirms that visually and conceptually distinctive ads hold viewer attention significantly longer.",
           related: [{ label: "Attention Capture in Advertising", href: "https://journals.sagepub.com/doi/10.1509/jmkg.68.2.36.27794" }] },
         { q: "How does the Intelligence, Strategy, Execution framework improve messaging?", a: "This framework ensures that every message is backed by data (Intelligence), aligned with a unique market position (Strategy), and delivered consistently through proper channels and governance (Execution). This structured approach minimizes wasted effort and maximizes resonance." },
         { q: "Can I improve my brand's dwell time without a full system overhaul?", a: "Yes. Through incremental integration, you can layer advanced intelligence and sentiment analysis into your existing marketing stack. This allows you to refine your brand message dwell time and retention strategies without the risks associated with a total revenue stack rebuild. Tracking the right branding metrics at each stage helps you measure progress as you go.",
@@ -390,7 +390,7 @@ export const articles: Article[] = [
         links: [{ text: "sentiment reports", href: "https://reports.brandiron.net/" }] },
 
       { type: "h3", text: "2. Strategy: Outlawing the Ordinary" },
-      { type: "p", text: "Strategy is where we draw the line in the sand. This is the \"Outlaw of Ordinary\" methodology. It's a commitment to rejecting the status quo." },
+      { type: "p", text: "Strategy is where we draw the line in the sand. This is the \"Outlaws of Ordinary\" methodology. It's a commitment to rejecting the status quo." },
       { type: "p", text: "A strong strategy involves:" },
       { type: "ul", items: [
         { bold: "Positioning:", boldHref: "/blog/rebranding-agency-transforms-your-business/", text: " Finding that one thing you do that no one else dares to do." },
