@@ -4,22 +4,25 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-# Specific instructions for AI crawlers to ensure visibility in next-gen search.
-# Allows training on public-facing site content.
+# Search engines and AI search / assistant crawlers.
+# A crawler named in its own group below ignores the * group above entirely,
+# so Disallow: /api/ must be repeated here too.
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: Applebot
 User-agent: GPTBot
-Allow: /
-
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
 User-agent: ClaudeBot
-Allow: /
-
+User-agent: Claude-SearchBot
+User-agent: Claude-User
 User-agent: PerplexityBot
-Allow: /
-
+User-agent: Perplexity-User
 User-agent: Google-Extended
-Allow: /
-
+User-agent: Applebot-Extended
 User-agent: CCBot
 Allow: /
+Disallow: /api/
 
 # Provides the location of the XML sitemap to all compliant crawlers.
 Sitemap: https://brandiron.net/sitemap.xml
