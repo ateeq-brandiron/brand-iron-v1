@@ -126,7 +126,7 @@ export const articles: Article[] = [
     ogTitle: "How a Brand Development Agency Brings Your Vision to Life",
     ogDescription: "Learn how a brand development agency uses intelligence and strategy to transform your vision into a market-ready brand.",
     body: [
-      { type: "p", text: "You have a vision. It's clear in your head, but when you try to explain it to the market, something gets lost in translation. You feel like your business is just another face in a crowded room. This is the moment most leaders realize they don't just need a new logo; they need a brand development agency built on the \"Outlaws of Ordinary\" methodology." },
+      { type: "p", text: "You have a vision. It's clear in your head, but when you try to explain it to the market, something gets lost in translation. You feel like your business is just another face in a crowded room. This is the moment most leaders realize they don't just need a new logo; they need a brand development agency that helps them break away from convention and become \"Outlaws of Ordinary.\"" },
       { type: "p", text: "Bringing a vision to life isn't about magic or luck. It's about a specific, rigorous framework. At Brand Iron, we approach this through a three-pillar system: Intelligence, Strategy, and Execution." },
       { type: "p", text: "Here is how that process actually works to turn your ideas into a brand that people notice and trust." },
 
@@ -147,7 +147,7 @@ export const articles: Article[] = [
       { type: "h3", text: "Internal Intelligence" },
       { type: "p", text: "It isn't just about the outside world. We look at your internal structures. We use a User Role and Permission Hierarchy to understand how information flows through your company. This ensures that when we build a brand, the people responsible for maintaining it have the right access and the right guardrails to keep the message consistent." },
 
-      { type: "h2", text: "The Strategy Phase: The Outlaws of Ordinary" },
+      { type: "h2", text: "The Strategy Phase: Outlaws of Ordinary" },
       { type: "p", text: "Once we have the data, we move to Strategy. As MarTech's guide to long-term brand strategy underscores, a brand that lasts is built through deliberate, structured planning — not reactive tactics. This is where we take your vision and sharpen it into a weapon.",
         links: [{ text: "MarTech's guide to long-term brand strategy", href: "https://martech.org/building-a-brand-strategy-essentials-for-long-term-success/" }] },
 
