@@ -64,11 +64,10 @@ export const caseStudies: CaseStudy[] = [
     title: "Center6 & InformXL",
     excerpt: "Center6 partnered with Brand Iron to rebrand around its InformXL business intelligence platform, building a stronger identity, sales and marketing collateral, and a lead-generation website — driving a 450% increase in software sales over three years.",
     thumbnail: "/images/client-logos/center6-informxl-logo.png",
-    thumbnailAlt: "informXL logo, the wordmark inform in dark navy beside a green xl block mark",
+    thumbnailAlt: "Center6 logo, a gray wordmark Center ending in a red number 6",
     images: [
       "/images/case-studies/center6-informxl/center6-informxl-hero.jpg",
       "/images/case-studies/center6-informxl/center6-informxl-closer-look-1.jpg",
-      "/images/case-studies/center6-informxl/center6-informxl-closer-look-2.jpg",
     ],
     cardHoverImage: "/images/case-studies/center6-informxl/center6-informxl-closer-look-1.jpg",
     clientDescription: "Center6 was a growing software company preparing to expand the market presence of InformXL, its business intelligence platform. As the company introduced new products to both existing and prospective customers, it needed a stronger identity and clearer way to communicate the value of its technology. The opportunity was to create a more cohesive brand and marketing platform capable of supporting both immediate product launches and longer-term growth.",
