@@ -518,7 +518,6 @@ export const caseStudies: CaseStudy[] = [
     images: [
       "/images/case-studies/market-structure-edge/market-structure-edge-hero.jpg",
       "/images/case-studies/market-structure-edge/market-structure-edge-closer-look-1.jpg",
-      "/images/case-studies/market-structure-edge/market-structure-edge-closer-look-2.jpg",
     ],
     cardHoverImage: "/images/case-studies/market-structure-edge/market-structure-edge-closer-look-1.jpg",
     clientDescription: "Market Structure EDGE developed a decision-support analytics platform designed to help traders use market structure data to shape portfolio decisions. As the company prepared to bring its SaaS product to market, it needed a brand and marketing approach that could communicate the sophistication of the platform clearly while making the product approachable to prospective users.",
