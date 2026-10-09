@@ -112,6 +112,98 @@ export const articles: Article[] = [
     ],
   },
   {
+    slug: "year-end-brand-audit",
+    publishedISO: "2026-10-09",
+    category: "Brand Strategy",
+    title: "The Year-End Brand Audit: 10 Questions to Ask Before You Plan 2027",
+    excerpt: "A year-end brand audit is a systematic review of your business's market position, visual identity, and messaging. Before planning for 2027, small and mid-sized business owners should ask whether their brand still reflects their current values, resonates with their target audience, and stands out from competitors — so next year's budget is built on a clear, honest foundation instead of outdated assumptions.",
+    readTime: "7 min read",
+    date: "October 2026",
+    headerImage: "/images/blog/year-end-brand-audit/year-end-brand-audit-hero.jpg",
+    headerImageAlt: "A man at a rustic wooden desk filling out a Brand Iron brand audit checklist beside a coffee mug, leather journal, and laptop with a desert landscape view",
+    seoTitle: "The Year-End Brand Audit: 10 Questions for 2027 Success",
+    metaDescription: "Perform a comprehensive brand audit before 2027. Learn the 10 vital questions small business owners must ask to align their brand with future goals.",
+    ogTitle: "The Year-End Brand Audit: 10 Questions for 2027",
+    ogDescription: "The 10 questions small business owners should ask before locking in a 2027 plan built on a shaky brand.",
+    body: [
+      { type: "p", text: "We've all been there. December hits, the calendar starts looking like a game of Tetris, and the pressure to \"hit the ground running\" in January feels heavy. For most small and mid-sized business owners, the instinct is to grab last year's spreadsheet, add five percent to the budget, and call it a plan." },
+      { type: "p", text: "But here is the truth: a plan built on a shaky brand is just an expensive way to get lost." },
+      { type: "p", text: "At Brand Iron, we see it often. Businesses work incredibly hard, but they feel like they're shouting into a void. Usually, it's because the brand they started with three years ago isn't the brand they are today. Before you lock in your 2027 goals, you need to look in the mirror. You need a brand audit that goes deeper than just checking if your logo looks okay on a smartphone screen.",
+        links: [{ text: "Brand Iron", href: "https://brandiron.net/" }, { text: "brand audit", href: "https://www.score.org/articles/how-do-a-brand-audit/" }] },
+
+      { type: "h2", text: "Why the \"Same as Last Year\" Strategy Fails" },
+      { type: "p", text: "2027 won't look like 2024. People change, markets shift, and the way your customers talk to you evolves. If you keep using the same messaging just because it's already written, you risk becoming invisible." },
+      { type: "p", text: "A brand audit isn't about finding what's \"broken.\" It's about finding what's no longer true. It's about making sure that when you spend a dollar on marketing in 2027, that dollar is working for the version of your business that exists now, not the ghost of your business from three years ago." },
+
+      { type: "h2", text: "1. Does our \"Why\" still get us out of bed?" },
+      { type: "p", text: "The core purpose of your business, the reason Brand Iron believes you do what you do can drift over time. Maybe you started to solve one specific problem, but you've realized your real passion lies elsewhere. If your internal mission has shifted but your external branding is still singing the old tune, your customers will feel the friction." },
+
+      { type: "h2", text: "2. Who are we actually talking to right now?" },
+      { type: "p", text: "Take a look at your best customers from the last twelve months. Are they the same people you were targeting two years ago? Often, a business grows into a new niche without realizing it. If your 2027 plan targets \"everyone,\" you'll reach no one. Your brand audit should pinpoint exactly who is currently paying you and why they chose you over a dozen other options." },
+
+      { type: "h2", text: "3. Does our visual identity feel like a costume?" },
+      { type: "p", text: "Design matters, but not for the reasons most people think. It's about trust. If your website looks like a time capsule from 2018 but you're selling a premium, modern service, there's a disconnect. Does your visual brand feel like it fits the quality of your work? If it feels like you're wearing a suit that's two sizes too small, it's time to tailor it." },
+
+      { type: "h2", text: "4. Are we saying the same thing as everyone else?" },
+      { type: "p", text: "Go to your three biggest competitors' websites. Read their \"About Us\" pages. If you could swap your logo for theirs and the text still made sense, you have a differentiation problem. A brand audit forces you to find the \"only\" factor, which is where brand strategy earns its keep. We are the only company that does X for Y in Z way. If you can't find that, 2027 will be a price war you don't want to fight.",
+        links: [{ text: "brand strategy", href: "/services/brand-strategy/" }] },
+
+      { type: "h2", text: "5. Is our message clear enough for a fifth-grader?" },
+      { type: "p", text: "We tend to get caught up in our own industry talk. We use big words to sound professional, but all we really do is confuse people. Look at your homepage. If a stranger can't tell exactly what you do and how it makes their life better within five seconds, your brand is leaking money." },
+
+      { type: "h2", text: "6. How does the \"Internal Brand\" look?" },
+      { type: "p", text: "Your brand isn't just what you tell customers; it's what your employees believe. If your team can't describe the company's vision in one sentence, your 2027 execution will be messy. A brand audit includes talking to your people. Are they proud to work there? Do they know where the ship is headed?" },
+
+      { type: "h2", text: "7. Which channels are actually worth the effort?" },
+      { type: "p", text: "Small teams often try to be everywhere Instagram, LinkedIn, TikTok, email, events. It's exhausting and usually unnecessary. Look at your data. Where did your actual revenue come from this year? A marketing audit is a useful companion here, since it walks every channel and campaign line by line. A brand audit gives you permission to stop doing the things that aren't working so you can double down on what is.",
+        links: [{ text: "marketing audit", href: "https://blog.hubspot.com/marketing/marketing-audit" }] },
+
+      { type: "h2", text: "8. Is our customer experience consistent?" },
+      { type: "p", text: "Brand is the sum of every interaction. If your marketing is polished and friendly, but your invoicing process is cold and confusing, the brand breaks. Trace a customer's path from the first ad they see to the final thank-you note. Where does the ball get dropped?" },
+
+      { type: "h2", text: "9. Are we telling stories or just listing features?" },
+      { type: "p", text: "Features tell, but stories sell. Look at your content from the past year. Is it just a list of what you do? Or are you sharing the successes of your clients and the hurdles you've helped them jump? By 2027, people will be even more hungry for human connection. Make sure your brand sounds like a person, not a brochure." },
+
+      { type: "h2", text: "10. What do we want to be known for a year from now?" },
+      { type: "p", text: "This is the most important question for your brand audit. If it's December 2027 and you're looking back, what is the one thing you want people to say about your business? Worth remembering, too, that \"people\" now includes the AI tools your customers ask for recommendations it's worth running an AI search visibility audit to see whether you're being mentioned, cited, or missed entirely. If your current branding doesn't point toward that goal, you need to change direction now.",
+        links: [{ text: "AI search visibility audit", href: "https://offers.hubspot.com/ai-search-visibility-audit" }] },
+
+      { type: "image", src: "/images/blog/year-end-brand-audit/year-end-brand-audit-strategy-session.jpg", alt: "Two colleagues discussing brand strategy and visual identity in front of a moodboard wall in a bright office" },
+
+      { type: "h2", text: "Taking the First Step Toward 2027" },
+      { type: "p", text: "Planning shouldn't be a chore if you check off a list. It should be an opportunity to sharpen your tools. A brand audit is that sharpening process. It strips away the noise and leaves you with a clear, honest look at where you stand. From there, the work is connecting what you've learned to how you actually go to market because a sharp brand that never reaches anyone is still a brand nobody knows.",
+        links: [{ text: "how you actually go to market", href: "https://www.forrester.com/blogs/go-to-market-strategy-the-three-core-engagement-elements-needed-for-successful-execution/" }] },
+      { type: "p", text: "At Brand Iron, we know that when you're in the middle of running a business, it's hard to see the labels from inside the jar. You're too close to it. You see the effort, the long hours, and the intent. But your customers only see the brand." },
+      { type: "p", text: "If you want to make sure your 2027 plan is built on solid ground, don't do it in a vacuum. A fresh set of eyes can often see the opportunities you've grown accustomed to overlooking." },
+      { type: "p", text: "Book a free year-end brand audit call with Brand Iron before you lock in your 2027 plan.",
+        links: [{ text: "Book a free year-end brand audit call", href: "/contact/" }] },
+
+      { type: "h2", text: "Frequently Asked Questions: Everything You Need to Know About a Brand Audit" },
+      { type: "faq", items: [
+        { q: "How long does a typical brand audit take?", a: "For a small to mid-sized business, a thorough audit can take anywhere from two to four weeks. It involves reviewing your current materials, analyzing competitor positioning, and speaking with key stakeholders. It's not something to rush, as the insights you gain will form the foundation of your entire next year." },
+        { q: "Do I need to hire a professional, or can I do it myself?", a: "You can certainly start the process yourself by asking the 10 questions listed above. However, self-bias is real. We often overlook our own flaws or miss unique strengths because we are too close to the work. An outside partner like Brand Iron provides an objective view that is hard to achieve internally." },
+        { q: "What is the most common mistake found during an audit?", a: "Lack of consistency is the biggest one. We often find that a company's social media sounds like one person, their website sounds like another, and their sales team says something else entirely. This \"split personality\" confuses customers and erodes trust." },
+        { q: "Will a brand audit mean I have to change my logo?", a: "Not necessarily. A brand audit is about strategy, not just aesthetics. Sometimes a logo is fine, but the messaging or the target audience is off. We only recommend visual changes if the current look is actively preventing you from reaching your goals or if it no longer represents who you are.",
+          related: [{ label: "Brand Strategy Services", href: "/services/brand-strategy/" }] },
+        { q: "How often should we perform a brand audit?", a: "We recommend a deep dive once a year, usually in the fourth quarter. However, you should do a \"mini-audit\" anytime there is a major shift in your business, such as launching a new product line, entering a new market, or after a significant change in the competitive landscape." },
+      ] },
+
+      { type: "h2", text: "Start 2027 With a Brand That Still Fits" },
+      { type: "p", text: "You don't have to walk into January guessing. Spend an hour with us before the year closes out, and you'll know exactly which parts of your brand are still working and which ones you've outgrown." },
+      { type: "p", text: "It's a straight conversation, not a sales pitch. We'll walk the 10 questions above with you, look at your site and your messaging the way a first-time customer would, and tell you honestly what we see.",
+        bold: "Book a free year-end brand audit call with Brand Iron." },
+      { type: "p", text: "Here's what you'll walk away with:" },
+      { type: "ul", items: [
+        "A clear read on where your brand and your business have drifted apart",
+        "The one or two gaps worth fixing before you set your 2027 budget",
+        "An outside opinion on whether your message actually lands in five seconds",
+      ] },
+      { type: "p", text: "Book your free brand audit call →",
+        links: [{ text: "Book your free brand audit call →", href: "/contact/" }] },
+      { type: "p", text: "Spots fill up fast in December. If 2027 is the year you want to stop shouting into the void, start here." },
+    ],
+  },
+  {
     slug: "brand-development-agency",
     publishedISO: "2026-09-30",
     category: "Brand Strategy",
