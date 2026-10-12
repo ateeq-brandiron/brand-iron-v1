@@ -30,36 +30,76 @@ function ArticlePills({ category, readTime }: { category: string; readTime: stri
   );
 }
 
+// Each topic links to the post that actually covers it; topics without a
+// dedicated post yet fall back to the articles list (`slug: null`) rather
+// than pointing at a guessed/nonexistent category page.
 const categories = [
   {
     title: "AI Visibility & Discoverability",
     body: "Learn how organizations can improve visibility across search engines, AI-powered platforms, and emerging discovery channels.",
-    topics: ["What Is AI Visibility?", "AI Search Optimization", "Answer Engine Optimization (AEO)", "Generative Engine Optimization (GEO)", "Knowledge Graph Optimization", "Entity SEO"],
+    topics: [
+      { label: "What Is AI Visibility?", slug: "ai-visibility-aeo-explained" },
+      { label: "AI Search Optimization", slug: "brand-positioning-ai-search-differentiation" },
+      { label: "Answer Engine Optimization (AEO)", slug: "ai-visibility-aeo-explained" },
+      { label: "Generative Engine Optimization (GEO)", slug: "ai-visibility-aeo-explained" },
+      { label: "Knowledge Graph Optimization", slug: null },
+      { label: "Entity SEO", slug: null },
+    ],
   },
   {
     title: "Go-To-Market Strategy",
     body: "Practical insights for launching products, entering new markets, and building scalable growth systems.",
-    topics: ["GTM Strategy Development", "Market Positioning", "Demand Generation", "Revenue Forecasting", "Growth Planning"],
+    topics: [
+      { label: "GTM Strategy Development", slug: "gtm-strategy-sales-marketing-alignment" },
+      { label: "Market Positioning", slug: null },
+      { label: "Demand Generation", slug: null },
+      { label: "Revenue Forecasting", slug: null },
+      { label: "Growth Planning", slug: "q1-product-launch-plan" },
+    ],
   },
   {
     title: "Brand Strategy",
     body: "Build stronger brands through strategic positioning, messaging, and market differentiation.",
-    topics: ["Brand Positioning", "Messaging Frameworks", "Brand Architecture", "Executive Branding", "Competitive Differentiation"],
+    topics: [
+      { label: "Brand Positioning", slug: "brand-positioning-ai-search-differentiation" },
+      { label: "Messaging Frameworks", slug: null },
+      { label: "Brand Architecture", slug: null },
+      { label: "Executive Branding", slug: null },
+      { label: "Competitive Differentiation", slug: "brand-positioning-ai-search-differentiation" },
+    ],
   },
   {
     title: "Website Development",
     body: "Explore best practices for creating digital experiences that improve visibility, engagement, and conversions.",
-    topics: ["Website Strategy", "UX/UI Design", "Conversion Optimization", "Landing Pages", "Website Performance"],
+    topics: [
+      { label: "Website Strategy", slug: "is-your-website-costing-you-deals" },
+      { label: "UX/UI Design", slug: null },
+      { label: "Conversion Optimization", slug: null },
+      { label: "Landing Pages", slug: null },
+      { label: "Website Performance", slug: "is-your-website-costing-you-deals" },
+    ],
   },
   {
     title: "Revenue Engineering",
     body: "Connect marketing, sales, technology, and automation to create scalable revenue systems.",
-    topics: ["Revenue Operations", "CRM Optimization", "Marketing Automation", "Attribution Modeling", "Funnel Optimization"],
+    topics: [
+      { label: "Revenue Operations", slug: "revenue-system-problem" },
+      { label: "CRM Optimization", slug: "crm-as-revenue-engine" },
+      { label: "Marketing Automation", slug: "revenue-automation-framework" },
+      { label: "Attribution Modeling", slug: "death-of-the-mql" },
+      { label: "Funnel Optimization", slug: null },
+    ],
   },
   {
     title: "Capital Raise & Investor Readiness",
     body: "Resources for founders and leadership teams preparing for investment opportunities.",
-    topics: ["Investor Pitch Decks", "Capital Raise Strategy", "Investor Storytelling", "Market Opportunity Analysis", "Fundraising Preparation"],
+    topics: [
+      { label: "Investor Pitch Decks", slug: "what-investors-want-in-pitch-deck-2026" },
+      { label: "Capital Raise Strategy", slug: "what-investors-want-in-pitch-deck-2026" },
+      { label: "Investor Storytelling", slug: "what-investors-want-in-pitch-deck-2026" },
+      { label: "Market Opportunity Analysis", slug: null },
+      { label: "Fundraising Preparation", slug: null },
+    ],
   },
 ];
 
@@ -90,9 +130,11 @@ export default function InsightsPage() {
   const { ref: ctaViewRef, inView: ctaViewInView } = useInView(0.1);
   const [subscribeEmail, setSubscribeEmail] = useState("");
   const [showAllArticles, setShowAllArticles] = useState(false);
+  // All non-featured posts render into the HTML; showAllArticles only
+  // controls which ones are CSS-hidden, so the full catalog stays crawlable
+  // without waiting on a "See All Blogs" click.
   const remainingArticles = articles.slice(1);
-  const visibleArticles = showAllArticles ? remainingArticles : remainingArticles.slice(0, INITIAL_LIMIT);
-  const remainingCount = remainingArticles.length - visibleArticles.length;
+  const remainingCount = showAllArticles ? 0 : Math.max(0, remainingArticles.length - INITIAL_LIMIT);
 
   return (
     <main style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
@@ -199,8 +241,8 @@ export default function InsightsPage() {
                 <p style={{ fontSize: 13.5, lineHeight: 1.7, color: "#666", marginBottom: 20 }}>{body}</p>
                 <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#aaa", marginBottom: 10 }}>Popular Topics</p>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 24 }}>
-                  {topics.map(t => (
-                    <span key={t} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 600, color: "#6b5a3e", background: "#F2ECDF", borderRadius: 4, padding: "3px 8px" }}>{t}</span>
+                  {topics.map(({ label, slug }) => (
+                    <Link key={label} href={slug ? `/blog/${slug}/` : "/blog/#articles"} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 11, fontWeight: 600, color: "#6b5a3e", background: "#F2ECDF", borderRadius: 4, padding: "3px 8px", textDecoration: "none" }}>{label}</Link>
                   ))}
                 </div>
                 <Link href="#articles" className="view-articles-link" style={{
@@ -256,12 +298,12 @@ export default function InsightsPage() {
 
           {/* Remaining posts */}
           <div className="blog-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
-            {visibleArticles.map(({ slug, category, title, excerpt, readTime, date, isGuide }, i) => (
+            {remainingArticles.map(({ slug, category, title, excerpt, readTime, date, isGuide }, i) => (
               <Link key={slug} href={`/blog/${slug}/`}
                 className={`article-card reveal${articlesViewInView ? " visible" : ""}`}
                 style={{
                   position: "relative", background: "#F9F8F6", border: "1px solid #EEEBE7",
-                  borderRadius: 10, padding: "28px 24px", display: "flex", flexDirection: "column",
+                  borderRadius: 10, padding: "28px 24px", display: !showAllArticles && i >= INITIAL_LIMIT ? "none" : "flex", flexDirection: "column",
                   overflow: "hidden", transitionDelay: `${(i % 6) * 0.06}s`, textDecoration: "none",
                   transition: "transform 0.25s, box-shadow 0.25s, border-color 0.25s",
                 }}
@@ -329,7 +371,7 @@ export default function InsightsPage() {
               <span key={r} style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 12, fontWeight: 600, color: "#f0a860", background: "rgba(216,115,7,0.12)", border: "1px solid rgba(216,115,7,0.25)", borderRadius: 20, padding: "7px 16px" }}>{r}</span>
             ))}
           </div>
-          <Link href="/contact/" className="cta-btn-outline" style={{
+          <Link href="/resources/" className="cta-btn-outline" style={{
             display: "inline-block", fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
             letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none",
             background: "transparent", color: "#FFFFFF", border: "2px solid rgba(255,255,255,0.4)",

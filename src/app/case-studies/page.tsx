@@ -30,9 +30,13 @@ export default function CaseStudiesPage() {
 
   const selectCategory = (id: PortfolioCategoryId | "all") => { setActiveCategory(id); setShowAll(false); };
 
+  // Every case study renders into the HTML regardless of category/showAll -
+  // these only decide which ones are CSS-hidden. That keeps all 17 stories
+  // crawlable (a crawler running no JS and clicking no "See All Stories"
+  // button still gets the full list in the markup), instead of the filtered
+  // subset never rendering into the DOM at all.
   const filtered = activeCategory === "all" ? caseStudies : caseStudies.filter(c => c.category === activeCategory);
-  const visibleStudies = showAll ? filtered : filtered.slice(0, INITIAL_LIMIT);
-  const remaining = filtered.length - visibleStudies.length;
+  const remaining = showAll ? 0 : Math.max(0, filtered.length - INITIAL_LIMIT);
   const populatedCategories = portfolioCategories.filter(c => caseStudies.some(cs => cs.category === c.id));
 
   return (
@@ -174,14 +178,18 @@ export default function CaseStudiesPage() {
           `}</style>
 
           <div className="cs-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
-            {visibleStudies.map((cs, i) => {
+            {caseStudies.map((cs, i) => {
               const catLabel = caseStudyCategoryLabel(cs.category);
               const hoverImage = cs.cardHoverImage ?? cs.images[0];
+              const matchesCategory = activeCategory === "all" || cs.category === activeCategory;
+              const indexInFiltered = matchesCategory ? filtered.findIndex(f => f.slug === cs.slug) : -1;
+              const pastLimit = matchesCategory && !showAll && indexInFiltered >= INITIAL_LIMIT;
+              const hidden = !matchesCategory || pastLimit;
               return (
                 <Link key={cs.slug} href={`/case-studies/${cs.slug}/`}
                   className={`reveal${gridViewInView ? ' visible' : ''} cs-card`}
                   style={{
-                    display: "block", position: "relative", background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 14,
+                    display: hidden ? "none" : "block", position: "relative", background: "#FFFFFF", border: "1px solid #EEEBE7", borderRadius: 14,
                     overflow: "hidden", textDecoration: "none", transitionDelay: `${(i % 6) * 0.06}s`,
                     transition: "transform 0.25s, box-shadow 0.25s, border-color 0.25s",
                   }}

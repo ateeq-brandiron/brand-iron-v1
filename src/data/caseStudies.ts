@@ -164,7 +164,9 @@ export const caseStudies: CaseStudy[] = [
       { text: "demonstrate market leadership potential", href: "/blog/go-to-market-consultant-vs-marketing-agency/" },
     ],
     solution: "Brand Iron delivered a complete brand transformation for Volition Hospitality, including visual identity, messaging, a capital raise deck, and a website that showcased their unique value in luxury hospitality while strengthening market presence and investor appeal.",
-    results: [],
+    results: [
+      { value: "55–70%", label: "Of Revenue Reinvested Into Property Improvements & Staff Development" },
+    ],
   },
   {
     slug: "black-lake-capital",
@@ -188,7 +190,12 @@ export const caseStudies: CaseStudy[] = [
     ],
     solution: "Brand Iron conducted a comprehensive brand and website audit, then delivered a full rebrand with a sophisticated visual identity and messaging platform, a modern professional website with improved user experience and clear calls to action, and compelling capital raise decks and teaser pieces. Targeted digital marketing — including SEO, content marketing, and marketing automation — was layered on top to increase visibility, nurture leads, and track performance.",
     solutionLinks: [{ text: "a full rebrand", href: "/blog/rebranding-agency-transforms-your-business/" }],
-    results: [],
+    results: [
+      { value: "15", label: "Tech Transactions Completed" },
+      { value: "10x", label: "Cash-On-Cash Returns On Exited Investments" },
+      { value: "$50M+", label: "In Second-Bite Liquidity Events For Founders & Management" },
+      { value: "0", label: "Positions Eliminated Post-Investment" },
+    ],
   },
   {
     slug: "maadaadizi",
@@ -209,7 +216,9 @@ export const caseStudies: CaseStudy[] = [
     challengeLinks: [{ text: "carry its cultural origin story", href: "/blog/rebranding-agency-transforms-your-business/" }],
     solution: "Brand Iron built a website that leads with warm, guest-facing photography and Maadaadizi's founding story, then organizes its full portfolio — branded hotels, independent brands, restaurants, and meetings & events spaces — into a clear, browsable structure that supports both guest discovery and future portfolio growth.",
     solutionLinks: [{ text: "a clear, browsable structure", href: "/blog/when-to-hire-a-go-to-market-strategy-consultant/" }],
-    results: [],
+    results: [
+      { value: "4", label: "Portfolio Categories — Branded Hotels, Lifestyle Properties, Independent Brands & Restaurants" },
+    ],
   },
   {
     slug: "ares-aardex-real-estate-services",
@@ -230,7 +239,13 @@ export const caseStudies: CaseStudy[] = [
     challengeLinks: [{ text: "reading as just another regional brokerage site", href: "/blog/brand-positioning-ai-search-differentiation/" }],
     solution: "Brand Iron designed a website structured around ARES's three core service lines — Development, Brokerage, and Property Management — anchored by a real portfolio of managed properties and a clear \"Why ARES\" case for its vertically integrated, in-house approach.",
     solutionLinks: [{ text: "a clear \"Why ARES\" case", href: "/blog/is-your-website-costing-you-deals/" }],
-    results: [],
+    results: [
+      { value: "1.5M+", label: "Square Feet Of Office Space Managed Nationwide" },
+    ],
+    glanceTitle: "Recognition",
+    glance: [
+      { title: "Industry Award", description: "NAIOP National Association of Industrial and Office Properties — Properties of the Year" },
+    ],
   },
   {
     slug: "cesa",
@@ -251,7 +266,11 @@ export const caseStudies: CaseStudy[] = [
     challengeLinks: [{ text: "bundled value proposition immediately clear", href: "/blog/brand-positioning-ai-search-differentiation/" }],
     solution: "Brand Iron built a website that opens with a direct, mission-driven headline, backs it up with a track-record stat band, and lays out exactly what makes CESA different — supported by clear membership and district-application calls to action throughout.",
     solutionLinks: [{ text: "clear membership and district-application calls to action", href: "/blog/is-your-website-costing-you-deals/" }],
-    results: [],
+    results: [
+      { value: "30", label: "First Responders Protected" },
+      { value: "50%", label: "Fewer Workplace Injuries Among Members" },
+      { value: "$500", label: "Total Savings Delivered To Members In 2024" },
+    ],
   },
   {
     slug: "offen-petroleum",
@@ -312,7 +331,11 @@ export const caseStudies: CaseStudy[] = [
     fullPageImage: "/images/portfolio/innovatix-website/innovatix-website-full.jpg",
     challenge: "As a 30-plus year technology services firm, Innovatix had deep enterprise credibility but needed a website that could reposition it around AI-driven modernization — without losing the track record that makes it trustworthy to large, risk-averse clients.",
     solution: "Brand Iron built a website led by a bold \"We Integrate\" AI-forward positioning statement, organized around Innovatix's five core solution areas, and backed by hard credibility stats — 30+ years, 400+ clients, 10+ countries — to ground the new message in real experience.",
-    results: [],
+    results: [
+      { value: "30+", label: "Years Of Successful Project Delivery" },
+      { value: "400+", label: "Clients Served Across Diverse Sectors" },
+      { value: "10+", label: "Countries Served Worldwide" },
+    ],
   },
   {
     slug: "worldwide-vintage-autos",

@@ -211,6 +211,13 @@ export default function AIVisibilityPage() {
 
             {/* LEFT — headline, hook, CTAs */}
             <div>
+              <p style={{
+                fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
+                letterSpacing: "0.14em", textTransform: "uppercase", color: "#f0a860",
+                marginBottom: 12, textShadow: "0 1px 8px rgba(0,0,0,0.5)",
+              }}>
+                AI SEO, AEO &amp; GEO Services
+              </p>
               <h1 className="hero-h1-anim" style={{
                 fontFamily: "var(--font-burford-inline), sans-serif",
                 fontWeight: 400, fontSize: "clamp(30px, 4.4vw, 58px)",

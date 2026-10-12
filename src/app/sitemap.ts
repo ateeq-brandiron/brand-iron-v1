@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { articles } from "@/data/articles";
+import { caseStudies } from "@/data/caseStudies";
 
 const BASE_URL = "https://brandiron.net";
 
@@ -19,6 +20,8 @@ const PAGES: { path: string; changeFrequency: NonNullable<MetadataRoute.Sitemap[
   { path: "/services/revenue-engineering", changeFrequency: "monthly", priority: 0.8 },
   { path: "/about", changeFrequency: "yearly", priority: 0.7 },
   { path: "/blog", changeFrequency: "weekly", priority: 0.7 },
+  { path: "/case-studies", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/faq", changeFrequency: "monthly", priority: 0.7 },
   { path: "/resources", changeFrequency: "monthly", priority: 0.7 },
   { path: "/contact", changeFrequency: "yearly", priority: 0.6 },
 ];
@@ -40,5 +43,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...articleRoutes];
+  const caseStudyRoutes = caseStudies.map(cs => ({
+    url: `${BASE_URL}/case-studies/${cs.slug}/`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [...staticRoutes, ...articleRoutes, ...caseStudyRoutes];
 }

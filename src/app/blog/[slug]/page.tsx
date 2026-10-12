@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { articles, ArticleLink } from "@/data/articles";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import ArticleSchema from "@/components/ArticleSchema";
 import FaqAccordion from "@/components/FaqAccordion";
 
 const linkStyle: React.CSSProperties = { color: "#c46305", textDecoration: "underline", textUnderlineOffset: 2 };
@@ -74,6 +75,13 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           { name: article.title, url: `https://brandiron.net/blog/${article.slug}/` },
         ]}
       />
+      <ArticleSchema
+        headline={article.title}
+        description={article.excerpt}
+        image={article.headerImage}
+        url={`https://brandiron.net/blog/${article.slug}/`}
+        datePublished={article.isGuide ? undefined : article.publishedISO}
+      />
       {faqItems.length > 0 && (
         <script
           type="application/ld+json"
@@ -124,7 +132,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             {article.title}
           </h1>
           <div style={{ display: "flex", gap: 16, alignItems: "center", fontSize: 13, color: "rgba(255,255,255,0.55)" }}>
-            <span>By Michael Doyle</span>
+            <Link href="/about/" style={{ color: "inherit", textDecoration: "underline", textUnderlineOffset: 2 }}>By Michael Doyle</Link>
             {!article.isGuide && (
               <>
                 <span style={{ width: 4, height: 4, borderRadius: "50%", background: "rgba(255,255,255,0.35)" }} />
