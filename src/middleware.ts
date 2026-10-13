@@ -69,6 +69,20 @@ const NOINDEX_PATTERNS = [
   /^\/branding-2\/?$/,
 ];
 
+// Old client-project subdomains (reporting dashboard, past client staging
+// sites) that Google is still crawling/indexing even though they're not
+// meant to be public-facing - Alberto asked for these to be noindexed.
+// robots.txt can't do this on its own (its rules are path-based, not
+// per-host, and a Disallow doesn't stop an already-linked URL from being
+// indexed without content) - the response header is what actually works.
+const NOINDEX_HOSTS = new Set([
+  "reports.brandiron.net",
+  "bff.brandiron.net",
+  "coct.brandiron.net",
+  "cone.brandiron.net",
+  "freightlogistics.brandiron.net",
+]);
+
 export function middleware(request: NextRequest) {
   const { pathname, search } = request.nextUrl;
 
@@ -85,7 +99,7 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL(redirect.destination, `https://${CANONICAL_HOST}`), 301);
   }
 
-  const host = request.headers.get("host") ?? "";
+  const host = (request.headers.get("host") ?? "").toLowerCase().split(":")[0];
   const wrongHost = host === `www.${CANONICAL_HOST}`;
   const missingSlash = needsTrailingSlash(pathname);
   if (wrongHost || missingSlash) {
@@ -96,7 +110,7 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(url, 301);
   }
 
-  if (NOINDEX_PATTERNS.some(pattern => pattern.test(pathname))) {
+  if (NOINDEX_HOSTS.has(host) || NOINDEX_PATTERNS.some(pattern => pattern.test(pathname))) {
     const response = NextResponse.next();
     response.headers.set("X-Robots-Tag", "noindex, nofollow");
     return response;
