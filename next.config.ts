@@ -15,6 +15,12 @@ const CSP = [
 ].join("; ");
 
 const nextConfig: NextConfig = {
+  // Hostinger's Next.js SSR hosting docs recommend standalone output so
+  // their platform can run a self-contained build (.next/standalone) without
+  // needing the full node_modules tree. This is additive - it doesn't change
+  // anything for `next dev`, and the full .next directory our custom
+  // server.js (programmatic next()) relies on is still produced alongside it.
+  output: "standalone",
   // Canonical URL structure is trailing-slash (domain.com/services/, per
   // Alberto/SEO) - this makes next/link render hrefs that already include
   // it, so internal navigation doesn't take an extra redirect hop.
