@@ -4,7 +4,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
-const STANDALONE_ROUTES = ["/growth-review"];
+// Matched against next/navigation's usePathname(), which reflects the
+// trailingSlash:true convention (see next.config.ts) - "/growth-review/",
+// not "/growth-review". Without the slash this never matches, and the
+// global nav renders on top of the page's own standalone logo/header.
+const STANDALONE_ROUTES = ["/growth-review/"];
 
 const servicesMenu = [
   { label: "Brand Strategy", href: "/services/brand-strategy/" },

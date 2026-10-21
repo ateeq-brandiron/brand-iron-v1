@@ -399,14 +399,14 @@ export default function InsightsPage() {
               type="email" required placeholder="Email address" value={subscribeEmail}
               onChange={e => setSubscribeEmail(e.target.value)}
               style={{
-                flex: 1, padding: "14px 18px",
+                flex: 1, minWidth: 0, padding: "14px 18px",
                 fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14,
                 background: "#FFFFFF", border: "1px solid #EEEBE7", borderRight: "none",
                 borderRadius: "6px 0 0 6px", color: "#1a1a1a", outline: "none",
               }}
             />
             <button type="submit" style={{
-              padding: "14px 28px", borderRadius: "0 6px 6px 0",
+              flexShrink: 0, padding: "14px 28px", borderRadius: "0 6px 6px 0",
               fontFamily: "var(--font-montserrat), sans-serif", fontWeight: 700, fontSize: 13,
               letterSpacing: "0.08em", textTransform: "uppercase",
               background: "#d87307", color: "#FFFFFF", border: "none", cursor: "pointer",
