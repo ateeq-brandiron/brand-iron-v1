@@ -2553,7 +2553,7 @@ export const articles: Article[] = [
     readTime: "8 min read",
     date: "October 2026",
     headerImage: "/images/blog/b2b-marketing-attribution/b2b-marketing-attribution-hero.jpg",
-    headerImageAlt: "A marketing leader reviewing a multi-touch attribution dashboard on a laptop at a wooden desk",
+    headerImageAlt: "A Brand Iron social sentiment dashboard on a monitor showing sentiment trend, mention volume, and top theme charts",
     seoTitle: "B2B Marketing Attribution: Prove Which Channels Drive Revenue",
     metaDescription: "B2B marketing attribution shows which channels actually drive revenue. Build an intelligence, strategy and execution framework without rebuilding your stack.",
     ogTitle: "B2B Marketing Attribution: Prove Which Channels Drive Revenue",
