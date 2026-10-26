@@ -52,7 +52,7 @@ const categories = [
     topics: [
       { label: "GTM Strategy Development", slug: "gtm-strategy-sales-marketing-alignment" },
       { label: "Market Positioning", slug: null },
-      { label: "Demand Generation", slug: null },
+      { label: "Demand Generation", slug: "b2b-marketing-attribution" },
       { label: "Revenue Forecasting", slug: null },
       { label: "Growth Planning", slug: "q1-product-launch-plan" },
     ],
