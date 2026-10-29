@@ -132,6 +132,31 @@ export const articles: Article[] = [
       { type: "p", text: "A brand style guide is not a rulebook for your logo. It is a strategic manifesto, and it is the bridge between who you are and how the market perceives you. Whether you sell healthcare software, financial services, or industrial equipment, your brand guidelines are the DNA of your execution." },
       { type: "p", text: "That matters more now than it did five years ago. Your brand is no longer expressed only by designers. It is expressed by sales reps building decks, partners publishing white-label reports, and AI tools generating copy at volume. Every one of them needs the same ground truth. Without it, you ship a different company every week." },
 
+      { type: "h2", text: "Key Takeaways" },
+      { type: "ul", items: [
+        "Brand guidelines govern how a company looks, sounds, and behaves. A guide that only covers the logo tells half the story.",
+        "Visual identity and verbal identity carry equal weight. Most brands look fine and sound like everyone else.",
+        "Guidelines built on intelligence and strategy outperform guidelines built on taste.",
+        "Consistency is a trust mechanism. Confused buyers do not convert, they bounce.",
+        "Your guidelines are now the ground truth for AI-generated content. Feed them in deliberately or accept generic output.",
+        "Small companies need guidelines more than large ones, because they have less room for error.",
+        "A guide nobody can find is a guide nobody follows. Centralize access, set permissions, train the team.",
+      ] },
+
+      { type: "h2", text: "Entity Fact Table" },
+      { type: "table", headers: ["Attribute", "Detail"], rows: [
+        ["Term", "Brand guidelines"],
+        ["Also known as", "Brand style guide, brand book, brand standards, brand architecture"],
+        ["Definition", "Documented rules governing the composition, design, look, feel, and voice of a company's brand"],
+        ["Core components", "Logo usage, color palette, typography, imagery, iconography, brand voice, messaging pillars, social sentiment standards"],
+        ["Primary owner", "Marketing or brand leadership, typically the CMO"],
+        ["Typical users", "Internal marketing, sales, designers, agencies, white-label partners, AI content tools"],
+        ["Review cadence", "Annually, or at any major strategy or market shift"],
+        ["Brand Iron framework", "Intelligence, Strategy, Execution"],
+        ["Primary business benefit", "Recognition, trust, and consistency that compound into revenue"],
+        ["Related entities", "Brand identity, brand architecture, visual identity, verbal identity, go-to-market strategy"],
+      ] },
+
       { type: "h2", text: "What Brand Guidelines Actually Are" },
       { type: "p", text: "Start with the definition, because half the arguments inside marketing teams come from people using the term differently." },
       { type: "p", text: "HubSpot defines brand guidelines, also called a brand style guide, as the rules that govern the composition, design, and general look and feel of a company's branding. Adobe frames it more bluntly: a brand style guide is the rulebook for everything you create, from fonts to how logo treatments behave against different color schemes.",
@@ -149,8 +174,8 @@ export const articles: Article[] = [
       { type: "p", text: "Skip the first stage and you get a mood board. Skip the second and you get a rulebook with no argument behind it. Most guidelines that get ignored were built starting at stage three." },
 
       { type: "h2", text: "What Should Be in Your Brand Style Guide?" },
-      { type: "p", text: "A complete guide covers two territories: how you look and how you speak. If you only have one, you are only telling half the story.",
-        links: [{ text: "brand strategy", href: "/services/brand-strategy/" }] },
+      { type: "p", text: "A complete guide covers two territories: how you look and how you speak. If you only have one, you are only telling half the story. If you are building this from the ground up, start with the foundations of your brand strategy, then codify the result here.",
+        links: [{ text: "foundations of your brand strategy", href: "/services/brand-strategy/" }] },
 
       { type: "h3", text: "The Visual Identity (The Look)" },
       { type: "p", text: "This is what most people picture when they hear \"brand guidelines.\" Its job is recognition in a split second." },
@@ -158,7 +183,7 @@ export const articles: Article[] = [
         { bold: "Logo.", text: "Approved lockups, placement, minimum sizes, and the clear space around it so it can breathe." },
         { bold: "Color palette.", text: "Primary, secondary, and accent colors, with codes for print (CMYK), digital (HEX/RGB), and white-label reporting." },
         { bold: "Typography.", text: "Fonts carry weight. A bold sans-serif reads modern and technical. A serif reads traditional and authoritative." },
-        { bold: "Imagery and iconography.", text: "Gritty and real, or clean and corporate? Specify the vibe, and give icons the same treatment." },
+        { bold: "Imagery and iconography.", text: "Gritty and real, or clean and corporate? Specify the vibe, and give icons the same treatment — UCSF, for example, publishes a dedicated iconography guide covering style and usage rules.", links: [{ text: "a dedicated iconography guide", href: "https://identity.ucsf.edu/brand-guide/iconography" }] },
       ] },
 
       { type: "h3", text: "The Verbal Identity (The Voice)" },
