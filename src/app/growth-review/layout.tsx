@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 const TITLE = "Free GTM Growth Review | Brand Iron";
 const DESCRIPTION =
-  "Get a free, no-obligation breakdown of where your go-to-market strategy stands and where the biggest growth opportunities are. Request your GTM Growth Review from Brand Iron.";
+  "Get a free, no-obligation breakdown of where your go-to-market strategy stands and where the biggest growth opportunities are.";
 const SOCIAL_IMAGE = "/images/shared/shared-footer-logo.jpeg";
 
 export const metadata: Metadata = {

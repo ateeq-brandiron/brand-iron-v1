@@ -255,7 +255,7 @@ export const articles: Article[] = [
     date: "October 2026",
     headerImage: "/images/blog/b2b-marketing-attribution/b2b-marketing-attribution-hero.jpg",
     headerImageAlt: "A Brand Iron social sentiment dashboard on a monitor showing sentiment trend, mention volume, and top theme charts",
-    seoTitle: "B2B Marketing Attribution: Prove Which Channels Drive Revenue",
+    seoTitle: "B2B Marketing Attribution: Prove What Drives Revenue",
     metaDescription: "B2B marketing attribution shows which channels actually drive revenue. Build an intelligence, strategy and execution framework without rebuilding your stack.",
     ogTitle: "B2B Marketing Attribution: Prove Which Channels Drive Revenue",
     ogDescription: "How to build a multi-touch attribution model that shows which channels actually drive B2B revenue — without rebuilding your stack.",
@@ -629,7 +629,7 @@ export const articles: Article[] = [
     date: "September 2026",
     headerImage: "/images/blog/brand-development-agency/brand-development-agency-hero.jpg",
     headerImageAlt: "Marketing leader reviewing a brand development agency strategy map",
-    seoTitle: "How a Brand Development Agency Brings Your Vision to Life | Brand Iron",
+    seoTitle: "How a Brand Development Agency Brings Your Vision to Life",
     metaDescription: "Learn how a brand development agency uses intelligence and strategy to transform your vision into a market-ready brand. Join the Outlaws of Ordinary today.",
     ogTitle: "How a Brand Development Agency Brings Your Vision to Life",
     ogDescription: "Learn how a brand development agency uses intelligence and strategy to transform your vision into a market-ready brand.",
@@ -720,7 +720,7 @@ export const articles: Article[] = [
     date: "September 2026",
     headerImage: "/images/blog/brand-message-dwell-time/brand-message-dwell-time-hero.jpg",
     headerImageAlt: "Close-up of a strategist reviewing social sentiment reports to gauge audience resonance",
-    seoTitle: "Brand Message Dwell Time: Why Message Retention Matters | Brand Iron",
+    seoTitle: "Brand Message Dwell Time: Why Message Retention Matters",
     metaDescription: "Learn how to improve brand message dwell time and recall. Stop chasing impressions and start building deeper connections with your audience.",
     body: [
       { type: "p", text: "We have all seen the reports. Thousands of impressions. Thousands of \"reaches.\" On paper, the campaign looks like a titan. But when you look at the actual revenue or the shift in brand sentiment, the needle hasn't budged." },
@@ -1459,7 +1459,7 @@ export const articles: Article[] = [
     headerImage: "/images/blog/rebranding-agency-transforms-your-business/rebranding-agency-transforms-your-business-hero.jpg",
     headerImageAlt: "Rebranding agency team collaborating on a new brand strategy",
     seoTitle: "Rebranding Agency: Transform Your Business Identity",
-    metaDescription: "Discover how a rebranding agency like Brand Iron can transform your business by revitalizing identity, clarifying messaging, and driving growth. Learn the process and benefits.",
+    metaDescription: "Discover how a rebranding agency like Brand Iron transforms your business by revitalizing identity, clarifying messaging, and driving growth.",
     body: [
       { type: "p", text: "A rebranding agency transforms a business by systematically evaluating its current brand, identifying misalignments, and developing a new brand identity that resonates with target audiences and supports strategic goals. The process involves research, strategy development, visual identity creation, messaging refinement, and comprehensive implementation, leading to increased market relevance, improved customer perception, and sustained business growth." },
       { type: "p", text: "In today's dynamic marketplace, a brand is far more than just a logo or a catchy slogan. It's the total of every experience, emotion, and perception your audience has about your business. It's your promise, your reputation, and a critical asset for growth. Yet, over time, even the most established brands can lose their luster, become misaligned with evolving business objectives, or simply fall behind changing market trends. This is where a specialized rebranding agency like Brand Iron steps in, not just to give your company a fresh coat of paint, but to fundamentally transform your business from the inside out." },
@@ -2253,7 +2253,7 @@ export const articles: Article[] = [
     headerImage: "/images/blog/when-to-hire-a-go-to-market-strategy-consultant/when-to-hire-a-go-to-market-strategy-consultant-hero.jpg",
     headerImageAlt: "Hand-drawn map showing a go-to-market strategy journey from product launch to market success, with a compass and travel gear on a wooden desk",
     seoTitle: "When to Hire a Go-To-Market Strategy Consultant | Brand Iron",
-    metaDescription: "Wondering when to bring in a go-to-market strategy consultant? This guide helps founders, CEOs, and business owners decide when expert insights are crucial for growth.",
+    metaDescription: "Wondering when to bring in a go-to-market strategy consultant? This guide helps founders and CEOs decide when expert insight is crucial.",
     body: [
       { type: "p", text: "You've got a fantastic product or service, clear goals, and a team that's ready to make things happen. But sometimes, despite all that drive, a certain clarity just isn't there for getting your offerings into the right hands. You might be launching something new, breaking into a different market, or just feeling like your current approach isn't hitting the mark. That's when a fresh set of eyes, specifically those of a go-to-market (GTM) strategy consultant, can make all the difference." },
       { type: "p", text: "For founders, CEOs, and business owners across industries, from dynamic SaaS companies and busy real estate firms to complex healthcare providers and meticulous legal practices, the question often isn't if you need a solid GTM strategy. It's when to bring in an expert to help craft one. The stakes are real: CB Insights research on why startups fail consistently ranks \"no market need\" among the top reasons businesses don't survive, a problem that a well-built go-to-market strategy is specifically designed to prevent. A GTM strategy consultant helps you move from reactive guesswork to a deliberate, evidence-based plan for entering or growing in a market." },
@@ -2609,6 +2609,7 @@ export const articles: Article[] = [
     date: "May 2026",
     headerImage: "/images/shared/shared-grass-prairie-circuit-lines.jpg",
     headerImageAlt: "Grass prairie at sunset with a computer chip and glowing revenue operations network lines woven through the field",
+    seoTitle: "The Revenue System Problem: Why Growth Stalls",
     body: [
       { type: "p", text: "Almost every stalled-growth conversation we have starts the same way: the team is working hard, the pipeline reports look reasonable, and the leadership team can't explain why revenue isn't compounding. The instinct is usually to add more, more content, more outbound, more headcount. Rarely is the instinct to look at how the pieces actually connect." },
       { type: "h2", text: "Activity Isn't Architecture" },
@@ -2652,6 +2653,7 @@ export const articles: Article[] = [
     date: "April 2026",
     headerImage: "/images/shared/shared-sagebrush-circuit-lines.jpg",
     headerImageAlt: "Desert butte landscape at a fiery sunset with sagebrush replaced by glowing computer-chip circuit patterns, representing an investor pitch deck narrative",
+    seoTitle: "What Investors Want to See in Your 2026 Pitch Deck",
     body: [
       { type: "p", text: "Capital hasn't disappeared, but the bar to access it has moved. Investors are seeing more decks, asking harder questions, and moving slower before they commit. A deck that would have gotten a second meeting a few years ago now gets a polite pass. The founders who are still raising successfully aren't the ones with the flashiest design, they're the ones whose story holds up under scrutiny." },
       { type: "h2", text: "Clarity Over Cleverness" },
@@ -2718,6 +2720,7 @@ export const articles: Article[] = [
     date: "March 2026",
     headerImage: "/images/shared/shared-blacksmith-tech-lines.jpg",
     headerImageAlt: "Blacksmith hammering molten metal on an anvil with glowing AI data-line visualizations exploding from the impact point",
+    seoTitle: "Revenue Automation: A Practical Framework That Works",
     body: [
       { type: "p", text: "Most automation initiatives start with a task: automate the follow-up email, automate the data entry, automate the report. Task-level automation is easy to justify and easy to build, and it rarely moves the needle on revenue, because a faster version of a task that wasn't driving growth is still not driving growth." },
       { type: "h2", text: "The Difference Between Activity and Leverage" },

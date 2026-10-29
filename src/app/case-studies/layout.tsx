@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
-const TITLE = "Case Studies | Real Results From Brand Iron Clients | Brand Iron";
-const DESCRIPTION = "Explore Brand Iron case studies covering the challenge, solution, and measurable results behind client engagements across brand, website, GTM, capital raise, and revenue growth work.";
+const TITLE = "Case Studies | Real Results From Brand Iron Clients";
+const DESCRIPTION = "Explore Brand Iron case studies covering the challenge, solution, and measurable results behind client engagements.";
 const URL = "https://brandiron.net/case-studies/";
 const SOCIAL_IMAGE = "/images/shared/shared-footer-logo.jpeg";
 

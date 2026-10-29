@@ -28,8 +28,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const cs = caseStudies.find(c => c.slug === slug);
   if (!cs) return {};
-  const title = `${cs.title} | Brand Iron Case Study`;
-  const description = cs.excerpt;
+  const title = cs.seoTitle ?? `${cs.title} | Brand Iron Case Study`;
+  const description = cs.metaDescription ?? cs.excerpt;
   const url = `https://brandiron.net/case-studies/${cs.slug}/`;
   const image = cs.images[0] ?? "/images/shared/shared-footer-logo.jpeg";
   return {

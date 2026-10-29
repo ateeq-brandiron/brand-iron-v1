@@ -27,6 +27,10 @@ export type CaseStudy = {
   client: string;
   title: string;
   excerpt: string;
+  /** Full override for the <title> tag (including any " | Brand Iron Case Study" suffix); falls back to `${title} | Brand Iron Case Study` when omitted. */
+  seoTitle?: string;
+  /** Meta description for the case study page; falls back to `excerpt` when omitted (which is often too long for search snippets). */
+  metaDescription?: string;
   thumbnail: string;
   thumbnailAlt: string;
   /** Images shown in the "Quick Look" carousel, in order. */
@@ -63,6 +67,7 @@ export const caseStudies: CaseStudy[] = [
     client: "Center6 & InformXL",
     title: "Center6 & InformXL",
     excerpt: "Center6 partnered with Brand Iron to rebrand around its InformXL business intelligence platform, building a stronger identity, sales and marketing collateral, and a lead-generation website — driving a 450% increase in software sales over three years.",
+    metaDescription: "Center6 partnered with Brand Iron to rebrand around its InformXL platform — new identity, collateral, and a website driving a 450% sales increase.",
     thumbnail: "/images/client-logos/center6-informxl-logo.png",
     thumbnailAlt: "Center6 logo, a gray wordmark Center ending in a red number 6",
     images: [
@@ -104,6 +109,7 @@ export const caseStudies: CaseStudy[] = [
     client: "Garbanzo",
     title: "Garbanzo",
     excerpt: "Garbanzo partnered with Brand Iron on a full rebrand — new visual identity, messaging, sales collateral, and a redesigned website — that drove a 37% revenue increase across 16 Colorado stores and a 60% jump in website traffic within months of launch.",
+    metaDescription: "Garbanzo partnered with Brand Iron on a full rebrand that drove a 37% revenue increase across 16 Colorado stores and a 60% jump in website traffic.",
     thumbnail: "/images/client-logos/garbanzo-logo.png",
     thumbnailAlt: "Garbanzo Mediterranean Fresh logo, a pinwheel mark of green, red, and gray petals beside the wordmark Garbanzo Mediterranean Fresh",
     images: [
@@ -174,6 +180,7 @@ export const caseStudies: CaseStudy[] = [
     client: "Black Lake Capital",
     title: "Black Lake Capital",
     excerpt: "Black Lake Capital is a boutique investment firm specializing in early growth companies in software and technology, providing strategic capital and hands-on operational expertise.",
+    metaDescription: "Black Lake Capital is a boutique investment firm specializing in early growth software and technology companies, providing capital and expertise.",
     thumbnail: "/images/client-logos/black-lake-capital-logo.png",
     thumbnailAlt: "Black Lake Capital logo mark and wordmark",
     images: [
@@ -203,6 +210,7 @@ export const caseStudies: CaseStudy[] = [
     client: "Maadaadizi",
     title: "Maadaadizi",
     excerpt: "Maadaadizi is a hospitality investment, development, and management company dedicated to creating meaningful guest experiences across a diverse portfolio of hotels, independent brands, and restaurants.",
+    metaDescription: "Maadaadizi is a hospitality investment and management company creating guest experiences across hotels, independent brands, and restaurants.",
     thumbnail: "/images/client-logos/maadaadizi-logo.png",
     thumbnailAlt: "Maadaadizi logo, a flower-shaped mark above the wordmark Maadaadizi",
     images: [
@@ -252,7 +260,9 @@ export const caseStudies: CaseStudy[] = [
     category: "websites",
     client: "Colorado Emergency Services Association (CESA)",
     title: "Colorado Emergency Services Association",
+    seoTitle: "CESA | Brand Iron Case Study",
     excerpt: "CESA is a nonprofit membership organization giving Colorado emergency service districts a single, trusted source for risk reduction, workers' comp, and safety resources.",
+    metaDescription: "CESA is a nonprofit giving Colorado emergency service districts a single, trusted source for risk reduction, workers' comp, and safety resources.",
     thumbnail: "/images/client-logos/cesa-logo.png",
     thumbnailAlt: "CESA logo, a shield mark beside the wordmark Colorado Emergency Services Association",
     images: [
@@ -343,6 +353,7 @@ export const caseStudies: CaseStudy[] = [
     client: "Worldwide Vintage Autos",
     title: "Worldwide Vintage Autos",
     excerpt: "Worldwide Vintage Autos partnered with Brand Iron to increase awareness of its VIP program, grow its social media following, and generate leads for its vehicle consignment department.",
+    metaDescription: "Worldwide Vintage Autos partnered with Brand Iron to grow its VIP program, social following, and leads for its vehicle consignment department.",
     thumbnail: "/images/client-logos/worldwide-vintage-autos-logo.png",
     thumbnailAlt: "Worldwide Vintage Autos logo mark and wordmark",
     images: [
@@ -378,6 +389,7 @@ export const caseStudies: CaseStudy[] = [
     client: "GoFresh Homes",
     title: "GoFresh Homes",
     excerpt: "GoFresh Homes partnered with Brand Iron to build the brand, messaging, investor materials, website, and go-to-market strategy needed to support the company from startup through multiple stages of fundraising and growth.",
+    metaDescription: "GoFresh Homes partnered with Brand Iron to build its brand, investor materials, website, and go-to-market strategy through fundraising and growth.",
     thumbnail: "/images/client-logos/gofresh-homes-logo.png",
     thumbnailAlt: "GoFresh Homes logo, a green house-and-pin mark beside the wordmark GoFresh Homes",
     images: [
@@ -416,6 +428,7 @@ export const caseStudies: CaseStudy[] = [
     client: "Bow River – AUC Group",
     title: "Bow River – AUC Group",
     excerpt: "Bow River partnered with Brand Iron to strengthen the positioning of AUC Group, a wastewater treatment solutions provider, and prepare the company for the market — resulting in a $65 million acquisition and a 3.6x return on the original investment.",
+    metaDescription: "Bow River partnered with Brand Iron to reposition AUC Group for sale — resulting in a $65 million acquisition and a 3.6x return on investment.",
     thumbnail: "/images/case-studies/bow-river-auc-group/auc-group-thumbnail-placeholder.png",
     thumbnailAlt: "AUC Group, L.P. placeholder logo mark and wordmark in navy and orange",
     // TODO: hero and thumbnail are designed placeholders; auc-group-deck-composite.jpg is real (but low-res, 808x735) deck art found in Drive.
@@ -449,6 +462,7 @@ export const caseStudies: CaseStudy[] = [
     client: "Canvas Communities",
     title: "Canvas Communities",
     excerpt: "Canvas Communities partnered with Brand Iron to build the brand, messaging, visual identity, and capital raise materials needed to bring a new single-family rental community concept to market.",
+    metaDescription: "Canvas Communities partnered with Brand Iron to build the brand, messaging, and capital raise materials for a new rental community concept.",
     thumbnail: "/images/client-logos/canvas-communities-logo.png",
     thumbnailAlt: "Canvas Communities logo, a layered house mark in blue, cream, olive, and gold above the wordmark Canvas Communities",
     images: [
@@ -494,6 +508,7 @@ export const caseStudies: CaseStudy[] = [
     client: "Colorado Center",
     title: "Colorado Center",
     excerpt: "Colorado Center partnered with Brand Iron to strengthen its identity, attract new tenants, and create the marketing foundation needed to support the next phase of the property's development.",
+    metaDescription: "Colorado Center partnered with Brand Iron to strengthen its identity and build the marketing foundation for the property's next development phase.",
     thumbnail: "/images/client-logos/colorado-center-logo.png",
     thumbnailAlt: "Colorado Center logo, a six-circle pinwheel mark in shades of green beside the wordmark Colorado Center",
     images: [
@@ -537,6 +552,7 @@ export const caseStudies: CaseStudy[] = [
     client: "Market Structure EDGE",
     title: "Market Structure EDGE",
     excerpt: "Market Structure EDGE partnered with Brand Iron to build the brand and go-to-market engine behind a new trading analytics platform, driving rapid growth in revenue, site traffic, and paid subscribers.",
+    metaDescription: "Market Structure EDGE partnered with Brand Iron to build the brand and go-to-market engine behind its trading analytics platform.",
     thumbnail: "/images/client-logos/market-structure-edge-logo.png",
     thumbnailAlt: "Market Structure EDGE logo, a bracket mark beside the stacked wordmark Market Structure Edge",
     images: [
@@ -585,6 +601,7 @@ export const caseStudies: CaseStudy[] = [
     client: "ModernIR",
     title: "ModernIR",
     excerpt: "ModernIR partnered with Brand Iron to define its differentiators and refresh its brand and marketing platform, repositioning a strong market structure analytics product for greater traction.",
+    metaDescription: "ModernIR partnered with Brand Iron to define its differentiators and refresh its brand, repositioning its market structure analytics product.",
     thumbnail: "/images/client-logos/modern-ir-logo.png",
     thumbnailAlt: "ModernIR logo, a checkmark-in-a-box mark beside the wordmark ModernIR in navy and green",
     images: [
@@ -631,6 +648,7 @@ export const caseStudies: CaseStudy[] = [
     client: "Campos EPC",
     title: "Campos EPC",
     excerpt: "Campos EPC partnered with Brand Iron at an early stage of its growth to build a brand platform that matched its technical ambition — a new logo, brand architecture, and sales collateral that helped the company grow 10x over five years.",
+    metaDescription: "Campos EPC partnered with Brand Iron on a brand platform matching its technical ambition — new logo, architecture, and collateral fueling 10x growth.",
     thumbnail: "/images/client-logos/campos-epc-logo.png",
     thumbnailAlt: "Campos EPC logo, a gold C-shaped mark beside the wordmark Campos EPC",
     images: [
@@ -668,6 +686,7 @@ export const caseStudies: CaseStudy[] = [
     client: "Wazee",
     title: "Wazee",
     excerpt: "Wazee partnered with Brand Iron to unify messaging across its industrial service divisions and support the rollout of its Wind Division — work that helped position the company for its acquisition by The Timken Company at more than 10–15x EBITDA.",
+    metaDescription: "Wazee partnered with Brand Iron to unify messaging across its divisions, helping position the company for acquisition by Timken at 10-15x EBITDA.",
     thumbnail: "/images/client-logos/wazee-logo.jpg",
     thumbnailAlt: "A WazeeCrane sign reading A Timken Brand, the sub-brand Wazee grew into after its acquisition",
     images: [
