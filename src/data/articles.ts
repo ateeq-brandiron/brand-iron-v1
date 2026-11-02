@@ -183,8 +183,7 @@ export const articles: Article[] = [
       { type: "p", text: "Done well, execution is boring on the inside and bold on the outside: leads tagged correctly, follow-ups on time, every touchpoint sounding unmistakably like you." },
 
       { type: "h2", text: "The Go-to-Market Strategy Steps, Start to Finish" },
-      { type: "p", text: "Harvard Business School Online frames GTM development for tech ventures as a sequenced process rather than a single planning event, moving from market understanding through positioning to launch. Ours follows the same logic, with sharper teeth.",
-        links: [{ text: "Harvard Business School Online", href: "https://online.hbs.edu/blog/post/go-to-market-strategy-framework" }] },
+      { type: "p", text: "GTM development works best as a sequenced process rather than a single planning event, moving from market understanding through positioning to launch. Ours follows that same logic, with sharper teeth." },
       { type: "ul", items: [
         "Run a market intelligence audit. Read social sentiment, identify the profiles influencing your buyers, and find where the market is actively hurting.",
         "Define your positioning. Answer the hard question honestly: if your company disappeared tomorrow, what would genuinely be missing?",
@@ -294,8 +293,7 @@ export const articles: Article[] = [
         { bold: "Execution.", text: "What are the specific, repeatable actions that turn that strategy into cash?" },
       ] },
       { type: "p", text: "Skip to execution without intelligence and you are just making noise. Let strategy stall before execution and you have an expensive PowerPoint collecting digital dust." },
-      { type: "p", text: "Most firms that offer RevOps and growth consulting describe engagements that begin with systems and process alignment. That work is necessary. It is not sufficient, because a well-aligned system pointed at the wrong market position simply reaches the wrong destination faster.",
-        links: [{ text: "RevOps and growth consulting", href: "https://www.tisconsulting.org/en/insights/how-to-get-started-with-revops-consulting" }] },
+      { type: "p", text: "Most firms that offer RevOps and growth consulting describe engagements that begin with systems and process alignment. That work is necessary. It is not sufficient, because a well-aligned system pointed at the wrong market position simply reaches the wrong destination faster." },
 
       { type: "h2", text: "Why Your Current RevOps Isn't Enough" },
       { type: "p", text: "If you hired a RevOps consultant and never saw a jump in revenue, it is likely they focused on the plumbing. They fixed the leaks without checking whether the water was poisoned." },
