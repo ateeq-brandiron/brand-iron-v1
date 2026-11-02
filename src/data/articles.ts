@@ -120,7 +120,7 @@ export const articles: Article[] = [
     readTime: "8 min read",
     date: "November 2026",
     headerImage: "/images/blog/gtm-strategy-framework-b2b/gtm-strategy-framework-b2b-hero.jpg",
-    headerImageAlt: "A strategic diagram illustrating the Intelligence, Strategy, and Execution loop of a B2B go-to-market strategy framework",
+    headerImageAlt: "Two colleagues at Brand Iron reviewing go-to-market attribution charts and performance dashboards on a laptop and printed reports",
     seoTitle: "GTM Strategy Framework for B2B: A Guide for Scale",
     metaDescription: "Master your go-to-market strategy framework for B2B. Learn the intelligence, strategy, and execution steps to align sales and marketing for growth.",
     body: [
