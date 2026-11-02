@@ -37,12 +37,15 @@ const LEGACY_REDIRECTS: { pattern: RegExp; destination: string }[] = [
   { pattern: /^\/pitch-deck-structure-for-success\/?$/, destination: "/services/capital-raise/" },
   { pattern: /^\/website-development\/?$/, destination: "/services/website-development/" },
   { pattern: /^\/process\/?$/, destination: "/about/" },
-  // These 4 are pending an editorial call (republish on /blog vs. redirect) -
+  // These 3 are pending an editorial call (republish on /blog vs. redirect) -
   // see the redirect remapping doc from Alberto. Falling back to the closest
   // matching service page for now so they're off the blanket homepage
   // redirect; swap the destination if/when the content team republishes them.
   { pattern: /^\/the-4-types-of-pitch-decks\/?$/, destination: "/services/capital-raise/" },
-  { pattern: /^\/why-your-startup-pitch-deck-matters-more-than-you-think\/?$/, destination: "/services/capital-raise/" },
+  // Repointed to the direct content match per Jay-r's Nov 2026 re-audit,
+  // since "what-investors-want-in-pitch-deck-2026" republished this exact
+  // pre-migration post under /blog/ - no longer an open editorial call.
+  { pattern: /^\/why-your-startup-pitch-deck-matters-more-than-you-think\/?$/, destination: "/blog/what-investors-want-in-pitch-deck-2026/" },
   { pattern: /^\/avoid-costly-launch-mistakes-with-go-to-market-strategy-consulting\/?$/, destination: "/services/gtm/" },
   { pattern: /^\/is-go-to-market-strategy-a-skill-heres-why-it-matters\/?$/, destination: "/services/gtm/" },
   // Second batch from Alberto's Search Console broken-link export (Aug 2026).
