@@ -301,7 +301,7 @@ export const articles: Article[] = [
       { type: "p", text: "If you hired a RevOps consultant and never saw a jump in revenue, it is likely they focused on the plumbing. They fixed the leaks without checking whether the water was poisoned." },
       { type: "p", text: "The symptom shows up in the stack. Gartner's 2023 marketing technology survey found marketers used just 33% of their martech stack's capabilities, down from 58% in 2020. Teams are not short on tools. They are short on a design that makes the tools load-bearing." },
       { type: "p", text: "Gartner's guidance on sales operations planning in the AI era makes a related argument: sales operations has to align strategy, talent, and technology together rather than sequentially, or AI-driven growth never materializes.",
-        links: [{ text: "sales operations planning in the AI era", href: "https://www.gartner.com/en/articles/sales-operations" }] },
+        links: [{ text: "sales operations planning in the AI era", href: "https://www.gartner.com/en/sales/insights/sales-operations" }] },
       { type: "table", headers: ["", "Revenue Operations", "Revenue Engineering"], rows: [
         ["Starting point", "The existing tech stack", "Market intelligence and brand position"],
         ["Posture", "Reactive maintenance", "Intentional design"],
@@ -332,7 +332,7 @@ export const articles: Article[] = [
       { type: "p", text: "Once intelligence is gathered and strategy is set, the engineering happens." },
       { type: "p", text: "In a revenue engineering model, every action is measured against a credit-based resource consumption model. We do not believe in vague retainers that produce no results. We believe in clear resource allocation: knowing what each movement costs and what it returns." },
       { type: "p", text: "The prize is seller capacity. Bain's 2025 technology research argues that generative and agentic AI can free up selling time and lift conversion rates, because so much of a seller's week is consumed by work that is not selling. Bain frames sales as a new frontier for AI productivity rather than a solved one.",
-        links: [{ text: "a new frontier for AI productivity", href: "https://www.bain.com/insights/ai-transforming-productivity-sales-remains-new-frontier-technology-report-2025/" }] },
+        links: [{ text: "a new frontier for AI productivity", href: "https://www.bain.com/insights/ai-transforming-productivity-sales-remains-new-frontier/" }] },
       { type: "p", text: "For enterprise organizations, our revenue engineering engagements typically install:",
         links: [{ text: "revenue engineering engagements", href: "/services/revenue-engineering/" }] },
       { type: "ul", items: [
