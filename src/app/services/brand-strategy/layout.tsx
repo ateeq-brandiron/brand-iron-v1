@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   alternates: { canonical: "/services/brand-strategy/" },
   openGraph: {
-    type: "article",
+    type: "website",
     url: URL,
     title: TITLE,
     description: DESCRIPTION,

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   alternates: { canonical: "/services/ai-visibility/" },
   openGraph: {
-    type: "article",
+    type: "website",
     url: URL,
     title: TITLE,
     description: DESCRIPTION,

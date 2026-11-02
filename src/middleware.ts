@@ -56,6 +56,11 @@ const LEGACY_REDIRECTS: { pattern: RegExp; destination: string }[] = [
   // not a redirect-mapping one). Points to Portfolio for now; swap this
   // once a real /industries page gets built.
   { pattern: /^\/industries\/?$/, destination: "/portfolio/" },
+  // Pre-migration root-level URLs (ranked pre-July-13) now rebuilt under
+  // /blog/ with new slugs - from Jay-r's Nov 2026 post-migration re-audit.
+  // Direct content matches; 1:1 redirects to recover the lost ranking equity.
+  { pattern: /^\/how-a-rebranding-agency-transforms-your-business\/?$/, destination: "/blog/rebranding-agency-transforms-your-business/" },
+  { pattern: /^\/essential-brand-guidelines-guide\/?$/, destination: "/blog/brand-guidelines/" },
 ];
 
 // Legacy WordPress-era URLs that no longer exist and have no real

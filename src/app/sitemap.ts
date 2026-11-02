@@ -21,8 +21,10 @@ const PAGES: { path: string; changeFrequency: NonNullable<MetadataRoute.Sitemap[
   { path: "/about", changeFrequency: "yearly", priority: 0.7 },
   { path: "/blog", changeFrequency: "weekly", priority: 0.7 },
   { path: "/case-studies", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/portfolio", changeFrequency: "monthly", priority: 0.7 },
   { path: "/faq", changeFrequency: "monthly", priority: 0.7 },
   { path: "/resources", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/growth-review", changeFrequency: "monthly", priority: 0.6 },
   { path: "/contact", changeFrequency: "yearly", priority: 0.6 },
 ];
 
