@@ -64,6 +64,9 @@ const LEGACY_REDIRECTS: { pattern: RegExp; destination: string }[] = [
   // Direct content matches; 1:1 redirects to recover the lost ranking equity.
   { pattern: /^\/how-a-rebranding-agency-transforms-your-business\/?$/, destination: "/blog/rebranding-agency-transforms-your-business/" },
   { pattern: /^\/essential-brand-guidelines-guide\/?$/, destination: "/blog/brand-guidelines/" },
+  // Recreated at the same slug under /blog/ (no direct replacement existed
+  // before this).
+  { pattern: /^\/marketing-resources-for-small-businesses\/?$/, destination: "/blog/marketing-resources-for-small-businesses/" },
 ];
 
 // Legacy WordPress-era URLs that no longer exist and have no real
