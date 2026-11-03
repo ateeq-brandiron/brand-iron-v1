@@ -82,6 +82,10 @@ export default function GTMPage() {
       q: "What happens after the strategy session?",
       a: "Every engagement begins with understanding your business, not prescribing a solution. During the strategy session, we'll evaluate your market position, current Go-to-Market maturity, business objectives, and growth opportunities. Based on those insights, we'll recommend the level of execution that best supports your organization's goals and outline a phased roadmap for implementation.",
     },
+    {
+      q: "How do I choose the right GTM agency or consultant?",
+      a: "Look for a partner that starts with strategy, not tactics: they should be able to show you their process for understanding your market and positioning before proposing channels or campaigns. Ask how they measure success, whether they'll work alongside your existing team, and whether their engagement model scales with you from initial launch through growth-stage execution. A good GTM partner acts as an extension of your leadership team, not a vendor running isolated tasks.",
+    },
   ];
 
   return (

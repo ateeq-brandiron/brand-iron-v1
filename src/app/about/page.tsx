@@ -154,6 +154,10 @@ export default function AboutPage() {
                 We Build Brands Engineered for Growth.
               </h1>
 
+              <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, fontWeight: 700, color: "#FFFFFF", lineHeight: 1.5, marginBottom: 12, textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}>
+                Brand Iron is a Denver-based brand strategy, AI visibility, and go-to-market agency founded by Michael Doyle in 2002.
+              </p>
+
               <p style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: 14, fontWeight: 700, color: "#FFFFFF", lineHeight: 1.5, marginBottom: 20, textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}>
                 Brand Iron exists because most businesses grow in pieces: a logo here, a funnel there, a deck built the night before it matters. We forge it into one brand, built to be discoverable, trusted, and chosen.
               </p>

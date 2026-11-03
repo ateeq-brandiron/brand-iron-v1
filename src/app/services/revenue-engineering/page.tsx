@@ -122,6 +122,10 @@ const faqs = [
     a: "No. Revenue Engineering scales to the team size you have. Smaller teams often benefit the most because automation and system optimization directly reduce manual work, freeing limited team capacity to focus on higher-value activities. Larger teams benefit through better alignment, cleaner reporting, and reduced coordination overhead.",
   },
   {
+    q: "Do you work with SaaS companies on revenue operations?",
+    a: "Yes. SaaS revenue operations consulting is one of our most common engagement types, since subscription businesses depend on clean handoffs between trial, onboarding, expansion, and renewal that a generic RevOps setup often misses. A revenue engineer maps your specific subscription funnel, not just your sales pipeline, and optimizes for retained and expanded revenue, not just closed-won deals.",
+  },
+  {
     q: "How does Revenue Engineering connect to your other services like GTM Strategy or AI Visibility?",
     a: "Revenue Engineering handles what happens after prospects enter your funnel: capture, routing, follow-up, conversion, and reporting. GTM Strategy defines the market approach and demand generation that fills the funnel, and AI Visibility ensures buyers can discover you across search and AI platforms before they even enter it. Together, the three services form Brand Iron's connected growth system.",
     related: [
@@ -279,6 +283,9 @@ export default function RevenueEngineeringPage() {
           <h2 className={`section-heading reveal${s2ViewInView ? ' visible' : ''}`} style={{ color: "#1a1a1a", marginBottom: 24, textAlign: "left" }}>
             Stop Letting Revenue Slip Through the Cracks
           </h2>
+          <p className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 16 }}>
+            Revenue engineering is the discipline of connecting marketing, sales, CRM, automation, and reporting into one coordinated system, so the revenue you're already generating stops leaking out through broken handoffs. A revenue engineer audits that system end-to-end, from SaaS subscription funnels to enterprise sales pipelines, and rebuilds the connective tissue rather than bolting on another tool.
+          </p>
           <p className={`reveal${s2ViewInView ? ' visible' : ''}`} style={{ fontSize: 18, lineHeight: 1.8, color: "#555", marginBottom: 16 }}>
             Most companies already have the tools. The problem? They are not working together. Leads go cold. Follow-ups fall behind. Data gets scattered. Reporting gets muddy.
           </p>

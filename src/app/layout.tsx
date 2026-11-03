@@ -27,9 +27,9 @@ const burfordInline = localFont({
   display: "swap",
 });
 
-const HOME_TITLE = "Business Growth Strategy & Branding Agency | Brand Iron";
+const HOME_TITLE = "Brand Iron | Denver Brand Strategy & B2B Marketing Agency";
 const HOME_DESCRIPTION =
-  "Build a stronger brand and predictable revenue with integrated brand strategy, AI visibility, GTM, and revenue growth solutions. Book a strategy session.";
+  "Denver-based brand strategy and B2B marketing agency helping Colorado companies build discoverable, trusted brands that drive revenue. Book a strategy session.";
 // Interim OG/Twitter image - the site doesn't have a dedicated 1200x630 social
 // card graphic yet, so this reuses the embossed-logo footer image (dark
 // background, full wordmark, reads fine as a link-preview thumbnail). Swap
