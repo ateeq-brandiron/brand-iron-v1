@@ -64,17 +64,17 @@ const LEGACY_REDIRECTS: { pattern: RegExp; destination: string }[] = [
   // Direct content matches; 1:1 redirects to recover the lost ranking equity.
   { pattern: /^\/how-a-rebranding-agency-transforms-your-business\/?$/, destination: "/blog/rebranding-agency-transforms-your-business/" },
   { pattern: /^\/essential-brand-guidelines-guide\/?$/, destination: "/blog/brand-guidelines/" },
-  // Recreated under /blog/ (no direct replacement existed before this).
-  // Destination matches the slug rename below - this old root URL now
-  // skips straight to the final location in one hop.
-  { pattern: /^\/marketing-resources-for-small-businesses\/?$/, destination: "/blog/small-business-marketing-resources/" },
   // Slug renames to match the content team's "Recommended Blog URL" column
   // in the Content Plan sheet (BrandIron Content Workbook) - these posts
   // were already live and indexed under the old slugs, so they redirect
   // rather than silently break.
   { pattern: /^\/blog\/revenue-engineering\/?$/, destination: "/blog/what-is-revenue-engineering/" },
   { pattern: /^\/blog\/gtm-strategy-framework-b2b\/?$/, destination: "/blog/b2b-go-to-market-strategy-framework/" },
-  { pattern: /^\/blog\/marketing-resources-for-small-businesses\/?$/, destination: "/blog/small-business-marketing-resources/" },
+  // "Marketing Resources for Small Businesses" (/blog/small-business-marketing-resources/)
+  // was unpublished pending official November-batch approval - see Content
+  // Plan sheet row 5 (still "Editing", not "Complete"). Both its old-URL
+  // redirects are removed until it's republished; re-add them pointing to
+  // the same slug once that happens.
 ];
 
 // Legacy WordPress-era URLs that no longer exist and have no real
