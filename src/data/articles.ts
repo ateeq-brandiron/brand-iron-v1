@@ -124,6 +124,7 @@ export const articles: Article[] = [
     seoTitle: "B2B Messaging Framework: Turn Positioning Into Copy",
     metaDescription: "A B2B messaging framework turns brand positioning into copy that converts. Here's the structure, the governance, and the mistakes that kill good messaging.",
     body: [
+      { type: "h2", text: "Introduction" },
       { type: "p", text: "Most B2B brands suffer from a translation gap. On one side sits a beautiful positioning document, a deck full of vision, mission and high-level strategy. On the other sits the actual output: emails, LinkedIn posts and landing pages that feel disjointed, safe and forgettable." },
       { type: "p", text: "The gap exists because positioning is a destination and messaging is the vehicle. Without a structured B2B messaging framework, your team is guessing how to talk to your audience. They fall back on jargon and safe corporate speak." },
       { type: "p", text: "At Brand Iron, we call that the middle ground. It is where brands go to be forgotten. Below: what belongs in a messaging framework, how to govern it so it keeps its edge, and how to tell whether it is working.",
@@ -162,8 +163,11 @@ export const articles: Article[] = [
         { bold: "Entity-based naming conventions.", text: "Features, tiers, integrations and social accounts get one name each, set in stone. Inconsistent naming reads as organizational confusion." },
         { bold: "The \"so what?\" filter.", text: "Every claim passes one test: why does this matter to the person reading it right now? Claims that fail get cut, not softened." },
       ] },
-      { type: "p", text: "The Semrush brand messaging framework template follows similar logic, moving teams from mission statement through audience and competitor analysis into written guidelines.",
-        links: [{ text: "Semrush brand messaging framework template", href: "https://www.semrush.com/academy/templates/brand-messaging-framework/" }] },
+      { type: "p", text: "The Semrush brand messaging framework template follows similar logic, moving teams from mission statement through audience and competitor analysis into written guidelines. SMPS documents a three-part variant pairing a positioning statement with core messages and proof points, a workable starting structure for smaller teams.",
+        links: [
+          { text: "Semrush brand messaging framework template", href: "https://www.semrush.com/academy/templates/brand-messaging-framework/" },
+          { text: "SMPS documents a three-part variant", href: "https://smps.org/2025/02/12/a-messaging-framework-to-engage-inspire-and-convert-in-a-e-c/" },
+        ] },
       { type: "p", text: "Structured this way, the framework can be handed to any writer, seller or agency and the voice holds. That handoff is the entire point, and it is where our brand strategy practice spends most of its time.",
         links: [{ text: "brand strategy practice", href: "/services/brand-strategy/" }] },
 
@@ -187,7 +191,8 @@ export const articles: Article[] = [
         links: [{ text: "AMA's guide to marketing frameworks", href: "https://www.ama.org/marketing-news/ultimate-guide-to-marketing-frameworks-models-examples-and-step-by-step-applications/" }] },
       { type: "p", text: "The biggest execution hurdle is fear of being too bold. Leaders worry that opinionated copy alienates people. If you are not alienating the people who are not a fit, you are not attracting the people who are." },
       { type: "p", text: "Use case: pricing mechanics as narrative. Say your platform runs on credit-based consumption. Ordinary copy explains the mechanics. Outlaw copy sells the control, the buyer decides where spend goes and can defend it line by line. Same move with white-label reporting: you are not removing a logo, you are handing a director the professional capital of presenting work under their own banner." },
-      { type: "p", text: "Specificity is the enemy of the ordinary. Channel and content decisions should flow from messaging rather than the reverse." },
+      { type: "p", text: "Specificity is the enemy of the ordinary. Salesforce's B2B marketing guide covers how channel and content decisions should flow from messaging rather than the reverse.",
+        links: [{ text: "Salesforce's B2B marketing guide", href: "https://www.salesforce.com/marketing/b2b-automation/b2b-marketing-guide/" }] },
 
       { type: "h2", text: "Governance: How Messaging Drift Kills Good Frameworks" },
       { type: "p", text: "A messaging framework is a living document, but it cannot be a free-for-all. When everyone can edit the brand voice, the voice disappears." },
