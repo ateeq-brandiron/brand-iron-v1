@@ -90,6 +90,16 @@ export default function RootLayout({
             gtag('config', 'G-BDTVFDLTDK');
           `}
         </Script>
+        {/* Site2CRM visitor identification (Asana: Integrate Site2CRM to Brand
+            Iron and Sage Websites). Loaded site-wide for outbound-campaign
+            lead tracking. No data-container div is rendered yet - pending
+            confirmation from Site2CRM support on whether identification
+            fires without the matching lead-capture form being present. */}
+        <Script
+          src="https://api.site2crm.io/api/public/forms/widget.js"
+          data-form-key="283735460edd66c996e8"
+          strategy="afterInteractive"
+        />
         <OrganizationSchema />
         <WebSiteSchema />
         <ChunkErrorRecovery />
