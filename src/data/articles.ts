@@ -116,7 +116,7 @@ export const articles: Article[] = [
     publishedISO: "2026-10-31",
     category: "GTM Strategy",
     title: "How to Build an Ideal Customer Profile (ICP) for B2B: A Practical Template",
-    excerpt: "A B2B ideal customer profile (ICP) describes the company most likely to buy fast, stay long and expand: its industry, size, revenue, tech stack, governance maturity and the trigger events that create urgency. To build one, pull the shared traits of your top 10% of accounts, pressure-test them against your positioning, then turn them into a scored template with explicit disqualifiers. An ICP defines the account. Buyer personas define the six to ten people inside it who must agree before anything gets signed.",
+    excerpt: "Most B2B companies chase too wide a market and end up indispensable to no one. This guide walks through the Intelligence, Strategy and Execution framework for building a B2B ideal customer profile from evidence, not opinion, plus a fill-in-the-blank template and a method for validating it against your own closed-won and churn data.",
     readTime: "8 min read",
     date: "October 2026",
     headerImage: "/images/blog/how-to-build-an-ideal-customer-profile-b2b/how-to-build-an-ideal-customer-profile-b2b-hero.jpg",
