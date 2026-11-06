@@ -148,9 +148,11 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       {/* ── BODY ─────────────────────────────────────────────── */}
       <section style={{ background: "#FFFFFF", padding: "72px 24px" }}>
         <article style={{ maxWidth: 720, margin: "0 auto" }}>
-          <p style={{ fontSize: 19, lineHeight: 1.75, color: "#333", fontWeight: 500, marginBottom: 32 }}>
-            {article.excerpt}
-          </p>
+          {!article.hideStandfirst && (
+            <p style={{ fontSize: 19, lineHeight: 1.75, color: "#333", fontWeight: 500, marginBottom: 32 }}>
+              {article.excerpt}
+            </p>
+          )}
           {article.body.map((block, i) => {
             if (block.type === "h2") {
               return (

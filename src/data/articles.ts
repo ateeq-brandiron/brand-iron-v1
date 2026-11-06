@@ -30,6 +30,11 @@ export type Article = {
   // the article page, and omits the OpenGraph publishedTime, since dating it undermines
   // the evergreen framing this kind of page depends on.
   isGuide?: boolean;
+  // Hides the standfirst paragraph (excerpt) above the body on the article page itself.
+  // excerpt still powers the blog hub card, meta description fallback, and schema -
+  // this only suppresses its on-page repeat for posts whose body opens with its own
+  // lead-in (e.g. a "Quick Answer" block) that would otherwise read twice in a row.
+  hideStandfirst?: boolean;
 };
 
 export const articles: Article[] = [
@@ -117,6 +122,7 @@ export const articles: Article[] = [
     category: "GTM Strategy",
     title: "How to Build an Ideal Customer Profile (ICP) for B2B: A Practical Template",
     excerpt: "Most B2B companies chase too wide a market and end up indispensable to no one. This guide walks through the Intelligence, Strategy and Execution framework for building a B2B ideal customer profile from evidence, not opinion, plus a fill-in-the-blank template and a method for validating it against your own closed-won and churn data.",
+    hideStandfirst: true,
     readTime: "8 min read",
     date: "October 2026",
     headerImage: "/images/blog/how-to-build-an-ideal-customer-profile-b2b/how-to-build-an-ideal-customer-profile-b2b-hero.jpg",
