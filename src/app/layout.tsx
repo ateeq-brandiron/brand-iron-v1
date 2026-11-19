@@ -78,6 +78,14 @@ export default function RootLayout({
         <Script id="scroll-restoration" strategy="beforeInteractive">
           {`try { history.scrollRestoration = "manual"; } catch (e) {}`}
         </Script>
+        {/* Contentsquare session recording/analytics - vendor snippet asks for
+            <head> placement with native defer, so this uses beforeInteractive
+            (injected into the initial HTML) rather than afterInteractive. */}
+        <Script
+          src="https://t.contentsquare.net/uxa/7fab4f14dcccb.js"
+          defer
+          strategy="beforeInteractive"
+        />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-BDTVFDLTDK"
           strategy="afterInteractive"
